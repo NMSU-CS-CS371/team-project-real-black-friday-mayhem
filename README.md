@@ -7,3 +7,5 @@
 
 ## What it's about:
 Black Friday Mario Kart Florida Massacre (TEMP)
+
+copyright to us 2026
