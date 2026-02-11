@@ -3,7 +3,7 @@
 - Jaiden Hernandez
 - Jolena Stolp
 - Logan Flowers
-- Samuel Thai
+- Samiel Thai
 
 ## What it's about:
 Black Friday Mario Kart Florida Massacre (TEMP)
