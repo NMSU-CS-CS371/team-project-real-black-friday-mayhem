@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bihbab8anv0pl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5oc15"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4liu"]
+albedo_color = Color(0.99842995, 0.015917297, 3.85046e-07, 1)
+
+[node name="SampleScene" type="Node3D" unique_id=82808349]
+
+[node name="Example Floor" type="MeshInstance3D" parent="." unique_id=1728668036]
+transform = Transform3D(3.811033, 0, 0, 0, 1, 0, 0, 0, 3.81465, 0, 0, 0)
+mesh = SubResource("PlaneMesh_5oc15")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1241708362]
+transform = Transform3D(1, 0, 0, 0, 0.97629225, 0.21645667, 0, -0.21645667, 0.97629225, -0.084514916, 1.0702703, 0.9146297)
+projection = 1
+
+[node name="Example Player" type="MeshInstance3D" parent="." unique_id=1713856241]
+transform = Transform3D(-0.15370429, 0, 0, 0, -4.371138e-08, -0.17196116, 0, 2.293697, -1.7240954e-08, -0.093538165, 0.25166333, -1.7194963)
+mesh = SubResource("PlaneMesh_5oc15")
+surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
