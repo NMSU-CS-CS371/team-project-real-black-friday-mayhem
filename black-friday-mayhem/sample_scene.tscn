@@ -19,3 +19,12 @@ projection = 1
 transform = Transform3D(-0.15370429, 0, 0, 0, -4.371138e-08, -0.17196116, 0, 2.293697, -1.7240954e-08, -0.093538165, 0.25166333, -1.7194963)
 mesh = SubResource("PlaneMesh_5oc15")
 surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=691196898]
+transform = Transform3D(1, 0, 0, 0, 0.19019221, 0.98174685, 0, -0.98174685, 0.19019221, 0, 3.1620054, 2.3049757)
+light_energy = 12.287
+directional_shadow_mode = 0
+directional_shadow_fade_start = 1.0
+directional_shadow_max_distance = 8192.0
+directional_shadow_pancake_size = 603.8
+sky_mode = 1
