@@ -14,6 +14,14 @@ config/name="BlackFridayMayhem"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+TerrainRebuildCoordinator="*uid://brautlco0ivx3"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrainy/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
