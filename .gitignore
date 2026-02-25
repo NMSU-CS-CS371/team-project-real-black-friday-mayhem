@@ -1,0 +1,23 @@
+# IDE files
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Godot-specific ignores
+.godot/
+/android/
+.nomedia
+.import/
+export.cfg
+export_credentials.cfg
+*.tmp
+
+# Imported translations
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
