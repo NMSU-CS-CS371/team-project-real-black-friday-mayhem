@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bn4fjk21yr3xd"]
+
+[ext_resource type="Texture2D" uid="uid://cvkk5wj1v1ljh" path="res://Assets/Sprites/sample_sprite.png" id="1_xlx3o"]
+
+[node name="ShopItem" type="Node2D" unique_id=1748581523]
+
+[node name="Timer" type="Timer" parent="." unique_id=777764603]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2046883665]
+texture = ExtResource("1_xlx3o")
