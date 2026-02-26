@@ -1,10 +1,26 @@
 [gd_scene format=3 uid="uid://bn4fjk21yr3xd"]
 
-[ext_resource type="Texture2D" uid="uid://cvkk5wj1v1ljh" path="res://Assets/Sprites/sample_sprite.png" id="1_xlx3o"]
+[ext_resource type="Script" uid="uid://dd408yijb5xl" path="res://Scripts/shop_item.gd" id="1_es6jb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h2lxn"]
+load_path = "res://.godot/imported/sample_sprite.png-c5e401b963383d4cbb1bbcb234b9fecb.ctex"
 
 [node name="ShopItem" type="Node2D" unique_id=1748581523]
+script = ExtResource("1_es6jb")
 
 [node name="Timer" type="Timer" parent="." unique_id=777764603]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2046883665]
-texture = ExtResource("1_xlx3o")
+texture = SubResource("CompressedTexture2D_h2lxn")
+
+[node name="PriceTag" type="Label" parent="." unique_id=238070488]
+offset_left = -35.0
+offset_top = -28.0
+offset_right = 5.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 30
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
