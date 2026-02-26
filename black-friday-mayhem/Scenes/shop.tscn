@@ -4,11 +4,26 @@
 
 [node name="Shop" type="Node2D" unique_id=1138335139]
 
-[node name="ShopItem" parent="." unique_id=1748581523 instance=ExtResource("1_a0mxf")]
-position = Vector2(179, 130)
+[node name="ShopItem1" parent="." unique_id=1748581523 instance=ExtResource("1_a0mxf")]
+position = Vector2(165, 196)
 
 [node name="ShopItem2" parent="." unique_id=65281389 instance=ExtResource("1_a0mxf")]
-position = Vector2(394, 130)
+position = Vector2(418, 196)
 
 [node name="ShopItem3" parent="." unique_id=711618290 instance=ExtResource("1_a0mxf")]
-position = Vector2(636, 130)
+position = Vector2(670, 196)
+
+[node name="ShopItem4" parent="." unique_id=628130739 instance=ExtResource("1_a0mxf")]
+position = Vector2(931, 196)
+
+[node name="ShopItem5" parent="." unique_id=1405839974 instance=ExtResource("1_a0mxf")]
+position = Vector2(165, 431)
+
+[node name="ShopItem6" parent="." unique_id=132437186 instance=ExtResource("1_a0mxf")]
+position = Vector2(418, 431)
+
+[node name="ShopItem7" parent="." unique_id=330223020 instance=ExtResource("1_a0mxf")]
+position = Vector2(670, 431)
+
+[node name="ShopItem8" parent="." unique_id=1301891011 instance=ExtResource("1_a0mxf")]
+position = Vector2(931, 431)
