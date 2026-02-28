@@ -21,3 +21,6 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Godot binaries
+Godot_v*-stable_*
