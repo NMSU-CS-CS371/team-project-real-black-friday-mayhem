@@ -8,7 +8,11 @@ size = Vector3(250, 2, 250)
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3sb7"]
 size = Vector3(0.001, 1, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3sb7"]
+albedo_color = Color(0.76, 0.7201, 0.7068, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_fj7yv"]
+material = SubResource("StandardMaterial3D_f3sb7")
 size = Vector3(0, 50, 250)
 
 [node name="main" type="Node" unique_id=1035745174]
