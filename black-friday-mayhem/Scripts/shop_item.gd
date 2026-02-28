@@ -3,12 +3,14 @@ extends Node2D
 var timerLength = 1
 var minLength = 1
 var maxLength = 5
+var itemNames = ["sample item", "susie", "cat"]
 var sprites = ["res://Assets/Sprites/sample_sprite.png", "res://Assets/Sprites/susie.jpeg",
 "res://Assets/Sprites/cat.png"]
 var marketVal: int = 0
-var discountVals = [30, 40, 50, 60, 70, 80, 90]
 var discount: float = 0
 var discountedPrice: int = 0
+var moneySaved: int = 0
+var itemIndex
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,18 +18,20 @@ func _ready() -> void:
 	var rng = RandomNumberGenerator.new()
 	var timer = $Timer
 	
-	# Pick random sprite
-	sprite2d.texture = load(sprites.pick_random())
-	
-	# Randomly generate timer length
-	timerLength = rng.randf_range(minLength, maxLength)
-	timer.wait_time = timerLength
-	timer.start()
+	# Pick random item
+	itemIndex = randi_range(0, itemNames.size()-1)
+	sprite2d.texture = load(sprites[itemIndex])
 	
 	# Randomly generate market value and discount, calculate price
-	marketVal = rng.randf_range(500,1200)
-	discount = discountVals.pick_random()
+	marketVal = rng.randi_range(50,120)*10
+	discount = rng.randi_range(3,9)*10
 	discountedPrice = marketVal * ((100-discount)/100)
+	moneySaved = marketVal - discountedPrice
+	
+	# Shorter timer for bigger deals
+	timerLength = (11 - (discount/10))*0.75
+	timer.wait_time = timerLength
+	timer.start()
 	
 	# Show price and discount on price tag
 	var tag = $PriceTag
@@ -46,9 +50,13 @@ func _on_timer_timeout():
 func _input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if $Sprite2D.get_rect().has_point(to_local(event.position)):
-			print("Market Value: ", marketVal, "\nDiscount: ", discount, "\nPrice: ", discountedPrice)
-			# Only prints for now, would normally call purchase_item()
+			print("Market Value: ", marketVal, "\nDiscount: ", discount,
+			"\nPrice: ", discountedPrice, "\nMoney Saved: ", moneySaved)
+			purchase_item()
 
 # Take money, place item in inventory
 func purchase_item():
-	pass
+	# player.money -= discountedPrice
+	# player.moneySaved += moneySaved
+	# player.inventory.add(itemNames[itemIndex],sprites[itemIndex], discountedPrice)
+	queue_free()
