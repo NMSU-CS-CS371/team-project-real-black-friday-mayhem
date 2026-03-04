@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://k8vgfxancgy0"]
 
+[ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://bf7wndkj4f1w4" path="res://textures/TEST-SPRITE.png" id="1_fj7yv"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlwt5"]
+albedo_texture = ExtResource("1_fj7yv")
+uv1_scale = Vector3(1000, 1000, 1000)
+
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
+material = SubResource("StandardMaterial3D_tlwt5")
 size = Vector3(250, 2, 250)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3sb7"]
@@ -57,3 +65,15 @@ mesh = SubResource("BoxMesh_fj7yv")
 [node name="wall4_mesh" type="MeshInstance3D" parent="StaticBody3D" unique_id=902549916]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 0)
 mesh = SubResource("BoxMesh_fj7yv")
+
+[node name="MainPlayerSHOPPING" parent="." unique_id=2083188461 instance=ExtResource("1_f3sb7")]
+transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.2936969, -1.8626451e-08, 42.849586, 1.0936403, 81.51156)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
+transform = Transform3D(1, 0, 0, 0, -0.01005298, 0.99994946, 0, -0.99994946, -0.010052981, 0, 99.62688, 0)
+light_energy = 4.815
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+light_angular_distance = 90.0
+directional_shadow_mode = 0
+sky_mode = 1
