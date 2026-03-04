@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dihg3uns7yenp"
-path="res://.godot/imported/sample_sprite.png-c5e401b963383d4cbb1bbcb234b9fecb.ctex"
+uid="uid://052cxq4y77ni"
+path="res://.godot/imported/toiletPaper.png-3cad882d3c85e009a672b10418a1f74a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/sample_sprite.png"
-dest_files=["res://.godot/imported/sample_sprite.png-c5e401b963383d4cbb1bbcb234b9fecb.ctex"]
+source_file="res://Assets/Sprites/toiletPaper.png"
+dest_files=["res://.godot/imported/toiletPaper.png-3cad882d3c85e009a672b10418a1f74a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dihg3uns7yenp"
-path="res://.godot/imported/sample_sprite.png-c5e401b963383d4cbb1bbcb234b9fecb.ctex"
+uid="uid://cpva5hled3lhn"
+path="res://.godot/imported/cereal.png-1a40a576da9c9a1e4bb3abfcbd8d875d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/sample_sprite.png"
-dest_files=["res://.godot/imported/sample_sprite.png-c5e401b963383d4cbb1bbcb234b9fecb.ctex"]
+source_file="res://Assets/Sprites/cereal.png"
+dest_files=["res://.godot/imported/cereal.png-1a40a576da9c9a1e4bb3abfcbd8d875d.ctex"]
 
 [params]
 

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://w8er6cjd0kml"]
+
+[ext_resource type="Script" uid="uid://dcs7iuqhpasuk" path="res://Scripts/MiniGame1/mini_game1_2d.gd" id="1_m5oxq"]
+[ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/MiniGame1/item_spawner.tscn" id="2_2r7tu"]
+[ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/MiniGame1/hand_spawner.tscn" id="2_mntse"]
+
+[node name="MiniGame12D" type="Node2D" unique_id=1466539220]
+script = ExtResource("1_m5oxq")
+
+[node name="ItemSpawner" parent="." unique_id=1422229041 instance=ExtResource("2_2r7tu")]
+
+[node name="HandSpawner" parent="." unique_id=962083149 instance=ExtResource("2_mntse")]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=364551897]
+
+[node name="Point1" type="Marker2D" parent="SpawnPoints" unique_id=484868366]
+position = Vector2(200, 200)
+
+[node name="Point2" type="Marker2D" parent="SpawnPoints" unique_id=194094707]
+position = Vector2(420, 200)
+
+[node name="Point3" type="Marker2D" parent="SpawnPoints" unique_id=598518985]
+position = Vector2(650, 200)
+
+[node name="Point4" type="Marker2D" parent="SpawnPoints" unique_id=1498948141]
+position = Vector2(900, 200)
+
+[node name="Point5" type="Marker2D" parent="SpawnPoints" unique_id=526404578]
+position = Vector2(200, 450)
+
+[node name="Point6" type="Marker2D" parent="SpawnPoints" unique_id=1382424845]
+position = Vector2(420, 450)
+
+[node name="Point7" type="Marker2D" parent="SpawnPoints" unique_id=2022392950]
+position = Vector2(650, 450)
+
+[node name="Point8" type="Marker2D" parent="SpawnPoints" unique_id=1300867395]
+position = Vector2(900, 450)
