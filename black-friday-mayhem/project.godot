@@ -22,6 +22,13 @@ TerrainRebuildCoordinator="*uid://brautlco0ivx3"
 
 enabled=PackedStringArray("res://addons/terrainy/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
 
+[input]
+
+click={
+"deadzone": 0.2,
+"events": []
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
