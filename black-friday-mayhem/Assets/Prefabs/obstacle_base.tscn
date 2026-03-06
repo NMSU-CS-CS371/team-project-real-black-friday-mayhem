@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c7dw0qoj7iqah"]
+
+[ext_resource type="Script" uid="uid://c7ylb52nywdiy" path="res://Scripts/obstacle_base.gd" id="1_1nlf5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1nlf5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s00e5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1nlf5"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ww3c"]
+
+[node name="ObstacleBase" type="StaticBody3D" unique_id=1452118021]
+script = ExtResource("1_1nlf5")
+obstacle_color = Color(1, 0, 1, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=729517197]
+shape = SubResource("BoxShape3D_1nlf5")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
+mesh = SubResource("BoxMesh_s00e5")
+surface_material_override/0 = SubResource("StandardMaterial3D_1nlf5")
+metadata/_edit_lock_ = true
+
+[node name="TriggerZone" type="Area3D" parent="." unique_id=17846116]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
+shape = SubResource("BoxShape3D_5ww3c")
+metadata/_edit_lock_ = true
