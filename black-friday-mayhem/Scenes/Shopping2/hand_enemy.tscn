@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://by62wj5yxbmlp"]
 
-[ext_resource type="Script" uid="uid://rnu2qslu1tgm" path="res://Scripts/MiniGame1/hand_enemy.gd" id="1_ma1if"]
+[ext_resource type="Script" uid="uid://rnu2qslu1tgm" path="res://Scripts/Shopping2/hand_enemy.gd" id="1_ma1if"]
 [ext_resource type="Texture2D" uid="uid://dby1utd2o8642" path="res://Assets/Sprites/Hands.png" id="2_pyopn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ag71b"]
