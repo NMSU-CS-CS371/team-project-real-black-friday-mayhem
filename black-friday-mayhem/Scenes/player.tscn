@@ -1,28 +1,48 @@
 [gd_scene format=3 uid="uid://b4woik3ytcllt"]
 
-[ext_resource type="PackedScene" uid="uid://c7dw0qoj7iqah" path="res://Assets/Prefabs/obstacle_base.tscn" id="1_cvnsp"]
-[ext_resource type="Script" uid="uid://dqq4qlp1flm8v" path="res://Scripts/shop_checkpoints.gd" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://bf7wndkj4f1w4" path="res://Assets/Textures/TEST-SPRITE.png" id="1_1lubm"]
+[ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Movement.gd" id="2_odttp"]
+[ext_resource type="Script" uid="uid://cqfwwjemgvvok" path="res://Scripts/player_group.gd" id="3_6t5aa"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_aa6p3"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pueg"]
+albedo_texture = ExtResource("1_1lubm")
+uv1_scale = Vector3(15, 15, 15)
 
-[sub_resource type="BoxMesh" id="BoxMesh_wvea8"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_5oc15"]
+material = SubResource("StandardMaterial3D_0pueg")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ys4h"]
-albedo_color = Color(1, 0, 1, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4liu"]
+albedo_color = Color(0.99842995, 0.015917297, 3.85046e-07, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_x8wgl"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5oc15"]
 
-[node name="ShopCheckpoint" unique_id=1452118021 instance=ExtResource("1_cvnsp")]
-visible = false
-script = ExtResource("2_6t5aa")
+[sub_resource type="Sky" id="Sky_k4liu"]
+sky_material = SubResource("ProceduralSkyMaterial_5oc15")
 
-[node name="CollisionShape3D" parent="." index="0" unique_id=729517197]
-shape = SubResource("BoxShape3D_aa6p3")
-debug_color = Color(0.9453508, 2.5990605e-06, 0.57035685, 0.41960785)
+[sub_resource type="Environment" id="Environment_ohetr"]
+background_mode = 1
+background_color = Color(0.39537346, 0.58498526, 1, 1)
+sky = SubResource("Sky_k4liu")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+reflected_light_source = 2
 
-[node name="MeshInstance3D" parent="." index="1" unique_id=21900597]
-mesh = SubResource("BoxMesh_wvea8")
-surface_material_override/0 = SubResource("StandardMaterial3D_3ys4h")
+[sub_resource type="BoxShape3D" id="BoxShape3D_cvnsp"]
+size = Vector3(2.6252441, 0.10229492, 2.890625)
 
-[node name="CollisionShape3D" parent="TriggerZone" parent_id_path=PackedInt32Array(17846116) index="0" unique_id=1219094317]
-shape = SubResource("BoxShape3D_x8wgl")
+[node name="MainPlayerSHOPPING" type="MeshInstance3D" unique_id=2083188461]
+transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.2936969, -1.8626451e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_5oc15")
+surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
+script = ExtResource("2_odttp")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1965736237]
+transform = Transform3D(-6.5059996, 0, 0, 0, -0.09437026, 0.42564136, 0, -5.6774, -1.2587534, -0.05870527, 1.1484191, -4.760418)
+environment = SubResource("Environment_ohetr")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1649199393]
+script = ExtResource("3_6t5aa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=2088369755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029663077, 0.031372063, -0.2890625)
+shape = SubResource("BoxShape3D_cvnsp")
