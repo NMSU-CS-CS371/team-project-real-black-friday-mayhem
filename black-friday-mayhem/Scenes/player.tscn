@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b4woik3ytcllt"]
 
 [ext_resource type="Texture2D" uid="uid://bf7wndkj4f1w4" path="res://Assets/Textures/TEST-SPRITE.png" id="1_1lubm"]
-[ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Movement.gd" id="2_odttp"]
+[ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Scripts/Movement.gd" id="2_odttp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pueg"]
 albedo_texture = ExtResource("1_1lubm")

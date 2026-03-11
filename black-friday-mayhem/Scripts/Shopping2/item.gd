@@ -1,4 +1,12 @@
 extends Node2D
+#this is the item
+
+#on initalization it will:
+#randomize its id out of 4
+#choose sprite texture baised on id
+#regester itself to whoever initalizes it
+#adds to a group to be found
+#will delete itself when clicked by mouse
 
 signal item_clicked(points)
 #textures for the sprite
@@ -23,6 +31,7 @@ func _ready() -> void:
 	#when the node get initialized then register the node in the minigame
 	get_parent().register_item(self) 
 	#when clicked got to clicked function
+	add_to_group("items")
 
 #choose random Item
 func item_texture() -> Texture2D:

@@ -21,10 +21,10 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Forward"):
 		isMovingForward = true
 		pass
-	if event.is_action_released("Forward"):
-		isMovingForward = false
+	#if event.is_action_released("Forward"):
+		#isMovingForward = false
 	if event.is_action_pressed("Backward"):
 		isMovingBackward = true
-	if event.is_action_released("Backward"):
-		isMovingBackward = false
+	#if event.is_action_released("Backward"):
+		#isMovingBackward = false
 	pass

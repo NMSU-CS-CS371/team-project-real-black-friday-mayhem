@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://w8er6cjd0kml"]
 
-[ext_resource type="Script" uid="uid://dcs7iuqhpasuk" path="res://Scripts/Shopping2/mini_game1_2d.gd" id="1_m5oxq"]
+[ext_resource type="Script" uid="uid://dcs7iuqhpasuk" path="res://Scripts/Shopping2/shopping2.gd" id="1_m5oxq"]
 [ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/Shopping2/item_spawner.tscn" id="2_2r7tu"]
 [ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/Shopping2/hand_spawner.tscn" id="2_mntse"]
 

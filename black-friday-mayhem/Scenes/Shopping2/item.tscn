@@ -16,6 +16,8 @@ texture = ExtResource("1_h4wly")
 metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1242272409]
+collision_layer = 2
+collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=672852353]
