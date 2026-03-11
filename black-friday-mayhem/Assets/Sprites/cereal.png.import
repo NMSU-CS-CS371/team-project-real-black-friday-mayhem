@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i73ny1vqxpb0"
-path="res://.godot/imported/y'all_gotta_see_this.jpg-6d70b3739be0393d2f50b1da06cb3e06.ctex"
+uid="uid://cpva5hled3lhn"
+path="res://.godot/imported/cereal.png-1a40a576da9c9a1e4bb3abfcbd8d875d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/y'all_gotta_see_this.jpg"
-dest_files=["res://.godot/imported/y'all_gotta_see_this.jpg-6d70b3739be0393d2f50b1da06cb3e06.ctex"]
+source_file="res://Assets/Sprites/cereal.png"
+dest_files=["res://.godot/imported/cereal.png-1a40a576da9c9a1e4bb3abfcbd8d875d.ctex"]
 
 [params]
 

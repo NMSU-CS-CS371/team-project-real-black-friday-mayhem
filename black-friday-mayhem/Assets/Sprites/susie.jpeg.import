@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dihg3uns7yenp"
-path="res://.godot/imported/sample_sprite.png-c5e401b963383d4cbb1bbcb234b9fecb.ctex"
+uid="uid://ccrnaeyraqkeg"
+path="res://.godot/imported/susie.jpeg-b432eb24b4196f1a88029797a15e0d32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/sample_sprite.png"
-dest_files=["res://.godot/imported/sample_sprite.png-c5e401b963383d4cbb1bbcb234b9fecb.ctex"]
+source_file="res://Assets/Sprites/susie.jpeg"
+dest_files=["res://.godot/imported/susie.jpeg-b432eb24b4196f1a88029797a15e0d32.ctex"]
 
 [params]
 

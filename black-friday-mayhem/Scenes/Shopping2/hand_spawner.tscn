@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dnuunjkly05fj"]
+
+[ext_resource type="Script" uid="uid://53xanvdtyl3t" path="res://Scripts/Shopping2/hand_spawner.gd" id="1_xsesv"]
+[ext_resource type="PackedScene" uid="uid://by62wj5yxbmlp" path="res://Scenes/Shopping2/hand_enemy.tscn" id="2_uw660"]
+
+[node name="HandSpawner" type="Node2D" unique_id=962083149]
+script = ExtResource("1_xsesv")
+hand_scene = ExtResource("2_uw660")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1127362565]
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

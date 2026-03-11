@@ -1,3 +1,4 @@
+
 extends CharacterBody3D
 
 @export var acceleration : float
@@ -7,6 +8,7 @@ extends CharacterBody3D
 @export var breakingSpeed : float
 @export var maxRotationSpeed : float
 @export var traction : float
+@export var useArrow : bool
 @export var debug : bool
 var speed : float
 var isMovingForward = false
@@ -14,7 +16,10 @@ var isMovingBackward = false
 var isTurning = false
 var forward = Vector3.ZERO
 
-var test = false
+func _ready() -> void:
+	if !useArrow:
+		$Shape2.visible = false
+	pass
 
 func _physics_process(delta: float) -> void:
 	# Gets vector 2, for left, right, up, and down (1 or 0)
@@ -70,9 +75,6 @@ func _physics_process(delta: float) -> void:
 		#velocity = newVel * delta
 		#rotationFix = false
 		#pass
-	if test:
-		velocity = Vector3.ZERO  * delta
-		test = false
 	
 	print("Vel: ", velocity.length())
 	print("Left: ", input_dir.x, " ws: ", input_dir.y)	
@@ -80,8 +82,6 @@ func _physics_process(delta: float) -> void:
 		#$RigidBody3D.apply_central_force(f)#forward*delta*speed)
 	move_and_slide()
 	pass
-	#position = $"Example Player/Camera3D".global_basis * direction_ground * speed *  4 * delta
-	#velocity.y = velocity_y
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Forward"):
@@ -98,6 +98,5 @@ func _input(event: InputEvent) -> void:
 		pass
 	if event.is_action_released("Left") or event.is_action_released("Right"):
 		isTurning = false
-	if event.is_action_pressed("Test"):
-		test = true
 		#rotationFix = true
+	pass
