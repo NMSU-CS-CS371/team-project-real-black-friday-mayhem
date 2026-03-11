@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BlackFridayMayhem"
-run/main_scene="uid://d15522nno71i3"
+run/main_scene="uid://k8vgfxancgy0"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://Assets/Sprites/icon.svg"
 
