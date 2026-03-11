@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://b4woik3ytcllt"]
 
 [ext_resource type="Texture2D" uid="uid://bf7wndkj4f1w4" path="res://textures/TEST-SPRITE.png" id="1_1lubm"]
-[ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Movement.gd" id="2_odttp"]
+[ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Scripts/Movement.gd" id="2_odttp"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pueg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_id4ae"]
 albedo_texture = ExtResource("1_1lubm")
 uv1_scale = Vector3(15, 15, 15)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_5oc15"]
-material = SubResource("StandardMaterial3D_0pueg")
+[sub_resource type="PlaneMesh" id="PlaneMesh_sfoqk"]
+material = SubResource("StandardMaterial3D_id4ae")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4liu"]
 albedo_color = Color(0.99842995, 0.015917297, 3.85046e-07, 1)
@@ -28,10 +28,12 @@ reflected_light_source = 2
 
 [node name="MainPlayerSHOPPING" type="MeshInstance3D" unique_id=2083188461]
 transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.2936969, -1.8626451e-08, 0, 0, 0)
-mesh = SubResource("PlaneMesh_5oc15")
+mesh = SubResource("PlaneMesh_sfoqk")
 surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
 script = ExtResource("2_odttp")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1965736237]
 transform = Transform3D(-6.5059996, 0, 0, 0, -0.09437026, 0.42564136, 0, -5.6774, -1.2587534, -0.05870527, 1.1484191, -4.760418)
 environment = SubResource("Environment_ohetr")
+
+[node name="VehicleBody3D" type="VehicleBody3D" parent="." unique_id=1539533580]
