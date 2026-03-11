@@ -33,5 +33,4 @@ light_angular_distance = 90.0
 directional_shadow_mode = 0
 sky_mode = 1
 
-[node name="MainPlayerSHOPPING" parent="." unique_id=2083188461 instance=ExtResource("2_ohetr")]
-transform = Transform3D(-0.15370429, 0, 0, 0, 1.0026068e-07, -0.17196114, 0, 2.2936969, 7.51666e-09, -0.093538165, 0.2516634, -1.719496)
+[node name="player" parent="." unique_id=1293440747 instance=ExtResource("2_ohetr")]

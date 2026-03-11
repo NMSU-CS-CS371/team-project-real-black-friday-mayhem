@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://k8vgfxancgy0"]
+[gd_scene format=3 uid="uid://dfa441qw2h0um"]
 
 [ext_resource type="Texture2D" uid="uid://cl1piqey8e73g" path="res://Assets/Textures/TEST-SPRITE.png" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
@@ -52,7 +52,7 @@ material = SubResource("StandardMaterial3D_5a7ea")
 [node name="MAP" type="Node" unique_id=1035745174]
 
 [node name="MainPlayerSHOPPING" parent="." unique_id=2083188461 instance=ExtResource("2_5a7ea")]
-transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.2936969, -1.8626451e-08, 0, 1.2, 90)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
 transform = Transform3D(1, 0, 0, 0, -0.01005298, 0.99994946, 0, -0.99994946, -0.01005298, 9.275801, 99.252106, -4.0206814)
