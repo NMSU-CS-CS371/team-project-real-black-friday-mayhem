@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:black-friday-mayhem/Assets/Textures/y'all_gotta_see_this.jpg.import
-uid="uid://i73ny1vqxpb0"
-path="res://.godot/imported/y'all_gotta_see_this.jpg-6d70b3739be0393d2f50b1da06cb3e06.ctex"
-========
-uid="uid://cb7xyhlk4pxkq"
+uid="uid://dby1utd2o8642"
 path="res://.godot/imported/Hands.png-fe96af729c393b7dd967f263f52735c1.ctex"
->>>>>>>> Enemies:black-friday-mayhem/Assets/Sprites/Hands.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:black-friday-mayhem/Assets/Textures/y'all_gotta_see_this.jpg.import
-source_file="res://Assets/Textures/y'all_gotta_see_this.jpg"
-dest_files=["res://.godot/imported/y'all_gotta_see_this.jpg-6d70b3739be0393d2f50b1da06cb3e06.ctex"]
-========
 source_file="res://Assets/Sprites/Hands.png"
 dest_files=["res://.godot/imported/Hands.png-fe96af729c393b7dd967f263f52735c1.ctex"]
->>>>>>>> Enemies:black-friday-mayhem/Assets/Sprites/Hands.png.import
 
 [params]
 
