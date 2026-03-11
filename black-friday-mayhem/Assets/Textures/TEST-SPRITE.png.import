@@ -2,21 +2,36 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
+uid="uid://dobtryvr1ctyf"
+path="res://.godot/imported/TEST-SPRITE.png-b84aef81bfca111fae335244e62ecf53.ctex"
+metadata={
+"vram_texture": false
+=======
 uid="uid://bf7wndkj4f1w4"
 path.s3tc="res://.godot/imported/TEST-SPRITE.png-b84aef81bfca111fae335244e62ecf53.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
+>>>>>>> 635f7f69f2cdcfb92d72b4c4274aa306759dcbbb
 }
 
 [deps]
 
 source_file="res://Assets/Textures/TEST-SPRITE.png"
+<<<<<<< HEAD
+dest_files=["res://.godot/imported/TEST-SPRITE.png-b84aef81bfca111fae335244e62ecf53.ctex"]
+
+[params]
+
+compress/mode=0
+=======
 dest_files=["res://.godot/imported/TEST-SPRITE.png-b84aef81bfca111fae335244e62ecf53.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
+>>>>>>> 635f7f69f2cdcfb92d72b4c4274aa306759dcbbb
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -24,7 +39,11 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
+<<<<<<< HEAD
+mipmaps/generate=false
+=======
 mipmaps/generate=true
+>>>>>>> 635f7f69f2cdcfb92d72b4c4274aa306759dcbbb
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -38,4 +57,8 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
+<<<<<<< HEAD
+detect_3d/compress_to=1
+=======
 detect_3d/compress_to=0
+>>>>>>> 635f7f69f2cdcfb92d72b4c4274aa306759dcbbb
