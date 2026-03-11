@@ -13,7 +13,7 @@ config_version=5
 config/name="BlackFridayMayhem"
 run/main_scene="uid://d15522nno71i3"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Sprites/icon.svg"
 
 [autoload]
 

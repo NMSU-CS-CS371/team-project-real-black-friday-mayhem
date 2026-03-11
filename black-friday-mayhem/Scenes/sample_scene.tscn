@@ -1,6 +1,37 @@
-[gd_scene format=3 uid="uid://c6ig5k03uli4l"]
+[gd_scene format=3 uid="uid://bihbab8anv0pl"]
 
-[ext_resource type="Script" uid="uid://dsg57bti7g7i1" path="res://Scripts/sample_script.gd" id="1_6mhpb"]
+[ext_resource type="Texture2D" uid="uid://bf7wndkj4f1w4" path="res://textures/TEST-SPRITE.png" id="1_ohetr"]
+[ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_ohetr"]
 
-[node name="SampleScene" type="Node3D" unique_id=1308112270]
-script = ExtResource("1_6mhpb")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pueg"]
+albedo_texture = ExtResource("1_ohetr")
+uv1_scale = Vector3(15, 15, 15)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5oc15"]
+material = SubResource("StandardMaterial3D_0pueg")
+
+[node name="SampleScene" type="Node3D" unique_id=82808349]
+
+[node name="Example Floor" type="MeshInstance3D" parent="." unique_id=1728668036]
+transform = Transform3D(3.811033, 0, 0, 0, 1, 0, 0, 0, 3.81465, 0, 0, 0)
+mesh = SubResource("PlaneMesh_5oc15")
+
+[node name="Example Floor2" type="MeshInstance3D" parent="." unique_id=1952620585]
+transform = Transform3D(1.6658554e-07, -1, -3.334873e-07, -3.8110328, -4.371139e-08, 0, -1.456337e-14, 8.742278e-08, -3.81465, 1.9896153, 1.4853293, 0)
+mesh = SubResource("PlaneMesh_5oc15")
+
+[node name="Example Floor3" type="MeshInstance3D" parent="." unique_id=625616945]
+transform = Transform3D(1.6658554e-07, 1, 3.334873e-07, 3.8110328, -4.371139e-08, 0, 1.456337e-14, 8.742278e-08, -3.81465, -3.5593343, 1.4853293, 0)
+mesh = SubResource("PlaneMesh_5oc15")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=989634426]
+transform = Transform3D(1, 0, 0, 0, -0.010052979, 0.9999494, 0, -0.9999494, -0.010052979, 0, 3.1222959, 0)
+light_energy = 4.815
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+light_angular_distance = 90.0
+directional_shadow_mode = 0
+sky_mode = 1
+
+[node name="MainPlayerSHOPPING" parent="." unique_id=2083188461 instance=ExtResource("2_ohetr")]
+transform = Transform3D(-0.15370429, 0, 0, 0, 1.0026068e-07, -0.17196114, 0, 2.2936969, 7.51666e-09, -0.093538165, 0.2516634, -1.719496)
