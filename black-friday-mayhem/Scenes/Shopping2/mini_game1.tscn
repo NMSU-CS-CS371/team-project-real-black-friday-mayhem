@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://w8er6cjd0kml"]
 
-[ext_resource type="Script" uid="uid://dcs7iuqhpasuk" path="res://Scripts/MiniGame1/mini_game1_2d.gd" id="1_m5oxq"]
-[ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/MiniGame1/item_spawner.tscn" id="2_2r7tu"]
-[ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/MiniGame1/hand_spawner.tscn" id="2_mntse"]
+[ext_resource type="Script" uid="uid://dcs7iuqhpasuk" path="res://Scripts/Shopping2/mini_game1_2d.gd" id="1_m5oxq"]
+[ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/Shopping2/item_spawner.tscn" id="2_2r7tu"]
+[ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/Shopping2/hand_spawner.tscn" id="2_mntse"]
 
 [node name="MiniGame12D" type="Node2D" unique_id=1466539220]
 script = ExtResource("1_m5oxq")
