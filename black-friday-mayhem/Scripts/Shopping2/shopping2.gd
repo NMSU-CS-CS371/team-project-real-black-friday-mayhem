@@ -7,7 +7,7 @@ enum GameState{IDLE, RUNNING, FINISHED}
 var state: GameState = GameState.IDLE
 var items: Array[Node2D] = []
 var score: = 0
-@onready var score_label: Label = $ScoreLabel
+@export var score_label: Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,7 +17,7 @@ func _ready() -> void:
 #start game function to start running the mini game
 func start_game():
 	state = GameState.RUNNING # change game state to running 
-	$Background.show()
+	#$Background.show()
 	$GameTimer.start()
 	print("Mini-game started") #print for debuging
 	

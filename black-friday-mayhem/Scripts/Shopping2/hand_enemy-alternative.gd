@@ -19,13 +19,13 @@ extends Node2D #Hand Enemy
 enum HandState {WAITING, MOVING_TO_ITEM, RETURNING}
 var state : = HandState.WAITING
 #how long the hand pauses at spawn
-var wait_time : = 2.0 #seconds to wait when spawned
+@export var wait_time : = 2.0 #seconds to wait when spawned
 #Timer counts elapsed time
 var wait_timer : = 0.0
 #the item the hand will go for
 var target_item : Node2D = null
 #speed toward item
-var move_speed: = 100.0
+@export var move_speed: = 100.0
 var elapsed_time := 0.0
 
 #Variables for Spawning Hands
@@ -80,8 +80,9 @@ func _process(delta):
 		
 		HandState.MOVING_TO_ITEM: #moving to item
 			if not target_item or not is_instance_valid(target_item):
-				state = HandState.RETURNING
-				return
+				find_target()
+				#state = HandState.RETURNING
+				#return
 			#direction
 			var speed_multiplier = 1.0 + (elapsed_time / 5.0)
 			var direction = (target_item.position - position).normalized()
@@ -121,6 +122,18 @@ func find_target():
 		return
 	#else pick a random item
 	target_item = items.pick_random()
+	#var closest = 100000
+	#var tempItem
+	#for item in items:
+		#var distance = item.position.length() - position.length()
+		#distance = abs(distance)
+		#if distance < closest:
+			#closest = distance
+			#tempItem = item
+			#pass
+		#pass
+	#target_item = tempItem
+	#print("Chosen target at: ", tempItem.position)
 
 #it the hand is in the target items collision area
 func _on_grab_area_entered(area):
@@ -131,13 +144,14 @@ func _on_grab_area_entered(area):
 	var item = area.get_parent()
 
 #if item is the target item steal it
-	if item == target_item:
+	if item.is_in_group("items"):
+		target_item = item
 		steal_item()
 		
 #steal item
 func steal_item():
 	#if the target item is not null and is valid
-	if target_item and is_instance_valid(target_item):
+	if is_instance_valid(target_item):
 		#delete item
 		target_item.queue_free()
 	#delete hand

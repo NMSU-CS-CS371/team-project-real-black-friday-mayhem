@@ -9,8 +9,9 @@
 [sub_resource type="FontVariation" id="FontVariation_yjfng"]
 base_font = ExtResource("3_fpqsi")
 
-[node name="MiniGame" type="Node2D" unique_id=1466539220]
+[node name="MiniGame" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("score_label")]
 script = ExtResource("1_m5oxq")
+score_label = NodePath("ScoreLabel")
 
 [node name="Background" type="TextureRect" parent="." unique_id=255902574]
 offset_left = -180.0
