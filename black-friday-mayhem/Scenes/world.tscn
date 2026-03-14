@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-[gd_scene format=3 uid="uid://k8vgfxancgy0"]
-
-[ext_resource type="Texture2D" uid="uid://bf7wndkj4f1w4" path="res://Assets/Textures/TEST-SPRITE.png" id="1_fj7yv"]
-[ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_fj7yv"]
-=======
 [gd_scene format=3 uid="uid://dfa441qw2h0um"]
 
 [ext_resource type="Texture2D" uid="uid://cl1piqey8e73g" path="res://Assets/Textures/TEST-SPRITE.png" id="1_go701"]
@@ -22,89 +16,16 @@ size = Vector3(0, 50, 250)
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3sb7"]
 margin = 0.0
 size = Vector3(1, 50, 250)
->>>>>>> main
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlwt5"]
-<<<<<<< HEAD
-albedo_color = Color(0.45099527, 0.55717474, 0.5769043, 1)
-albedo_texture = ExtResource("1_fj7yv")
-=======
 albedo_color = Color(0.451227, 0.7499023, 0.7979358, 1)
 albedo_texture = ExtResource("1_go701")
->>>>>>> main
 uv1_scale = Vector3(1000, 1000, 1000)
 
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
 material = SubResource("StandardMaterial3D_tlwt5")
-<<<<<<< HEAD
-size = Vector3(150, 2, 150)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_f3sb7"]
-size = Vector3(0.001, 1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3sb7"]
-albedo_color = Color(0.67, 0.59652334, 0.35509998, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_fj7yv"]
-material = SubResource("StandardMaterial3D_f3sb7")
-size = Vector3(0, 50, 150)
-
-[node name="main" type="Node" unique_id=1035745174]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1621393907]
-
-[node name="floor" type="CollisionShape3D" parent="StaticBody3D" unique_id=76451180]
-transform = Transform3D(150, 0, 0, 0, 2, 0, 0, 0, 150, 0, 0, 0)
-shape = SubResource("BoxShape3D_gv5m4")
-
-[node name="floor_mesh" type="MeshInstance3D" parent="StaticBody3D" unique_id=1721786962]
-gi_lightmap_texel_scale = 0.01
-mesh = SubResource("BoxMesh_f3sb7")
-
-[node name="wall1" type="CollisionShape3D" parent="StaticBody3D" unique_id=1749121350]
-transform = Transform3D(-8.742278e-06, 0, 200, 0, 50, 0, -200, 0, -8.742278e-06, 0, 0, 50)
-rotation_order = 0
-shape = SubResource("BoxShape3D_f3sb7")
-
-[node name="wall3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1329939585]
-transform = Transform3D(200, 0, 0, 0, 50, 0, 0, 0, 200, 50, 0, 0)
-rotation_order = 0
-shape = SubResource("BoxShape3D_f3sb7")
-
-[node name="wall4" type="CollisionShape3D" parent="StaticBody3D" unique_id=2102257803]
-transform = Transform3D(200, 0, 0, 0, 50, 0, 0, 0, 200, -50, 0, 0)
-rotation_order = 0
-shape = SubResource("BoxShape3D_f3sb7")
-
-[node name="wall2" type="CollisionShape3D" parent="StaticBody3D" unique_id=314021291]
-transform = Transform3D(-8.742278e-06, 0, 200, 0, 50, 0, -200, 0, -8.742278e-06, 0, 0, -50)
-rotation_order = 0
-shape = SubResource("BoxShape3D_f3sb7")
-
-[node name="wall1_mesh" type="MeshInstance3D" parent="StaticBody3D" unique_id=507220555]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 50)
-mesh = SubResource("BoxMesh_fj7yv")
-
-[node name="wall2_mesh" type="MeshInstance3D" parent="StaticBody3D" unique_id=1447659885]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -50)
-mesh = SubResource("BoxMesh_fj7yv")
-
-[node name="wall3_mesh" type="MeshInstance3D" parent="StaticBody3D" unique_id=863333416]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
-mesh = SubResource("BoxMesh_fj7yv")
-
-[node name="wall4_mesh" type="MeshInstance3D" parent="StaticBody3D" unique_id=902549916]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)
-mesh = SubResource("BoxMesh_fj7yv")
-
-[node name="MainPlayerSHOPPING" parent="StaticBody3D" unique_id=2083188461 instance=ExtResource("2_fj7yv")]
-transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.2936969, -1.8626451e-08, 0, 1.9489441, 0)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
-transform = Transform3D(1, 0, 0, 0, -0.01005298, 0.99994946, 0, -0.99994946, -0.010052981, 0, 99.62688, 0)
-=======
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aqk2v"]
 albedo_color = Color(0.99607843, 0, 0.1882353, 1)
@@ -135,15 +56,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
 transform = Transform3D(1, 0, 0, 0, -0.01005298, 0.99994946, 0, -0.99994946, -0.01005298, 9.275801, 99.252106, -4.0206814)
->>>>>>> main
 light_energy = 4.815
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 16.0
 light_angular_distance = 90.0
 directional_shadow_mode = 0
 sky_mode = 1
-<<<<<<< HEAD
-=======
 
 [node name="South Wall" type="Node3D" parent="." unique_id=387573497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100)
@@ -332,4 +250,3 @@ shape = SubResource("CylinderShape3D_go701")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Column West 4/StaticBody3D" unique_id=1752070901]
 mesh = SubResource("CylinderMesh_8j60k")
->>>>>>> main

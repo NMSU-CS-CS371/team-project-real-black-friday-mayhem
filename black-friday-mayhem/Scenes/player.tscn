@@ -1,22 +1,7 @@
 [gd_scene format=3 uid="uid://b4woik3ytcllt"]
 
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://bf7wndkj4f1w4" path="res://Assets/Textures/TEST-SPRITE.png" id="1_1lubm"]
-[ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Scripts/Movement.gd" id="2_odttp"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pueg"]
-albedo_texture = ExtResource("1_1lubm")
-uv1_scale = Vector3(15, 15, 15)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_5oc15"]
-material = SubResource("StandardMaterial3D_0pueg")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4liu"]
-albedo_color = Color(0.99842995, 0.015917297, 3.85046e-07, 1)
-=======
 [ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Scripts/Movement.gd" id="1_cvnsp"]
 [ext_resource type="Script" uid="uid://sji7srj5jd3l" path="res://Scripts/ArrowScript.gd" id="2_6t5aa"]
->>>>>>> main
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5oc15"]
 
