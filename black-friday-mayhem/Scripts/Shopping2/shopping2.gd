@@ -51,7 +51,6 @@ func add_score(points):
 	score_label.text = "" + str(score)
 	print ("Score: ", score)
 	
-
 #function for when the game timer runs out
 func _on_game_timer_timeout() -> void:
 	print("TIMES UP")

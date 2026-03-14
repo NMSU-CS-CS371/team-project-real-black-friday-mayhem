@@ -8,8 +8,8 @@ extends Node2D #Hand Spawn
 #whenever the spawner timer runs out it will spawn a hand and then restart the timer
 
 @export var hand_scene: PackedScene #hand nodes
-@export var spawn_interval := 1.5
-@export var max_hands := 10
+@export var spawn_interval := 1.0
+@export var max_hands := 20
 var game: Node
 
 #ready func is to set up the scene
@@ -41,7 +41,7 @@ func spawn_hand():
 	#hand = a HandEnemy
 	var hand = hand_scene.instantiate()
 	#side = a random number between 1 and 4
-	var side := randi() % 4
+	var side := randi() % 3
 	#spawn side = random side chosen
 	hand.spawn_side = side
 	# get the hand position from what side the hand is on
@@ -69,7 +69,5 @@ func get_spawn_position_from_side(side: int) -> Vector2:
 			return Vector2(randf_range(margin, screen_size.x - margin), screen_size.y - margin)
 		2: # LEFT
 			return Vector2(margin, randf_range(margin, screen_size.y - margin))
-		3: # RIGHT
-			return Vector2(screen_size.x - margin, randf_range(margin, screen_size.y - margin))
 	#return the screen size divided by 2
 	return screen_size / 2

@@ -21,6 +21,7 @@ var item_points: int
 var spawn_point: Node2D = null
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var area: Area2D = $Area2D
+@export var move_speed := 120
 
 # Item enters scene and registers itself with game
 func _ready() -> void:
@@ -32,6 +33,14 @@ func _ready() -> void:
 	get_parent().register_item(self) 
 	#when clicked got to clicked function
 	add_to_group("items")
+
+#moves the item across the screen
+func _process(delta):
+	position.x -= move_speed * delta
+	var screen_size = get_viewport_rect().size
+	# if it moves off left side of screen delete it
+	if position.x < -50:
+		queue_free()
 
 #choose random Item
 func item_texture() -> Texture2D:

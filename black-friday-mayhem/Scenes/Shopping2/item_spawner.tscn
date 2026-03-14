@@ -5,7 +5,6 @@
 
 [node name="ItemSpawner" type="Node2D" unique_id=1422229041]
 script = ExtResource("1_nioyj")
-spawn_interval = 0.5
 item_scene = ExtResource("2_udjn0")
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=74259718]
