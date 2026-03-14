@@ -38,18 +38,22 @@ func item_texture() -> Texture2D:
 	match id:
 		0: 
 			item_points = 5
+			sprite.offset.y = -50
 			return texture_jam
 		1:
 			item_points = 2
+			sprite.offset.y = -70
 			return texture_cereal
+			
 		2:
 			item_points = 3
+			sprite.offset.y = -55
 			return texture_corn
 		3:
 			item_points = 8
+			sprite.offset.y = -25
 			return texture_toiletpaper
 	return null
-	
 
 #Item leaves scene and unregisters itself
 func _exit_tree() -> void:

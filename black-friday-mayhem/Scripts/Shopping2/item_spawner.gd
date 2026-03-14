@@ -2,7 +2,7 @@ extends Node2D #Item Spawner
 #Used to spawn multipule items for the player to get points
 
 #Varibles
-@export var spawn_interval := 2.0
+@export var spawn_interval := 1.0
 @export var max_items := 20
 @export var item_scene: PackedScene
 @export var item_count := 8

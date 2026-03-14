@@ -1,7 +1,13 @@
 extends Node2D #Hand Spawn
+#Hand Spawner is what spawns the hands infinitly 
+#on initilization
+#it gets the game from the minigame node
+#if the spawn timer is not found it will not spawn any hands
+#it will assign the timers wait time to be the hands spawn iterval 
+#starts the spawner timer
+#whenever the spawner timer runs out it will spawn a hand and then restart the timer
 
-
-@export var hand_scene: PackedScene
+@export var hand_scene: PackedScene #hand nodes
 @export var spawn_interval := 1.5
 @export var max_hands := 10
 var game: Node

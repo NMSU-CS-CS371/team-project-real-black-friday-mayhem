@@ -3,9 +3,38 @@
 [ext_resource type="Script" uid="uid://dcs7iuqhpasuk" path="res://Scripts/Shopping2/shopping2.gd" id="1_m5oxq"]
 [ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/Shopping2/item_spawner.tscn" id="2_2r7tu"]
 [ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/Shopping2/hand_spawner.tscn" id="2_mntse"]
+[ext_resource type="Texture2D" uid="uid://diif56b3hfcwv" path="res://Assets/Textures/shelf.jpg" id="2_qa6v8"]
+[ext_resource type="FontFile" uid="uid://bxvituh4qj3ga" path="res://Assets/Fonts/Xolonium-Regular.ttf" id="3_fpqsi"]
 
-[node name="MiniGame12D" type="Node2D" unique_id=1466539220]
+[sub_resource type="FontVariation" id="FontVariation_yjfng"]
+base_font = ExtResource("3_fpqsi")
+
+[node name="MiniGame" type="Node2D" unique_id=1466539220]
 script = ExtResource("1_m5oxq")
+
+[node name="Background" type="TextureRect" parent="." unique_id=255902574]
+offset_left = -187.0
+offset_top = -201.0
+offset_right = 1353.0
+offset_bottom = 798.0
+texture = ExtResource("2_qa6v8")
+
+[node name="GameTimer" type="Timer" parent="." unique_id=169254731]
+wait_time = 40.0
+one_shot = true
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=147841446]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1000.0
+offset_right = 1150.0
+offset_bottom = 100.0
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_yjfng")
+theme_override_font_sizes/font_size = 64
+text = "0"
+horizontal_alignment = 1
 
 [node name="ItemSpawner" parent="." unique_id=1422229041 instance=ExtResource("2_2r7tu")]
 
@@ -14,25 +43,39 @@ script = ExtResource("1_m5oxq")
 [node name="SpawnPoints" type="Node2D" parent="." unique_id=364551897]
 
 [node name="Point1" type="Marker2D" parent="SpawnPoints" unique_id=484868366]
-position = Vector2(200, 200)
+position = Vector2(150, 310)
 
 [node name="Point2" type="Marker2D" parent="SpawnPoints" unique_id=194094707]
-position = Vector2(420, 200)
+position = Vector2(300, 310)
 
 [node name="Point3" type="Marker2D" parent="SpawnPoints" unique_id=598518985]
-position = Vector2(650, 200)
-
-[node name="Point4" type="Marker2D" parent="SpawnPoints" unique_id=1498948141]
-position = Vector2(900, 200)
-
-[node name="Point5" type="Marker2D" parent="SpawnPoints" unique_id=526404578]
-position = Vector2(200, 450)
-
-[node name="Point6" type="Marker2D" parent="SpawnPoints" unique_id=1382424845]
-position = Vector2(420, 450)
+position = Vector2(450, 310)
 
 [node name="Point7" type="Marker2D" parent="SpawnPoints" unique_id=2022392950]
-position = Vector2(650, 450)
+position = Vector2(150, 540)
+
+[node name="Point4" type="Marker2D" parent="SpawnPoints" unique_id=1498948141]
+position = Vector2(600, 310)
+
+[node name="Point5" type="Marker2D" parent="SpawnPoints" unique_id=526404578]
+position = Vector2(750, 310)
+
+[node name="Point6" type="Marker2D" parent="SpawnPoints" unique_id=1382424845]
+position = Vector2(900, 310)
 
 [node name="Point8" type="Marker2D" parent="SpawnPoints" unique_id=1300867395]
-position = Vector2(900, 450)
+position = Vector2(300, 540)
+
+[node name="Point9" type="Marker2D" parent="SpawnPoints" unique_id=1838174233]
+position = Vector2(450, 540)
+
+[node name="Point10" type="Marker2D" parent="SpawnPoints" unique_id=806685756]
+position = Vector2(600, 540)
+
+[node name="Point11" type="Marker2D" parent="SpawnPoints" unique_id=1932743603]
+position = Vector2(750, 540)
+
+[node name="Point12" type="Marker2D" parent="SpawnPoints" unique_id=653994777]
+position = Vector2(900, 540)
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

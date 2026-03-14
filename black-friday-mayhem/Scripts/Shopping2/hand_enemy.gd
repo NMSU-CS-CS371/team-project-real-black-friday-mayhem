@@ -26,6 +26,7 @@ var wait_timer : = 0.0
 var target_item : Node2D = null
 #speed toward item
 @export var move_speed: = 100.0
+var elapsed_time := 0.0
 
 #Variables for Spawning Hands
 var base_position: Vector2
@@ -50,6 +51,7 @@ func _ready() -> void:
 #function that gets called every frame
 func _process(delta):
 	# Handle waiting and moving toward item
+	elapsed_time += delta
 	match state:
 		HandState.WAITING: #waiting
 			#offset for the position
@@ -81,8 +83,9 @@ func _process(delta):
 				state = HandState.RETURNING
 				return
 			#direction
+			var speed_multiplier = 1.0 + (elapsed_time / 5.0)
 			var direction = (target_item.position - position).normalized()
-			position += direction * move_speed * delta
+			position += direction * move_speed * speed_multiplier * delta
 
 			#if the its moving toware the item then face the item
 			look_at(target_item.position)
@@ -139,3 +142,6 @@ func steal_item():
 		target_item.queue_free()
 	#delete hand
 	queue_free()
+	#state = HandState.RETURNING
+	
+	
