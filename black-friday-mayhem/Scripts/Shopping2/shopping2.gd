@@ -1,6 +1,7 @@
 extends Node2D #Hand Mini Game
 #this is the main mini game node which starts the game 
 #and connects everything together
+#
 
 enum GameState{IDLE, RUNNING, FINISHED}
 var state: GameState = GameState.IDLE
