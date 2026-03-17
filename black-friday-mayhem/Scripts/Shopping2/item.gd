@@ -21,6 +21,8 @@ var item_points: int
 var spawn_point: Node2D = null
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var area: Area2D = $Area2D
+@onready var shape1 : CollisionShape2D = $Area2D/CollisionShapeCap
+@onready var shape2 : CollisionShape2D = $Area2D/CollisionShapeRect
 @export var move_speed := 120
 
 # Item enters scene and registers itself with game
@@ -29,18 +31,19 @@ func _ready() -> void:
 	id = randi() % 4  # 0 to 3
 	#set sprite texture to the item texture
 	sprite.texture = item_texture()
+	#153
+	#189
+	if id == 1:
+		shape1.disabled = true
+		shape2.disabled = false
+		
+		#shape.set_size(Vector2(153, 189))
+		#sprite.scale = Vector2(0.6, 0.6)
 	#when the node get initialized then register the node in the minigame
 	get_parent().register_item(self) 
 	#when clicked got to clicked function
 	add_to_group("items")
 
-#moves the item across the screen
-func _process(delta):
-	position.x -= move_speed * delta
-	var screen_size = get_viewport_rect().size
-	# if it moves off left side of screen delete it
-	if position.x < -50:
-		queue_free()
 
 #choose random Item
 func item_texture() -> Texture2D:
@@ -52,6 +55,7 @@ func item_texture() -> Texture2D:
 		1:
 			item_points = 2
 			sprite.offset.y = -70
+			
 			return texture_cereal
 			
 		2:

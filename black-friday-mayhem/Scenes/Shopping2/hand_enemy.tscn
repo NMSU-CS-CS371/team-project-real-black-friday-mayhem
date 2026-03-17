@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://by62wj5yxbmlp"]
+[gd_scene format=3 uid="uid://dkmngos0soy2f"]
 
-[ext_resource type="Script" uid="uid://rnu2qslu1tgm" path="res://Scripts/Shopping2/hand_enemy.gd" id="1_ma1if"]
-[ext_resource type="Texture2D" uid="uid://dby1utd2o8642" path="res://Assets/Sprites/Hands.png" id="2_pyopn"]
+[ext_resource type="Script" uid="uid://08l2xeqc1ssc" path="res://Scripts/Shopping2/hand_enemy.gd" id="1_yrr01"]
+[ext_resource type="Texture2D" uid="uid://dby1utd2o8642" path="res://Assets/Sprites/Hands.png" id="2_ogy7t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5245f"]
 radius = 18.609673
@@ -10,14 +10,16 @@ radius = 18.609673
 radius = 57.035076
 
 [node name="HandEnemy" type="Node2D" unique_id=1218619123]
+z_index = 9
 scale = Vector2(0.75, 0.75)
-script = ExtResource("1_ma1if")
+script = ExtResource("1_yrr01")
+wait_time = 0.0
 move_speed = 300.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1427166623]
 rotation = 1.5707964
 scale = Vector2(5, 5)
-texture = ExtResource("2_pyopn")
+texture = ExtResource("2_ogy7t")
 metadata/_edit_group_ = true
 
 [node name="ClickArea" type="Area2D" parent="." unique_id=198534545]

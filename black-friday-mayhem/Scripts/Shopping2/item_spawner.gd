@@ -14,6 +14,7 @@ func _ready():
 	$SpawnTimer.wait_time = spawn_interval
 	$SpawnTimer.timeout.connect(_on_spawn_timer_timeout)
 	$SpawnTimer.start()
+	spawn_item()
 
 #spawn_item is the funciton that spawns an item 
 func spawn_item():
@@ -24,21 +25,34 @@ func spawn_item():
 	#pick a out of 2 points
 	var index = randi() % 2
 	#intantiate item
-	var item = item_scene.instantiate()
+	#var item = item_scene.instantiate()
 	
 	var screen_size= get_viewport_rect().size
 	#spawn on the right side of the screen
-	var spawn_x = screen_size.x +50
-	var spawn_y #= 270 or 500
-	match index:
-		0:
-			spawn_y = 270
-		1:
-			spawn_y = 500
+	var spawn_x = 150
+	var spawn_y = 270 #or 500
+	
+	for x in 40:
+		var item = item_scene.instantiate()
+		item.position = Vector2(spawn_x, spawn_y)
+		get_parent().add_child.call_deferred(item)
+		item.item_clicked.connect(_on_item_clicked)
+		spawn_x += 150
+		
+	spawn_y = 500
+	spawn_x = 150
+	for x in 40:
+		var item = item_scene.instantiate()
+		item.position = Vector2(spawn_x, spawn_y)
+		get_parent().add_child.call_deferred(item)
+		item.item_clicked.connect(_on_item_clicked)
+		spawn_x += 150
+	#match index:
+		#0:
+			#spawn_y = 270
+		#1:
+			#spawn_y = 500
 	#set spawn position
-	item.position = Vector2(spawn_x, spawn_y)
-	get_parent().add_child.call_deferred(item)
-	item.item_clicked.connect(_on_item_clicked)
 	#print("Spawned items:", item_count)
 
 #when the player clicks on the item give points
@@ -50,4 +64,4 @@ func _on_item_clicked(points):
 func _on_spawn_timer_timeout():
 	if get_child_count() >= max_items:
 		return
-	spawn_item()
+	#spawn_item()

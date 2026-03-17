@@ -10,6 +10,8 @@ extends Node2D #Hand Spawn
 @export var hand_scene: PackedScene #hand nodes
 @export var spawn_interval := 1.0
 @export var max_hands := 20
+@export var screenLocationX : Node2D
+@export var screenLocationY : Node2D
 var game: Node
 
 #ready func is to set up the scene
@@ -62,12 +64,15 @@ func get_spawn_position_from_side(side: int) -> Vector2:
 	#set the margin between the edges and the hands
 	var margin := 30
 	#match side (cases)
+	
+	var screenX = screenLocationX.position.x
+	var screenY = screenLocationY.position.y
 	match side:
 		0: # TOP
-			return Vector2(randf_range(margin, screen_size.x - margin), margin)
+			return Vector2(randf_range(margin, screenX - margin), margin)
 		1: # BOTTOM
-			return Vector2(randf_range(margin, screen_size.x - margin), screen_size.y - margin)
+			return Vector2(randf_range(margin, screenX - margin), screen_size.y - margin)
 		2: # LEFT
-			return Vector2(margin, randf_range(margin, screen_size.y - margin))
+			return Vector2(margin, randf_range(margin, screenY - margin))
 	#return the screen size divided by 2
 	return screen_size / 2
