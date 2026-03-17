@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://chklspbue4vyt" path="res://Scripts/Shopping2/scrollCameraScript.gd" id="3_piprj"]
 [ext_resource type="FontFile" uid="uid://bxvituh4qj3ga" path="res://Assets/Fonts/Xolonium-Regular.ttf" id="3_riwj3"]
 [ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/Shopping2/item_spawner.tscn" id="4_8mf5g"]
-[ext_resource type="PackedScene" path="res://Scenes/Shopping2/hand_spawner.tscn" id="5_yr1ar"]
+[ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/Shopping2/hand_spawner.tscn" id="5_yr1ar"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aogmo"]
 texture = ExtResource("2_yccae")
