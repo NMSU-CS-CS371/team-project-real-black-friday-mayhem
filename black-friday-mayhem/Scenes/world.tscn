@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cl1piqey8e73g" path="res://Assets/Textures/TEST-SPRITE.png" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/scalper.tscn" id="3_5a7ea"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fj7yv"]
 size = Vector3(1, 50, 250)
@@ -250,3 +251,6 @@ shape = SubResource("CylinderShape3D_go701")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Column West 4/StaticBody3D" unique_id=1752070901]
 mesh = SubResource("CylinderMesh_8j60k")
+
+[node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("3_5a7ea")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 1.6795957, 0)
