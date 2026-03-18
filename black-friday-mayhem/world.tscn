@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://k8vgfxancgy0"]
 
+[ext_resource type="Script" uid="uid://cja07lh1kaks4" path="res://world.gd" id="1_036b0"]
 [ext_resource type="Texture2D" uid="uid://bf7wndkj4f1w4" path="res://Assets/Textures/TEST-SPRITE.png" id="1_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/shop_checkpoint.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_aqk2v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 
@@ -26,6 +28,7 @@ material = SubResource("StandardMaterial3D_f3sb7")
 size = Vector3(0, 50, 150)
 
 [node name="main" type="Node" unique_id=1035745174]
+script = ExtResource("1_036b0")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1621393907]
 
@@ -87,3 +90,5 @@ transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.
 
 [node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_tlwt5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3577168, -1.9803455)
+
+[node name="SceneTransition" parent="ShopCheckpoint" unique_id=1029859877 instance=ExtResource("4_aqk2v")]

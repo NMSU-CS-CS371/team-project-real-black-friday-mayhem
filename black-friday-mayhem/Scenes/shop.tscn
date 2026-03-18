@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://d15522nno71i3"]
 
 [ext_resource type="PackedScene" uid="uid://bn4fjk21yr3xd" path="res://Assets/Prefabs/shop_item.tscn" id="1_a0mxf"]
+[ext_resource type="Script" uid="uid://bm7kkpghwdp1d" path="res://Scenes/shop.gd" id="1_io27d"]
+[ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="3_fdj0q"]
 
 [node name="Shop" type="Node2D" unique_id=1138335139]
+script = ExtResource("1_io27d")
 
 [node name="ShopItem1" parent="." unique_id=1748581523 instance=ExtResource("1_a0mxf")]
 position = Vector2(165, 196)
@@ -27,3 +30,14 @@ position = Vector2(670, 431)
 
 [node name="ShopItem8" parent="." unique_id=1301891011 instance=ExtResource("1_a0mxf")]
 position = Vector2(931, 431)
+
+[node name="SceneTransition" parent="." unique_id=1029859877 instance=ExtResource("3_fdj0q")]
+
+[connection signal="item_exiting_tree" from="ShopItem1" to="." method="_on_item_exiting"]
+[connection signal="item_exiting_tree" from="ShopItem2" to="." method="_on_item_exiting"]
+[connection signal="item_exiting_tree" from="ShopItem3" to="." method="_on_item_exiting"]
+[connection signal="item_exiting_tree" from="ShopItem4" to="." method="_on_item_exiting"]
+[connection signal="item_exiting_tree" from="ShopItem5" to="." method="_on_item_exiting"]
+[connection signal="item_exiting_tree" from="ShopItem6" to="." method="_on_item_exiting"]
+[connection signal="item_exiting_tree" from="ShopItem7" to="." method="_on_item_exiting"]
+[connection signal="item_exiting_tree" from="ShopItem8" to="." method="_on_item_exiting"]
