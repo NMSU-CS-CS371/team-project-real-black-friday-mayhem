@@ -19,7 +19,7 @@ var forward = Vector3.ZERO
 func _ready() -> void:
 	if !useArrow:
 		$Shape2.visible = false
-	pass
+	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
 	# Gets vector 2, for left, right, up, and down (1 or 0)
@@ -32,11 +32,11 @@ func _physics_process(delta: float) -> void:
 	forward = Vector3.FORWARD.rotated(Vector3.UP, rotation.y)
 	
 	if velocity.length() > 0.0000001: # Code for slowing down
-		print(velocity.length())
+		# print(velocity.length())
 		velocity -= velocity.lerp(Vector3.ZERO, traction) * delta
 		speed -= acceleration * delta * traction
 		speed = clamp(speed, 0, maxSpeed)
-		#velocity = forward * delta * speed
+		# velocity = forward * delta * speed
 	
 	if isMovingForward: # Fixes rotations based on if going forward
 		speed += acceleration * delta
@@ -66,8 +66,8 @@ func _physics_process(delta: float) -> void:
 		newVel = newVel * delta * speed
 		velocity = newVel # Set velocity to new vector * delta * speed
 		
-		print("SUPER IMPORTANT FOR: ", velocity.length())
-		print("NEW VEL: ", newVel, " VEL: ", velocity)
+		# print("SUPER IMPORTANT FOR: ", velocity.length())
+		# print("NEW VEL: ", newVel, " VEL: ", velocity)
 		pass
 	#elif velocity.length() < maxRotationSpeed and rotationFix:
 		#var newVel = Vector3(0,0,-1)
@@ -76,8 +76,8 @@ func _physics_process(delta: float) -> void:
 		#rotationFix = false
 		#pass
 	
-	print("Vel: ", velocity.length())
-	print("Left: ", input_dir.x, " ws: ", input_dir.y)	
+	# print("Vel: ", velocity.length())
+	# print("Left: ", input_dir.x, " ws: ", input_dir.y)	
 		#var f = Vector3(0,100,0)
 		#$RigidBody3D.apply_central_force(f)#forward*delta*speed)
 	move_and_slide()

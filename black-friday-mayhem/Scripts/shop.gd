@@ -26,5 +26,5 @@ func minigameOver() -> void:
 	print("exiting minigame...")
 	SceneTransition.play("fade_in")
 	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_file("res://world.tscn")
+	get_tree().change_scene_to_file("res://Scenes/world.tscn")
 	

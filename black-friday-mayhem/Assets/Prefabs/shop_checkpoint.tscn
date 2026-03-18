@@ -18,6 +18,7 @@ script = ExtResource("2_aa6p3")
 
 [node name="CollisionShape3D" parent="." index="0" unique_id=729517197]
 shape = SubResource("BoxShape3D_aa6p3")
+disabled = true
 debug_color = Color(0.9453508, 2.5990605e-06, 0.57035685, 0.41960785)
 
 [node name="MeshInstance3D" parent="." index="1" unique_id=21900597]
