@@ -10,8 +10,9 @@
 [sub_resource type="FontVariation" id="FontVariation_yjfng"]
 base_font = ExtResource("3_fpqsi")
 
-[node name="MiniGame" type="Node2D" unique_id=1466539220]
+[node name="MiniGame" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("score_label")]
 script = ExtResource("1_yjfng")
+score_label = NodePath("ScoreLabel")
 
 [node name="Background" type="TextureRect" parent="." unique_id=255902574]
 offset_left = -180.0
@@ -38,10 +39,10 @@ theme_override_font_sizes/font_size = 64
 text = "0"
 horizontal_alignment = 1
 
-[node name="SceneTransition" parent="." unique_id=1029859877 instance=ExtResource("6_yjfng")]
-
 [node name="ItemSpawner" parent="." unique_id=1422229041 instance=ExtResource("2_2r7tu")]
 
 [node name="HandSpawner" parent="." unique_id=962083149 instance=ExtResource("2_mntse")]
+
+[node name="SceneTransition" parent="." unique_id=1029859877 instance=ExtResource("6_yjfng")]
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

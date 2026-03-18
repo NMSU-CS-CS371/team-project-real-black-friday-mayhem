@@ -12,8 +12,15 @@ var score: = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# finish transitioning scene
 	SceneTransition.get_parent().get_node("ColorRect").color.a = 255
 	SceneTransition.play("fade_out")
+	await get_tree().create_timer(0.5).timeout
+	
+	# deactivate rectangle used for transition animation
+	# to avoid interfering with the minigame
+	$SceneTransition/ColorRect.visible = false
+	
 	print("Mini-game ready")#print to make sure Mini Game Scene is running
 	start_game()#start the game
 
@@ -27,6 +34,10 @@ func start_game():
 func end_game():
 	state = GameState.FINISHED
 	print("GAME OVER")
+	
+	# reactivate rectangle used for transition animation
+	$SceneTransition/ColorRect.visible = true
+	
 	# wait a little before beginning scene transition
 	await get_tree().create_timer(0.5).timeout
 	print("exiting minigame...")
