@@ -8,17 +8,23 @@ radius = 59.0
 height = 120.0
 
 [node name="Item" type="Node2D" unique_id=616066187]
+scale = Vector2(0.75, 0.75)
 script = ExtResource("1_3x3c1")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1688037541]
 texture = ExtResource("1_h4wly")
+offset = Vector2(0, -60)
 metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1242272409]
+collision_layer = 2
+collision_mask = 0
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=672852353]
+position = Vector2(-9.333334, -48)
 shape = SubResource("CapsuleShape2D_3x3c1")
+metadata/_edit_group_ = true
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
