@@ -50,6 +50,10 @@ func _ready() -> void:
 
 #function that gets called every frame
 func _process(delta):
+	# if the minigame is over, delete
+	if not get_parent().get_parent().is_running():
+		queue_free()
+
 	# Handle waiting and moving toward item
 	elapsed_time += delta
 	match state:

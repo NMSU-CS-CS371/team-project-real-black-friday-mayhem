@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://b4woik3ytcllt"]
 
 [ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Scripts/Movement.gd" id="1_cvnsp"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://sji7srj5jd3l" path="res://Scripts/ArrowScript.gd" id="2_6t5aa"]
+=======
+[ext_resource type="Script" path="res://Scripts/ArrowScript.gd" id="2_6t5aa"]
+>>>>>>> main
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5oc15"]
 

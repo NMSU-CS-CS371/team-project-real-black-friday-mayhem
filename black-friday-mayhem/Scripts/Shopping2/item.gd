@@ -36,6 +36,10 @@ func _ready() -> void:
 
 #moves the item across the screen
 func _process(delta):
+	# if the minigame is over, delete
+	if not get_parent().is_running():
+		queue_free()
+
 	position.x -= move_speed * delta
 	var screen_size = get_viewport_rect().size
 	# if it moves off left side of screen delete it
