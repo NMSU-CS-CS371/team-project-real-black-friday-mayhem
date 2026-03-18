@@ -1,5 +1,7 @@
 extends Node2D
 
+signal item_exiting_tree
+
 var timerLength = 1
 var minLength = 1
 var maxLength = 5
@@ -39,7 +41,7 @@ func _ready() -> void:
 	tag.text = label
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 # Delete item when timer expires
@@ -60,3 +62,6 @@ func purchase_item():
 	# player.moneySaved += moneySaved
 	# player.inventory.add(itemNames[itemIndex],sprites[itemIndex], discountedPrice)
 	queue_free()
+
+func _exit_tree() -> void:
+	item_exiting_tree.emit()

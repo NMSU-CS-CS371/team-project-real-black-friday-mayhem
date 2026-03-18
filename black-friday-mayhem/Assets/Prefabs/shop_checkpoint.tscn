@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dj7b3logase36"]
+
+[ext_resource type="PackedScene" uid="uid://c7dw0qoj7iqah" path="res://Assets/Prefabs/obstacle_base.tscn" id="1_3ys4h"]
+[ext_resource type="Script" uid="uid://dqq4qlp1flm8v" path="res://Scripts/shop_checkpoints.gd" id="2_aa6p3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aa6p3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wvea8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ys4h"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x8wgl"]
+
+[node name="ShopCheckpoint" unique_id=1452118021 instance=ExtResource("1_3ys4h")]
+visible = false
+script = ExtResource("2_aa6p3")
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=729517197]
+shape = SubResource("BoxShape3D_aa6p3")
+disabled = true
+debug_color = Color(0.9453508, 2.5990605e-06, 0.57035685, 0.41960785)
+
+[node name="MeshInstance3D" parent="." index="1" unique_id=21900597]
+mesh = SubResource("BoxMesh_wvea8")
+surface_material_override/0 = SubResource("StandardMaterial3D_3ys4h")
+
+[node name="CollisionShape3D" parent="TriggerZone" parent_id_path=PackedInt32Array(17846116) index="0" unique_id=1219094317]
+shape = SubResource("BoxShape3D_x8wgl")
