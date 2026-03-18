@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-[gd_scene format=3 uid="uid://dfa441qw2h0um"]
-=======
 [gd_scene format=3 uid="uid://dv5vr20xtexxf"]
->>>>>>> main
 
 [ext_resource type="Script" uid="uid://cja07lh1kaks4" path="res://Scripts/world.gd" id="1_fo5ed"]
 [ext_resource type="Texture2D" uid="uid://cl1piqey8e73g" path="res://Assets/Textures/TEST-SPRITE.png" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/scalper.tscn" id="3_5a7ea"]
-=======
+
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/shop_checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
->>>>>>> main
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fj7yv"]
 size = Vector3(1, 50, 250)
@@ -263,12 +256,8 @@ shape = SubResource("CylinderShape3D_go701")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Column West 4/StaticBody3D" unique_id=1752070901]
 mesh = SubResource("CylinderMesh_8j60k")
 
-<<<<<<< HEAD
-[node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("3_5a7ea")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 1.6795957, 0)
-=======
 [node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6413479, 85.2433)
 
 [node name="SceneTransition" parent="ShopCheckpoint" unique_id=1029859877 instance=ExtResource("4_fo5ed")]
->>>>>>> main
+
