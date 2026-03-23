@@ -85,7 +85,13 @@ func _process(delta):
 				#return
 			#direction
 			var speed_multiplier = 1.0 + (elapsed_time / 5.0)
-			var direction = (target_item.position - position).normalized()
+			var direction
+			if target_item.position != null:
+				direction = (target_item.position - position).normalized()
+			else:
+				#fixed race condtion
+				direction = Vector2(position.x, position.y+2000)
+				
 			position += direction * move_speed * speed_multiplier * delta
 
 			#if the its moving toware the item then face the item

@@ -32,7 +32,7 @@ func spawn_item():
 	var spawn_x = 150
 	var spawn_y = 270 #or 500
 	
-	for x in 40:
+	for x in 50:
 		var item = item_scene.instantiate()
 		item.position = Vector2(spawn_x, spawn_y)
 		get_parent().add_child.call_deferred(item)
@@ -41,7 +41,7 @@ func spawn_item():
 		
 	spawn_y = 500
 	spawn_x = 150
-	for x in 40:
+	for x in 50:
 		var item = item_scene.instantiate()
 		item.position = Vector2(spawn_x, spawn_y)
 		get_parent().add_child.call_deferred(item)
