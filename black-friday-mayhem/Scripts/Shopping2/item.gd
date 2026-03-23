@@ -41,7 +41,6 @@ func _process(delta):
 		queue_free()
 
 	position.x -= move_speed * delta
-	var screen_size = get_viewport_rect().size
 	# if it moves off left side of screen delete it
 	if position.x < -50:
 		queue_free()

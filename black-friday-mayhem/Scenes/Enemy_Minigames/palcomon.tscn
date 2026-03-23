@@ -1,0 +1,367 @@
+[gd_scene format=3 uid="uid://cpwithll7q61f"]
+
+[ext_resource type="Texture2D" uid="uid://dfoieeeu1l0v6" path="res://Assets/Textures/PalcomonBackground.jpg" id="1_3kemf"]
+[ext_resource type="Script" uid="uid://blkewc3234s5x" path="res://Scripts/Enemy_Minigames/palcomon.gd" id="1_go8n0"]
+[ext_resource type="FontFile" uid="uid://bxvituh4qj3ga" path="res://Assets/Fonts/Xolonium-Regular.ttf" id="2_go8n0"]
+[ext_resource type="Texture2D" uid="uid://ch7n4nl1fpn6f" path="res://Assets/Sprites/ShoppingCart.jpg" id="3_ki8pa"]
+[ext_resource type="Texture2D" uid="uid://dkoe3vlonx1ew" path="res://Assets/Sprites/Crowbar.jpeg" id="4_1yrlu"]
+[ext_resource type="Texture2D" uid="uid://bqq1tmc3icv70" path="res://Assets/Textures/TransitionTexture2.png" id="6_1yrlu"]
+[ext_resource type="Texture2D" uid="uid://dtyx7i14yi6gg" path="res://Assets/Textures/TransitionTexture3.png" id="7_eridl"]
+[ext_resource type="Texture2D" uid="uid://buqx5nfli38rv" path="res://Assets/Textures/TransitionTexture4.png" id="8_upaf1"]
+[ext_resource type="Texture2D" uid="uid://10xbg58t5f6j" path="res://Assets/Textures/TransitionTexture5.png" id="9_o4hca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki8pa"]
+bg_color = Color(0.8131761, 0.23192453, 0.22399783, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1yrlu"]
+bg_color = Color(0, 0.69881165, 0.5914159, 1)
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5aat"]
+bg_color = Color(0, 0, 0, 0.58431375)
+
+[sub_resource type="FontVariation" id="FontVariation_1yrlu"]
+base_font = ExtResource("2_go8n0")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmndw"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ew3n8"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kemf"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="FontVariation" id="FontVariation_go8n0"]
+base_font = ExtResource("2_go8n0")
+
+[sub_resource type="Animation" id="Animation_ki8pa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyContatainer/Enemy:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerContatainer/Player:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1yrlu"]
+resource_name = "enemy_damaged"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemyContatainer/Enemy:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kmndw"]
+resource_name = "player_damaged"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerContatainer/Player:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kmndw"]
+_data = {
+&"RESET": SubResource("Animation_ki8pa"),
+&"enemy_damaged": SubResource("Animation_1yrlu"),
+&"player_damaged": SubResource("Animation_kmndw")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qc2s0"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"done",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_1yrlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eridl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_upaf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o4hca")
+}],
+"loop": true,
+"name": &"intoTransition",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_o4hca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_upaf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eridl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1yrlu")
+}],
+"loop": true,
+"name": &"outTransition",
+"speed": 4.0
+}]
+
+[node name="Palcomon" type="Node2D" unique_id=489667661]
+script = ExtResource("1_go8n0")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1604600711]
+offset_left = -3.0
+offset_top = -5.0
+offset_right = 1158.0
+offset_bottom = 651.0
+texture = ExtResource("1_3kemf")
+
+[node name="EnemyContatainer" type="VBoxContainer" parent="." unique_id=1003657187]
+offset_left = 665.0
+offset_top = 130.0
+offset_right = 1016.0
+offset_bottom = 473.0
+alignment = 1
+
+[node name="EnemyHealth" type="ProgressBar" parent="EnemyContatainer" unique_id=1349054669]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_constants/outline_size = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ki8pa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1yrlu")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Health" type="Label" parent="EnemyContatainer/EnemyHealth" unique_id=773040578]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_go8n0")
+theme_override_font_sizes/font_size = 24
+text = "HP: 25/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enemy" type="TextureRect" parent="EnemyContatainer" unique_id=454945057]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_ki8pa")
+stretch_mode = 3
+
+[node name="PlayerContatainer" type="VBoxContainer" parent="." unique_id=916769989]
+offset_left = 33.0
+offset_top = 189.0
+offset_right = 417.0
+offset_bottom = 549.0
+alignment = 1
+
+[node name="PlayerHealth" type="ProgressBar" parent="PlayerContatainer" unique_id=17880141]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_constants/outline_size = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ki8pa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1yrlu")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Health" type="Label" parent="PlayerContatainer/PlayerHealth" unique_id=291024198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_go8n0")
+theme_override_font_sizes/font_size = 24
+text = "HP: 25/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" type="TextureRect" parent="PlayerContatainer" unique_id=169531785]
+layout_mode = 2
+texture = ExtResource("4_1yrlu")
+stretch_mode = 3
+flip_h = true
+
+[node name="ButtonPanel" type="Panel" parent="." unique_id=1961265473]
+offset_top = 470.0
+offset_right = 1151.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c5aat")
+
+[node name="MarginContainer" type="MarginContainer" parent="ButtonPanel" unique_id=1835940203]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ButtonPanel/MarginContainer" unique_id=1697437328]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Attack" type="Button" parent="ButtonPanel/MarginContainer/HBoxContainer" unique_id=318054142]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_1yrlu")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_kmndw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ew3n8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ew3n8")
+text = "ATTACK
+"
+icon_alignment = 1
+
+[node name="Run" type="Button" parent="ButtonPanel/MarginContainer/HBoxContainer" unique_id=597689776]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_1yrlu")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_kmndw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ew3n8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ew3n8")
+text = "RUN"
+icon_alignment = 1
+
+[node name="TextBox" type="MarginContainer" parent="." unique_id=1108684497]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 471.0
+offset_right = 1153.0
+offset_bottom = 650.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="TextBox" unique_id=389603370]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3kemf")
+
+[node name="Label" type="Label" parent="TextBox/Panel" unique_id=1367286104]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = 14.0
+offset_right = -21.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_go8n0")
+theme_override_font_sizes/font_size = 48
+text = "text goes here
+"
+
+[node name="Traker" type="Label" parent="TextBox/Panel" unique_id=1994089180]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1034.0
+offset_top = 83.0
+offset_right = -10.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_go8n0")
+theme_override_font_sizes/font_size = 48
+text = ">"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2043398724]
+libraries/ = SubResource("AnimationLibrary_kmndw")
+
+[node name="Transition" type="AnimatedSprite2D" parent="." unique_id=247814740]
+position = Vector2(581, 325)
+sprite_frames = SubResource("SpriteFrames_qc2s0")
+animation = &"intoTransition"
+
+[connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Run" to="." method="_on_run_pressed"]

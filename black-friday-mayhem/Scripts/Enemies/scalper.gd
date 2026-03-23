@@ -7,11 +7,15 @@ var angle = 0.0
 var center = Vector3(0,0,0)
 var last_position = Vector3.ZERO
 @onready var sprite = $AnimatedSprite3D
+var Palcomon = preload("res://Scenes/Enemy_Minigames/palcomon.tscn")
+var is_defeated = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	last_position = global_position
+	# Connect the signal via code
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -60,3 +64,18 @@ func update_animation() :
 func play_if_not(anim):
 	if sprite.animation != anim:
 		sprite.play(anim)
+
+
+func _on_hit_box_body_entered(_body: Node3D) -> void:
+	
+	if (is_defeated):
+		return
+	var battle = Palcomon.instantiate()
+	add_child(battle)
+	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))
+	
+func _on_minigame_finished(result):
+	if result == "win" :
+		is_defeated = true
+		print("Enemy defeated")
+	
