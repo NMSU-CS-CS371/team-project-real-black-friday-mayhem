@@ -10,6 +10,7 @@ extends CharacterBody3D
 @export var traction : float
 @export var useArrow : bool
 @export var debug : bool
+@export var inventory : Inventory
 var speed : float
 var isMovingForward = false
 var isMovingBackward = false
