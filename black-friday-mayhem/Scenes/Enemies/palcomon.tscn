@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cpwithll7q61f"]
 
-[ext_resource type="Texture2D" uid="uid://dfoieeeu1l0v6" path="res://Assets/Textures/PalcomonBackground.jpg" id="1_3kemf"]
-[ext_resource type="Script" uid="uid://blkewc3234s5x" path="res://Scripts/Enemy_Minigames/palcomon.gd" id="1_go8n0"]
-[ext_resource type="FontFile" uid="uid://bxvituh4qj3ga" path="res://Assets/Fonts/Xolonium-Regular.ttf" id="2_go8n0"]
-[ext_resource type="Texture2D" uid="uid://ch7n4nl1fpn6f" path="res://Assets/Sprites/ShoppingCart.jpg" id="3_ki8pa"]
-[ext_resource type="Texture2D" uid="uid://dkoe3vlonx1ew" path="res://Assets/Sprites/Crowbar.jpeg" id="4_1yrlu"]
-[ext_resource type="Texture2D" uid="uid://bqq1tmc3icv70" path="res://Assets/Textures/TransitionTexture2.png" id="6_1yrlu"]
-[ext_resource type="Texture2D" uid="uid://dtyx7i14yi6gg" path="res://Assets/Textures/TransitionTexture3.png" id="7_eridl"]
-[ext_resource type="Texture2D" uid="uid://buqx5nfli38rv" path="res://Assets/Textures/TransitionTexture4.png" id="8_upaf1"]
-[ext_resource type="Texture2D" uid="uid://10xbg58t5f6j" path="res://Assets/Textures/TransitionTexture5.png" id="9_o4hca"]
+[ext_resource type="Script" uid="uid://blkewc3234s5x" path="res://Scripts/Enemies/palcomon.gd" id="1_2ybmw"]
+[ext_resource type="Texture2D" uid="uid://dfoieeeu1l0v6" path="res://Assets/Textures/PalcomonBackground.jpg" id="2_ssak1"]
+[ext_resource type="FontFile" uid="uid://bxvituh4qj3ga" path="res://Assets/Fonts/Xolonium-Regular.ttf" id="3_taysr"]
+[ext_resource type="Texture2D" uid="uid://1a67q208byl8" path="res://Assets/Textures/ScalperIdle.png" id="4_2ybmw"]
+[ext_resource type="Texture2D" uid="uid://dkoe3vlonx1ew" path="res://Assets/Sprites/Crowbar.jpeg" id="5_e1yre"]
+[ext_resource type="Texture2D" uid="uid://bqq1tmc3icv70" path="res://Assets/Textures/TransitionTexture2.png" id="6_r8t1f"]
+[ext_resource type="Texture2D" uid="uid://dtyx7i14yi6gg" path="res://Assets/Textures/TransitionTexture3.png" id="7_c7epx"]
+[ext_resource type="Texture2D" uid="uid://buqx5nfli38rv" path="res://Assets/Textures/TransitionTexture4.png" id="8_kj4qc"]
+[ext_resource type="Texture2D" uid="uid://10xbg58t5f6j" path="res://Assets/Textures/TransitionTexture5.png" id="9_56dx4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki8pa"]
 bg_color = Color(0.8131761, 0.23192453, 0.22399783, 1)
@@ -30,7 +30,7 @@ border_color = Color(0, 0, 0, 1)
 bg_color = Color(0, 0, 0, 0.58431375)
 
 [sub_resource type="FontVariation" id="FontVariation_1yrlu"]
-base_font = ExtResource("2_go8n0")
+base_font = ExtResource("3_taysr")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmndw"]
 bg_color = Color(0, 0, 0, 1)
@@ -51,7 +51,7 @@ border_width_right = 5
 border_width_bottom = 5
 
 [sub_resource type="FontVariation" id="FontVariation_go8n0"]
-base_font = ExtResource("2_go8n0")
+base_font = ExtResource("3_taysr")
 
 [sub_resource type="Animation" id="Animation_ki8pa"]
 length = 0.001
@@ -128,16 +128,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_1yrlu")
+"texture": ExtResource("6_r8t1f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_eridl")
+"texture": ExtResource("7_c7epx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_upaf1")
+"texture": ExtResource("8_kj4qc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_o4hca")
+"texture": ExtResource("9_56dx4")
 }],
 "loop": true,
 "name": &"intoTransition",
@@ -145,16 +145,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_o4hca")
+"texture": ExtResource("9_56dx4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_upaf1")
+"texture": ExtResource("8_kj4qc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_eridl")
+"texture": ExtResource("7_c7epx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_1yrlu")
+"texture": ExtResource("6_r8t1f")
 }],
 "loop": true,
 "name": &"outTransition",
@@ -162,20 +162,20 @@ animations = [{
 }]
 
 [node name="Palcomon" type="Node2D" unique_id=489667661]
-script = ExtResource("1_go8n0")
+script = ExtResource("1_2ybmw")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1604600711]
 offset_left = -3.0
 offset_top = -5.0
 offset_right = 1158.0
 offset_bottom = 651.0
-texture = ExtResource("1_3kemf")
+texture = ExtResource("2_ssak1")
 
 [node name="EnemyContatainer" type="VBoxContainer" parent="." unique_id=1003657187]
-offset_left = 665.0
-offset_top = 130.0
-offset_right = 1016.0
-offset_bottom = 473.0
+offset_left = 667.0
+offset_top = 81.0
+offset_right = 1080.0
+offset_bottom = 529.0
 alignment = 1
 
 [node name="EnemyHealth" type="ProgressBar" parent="EnemyContatainer" unique_id=1349054669]
@@ -197,17 +197,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_go8n0")
+theme_override_fonts/font = ExtResource("3_taysr")
 theme_override_font_sizes/font_size = 24
 text = "HP: 25/50"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Enemy" type="TextureRect" parent="EnemyContatainer" unique_id=454945057]
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("3_ki8pa")
+size_flags_vertical = 6
+texture = ExtResource("4_2ybmw")
 stretch_mode = 3
 
 [node name="PlayerContatainer" type="VBoxContainer" parent="." unique_id=916769989]
@@ -236,7 +237,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_go8n0")
+theme_override_fonts/font = ExtResource("3_taysr")
 theme_override_font_sizes/font_size = 24
 text = "HP: 25/50"
 horizontal_alignment = 1
@@ -244,7 +245,7 @@ vertical_alignment = 1
 
 [node name="Player" type="TextureRect" parent="PlayerContatainer" unique_id=169531785]
 layout_mode = 2
-texture = ExtResource("4_1yrlu")
+texture = ExtResource("5_e1yre")
 stretch_mode = 3
 flip_h = true
 
@@ -359,6 +360,7 @@ vertical_alignment = 2
 libraries/ = SubResource("AnimationLibrary_kmndw")
 
 [node name="Transition" type="AnimatedSprite2D" parent="." unique_id=247814740]
+visible = false
 position = Vector2(581, 325)
 sprite_frames = SubResource("SpriteFrames_qc2s0")
 animation = &"intoTransition"
