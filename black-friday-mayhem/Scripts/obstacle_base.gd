@@ -1,9 +1,6 @@
 @tool
 extends Entity
 
-# Emitted when the player enters the trigger zone around this obstacle
-signal player_entered
-
 # The size of the obstacle in 3D space (width, height, depth)
 # Changing this in the Inspector will automatically update collision, mesh, and trigger zone
 @export var obstacle_size: Vector3 = Vector3(1.0, 1.0, 1.0):
@@ -18,27 +15,21 @@ signal player_entered
 		obstacle_color = value
 		_apply_color()
 
-# Toggles whether the obstacle triggers the player_entered signal
-# Set to false for static props that shouldn't trigger events
-@export var is_interactable: bool = true:
-	set(value):
-		is_interactable = value
-		_apply_interactable()
-
 func _ready() -> void:
-	# Call super _ready() to handle mesh initialization
+	# Call super _ready() to handle mesh initialization and interaction state
 	super._ready()
 	# Apply initial size and color when the scene loads
 	_apply_size()
 	_apply_color()
-	_apply_interactable()
+	
 	# Connect the TriggerZone's body_entered signal to our handler (runtime only)
 	if not Engine.is_editor_hint():
 		if has_node("TriggerZone"):
 			$TriggerZone.body_entered.connect(_on_trigger_zone_body_entered)
 
 # Updates the interactable state (enabling/disabling the trigger zone)
-func _apply_interactable() -> void:
+# Overrides Entity._update_interactable()
+func _update_interactable() -> void:
 	if not is_node_ready():
 		return
 	

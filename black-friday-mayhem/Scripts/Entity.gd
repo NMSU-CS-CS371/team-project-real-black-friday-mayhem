@@ -28,8 +28,21 @@ extends Node3D
 @export var behavior_script: Script
 @export var entity_name: String = "Entity"
 
+# Interaction System
+# Emitted when the player interacts with or enters the trigger of this entity
+signal player_entered
+
+# Toggles whether the entity is currently interactive
+# Subclasses should override _update_interactable() to handle the actual logic (e.g., disabling collision)
+@export var is_interactable: bool = true:
+	set(value):
+		is_interactable = value
+		if is_node_ready():
+			_update_interactable()
+
 func _ready() -> void:
 	_update_visuals()
+	_update_interactable()
 
 func _update_visuals() -> void:
 	# This function acts as a hook for subclasses to update their visuals
@@ -37,3 +50,8 @@ func _update_visuals() -> void:
 		call("_apply_size")
 	if has_method("_apply_color"):
 		call("_apply_color")
+
+func _update_interactable() -> void:
+	# Virtual method for subclasses to implement interaction toggling
+	pass
+
