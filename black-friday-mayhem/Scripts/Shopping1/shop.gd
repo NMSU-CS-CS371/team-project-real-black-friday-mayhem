@@ -3,6 +3,7 @@ extends Node2D
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 var itemsRemoved: int = 0
 var totalItems: int = 8
+signal shop_finished
 
 # called upon entering the scene
 func _ready() -> void:
@@ -34,5 +35,6 @@ func minigameOver() -> void:
 	# begin scene transition
 	SceneTransition.play("fade_in")
 	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_file("res://Scenes/world.tscn")
+	emit_signal("shop_finished")
+	queue_free()
 	

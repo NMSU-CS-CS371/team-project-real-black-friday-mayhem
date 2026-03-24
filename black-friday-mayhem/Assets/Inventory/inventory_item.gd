@@ -7,6 +7,7 @@ class_name InvItem
 @export var marketVal: int
 @export var discount: float
 @export var realPrice: int
+@export var spriteScale: Vector2
 
 # Special items do not stack
 @export var specialItem: bool

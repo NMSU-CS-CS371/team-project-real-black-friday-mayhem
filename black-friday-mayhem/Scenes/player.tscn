@@ -63,3 +63,14 @@ surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
 
 [node name="InventoryUI" parent="." unique_id=1984823051 instance=ExtResource("3_6t5aa")]
 visibility_layer = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -521.75
+offset_top = -263.5
+offset_right = 521.75
+offset_bottom = 263.5
+grow_horizontal = 2
+grow_vertical = 2

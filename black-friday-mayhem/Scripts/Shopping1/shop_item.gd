@@ -2,10 +2,10 @@ extends Node2D
 
 signal item_exiting_tree
 
+@onready var player = get_parent().get_parent().get_parent().get_child(0)
 var timerLength = 1
 var minLength = 1
 var maxLength = 5
-var itemNames = ["sample item", "susie", "cat"]
 var sprites = ["res://Assets/Sprites/sample_sprite.png", "res://Assets/Sprites/susie.jpeg",
 "res://Assets/Sprites/cat.png"]
 var marketVal: int = 0
@@ -21,7 +21,7 @@ func _ready() -> void:
 	var timer = $Timer
 	
 	# Pick random item
-	itemIndex = randi_range(0, itemNames.size()-1)
+	itemIndex = randi_range(0, sprites.size()-1)
 	sprite2d.texture = load(sprites[itemIndex])
 	
 	# Randomly generate market value and discount, calculate price
@@ -58,9 +58,17 @@ func _input(event):
 
 # Take money, place item in inventory
 func purchase_item():
-	# player.money -= discountedPrice
-	# player.moneySaved += moneySaved
-	# player.inventory.add(itemNames[itemIndex],sprites[itemIndex], discountedPrice)
+	player.inventory.wallet -= discountedPrice
+	player.inventory.moneySaved += moneySaved
+	var item: InvItem
+	match itemIndex:
+		0:
+			item = load("res://Assets/Inventory/Items/cat.tres")
+		1:
+			item = load("res://Assets/Inventory/Items/sample_sprite_item.tres")
+		2:
+			item = load("res://Assets/Inventory/Items/susie_item.tres")
+	player.inventory.insert(item)
 	queue_free()
 
 func _exit_tree() -> void:

@@ -361,7 +361,7 @@ libraries/ = SubResource("AnimationLibrary_kmndw")
 [node name="Transition" type="AnimatedSprite2D" parent="." unique_id=247814740]
 position = Vector2(581, 325)
 sprite_frames = SubResource("SpriteFrames_qc2s0")
-animation = &"intoTransition"
+animation = &"done"
 
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Run" to="." method="_on_run_pressed"]
