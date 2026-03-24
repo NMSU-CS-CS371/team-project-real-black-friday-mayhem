@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/shop_checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="Resource" uid="uid://c5fco8h8cq77c" path="res://Assets/Inventory/playerinventory.tres" id="3_o06y3"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
-[ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/scalper.tscn" id="6_5ukr8"]
+[ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/scalper.tscn" id="6_5ukr8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fj7yv"]
 size = Vector3(1, 50, 250)
@@ -69,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6413479, 85.2433)
 visibility_layer = 2
 
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 1.1359191, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.009472609, 1.5885293, 0)
 
 [node name="Map" type="Node3D" parent="." unique_id=642465463]
 
@@ -149,6 +149,8 @@ mesh = SubResource("BoxMesh_f3sb7")
 [node name="Enemy Marker 1" type="MeshInstance3D" parent="Map" unique_id=814065661]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 1, 20)
 mesh = SubResource("BoxMesh_go701")
+
+[node name="Marker3D" type="Marker3D" parent="Map/Enemy Marker 1" unique_id=580056909]
 
 [node name="Enemy Marker 2" type="MeshInstance3D" parent="Map" unique_id=1745256912]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 1, -20)

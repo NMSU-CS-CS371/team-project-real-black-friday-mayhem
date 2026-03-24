@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cxhl6r63ugnvj" path="res://Scenes/Enemies/enemy.tscn" id="1_qdkv4"]
 [ext_resource type="Texture2D" uid="uid://cgkwgtm7c3opw" path="res://Assets/Sprites/Scalper.png" id="2_ngycw"]
 [ext_resource type="Script" uid="uid://b68idph0nfn38" path="res://Scripts/Enemies/scalper.gd" id="2_pyl3l"]
+[ext_resource type="Texture2D" uid="uid://bddnlsbpadotb" path="res://Assets/Sprites/DefeatedScalperDead.png" id="4_p110t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ngycw"]
 atlas = ExtResource("2_ngycw")
@@ -15,6 +16,10 @@ region = Rect2(22, 31, 22, 31)
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlbnd"]
 atlas = ExtResource("2_ngycw")
 region = Rect2(44, 31, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p110t"]
+atlas = ExtResource("4_p110t")
+region = Rect2(0, 0, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_71cqx"]
 atlas = ExtResource("2_ngycw")
@@ -73,6 +78,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_p110t")
+}],
+"loop": true,
+"name": &"defeated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_71cqx")
 }, {
 "duration": 1.0,
@@ -124,8 +137,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ngycw"]
-radius = 0.07128906
-height = 0.27656555
+radius = 0.08300781
+height = 0.34926796
 
 [node name="Scalper" unique_id=1282377910 instance=ExtResource("1_qdkv4")]
 script = ExtResource("2_pyl3l")
@@ -133,14 +146,13 @@ script = ExtResource("2_pyl3l")
 [node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
 offset = Vector2(0, 15)
 sprite_frames = SubResource("SpriteFrames_tkbos")
-animation = &"right"
-frame_progress = 0.2960673
+animation = &"forward"
 
 [node name="HitBox" parent="." index="1" unique_id=1793053768]
 collision_mask = 2
 
 [node name="CollisionShape3D" parent="HitBox" index="0" unique_id=413488198]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010440946, 0.002363637, -0.00058466196)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010440946, 0.056928113, -0.00058466196)
 shape = SubResource("CapsuleShape3D_ngycw")
 
 [node name="RayCast3D" type="RayCast3D" parent="." index="2" unique_id=1625384673]
