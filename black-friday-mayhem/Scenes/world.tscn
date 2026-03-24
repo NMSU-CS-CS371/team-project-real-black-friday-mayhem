@@ -64,6 +64,7 @@ inventory = ExtResource("3_o06y3")
 
 [node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6413479, 85.2433)
+visible = true
 
 [node name="SceneTransition" parent="ShopCheckpoint" unique_id=1029859877 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2

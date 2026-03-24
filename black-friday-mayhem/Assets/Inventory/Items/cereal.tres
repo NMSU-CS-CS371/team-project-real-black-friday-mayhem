@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://qor5w3tg7s3q"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_x0ur1"]
+[ext_resource type="Texture2D" uid="uid://cpva5hled3lhn" path="res://Assets/Sprites/cereal.png" id="2_qoyov"]
+
+[resource]
+script = ExtResource("1_x0ur1")
+name = "Cereal"
+sprite = ExtResource("2_qoyov")
+spriteScale = Vector2(0.6, 0.6)
+metadata/_custom_type_script = "uid://cu5shqx502vy4"
