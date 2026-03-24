@@ -9,6 +9,7 @@ var state: GameState = GameState.IDLE
 var items: Array[Node2D] = []
 var score: = 0
 @export var score_label: Label
+signal shop_finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -45,7 +46,8 @@ func end_game():
 	# begin scene transition
 	SceneTransition.play("fade_in")
 	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_file("res://Scenes/world.tscn")
+	emit_signal("shop_finished")
+	queue_free()
 	
 	
 #function is for other scenes to know if the game is running 

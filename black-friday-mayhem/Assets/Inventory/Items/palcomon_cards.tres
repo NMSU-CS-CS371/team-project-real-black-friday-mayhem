@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://cbyhqk0m6uxbq"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_y3l78"]
+[ext_resource type="Texture2D" uid="uid://b1t5lkbbolbc6" path="res://Assets/Sprites/pokemon_cards.png" id="2_4pb4c"]
+
+[resource]
+script = ExtResource("1_y3l78")
+name = "Palcomon Cards"
+sprite = ExtResource("2_4pb4c")
+spriteScale = Vector2(0.3, 0.3)
+specialItem = true
+metadata/_custom_type_script = "uid://cu5shqx502vy4"
