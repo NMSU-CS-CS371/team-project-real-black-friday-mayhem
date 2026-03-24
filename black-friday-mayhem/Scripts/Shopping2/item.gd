@@ -7,6 +7,7 @@ extends Node2D
 #regester itself to whoever initalizes it
 #adds to a group to be found
 #will delete itself when clicked by mouse
+@onready var player = get_parent().get_parent().get_parent().get_child(0)
 
 signal item_clicked(points)
 #textures for the sprite
@@ -78,4 +79,21 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		#print("Item clicked!")
 		#print("Item emitting signal")
 		emit_signal("item_clicked", item_points)
+		purchaseItem()
 		queue_free()#delete Item
+
+func purchaseItem():
+	# player.inventory.wallet -= discountedPrice
+	# player.inventory.moneySaved += moneySaved
+	var item: InvItem
+	match id:
+		0:
+			item = load("res://Assets/Inventory/Items/jam.tres")
+		1:
+			item = load("res://Assets/Inventory/Items/cereal.tres")
+		2:
+			item = load("res://Assets/Inventory/Items/corn.tres")
+		3:
+			item = load("res://Assets/Inventory/Items/toilet_paper.tres")
+	player.inventory.insert(item)
+	queue_free()
