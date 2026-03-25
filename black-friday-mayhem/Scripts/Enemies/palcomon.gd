@@ -35,7 +35,6 @@ func _ready() -> void:
 	$EnemyContatainer/Enemy.texture = idleTexture
 	$EnemyContatainer.show()
 	$PlayerContatainer.show()
-	$TextBox.show()
 	transition.show()
 	transition.play("outTransition")
 	await get_tree().create_timer(1).timeout
