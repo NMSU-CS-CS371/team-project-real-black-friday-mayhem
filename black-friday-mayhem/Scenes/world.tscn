@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://k8vgfxancgy0"]
 
-[ext_resource type="Texture2D" uid="uid://dobtryvr1ctyf" path="res://Assets/Textures/TEST-SPRITE.png" id="1_go701"]
+[ext_resource type="Texture2D" uid="uid://cl1piqey8e73g" path="res://Assets/Textures/TEST-SPRITE.png" id="1_go701"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 

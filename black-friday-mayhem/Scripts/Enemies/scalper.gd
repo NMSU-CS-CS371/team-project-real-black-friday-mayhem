@@ -4,11 +4,13 @@ var time = 0.0
 var radius = 5.0
 var speed = 1.0
 var angle = 0.0
-var center = Vector3(0,0,0)
+var center = Vector3(-20,1,0)
+@export var enemy_type : Node3D
 var last_position = Vector3.ZERO
 @onready var sprite = $AnimatedSprite3D
-var Palcomon = preload("res://Scenes/Enemy_Minigames/palcomon.tscn")
+var Palcomon = preload("res://Scenes/Enemies/palcomon.tscn")
 var is_defeated = false
+var playing_game = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,18 +22,25 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#-move-
-	time += delta * speed
-	
-	#calculate new position
-	var new_x = center.x + cos(time) * radius
-	var new_z = center.z + sin(time) * radius
-	
-	global_position.x = new_x
-	global_position.z = new_z
-	
-	update_animation()
-	last_position = global_position
+	if is_defeated :
+		$AnimatedSprite3D.play("defeated")
+		$AnimatedSprite3D.offset.y = 7
+	elif playing_game :
+		$AnimatedSprite3D.play("forward")
+	else :
+		$AnimatedSprite3D.offset.y = 15
+		#-move-
+		time += delta * speed
+		
+		#calculate new position
+		var new_x = center.x + cos(time) * radius
+		var new_z = center.z + sin(time) * radius
+		
+		global_position.x = new_x
+		global_position.z = new_z
+		
+		update_animation()
+		last_position = global_position
 	
 func _physics_process(_delta: float) -> void:
 	if $RayCast3D.is_colliding():
@@ -68,8 +77,9 @@ func play_if_not(anim):
 
 func _on_hit_box_body_entered(_body: Node3D) -> void:
 	
-	if (is_defeated):
+	if (is_defeated || playing_game) :
 		return
+	playing_game = true
 	var battle = Palcomon.instantiate()
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))
@@ -77,5 +87,8 @@ func _on_hit_box_body_entered(_body: Node3D) -> void:
 func _on_minigame_finished(result):
 	if result == "win" :
 		is_defeated = true
+		playing_game = false
 		print("Enemy defeated")
+	else :
+		playing_game = false
 	

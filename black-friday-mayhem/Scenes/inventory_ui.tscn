@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://73rk06prmbqb"]
+
+[ext_resource type="Script" uid="uid://ds2vdfungf8gv" path="res://Assets/Inventory/inventory_ui.gd" id="1_8su62"]
+[ext_resource type="PackedScene" uid="uid://h4o8rmmu1igr" path="res://Assets/Inventory/inv_slot_ui.tscn" id="2_os1l6"]
+
+[node name="InventoryUI" type="Control" unique_id=1984823051]
+custom_minimum_size = Vector2(86, 65)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1045.0
+offset_bottom = 525.0
+script = ExtResource("1_8su62")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=239427124]
+layout_mode = 0
+offset_right = 1046.0
+offset_bottom = 532.0
+color = Color(0.5729883, 0.5729883, 0.5729883, 1)
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect" unique_id=19856255]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -339.0
+offset_top = -254.0
+offset_right = 339.0
+offset_bottom = 254.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6
+
+[node name="InvSlotUI" parent="ColorRect/GridContainer" unique_id=1581504290 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI2" parent="ColorRect/GridContainer" unique_id=808375010 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI3" parent="ColorRect/GridContainer" unique_id=800179024 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI4" parent="ColorRect/GridContainer" unique_id=1056475737 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI5" parent="ColorRect/GridContainer" unique_id=1717891469 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI6" parent="ColorRect/GridContainer" unique_id=2015612187 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI7" parent="ColorRect/GridContainer" unique_id=1890783761 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI8" parent="ColorRect/GridContainer" unique_id=1276563458 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI9" parent="ColorRect/GridContainer" unique_id=2114773379 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI10" parent="ColorRect/GridContainer" unique_id=2109714145 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI11" parent="ColorRect/GridContainer" unique_id=1058009000 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI12" parent="ColorRect/GridContainer" unique_id=1160936140 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI13" parent="ColorRect/GridContainer" unique_id=899042676 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI14" parent="ColorRect/GridContainer" unique_id=222862629 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI15" parent="ColorRect/GridContainer" unique_id=1779438926 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI16" parent="ColorRect/GridContainer" unique_id=843286388 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI17" parent="ColorRect/GridContainer" unique_id=913891144 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI18" parent="ColorRect/GridContainer" unique_id=1704103755 instance=ExtResource("2_os1l6")]
+layout_mode = 2
