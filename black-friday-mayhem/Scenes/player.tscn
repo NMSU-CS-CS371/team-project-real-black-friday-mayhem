@@ -17,11 +17,8 @@ ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 reflected_light_source = 2
 
-[node name="MainPlayerSHOPPING" type="MeshInstance3D" unique_id=2083188461]
-transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.2936969, -1.8626451e-08, 0, 0, 0)
-mesh = SubResource("PlaneMesh_5oc15")
-surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
-script = ExtResource("2_odttp")
+[sub_resource type="BoxShape3D" id="BoxShape3D_ohetr"]
+size = Vector3(0.5283203, 0.71777344, 0.23144531)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_id4ae"]
 uv1_scale = Vector3(15, 15, 15)

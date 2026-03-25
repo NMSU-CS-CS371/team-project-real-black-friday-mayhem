@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bihbab8anv0pl"]
 
-[ext_resource type="Texture2D" uid="uid://bf7wndkj4f1w4" path="res://textures/TEST-SPRITE.png" id="1_ohetr"]
+[ext_resource type="Texture2D" uid="uid://cl1piqey8e73g" path="res://Assets/Textures/TEST-SPRITE.png" id="1_ohetr"]
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_ohetr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pueg"]
@@ -33,5 +33,4 @@ light_angular_distance = 90.0
 directional_shadow_mode = 0
 sky_mode = 1
 
-[node name="MainPlayerSHOPPING" parent="." unique_id=2083188461 instance=ExtResource("2_ohetr")]
-transform = Transform3D(-0.15370429, 0, 0, 0, 1.0026068e-07, -0.17196114, 0, 2.2936969, 7.51666e-09, -0.093538165, 0.2516634, -1.719496)
+[node name="player" parent="." unique_id=1293440747 instance=ExtResource("2_ohetr")]
