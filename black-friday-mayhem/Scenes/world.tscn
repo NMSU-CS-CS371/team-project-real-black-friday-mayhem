@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlwt5"]
-albedo_color = Color(0.451227, 0.7499023, 0.7979358, 1)
+albedo_color = Color(1.1428663, 1.6784462, 1.6859998, 1)
 albedo_texture = ExtResource("1_go701")
 uv1_scale = Vector3(1000, 1000, 1000)
 
@@ -16,7 +16,7 @@ material = SubResource("StandardMaterial3D_tlwt5")
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_go701"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5a7ea"]
-albedo_color = Color(0.9098039, 0.77254903, 0.31764707, 1)
+albedo_color = Color(0.72345924, 0.48818868, 0.21370092, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_8j60k"]
 material = SubResource("StandardMaterial3D_5a7ea")
@@ -49,14 +49,26 @@ size = Vector3(0, 50, 250)
 margin = 0.0
 size = Vector3(1, 50, 250)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_go701"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_go701"]
+albedo_color = Color(0.6572666, 0.47194046, 0.2447221, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5a7ea"]
+material = SubResource("StandardMaterial3D_go701")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8j60k"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fo5ed"]
+
 [node name="MAP" type="Node3D" unique_id=1739568515]
 
 [node name="MainPlayerSHOPPING" parent="." unique_id=2083188461 instance=ExtResource("2_5a7ea")]
 transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.2936969, -1.8626451e-08, 0, 1.2, 90)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
-transform = Transform3D(1, 0, 0, 0, -0.01005298, 0.99994946, 0, -0.99994946, -0.01005298, 9.275801, 99.252106, -4.0206814)
-light_energy = 4.815
+transform = Transform3D(0.9998783, -0.007892868, 0.013458978, 0.01557141, 0.45027095, -0.8927562, 0.0009862192, 0.8928571, 0.45033905, -0.15168476, 18.309956, -0.13980675)
+light_color = Color(0.98039216, 1, 1, 1)
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 16.0
 light_angular_distance = 90.0
@@ -261,14 +273,281 @@ mesh = SubResource("BoxMesh_fj7yv")
 
 [node name="Near_Wall_Outlines" type="Node3D" parent="Ceiling" unique_id=565949583]
 
-[node name="North" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=358224888]
+[node name="East" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=358224888]
+transform = Transform3D(110, 0, 0, 0, 1, 0, 0, 0, 200, 100, 25, 0)
 
-[node name="East" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=721429195]
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Near_Wall_Outlines/East" unique_id=1981235748]
 
-[node name="South" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=38047900]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Near_Wall_Outlines/East/StaticBody3D" unique_id=2017650475]
+shape = SubResource("BoxShape3D_go701")
 
-[node name="West" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=588735705]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines/East/StaticBody3D" unique_id=1209790087]
+mesh = SubResource("BoxMesh_5a7ea")
+
+[node name="West" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=296832572]
+transform = Transform3D(110, 0, 0, 0, 1, 0, 0, 0, 200, -100, 25, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Near_Wall_Outlines/West" unique_id=1179075851]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Near_Wall_Outlines/West/StaticBody3D" unique_id=1653372153]
+shape = SubResource("BoxShape3D_go701")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines/West/StaticBody3D" unique_id=2031842659]
+mesh = SubResource("BoxMesh_5a7ea")
 
 [node name="Window_Outlines" type="Node3D" parent="Ceiling" unique_id=2055370701]
 
-[node name="Column_Outlines" type="Node3D" parent="Ceiling" unique_id=677168992]
+[node name="Prism Outlines" type="Node3D" parent="Ceiling/Window_Outlines" unique_id=1058459363]
+
+[node name="Outline 1" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1425858754]
+transform = Transform3D(46.57727, 0.3636252, 0, -18.18126, 0.93154526, 0, 0, 0, 0.99999994, 23.5, 35, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 1" unique_id=1811943345]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 1/StaticBody3D" unique_id=1843142798]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 1/StaticBody3D" unique_id=689869577]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 2" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=38944682]
+transform = Transform3D(46.57727, 0.3636252, 0, -18.18126, 0.93154526, 0, 0, 0, 0.99999994, 23.5, 35, 20)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 2" unique_id=1613647637]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 2/StaticBody3D" unique_id=955048722]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 2/StaticBody3D" unique_id=1152419845]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 3" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=986603113]
+transform = Transform3D(46.57727, 0.3636252, 0, -18.18126, 0.93154526, 0, 0, 0, 0.99999994, 23.5, 35, 40)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 3" unique_id=965309182]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 3/StaticBody3D" unique_id=1284846219]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 3/StaticBody3D" unique_id=1533321745]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 4" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1546113435]
+transform = Transform3D(46.57727, 0.3636252, 0, -18.18126, 0.93154526, 0, 0, 0, 0.99999994, 23.5, 35, 60)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 4" unique_id=123662475]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 4/StaticBody3D" unique_id=595261471]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 4/StaticBody3D" unique_id=1000622967]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 5" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1061073867]
+transform = Transform3D(46.57727, 0.3636252, 0, -18.18126, 0.93154526, 0, 0, 0, 0.99999994, 23.5, 35, 80)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 5" unique_id=942147353]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 5/StaticBody3D" unique_id=509851061]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 5/StaticBody3D" unique_id=764341124]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 6" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=631320187]
+transform = Transform3D(46.57727, 0.3636252, 0, -18.18126, 0.93154526, 0, 0, 0, 0.99999994, 23.5, 35, -20)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 6" unique_id=194970692]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 6/StaticBody3D" unique_id=2118092306]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 6/StaticBody3D" unique_id=108878839]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 7" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=990311019]
+transform = Transform3D(46.57727, 0.3636252, 0, -18.18126, 0.93154526, 0, 0, 0, 0.99999994, 23.5, 35, -40)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 7" unique_id=2090184014]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 7/StaticBody3D" unique_id=1365081582]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 7/StaticBody3D" unique_id=1040805832]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 8" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=909636819]
+transform = Transform3D(46.57727, 0.3636252, 0, -18.18126, 0.93154526, 0, 0, 0, 0.99999994, 23.5, 35, -60)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 8" unique_id=960736396]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 8/StaticBody3D" unique_id=867645768]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 8/StaticBody3D" unique_id=940627937]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 9" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1897773594]
+transform = Transform3D(46.57727, 0.3636252, 0, -18.18126, 0.93154526, 0, 0, 0, 0.99999994, 23.5, 35, -80)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 9" unique_id=916484557]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 9/StaticBody3D" unique_id=1721127265]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 9/StaticBody3D" unique_id=777927646]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 10" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=822516014]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, 80)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 10" unique_id=610615865]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 10/StaticBody3D" unique_id=1723747348]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 10/StaticBody3D" unique_id=1137034503]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 11" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1615122357]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, 60)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 11" unique_id=1760388435]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 11/StaticBody3D" unique_id=1490373851]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 11/StaticBody3D" unique_id=1736529170]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 12" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=903098384]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, 40)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 12" unique_id=1610601063]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 12/StaticBody3D" unique_id=1245754988]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 12/StaticBody3D" unique_id=373910613]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 13" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=2065819874]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, 20)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 13" unique_id=1348367981]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 13/StaticBody3D" unique_id=1567344925]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 13/StaticBody3D" unique_id=684547503]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 14" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=340481094]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 14" unique_id=44074102]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 14/StaticBody3D" unique_id=1836674341]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 14/StaticBody3D" unique_id=1491824023]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 15" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1054569439]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, -20)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 15" unique_id=128247597]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 15/StaticBody3D" unique_id=1577475763]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 15/StaticBody3D" unique_id=347898437]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 16" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1315323661]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, -40)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 16" unique_id=1105304097]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 16/StaticBody3D" unique_id=837598273]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 16/StaticBody3D" unique_id=2135689244]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 17" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=318048326]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, -60)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 17" unique_id=642491915]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 17/StaticBody3D" unique_id=1805942745]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 17/StaticBody3D" unique_id=150418974]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 18" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=181638062]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, -80)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 18" unique_id=42855067]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 18/StaticBody3D" unique_id=2134229710]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 18/StaticBody3D" unique_id=624078976]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 19" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1742837943]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, -100)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 19" unique_id=1678826827]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 19/StaticBody3D" unique_id=579561825]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 19/StaticBody3D" unique_id=2028820367]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 20" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1996765633]
+transform = Transform3D(46.584564, -0.36325118, 0, 18.162561, 0.93169117, 0, 0, 0, 0.99999994, -23.5, 35, 100)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 20" unique_id=670287463]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 20/StaticBody3D" unique_id=475256622]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 20/StaticBody3D" unique_id=1884580196]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 21" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=4694860]
+transform = Transform3D(46.584564, 0.36325118, 0, -18.162561, 0.93169117, 0, 0, 0, 0.99999994, 23.5, 35, 100)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 21" unique_id=1674004325]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 21/StaticBody3D" unique_id=245493249]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 21/StaticBody3D" unique_id=821671665]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 22" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=922965527]
+transform = Transform3D(46.584564, 0.36325118, 0, -18.162561, 0.93169117, 0, 0, 0, 0.99999994, 23.5, 35, -100)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 22" unique_id=985567705]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 22/StaticBody3D" unique_id=1508396391]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 22/StaticBody3D" unique_id=2037620236]
+mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Outline 23" type="Node3D" parent="Ceiling/Window_Outlines/Prism Outlines" unique_id=1012313001]
+transform = Transform3D(-8.742278e-06, 0, 1, 0, 1, 0, -200, 0, -4.371139e-08, 0, 44, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 23" unique_id=103332617]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 23/StaticBody3D" unique_id=133657126]
+shape = SubResource("BoxShape3D_8j60k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 23/StaticBody3D" unique_id=1428627159]
+mesh = SubResource("BoxMesh_fo5ed")
