@@ -64,11 +64,24 @@ material = SubResource("StandardMaterial3D_go701")
 [node name="MAP" type="Node3D" unique_id=1739568515]
 
 [node name="MainPlayerSHOPPING" parent="." unique_id=2083188461 instance=ExtResource("2_5a7ea")]
-transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.2936969, -1.8626451e-08, 0, 1.2, 90)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
+collision_layer = 3
+inventory = ExtResource("3_o06y3")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
-transform = Transform3D(0.9998783, -0.007892868, 0.013458978, 0.01557141, 0.45027095, -0.8927562, 0.0009862192, 0.8928571, 0.45033905, -0.15168476, 18.309956, -0.13980675)
-light_color = Color(0.98039216, 1, 1, 1)
+[node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6413479, 85.2433)
+
+[node name="SceneTransition" parent="ShopCheckpoint" unique_id=1029859877 instance=ExtResource("4_fo5ed")]
+visibility_layer = 2
+
+[node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.009472609, 1.5885293, 0)
+
+[node name="Map" type="Node3D" parent="." unique_id=642465463]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map" unique_id=303137703]
+transform = Transform3D(1, 0, 0, 0, -0.01005298, 0.99994946, 0, -0.99994946, -0.01005298, 9.275801, 99.252106, -4.0206814)
+light_energy = 4.815
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 16.0
 light_angular_distance = 90.0
@@ -281,8 +294,11 @@ transform = Transform3D(110, 0, 0, 0, 1, 0, 0, 0, 200, 100, 25, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Near_Wall_Outlines/East/StaticBody3D" unique_id=2017650475]
 shape = SubResource("BoxShape3D_go701")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines/East/StaticBody3D" unique_id=1209790087]
-mesh = SubResource("BoxMesh_5a7ea")
+[node name="Marker3D" type="Marker3D" parent="Map/Enemy Marker 1" unique_id=580056909]
+
+[node name="Enemy Marker 2" type="MeshInstance3D" parent="Map" unique_id=1745256912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 1, -20)
+mesh = SubResource("BoxMesh_go701")
 
 [node name="West" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=296832572]
 transform = Transform3D(110, 0, 0, 0, 1, 0, 0, 0, 200, -100, 25, 0)
@@ -551,3 +567,8 @@ shape = SubResource("BoxShape3D_8j60k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 23/StaticBody3D" unique_id=1428627159]
 mesh = SubResource("BoxMesh_fo5ed")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Column West 4/StaticBody3D" unique_id=6327116]
+mesh = SubResource("CylinderMesh_8j60k")
+
+[node name="SceneTransition" parent="." unique_id=1118554034 instance=ExtResource("4_fo5ed")]
+visibility_layer = 2

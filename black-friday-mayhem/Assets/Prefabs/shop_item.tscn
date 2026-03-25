@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bn4fjk21yr3xd"]
 
-[ext_resource type="Script" uid="uid://dd408yijb5xl" path="res://Scripts/shop_item.gd" id="1_es6jb"]
+[ext_resource type="Script" uid="uid://dd408yijb5xl" path="res://Scripts/Shopping1/shop_item.gd" id="1_es6jb"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h2lxn"]
 load_path = "res://.godot/imported/sample_sprite.png-c5e401b963383d4cbb1bbcb234b9fecb.ctex"

@@ -1,6 +1,18 @@
 extends MeshInstance3D
 
-var speed = 2 
+extends CharacterBody3D
+
+@export var acceleration : float = 500.0
+@export var maxSpeed : float = 600.0
+@export var forwardRotationSpeed : float = 6.0
+@export var turningRotationSpeed : float = 7.0
+@export var breakingSpeed : float = 120.0
+@export var maxRotationSpeed : float = 4.0
+@export var traction : float = 0.5
+@export var useArrow : bool
+@export var debug : bool
+@export var inventory : Inventory
+var speed : float
 var isMovingForward = false
 var isMovingBackward = false
 
@@ -28,3 +40,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_released("Backward"):
 		isMovingBackward = false
 	pass
+
+func collect(item: InvItem):
+	inventory.insert(item)

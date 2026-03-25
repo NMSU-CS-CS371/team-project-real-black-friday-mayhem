@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://604kpgbfji4j"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_3g5dp"]
+[ext_resource type="Texture2D" uid="uid://dfsnd4hgikf6o" path="res://Assets/Sprites/jam.png" id="2_3nlcn"]
+
+[resource]
+script = ExtResource("1_3g5dp")
+name = "Jam"
+sprite = ExtResource("2_3nlcn")
+spriteScale = Vector2(0.7, 0.7)
+metadata/_custom_type_script = "uid://cu5shqx502vy4"
