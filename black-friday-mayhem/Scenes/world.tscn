@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://k8vgfxancgy0"]
 
 [ext_resource type="Texture2D" uid="uid://dobtryvr1ctyf" path="res://Assets/Textures/TEST-SPRITE.png" id="1_go701"]
-[ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 
@@ -62,9 +61,6 @@ material = SubResource("StandardMaterial3D_go701")
 [sub_resource type="BoxMesh" id="BoxMesh_fo5ed"]
 
 [node name="MAP" type="Node3D" unique_id=1739568515]
-
-[node name="MainPlayerSHOPPING" parent="." unique_id=2083188461 instance=ExtResource("2_5a7ea")]
-transform = Transform3D(-0.15370429, 0, 0, 0, -2.9802322e-08, -0.17196114, 0, 2.2936969, -1.8626451e-08, 0, 1.2, 90)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
 transform = Transform3D(0.9998783, -0.007892868, 0.013458978, 0.01557141, 0.45027095, -0.8927562, 0.0009862192, 0.8928571, 0.45033905, -0.15168476, 18.309956, -0.13980675)
