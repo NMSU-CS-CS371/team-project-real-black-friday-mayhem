@@ -11,6 +11,7 @@ var last_position = Vector3.ZERO
 var Palcomon = preload("res://Scenes/Enemies/palcomon.tscn")
 var is_defeated = false
 var playing_game = false
+signal stopVelocity
 
 
 # Called when the node enters the scene tree for the first time.
@@ -80,6 +81,7 @@ func _on_hit_box_body_entered(_body: Node3D) -> void:
 	if (is_defeated || playing_game) :
 		return
 	playing_game = true
+	stopVelocity.emit()
 	var battle = Palcomon.instantiate()
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var player = get_parent().get_parent().get_child(0)
+@onready var player = get_parent().get_parent().player
 
 #variables for the UI
 signal textbox_closed
@@ -126,6 +126,7 @@ func enemy_defeated() :
 	var item: InvItem
 	item = load("res://Assets/Inventory/Items/palcomon_cards.tres")
 	player.inventory.insert(item)
+	player.controlAllowed = true
 	$ButtonPanel/MarginContainer/HBoxContainer.hide()
 	await textbox_closed
 	await get_tree().create_timer(0.25).timeout

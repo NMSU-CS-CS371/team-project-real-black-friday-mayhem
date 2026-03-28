@@ -1,7 +1,7 @@
 extends Node
 
 class_name World
-
+@export var player : Node3D
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 
 func _ready() -> void:

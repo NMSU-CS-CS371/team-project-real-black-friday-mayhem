@@ -1,20 +1,20 @@
-[gd_scene format=3 uid="uid://dv5vr20xtexxf"]
+[gd_scene format=3 uid="uid://uqd43fttcvnj"]
 
 [ext_resource type="Script" uid="uid://cja07lh1kaks4" path="res://Scripts/world.gd" id="1_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/shop_checkpoint.tscn" id="3_8j60k"]
-[ext_resource type="Resource" uid="uid://c5fco8h8cq77c" path="res://Assets/Inventory/playerinventory.tres" id="3_o06y3"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/scalper.tscn" id="6_5ukr8"]
+[ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
 
-[node name="Main" type="Node" unique_id=1035745174]
-script = ExtResource("1_fo5ed")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dki2w"]
+shader = ExtResource("6_yky5r")
+shader_parameter/pixel_count = Vector2(144, 144)
 
-[node name="MainPlayerSHOPPING" parent="." unique_id=2083188461 instance=ExtResource("2_5a7ea")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
-collision_layer = 3
-inventory = ExtResource("3_o06y3")
+[node name="Main" type="Node" unique_id=1035745174 node_paths=PackedStringArray("player")]
+script = ExtResource("1_fo5ed")
+player = NodePath("Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING")
 
 [node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 99.36923, 1.6413479, 59.758087)
@@ -31,3 +31,26 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 69.738846, 1.5885293, 19.5276
 visibility_layer = 2
 
 [node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1353868136]
+position = Vector2(579, 326)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Camera2D" unique_id=2062144889]
+z_index = -1000
+material = SubResource("ShaderMaterial_dki2w")
+offset_left = -387.0
+offset_top = -299.0
+offset_right = 413.0
+offset_bottom = 301.0
+mouse_filter = 2
+
+[node name="SubViewport" type="SubViewport" parent="Camera2D/SubViewportContainer" unique_id=1830492384]
+handle_input_locally = false
+size = Vector2i(800, 600)
+render_target_update_mode = 4
+
+[node name="MainPlayerSHOPPING" parent="Camera2D/SubViewportContainer/SubViewport" unique_id=1293440747 instance=ExtResource("2_5a7ea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
+collision_layer = 3
+
+[connection signal="stopVelocity" from="Scalper" to="Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]
