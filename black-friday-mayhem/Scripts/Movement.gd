@@ -16,6 +16,7 @@ var isMovingForward = false
 var isMovingBackward = false
 var isTurning = false
 var forward = Vector3.ZERO
+var controlAllowed = true
 
 func _ready() -> void:
 	if !useArrow:
@@ -85,6 +86,8 @@ func _physics_process(delta: float) -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
+	if !controlAllowed:
+		return
 	if event.is_action_pressed("Forward"):
 		isMovingForward = true
 		pass
@@ -104,3 +107,13 @@ func _input(event: InputEvent) -> void:
 
 func collect(item: InvItem):
 	inventory.insert(item)
+
+
+func _on_scalper_stop_velocity() -> void:
+	velocity = Vector3.ZERO
+	controlAllowed = false
+	speed = 0
+	isTurning = false
+	isMovingForward = false
+	isMovingBackward = false
+	pass # Replace with function body.
