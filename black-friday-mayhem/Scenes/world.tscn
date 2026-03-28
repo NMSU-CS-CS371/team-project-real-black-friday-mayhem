@@ -40,6 +40,7 @@ offset_left = -387.0
 offset_top = -299.0
 offset_right = 413.0
 offset_bottom = 301.0
+mouse_filter = 2
 
 [node name="SubViewport" type="SubViewport" parent="Camera2D/SubViewportContainer" unique_id=1830492384]
 handle_input_locally = false
