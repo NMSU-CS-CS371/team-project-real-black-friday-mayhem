@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Scripts/Movement.gd" id="1_cvnsp"]
 [ext_resource type="Script" uid="uid://sji7srj5jd3l" path="res://Scripts/ArrowScript.gd" id="2_6t5aa"]
 [ext_resource type="Resource" uid="uid://c5fco8h8cq77c" path="res://Assets/Inventory/playerinventory.tres" id="2_vgqql"]
-[ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="3_6t5aa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5oc15"]
 
@@ -62,17 +61,3 @@ script = ExtResource("2_6t5aa")
 transform = Transform3D(-1.2003204, -0.009444233, -0.4535403, 0.34145403, 0.0030935733, -1.5939986, 0.047184598, -0.26263693, -0.0024665669, 3.686163e-07, 0, -0.6648368)
 mesh = SubResource("PrismMesh_0pueg")
 surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
-
-[node name="InventoryUI" parent="." unique_id=1984823051 instance=ExtResource("3_6t5aa")]
-visibility_layer = 2
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -521.75
-offset_top = -263.5
-offset_right = 521.75
-offset_bottom = 263.5
-grow_horizontal = 2
-grow_vertical = 2

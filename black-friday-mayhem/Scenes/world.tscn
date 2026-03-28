@@ -5,8 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/shop_checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/scalper.tscn" id="6_5ukr8"]
-[ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
+[ext_resource type="Shader" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
+[ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dki2w"]
 shader = ExtResource("6_yky5r")
@@ -52,5 +53,12 @@ render_target_update_mode = 4
 [node name="MainPlayerSHOPPING" parent="Camera2D/SubViewportContainer/SubViewport" unique_id=1293440747 instance=ExtResource("2_5a7ea")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
 collision_layer = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1009804071]
+offset_right = 1155.0
+offset_bottom = 650.0
+
+[node name="InventoryUI" parent="CenterContainer" unique_id=1984823051 instance=ExtResource("8_k7acu")]
+layout_mode = 2
 
 [connection signal="stopVelocity" from="Scalper" to="Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]

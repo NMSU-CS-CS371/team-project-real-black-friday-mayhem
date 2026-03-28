@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b6mdegirme8vj"]
+
+[node name="ItemTag" type="Panel" unique_id=1053140089]
+offset_right = 326.0
+offset_bottom = 123.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2049631315]
+layout_mode = 0
+offset_right = 325.0
+offset_bottom = 123.0
+color = Color(0.18039216, 0.18039216, 0.18039216, 1)
+
+[node name="ItemName" type="Label" parent="." unique_id=1450476065]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 300.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 20
+text = "Toilet Paper"
+autowrap_mode = 2
+
+[node name="ItemDesc" type="Label" parent="." unique_id=1550660809]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 42.0
+offset_right = 316.0
+offset_bottom = 117.0
+text = "A roll of toilet paper. Legends say Australians will one day kill each other over these."
+autowrap_mode = 3
