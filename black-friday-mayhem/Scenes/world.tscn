@@ -18,6 +18,7 @@ inventory = ExtResource("3_o06y3")
 
 [node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 99.36923, 1.6413479, 59.758087)
+visible = true
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="SceneTransition" parent="ShopCheckpoint" unique_id=1029859877 instance=ExtResource("4_fo5ed")]
