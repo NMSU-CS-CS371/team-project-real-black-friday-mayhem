@@ -7,7 +7,7 @@ extends Node2D
 #regester itself to whoever initalizes it
 #adds to a group to be found
 #will delete itself when clicked by mouse
-@onready var player = get_parent().get_parent().get_parent().get_child(0)
+@onready var player = get_parent().get_parent().get_parent().player
 
 signal item_clicked(points)
 #textures for the sprite
