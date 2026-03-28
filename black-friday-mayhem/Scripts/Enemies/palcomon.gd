@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var player = get_parent().get_parent().player
+@onready var invContainer = get_parent().get_parent().get_node("CenterContainer")
 
 #variables for the UI
 signal textbox_closed
@@ -20,6 +21,7 @@ var hurtTexture = preload("res://Assets/Textures/ScalperHurt.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	invContainer.visible = false
 	set_health($EnemyContatainer/EnemyHealth, enemy_health, max_health)
 	set_health($PlayerContatainer/PlayerHealth, player_health, max_health)
 	$Background.hide()
@@ -132,4 +134,5 @@ func enemy_defeated() :
 	await get_tree().create_timer(0.25).timeout
 	# Emit the win signal 
 	emit_signal("game_finished", "win")
+	invContainer.visible = true
 	queue_free()

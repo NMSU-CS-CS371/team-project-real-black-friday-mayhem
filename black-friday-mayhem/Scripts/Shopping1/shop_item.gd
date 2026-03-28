@@ -2,7 +2,7 @@ extends Node2D
 
 signal item_exiting_tree
 
-@onready var player = get_parent().get_parent().get_parent().get_child(0)
+@onready var player = get_parent().get_parent().get_parent().player
 var timerLength = 1
 var minLength = 1
 var maxLength = 5
