@@ -7,5 +7,6 @@
 script = ExtResource("1_c5sn7")
 name = "Toilet Paper"
 sprite = ExtResource("2_8dshs")
+itemDesc = "A roll of toilet paper. Legends say Australians will one day kill each other over these."
 spriteScale = Vector2(0.7, 0.7)
 metadata/_custom_type_script = "uid://cu5shqx502vy4"

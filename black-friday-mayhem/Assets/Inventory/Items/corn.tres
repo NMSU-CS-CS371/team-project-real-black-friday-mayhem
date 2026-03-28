@@ -7,5 +7,6 @@
 script = ExtResource("1_4ldpw")
 name = "Corn"
 sprite = ExtResource("2_ma1db")
+itemDesc = "A can of corn. It's oddly heavy."
 spriteScale = Vector2(0.7, 0.7)
 metadata/_custom_type_script = "uid://cu5shqx502vy4"
