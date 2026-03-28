@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://c5fco8h8cq77c" path="res://Assets/Inventory/playerinventory.tres" id="3_o06y3"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/scalper.tscn" id="6_5ukr8"]
-[ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/world2.tscn" id="7_o06y3"]
+[ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
 
 [node name="Main" type="Node" unique_id=1035745174]
 script = ExtResource("1_fo5ed")
@@ -24,7 +24,7 @@ obstacle_size = Vector3(2, 2, 2)
 visibility_layer = 2
 
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.009472609, 1.5885293, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 69.738846, 1.5885293, 19.527657)
 
 [node name="SceneTransition" parent="." unique_id=1118554034 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
