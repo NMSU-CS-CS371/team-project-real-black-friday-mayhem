@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfcw4hgi2fymt"
-path="res://.godot/imported/TransitionTexture1.png-1c6be464c67ed2d29de94bd13a484f11.ctex"
+uid="uid://b1n5bt40fnf2j"
+path="res://.godot/imported/RustyCrowbar.png-8043babd897aa5fcdbd187fde981f5f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/TransitionTexture1.png"
-dest_files=["res://.godot/imported/TransitionTexture1.png-1c6be464c67ed2d29de94bd13a484f11.ctex"]
+source_file="res://Assets/Textures/RustyCrowbar.png"
+dest_files=["res://.godot/imported/RustyCrowbar.png-8043babd897aa5fcdbd187fde981f5f7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfoieeeu1l0v6"
-path="res://.godot/imported/PalcomonBackground.jpg-ce79caa76d315a3c78fb671fac7c7fb3.ctex"
+uid="uid://gc34io4jmolk"
+path="res://.godot/imported/StoreBackground.png-d4ff9c82e175ff34d819bb7e57370bb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/PalcomonBackground.jpg"
-dest_files=["res://.godot/imported/PalcomonBackground.jpg-ce79caa76d315a3c78fb671fac7c7fb3.ctex"]
+source_file="res://Assets/Textures/StoreBackground.png"
+dest_files=["res://.godot/imported/StoreBackground.png-d4ff9c82e175ff34d819bb7e57370bb6.ctex"]
 
 [params]
 
