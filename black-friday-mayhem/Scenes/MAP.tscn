@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://k8vgfxancgy0"]
 
-[ext_resource type="Texture2D" uid="uid://cl1piqey8e73g" path="res://Assets/Textures/TEST-SPRITE.png" id="1_go701"]
+[ext_resource type="Texture2D" uid="uid://bliql7yyjcinf" path="res://Assets/Textures/floorMesh2.jpg" id="1_rq85h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlwt5"]
-albedo_color = Color(1.1428663, 1.6784462, 1.6859998, 1)
-albedo_texture = ExtResource("1_go701")
+albedo_color = Color(0.9254902, 1, 1, 1)
+albedo_texture = ExtResource("1_rq85h")
 uv1_scale = Vector3(1000, 1000, 1000)
 
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
@@ -63,7 +63,7 @@ material = SubResource("StandardMaterial3D_go701")
 [node name="MAP" type="Node3D" unique_id=1739568515]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
-transform = Transform3D(0.9998783, -0.007892868, 0.013458978, 0.01557141, 0.45027095, -0.8927562, 0.0009862192, 0.8928571, 0.45033905, -0.15168476, 18.309956, -0.13980675)
+transform = Transform3D(-0.015516601, 0.99501, -0.09856089, -0.73591727, 0.055366524, 0.6748038, 0.6768938, 0.08300336, 0.731386, -0.15168476, 18.309956, -0.13980675)
 light_color = Color(0.98039216, 1, 1, 1)
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 16.0

@@ -4,7 +4,7 @@ var time = 0.0
 var radius = 5.0
 var speed = 1.0
 var angle = 0.0
-var center = Vector3(-20,1,0)
+var center : Vector3
 @export var enemy_type : Node3D
 var last_position = Vector3.ZERO
 @onready var sprite = $AnimatedSprite3D
@@ -17,6 +17,8 @@ signal stopVelocity
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	last_position = global_position
+	center = global_position  # starting point = center of circle
+
 	# Connect the signal via code
 
 

@@ -190,6 +190,7 @@ func player_defeated() :
 	await get_tree().create_timer(0.25).timeout
 	emit_signal("game_finished", "lose")
 	invContainer.visible = true
+	player.controlAllowed = true
 	queue_free()
 #
 #singals from node children
@@ -204,6 +205,7 @@ func _on_run_pressed() -> void:
 	await get_tree().create_timer(0.25).timeout
 	emit_signal("game_finished", "run")
 	invContainer.visible = true
+	player.controlAllowed = true
 	queue_free()
 	
 func _on_attack_pressed() -> void:

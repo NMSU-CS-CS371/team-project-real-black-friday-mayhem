@@ -54,4 +54,3 @@ func _update_visuals() -> void:
 func _update_interactable() -> void:
 	# Virtual method for subclasses to implement interaction toggling
 	pass
-
