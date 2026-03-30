@@ -7,6 +7,8 @@
 [ext_resource type="Resource" uid="uid://c5fco8h8cq77c" path="res://Assets/Inventory/playerinventory.tres" id="3_o06y3"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/scalper.tscn" id="6_5ukr8"]
+[ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="8_k7acu"]
+[ext_resource type="Texture2D" uid="uid://dqrhp0gp8krmf" path="res://Assets/Textures/BigSign.png" id="9_5v1tr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fj7yv"]
 size = Vector3(1, 50, 250)
@@ -54,6 +56,34 @@ albedo_color = Color(0.9098039, 0.77254903, 0.31764707, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_8j60k"]
 material = SubResource("StandardMaterial3D_5a7ea")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_o06y3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7acu"]
+albedo_color = Color(0.7176471, 1, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5v1tr"]
+material = SubResource("StandardMaterial3D_k7acu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fj1v"]
+albedo_color = Color(0, 0.21176471, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ikia7"]
+material = SubResource("StandardMaterial3D_0fj1v")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5v1tr"]
+albedo_texture = ExtResource("8_k7acu")
+
+[sub_resource type="QuadMesh" id="QuadMesh_0fj1v"]
+material = SubResource("StandardMaterial3D_5v1tr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikia7"]
+albedo_texture = ExtResource("9_5v1tr")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7yui6"]
+material = SubResource("StandardMaterial3D_ikia7")
+
+[sub_resource type="BoxMesh" id="BoxMesh_c5t2i"]
+
 [node name="Main" type="Node" unique_id=1035745174]
 script = ExtResource("1_fo5ed")
 
@@ -69,7 +99,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6413479, 85.2433)
 visibility_layer = 2
 
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.009472609, 1.5885293, 0)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 40.59006, 1.5885293, 0)
 
 [node name="Map" type="Node3D" parent="." unique_id=642465463]
 
@@ -274,3 +304,287 @@ mesh = SubResource("CylinderMesh_8j60k")
 
 [node name="SceneTransition" parent="." unique_id=1118554034 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
+
+[node name="Fountain" type="Node3D" parent="." unique_id=909070412]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="bottom" type="Node3D" parent="Fountain" unique_id=1370737094]
+transform = Transform3D(6, 0, 0, 0, 0.25, 0, 0, 0, 6, 0, 1.2640617, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fountain/bottom" unique_id=1036516401]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fountain/bottom/StaticBody3D" unique_id=1662732500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0274081, 0)
+shape = SubResource("CylinderShape3D_o06y3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fountain/bottom" unique_id=645173794]
+mesh = SubResource("CylinderMesh_5v1tr")
+
+[node name="Water" type="Node3D" parent="Fountain" unique_id=401074418]
+transform = Transform3D(5.8, 0, 0, 0, 0.01, 0, 0, 0, 5.8, 0, 1.74196, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fountain/Water" unique_id=474239950]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fountain/Water/StaticBody3D" unique_id=1998001328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0274081, 0)
+shape = SubResource("CylinderShape3D_o06y3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fountain/Water" unique_id=1559521409]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, -23.164154, 0)
+mesh = SubResource("CylinderMesh_ikia7")
+
+[node name="Middle" type="Node3D" parent="Fountain" unique_id=461960499]
+transform = Transform3D(3, 0, 0, 0, 0.25, 0, 0, 0, 3, 0, 2.3397028, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fountain/Middle" unique_id=397475417]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fountain/Middle/StaticBody3D" unique_id=2040764416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0274081, 0)
+shape = SubResource("CylinderShape3D_o06y3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fountain/Middle" unique_id=783624183]
+mesh = SubResource("CylinderMesh_5v1tr")
+
+[node name="Support" type="Node3D" parent="Fountain" unique_id=96183180]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 1.5852513, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fountain/Support" unique_id=373160274]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fountain/Support/StaticBody3D" unique_id=1570448975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0274081, 0)
+shape = SubResource("CylinderShape3D_o06y3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fountain/Support" unique_id=1855057211]
+mesh = SubResource("CylinderMesh_5v1tr")
+
+[node name="Water2" type="Node3D" parent="Fountain" unique_id=1280062023]
+transform = Transform3D(3, 0, 0, 0, 0.01, 0, 0, 0, 3, 0, 2.82, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fountain/Water2" unique_id=1786003603]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fountain/Water2/StaticBody3D" unique_id=674677716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0274081, 0)
+shape = SubResource("CylinderShape3D_o06y3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fountain/Water2" unique_id=1827514272]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, -23.164154, 0)
+mesh = SubResource("CylinderMesh_ikia7")
+
+[node name="Water3" type="Node3D" parent="Fountain" unique_id=846858536]
+transform = Transform3D(1, 0, 0, 0, 0.01, 0, 0, 0, 1, 0, 3.8130171, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Fountain/Water3" unique_id=1617964834]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fountain/Water3/StaticBody3D" unique_id=1380409712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0274081, 0)
+shape = SubResource("CylinderShape3D_o06y3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fountain/Water3" unique_id=831328487]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, -23.164154, 0)
+mesh = SubResource("CylinderMesh_ikia7")
+
+[node name="Sale Signs" type="Node3D" parent="." unique_id=560630090]
+
+[node name="Sale Sign" type="Node3D" parent="Sale Signs" unique_id=1907759619]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 10.884, -20.751)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign" unique_id=482303100]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign2" type="Node3D" parent="Sale Signs" unique_id=1266012919]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 6.6631117, 36.431896)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign2" unique_id=53400714]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign3" type="Node3D" parent="Sale Signs" unique_id=818588392]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 16.786556, -81.22898)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign3" unique_id=1994950054]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign4" type="Node3D" parent="Sale Signs" unique_id=1004027733]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 10.884, 90.0738)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign4" unique_id=1213795529]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign5" type="Node3D" parent="Sale Signs" unique_id=344561478]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 15.708444, -20.751)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign5" unique_id=1453577782]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign6" type="Node3D" parent="Sale Signs" unique_id=2032328409]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 12.251376, 34.858047)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign6" unique_id=1300143430]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign7" type="Node3D" parent="Sale Signs" unique_id=951263626]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 21.291473, 86.45918)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign7" unique_id=1837985408]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign8" type="Node3D" parent="Sale Signs" unique_id=1297254093]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 66.66002, 16.343336, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign8" unique_id=99337713]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign9" type="Node3D" parent="Sale Signs" unique_id=1692821666]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -65.60934, 10.409601, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign9" unique_id=629892579]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign10" type="Node3D" parent="Sale Signs" unique_id=506321120]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 54.906296, 12.950514, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign10" unique_id=236839993]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign11" type="Node3D" parent="Sale Signs" unique_id=1344769266]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 40.8809, 5.486847, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign11" unique_id=210479045]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign12" type="Node3D" parent="Sale Signs" unique_id=176729663]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 41.207333, 16.343336, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign12" unique_id=1633426440]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign13" type="Node3D" parent="Sale Signs" unique_id=624398955]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -24.881725, 16.343336, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign13" unique_id=692195883]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign14" type="Node3D" parent="Sale Signs" unique_id=1916187387]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -29.835854, 5.576687, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign14" unique_id=486375794]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign15" type="Node3D" parent="Sale Signs" unique_id=2046954808]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -40.860786, 11.838297, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign15" unique_id=2017963788]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign16" type="Node3D" parent="Sale Signs" unique_id=634953008]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 11.587105, 16.343336, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign16" unique_id=1888430509]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign17" type="Node3D" parent="Sale Signs" unique_id=1753457825]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -10.405197, 19.6253, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign17" unique_id=22161706]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign18" type="Node3D" parent="Sale Signs" unique_id=2107017333]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -80.128204, 4.7402287, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign18" unique_id=309764267]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign19" type="Node3D" parent="Sale Signs" unique_id=1572636553]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -56.582466, 15.594118, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign19" unique_id=1213016928]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign20" type="Node3D" parent="Sale Signs" unique_id=1340210251]
+transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -92.31856, 16.343336, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign20" unique_id=1245917370]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign21" type="Node3D" parent="Sale Signs" unique_id=942273292]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 18.84705, -33.087204)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign21" unique_id=299577202]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign22" type="Node3D" parent="Sale Signs" unique_id=1256374046]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 20.503002, -68.676285)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign22" unique_id=1469832862]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign23" type="Node3D" parent="Sale Signs" unique_id=79431065]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 19.438862, 66.12176)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign23" unique_id=2104893525]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign24" type="Node3D" parent="Sale Signs" unique_id=1953790862]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 17.993107, 39.788773)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign24" unique_id=1431850510]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign25" type="Node3D" parent="Sale Signs" unique_id=1535032609]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 19.552036, 19.783394)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign25" unique_id=338937262]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign26" type="Node3D" parent="Sale Signs" unique_id=1171112072]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 12.251376, 79.606926)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign26" unique_id=2056755695]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign27" type="Node3D" parent="Sale Signs" unique_id=2094690055]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 19.289875, 20.274887)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign27" unique_id=678217974]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign28" type="Node3D" parent="Sale Signs" unique_id=205016987]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 6.716357, 23.570053)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign28" unique_id=834841877]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign29" type="Node3D" parent="Sale Signs" unique_id=661218947]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 12.251376, -32.743538)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign29" unique_id=1997579508]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="Sale Sign30" type="Node3D" parent="Sale Signs" unique_id=1148564690]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 12.251376, -84.321594)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign30" unique_id=1593623008]
+mesh = SubResource("QuadMesh_0fj1v")
+
+[node name="bigSign" type="Node3D" parent="." unique_id=258338016]
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 0.01, 0, 17.043, -60)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="bigSign" unique_id=1324360129]
+mesh = SubResource("QuadMesh_7yui6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="bigSign" unique_id=454387801]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_7yui6")
+
+[node name="rope" type="Node3D" parent="." unique_id=2137640809]
+transform = Transform3D(21.744537, 0.015195091, 0, -3.34292, 0.098838806, 0, 0, 0, 0.1, -35.988365, 23.14891, -60)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="rope" unique_id=1509964086]
+transform = Transform3D(0.9999999, 0, 0, 3.8146973e-06, 0.99999994, 0, 0, 0, 0.99999994, 0.004306674, 0.1456604, 0)
+mesh = SubResource("BoxMesh_c5t2i")
+
+[node name="rope2" type="Node3D" parent="." unique_id=2062564389]
+transform = Transform3D(21.746864, -0.015126082, 0, 3.327738, 0.098849386, 0, 0, 0, 0.1, 35.988, 23.149, -60)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="rope2" unique_id=1474311854]
+transform = Transform3D(0.9999999, 0, 0, 3.8146973e-06, 0.99999994, 0, 0, 0, 0.99999994, -0.006524682, 0.5102997, 0)
+mesh = SubResource("BoxMesh_c5t2i")
