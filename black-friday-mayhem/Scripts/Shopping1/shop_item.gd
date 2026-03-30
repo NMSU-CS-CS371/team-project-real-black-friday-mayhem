@@ -27,6 +27,7 @@ func _ready() -> void:
 	# Randomly generate market value and discount, calculate price
 	marketVal = rng.randi_range(50,120)*10
 	discount = rng.randi_range(3,9)*10
+	@warning_ignore("narrowing_conversion")
 	discountedPrice = marketVal * ((100-discount)/100)
 	moneySaved = marketVal - discountedPrice
 	
