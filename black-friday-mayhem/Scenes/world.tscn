@@ -70,6 +70,27 @@ albedo_color = Color(0, 0.21176471, 1, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_ikia7"]
 material = SubResource("StandardMaterial3D_0fj1v")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7yui6"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c5t2i"]
+albedo_color = Color(0, 0.27450982, 1, 1)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e0ngr"]
+angle_min = -577.7
+angle_max = 301.40002
+direction = Vector3(0, 1, 0)
+spread = 9.356
+initial_velocity_max = 21.68
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kn0ld"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_hgpy0"]
+material = SubResource("StandardMaterial3D_kn0ld")
+radius = 0.1
+height = 0.2
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5v1tr"]
 albedo_texture = ExtResource("8_k7acu")
 
@@ -383,6 +404,18 @@ shape = SubResource("CylinderShape3D_o06y3")
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, -23.164154, 0)
 mesh = SubResource("CylinderMesh_ikia7")
 
+[node name="Particles" type="Node3D" parent="Fountain" unique_id=629378597]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 5.8992496, 0)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Fountain/Particles" unique_id=2054097644]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, -5.9286566, 0)
+material_override = SubResource("StandardMaterial3D_7yui6")
+material_overlay = SubResource("StandardMaterial3D_c5t2i")
+amount = 50
+collision_base_size = 0.0
+process_material = SubResource("ParticleProcessMaterial_e0ngr")
+draw_pass_1 = SubResource("SphereMesh_hgpy0")
+
 [node name="Sale Signs" type="Node3D" parent="." unique_id=560630090]
 
 [node name="Sale Sign" type="Node3D" parent="Sale Signs" unique_id=1907759619]
@@ -565,26 +598,28 @@ transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -9
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign30" unique_id=1593623008]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="bigSign" type="Node3D" parent="." unique_id=258338016]
+[node name="HugeSign" type="Node3D" parent="." unique_id=651859019]
+
+[node name="bigSign" type="Node3D" parent="HugeSign" unique_id=1251460950]
 transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 0.01, 0, 17.043, -60)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="bigSign" unique_id=1324360129]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HugeSign/bigSign" unique_id=820946535]
 mesh = SubResource("QuadMesh_7yui6")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="bigSign" unique_id=454387801]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="HugeSign/bigSign" unique_id=105090309]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 mesh = SubResource("QuadMesh_7yui6")
 
-[node name="rope" type="Node3D" parent="." unique_id=2137640809]
+[node name="rope" type="Node3D" parent="HugeSign" unique_id=1032637271]
 transform = Transform3D(21.744537, 0.015195091, 0, -3.34292, 0.098838806, 0, 0, 0, 0.1, -35.988365, 23.14891, -60)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="rope" unique_id=1509964086]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HugeSign/rope" unique_id=236279519]
 transform = Transform3D(0.9999999, 0, 0, 3.8146973e-06, 0.99999994, 0, 0, 0, 0.99999994, 0.004306674, 0.1456604, 0)
 mesh = SubResource("BoxMesh_c5t2i")
 
-[node name="rope2" type="Node3D" parent="." unique_id=2062564389]
+[node name="rope2" type="Node3D" parent="HugeSign" unique_id=1766105787]
 transform = Transform3D(21.746864, -0.015126082, 0, 3.327738, 0.098849386, 0, 0, 0, 0.1, 35.988, 23.149, -60)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="rope2" unique_id=1474311854]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HugeSign/rope2" unique_id=369803566]
 transform = Transform3D(0.9999999, 0, 0, 3.8146973e-06, 0.99999994, 0, 0, 0, 0.99999994, -0.006524682, 0.5102997, 0)
 mesh = SubResource("BoxMesh_c5t2i")
