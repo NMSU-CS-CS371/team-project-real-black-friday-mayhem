@@ -63,7 +63,9 @@ func _physics_process(delta: float) -> void:
 		rotationChange = direction_ground.x * delta * forwardRotationSpeed
 		rotation.y += rotationChange
 		velocity = forward * delta * speed
-		
+	if not isMoving and not isTurning:
+		rotationChange = 0
+	
 	if isTurning and input_dir.y == 0: # If is turning, and is not on the gas (essentially)
 		var originalVector = velocity / delta # undo modifications
 		if speed > 0.5:
