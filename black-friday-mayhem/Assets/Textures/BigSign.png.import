@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6cxdo45n5kxn"
-path.s3tc="res://.godot/imported/PlayerSheet.png-0d47df1273578e5aa204143cdf0574e2.s3tc.ctex"
+uid="uid://dqrhp0gp8krmf"
+path.s3tc="res://.godot/imported/BigSign.png-e72640da0b60f1d70ce14f131fd486ff.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Sprites/PlayerSheet.png"
-dest_files=["res://.godot/imported/PlayerSheet.png-0d47df1273578e5aa204143cdf0574e2.s3tc.ctex"]
+source_file="res://Assets/Textures/BigSign.png"
+dest_files=["res://.godot/imported/BigSign.png-e72640da0b60f1d70ce14f131fd486ff.s3tc.ctex"]
 
 [params]
 

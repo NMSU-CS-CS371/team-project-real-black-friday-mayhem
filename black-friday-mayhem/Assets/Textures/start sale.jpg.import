@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6cxdo45n5kxn"
-path.s3tc="res://.godot/imported/PlayerSheet.png-0d47df1273578e5aa204143cdf0574e2.s3tc.ctex"
+uid="uid://81d4qkj2aqou"
+path.s3tc="res://.godot/imported/start sale.jpg-5509ef42ca1d56557d991ac9efeac6d2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Sprites/PlayerSheet.png"
-dest_files=["res://.godot/imported/PlayerSheet.png-0d47df1273578e5aa204143cdf0574e2.s3tc.ctex"]
+source_file="res://Assets/Textures/start sale.jpg"
+dest_files=["res://.godot/imported/start sale.jpg-5509ef42ca1d56557d991ac9efeac6d2.s3tc.ctex"]
 
 [params]
 
