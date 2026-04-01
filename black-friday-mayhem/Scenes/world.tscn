@@ -124,8 +124,6 @@ offset_bottom = 650.0
 [node name="InventoryUI" parent="CenterContainer" unique_id=1984823051 instance=ExtResource("8_k7acu")]
 layout_mode = 2
 
-[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
-
 [node name="Objects" type="Node3D" parent="." unique_id=48724979]
 
 [node name="Fountain" type="Node3D" parent="Objects" unique_id=2033820577]
@@ -670,5 +668,7 @@ transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -6
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign10" unique_id=815879404]
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
 
 [connection signal="stopVelocity" from="Scalper" to="Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]
