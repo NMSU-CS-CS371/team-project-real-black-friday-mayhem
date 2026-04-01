@@ -62,10 +62,6 @@ region = Rect2(0, 253, 20, 23)
 atlas = ExtResource("4_vgqql")
 region = Rect2(0, 138, 20, 23)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
-atlas = ExtResource("4_vgqql")
-region = Rect2(20, 138, 20, 23)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
 atlas = ExtResource("4_vgqql")
 region = Rect2(0, 115, 20, 23)
@@ -177,9 +173,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tx1dd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gymyn")
 }],
 "loop": true,
 "name": &"idle",
@@ -322,5 +315,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0.54642385, 0)
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_6t5aa")
-animation = &"front"
+animation = &"idle"
+frame_progress = 0.027772715
 script = ExtResource("5_fkybt")
