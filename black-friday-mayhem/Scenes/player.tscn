@@ -3,21 +3,24 @@
 [ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Scripts/Movement.gd" id="1_cvnsp"]
 [ext_resource type="Script" uid="uid://sji7srj5jd3l" path="res://Scripts/ArrowScript.gd" id="2_6t5aa"]
 [ext_resource type="Resource" uid="uid://c5fco8h8cq77c" path="res://Assets/Inventory/playerinventory.tres" id="2_vgqql"]
+[ext_resource type="Texture2D" uid="uid://c0tpkpp1eg1ah" path="res://Assets/Textures/Sky_Clouds_Photo_Texture_A_P4171314.jpg" id="3_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://6cxdo45n5kxn" path="res://Assets/Sprites/PlayerSheet.png" id="4_vgqql"]
 [ext_resource type="Script" uid="uid://cieqbn7d3nfnq" path="res://Scripts/player_anim.gd" id="5_fkybt"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5oc15"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x3wgy"]
+panorama = ExtResource("3_x3wgy")
+energy_multiplier = 1.63
 
-[sub_resource type="Sky" id="Sky_k4liu"]
-sky_material = SubResource("ProceduralSkyMaterial_5oc15")
+[sub_resource type="Sky" id="Sky_8erm5"]
+sky_material = SubResource("PanoramaSkyMaterial_x3wgy")
+process_mode = 1
 
-[sub_resource type="Environment" id="Environment_ohetr"]
-background_mode = 1
-background_color = Color(0.39537346, 0.58498526, 1, 1)
-sky = SubResource("Sky_k4liu")
-ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
-reflected_light_source = 2
+[sub_resource type="Environment" id="Environment_f1ek2"]
+background_mode = 2
+background_energy_multiplier = 0.52
+sky = SubResource("Sky_8erm5")
+sky_custom_fov = 43.8
+sky_rotation = Vector3(-2.4609141, -1.6563175, -0.3577925)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ohetr"]
 size = Vector3(0.5283203, 0.71777344, 0.23144531)
@@ -291,8 +294,8 @@ script = ExtResource("1_cvnsp")
 inventory = ExtResource("2_vgqql")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1250274764]
-transform = Transform3D(1, 0, 0, 0, 0.97630155, 0.21641484, 0, -0.21641484, 0.97630155, 0, 1.1628699, 1.6341922)
-environment = SubResource("Environment_ohetr")
+transform = Transform3D(1, 0, 0, 0, 0.9763015, 0.21641482, 0, -0.21641482, 0.9763015, 0, 1.1628699, 1.6341922)
+environment = SubResource("Environment_f1ek2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1814966383]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39990234, -0.12606364)
