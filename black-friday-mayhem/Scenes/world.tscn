@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/scalper.tscn" id="6_5ukr8"]
 [ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="8_k7acu"]
 [ext_resource type="Texture2D" uid="uid://dqrhp0gp8krmf" path="res://Assets/Textures/BigSign.png" id="9_5v1tr"]
+[ext_resource type="Texture2D" uid="uid://bxd2faxng1jjk" path="res://Assets/Textures/50.png" id="10_0fj1v"]
+[ext_resource type="Texture2D" uid="uid://b2ps72j644hs3" path="res://Assets/Textures/blackfriday.png" id="11_ikia7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fj7yv"]
 size = Vector3(1, 50, 250)
@@ -58,17 +60,17 @@ material = SubResource("StandardMaterial3D_5a7ea")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_o06y3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k7acu"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e0ngr"]
 albedo_color = Color(0.7176471, 1, 1, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_5v1tr"]
-material = SubResource("StandardMaterial3D_k7acu")
+material = SubResource("StandardMaterial3D_e0ngr")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fj1v"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kn0ld"]
 albedo_color = Color(0, 0.21176471, 1, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ikia7"]
-material = SubResource("StandardMaterial3D_0fj1v")
+material = SubResource("StandardMaterial3D_kn0ld")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7yui6"]
 albedo_color = Color(0, 1, 1, 1)
@@ -83,27 +85,39 @@ direction = Vector3(0, 1, 0)
 spread = 9.356
 initial_velocity_max = 21.68
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kn0ld"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgpy0"]
 albedo_color = Color(0, 1, 1, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_hgpy0"]
-material = SubResource("StandardMaterial3D_kn0ld")
+material = SubResource("StandardMaterial3D_hgpy0")
 radius = 0.1
 height = 0.2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5v1tr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2t4p"]
 albedo_texture = ExtResource("8_k7acu")
 
 [sub_resource type="QuadMesh" id="QuadMesh_0fj1v"]
-material = SubResource("StandardMaterial3D_5v1tr")
+material = SubResource("StandardMaterial3D_t2t4p")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikia7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pcbe"]
 albedo_texture = ExtResource("9_5v1tr")
 
 [sub_resource type="QuadMesh" id="QuadMesh_7yui6"]
-material = SubResource("StandardMaterial3D_ikia7")
+material = SubResource("StandardMaterial3D_0pcbe")
 
 [sub_resource type="BoxMesh" id="BoxMesh_c5t2i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axeuq"]
+albedo_texture = ExtResource("10_0fj1v")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kn0ld"]
+material = SubResource("StandardMaterial3D_axeuq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1cojt"]
+albedo_texture = ExtResource("11_ikia7")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yq1aw"]
+material = SubResource("StandardMaterial3D_1cojt")
 
 [node name="Main" type="Node" unique_id=1035745174]
 script = ExtResource("1_fo5ed")
@@ -416,186 +430,187 @@ collision_base_size = 0.0
 process_material = SubResource("ParticleProcessMaterial_e0ngr")
 draw_pass_1 = SubResource("SphereMesh_hgpy0")
 
-[node name="Sale Signs" type="Node3D" parent="." unique_id=560630090]
+[node name="Sale Signs1" type="Node3D" parent="." unique_id=560630090]
 
-[node name="Sale Sign" type="Node3D" parent="Sale Signs" unique_id=1907759619]
+[node name="Sale Sign" type="Node3D" parent="Sale Signs1" unique_id=1907759619]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 10.884, -20.751)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign" unique_id=482303100]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign" unique_id=482303100]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign2" type="Node3D" parent="Sale Signs" unique_id=1266012919]
+[node name="Sale Sign2" type="Node3D" parent="Sale Signs1" unique_id=1266012919]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 6.6631117, 36.431896)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign2" unique_id=53400714]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign2" unique_id=53400714]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign3" type="Node3D" parent="Sale Signs" unique_id=818588392]
+[node name="Sale Sign3" type="Node3D" parent="Sale Signs1" unique_id=818588392]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 16.786556, -81.22898)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign3" unique_id=1994950054]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign3" unique_id=1994950054]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign4" type="Node3D" parent="Sale Signs" unique_id=1004027733]
+[node name="Sale Sign4" type="Node3D" parent="Sale Signs1" unique_id=1004027733]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 10.884, 90.0738)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign4" unique_id=1213795529]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign4" unique_id=1213795529]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign5" type="Node3D" parent="Sale Signs" unique_id=344561478]
+[node name="Sale Sign5" type="Node3D" parent="Sale Signs1" unique_id=344561478]
 transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 15.708444, -20.751)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign5" unique_id=1453577782]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign5" unique_id=1453577782]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign6" type="Node3D" parent="Sale Signs" unique_id=2032328409]
+[node name="Sale Sign6" type="Node3D" parent="Sale Signs1" unique_id=2032328409]
 transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 12.251376, 34.858047)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign6" unique_id=1300143430]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign6" unique_id=1300143430]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign7" type="Node3D" parent="Sale Signs" unique_id=951263626]
+[node name="Sale Sign7" type="Node3D" parent="Sale Signs1" unique_id=951263626]
 transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 21.291473, 86.45918)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign7" unique_id=1837985408]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign7" unique_id=1837985408]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign8" type="Node3D" parent="Sale Signs" unique_id=1297254093]
+[node name="Sale Sign8" type="Node3D" parent="Sale Signs1" unique_id=1297254093]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 66.66002, 16.343336, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign8" unique_id=99337713]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign8" unique_id=99337713]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign9" type="Node3D" parent="Sale Signs" unique_id=1692821666]
+[node name="Sale Sign9" type="Node3D" parent="Sale Signs1" unique_id=1692821666]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -65.60934, 10.409601, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign9" unique_id=629892579]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign9" unique_id=629892579]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign10" type="Node3D" parent="Sale Signs" unique_id=506321120]
+[node name="Sale Sign10" type="Node3D" parent="Sale Signs1" unique_id=506321120]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 54.906296, 12.950514, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign10" unique_id=236839993]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign10" unique_id=236839993]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign11" type="Node3D" parent="Sale Signs" unique_id=1344769266]
+[node name="Sale Sign11" type="Node3D" parent="Sale Signs1" unique_id=1344769266]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 40.8809, 5.486847, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign11" unique_id=210479045]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign11" unique_id=210479045]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign12" type="Node3D" parent="Sale Signs" unique_id=176729663]
+[node name="Sale Sign12" type="Node3D" parent="Sale Signs1" unique_id=176729663]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 41.207333, 16.343336, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign12" unique_id=1633426440]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign12" unique_id=1633426440]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign13" type="Node3D" parent="Sale Signs" unique_id=624398955]
+[node name="Sale Sign13" type="Node3D" parent="Sale Signs1" unique_id=624398955]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -24.881725, 16.343336, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign13" unique_id=692195883]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign13" unique_id=692195883]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign14" type="Node3D" parent="Sale Signs" unique_id=1916187387]
+[node name="Sale Sign14" type="Node3D" parent="Sale Signs1" unique_id=1916187387]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -29.835854, 5.576687, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign14" unique_id=486375794]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign14" unique_id=486375794]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign15" type="Node3D" parent="Sale Signs" unique_id=2046954808]
+[node name="Sale Sign15" type="Node3D" parent="Sale Signs1" unique_id=2046954808]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -40.860786, 11.838297, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign15" unique_id=2017963788]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign15" unique_id=2017963788]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign16" type="Node3D" parent="Sale Signs" unique_id=634953008]
+[node name="Sale Sign16" type="Node3D" parent="Sale Signs1" unique_id=634953008]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, 11.587105, 16.343336, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign16" unique_id=1888430509]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign16" unique_id=1888430509]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign17" type="Node3D" parent="Sale Signs" unique_id=1753457825]
+[node name="Sale Sign17" type="Node3D" parent="Sale Signs1" unique_id=1753457825]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -10.405197, 19.6253, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign17" unique_id=22161706]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign17" unique_id=22161706]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign18" type="Node3D" parent="Sale Signs" unique_id=2107017333]
+[node name="Sale Sign18" type="Node3D" parent="Sale Signs1" unique_id=2107017333]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -80.128204, 4.7402287, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign18" unique_id=309764267]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign18" unique_id=309764267]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign19" type="Node3D" parent="Sale Signs" unique_id=1572636553]
+[node name="Sale Sign19" type="Node3D" parent="Sale Signs1" unique_id=1572636553]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -56.582466, 15.594118, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign19" unique_id=1213016928]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign19" unique_id=1213016928]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign20" type="Node3D" parent="Sale Signs" unique_id=1340210251]
+[node name="Sale Sign20" type="Node3D" parent="Sale Signs1" unique_id=1340210251]
 transform = Transform3D(-5, 0, -4.371139e-07, 0, 5, 0, 4.371139e-07, 0, -5, -92.31856, 16.343336, 99.9)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign20" unique_id=1245917370]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign20" unique_id=1245917370]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign21" type="Node3D" parent="Sale Signs" unique_id=942273292]
+[node name="Sale Sign21" type="Node3D" parent="Sale Signs1" unique_id=942273292]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 18.84705, -33.087204)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign21" unique_id=299577202]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign21" unique_id=299577202]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign22" type="Node3D" parent="Sale Signs" unique_id=1256374046]
+[node name="Sale Sign22" type="Node3D" parent="Sale Signs1" unique_id=1256374046]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 20.503002, -68.676285)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign22" unique_id=1469832862]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign22" unique_id=1469832862]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign23" type="Node3D" parent="Sale Signs" unique_id=79431065]
+[node name="Sale Sign23" type="Node3D" parent="Sale Signs1" unique_id=79431065]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 19.438862, 66.12176)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign23" unique_id=2104893525]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign23" unique_id=2104893525]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign24" type="Node3D" parent="Sale Signs" unique_id=1953790862]
+[node name="Sale Sign24" type="Node3D" parent="Sale Signs1" unique_id=1953790862]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 17.993107, 39.788773)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign24" unique_id=1431850510]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign24" unique_id=1431850510]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign25" type="Node3D" parent="Sale Signs" unique_id=1535032609]
+[node name="Sale Sign25" type="Node3D" parent="Sale Signs1" unique_id=1535032609]
 transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 99.99, 19.552036, 19.783394)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign25" unique_id=338937262]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign25" unique_id=338937262]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign26" type="Node3D" parent="Sale Signs" unique_id=1171112072]
+[node name="Sale Sign26" type="Node3D" parent="Sale Signs1" unique_id=1171112072]
 transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 12.251376, 79.606926)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign26" unique_id=2056755695]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign26" unique_id=2056755695]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign27" type="Node3D" parent="Sale Signs" unique_id=2094690055]
+[node name="Sale Sign27" type="Node3D" parent="Sale Signs1" unique_id=2094690055]
 transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 19.289875, 20.274887)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign27" unique_id=678217974]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign27" unique_id=678217974]
+transform = Transform3D(1, 0, 3.5527137e-15, 0, 1, 0, -3.5527137e-15, 0, 1, 2.2779388, 0, 0)
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign28" type="Node3D" parent="Sale Signs" unique_id=205016987]
+[node name="Sale Sign28" type="Node3D" parent="Sale Signs1" unique_id=205016987]
 transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 6.716357, 23.570053)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign28" unique_id=834841877]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign28" unique_id=834841877]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign29" type="Node3D" parent="Sale Signs" unique_id=661218947]
+[node name="Sale Sign29" type="Node3D" parent="Sale Signs1" unique_id=661218947]
 transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 12.251376, -32.743538)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign29" unique_id=1997579508]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign29" unique_id=1997579508]
 mesh = SubResource("QuadMesh_0fj1v")
 
-[node name="Sale Sign30" type="Node3D" parent="Sale Signs" unique_id=1148564690]
+[node name="Sale Sign30" type="Node3D" parent="Sale Signs1" unique_id=1148564690]
 transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -99.99, 12.251376, -84.321594)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs/Sale Sign30" unique_id=1593623008]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs1/Sale Sign30" unique_id=1593623008]
 mesh = SubResource("QuadMesh_0fj1v")
 
 [node name="HugeSign" type="Node3D" parent="." unique_id=651859019]
@@ -623,3 +638,247 @@ transform = Transform3D(21.746864, -0.015126082, 0, 3.327738, 0.098849386, 0, 0,
 [node name="MeshInstance3D" type="MeshInstance3D" parent="HugeSign/rope2" unique_id=369803566]
 transform = Transform3D(0.9999999, 0, 0, 3.8146973e-06, 0.99999994, 0, 0, 0, 0.99999994, -0.006524682, 0.5102997, 0)
 mesh = SubResource("BoxMesh_c5t2i")
+
+[node name="Sale Signs2" type="Node3D" parent="." unique_id=526849700]
+
+[node name="blackfridaysign" type="Node3D" parent="Sale Signs2" unique_id=2071299236]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 19.523098, 7.9685326)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign" unique_id=1318295510]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign2" type="Node3D" parent="Sale Signs2" unique_id=1345536894]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 19.523098, -22.539719)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign2" unique_id=1193393729]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign3" type="Node3D" parent="Sale Signs2" unique_id=129964213]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 7.514, -36.772247)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign3" unique_id=2116307427]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign4" type="Node3D" parent="Sale Signs2" unique_id=1787823919]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 11.736729, 28.046934)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign4" unique_id=907373614]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign5" type="Node3D" parent="Sale Signs2" unique_id=1960567018]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 7.899727, 43.48262)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign5" unique_id=1033751616]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign6" type="Node3D" parent="Sale Signs2" unique_id=1913255798]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 10.150108, -74.41849)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign6" unique_id=907896608]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign7" type="Node3D" parent="Sale Signs2" unique_id=928042712]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 19.523098, -48.23348)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign7" unique_id=624858014]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign8" type="Node3D" parent="Sale Signs2" unique_id=2008889457]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 19.523098, 93.11139)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign8" unique_id=442763886]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign9" type="Node3D" parent="Sale Signs2" unique_id=186447186]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 4.1358185, 75.02551)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign9" unique_id=1318391646]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign10" type="Node3D" parent="Sale Signs2" unique_id=1024484158]
+transform = Transform3D(-8.742278e-08, -2, 8.742278e-08, 0, -8.742278e-08, -2, 2, -8.742278e-08, 3.821371e-15, 99.9, 7.009, -89.701)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign10" unique_id=1725144932]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign11" type="Node3D" parent="Sale Signs2" unique_id=400763909]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, 0, 15.901668, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign11" unique_id=396660033]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign12" type="Node3D" parent="Sale Signs2" unique_id=2052969732]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, 24.936077, 9.790141, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign12" unique_id=863780569]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign13" type="Node3D" parent="Sale Signs2" unique_id=1403722484]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, -36.165527, 15.901668, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign13" unique_id=527556665]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign14" type="Node3D" parent="Sale Signs2" unique_id=616116855]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, -51.54065, 5.4047346, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign14" unique_id=1304203261]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign15" type="Node3D" parent="Sale Signs2" unique_id=1518283514]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, 61.88107, 3.8923655, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign15" unique_id=22683470]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign16" type="Node3D" parent="Sale Signs2" unique_id=579481490]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, 75.10328, 12.089953, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign16" unique_id=916663198]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign17" type="Node3D" parent="Sale Signs2" unique_id=1124718988]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, -76.04035, 18.351559, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign17" unique_id=1355128681]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign18" type="Node3D" parent="Sale Signs2" unique_id=792600398]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, -21.729397, 5.8529463, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign18" unique_id=1469783863]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign19" type="Node3D" parent="Sale Signs2" unique_id=1662223491]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, 15.186155, 5.4306345, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign19" unique_id=929365390]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign20" type="Node3D" parent="Sale Signs2" unique_id=2010715346]
+transform = Transform3D(-2, -1.7484555e-07, 7.642742e-15, 0, -8.742278e-08, -2, 1.7484555e-07, -2, 8.742278e-08, 32.110382, 6.176055, 99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign20" unique_id=1057867167]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign21" type="Node3D" parent="Sale Signs2" unique_id=159135229]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 7.009, -89.701)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign21" unique_id=1404999802]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign22" type="Node3D" parent="Sale Signs2" unique_id=1970471582]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 7.995229, -46.489563)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign22" unique_id=1045339494]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign23" type="Node3D" parent="Sale Signs2" unique_id=1425471924]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 7.009, -28.499863)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign23" unique_id=1334066553]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign24" type="Node3D" parent="Sale Signs2" unique_id=1102566657]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 16.492802, -70.8595)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign24" unique_id=2089424785]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign25" type="Node3D" parent="Sale Signs2" unique_id=1353242001]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 12.225232, 21.429688)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign25" unique_id=1869216762]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign26" type="Node3D" parent="Sale Signs2" unique_id=657014797]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 7.009, -12.11779)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign26" unique_id=256699124]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign27" type="Node3D" parent="Sale Signs2" unique_id=1507535404]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 18.998009, 50.457584)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign27" unique_id=738277355]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign28" type="Node3D" parent="Sale Signs2" unique_id=890884132]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 7.009, 72.975105)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign28" unique_id=362094434]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign29" type="Node3D" parent="Sale Signs2" unique_id=496558666]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 12.985909, 91.59728)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign29" unique_id=551804914]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="blackfridaysign30" type="Node3D" parent="Sale Signs2" unique_id=440670660]
+transform = Transform3D(-8.742278e-08, 2, -8.742278e-08, 0, -8.742278e-08, -2, -2, -8.742278e-08, 3.821371e-15, -99.9, 3.8984041, 39.47098)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs2/blackfridaysign30" unique_id=2027111015]
+mesh = SubResource("PlaneMesh_kn0ld")
+
+[node name="Sale Signs3" type="Node3D" parent="." unique_id=2108803257]
+
+[node name="backSign" type="Node3D" parent="Sale Signs3" unique_id=683676509]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, 8.849642, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign" unique_id=9234939]
+mesh = SubResource("PlaneMesh_yq1aw")
+
+[node name="backSign2" type="Node3D" parent="Sale Signs3" unique_id=36948465]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -45.37088, 14.154352, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign2" unique_id=302427281]
+mesh = SubResource("PlaneMesh_yq1aw")
+
+[node name="backSign3" type="Node3D" parent="Sale Signs3" unique_id=982656754]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 13.147577, 13.362059, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign3" unique_id=443976996]
+mesh = SubResource("PlaneMesh_yq1aw")
+
+[node name="backSign4" type="Node3D" parent="Sale Signs3" unique_id=1968572919]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -24.943779, 6.9223995, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign4" unique_id=285287107]
+mesh = SubResource("PlaneMesh_yq1aw")
+
+[node name="backSign5" type="Node3D" parent="Sale Signs3" unique_id=1421688369]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -78.21653, 19.05861, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign5" unique_id=1890919690]
+mesh = SubResource("PlaneMesh_yq1aw")
+
+[node name="backSign6" type="Node3D" parent="Sale Signs3" unique_id=1540381683]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 81.97423, 4.80916, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign6" unique_id=197913518]
+mesh = SubResource("PlaneMesh_yq1aw")
+
+[node name="backSign7" type="Node3D" parent="Sale Signs3" unique_id=1044147876]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 53.052216, 16.357725, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign7" unique_id=1360527482]
+mesh = SubResource("PlaneMesh_yq1aw")
+
+[node name="backSign8" type="Node3D" parent="Sale Signs3" unique_id=1732100519]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 32.12686, 5.31357, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign8" unique_id=1610713889]
+mesh = SubResource("PlaneMesh_yq1aw")
+
+[node name="backSign9" type="Node3D" parent="Sale Signs3" unique_id=1330576642]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 96.72033, 8.849642, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign9" unique_id=34096800]
+mesh = SubResource("PlaneMesh_yq1aw")
+
+[node name="backSign10" type="Node3D" parent="Sale Signs3" unique_id=651627501]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -66.48279, 7.878931, -99.9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sale Signs3/backSign10" unique_id=887026137]
+mesh = SubResource("PlaneMesh_yq1aw")
