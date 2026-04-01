@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dqrhp0gp8krmf" path="res://Assets/Textures/BigSign.png" id="10_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://bxd2faxng1jjk" path="res://Assets/Textures/50.png" id="11_e0ngr"]
 [ext_resource type="Texture2D" uid="uid://b2ps72j644hs3" path="res://Assets/Textures/blackfriday.png" id="12_kn0ld"]
+[ext_resource type="PackedScene" uid="uid://cj0452uny5i23" path="res://Scenes/results_screen.tscn" id="13_c5t2i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dki2w"]
 shader = ExtResource("6_yky5r")
@@ -670,5 +671,8 @@ transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -6
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign10" unique_id=815879404]
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="ResultsScreen" parent="." unique_id=1361233725 instance=ExtResource("13_c5t2i")]
+visible = false
 
 [connection signal="stopVelocity" from="Scalper" to="Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]

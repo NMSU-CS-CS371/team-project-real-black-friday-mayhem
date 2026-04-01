@@ -8,8 +8,8 @@ extends Panel
 var slotGlobal: InvSlot
 
 func _process(_delta: float):
-	var local_mouse_pos := get_local_mouse_position()
-	var hovering := Rect2(Vector2(), size).has_point(local_mouse_pos)
+	var local_mouse_pos = get_local_mouse_position()
+	var hovering = Rect2(Vector2(), size).has_point(local_mouse_pos)
 	if hovering:
 		mouse_entered.emit()
 

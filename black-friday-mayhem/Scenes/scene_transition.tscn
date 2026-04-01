@@ -55,6 +55,7 @@ _data = {
 [node name="SceneTransition" type="Node2D" unique_id=1029859877]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1632418669]
+z_index = 5
 offset_left = -45.0
 offset_top = -24.0
 offset_right = 1240.0

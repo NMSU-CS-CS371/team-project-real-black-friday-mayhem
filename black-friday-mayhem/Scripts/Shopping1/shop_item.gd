@@ -69,6 +69,7 @@ func purchase_item():
 			item = load("res://Assets/Inventory/Items/sample_sprite_item.tres")
 		2:
 			item = load("res://Assets/Inventory/Items/susie_item.tres")
+	item.moneySaved = moneySaved
 	player.inventory.insert(item)
 	queue_free()
 
