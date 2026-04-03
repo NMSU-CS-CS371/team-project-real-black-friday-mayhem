@@ -125,8 +125,6 @@ offset_bottom = 650.0
 [node name="InventoryUI" parent="CenterContainer" unique_id=1984823051 instance=ExtResource("8_k7acu")]
 layout_mode = 2
 
-[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
-
 [node name="Objects" type="Node3D" parent="." unique_id=48724979]
 
 [node name="Fountain" type="Node3D" parent="Objects" unique_id=2033820577]
@@ -674,5 +672,6 @@ mesh = SubResource("PlaneMesh_hmc15")
 
 [node name="ResultsScreen" parent="." unique_id=1361233725 instance=ExtResource("13_c5t2i")]
 visible = false
+[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
 
 [connection signal="stopVelocity" from="Scalper" to="Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]
