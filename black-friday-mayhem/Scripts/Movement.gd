@@ -36,7 +36,6 @@ func _physics_process(delta: float) -> void:
 	# Forward vector for player
 	forward = Vector3.FORWARD.rotated(Vector3.UP, rotation.y)
 	
-	print(velocity.length())
 	if velocity.length() > 0.05: # Code for slowing down
 		velocity -= velocity.lerp(Vector3.ZERO, traction) * delta
 		speed -= acceleration * delta * traction
@@ -94,7 +93,6 @@ func _physics_process(delta: float) -> void:
 	# print("Left: ", input_dir.x, " ws: ", input_dir.y)	
 		#var f = Vector3(0,100,0)
 		#$RigidBody3D.apply_central_force(f)#forward*delta*speed)
-	print("rotation change: "+str(rotationChange))
 	move_and_slide()
 	pass
 

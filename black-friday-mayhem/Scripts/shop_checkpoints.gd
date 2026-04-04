@@ -2,7 +2,11 @@
 extends "res://Scripts/obstacle_base.gd"
 
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
+enum checkpointType {SHOP, RESULTS}
+@export var type: checkpointType 
+
 var shopScenes = [preload("res://Scenes/Shopping1/shop.tscn"), preload("res://Scenes/Shopping2/shopping2.tscn")]
+var resultScreen = preload("res://Scenes/results_screen.tscn")
 
 func _ready() -> void:
 	# Apply initial size and color when the scene loads
@@ -21,10 +25,17 @@ func _on_trigger_zone_body_entered(body: Node3D) -> void:
 		player_entered.emit()
 		SceneTransition.play("fade_in")
 		await get_tree().create_timer(0.5).timeout
-		# Change scene to shop scene
-		var shop = shopScenes.pick_random().instantiate()
-		add_child(shop)
-		shop.connect("shop_finished", Callable(self, "_on_shopping_minigame_finished"))
+		
+		var target
+		# Change scene depending on checkpoint type
+		match type:
+			checkpointType.SHOP:
+				target = shopScenes.pick_random().instantiate()
+				add_child(target)
+				target.connect("shop_finished", Callable(self, "_on_shopping_minigame_finished"))
+			checkpointType.RESULTS:
+				target = resultScreen.instantiate()
+				add_child(target)
 		$SceneTransition/ColorRect.visible = false
 
 func _on_shopping_minigame_finished():
