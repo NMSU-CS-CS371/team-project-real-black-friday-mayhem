@@ -7,6 +7,9 @@ signal update
 @export var slots: Array[InvSlot]
 @export var wallet: int = 10000
 @export var moneySaved: int = 0
+@export var beatScalper: bool = false
+@export var beatGrandma: bool = false
+@export var beatKaren: bool = false
 
 func insert(item: InvItem):
 	var itemSlots = slots.filter(func(slot): return slot.item == item)

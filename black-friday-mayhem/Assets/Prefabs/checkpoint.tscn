@@ -3,33 +3,34 @@
 [ext_resource type="PackedScene" uid="uid://c7dw0qoj7iqah" path="res://Assets/Prefabs/obstacle_base.tscn" id="1_3ys4h"]
 [ext_resource type="Script" uid="uid://dqq4qlp1flm8v" path="res://Scripts/shop_checkpoints.gd" id="2_aa6p3"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1edi1"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_eeqyf"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_1km60"]
+[sub_resource type="QuadMesh" id="QuadMesh_cj4bi"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0thgw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rdwr"]
 transparency = 1
 albedo_color = Color(1, 0, 1, 1)
 texture_filter = 0
 billboard_mode = 1
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5u3hn"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_y17uj"]
 
-[node name="ShopCheckpoint" unique_id=1452118021 instance=ExtResource("1_3ys4h")]
+[node name="Checkpoint" unique_id=1452118021 instance=ExtResource("1_3ys4h")]
 visible = false
 script = ExtResource("2_aa6p3")
+type = 0
 
 [node name="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=729517197]
-shape = SubResource("BoxShape3D_1edi1")
+shape = SubResource("BoxShape3D_eeqyf")
 disabled = true
 debug_color = Color(0.9453508, 2.5990605e-06, 0.57035685, 0.41960785)
 
 [node name="MeshInstance3D" parent="." index="1" unique_id=21900597]
-mesh = SubResource("QuadMesh_1km60")
-surface_material_override/0 = SubResource("StandardMaterial3D_0thgw")
+mesh = SubResource("QuadMesh_cj4bi")
+surface_material_override/0 = SubResource("StandardMaterial3D_3rdwr")
 
 [node name="TriggerZone" parent="." index="2" unique_id=17846116]
 collision_mask = 2
 
 [node name="CollisionShape3D" parent="TriggerZone" index="0" unique_id=1219094317]
-shape = SubResource("BoxShape3D_5u3hn")
+shape = SubResource("BoxShape3D_y17uj")
