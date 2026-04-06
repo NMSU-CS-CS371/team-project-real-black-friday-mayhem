@@ -4,15 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/Shopping2/item_spawner.tscn" id="2_2r7tu"]
 [ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/Shopping2/hand_spawner.tscn" id="2_mntse"]
 [ext_resource type="Texture2D" uid="uid://diif56b3hfcwv" path="res://Assets/Textures/shelf.jpg" id="2_qa6v8"]
-[ext_resource type="FontFile" uid="uid://bxvituh4qj3ga" path="res://Assets/Fonts/Xolonium-Regular.ttf" id="3_fpqsi"]
+[ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="3_yjfng"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="6_yjfng"]
 
-[sub_resource type="FontVariation" id="FontVariation_yjfng"]
-base_font = ExtResource("3_fpqsi")
-
-[node name="MiniGame" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("score_label")]
+[node name="MiniGame" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("wallet_label")]
 script = ExtResource("1_yjfng")
-score_label = NodePath("ScoreLabel")
+wallet_label = NodePath("WalletLabel")
 
 [node name="Background" type="TextureRect" parent="." unique_id=255902574]
 offset_left = -180.0
@@ -25,19 +22,23 @@ texture = ExtResource("2_qa6v8")
 wait_time = 40.0
 one_shot = true
 
-[node name="ScoreLabel" type="Label" parent="." unique_id=147841446]
+[node name="WalletLabel" type="Label" parent="." unique_id=147841446]
+z_index = 10
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 1000.0
-offset_right = 1150.0
-offset_bottom = 100.0
+offset_left = 819.0
+offset_top = 3.0
+offset_right = 1137.0
+offset_bottom = 103.0
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("FontVariation_yjfng")
-theme_override_font_sizes/font_size = 64
-text = "0"
-horizontal_alignment = 1
+theme = ExtResource("3_yjfng")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "$999999"
+horizontal_alignment = 2
 
 [node name="ItemSpawner" parent="." unique_id=1422229041 instance=ExtResource("2_2r7tu")]
 
