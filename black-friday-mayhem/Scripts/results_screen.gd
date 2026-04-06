@@ -13,7 +13,12 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# update label text
-	moneyLeftLabel.text = "Money: $"+str(playerInventory.wallet)
+	if playerInventory.wallet < 0:
+		moneyLeftLabel.text = "Money: -$"+str(abs(playerInventory.wallet))
+		moneyLeftLabel.add_theme_color_override("font_color", Color(1,0,0,1))
+	else:
+		moneyLeftLabel.text = "Money: $"+str(playerInventory.wallet)
+		moneyLeftLabel.add_theme_color_override("font_color", Color(1,1,1,1))
 	moneySavedLabel.text = "Money SAVED: $"+str(playerInventory.moneySaved)
 	
 	# finish transitioning scene

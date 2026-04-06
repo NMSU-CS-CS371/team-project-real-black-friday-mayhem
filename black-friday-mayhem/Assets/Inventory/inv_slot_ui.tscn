@@ -54,6 +54,7 @@ text = "99"
 horizontal_alignment = 2
 
 [node name="ItemTag" parent="." unique_id=1053140089 instance=ExtResource("2_1wr17")]
+visible = false
 z_index = 2
 layout_mode = 0
 offset_left = 157.0

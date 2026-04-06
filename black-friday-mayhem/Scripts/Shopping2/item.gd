@@ -18,7 +18,7 @@ var texture_cereal = preload("res://Assets/Sprites/cereal.png")
 #Variables
 var is_taken : bool = false
 var id: int
-var item_points: int
+var item_price: int
 var spawn_point: Node2D = null
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var area: Area2D = $Area2D
@@ -50,20 +50,20 @@ func _process(delta):
 func item_texture() -> Texture2D:
 	match id:
 		0: 
-			item_points = 5
+			item_price = 9
 			sprite.offset.y = -50
 			return texture_jam
 		1:
-			item_points = 2
+			item_price = 6
 			sprite.offset.y = -70
 			return texture_cereal
 			
 		2:
-			item_points = 3
+			item_price = 7
 			sprite.offset.y = -55
 			return texture_corn
 		3:
-			item_points = 8
+			item_price = 12
 			sprite.offset.y = -25
 			return texture_toiletpaper
 	return null
@@ -78,12 +78,11 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 	if event is InputEventMouseButton and event.pressed:
 		#print("Item clicked!")
 		#print("Item emitting signal")
-		emit_signal("item_clicked", item_points)
+		emit_signal("item_clicked")
 		purchaseItem()
-		queue_free()#delete Item
 
 func purchaseItem():
-	# player.inventory.wallet -= discountedPrice
+	player.inventory.wallet -= item_price
 	# player.inventory.moneySaved += moneySaved
 	var item: InvItem
 	match id:
@@ -96,4 +95,5 @@ func purchaseItem():
 		3:
 			item = load("res://Assets/Inventory/Items/toilet_paper.tres")
 	player.inventory.insert(item)
+	get_parent().update_wallet_label()
 	queue_free()
