@@ -25,7 +25,7 @@ func insert(item: InvItem):
 func reset():
 	for i in slots.size():
 		slots[i] = InvSlot.new()
-	wallet = 1
+	wallet = 10000
 	moneySaved = 0
 	beatScalper = false
 	beatGrandma = false
