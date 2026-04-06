@@ -63,7 +63,7 @@ material = SubResource("StandardMaterial3D_go701")
 [node name="MAP" type="Node3D" unique_id=1739568515]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
-transform = Transform3D(-0.015516601, 0.99501, -0.09856089, -0.73591727, 0.055366524, 0.6748038, 0.6768938, 0.08300336, 0.731386, -0.15168476, 18.309956, -0.13980675)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 24.734062, 0)
 light_color = Color(0.98039216, 1, 1, 1)
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 16.0
@@ -543,3 +543,12 @@ shape = SubResource("BoxShape3D_8j60k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 23/StaticBody3D" unique_id=1428627159]
 mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=2024841804]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 24.858952, 0)
+light_color = Color(0.98039216, 1, 1, 1)
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+light_angular_distance = 90.0
+directional_shadow_mode = 0
+sky_mode = 1

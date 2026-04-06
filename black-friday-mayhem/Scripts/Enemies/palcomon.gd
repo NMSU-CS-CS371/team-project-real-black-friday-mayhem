@@ -174,6 +174,7 @@ func enemy_defeated() :
 	var item: InvItem
 	item = load("res://Assets/Inventory/Items/palcomon_cards.tres")
 	player.inventory.insert(item)
+	player.inventory.beatScalper = true
 	player.controlAllowed = true
 	$ButtonPanel/MarginContainer/HBoxContainer.hide()
 	await textbox_closed

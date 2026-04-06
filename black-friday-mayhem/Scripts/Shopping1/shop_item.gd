@@ -64,11 +64,13 @@ func purchase_item():
 	var item: InvItem
 	match itemIndex:
 		0:
-			item = load("res://Assets/Inventory/Items/cat.tres")
-		1:
 			item = load("res://Assets/Inventory/Items/sample_sprite_item.tres")
-		2:
+		1:
 			item = load("res://Assets/Inventory/Items/susie_item.tres")
+		2:
+			item = load("res://Assets/Inventory/Items/cat.tres")
+	item.moneySaved = moneySaved
+	item.discount = discount
 	player.inventory.insert(item)
 	queue_free()
 
