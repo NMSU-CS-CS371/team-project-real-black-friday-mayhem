@@ -45,12 +45,18 @@ func reveal_special_items():
 		$KarenExplosion.play("default")
 	
 func _on_play_pressed():
+	# reset inventory
+	playerInventory.reset()
+	
 	# begin scene transition
 	sceneTransition.play("fade_in")
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://Scenes/world.tscn")
 	
 func _on_menu_pressed():
+	# reset inventory
+	playerInventory.reset()
+	
 	# begin scene transition
 	sceneTransition.play("fade_in")
 	await get_tree().create_timer(0.5).timeout
