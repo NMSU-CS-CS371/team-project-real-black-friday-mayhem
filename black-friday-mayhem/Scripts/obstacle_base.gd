@@ -15,6 +15,13 @@ extends Entity
 		obstacle_color = value
 		_apply_color()
 
+# When enabled, collision shapes are automatically sized and positioned based on the mesh
+# Disable this for prefabs with manually configured collision shapes
+@export var auto_align_collision: bool = true:
+	set(value):
+		auto_align_collision = value
+		_apply_size()
+
 func _ready() -> void:
 	# Call super _ready() to handle mesh initialization and interaction state
 	super._ready()
@@ -52,26 +59,35 @@ func _apply_size() -> void:
 		# If a custom mesh is set on the Entity, use it and scale the node
 		if mesh != null:
 			$MeshInstance3D.mesh = mesh
-			# Get the mesh's bounding box and scale collision to match
+			# Get the mesh's bounding box to calculate centering offset
 			var aabb := mesh.get_aabb()
 			actual_size = aabb.size * obstacle_size
-			# Calculate offset to center collision on the mesh
-			# AABB position is the min corner, so center = position + size/2
-			collision_offset = (aabb.position + aabb.size / 2.0) * obstacle_size
+			# Calculate the mesh center offset (AABB position is min corner)
+			var mesh_center := aabb.position + aabb.size / 2.0
+			# Offset MeshInstance3D to center the mesh at the node origin
+			$MeshInstance3D.position = -mesh_center * obstacle_size
 			# Scale the MeshInstance3D to match obstacle_size
 			$MeshInstance3D.scale = obstacle_size
+			# Collision stays at origin since mesh is now visually centered
+			collision_offset = Vector3.ZERO
 		elif visual_mode == "2D Sprite":
 			# Create a QuadMesh for 2D mode
 			var quad := QuadMesh.new()
 			quad.size = Vector2(obstacle_size.x, obstacle_size.y)
 			$MeshInstance3D.mesh = quad
 			$MeshInstance3D.scale = Vector3.ONE
+			$MeshInstance3D.position = Vector3.ZERO
 		else:
 			# Create a BoxMesh for 3D mode
 			var mesh_box := BoxMesh.new()
 			mesh_box.size = obstacle_size
 			$MeshInstance3D.mesh = mesh_box
 			$MeshInstance3D.scale = Vector3.ONE
+			$MeshInstance3D.position = Vector3.ZERO
+	
+	# Skip collision updates if auto_align is disabled (manually configured prefabs)
+	if not auto_align_collision:
+		return
 	
 	# Update the solid collision shape using actual_size
 	var box := BoxShape3D.new()
