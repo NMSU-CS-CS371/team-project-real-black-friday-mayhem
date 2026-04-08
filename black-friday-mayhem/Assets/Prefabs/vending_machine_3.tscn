@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c4fw7cw13pnco"]
+
+[ext_resource type="Script" uid="uid://c7ylb52nywdiy" path="res://Scripts/obstacle_base.gd" id="1_pw6gy"]
+[ext_resource type="ArrayMesh" uid="uid://c3182ye3ynlpr" path="res://Assets/Textures/vending_machine_3.obj" id="2_6mgjk"]
+[ext_resource type="Texture2D" uid="uid://cfbd8mutpqkwb" path="res://Assets/Textures/vending_machine_3.png" id="3_6cncu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6mgjk"]
+size = Vector3(0.91265297, 1.8, 0.70000005)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6cncu"]
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = ExtResource("3_6cncu")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_532bl"]
+size = Vector3(0.91265297, 1.8, 0.70000005)
+
+[node name="Vending Machine" type="Node3D" unique_id=1452118021]
+script = ExtResource("1_pw6gy")
+visual_mode = "3D Mesh"
+mesh = ExtResource("2_6mgjk")
+texture = ExtResource("3_6cncu")
+entity_name = "Vending Machine"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=936403119]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=729517197]
+shape = SubResource("BoxShape3D_6mgjk")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0072875, -0.9, 0.21646899)
+mesh = ExtResource("2_6mgjk")
+surface_material_override/0 = SubResource("StandardMaterial3D_6cncu")
+metadata/_edit_lock_ = true
+
+[node name="TriggerZone" type="Area3D" parent="." unique_id=17846116]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
+shape = SubResource("BoxShape3D_532bl")
+metadata/_edit_lock_ = true
