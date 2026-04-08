@@ -15,6 +15,13 @@ extends Entity
 		obstacle_color = value
 		_apply_color()
 
+# When enabled, collision shapes are automatically sized and positioned based on the mesh
+# Disable this for prefabs with manually configured collision shapes
+@export var auto_align_collision: bool = true:
+	set(value):
+		auto_align_collision = value
+		_apply_size()
+
 func _ready() -> void:
 	# Call super _ready() to handle mesh initialization and interaction state
 	super._ready()
@@ -43,33 +50,62 @@ func _apply_size() -> void:
 	if not is_node_ready():
 		return
 	
-	# Update the solid collision shape
-	# We assume a child StaticBody3D exists for physics
-	var box := BoxShape3D.new()
-	box.size = obstacle_size
+	# Calculate the actual size for collision based on mesh or obstacle_size
+	var actual_size := obstacle_size
+	var collision_offset := Vector3.ZERO
 	
-	if has_node("StaticBody3D/CollisionShape3D"):
-		$StaticBody3D/CollisionShape3D.shape = box
-	elif has_node("CollisionShape3D"):
-		$CollisionShape3D.shape = box
-		
 	# Update the visible mesh to match based on visual_mode
 	if has_node("MeshInstance3D"):
-		if visual_mode == "2D Sprite":
+		# If a custom mesh is set on the Entity, use it and scale the node
+		if mesh != null:
+			$MeshInstance3D.mesh = mesh
+			# Get the mesh's bounding box to calculate centering offset
+			var aabb := mesh.get_aabb()
+			actual_size = aabb.size * obstacle_size
+			# Calculate the mesh center offset (AABB position is min corner)
+			var mesh_center := aabb.position + aabb.size / 2.0
+			# Offset MeshInstance3D to center the mesh at the node origin
+			$MeshInstance3D.position = -mesh_center * obstacle_size
+			# Scale the MeshInstance3D to match obstacle_size
+			$MeshInstance3D.scale = obstacle_size
+			# Collision stays at origin since mesh is now visually centered
+			collision_offset = Vector3.ZERO
+		elif visual_mode == "2D Sprite":
 			# Create a QuadMesh for 2D mode
 			var quad := QuadMesh.new()
 			quad.size = Vector2(obstacle_size.x, obstacle_size.y)
 			$MeshInstance3D.mesh = quad
+			$MeshInstance3D.scale = Vector3.ONE
+			$MeshInstance3D.position = Vector3.ZERO
 		else:
 			# Create a BoxMesh for 3D mode
 			var mesh_box := BoxMesh.new()
 			mesh_box.size = obstacle_size
 			$MeshInstance3D.mesh = mesh_box
+			$MeshInstance3D.scale = Vector3.ONE
+			$MeshInstance3D.position = Vector3.ZERO
 	
+	# Skip collision updates if auto_align is disabled (manually configured prefabs)
+	if not auto_align_collision:
+		return
+	
+	# Update the solid collision shape using actual_size
+	var box := BoxShape3D.new()
+	box.size = actual_size
+	
+	if has_node("StaticBody3D/CollisionShape3D"):
+		$StaticBody3D/CollisionShape3D.shape = box
+		$StaticBody3D/CollisionShape3D.position = collision_offset
+	elif has_node("CollisionShape3D"):
+		$CollisionShape3D.shape = box
+		$CollisionShape3D.position = collision_offset
+	
+	# Update trigger zone collision
 	var trigger_box := BoxShape3D.new()
-	trigger_box.size = obstacle_size
+	trigger_box.size = actual_size
 	if has_node("TriggerZone/CollisionShape3D"):
 		$TriggerZone/CollisionShape3D.shape = trigger_box
+		$TriggerZone/CollisionShape3D.position = collision_offset
 
 # Creates and applies a plain colored material to the obstacle mesh
 func _apply_color() -> void:
@@ -79,12 +115,15 @@ func _apply_color() -> void:
 	var mat := StandardMaterial3D.new()
 	mat.albedo_color = obstacle_color
 	
+	# Apply texture as albedo if set
+	if texture:
+		mat.albedo_texture = texture
+	
+	# Additional settings for 2D Sprite mode
 	if visual_mode == "2D Sprite":
 		mat.billboard_mode = BaseMaterial3D.BILLBOARD_ENABLED
 		mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 		mat.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
-		if sprite_texture:
-			mat.albedo_texture = sprite_texture
 	
 	if has_node("MeshInstance3D"):
 		$MeshInstance3D.set_surface_override_material(0, mat)
