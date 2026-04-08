@@ -7,7 +7,9 @@ class_name InvItem
 @export var marketVal: int
 @export var discount: float
 @export var realPrice: int
+@export var moneySaved: int
+@export var itemDesc: String = ""
 @export var spriteScale: Vector2 = Vector2(1,1)
 
-# Special items do not stack
+# Special items do not stack, they are from enemies
 @export var specialItem: bool

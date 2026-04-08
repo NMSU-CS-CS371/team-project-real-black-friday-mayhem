@@ -7,5 +7,5 @@
 script = ExtResource("1_qgmug")
 name = "Sample Sprite"
 sprite = ExtResource("2_stplq")
-spriteScale = Vector2(1, 1)
+itemDesc = "What?"
 metadata/_custom_type_script = "uid://cu5shqx502vy4"

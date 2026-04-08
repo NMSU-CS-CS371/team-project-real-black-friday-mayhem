@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://cwq4umoio8ete"]
+
+[ext_resource type="FontFile" uid="uid://dpewd1wcpt3hq" path="res://Assets/Fonts/Wacky Pixels.ttf" id="1_6k31a"]
+
+[resource]
+default_font = ExtResource("1_6k31a")
+default_font_size = 50

@@ -1,6 +1,7 @@
 
 extends CharacterBody3D
 
+@onready var sprite = $AnimatedSprite3D
 @export var acceleration : float = 500.0
 @export var maxSpeed : float = 600.0
 @export var forwardRotationSpeed : float = 6.0
@@ -16,6 +17,9 @@ var isMovingForward = false
 var isMovingBackward = false
 var isTurning = false
 var forward = Vector3.ZERO
+var controlAllowed = true
+var isMoving = false
+var rotationChange = 0
 
 func _ready() -> void:
 	if !useArrow:
@@ -32,28 +36,35 @@ func _physics_process(delta: float) -> void:
 	# Forward vector for player
 	forward = Vector3.FORWARD.rotated(Vector3.UP, rotation.y)
 	
-	if velocity.length() > 0.0000001: # Code for slowing down
-		# print(velocity.length())
+	if velocity.length() > 0.05: # Code for slowing down
 		velocity -= velocity.lerp(Vector3.ZERO, traction) * delta
 		speed -= acceleration * delta * traction
 		speed = clamp(speed, 0, maxSpeed)
 		# velocity = forward * delta * speed
+		isMoving = true
+	else:
+		isMoving = false
+		velocity = Vector3.ZERO
 	
 	if isMovingForward: # Fixes rotations based on if going forward
 		speed += acceleration * delta
 		speed = clamp(speed, -maxSpeed, maxSpeed)
 		#rotationSpeed += rotationAcceleration * delta
 		#rotationSpeed = clamp(rotationSpeed, -maxRotationSpeed, maxRotationSpeed)
-		rotation.y += direction_ground.x * delta * forwardRotationSpeed
+		rotationChange = direction_ground.x * delta * forwardRotationSpeed
+		rotation.y += rotationChange
 		velocity = forward * delta * speed
-	if isMovingBackward: # Fixes rotations based on if going backward
+	if isMovingBackward and isMoving: # Fixes rotations based on if going backward
 		speed -= delta * breakingSpeed
 		speed = clamp(speed, -maxSpeed, maxSpeed)
 		#rotationSpeed += rotationAcceleration * delta
 		#rotationSpeed = clamp(rotationSpeed, -maxRotationSpeed, maxRotationSpeed)
-		rotation.y += direction_ground.x * delta * forwardRotationSpeed
+		rotationChange = direction_ground.x * delta * forwardRotationSpeed
+		rotation.y += rotationChange
 		velocity = forward * delta * speed
-		
+	if not isMoving and not isTurning:
+		rotationChange = 0
+	
 	if isTurning and input_dir.y == 0: # If is turning, and is not on the gas (essentially)
 		var originalVector = velocity / delta # undo modifications
 		if speed > 0.5:
@@ -62,7 +73,8 @@ func _physics_process(delta: float) -> void:
 		
 		# Gex -> get x (ex) -> gex (also, gex, the best video game of all time: )
 		var gex = Vector3(direction_ground.x * 0.70710676908493 - (0.70710676908493 * originalVector.x), 0, originalVector.z) # include the new forward from the velocity to maintain it's direction (and magnitude, oh yeah!)
-		rotation.y += gex.x * delta * turningRotationSpeed # Change rotation based on new input from player (left, right)
+		rotationChange = gex.x * delta * turningRotationSpeed
+		rotation.y += rotationChange # Change rotation based on new input from player (left, right)
 		var newVel = gex.rotated(Vector3.UP, rotation.y) # make vector3 based on new vector (input.x, 0, velocity.z)
 		newVel = newVel * delta * speed
 		velocity = newVel # Set velocity to new vector * delta * speed
@@ -85,6 +97,9 @@ func _physics_process(delta: float) -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
+	if !controlAllowed:
+		return
+	
 	if event.is_action_pressed("Forward"):
 		isMovingForward = true
 		pass
@@ -96,11 +111,19 @@ func _input(event: InputEvent) -> void:
 		isMovingBackward = false
 	if event.is_action_pressed("Left") or event.is_action_pressed("Right"):
 		isTurning = true
-		pass
 	if event.is_action_released("Left") or event.is_action_released("Right"):
 		isTurning = false
-		#rotationFix = true
 	pass
 
 func collect(item: InvItem):
 	inventory.insert(item)
+
+
+func _on_scalper_stop_velocity() -> void:
+	velocity = Vector3.ZERO
+	controlAllowed = false
+	speed = 0
+	isTurning = false
+	isMovingForward = false
+	isMovingBackward = false
+	pass 

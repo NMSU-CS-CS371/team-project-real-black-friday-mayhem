@@ -4,15 +4,16 @@ extends Node2D #Hand Mini Game
 #
 
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
+@onready var player = get_parent().get_parent().player
 enum GameState{IDLE, RUNNING, FINISHED}
 var state: GameState = GameState.IDLE
 var items: Array[Node2D] = []
-var score: = 0
-@export var score_label: Label
+@export var wallet_label: Label
 signal shop_finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	update_wallet_label()
 	# finish transitioning scene
 	SceneTransition.get_parent().get_node("ColorRect").color.a = 255
 	SceneTransition.play("fade_out")
@@ -68,12 +69,14 @@ func register_item(item: Node2D) -> void:
 func unregister_item(item: Node2D) -> void:
 	items.erase(item)
 	
-#function will add points to the score
-func add_score(points):
-	score += points
-	score_label.text = "" + str(score)
-	print ("Score: ", score)
-	
+# update label with wallet balance
+func update_wallet_label():
+	if player.inventory.wallet < 0:
+		wallet_label.text = "-$" + str(abs(player.inventory.wallet))
+		wallet_label.add_theme_color_override("font_color", Color(1,0,0,1))
+	else:
+		wallet_label.text = "$" + str(player.inventory.wallet)
+		wallet_label.add_theme_color_override("font_color", Color(1,1,1,1))
 #function for when the game timer runs out
 func _on_game_timer_timeout() -> void:
 	print("TIMES UP")

@@ -38,14 +38,8 @@ func spawn_item():
 	#set spawn position
 	item.position = Vector2(spawn_x, spawn_y)
 	get_parent().add_child.call_deferred(item)
-	item.item_clicked.connect(_on_item_clicked)
 	#print("Spawned items:", item_count)
 
-#when the player clicks on the item give points
-func _on_item_clicked(points):
-	get_parent().add_score(points)
-	#spawn_item()
-	
 #when the spawn timer is over spawn an item
 func _on_spawn_timer_timeout():
 	if get_child_count() >= max_items:

@@ -7,5 +7,6 @@
 script = ExtResource("1_3g5dp")
 name = "Jam"
 sprite = ExtResource("2_3nlcn")
+itemDesc = "A jar of strawberry jam. The seal's definitely been broken, but it's so good that who cares."
 spriteScale = Vector2(0.7, 0.7)
 metadata/_custom_type_script = "uid://cu5shqx502vy4"

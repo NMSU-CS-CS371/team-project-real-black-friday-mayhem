@@ -2,7 +2,7 @@ extends Node2D
 
 signal item_exiting_tree
 
-@onready var player = get_parent().get_parent().get_parent().get_child(0)
+@onready var player = get_parent().get_parent().get_parent().player
 var timerLength = 1
 var minLength = 1
 var maxLength = 5
@@ -27,6 +27,7 @@ func _ready() -> void:
 	# Randomly generate market value and discount, calculate price
 	marketVal = rng.randi_range(50,120)*10
 	discount = rng.randi_range(3,9)*10
+	@warning_ignore("narrowing_conversion")
 	discountedPrice = marketVal * ((100-discount)/100)
 	moneySaved = marketVal - discountedPrice
 	
@@ -63,11 +64,13 @@ func purchase_item():
 	var item: InvItem
 	match itemIndex:
 		0:
-			item = load("res://Assets/Inventory/Items/cat.tres")
-		1:
 			item = load("res://Assets/Inventory/Items/sample_sprite_item.tres")
-		2:
+		1:
 			item = load("res://Assets/Inventory/Items/susie_item.tres")
+		2:
+			item = load("res://Assets/Inventory/Items/cat.tres")
+	item.moneySaved = moneySaved
+	item.discount = discount
 	player.inventory.insert(item)
 	queue_free()
 

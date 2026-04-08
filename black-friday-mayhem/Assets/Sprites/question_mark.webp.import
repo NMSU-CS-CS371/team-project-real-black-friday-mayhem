@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfcw4hgi2fymt"
-path="res://.godot/imported/TransitionTexture1.png-1c6be464c67ed2d29de94bd13a484f11.ctex"
+uid="uid://dn2ycpbr536mq"
+path="res://.godot/imported/question_mark.webp-74aa43cdcff6146f6ea8401b369a4011.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/TransitionTexture1.png"
-dest_files=["res://.godot/imported/TransitionTexture1.png-1c6be464c67ed2d29de94bd13a484f11.ctex"]
+source_file="res://Assets/Sprites/question_mark.webp"
+dest_files=["res://.godot/imported/question_mark.webp-74aa43cdcff6146f6ea8401b369a4011.ctex"]
 
 [params]
 

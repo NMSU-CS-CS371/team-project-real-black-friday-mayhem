@@ -7,6 +7,7 @@
 script = ExtResource("1_y3l78")
 name = "Palcomon Cards"
 sprite = ExtResource("2_4pb4c")
+itemDesc = "A stack of Palcomon cards. They absolutely reek, but they've gotta have SOME value... right?"
 spriteScale = Vector2(0.3, 0.3)
 specialItem = true
 metadata/_custom_type_script = "uid://cu5shqx502vy4"
