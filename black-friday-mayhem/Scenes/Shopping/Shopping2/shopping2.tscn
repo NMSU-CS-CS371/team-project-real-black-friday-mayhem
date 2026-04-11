@@ -3,19 +3,10 @@
 [ext_resource type="Script" uid="uid://dcs7iuqhpasuk" path="res://Scripts/Shopping/Shopping2/shopping2.gd" id="1_pg7q6"]
 [ext_resource type="Texture2D" uid="uid://diif56b3hfcwv" path="res://Assets/Textures/shelf.jpg" id="2_qa6v8"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="3_yjfng"]
-<<<<<<< HEAD:black-friday-mayhem/Scenes/Shopping/Shopping2/shopping2.tscn
-[ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/Shopping/Shopping2/hand_spawner.tscn" id="5_pg7q6"]
-[ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/Shopping/Shopping2/item_spawner.tscn" id="6_03m0q"]
-[ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="6_yjfng"]
-
-[node name="MiniGame" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("wallet_label")]
-script = ExtResource("1_pg7q6")
-=======
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="6_yjfng"]
 
 [node name="MiniGame" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("wallet_label")]
 script = ExtResource("1_yjfng")
->>>>>>> main:black-friday-mayhem/Scenes/Shopping2/shopping2.tscn
 wallet_label = NodePath("WalletLabel")
 
 [node name="Background" type="TextureRect" parent="." unique_id=255902574]
@@ -34,17 +25,10 @@ z_index = 10
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-<<<<<<< HEAD:black-friday-mayhem/Scenes/Shopping/Shopping2/shopping2.tscn
-offset_left = 467.0
-offset_top = 19.0
-offset_right = 785.0
-offset_bottom = 119.0
-=======
 offset_left = 819.0
 offset_top = 3.0
 offset_right = 1137.0
 offset_bottom = 103.0
->>>>>>> main:black-friday-mayhem/Scenes/Shopping2/shopping2.tscn
 grow_vertical = 2
 theme = ExtResource("3_yjfng")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -53,13 +37,10 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 80
 text = "$999999"
 horizontal_alignment = 2
-<<<<<<< HEAD:black-friday-mayhem/Scenes/Shopping/Shopping2/shopping2.tscn
-=======
 
 [node name="ItemSpawner" parent="." unique_id=1422229041 instance=ExtResource("2_2r7tu")]
 
 [node name="HandSpawner" parent="." unique_id=962083149 instance=ExtResource("2_mntse")]
->>>>>>> main:black-friday-mayhem/Scenes/Shopping2/shopping2.tscn
 
 [node name="SceneTransition" parent="." unique_id=1029859877 instance=ExtResource("6_yjfng")]
 
