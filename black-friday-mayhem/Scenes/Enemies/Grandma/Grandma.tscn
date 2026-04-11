@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://buf6ifi6q1uhh"]
+
+[ext_resource type="Script" uid="uid://5i2utr1q3ds" path="res://Scripts/Enemies/grandma.gd" id="1_f5bl1"]
+[ext_resource type="Texture2D" uid="uid://cuwpf1dh438vp" path="res://Assets/Sprites/icon.svg" id="1_rfnqv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pdns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rfnqv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f5bl1"]
+radius = 0.49249268
+height = 1.298645
+
+[node name="Grandma" type="Node3D" unique_id=1282377910]
+script = ExtResource("1_f5bl1")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=357323051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47654343, 0)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_3pdns")
+animation = &"Idle"
+frame_progress = 0.7587699
+
+[node name="HitBox" type="Area3D" parent="." unique_id=1793053768]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" unique_id=413488198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.66433716, 0)
+shape = SubResource("CapsuleShape3D_f5bl1")
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
