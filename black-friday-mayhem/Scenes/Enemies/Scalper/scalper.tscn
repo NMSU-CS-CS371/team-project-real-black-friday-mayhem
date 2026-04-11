@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cxhl6r63ugnvj" path="res://Scenes/Enemies/enemy.tscn" id="1_qdkv4"]
 [ext_resource type="Texture2D" uid="uid://cgkwgtm7c3opw" path="res://Assets/Sprites/Scalper.png" id="2_ngycw"]
-[ext_resource type="Script" uid="uid://b68idph0nfn38" path="res://Scripts/Enemies/scalper.gd" id="2_pyl3l"]
+[ext_resource type="Script" uid="uid://b68idph0nfn38" path="res://Scripts/Enemies/Scalper/scalper.gd" id="2_pyl3l"]
 [ext_resource type="Texture2D" uid="uid://bddnlsbpadotb" path="res://Assets/Sprites/DefeatedScalperDead.png" id="4_p110t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ngycw"]

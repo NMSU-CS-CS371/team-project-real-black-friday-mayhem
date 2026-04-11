@@ -3,7 +3,7 @@ extends Node3D
 #movement varibles
 var time = 0.0
 var radius = 5.0
-var speed = 1.0
+var speed = 0.4
 var angle = 0.0
 var center : Vector3
 @export var game : Node3D
@@ -11,7 +11,7 @@ var last_position = Vector3.ZERO
 @onready var sprite = $AnimatedSprite3D
 var is_defeated = false
 var playing_game = false
-#signal stopVelocity
+var punchies = preload("res://Scenes/Enemies/Grandma/punchies.tscn")
 var hit = 0
 
 
@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 	elif playing_game :
 		$AnimatedSprite3D.play("Final")
 	else :
-		$AnimatedSprite3D.offset.y = 0
+		$AnimatedSprite3D.offset.y = 15
 		#-move-
 		time += delta * speed
 		
@@ -43,6 +43,11 @@ func _process(delta: float) -> void:
 		
 		update_animation()
 		last_position = global_position
+		
+func _physics_process(_delta: float) -> void:
+	if $RayCast3D.is_colliding():
+		var floor_height = $RayCast3D.get_collision_point().y
+		global_position.y = floor_height
 
 func play_if_not(anim, flip):
 	if sprite.animation != anim:
@@ -92,10 +97,22 @@ func update_animation() :
 			play_if_not("Back", false)
 			
 
-			
+func _on_hit_box_body_entered(body: Node3D) -> void:
+	if hit >= 2:
+		print("oh heck no")
+		body.stop_velocity.emit()
+		var killer_instinct = punchies.instantiate()
+		add_child(killer_instinct)
+	else:
+		hit = hit + 1
+		print("sorry.!")
+		
 
-
-func _on_collision_shape_3d_child_entered_tree(_node: Node) -> void:
-	hit += 1
-	print("hit grandma")
-	
+#this function is for the textbox when grandma is hit
+func when_hit(_num) :
+	pass
+	#when the granny is hit I want to have you and the grandma stop 
+	#and a text box of the grandma and you to be locked in
+	#until you tap/press a button
+	#wont increase granny hit until text box is closed
+		

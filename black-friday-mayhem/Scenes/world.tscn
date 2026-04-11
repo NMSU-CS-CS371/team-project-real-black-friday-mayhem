@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
-[ext_resource type="PackedScene" uid="uid://ca777g5pbeirm" path="res://Scenes/Enemies/granny.tscn" id="5_axeuq"]
-[ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/scalper.tscn" id="6_5ukr8"]
+[ext_resource type="PackedScene" uid="uid://ca777g5pbeirm" path="res://Scenes/Enemies/Grandma/granny.tscn" id="5_axeuq"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/Scalper/scalper.tscn" id="6_5ukr8"]
 [ext_resource type="Script" uid="uid://03rqiqf5wyxb" path="res://Scripts/mask_camera.gd" id="6_e0ngr"]
 [ext_resource type="Texture2D" uid="uid://c0tpkpp1eg1ah" path="res://Assets/Textures/Sky_Clouds_Photo_Texture_A_P4171314.jpg" id="6_kn0ld"]
+[ext_resource type="PackedScene" uid="uid://bakriia4ytcfp" path="res://Scenes/Enemies/karen.tscn" id="6_pt3ps"]
 [ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://bxd2faxng1jjk" path="res://Assets/Textures/50.png" id="11_e0ngr"]
 [ext_resource type="PackedScene" uid="uid://httpo0j712de" path="res://Scenes/npc.tscn" id="12_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://b2ps72j644hs3" path="res://Assets/Textures/blackfriday.png" id="12_kn0ld"]
-[ext_resource type="PackedScene" uid="uid://buf6ifi6q1uhh" path="res://Scenes/Enemies/Grandma/Grandma.tscn" id="13_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://mpltxjryajvu" path="res://Assets/Textures/CardStand_Front.png" id="13_t2t4p"]
 [ext_resource type="Texture2D" uid="uid://cxbc3dlddg4wb" path="res://Assets/Textures/CardStandSides2.png" id="14_0pcbe"]
 [ext_resource type="Texture2D" uid="uid://d0psqhdu6swe0" path="res://Assets/Textures/CardStandSides.png" id="15_axeuq"]
@@ -206,6 +205,9 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 69.738846, 1.5885293, 19.5276
 
 [node name="Granny" parent="." unique_id=96948668 instance=ExtResource("5_axeuq")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.879175, 1.6940651, -69.98772)
+
+[node name="Karen" parent="." unique_id=1890375671 instance=ExtResource("6_pt3ps")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -69.97608, 1.7008361, -19.924646)
 
 [node name="SceneTransition" parent="." unique_id=1118554034 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
@@ -1062,8 +1064,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.51
 [node name="Bench4" parent="Objects/Bench_Group" unique_id=229148973 instance=ExtResource("17_0pcbe")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5390787, 1.575, -0.10700989)
 
-[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051506042, -0.060329437, 0.0063209534)
 [node name="GameSlop" type="Node3D" parent="Objects" unique_id=971697469]
 transform = Transform3D(-2.1855695e-07, -5, 1.3113416e-07, 0, -2.1855695e-07, -3, 5, -2.1855695e-07, 5.7320566e-15, 99.9, 3.998455, 0.007)
 
@@ -1091,6 +1091,9 @@ transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.00
 [node name="christmasTree5" parent="Objects" unique_id=644753119 instance=ExtResource("20_yq1aw")]
 transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 47.893127, 6.7, 76.43338)
 
+[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051506042, -0.060329437, 0.0063209534)
+
 [node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.11260414, 1.6413479, 85.735374)
 visible = true
@@ -1100,10 +1103,6 @@ obstacle_size = Vector3(2, 2, 2)
 visibility_layer = 2
 position = Vector2(-253, 131)
 
-[node name="Grandma" parent="." unique_id=522717253 instance=ExtResource("13_c5t2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.774033, 1.163457, 76.34251)
+[node name="MAP2" parent="." unique_id=1950898991 instance=ExtResource("7_o06y3")]
 
 [connection signal="stopVelocity" from="Scalper" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]
-
-[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
-
