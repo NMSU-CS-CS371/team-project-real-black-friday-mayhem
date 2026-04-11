@@ -3,6 +3,12 @@
 [ext_resource type="Script" uid="uid://dcs7iuqhpasuk" path="res://Scripts/Shopping/Shopping2/shopping2.gd" id="1_pg7q6"]
 [ext_resource type="Texture2D" uid="uid://diif56b3hfcwv" path="res://Assets/Textures/shelf.jpg" id="2_qa6v8"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="3_yjfng"]
+[ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/Shopping/Shopping2/hand_spawner.tscn" id="5_pg7q6"]
+[ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/Shopping/Shopping2/item_spawner.tscn" id="6_03m0q"]
+[ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="6_yjfng"]
+
+[node name="MiniGame" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("wallet_label")]
+script = ExtResource("1_pg7q6")
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="6_yjfng"]
 
 [node name="MiniGame" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("wallet_label")]
