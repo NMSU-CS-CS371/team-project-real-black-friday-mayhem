@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bv65ar0grg57c"]
+
+[ext_resource type="PackedScene" uid="uid://dnuunjkly05fj" path="res://Scenes/Shopping/Shopping2/hand_spawner.tscn" id="1_b0l5u"]
+[ext_resource type="Script" uid="uid://c7o7hdwkv1tkq" path="res://Scripts/Shopping/Shopping3/3hand_spawner.gd" id="2_nlasc"]
+[ext_resource type="PackedScene" uid="uid://dkmngos0soy2f" path="res://Scenes/Shopping/Shopping3/3hand_enemy.tscn" id="3_yqqsh"]
+
+[node name="HandSpawner" unique_id=962083149 instance=ExtResource("1_b0l5u")]
+script = ExtResource("2_nlasc")
+hand_scene = ExtResource("3_yqqsh")

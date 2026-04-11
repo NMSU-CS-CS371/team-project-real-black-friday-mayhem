@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgyysf4jjsijr"]
 
-[ext_resource type="Script" uid="uid://dhpw73t6ebxtq" path="res://Scripts/Shopping2/item.gd" id="1_3x3c1"]
+[ext_resource type="Script" uid="uid://dhpw73t6ebxtq" path="res://Scripts/Shopping/Shopping2/item.gd" id="1_3x3c1"]
 [ext_resource type="Texture2D" uid="uid://dfsnd4hgikf6o" path="res://Assets/Sprites/jam.png" id="1_h4wly"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3x3c1"]

@@ -28,7 +28,7 @@ var cartTexture = preload("res://Assets/Textures/Cart.png")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	invContainer.visible = false
-	set_health($EnemyContatainer/EnemyHealth, enemy_health, enemy_max)
+	set_health($EnemyContatainer/Enemy/EnemyHealth, enemy_health, enemy_max)
 	set_health($PlayerContatainer/PlayerHealth, player_health, player_max)
 	$Background.hide()
 	$EnemyContatainer.hide()
@@ -109,7 +109,7 @@ func attack(text, damage, type) :
 	display_text(text)
 	await textbox_closed
 	enemy_health = max(0, enemy_health-damage)
-	set_health($EnemyContatainer/EnemyHealth, enemy_health, enemy_max)
+	set_health($EnemyContatainer/Enemy/EnemyHealth, enemy_health, enemy_max)
 	$EnemyContatainer/Enemy.texture = hurtTexture
 	$PlayerContatainer/PlayerHealth.hide()
 	match type :

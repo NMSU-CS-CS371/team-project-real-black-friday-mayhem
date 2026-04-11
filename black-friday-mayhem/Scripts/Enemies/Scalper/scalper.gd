@@ -8,7 +8,7 @@ var center : Vector3
 @export var enemy_type : Node3D
 var last_position = Vector3.ZERO
 @onready var sprite = $AnimatedSprite3D
-var Palcomon = preload("res://Scenes/Enemies/palcomon.tscn")
+var Palcomon = preload("res://Scenes/Enemies/Scalper/palcomon.tscn")
 var is_defeated = false
 var playing_game = false
 signal stopVelocity
@@ -83,7 +83,8 @@ func _on_hit_box_body_entered(_body: Node3D) -> void:
 	if (is_defeated || playing_game) :
 		return
 	playing_game = true
-	stopVelocity.emit()
+	#Tells the player to stop velocity
+	_body.stop_velocity.emit()
 	var battle = Palcomon.instantiate()
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))

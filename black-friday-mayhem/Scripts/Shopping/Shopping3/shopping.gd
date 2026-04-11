@@ -18,7 +18,7 @@ func _ready() -> void:
 	SceneTransition.get_parent().get_node("ColorRect").color.a = 255
 	SceneTransition.play("fade_out")
 	await get_tree().create_timer(0.5).timeout
-	
+	print("shopping 3")
 	# deactivate rectangle used for transition animation
 	# to avoid interfering with the minigame
 	$SceneTransition/ColorRect.visible = false
@@ -70,7 +70,7 @@ func unregister_item(item: Node2D) -> void:
 	items.erase(item)
 	
 # update label with wallet balance
-func update_wallet_label():
+func update_wallet_label(): 
 	if player.inventory.wallet < 0:
 		wallet_label.text = "-$" + str(abs(player.inventory.wallet))
 		wallet_label.add_theme_color_override("font_color", Color(1,0,0,1))

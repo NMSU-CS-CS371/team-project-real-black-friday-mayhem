@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d3kk3sqhaesx4"]
+
+[ext_resource type="PackedScene" uid="uid://b4s77m60yduj4" path="res://Scenes/Shopping/Shopping2/item_spawner.tscn" id="1_42cw0"]
+[ext_resource type="Script" uid="uid://cbpanveuwxufb" path="res://Scripts/Shopping/Shopping3/3item_spawner.gd" id="2_ff3sf"]
+[ext_resource type="PackedScene" uid="uid://cqyx6fe6rqm6o" path="res://Scenes/Shopping/Shopping3/3item.tscn" id="3_s3l3d"]
+
+[node name="ItemSpawner" unique_id=1422229041 instance=ExtResource("1_42cw0")]
+script = ExtResource("2_ff3sf")
+item_scene = ExtResource("3_s3l3d")
