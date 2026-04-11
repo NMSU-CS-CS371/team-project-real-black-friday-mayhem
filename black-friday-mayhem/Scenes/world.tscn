@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/scalper.tscn" id="6_5ukr8"]
-[ext_resource type="Shader" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
+[ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
 [ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="9_7yui6"]
@@ -18,6 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://d0psqhdu6swe0" path="res://Assets/Textures/CardStandSides.png" id="15_axeuq"]
 [ext_resource type="Texture2D" uid="uid://7x3erj8ce7vt" path="res://Assets/Textures/CardStandSign_Top.png" id="16_1cojt"]
 [ext_resource type="PackedScene" uid="uid://bpmoy7jgaerya" path="res://Assets/Prefabs/bench_1.tscn" id="17_0pcbe"]
+[ext_resource type="Texture2D" uid="uid://d2pc7ecmbgrlw" path="res://Assets/Textures/GameSlop.png" id="18_axeuq"]
+[ext_resource type="PackedScene" uid="uid://jmymhxi4ts87" path="res://Assets/Prefabs/escalator.tscn" id="19_1cojt"]
+[ext_resource type="PackedScene" uid="uid://cy06ifcejxu6r" path="res://Assets/Prefabs/christmasTree.tscn" id="20_yq1aw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dki2w"]
 shader = ExtResource("6_yky5r")
@@ -139,6 +142,13 @@ albedo_texture = ExtResource("16_1cojt")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3ua1v"]
 material = SubResource("StandardMaterial3D_1vso6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgpy0"]
+albedo_color = Color(0.68307734, 0.6830774, 0.68307734, 1)
+albedo_texture = ExtResource("18_axeuq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1cojt"]
+material = SubResource("StandardMaterial3D_hgpy0")
 
 [node name="Main" type="Node" unique_id=1035745174 node_paths=PackedStringArray("player")]
 script = ExtResource("1_fo5ed")
@@ -975,7 +985,32 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.51
 [node name="Bench4" parent="Objects/Bench_Group" unique_id=229148973 instance=ExtResource("17_0pcbe")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5390787, 1.575, -0.10700989)
 
-[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
+[node name="GameSlop" type="Node3D" parent="Objects" unique_id=971697469]
+transform = Transform3D(-2.1855695e-07, -5, 1.3113416e-07, 0, -2.1855695e-07, -3, 5, -2.1855695e-07, 5.7320566e-15, 99.9, 3.998455, 0.007)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/GameSlop" unique_id=1926596671]
+mesh = SubResource("PlaneMesh_1cojt")
+
+[node name="Escalator" parent="Objects" unique_id=451781271 instance=ExtResource("19_1cojt")]
+transform = Transform3D(-1.3113417e-08, 0, -0.4, 0, 0.5, 0, 0.3, 0, -1.7484556e-08, 36.0572, 11.263107, -81)
+
+[node name="Escalator2" parent="Objects" unique_id=1102980857 instance=ExtResource("19_1cojt")]
+transform = Transform3D(-1.3113417e-08, 0, 0.4, 0, 0.5, 0, -0.3, 0, -1.7484556e-08, -36.1267, 11.263107, -81)
+
+[node name="christmasTree" parent="Objects" unique_id=1996664844 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 8.957075, 6.7, -50.005836)
+
+[node name="christmasTree2" parent="Objects" unique_id=1406634268 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 25.621933, 6.7, -8.316719)
+
+[node name="christmasTree3" parent="Objects" unique_id=274144912 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, -24.382942, 6.7, 3.8036652)
+
+[node name="christmasTree4" parent="Objects" unique_id=1685207143 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, -48.359184, 6.7, 70.6208)
+
+[node name="christmasTree5" parent="Objects" unique_id=644753119 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 47.893127, 6.7, 76.43338)
 
 [node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.11260414, 1.6413479, 85.735374)
@@ -984,5 +1019,7 @@ obstacle_size = Vector3(2, 2, 2)
 
 [node name="SceneTransition" parent="DebugShop" unique_id=511102607 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
+
+[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
 
 [connection signal="stopVelocity" from="Scalper" to="Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]

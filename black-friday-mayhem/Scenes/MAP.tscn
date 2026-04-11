@@ -544,6 +544,31 @@ shape = SubResource("BoxShape3D_8j60k")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 23/StaticBody3D" unique_id=1428627159]
 mesh = SubResource("BoxMesh_fo5ed")
 
+[node name="Near_Wall_Outlines2" type="Node3D" parent="Ceiling" unique_id=2127568663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
+
+[node name="East" type="Node3D" parent="Ceiling/Near_Wall_Outlines2" unique_id=959708904]
+transform = Transform3D(110, 0, 0, 0, 1, 0, 0, 0, 200, 100, 25, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Near_Wall_Outlines2/East" unique_id=1665007192]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Near_Wall_Outlines2/East/StaticBody3D" unique_id=2050607330]
+shape = SubResource("BoxShape3D_go701")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines2/East/StaticBody3D" unique_id=1365540446]
+mesh = SubResource("BoxMesh_5a7ea")
+
+[node name="West" type="Node3D" parent="Ceiling/Near_Wall_Outlines2" unique_id=2034529201]
+transform = Transform3D(110, 0, 0, 0, 1, 0, 0, 0, 200, -100, 25, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Near_Wall_Outlines2/West" unique_id=1788171873]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Near_Wall_Outlines2/West/StaticBody3D" unique_id=217659717]
+shape = SubResource("BoxShape3D_go701")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines2/West/StaticBody3D" unique_id=883882757]
+mesh = SubResource("BoxMesh_5a7ea")
+
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=2024841804]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 24.858952, 0)
 light_color = Color(0.98039216, 1, 1, 1)

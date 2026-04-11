@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bdxynhhc17rh2"
+path="res://.godot/imported/Christmas Tree Color mm.obj-2bb6692ed1a30d60edcde31fa4d90fca.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Christmas Tree Color mm.obj-2bb6692ed1a30d60edcde31fa4d90fca.mesh"]
+
+source_file="res://Assets/Textures/Christmas Tree Color mm.obj"
+dest_files=["res://.godot/imported/Christmas Tree Color mm.obj-2bb6692ed1a30d60edcde31fa4d90fca.mesh", "res://.godot/imported/Christmas Tree Color mm.obj-2bb6692ed1a30d60edcde31fa4d90fca.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
