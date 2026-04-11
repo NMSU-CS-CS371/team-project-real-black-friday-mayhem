@@ -64,6 +64,7 @@ material = SubResource("StandardMaterial3D_go701")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=823356353]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 24.734062, 0)
+layers = 33
 light_color = Color(0.98039216, 1, 1, 1)
 light_indirect_energy = 16.0
 light_volumetric_fog_energy = 16.0

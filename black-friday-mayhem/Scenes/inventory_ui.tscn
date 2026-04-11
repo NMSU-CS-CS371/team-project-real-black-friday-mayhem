@@ -4,17 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://h4o8rmmu1igr" path="res://Assets/Inventory/inv_slot_ui.tscn" id="2_os1l6"]
 
 [node name="InventoryUI" type="Control" unique_id=1984823051]
-custom_minimum_size = Vector2(1046, 532)
+custom_minimum_size = Vector2(400, 300)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1045.0
-offset_bottom = 525.0
+offset_right = 803.0
+offset_bottom = 603.0
 script = ExtResource("1_8su62")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=239427124]
 layout_mode = 0
-offset_right = 1046.0
-offset_bottom = 532.0
+offset_right = 673.0
+offset_bottom = 554.0
 color = Color(0.5729883, 0.5729883, 0.5729883, 1)
 
 [node name="GridContainer" type="GridContainer" parent="ColorRect" unique_id=19856255]
@@ -24,13 +24,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -339.0
-offset_top = -254.0
-offset_right = 339.0
-offset_bottom = 254.0
+offset_left = -321.1667
+offset_top = -255.0
+offset_right = 519.8333
+offset_bottom = 417.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 6
+scale = Vector2(0.75, 0.75)
+columns = 5
 
 [node name="InvSlotUI" parent="ColorRect/GridContainer" unique_id=1581504290 instance=ExtResource("2_os1l6")]
 layout_mode = 2
@@ -84,4 +85,10 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="InvSlotUI18" parent="ColorRect/GridContainer" unique_id=1704103755 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI19" parent="ColorRect/GridContainer" unique_id=2121151129 instance=ExtResource("2_os1l6")]
+layout_mode = 2
+
+[node name="InvSlotUI20" parent="ColorRect/GridContainer" unique_id=1005601008 instance=ExtResource("2_os1l6")]
 layout_mode = 2
