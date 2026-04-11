@@ -95,6 +95,5 @@ func purchaseItem():
 		3:
 			item = load("res://Assets/Inventory/Items/toilet_paper.tres")
 	player.inventory.insert(item)
-	print()
 	get_parent().update_wallet_label()
 	queue_free()

@@ -21,3 +21,13 @@ func insert(item: InvItem):
 			emptySlots[0].item = item
 			emptySlots[0].amount = 1
 	update.emit()
+
+func reset():
+	for i in slots.size():
+		slots[i] = InvSlot.new()
+	wallet = 10000
+	moneySaved = 0
+	beatScalper = false
+	beatGrandma = false
+	beatKaren = false
+	update.emit()

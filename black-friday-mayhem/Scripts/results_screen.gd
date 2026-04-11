@@ -13,7 +13,12 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# update label text
-	moneyLeftLabel.text = "Money: $"+str(playerInventory.wallet)
+	if playerInventory.wallet < 0:
+		moneyLeftLabel.text = "Money: -$"+str(abs(playerInventory.wallet))
+		moneyLeftLabel.add_theme_color_override("font_color", Color(1,0,0,1))
+	else:
+		moneyLeftLabel.text = "Money: $"+str(playerInventory.wallet)
+		moneyLeftLabel.add_theme_color_override("font_color", Color(1,1,1,1))
 	moneySavedLabel.text = "Money SAVED: $"+str(playerInventory.moneySaved)
 	
 	# finish transitioning scene
@@ -45,12 +50,18 @@ func reveal_special_items():
 		$KarenExplosion.play("default")
 	
 func _on_play_pressed():
+	# reset inventory
+	playerInventory.reset()
+	
 	# begin scene transition
 	sceneTransition.play("fade_in")
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://Scenes/world.tscn")
 	
 func _on_menu_pressed():
+	# reset inventory
+	playerInventory.reset()
+	
 	# begin scene transition
 	sceneTransition.play("fade_in")
 	await get_tree().create_timer(0.5).timeout

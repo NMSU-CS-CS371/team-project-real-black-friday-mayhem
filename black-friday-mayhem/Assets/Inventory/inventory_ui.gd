@@ -11,6 +11,14 @@ func _ready():
 	close()
 
 func update_slots():
+	
+	if inventory.wallet < 0:
+		$WalletLabel.text = "-$"+str(abs(inventory.wallet))
+		$WalletLabel.add_theme_color_override("font_color", Color(1,0,0,1))
+	else:
+		$WalletLabel.text = "$"+str(inventory.wallet)
+		$WalletLabel.add_theme_color_override("font_color", Color(1,1,1,1))
+	
 	for i in range(min(inventory.slots.size(), slots.size())):
 		slots[i].update(inventory.slots[i])
 

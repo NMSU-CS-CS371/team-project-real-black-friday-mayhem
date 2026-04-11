@@ -15,17 +15,15 @@ extends Node3D
 		mesh = value
 		if is_node_ready():
 			_update_visuals()
-@export_enum("Static", "Dynamic", "Character") var mesh_type: String = "Static"
 
-# 2D Properties
-@export var sprite_texture: Texture2D:
+# Texture (albedo) for the entity - works in both 2D and 3D modes
+@export var texture: Texture2D:
 	set(value):
-		sprite_texture = value
+		texture = value
 		if is_node_ready():
 			_update_visuals()
 
 # General Properties
-@export var behavior_script: Script
 @export var entity_name: String = "Entity"
 
 # Interaction System

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://jmymhxi4ts87"]
+
+[ext_resource type="Script" uid="uid://c7ylb52nywdiy" path="res://Scripts/obstacle_base.gd" id="1_go0vm"]
+[ext_resource type="ArrayMesh" uid="uid://hurjyrj2056d" path="res://Assets/Textures/escalator.obj" id="2_fiqlr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fiqlr"]
+size = Vector3(12.908609, 42.476498, 88.221436)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldto8"]
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4dq5b"]
+size = Vector3(12.908609, 42.476498, 88.221436)
+
+[node name="Escalator" type="Node3D" unique_id=1452118021]
+script = ExtResource("1_go0vm")
+obstacle_size = Vector3(0.1, 0.1, 0.1)
+visual_mode = "3D Mesh"
+mesh = ExtResource("2_fiqlr")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1734889358]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=729517197]
+shape = SubResource("BoxShape3D_fiqlr")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4999996, 1.5469102, -28.239328)
+mesh = ExtResource("2_fiqlr")
+surface_material_override/0 = SubResource("StandardMaterial3D_ldto8")
+metadata/_edit_lock_ = true
+
+[node name="TriggerZone" type="Area3D" parent="." unique_id=17846116]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
+shape = SubResource("BoxShape3D_4dq5b")
+metadata/_edit_lock_ = true
