@@ -11,8 +11,10 @@ script = ExtResource("1_1ehe0")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1695224277]
 z_index = 1
-offset_right = 1151.0
-offset_bottom = 431.0
+offset_left = -96.0
+offset_top = -141.0
+offset_right = 904.0
+offset_bottom = 498.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer" unique_id=189513067]
 custom_minimum_size = Vector2(1000, 100)
@@ -48,10 +50,10 @@ color = Color(0.24314746, 0.0094534755, 0.08206705, 1)
 
 [node name="PlayButton" type="Button" parent="." unique_id=705940216]
 custom_minimum_size = Vector2(340, 100)
-offset_left = 405.0
-offset_top = 360.0
-offset_right = 745.0
-offset_bottom = 460.0
+offset_left = 221.0
+offset_top = 296.0
+offset_right = 561.0
+offset_bottom = 396.0
 theme = ExtResource("2_48xlc")
 theme_override_colors/font_pressed_color = Color(0.3807297, 0, 0.07526115, 1)
 theme_override_colors/font_hover_color = Color(0.626041, 0, 0.15000352, 1)
@@ -59,14 +61,17 @@ text = "Play"
 
 [node name="OptionsButton" type="Button" parent="." unique_id=1089269160]
 custom_minimum_size = Vector2(340, 100)
-offset_left = 405.0
-offset_top = 480.0
-offset_right = 745.0
-offset_bottom = 580.0
+offset_left = 221.0
+offset_top = 416.0
+offset_right = 561.0
+offset_bottom = 516.0
 theme = ExtResource("2_48xlc")
 theme_override_colors/font_pressed_color = Color(0.3807297, 0, 0.07526115, 1)
 theme_override_colors/font_hover_color = Color(0.626041, 0, 0.15000352, 1)
 text = "Options"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=671795321]
+offset = Vector2(400, 300)
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_pressed"]
