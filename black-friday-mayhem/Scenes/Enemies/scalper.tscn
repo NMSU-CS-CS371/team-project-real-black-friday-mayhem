@@ -155,7 +155,4 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010440946, 0.056928113, -0.00058466196)
 shape = SubResource("CapsuleShape3D_ngycw")
 
-[node name="RayCast3D" type="RayCast3D" parent="." index="2" unique_id=1625384673]
-target_position = Vector3(0, -10, 0)
-
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

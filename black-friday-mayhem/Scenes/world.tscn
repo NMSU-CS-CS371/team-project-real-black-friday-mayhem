@@ -4,8 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://ca777g5pbeirm" path="res://Scenes/Enemies/granny.tscn" id="5_axeuq"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/scalper.tscn" id="6_5ukr8"]
-[ext_resource type="Shader" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
+[ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
 [ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="9_7yui6"]
@@ -163,6 +164,9 @@ visibility_layer = 2
 
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 69.738846, 1.5885293, 19.527657)
+
+[node name="Granny" parent="." unique_id=96948668 instance=ExtResource("5_axeuq")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.879175, 1.6940651, -69.98772)
 
 [node name="SceneTransition" parent="." unique_id=1118554034 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
@@ -976,6 +980,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.51
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5390787, 1.575, -0.10700989)
 
 [node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051506042, -0.060329437, 0.0063209534)
 
 [node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.11260414, 1.6413479, 85.735374)
