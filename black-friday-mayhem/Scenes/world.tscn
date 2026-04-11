@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bxd2faxng1jjk" path="res://Assets/Textures/50.png" id="11_e0ngr"]
 [ext_resource type="PackedScene" uid="uid://httpo0j712de" path="res://Assets/Prefabs/npc.tscn" id="12_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://b2ps72j644hs3" path="res://Assets/Textures/blackfriday.png" id="12_kn0ld"]
-[ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="13_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://d2pc7ecmbgrlw" path="res://Assets/Textures/GameSlop.png" id="14_e0ngr"]
+[ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="14_kn0ld"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dki2w"]
 shader = ExtResource("6_yky5r")
@@ -757,12 +757,12 @@ obstacle_size = Vector3(2, 2, 2)
 [node name="SceneTransition" parent="DebugShop" unique_id=511102607 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
 
-[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("13_c5t2i")]
-
 [node name="GameSlop" type="Node3D" parent="." unique_id=1195344205]
-transform = Transform3D(-1.3113416e-07, -2, 8.742278e-08, 0, -8.742278e-08, -2, 3, -8.742278e-08, 3.821371e-15, 99, 3.1983163, 0.0071064234)
+transform = Transform3D(-1.3113416e-07, -2, 8.742278e-08, 0, -8.742278e-08, -2, 3, -8.742278e-08, 3.821371e-15, 99.9, 3.198, 0.007)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="GameSlop" unique_id=228530207]
 mesh = SubResource("PlaneMesh_t2t4p")
+
+[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("14_kn0ld")]
 
 [connection signal="stopVelocity" from="Scalper" to="Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]
