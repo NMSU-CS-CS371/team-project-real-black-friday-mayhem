@@ -2,9 +2,9 @@ extends Panel
 
 @onready var itemSprite: Sprite2D = $CenterContainer/Panel/ItemDisplay
 @onready var stack_text: Label = $CenterContainer/Panel/StackNum
-@onready var itemTag: Panel = $ItemTag
-@onready var itemName = $ItemTag/ItemName
-@onready var itemDesc = $ItemTag/ItemDesc
+#@onready var itemTag: Panel = $ItemTag
+var itemName = ""
+var itemDesc = ""
 var slotGlobal: InvSlot
 
 func _process(_delta: float):
@@ -18,7 +18,7 @@ func update(slot: InvSlot):
 	if not slot.item:
 		itemSprite.visible = false
 		stack_text.visible = false
-		itemTag.visible = false
+		#itemTag.visible = false
 	else:
 		itemSprite.visible = true
 		itemSprite.texture = slot.item.sprite
@@ -28,10 +28,14 @@ func update(slot: InvSlot):
 		stack_text.text = str(slot.amount)
 
 func _on_mouse_hover():
-	if slotGlobal.item:
-		itemName.text = slotGlobal.item.name
-		itemDesc.text = slotGlobal.item.itemDesc
-		itemTag.visible = true
+	if slotGlobal != null and slotGlobal.item != null:
+		itemName = slotGlobal.item.name
+		itemDesc = slotGlobal.item.itemDesc
+		
+		print(itemName)
+		print(itemDesc)
+		#itemTag.visible = true
 	
 func _on_mouse_leave():
-	itemTag.visible = false
+	#itemTag.visible = false
+	pass
