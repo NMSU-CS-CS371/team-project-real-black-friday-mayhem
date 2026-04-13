@@ -531,7 +531,7 @@ shape = SubResource("BoxShape3D_8j60k")
 mesh = SubResource("BoxMesh_fo5ed")
 
 [node name="Near_Wall_Outlines2" type="Node3D" parent="Ceiling" unique_id=2127568663]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12, 0)
 
 [node name="East" type="Node3D" parent="Ceiling/Near_Wall_Outlines2" unique_id=959708904]
 transform = Transform3D(110, 0, 0, 0, 1, 0, 0, 0, 200, 100, 25, 0)

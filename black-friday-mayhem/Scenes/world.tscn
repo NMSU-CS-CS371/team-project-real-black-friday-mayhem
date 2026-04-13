@@ -1071,10 +1071,12 @@ transform = Transform3D(-2.1855695e-07, -5, 1.3113416e-07, 0, -2.1855695e-07, -3
 mesh = SubResource("PlaneMesh_1cojt")
 
 [node name="Escalator" parent="Objects" unique_id=451781271 instance=ExtResource("19_1cojt")]
-transform = Transform3D(-1.3113417e-08, 0, -0.4, 0, 0.5, 0, 0.3, 0, -1.7484556e-08, 36.0572, 11.263107, -81)
+transform = Transform3D(-1.3113417e-08, 0, -0.4, 0, 0.5, 0, 0.3, 0, -1.7484556e-08, 32.505436, 9.401285, -81)
+obstacle_size = Vector3(0.1, 0.08, 0.1)
 
 [node name="Escalator2" parent="Objects" unique_id=1102980857 instance=ExtResource("19_1cojt")]
-transform = Transform3D(-1.3113417e-08, 0, 0.4, 0, 0.5, 0, -0.3, 0, -1.7484556e-08, -36.1267, 11.263107, -81)
+transform = Transform3D(-1.3113417e-08, 0, 0.4, 0, 0.5, 0, -0.3, 0, -1.7484556e-08, -32.5, 9.401, -81)
+obstacle_size = Vector3(0.1, 0.09, 0.1)
 
 [node name="christmasTree" parent="Objects" unique_id=1996664844 instance=ExtResource("20_yq1aw")]
 transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 8.957075, 6.7, -50.005836)
