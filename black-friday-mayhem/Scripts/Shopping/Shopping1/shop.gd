@@ -4,7 +4,7 @@ extends Node2D
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 @onready var walletLabel = $WalletLabel
 var itemsRemoved: int = 0
-var totalItems: int = 8
+var totalItems: int = 6
 signal shop_finished
 
 # called upon entering the scene
