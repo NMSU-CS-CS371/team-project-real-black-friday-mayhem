@@ -1,5 +1,146 @@
 [gd_scene format=3 uid="uid://bakriia4ytcfp"]
 
 [ext_resource type="PackedScene" uid="uid://cxhl6r63ugnvj" path="res://Scenes/Enemies/enemy.tscn" id="1_w6adf"]
+[ext_resource type="Texture2D" uid="uid://bjpf2n2mch4mp" path="res://Assets/Sprites/KarenSheet.png" id="2_b26ap"]
+[ext_resource type="Script" uid="uid://c5vc41qf8m83a" path="res://Scripts/Enemies/karen.gd" id="2_yl5dt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl5dt"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(24, 96, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8k55y"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(0, 96, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en533"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(48, 96, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06t5o"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(24, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5oyj"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tos17"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(48, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sel1x"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(24, 32, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcw47"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(0, 32, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckk2r"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(48, 32, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgbph"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(24, 64, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqmi4"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(48, 64, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjogu"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(0, 64, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg5up"]
+atlas = ExtResource("2_b26ap")
+region = Rect2(0, 128, 24, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cdurs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl5dt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8k55y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_en533")
+}],
+"loop": true,
+"name": &"Back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06t5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5oyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tos17")
+}],
+"loop": true,
+"name": &"Forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sel1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcw47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckk2r")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgbph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqmi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjogu")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mg5up")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b26ap"]
+radius = 0.07519531
+height = 0.29977417
 
 [node name="Karen" unique_id=1282377910 instance=ExtResource("1_w6adf")]
+script = ExtResource("2_yl5dt")
+
+[node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
+sprite_frames = SubResource("SpriteFrames_cdurs")
+animation = &"Back"
+frame_progress = 0.9990915
+
+[node name="HitBox" parent="." index="1" unique_id=1793053768]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" parent="HitBox" index="0" unique_id=413488198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.009719849, 0)
+shape = SubResource("CapsuleShape3D_b26ap")
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

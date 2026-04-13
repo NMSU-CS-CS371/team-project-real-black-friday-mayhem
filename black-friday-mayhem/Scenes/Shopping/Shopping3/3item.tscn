@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cqyx6fe6rqm6o"]
+
+[ext_resource type="Script" uid="uid://cd27oftw72o7r" path="res://Scripts/Shopping/Shopping3/3item.gd" id="1_qawa7"]
+[ext_resource type="Texture2D" uid="uid://dfsnd4hgikf6o" path="res://Assets/Sprites/jam.png" id="2_ar52s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3x3c1"]
+radius = 84.0
+height = 168.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oow75"]
+size = Vector2(156, 194.66666)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c8lpv"]
+radius = 46.68571
+
+[node name="Item" type="Node2D" unique_id=616066187]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_qawa7")
+move_speed = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1688037541]
+z_index = 10
+position = Vector2(0, 53.333344)
+texture = ExtResource("2_ar52s")
+offset = Vector2(0, -60)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1242272409]
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShapeCap" type="CollisionShape2D" parent="Area2D" unique_id=672852353]
+shape = SubResource("CapsuleShape2D_3x3c1")
+metadata/_edit_group_ = true
+
+[node name="CollisionShapeRect" type="CollisionShape2D" parent="Area2D" unique_id=1240497881]
+position = Vector2(-2, -4.000003)
+shape = SubResource("RectangleShape2D_oow75")
+disabled = true
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1948567327]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1402840628]
+shape = SubResource("CircleShape2D_c8lpv")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

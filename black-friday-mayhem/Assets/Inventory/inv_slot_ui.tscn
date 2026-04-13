@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://h4o8rmmu1igr"]
 
 [ext_resource type="Script" uid="uid://d1ul81vlwmv2s" path="res://Assets/Inventory/inv_slot_ui.gd" id="1_j3wrx"]
-[ext_resource type="PackedScene" uid="uid://b6mdegirme8vj" path="res://Assets/Inventory/item_desc.tscn" id="2_1wr17"]
 
 [node name="InvSlotUI" type="Panel" unique_id=1581504290]
 self_modulate = Color(1, 1, 1, 0)
@@ -52,15 +51,6 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 36
 text = "99"
 horizontal_alignment = 2
-
-[node name="ItemTag" parent="." unique_id=1053140089 instance=ExtResource("2_1wr17")]
-visible = false
-z_index = 2
-layout_mode = 0
-offset_left = 157.0
-offset_top = 15.0
-offset_right = 483.0
-offset_bottom = 138.0
 
 [connection signal="mouse_entered" from="ColorRect" to="." method="_on_mouse_hover"]
 [connection signal="mouse_exited" from="ColorRect" to="." method="_on_mouse_leave"]

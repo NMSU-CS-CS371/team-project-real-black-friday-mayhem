@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://nv1pbgpty4wu"]
+
+[ext_resource type="Texture2D" uid="uid://bwtnhrthp7rpo" path="res://Assets/Sprites/grandma/idle.png" id="1_2fmcf"]
+[ext_resource type="Texture2D" uid="uid://cxa2e6o2aahp4" path="res://Assets/Sprites/grandma/1000_F_656624199_Xqh1sXeNeoBsnUd4rkdDqSqpHmVAfsra.jpg" id="1_to6mo"]
+[ext_resource type="Texture2D" uid="uid://c7x76id3kqi2b" path="res://Assets/Sprites/grandma/hit.png" id="2_7fpuf"]
+[ext_resource type="Texture2D" uid="uid://dfr667nadc33l" path="res://Assets/Sprites/grandma/NES - Punch-Out!! - Playable Characters - Little Mac, Doc Louis, and Referee Mario.png" id="4_j1bio"]
+[ext_resource type="Script" uid="uid://23wvgv87iopd" path="res://Scripts/Enemies/Granny/grandmaEnemy.gd" id="4_to6mo"]
+[ext_resource type="Script" uid="uid://cvbqfa53jus6n" path="res://Scripts/Enemies/Granny/puncher.gd" id="5_a2sxw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fpuf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2fmcf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7fpuf")
+}],
+"loop": true,
+"name": &"punch",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_7fpuf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Grandma:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_xiukh"]
+resource_name = "punch_start"
+length = 1.4333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Grandma:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 1.4333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"idle", &"punch", &"idle"]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Grandma")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.96666664),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"apply_force"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j1bio"]
+_data = {
+&"RESET": SubResource("Animation_7fpuf"),
+&"punch_start": SubResource("Animation_xiukh")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a2sxw"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_j1bio")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Punchies" type="Node2D" unique_id=338738516]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1128320971]
+position = Vector2(426.00003, 304.00003)
+scale = Vector2(1.0892857, 1.0892857)
+texture = ExtResource("1_to6mo")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1571623667]
+offset = Vector2(400, 300)
+
+[node name="Grandma" type="AnimatedSprite2D" parent="." unique_id=1676948817 node_paths=PackedStringArray("player")]
+position = Vector2(414.75003, 298.13635)
+scale = Vector2(3.3136365, 3.3136363)
+sprite_frames = SubResource("SpriteFrames_7fpuf")
+animation = &"idle"
+script = ExtResource("4_to6mo")
+player = NodePath("../Player")
+
+[node name="Timer" type="Timer" parent="Grandma" unique_id=1836330250]
+wait_time = 2.0
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=270051611]
+libraries/ = SubResource("AnimationLibrary_j1bio")
+
+[node name="Player" type="AnimatedSprite2D" parent="." unique_id=1299361853 node_paths=PackedStringArray("Grandma")]
+position = Vector2(416, 530)
+scale = Vector2(4.909483, 4.909484)
+sprite_frames = SubResource("SpriteFrames_a2sxw")
+animation = &"idle"
+script = ExtResource("5_a2sxw")
+Grandma = NodePath("../Grandma")
+MAX_HEALTH = 100.0
+
+[connection signal="timeout" from="Grandma/Timer" to="Grandma" method="_on_timer_timeout"]
