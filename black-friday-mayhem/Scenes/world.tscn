@@ -1091,9 +1091,6 @@ transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.00
 [node name="christmasTree5" parent="Objects" unique_id=644753119 instance=ExtResource("20_yq1aw")]
 transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 47.893127, 6.7, 76.43338)
 
-[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051506042, -0.060329437, 0.0063209534)
-
 [node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.11260414, 1.6413479, 85.735374)
 visible = true
@@ -1103,6 +1100,6 @@ obstacle_size = Vector3(2, 2, 2)
 visibility_layer = 2
 position = Vector2(-253, 131)
 
-[node name="MAP2" parent="." unique_id=1950898991 instance=ExtResource("7_o06y3")]
+[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
 
 [connection signal="stopVelocity" from="Scalper" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]
