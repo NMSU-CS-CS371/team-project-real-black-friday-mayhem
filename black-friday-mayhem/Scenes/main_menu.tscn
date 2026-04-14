@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://2aw4in7b0r0d" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="1_28flt"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="2_48xlc"]
+[ext_resource type="PackedScene" uid="uid://ccyc5rcpydalj" path="res://Scenes/options_panel.tscn" id="4_ce3w2"]
 
 [node name="MainMenu" type="Node2D" unique_id=527269286]
 script = ExtResource("1_1ehe0")
@@ -73,5 +74,13 @@ text = "Options"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=671795321]
 offset = Vector2(400, 300)
 
+[node name="OptionsPanel" parent="." unique_id=1421833873 instance=ExtResource("4_ce3w2")]
+z_index = 100
+offset_left = 122.0
+offset_top = 72.0
+offset_right = 122.0
+offset_bottom = 72.0
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_pressed"]
+[connection signal="settings_updated" from="OptionsPanel" to="." method="apply_settings"]
