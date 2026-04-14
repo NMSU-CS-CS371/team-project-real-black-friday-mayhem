@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfr667nadc33l"
-path="res://.godot/imported/NES - Punch-Out!! - Playable Characters - Little Mac, Doc Louis, and Referee Mario.png-6975776a33ecc4191b6ea9ece269c953.ctex"
+uid="uid://c2j8n1hv4qg7h"
+path="res://.godot/imported/little_mac.png-67b6343b18dcbc3effead36e032225dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/grandma/NES - Punch-Out!! - Playable Characters - Little Mac, Doc Louis, and Referee Mario.png"
-dest_files=["res://.godot/imported/NES - Punch-Out!! - Playable Characters - Little Mac, Doc Louis, and Referee Mario.png-6975776a33ecc4191b6ea9ece269c953.ctex"]
+source_file="res://Assets/Sprites/grandma/little_mac.png"
+dest_files=["res://.godot/imported/little_mac.png-67b6343b18dcbc3effead36e032225dc.ctex"]
 
 [params]
 
