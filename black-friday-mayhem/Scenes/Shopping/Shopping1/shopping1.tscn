@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bn4fjk21yr3xd" path="res://Assets/Prefabs/shop_item.tscn" id="3_qcloi"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_tamj1"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="5_es823"]
+[ext_resource type="AudioStream" uid="uid://c13gy764mopl6" path="res://Assets/SFX/Show Your Moves - Shop.mp3" id="6_bygdm"]
 
 [node name="Shop" type="Node2D" unique_id=1138335139]
 visibility_layer = 2
@@ -61,6 +62,11 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 80
 text = "$999999"
 horizontal_alignment = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1241811133]
+stream = ExtResource("6_bygdm")
+autoplay = true
+parameters/looping = false
 
 [connection signal="item_exiting_tree" from="ShopItem1" to="." method="_on_item_exiting"]
 [connection signal="item_exiting_tree" from="ShopItem2" to="." method="_on_item_exiting"]

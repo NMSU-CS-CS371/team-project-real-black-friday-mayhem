@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="9_7yui6"]
 [ext_resource type="Texture2D" uid="uid://dqrhp0gp8krmf" path="res://Assets/Textures/BigSign.png" id="10_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://bxd2faxng1jjk" path="res://Assets/Textures/50.png" id="11_e0ngr"]
-[ext_resource type="PackedScene" uid="uid://httpo0j712de" path="res://Scenes/npc.tscn" id="12_c5t2i"]
+[ext_resource type="PackedScene" uid="uid://httpo0j712de" path="res://Assets/Prefabs/npc.tscn" id="12_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://b2ps72j644hs3" path="res://Assets/Textures/blackfriday.png" id="12_kn0ld"]
 [ext_resource type="Texture2D" uid="uid://mpltxjryajvu" path="res://Assets/Textures/CardStand_Front.png" id="13_t2t4p"]
 [ext_resource type="Texture2D" uid="uid://cxbc3dlddg4wb" path="res://Assets/Textures/CardStandSides2.png" id="14_0pcbe"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://d2pc7ecmbgrlw" path="res://Assets/Textures/GameSlop.png" id="18_axeuq"]
 [ext_resource type="PackedScene" uid="uid://jmymhxi4ts87" path="res://Assets/Prefabs/escalator.tscn" id="19_1cojt"]
 [ext_resource type="PackedScene" uid="uid://cy06ifcejxu6r" path="res://Assets/Prefabs/christmasTree.tscn" id="20_yq1aw"]
+[ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="25_i4fjy"]
 
 [sub_resource type="Environment" id="Environment_c5t2i"]
 background_mode = 1
@@ -1069,7 +1070,7 @@ obstacle_size = Vector3(0.1, 0.08, 0.1)
 
 [node name="Escalator2" parent="Objects" unique_id=1102980857 instance=ExtResource("19_1cojt")]
 transform = Transform3D(-1.3113417e-08, 0, 0.4, 0, 0.5, 0, -0.3, 0, -1.7484556e-08, -32.5, 9.401, -81)
-obstacle_size = Vector3(0.1, 0.09, 0.1)
+script = null
 
 [node name="christmasTree" parent="Objects" unique_id=1996664844 instance=ExtResource("20_yq1aw")]
 transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 8.957075, 6.7, -50.005836)
@@ -1087,8 +1088,7 @@ transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.00
 transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 47.893127, 6.7, 76.43338)
 
 [node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
-transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.11260414, 1.6413479, 85.735374)
-visible = true
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.11260414, 10.112631, 85.735374)
 obstacle_size = Vector3(2, 2, 2)
 
-[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
+[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("25_i4fjy")]
