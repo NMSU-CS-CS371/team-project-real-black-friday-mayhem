@@ -9,6 +9,7 @@ var center : Vector3
 @export var game : Node3D
 var last_position = Vector3.ZERO
 @onready var sprite = $AnimatedSprite3D
+@onready var player = get_tree().root.get_child(1).player
 var is_defeated = false
 var playing_game = false
 var punchies = preload("res://Scenes/Enemies/Grandma/punchies.tscn")
@@ -48,6 +49,14 @@ func _physics_process(_delta: float) -> void:
 	if $RayCast3D.is_colliding():
 		var floor_height = $RayCast3D.get_collision_point().y
 		global_position.y = floor_height
+		#jolena, we don't need this... :face_palm:
+		#(if you place them from the folder to the floor, it will just snap in general...)
+		
+		#what if it does not?
+		#(i.e. too small a raycast to hit the floor or the floor is above the enemy
+		#plus! It uses too many resources!!
+		# I would get it if we only did this once, but it's every frame! We only need to check twice!!
+		#(unless we're making [WAFFLES] stairs, then I could definitely see the use...)
 
 func play_if_not(anim, flip):
 	if sprite.animation != anim:
@@ -98,8 +107,9 @@ func update_animation() :
 			
 
 func _on_hit_box_body_entered(body: Node3D) -> void:
-	if hit >= 2:
+	if hit >= 2 && !player.playing_game:
 		print("oh heck no")
+		player.playing_game = true
 		body.stop_velocity.emit()
 		var killer_instinct = punchies.instantiate()
 		add_child(killer_instinct)
@@ -115,4 +125,7 @@ func when_hit(_num) :
 	#and a text box of the grandma and you to be locked in
 	#until you tap/press a button
 	#wont increase granny hit until text box is closed
+	
+	#TO DO:
+	#write comment that make sense pls ^ 
 		

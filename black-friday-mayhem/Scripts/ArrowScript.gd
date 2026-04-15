@@ -1,10 +1,13 @@
 extends MeshInstance3D
 
-@export var location : Vector3
+var focus : Node3D
 
 func _process(_delta: float) -> void:
+	if focus != null:
+		look_at(focus.position)
+	else:
+		look_at(Vector3.ZERO)
 	# I kept getting lost
-	look_at(location)
 	rotation.x = 0
 	rotation.z = 0
 	

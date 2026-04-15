@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c2j8n1hv4qg7h" path="res://Assets/Sprites/grandma/little_mac.png" id="4_j1bio"]
 [ext_resource type="Script" uid="uid://23wvgv87iopd" path="res://Scripts/Enemies/Granny/grandmaEnemy.gd" id="4_to6mo"]
 [ext_resource type="Script" uid="uid://cvbqfa53jus6n" path="res://Scripts/Enemies/Granny/puncher.gd" id="5_a2sxw"]
+[ext_resource type="FontFile" uid="uid://dpewd1wcpt3hq" path="res://Assets/Fonts/Wacky Pixels.ttf" id="7_j5x1a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7fpuf"]
 animations = [{
@@ -40,6 +41,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [&"idle"]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Grandma:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(414.75003, 298.13635)]
+}
 
 [sub_resource type="Animation" id="Animation_xiukh"]
 resource_name = "punch_start"
@@ -70,6 +83,18 @@ tracks/1/keys = {
 "method": &"apply_force"
 }]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Grandma:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(414.75003, 298.13635), Vector2(414.75, 187.256), Vector2(414.75003, 298.13635)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j1bio"]
 _data = {
@@ -93,6 +118,185 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_to6mo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(416, 530)]
+}
+
+[sub_resource type="Animation" id="Animation_j5x1a"]
+resource_name = "dodge left"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(416, 530), Vector2(150, 530), Vector2(416, 530)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.23333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [true],
+"method": &"setIsDodging"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_gwv23"]
+resource_name = "dodge right"
+length = 0.76666665
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.36666667, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(416, 530), Vector2(720, 530), Vector2(416, 530)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333334, 0.73333335),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true],
+"method": &"setIsDodging"
+}, {
+"args": [false],
+"method": &"setIsDodging"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_0puyn"]
+resource_name = "punch mid"
+length = 0.53333336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.43),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(416, 530), Vector2(416, 448.2), Vector2(416, 530)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.23333335),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0],
+"method": &"hit"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_e2wbm"]
+resource_name = "punch up"
+length = 0.8333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.43333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(416, 530), Vector2(416, 320.385), Vector2(416, 530)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.23333332),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0],
+"method": &"hit"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gwv23"]
+_data = {
+&"RESET": SubResource("Animation_to6mo"),
+&"dodge left": SubResource("Animation_j5x1a"),
+&"dodge right": SubResource("Animation_gwv23"),
+&"punch mid": SubResource("Animation_0puyn"),
+&"punch up": SubResource("Animation_e2wbm")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwv23"]
+bg_color = Color(0.8131761, 0.23192453, 0.22399783, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2wbm"]
+bg_color = Color(0, 0.69881165, 0.5914159, 1)
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5x1a"]
+bg_color = Color(0.8131761, 0.23192453, 0.22399783, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0puyn"]
+bg_color = Color(0, 0.69881165, 0.5914159, 1)
+border_color = Color(0, 0, 0, 1)
+
 [node name="Punchies" type="Node2D" unique_id=338738516]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1128320971]
@@ -103,28 +307,98 @@ texture = ExtResource("1_to6mo")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1571623667]
 offset = Vector2(400, 300)
 
-[node name="Grandma" type="AnimatedSprite2D" parent="." unique_id=1676948817 node_paths=PackedStringArray("player")]
+[node name="Grandma" type="AnimatedSprite2D" parent="." unique_id=1676948817 node_paths=PackedStringArray("ROOT", "player", "animationPlayer", "healthBar", "healthText")]
 position = Vector2(414.75003, 298.13635)
 scale = Vector2(3.3136365, 3.3136363)
 sprite_frames = SubResource("SpriteFrames_7fpuf")
 animation = &"idle"
 script = ExtResource("4_to6mo")
+ROOT = NodePath("..")
 player = NodePath("../Player")
+MAX_HEALTH = 200
+animationPlayer = NodePath("AnimationPlayer")
+healthBar = NodePath("../EnemyHealth")
+healthText = NodePath("../EnemyHealth/Health")
 
 [node name="Timer" type="Timer" parent="Grandma" unique_id=1836330250]
 wait_time = 2.0
 autostart = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=270051611]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Grandma" unique_id=270051611]
+root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_j1bio")
 
-[node name="Player" type="AnimatedSprite2D" parent="." unique_id=1299361853 node_paths=PackedStringArray("Grandma")]
+[node name="Player" type="AnimatedSprite2D" parent="." unique_id=1299361853 node_paths=PackedStringArray("ROOT", "Grandma", "animationPlayer", "healthBar", "healthText")]
 position = Vector2(416, 530)
 scale = Vector2(4.909483, 4.909484)
 sprite_frames = SubResource("SpriteFrames_a2sxw")
 animation = &"idle"
 script = ExtResource("5_a2sxw")
+ROOT = NodePath("..")
 Grandma = NodePath("../Grandma")
 MAX_HEALTH = 100.0
+animationPlayer = NodePath("AnimationPlayer")
+healthBar = NodePath("../PlayerHealth")
+healthText = NodePath("../PlayerHealth/Health")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player" unique_id=628803585]
+libraries/ = SubResource("AnimationLibrary_gwv23")
+
+[node name="EnemyHealth" type="ProgressBar" parent="." unique_id=1197981983]
+custom_minimum_size = Vector2(0, 30)
+offset_left = 525.0
+offset_top = 38.0
+offset_right = 929.0
+offset_bottom = 68.0
+size_flags_vertical = 1
+theme_override_constants/outline_size = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_gwv23")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e2wbm")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Health" type="Label" parent="EnemyHealth" unique_id=913207618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_j5x1a")
+theme_override_font_sizes/font_size = 46
+text = "HP: 25/50"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="PlayerHealth" type="ProgressBar" parent="." unique_id=956155134]
+custom_minimum_size = Vector2(0, 30)
+offset_top = 88.0
+offset_right = 344.0
+offset_bottom = 118.0
+size_flags_vertical = 1
+theme_override_constants/outline_size = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_j5x1a")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0puyn")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Health" type="Label" parent="PlayerHealth" unique_id=1359805552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_j5x1a")
+theme_override_font_sizes/font_size = 46
+text = "HP: 25/50"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="Grandma/Timer" to="Grandma" method="_on_timer_timeout"]
+[connection signal="knockedOut" from="Player" to="Grandma" method="stopDisrespectingMyGangsYo"]
+[connection signal="recovered" from="Player" to="Grandma" method="decimation"]

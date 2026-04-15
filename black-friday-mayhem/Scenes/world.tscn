@@ -1093,5 +1093,3 @@ visible = true
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
-
-[connection signal="stopVelocity" from="Scalper" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]
