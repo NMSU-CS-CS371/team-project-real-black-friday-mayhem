@@ -2,7 +2,8 @@
 extends CharacterBody3D
 
 signal stop_velocity
-
+@export var useArrow : bool
+@export var objectTracking : Node3D
 @onready var sprite = $AnimatedSprite3D
 @export var acceleration : float = 500.0
 @export var maxSpeed : float = 600.0
@@ -11,7 +12,6 @@ signal stop_velocity
 @export var breakingSpeed : float = 120.0
 @export var maxRotationSpeed : float = 4.0
 @export var traction : float = 0.5
-@export var useArrow : bool
 @export var debug : bool
 @export var inventory : Inventory
 var speed : float
@@ -23,10 +23,15 @@ var controlAllowed = true
 var isMoving = false
 var rotationChange = 0
 
+#the player should be keeping track if they're playing a game, no?
+#type -> minigame
+var playing_game : bool = false
 
 func _ready() -> void:
 	if !useArrow:
 		$Shape2.visible = false
+	else:
+		$Shape2.focus = objectTracking
 	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
@@ -164,6 +169,9 @@ func _input(event: InputEvent) -> void:
 func collect(item: InvItem):
 	inventory.insert(item)
 
+#This function is really just used to set the player 
+# in such a way that the player stops moving
+#but to undo this, just set controlAllowed to true
 func _on_stop_velocity() -> void:
 	velocity = Vector3.ZERO
 	controlAllowed = false
