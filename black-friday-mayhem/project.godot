@@ -19,6 +19,13 @@ config/icon="res://Assets/Sprites/icon.svg"
 
 TerrainRebuildCoordinator="*uid://brautlco0ivx3"
 
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=600
+window/stretch/mode="canvas_items"
+window/depth_of_field/depth_of_field_use_jitter=false
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/terrainy/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
@@ -51,7 +58,8 @@ Right={
 }
 click={
 "deadzone": 0.2,
-"events": []
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(552, 22),"global_position":Vector2(571, 118),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
 }
 e={
 "deadzone": 0.2,

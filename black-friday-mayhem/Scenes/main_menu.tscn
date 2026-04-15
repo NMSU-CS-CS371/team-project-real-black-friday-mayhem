@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://2aw4in7b0r0d" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="1_28flt"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="2_48xlc"]
+[ext_resource type="PackedScene" uid="uid://ccyc5rcpydalj" path="res://Scenes/options_panel.tscn" id="4_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://dby1utd2o8642" path="res://Assets/Sprites/Hands.png" id="4_n45e2"]
 
 [node name="MainMenu" type="Node2D" unique_id=527269286]
 script = ExtResource("1_1ehe0")
@@ -11,8 +13,10 @@ script = ExtResource("1_1ehe0")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1695224277]
 z_index = 1
-offset_right = 1151.0
-offset_bottom = 431.0
+offset_left = -96.0
+offset_top = -141.0
+offset_right = 904.0
+offset_bottom = 498.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer" unique_id=189513067]
 custom_minimum_size = Vector2(1000, 100)
@@ -40,33 +44,57 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -3.0
 offset_top = -3.0
-offset_right = 1153.0
-offset_bottom = 648.0
+offset_right = 800.0
+offset_bottom = 600.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.24314746, 0.0094534755, 0.08206705, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="PlayButton" type="Button" parent="." unique_id=705940216]
-custom_minimum_size = Vector2(340, 100)
-offset_left = 405.0
-offset_top = 360.0
-offset_right = 745.0
-offset_bottom = 460.0
+custom_minimum_size = Vector2(340, 50)
+offset_left = 221.0
+offset_top = 365.0
+offset_right = 561.0
+offset_bottom = 415.0
 theme = ExtResource("2_48xlc")
+theme_override_colors/font_color = Color(0.71875, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.3807297, 0, 0.07526115, 1)
 theme_override_colors/font_hover_color = Color(0.626041, 0, 0.15000352, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_icons/icon = ExtResource("4_n45e2")
 text = "Play"
+flat = true
+alignment = 2
 
 [node name="OptionsButton" type="Button" parent="." unique_id=1089269160]
-custom_minimum_size = Vector2(340, 100)
-offset_left = 405.0
-offset_top = 480.0
-offset_right = 745.0
-offset_bottom = 580.0
+custom_minimum_size = Vector2(340, 50)
+offset_left = 221.0
+offset_top = 416.0
+offset_right = 561.0
+offset_bottom = 466.0
 theme = ExtResource("2_48xlc")
+theme_override_colors/font_color = Color(0.7176471, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.3807297, 0, 0.07526115, 1)
 theme_override_colors/font_hover_color = Color(0.626041, 0, 0.15000352, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_icons/icon = ExtResource("4_n45e2")
 text = "Options"
+flat = true
+alignment = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=671795321]
+offset = Vector2(400, 300)
+
+[node name="OptionsPanel" parent="." unique_id=1421833873 instance=ExtResource("4_ce3w2")]
+visible = false
+z_index = 100
+offset_left = 122.0
+offset_top = 72.0
+offset_right = 122.0
+offset_bottom = 72.0
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_pressed"]
+[connection signal="settings_updated" from="OptionsPanel" to="." method="apply_settings"]

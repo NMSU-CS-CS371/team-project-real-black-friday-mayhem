@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b4s77m60yduj4"]
+
+[ext_resource type="Script" uid="uid://cax6wmksk1nlw" path="res://Scripts/Shopping/Shopping2/item_spawner.gd" id="1_nioyj"]
+[ext_resource type="PackedScene" uid="uid://dgyysf4jjsijr" path="res://Scenes/Shopping/Shopping2/item.tscn" id="2_udjn0"]
+
+[node name="ItemSpawner" type="Node2D" unique_id=1422229041]
+script = ExtResource("1_nioyj")
+item_scene = ExtResource("2_udjn0")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=74259718]
+wait_time = 2.0

@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://d1qpb7wtc0m2f"]
+
+[ext_resource type="PackedScene" uid="uid://cxhl6r63ugnvj" path="res://Scenes/Enemies/enemy.tscn" id="1_qdkv4"]
+[ext_resource type="Texture2D" uid="uid://cgkwgtm7c3opw" path="res://Assets/Sprites/Scalper.png" id="2_ngycw"]
+[ext_resource type="Script" uid="uid://b68idph0nfn38" path="res://Scripts/Enemies/Scalper/scalper.gd" id="2_pyl3l"]
+[ext_resource type="Texture2D" uid="uid://bddnlsbpadotb" path="res://Assets/Sprites/DefeatedScalperDead.png" id="4_p110t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngycw"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(0, 31, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyl3l"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(22, 31, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlbnd"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(44, 31, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p110t"]
+atlas = ExtResource("4_p110t")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71cqx"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(0, 0, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn1lf"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(44, 0, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkbos"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(22, 0, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gx88"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(0, 62, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcfoi"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(22, 62, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knri4"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(44, 62, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbiv5"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(0, 93, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4b36"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(22, 93, 22, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydwjm"]
+atlas = ExtResource("2_ngycw")
+region = Rect2(44, 93, 22, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tkbos"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngycw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyl3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngycw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlbnd")
+}],
+"loop": true,
+"name": &"backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p110t")
+}],
+"loop": true,
+"name": &"defeated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71cqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn1lf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71cqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkbos")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gx88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcfoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gx88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knri4")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbiv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4b36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbiv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydwjm")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ngycw"]
+radius = 0.08300781
+height = 0.34926796
+
+[node name="Scalper" unique_id=1282377910 instance=ExtResource("1_qdkv4")]
+script = ExtResource("2_pyl3l")
+
+[node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
+offset = Vector2(0, 15)
+sprite_frames = SubResource("SpriteFrames_tkbos")
+animation = &"forward"
+
+[node name="HitBox" parent="." index="1" unique_id=1793053768]
+collision_mask = 2
+
+[node name="CollisionShape3D" parent="HitBox" index="0" unique_id=413488198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010440946, 0.056928113, -0.00058466196)
+shape = SubResource("CapsuleShape3D_ngycw")
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

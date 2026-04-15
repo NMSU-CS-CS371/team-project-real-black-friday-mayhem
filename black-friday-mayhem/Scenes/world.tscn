@@ -4,20 +4,55 @@
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
-[ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/scalper.tscn" id="6_5ukr8"]
+[ext_resource type="PackedScene" uid="uid://ca777g5pbeirm" path="res://Scenes/Enemies/Grandma/granny.tscn" id="5_axeuq"]
+[ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/Scalper/scalper.tscn" id="6_5ukr8"]
+[ext_resource type="Script" uid="uid://03rqiqf5wyxb" path="res://Scripts/mask_camera.gd" id="6_e0ngr"]
+[ext_resource type="Texture2D" uid="uid://c0tpkpp1eg1ah" path="res://Assets/Textures/Sky_Clouds_Photo_Texture_A_P4171314.jpg" id="6_kn0ld"]
+[ext_resource type="PackedScene" uid="uid://bakriia4ytcfp" path="res://Scenes/Enemies/karen.tscn" id="6_pt3ps"]
 [ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
 [ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="9_7yui6"]
 [ext_resource type="Texture2D" uid="uid://dqrhp0gp8krmf" path="res://Assets/Textures/BigSign.png" id="10_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://bxd2faxng1jjk" path="res://Assets/Textures/50.png" id="11_e0ngr"]
-[ext_resource type="PackedScene" uid="uid://httpo0j712de" path="res://Assets/Prefabs/npc.tscn" id="12_c5t2i"]
+[ext_resource type="PackedScene" uid="uid://httpo0j712de" path="res://Scenes/npc.tscn" id="12_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://b2ps72j644hs3" path="res://Assets/Textures/blackfriday.png" id="12_kn0ld"]
-[ext_resource type="Texture2D" uid="uid://d2pc7ecmbgrlw" path="res://Assets/Textures/GameSlop.png" id="14_e0ngr"]
-[ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="14_kn0ld"]
+[ext_resource type="Texture2D" uid="uid://mpltxjryajvu" path="res://Assets/Textures/CardStand_Front.png" id="13_t2t4p"]
+[ext_resource type="Texture2D" uid="uid://cxbc3dlddg4wb" path="res://Assets/Textures/CardStandSides2.png" id="14_0pcbe"]
+[ext_resource type="Texture2D" uid="uid://d0psqhdu6swe0" path="res://Assets/Textures/CardStandSides.png" id="15_axeuq"]
+[ext_resource type="Texture2D" uid="uid://7x3erj8ce7vt" path="res://Assets/Textures/CardStandSign_Top.png" id="16_1cojt"]
+[ext_resource type="PackedScene" uid="uid://bpmoy7jgaerya" path="res://Assets/Prefabs/bench_1.tscn" id="17_0pcbe"]
+[ext_resource type="Texture2D" uid="uid://d2pc7ecmbgrlw" path="res://Assets/Textures/GameSlop.png" id="18_axeuq"]
+[ext_resource type="PackedScene" uid="uid://jmymhxi4ts87" path="res://Assets/Prefabs/escalator.tscn" id="19_1cojt"]
+[ext_resource type="PackedScene" uid="uid://cy06ifcejxu6r" path="res://Assets/Prefabs/christmasTree.tscn" id="20_yq1aw"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dki2w"]
+[sub_resource type="Environment" id="Environment_c5t2i"]
+background_mode = 1
+background_color = Color(0, 0, 0, 0)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hgpy0"]
+panorama = ExtResource("6_kn0ld")
+energy_multiplier = 1.63
+
+[sub_resource type="Sky" id="Sky_x3wgy"]
+sky_material = SubResource("PanoramaSkyMaterial_hgpy0")
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_t2t4p"]
+background_mode = 2
+background_energy_multiplier = 0.52
+sky = SubResource("Sky_x3wgy")
+sky_custom_fov = 43.8
+sky_rotation = Vector3(-2.4609141, -1.6563175, -0.3577925)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_c5t2i"]
+viewport_path = NodePath("Main Camera/SubViewportContainer/Mask Viewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5t2i"]
 shader = ExtResource("6_yky5r")
-shader_parameter/pixel_count = Vector2(144, 144)
+shader_parameter/pixel_count = Vector2(192, 192)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_e0ngr"]
+viewport_path = NodePath("Main Camera/SubViewportContainer/Player Viewport")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hgpy0"]
 
@@ -80,23 +115,77 @@ albedo_texture = ExtResource("12_kn0ld")
 [sub_resource type="PlaneMesh" id="PlaneMesh_hmc15"]
 material = SubResource("StandardMaterial3D_8mv6e")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgpy0"]
-albedo_texture = ExtResource("14_e0ngr")
+[sub_resource type="BoxShape3D" id="BoxShape3D_yq1aw"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_t2t4p"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yq1aw"]
+albedo_texture = ExtResource("13_t2t4p")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_pyn1s"]
+material = SubResource("StandardMaterial3D_yq1aw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_no8kt"]
+albedo_texture = ExtResource("14_0pcbe")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_no8kt"]
+material = SubResource("StandardMaterial3D_no8kt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4fjy"]
+albedo_texture = ExtResource("15_axeuq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xbk3s"]
+material = SubResource("StandardMaterial3D_i4fjy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i4fjy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dt0r1"]
+albedo_texture = ExtResource("16_1cojt")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dt0r1"]
+material = SubResource("StandardMaterial3D_dt0r1")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t2t4p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pcbe"]
+albedo_texture = ExtResource("13_t2t4p")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_axeuq"]
+material = SubResource("StandardMaterial3D_0pcbe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pyn1s"]
+albedo_texture = ExtResource("14_0pcbe")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i4fjy"]
+material = SubResource("StandardMaterial3D_pyn1s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pt3ps"]
+albedo_texture = ExtResource("15_axeuq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qebug"]
+material = SubResource("StandardMaterial3D_pt3ps")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o2rbt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vso6"]
+albedo_texture = ExtResource("16_1cojt")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3ua1v"]
+material = SubResource("StandardMaterial3D_1vso6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgpy0"]
+albedo_color = Color(0.68307734, 0.6830774, 0.68307734, 1)
+albedo_texture = ExtResource("18_axeuq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1cojt"]
 material = SubResource("StandardMaterial3D_hgpy0")
 
 [node name="Main" type="Node" unique_id=1035745174 node_paths=PackedStringArray("player")]
 script = ExtResource("1_fo5ed")
-player = NodePath("Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING")
+player = NodePath("Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING")
 
 [node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 99.36923, 1.6413479, 59.758087)
 visible = true
 obstacle_size = Vector3(2, 2, 2)
-
-[node name="SceneTransition" parent="ShopCheckpoint" unique_id=1029859877 instance=ExtResource("4_fo5ed")]
-visibility_layer = 2
 
 [node name="ExitCheckpoint" parent="." unique_id=1923526849 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.7829776, 1.6413479, 99.84778)
@@ -104,39 +193,86 @@ visible = true
 type = 1
 obstacle_size = Vector3(2, 2, 2)
 
-[node name="SceneTransition" parent="ExitCheckpoint" unique_id=2117097786 instance=ExtResource("4_fo5ed")]
-visibility_layer = 2
-
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 69.738846, 1.5885293, 19.527657)
+
+[node name="Granny" parent="." unique_id=96948668 instance=ExtResource("5_axeuq")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.879175, 1.6940651, -69.98772)
+
+[node name="Karen" parent="." unique_id=1890375671 instance=ExtResource("6_pt3ps")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -69.97608, 1.7008361, -19.924646)
 
 [node name="SceneTransition" parent="." unique_id=1118554034 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1353868136]
-position = Vector2(579, 326)
+[node name="Main Camera" type="Camera2D" parent="." unique_id=1353868136]
+offset = Vector2(400, 300)
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Camera2D" unique_id=2062144889]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Main Camera" unique_id=2062144889]
 z_index = -1000
-material = SubResource("ShaderMaterial_dki2w")
-offset_left = -387.0
-offset_top = -299.0
-offset_right = 413.0
-offset_bottom = 301.0
+offset_left = -1.0
+offset_right = 799.0
+offset_bottom = 600.0
 mouse_filter = 2
 
-[node name="SubViewport" type="SubViewport" parent="Camera2D/SubViewportContainer" unique_id=1830492384]
+[node name="Mask Viewport" type="SubViewport" parent="Main Camera/SubViewportContainer" unique_id=1522920678]
+transparent_bg = true
+handle_input_locally = false
+canvas_cull_mask = 4293918752
+size = Vector2i(800, 600)
+render_target_update_mode = 4
+
+[node name="Mask Camera" type="Camera3D" parent="Main Camera/SubViewportContainer/Mask Viewport" unique_id=463918364 node_paths=PackedStringArray("playerCamera")]
+transform = Transform3D(1, 0, 0, 0, 0.97630155, 0.21641484, 0, -0.21641484, 0.97630155, 0, 2.1453495, 91.63419)
+cull_mask = 32
+environment = SubResource("Environment_c5t2i")
+script = ExtResource("6_e0ngr")
+playerCamera = NodePath("../../Player Viewport/MainPlayerSHOPPING/Camera3D")
+
+[node name="Player Viewport" type="SubViewport" parent="Main Camera/SubViewportContainer" unique_id=1948652456]
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+canvas_cull_mask = 4294967263
+size = Vector2i(800, 600)
+render_target_update_mode = 4
+
+[node name="MainPlayerSHOPPING" parent="Main Camera/SubViewportContainer/Player Viewport" unique_id=1293440747 instance=ExtResource("2_5a7ea")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
+collision_layer = 3
+
+[node name="Camera3D" type="Camera3D" parent="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" unique_id=1322557545]
+transform = Transform3D(1, 0, 0, 0, 0.9763015, 0.21641482, 0, -0.21641482, 0.9763015, 0, 1.1628699, 1.6341922)
+cull_mask = 1048543
+environment = SubResource("Environment_t2t4p")
+
+[node name="Main Viewport" type="SubViewport" parent="Main Camera/SubViewportContainer" unique_id=1830492384]
 handle_input_locally = false
 size = Vector2i(800, 600)
 render_target_update_mode = 4
 
-[node name="MainPlayerSHOPPING" parent="Camera2D/SubViewportContainer/SubViewport" unique_id=1293440747 instance=ExtResource("2_5a7ea")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
-collision_layer = 3
+[node name="Mask View" type="Sprite2D" parent="Main Camera/SubViewportContainer/Main Viewport" unique_id=294596474]
+z_index = -2
+position = Vector2(400, 300)
+texture = SubResource("ViewportTexture_c5t2i")
+
+[node name="Game View" type="Sprite2D" parent="Main Camera/SubViewportContainer/Main Viewport" unique_id=1483663812]
+z_index = -3
+material = SubResource("ShaderMaterial_c5t2i")
+position = Vector2(400, 300)
+texture = SubResource("ViewportTexture_e0ngr")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1009804071]
-offset_right = 1155.0
-offset_bottom = 650.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -529.0
+offset_top = -426.5
+offset_right = 273.0
+offset_bottom = 170.5
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="InventoryUI" parent="CenterContainer" unique_id=1984823051 instance=ExtResource("8_k7acu")]
@@ -749,20 +885,210 @@ transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 1, -72.48056, 1.7059035, -
 [node name="Npc20" parent="Objects/NPC_Group1" unique_id=334072845 instance=ExtResource("12_c5t2i")]
 transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 1, 75.9463, 1.7059035, -19.125185)
 
+[node name="cardStand" type="Node3D" parent="Objects" unique_id=1054967857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.776184, 1.90517, -9.123653)
+
+[node name="Front" type="Node3D" parent="Objects/cardStand" unique_id=82051735]
+transform = Transform3D(-2.1855694e-08, 1, 0, 2.1855694e-08, 1.9106855e-15, -1, -0.5, -4.371139e-08, -4.371139e-08, 0.5, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand/Front" unique_id=906949160]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand/Front/StaticBody3D" unique_id=243636170]
+shape = SubResource("BoxShape3D_yq1aw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand/Front" unique_id=710626]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_pyn1s")
+
+[node name="Side1" type="Node3D" parent="Objects/cardStand" unique_id=2081309596]
+transform = Transform3D(-0.5, -1.509958e-07, 7.920284e-15, 0, -4.371139e-08, -1.2, 7.54979e-08, -1, 5.2453668e-08, 0, 0.275, -0.5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand/Side1" unique_id=1468235980]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand/Side1/StaticBody3D" unique_id=1389216849]
+shape = SubResource("BoxShape3D_yq1aw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand/Side1" unique_id=981341799]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_no8kt")
+
+[node name="Back" type="Node3D" parent="Objects/cardStand" unique_id=271302243]
+transform = Transform3D(-2.1855694e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 0.5, -4.371139e-08, 1.9106855e-15, -0.5, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand/Back" unique_id=815082129]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand/Back/StaticBody3D" unique_id=1032881322]
+shape = SubResource("BoxShape3D_yq1aw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand/Back" unique_id=513062387]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_pyn1s")
+
+[node name="Side2" type="Node3D" parent="Objects/cardStand" unique_id=747276046]
+transform = Transform3D(0.5, 0, 0, 0, -4.371139e-08, -1.2, 0, 1, -5.2453668e-08, 0, 0.275, 0.501)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand/Side2" unique_id=1747271340]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand/Side2/StaticBody3D" unique_id=2014808309]
+shape = SubResource("BoxShape3D_yq1aw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand/Side2" unique_id=249084137]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_xbk3s")
+
+[node name="Top1" type="Node3D" parent="Objects/cardStand" unique_id=1442669969]
+transform = Transform3D(-6.066827e-09, -0.35607433, -0.2808115, -1.5564499e-08, 0.35101435, -0.28485948, 0.5, 6.6062427e-09, -1.227466e-08, -0.239, 1.28, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand/Top1" unique_id=1537035826]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand/Top1/StaticBody3D" unique_id=705498196]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_i4fjy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand/Top1" unique_id=546541309]
+mesh = SubResource("PlaneMesh_dt0r1")
+
+[node name="Top2" type="Node3D" parent="Objects/cardStand" unique_id=785895527]
+transform = Transform3D(-2.1855694e-08, 0.35601303, 0.2808612, 0, 0.3510765, -0.2848104, -0.5, -1.5561824e-08, -1.2276834e-08, 0.227, 1.28, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand/Top2" unique_id=1309719416]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand/Top2/StaticBody3D" unique_id=1589029695]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_i4fjy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand/Top2" unique_id=26877400]
+mesh = SubResource("PlaneMesh_dt0r1")
+
+[node name="cardStand2" type="Node3D" parent="Objects" unique_id=228177092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.776184, 1.90517, 9.624471)
+
+[node name="Front" type="Node3D" parent="Objects/cardStand2" unique_id=568758357]
+transform = Transform3D(-2.1855694e-08, 1, 0, 2.1855694e-08, 1.9106855e-15, -1, -0.5, -4.371139e-08, -4.371139e-08, 0.5, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand2/Front" unique_id=77061636]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand2/Front/StaticBody3D" unique_id=441591621]
+shape = SubResource("BoxShape3D_t2t4p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand2/Front" unique_id=1380059038]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_axeuq")
+
+[node name="Side1" type="Node3D" parent="Objects/cardStand2" unique_id=1820578451]
+transform = Transform3D(-0.5, -1.509958e-07, 7.920284e-15, 0, -4.371139e-08, -1.2, 7.54979e-08, -1, 5.2453668e-08, 0, 0.275, -0.5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand2/Side1" unique_id=1234483377]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand2/Side1/StaticBody3D" unique_id=1611666360]
+shape = SubResource("BoxShape3D_t2t4p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand2/Side1" unique_id=1841828941]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_i4fjy")
+
+[node name="Back" type="Node3D" parent="Objects/cardStand2" unique_id=279792519]
+transform = Transform3D(-2.1855694e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 0.5, -4.371139e-08, 1.9106855e-15, -0.5, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand2/Back" unique_id=343504922]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand2/Back/StaticBody3D" unique_id=126810125]
+shape = SubResource("BoxShape3D_t2t4p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand2/Back" unique_id=444009016]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_axeuq")
+
+[node name="Side2" type="Node3D" parent="Objects/cardStand2" unique_id=530046474]
+transform = Transform3D(0.5, 0, 0, 0, -4.371139e-08, -1.2, 0, 1, -5.2453668e-08, 0, 0.275, 0.501)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand2/Side2" unique_id=615058581]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand2/Side2/StaticBody3D" unique_id=2017502232]
+shape = SubResource("BoxShape3D_t2t4p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand2/Side2" unique_id=768386124]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_qebug")
+
+[node name="Top1" type="Node3D" parent="Objects/cardStand2" unique_id=3773295]
+transform = Transform3D(-6.066827e-09, -0.35607433, -0.2808115, -1.5564499e-08, 0.35101435, -0.28485948, 0.5, 6.6062427e-09, -1.227466e-08, -0.239, 1.28, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand2/Top1" unique_id=537316368]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand2/Top1/StaticBody3D" unique_id=1755872949]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_o2rbt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand2/Top1" unique_id=1580716189]
+mesh = SubResource("PlaneMesh_3ua1v")
+
+[node name="Top2" type="Node3D" parent="Objects/cardStand2" unique_id=258509421]
+transform = Transform3D(-2.1855694e-08, 0.35601303, 0.2808612, 0, 0.3510765, -0.2848104, -0.5, -1.5561824e-08, -1.2276834e-08, 0.227, 1.28, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/cardStand2/Top2" unique_id=1029619844]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/cardStand2/Top2/StaticBody3D" unique_id=1422027747]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_o2rbt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/cardStand2/Top2" unique_id=620362043]
+mesh = SubResource("PlaneMesh_3ua1v")
+
+[node name="Bench_Group" type="Node" parent="Objects" unique_id=498918243]
+
+[node name="Bench" parent="Objects/Bench_Group" unique_id=625320080 instance=ExtResource("17_0pcbe")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.577, -6.487)
+
+[node name="Bench2" parent="Objects/Bench_Group" unique_id=115805879 instance=ExtResource("17_0pcbe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.577, 6.4850287)
+
+[node name="Bench3" parent="Objects/Bench_Group" unique_id=597788015 instance=ExtResource("17_0pcbe")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.5108414, 1.575, -0.10700989)
+
+[node name="Bench4" parent="Objects/Bench_Group" unique_id=229148973 instance=ExtResource("17_0pcbe")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5390787, 1.575, -0.10700989)
+
+[node name="GameSlop" type="Node3D" parent="Objects" unique_id=971697469]
+transform = Transform3D(-2.1855695e-07, -5, 1.3113416e-07, 0, -2.1855695e-07, -3, 5, -2.1855695e-07, 5.7320566e-15, 99.9, 3.998455, 0.007)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/GameSlop" unique_id=1926596671]
+mesh = SubResource("PlaneMesh_1cojt")
+
+[node name="Escalator" parent="Objects" unique_id=451781271 instance=ExtResource("19_1cojt")]
+transform = Transform3D(-1.3113417e-08, 0, -0.4, 0, 0.5, 0, 0.3, 0, -1.7484556e-08, 32.505436, 9.401285, -81)
+obstacle_size = Vector3(0.1, 0.08, 0.1)
+
+[node name="Escalator2" parent="Objects" unique_id=1102980857 instance=ExtResource("19_1cojt")]
+transform = Transform3D(-1.3113417e-08, 0, 0.4, 0, 0.5, 0, -0.3, 0, -1.7484556e-08, -32.5, 9.401, -81)
+obstacle_size = Vector3(0.1, 0.09, 0.1)
+
+[node name="christmasTree" parent="Objects" unique_id=1996664844 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 8.957075, 6.7, -50.005836)
+
+[node name="christmasTree2" parent="Objects" unique_id=1406634268 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 25.621933, 6.7, -8.316719)
+
+[node name="christmasTree3" parent="Objects" unique_id=274144912 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, -24.382942, 6.7, 3.8036652)
+
+[node name="christmasTree4" parent="Objects" unique_id=1685207143 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, -48.359184, 6.7, 70.6208)
+
+[node name="christmasTree5" parent="Objects" unique_id=644753119 instance=ExtResource("20_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 0.0029844756, 0.9999955, 0, -0.9999955, 0.0029844756, 47.893127, 6.7, 76.43338)
+
 [node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.11260414, 1.6413479, 85.735374)
 visible = true
 obstacle_size = Vector3(2, 2, 2)
 
-[node name="SceneTransition" parent="DebugShop" unique_id=511102607 instance=ExtResource("4_fo5ed")]
-visibility_layer = 2
-
-[node name="GameSlop" type="Node3D" parent="." unique_id=1195344205]
-transform = Transform3D(-1.3113416e-07, -2, 8.742278e-08, 0, -8.742278e-08, -2, 3, -8.742278e-08, 3.821371e-15, 99.9, 3.198, 0.007)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="GameSlop" unique_id=228530207]
-mesh = SubResource("PlaneMesh_t2t4p")
-
-[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("14_kn0ld")]
-
-[connection signal="stopVelocity" from="Scalper" to="Camera2D/SubViewportContainer/SubViewport/MainPlayerSHOPPING" method="_on_scalper_stop_velocity"]
+[node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]
