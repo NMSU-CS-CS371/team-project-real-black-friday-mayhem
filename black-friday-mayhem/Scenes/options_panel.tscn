@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ccyc5rcpydalj"]
 
-[ext_resource type="Script" uid="uid://uxhec68s2tss" path="res://Scripts/options_panel.gd" id="1_jbjff"]
+[ext_resource type="Script" uid="uid://uxhec68s2tss" path="res://Scripts/UI/options_panel.gd" id="1_jbjff"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="1_ndwmh"]
 [ext_resource type="FontFile" uid="uid://b1p4kw1jll2xf" path="res://Assets/Fonts/Awake.ttf" id="2_jbjff"]
 

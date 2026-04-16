@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b4woik3ytcllt"]
 
-[ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Scripts/Movement.gd" id="1_cvnsp"]
-[ext_resource type="Script" uid="uid://sji7srj5jd3l" path="res://Scripts/ArrowScript.gd" id="2_6t5aa"]
+[ext_resource type="Script" uid="uid://bhon4dbrnunls" path="res://Scripts/Player/Movement.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://sji7srj5jd3l" path="res://Scripts/Player/ArrowScript.gd" id="2_6t5aa"]
 [ext_resource type="Resource" uid="uid://c5fco8h8cq77c" path="res://Assets/Inventory/playerinventory.tres" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://6cxdo45n5kxn" path="res://Assets/Sprites/PlayerSheet.png" id="4_vgqql"]
-[ext_resource type="Script" uid="uid://cieqbn7d3nfnq" path="res://Scripts/player_anim.gd" id="5_fkybt"]
+[ext_resource type="Script" uid="uid://cieqbn7d3nfnq" path="res://Scripts/Player/player_anim.gd" id="5_fkybt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ohetr"]
 size = Vector3(0.5283203, 0.71777344, 0.23144531)
@@ -266,6 +266,7 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody3D" unique_id=1293440747]
+collision_layer = 2
 slide_on_ceiling = false
 script = ExtResource("1_cvnsp")
 inventory = ExtResource("2_vgqql")

@@ -1,31 +1,32 @@
 extends Node3D
 
 var target_position: Vector3
-var move_speed := 2.5
-var move_range := 10.0
-var wait_time := 0.0
+@export var move_speed := 2.5
+@export var move_range := 10.0
+@export var wait_time := 0.0
 
 func _ready():
 	randomize()
-	$AnimatedSprite3D.play("default")
-	pick_new_target()
+	$RigidBody3D/AnimatedSprite3D.play("default")
 
-func _process(delta):
-	if wait_time > 0.0:
-		wait_time -= delta
-		return
+#func _physics_process(delta: float) -> void:
+	#if wait_time > 0.0:
+		#wait_time -= delta
+		#return
+	#rotation.z = 0
+	#rotation.x = 0
+	#var direction = Vector3.UP.rotated(Vector3.FORWARD, rotation.y) * speed
+	#rot_dir = rot_dir * speed * delta
+	#$RigidBody3D.linear_velocity = rot_dir * speed * delta
+	#position = position.move_toward(target_position, move_speed * delta)
 
-	position = position.move_toward(target_position, move_speed * delta)
+	#if position.distance_to(target_position) < 0.1:
+		#wait_time = randf_range(0.5, 2.0)
+		#pick_new_target()
+	#var tar = Vector3.FORWARD.rotated(Vector3.UP, rotation.y) * speed
+	#$RigidBody3D.apply_force(tar, target_position
 
-	if position.distance_to(target_position) < 0.1:
-		wait_time = randf_range(0.5, 2.0)
-		pick_new_target()
 
-func pick_new_target():
-	var offset_x = randf_range(-move_range, move_range)
-	var offset_z = randf_range(-move_range, move_range)
-	target_position = Vector3(
-		position.x + offset_x,
-		position.y,
-		position.z + offset_z
-	)
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	print("Play fall animation")
+	pass # Replace with function body.

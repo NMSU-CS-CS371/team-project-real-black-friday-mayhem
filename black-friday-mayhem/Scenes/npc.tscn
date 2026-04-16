@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://httpo0j712de"]
 
-[ext_resource type="Script" path="res://Scripts/npc.gd" id="1_g6unj"]
+[ext_resource type="Script" uid="uid://ckw66imoabpip" path="res://Scripts/npc.gd" id="1_g6unj"]
 [ext_resource type="Texture2D" uid="uid://pyb8qdstv338" path="res://Assets/Sprites/NPC1.png" id="1_xxsvc"]
 [ext_resource type="Texture2D" uid="uid://boofb6uhbeuyu" path="res://Assets/Sprites/NPC2.png" id="2_g6unj"]
+[ext_resource type="Script" uid="uid://bence47dbwdl3" path="res://Scripts/npcMovement.gd" id="4_h1ryf"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g6unj"]
+height = 0.9187622
+radius = 0.18701172
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_h1ryf"]
+height = 0.87194824
+radius = 0.19726563
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h1ryf"]
 animations = [{
@@ -18,18 +27,38 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1ig1v"]
-
 [node name="Npc" type="Node3D" unique_id=1527463142]
 script = ExtResource("1_g6unj")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1594509034]
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=451810243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+collision_layer = 0
+axis_lock_linear_y = true
+gravity_scale = 0.0
+script = ExtResource("4_h1ryf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=752736541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3616405, 0)
+shape = SubResource("CylinderShape3D_g6unj")
+
+[node name="Area3D" type="Area3D" parent="RigidBody3D" unique_id=188386790]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Area3D" unique_id=558042351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4013062, 0)
+shape = SubResource("CylinderShape3D_h1ryf")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="RigidBody3D" unique_id=1594509034]
+transform = Transform3D(0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, 0, -1.3572187, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_h1ryf")
 frame_progress = 0.4266425
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=890553123]
+[node name="Timer" type="Timer" parent="." unique_id=123781149]
+wait_time = 2.0
+autostart = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=752736541]
-transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0)
-shape = SubResource("BoxShape3D_1ig1v")
+[connection signal="body_entered" from="RigidBody3D/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="RigidBody3D" method="_on_timer_timeout"]
