@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dkgjh0skteeui"]
+
+[ext_resource type="PackedScene" uid="uid://cty6as3v4l5o0" path="res://Assets/Textures/Trash Can.glb" id="1_ljie2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vr4ph"]
+height = 0.5487671
+radius = 0.2734375
+
+[node name="Trashcan" unique_id=1656698358 instance=ExtResource("1_ljie2")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=2117290257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.005645752, 0)
+shape = SubResource("CylinderShape3D_vr4ph")
