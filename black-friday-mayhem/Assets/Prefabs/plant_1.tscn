@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dnhf125eqduw0"]
+
+[ext_resource type="PackedScene" uid="uid://3ony46l8loh6" path="res://Assets/Textures/House plant.glb" id="1_8mg4p"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0ig73"]
+radius = 0.6713867
+height = 2.972168
+
+[node name="Plant1" unique_id=337281523 instance=ExtResource("1_8mg4p")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=739128612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.486084, 0)
+shape = SubResource("CapsuleShape3D_0ig73")
