@@ -5,6 +5,7 @@
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="2_48xlc"]
 [ext_resource type="PackedScene" uid="uid://ccyc5rcpydalj" path="res://Scenes/options_panel.tscn" id="4_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://dby1utd2o8642" path="res://Assets/Sprites/Hands.png" id="4_n45e2"]
+[ext_resource type="AudioStream" uid="uid://qxd0o1bjjvjc" path="res://Assets/SFX/Bit Quest - Title.mp3" id="6_opfnp"]
 
 [node name="MainMenu" type="Node2D" unique_id=527269286]
 script = ExtResource("1_1ehe0")
@@ -94,6 +95,10 @@ offset_left = 122.0
 offset_top = 72.0
 offset_right = 122.0
 offset_bottom = 72.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2007940004]
+stream = ExtResource("6_opfnp")
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_pressed"]
