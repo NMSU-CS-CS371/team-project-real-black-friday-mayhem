@@ -10,6 +10,7 @@ height = 120.0
 [node name="Item" type="Node2D" unique_id=616066187]
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_3x3c1")
+move_speed = 200
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1688037541]

@@ -9,7 +9,7 @@ extends Node2D #Hand Spawn
 
 @export var hand_scene: PackedScene #hand nodes
 @export var spawn_interval := 1.0
-@export var max_hands := 20
+@export var max_hands := 30
 var game: Node
 
 #ready func is to set up the scene
@@ -35,6 +35,10 @@ func _on_spawn_timer_timeout() -> void:
 		return
 	#call spawn hand
 	spawn_hand()
+	
+	# reduce spawn interval
+	$SpawnTimer.wait_time -= 0.008
+	# print(str($SpawnTimer.wait_time))
 
 #spawn hand funtion to spawn hand objects
 func spawn_hand():

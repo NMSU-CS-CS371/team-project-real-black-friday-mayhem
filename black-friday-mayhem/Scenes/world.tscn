@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://03rqiqf5wyxb" path="res://Scripts/mask_camera.gd" id="6_e0ngr"]
 [ext_resource type="Texture2D" uid="uid://c0tpkpp1eg1ah" path="res://Assets/Textures/Sky_Clouds_Photo_Texture_A_P4171314.jpg" id="6_kn0ld"]
 [ext_resource type="PackedScene" uid="uid://bakriia4ytcfp" path="res://Scenes/Enemies/karen.tscn" id="6_pt3ps"]
-[ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
+[ext_resource type="Shader" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
 [ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="9_7yui6"]
@@ -183,7 +183,32 @@ material = SubResource("StandardMaterial3D_hgpy0")
 script = ExtResource("1_fo5ed")
 player = NodePath("Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING")
 
-[node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
+[node name="StacysCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -99.72584, 1.6413479, 60.07906)
+visible = true
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="RadioShackCheckpoint" parent="." unique_id=357940443 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -99.72584, 1.6413479, -0.08490467)
+visible = true
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="HindsNobleCheckpoint" parent="." unique_id=1453758163 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -99.72584, 1.6413479, -59.874874)
+visible = true
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="DebateCheckpoint" parent="." unique_id=856228549 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 99.36923, 1.6413479, -59.874874)
+visible = true
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="GameSlopCheckpoint" parent="." unique_id=521930612 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 99.36923, 1.6413479, 0.049802423)
+visible = true
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="JKNickelsCheckpoint" parent="." unique_id=812076560 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 99.36923, 1.6413479, 59.758087)
 visible = true
 obstacle_size = Vector3(2, 2, 2)
