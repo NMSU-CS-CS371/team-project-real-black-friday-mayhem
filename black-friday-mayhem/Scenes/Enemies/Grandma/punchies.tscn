@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://23wvgv87iopd" path="res://Scripts/Enemies/Granny/grandmaEnemy.gd" id="4_to6mo"]
 [ext_resource type="Script" uid="uid://cvbqfa53jus6n" path="res://Scripts/Enemies/Granny/puncher.gd" id="5_a2sxw"]
 [ext_resource type="FontFile" uid="uid://dpewd1wcpt3hq" path="res://Assets/Fonts/Wacky Pixels.ttf" id="7_j5x1a"]
+[ext_resource type="AudioStream" uid="uid://ctn6v5eyxrpuv" path="res://Assets/SFX/Cyborg Ninja - Granny.mp3" id="8_gwv23"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7fpuf"]
 animations = [{
@@ -398,6 +399,10 @@ theme_override_font_sizes/font_size = 46
 text = "HP: 25/50"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2100007618]
+stream = ExtResource("8_gwv23")
+autoplay = true
 
 [connection signal="timeout" from="Grandma/Timer" to="Grandma" method="_on_timer_timeout"]
 [connection signal="knockedOut" from="Player" to="Grandma" method="stopDisrespectingMyGangsYo"]
