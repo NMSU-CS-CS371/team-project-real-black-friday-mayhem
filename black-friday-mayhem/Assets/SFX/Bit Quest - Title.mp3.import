@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qxd0o1bjjvjc"
+path="res://.godot/imported/Bit Quest - Title.mp3-e9cf4acae789dcec068bdb8671ab3a89.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/Bit Quest - Title.mp3"
+dest_files=["res://.godot/imported/Bit Quest - Title.mp3-e9cf4acae789dcec068bdb8671ab3a89.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

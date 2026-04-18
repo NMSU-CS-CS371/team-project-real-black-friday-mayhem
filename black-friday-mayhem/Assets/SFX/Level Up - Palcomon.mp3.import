@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c07g5xwxnp0l5"
+path="res://.godot/imported/Level Up - Palcomon.mp3-919594b34106797396c5a3a589974f08.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/Level Up - Palcomon.mp3"
+dest_files=["res://.godot/imported/Level Up - Palcomon.mp3-919594b34106797396c5a3a589974f08.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

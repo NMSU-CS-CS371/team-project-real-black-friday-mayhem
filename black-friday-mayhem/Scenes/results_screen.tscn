@@ -9,6 +9,7 @@
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="5_yth4j"]
 [ext_resource type="PackedScene" uid="uid://cjiq8hw5td00b" path="res://Scenes/results_highlight.tscn" id="6_bmsfq"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="8_yth4j"]
+[ext_resource type="AudioStream" uid="uid://b7mf24yccfgew" path="res://Assets/SFX/Theme for Harold var 1 - End.mp3" id="10_ff1st"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ff1st"]
 atlas = ExtResource("5_rej3g")
@@ -564,6 +565,10 @@ scale = Vector2(0.8, 0.8)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=364104664]
 libraries/ = SubResource("AnimationLibrary_2isyb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1678728106]
+stream = ExtResource("10_ff1st")
+autoplay = true
 
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttons/MenuButton" to="." method="_on_menu_pressed"]
