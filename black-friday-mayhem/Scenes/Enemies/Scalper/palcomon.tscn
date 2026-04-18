@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpwithll7q61f"]
 
-[ext_resource type="Script" uid="uid://blkewc3234s5x" path="res://Scripts/Enemies/palcomon.gd" id="1_2ybmw"]
+[ext_resource type="Script" uid="uid://blkewc3234s5x" path="res://Scripts/Enemies/Scalper/palcomon.gd" id="1_2ybmw"]
 [ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="2_1xjt3"]
 [ext_resource type="Texture2D" uid="uid://gc34io4jmolk" path="res://Assets/Textures/StoreBackground.png" id="2_2ybmw"]
 [ext_resource type="FontFile" uid="uid://dpewd1wcpt3hq" path="res://Assets/Fonts/Wacky Pixels.ttf" id="3_ssak1"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dtyx7i14yi6gg" path="res://Assets/Textures/TransitionTexture3.png" id="7_c7epx"]
 [ext_resource type="Texture2D" uid="uid://buqx5nfli38rv" path="res://Assets/Textures/TransitionTexture4.png" id="8_kj4qc"]
 [ext_resource type="Texture2D" uid="uid://10xbg58t5f6j" path="res://Assets/Textures/TransitionTexture5.png" id="9_56dx4"]
+[ext_resource type="AudioStream" uid="uid://c07g5xwxnp0l5" path="res://Assets/SFX/Level Up - Palcomon.mp3" id="12_hmm1d"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hmm1d"]
 shader = ExtResource("2_1xjt3")
@@ -656,6 +657,10 @@ position = Vector2(400, 300)
 scale = Vector2(0.69104993, 0.91641337)
 sprite_frames = SubResource("SpriteFrames_qc2s0")
 animation = &"done"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=700157121]
+stream = ExtResource("12_hmm1d")
+autoplay = true
 
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Defend" to="." method="_on_defend_pressed"]

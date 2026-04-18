@@ -11,7 +11,6 @@ var last_position = Vector3.ZERO
 var Palcomon = preload("res://Scenes/Enemies/Scalper/palcomon.tscn")
 var is_defeated = false
 var playing_game = false
-signal stopVelocity
 
 
 # Called when the node enters the scene tree for the first time.
@@ -92,8 +91,6 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 func _on_minigame_finished(result):
 	if result == "win" :
 		is_defeated = true
-		playing_game = false
 		print("Enemy defeated")
-	else :
-		playing_game = false
+	playing_game = false
 	

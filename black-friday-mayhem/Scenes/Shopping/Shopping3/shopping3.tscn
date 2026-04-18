@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://w8er6cjd0kml"]
 
-[ext_resource type="Script" uid="uid://vpwfn0xrgeuf" path="res://Scripts/Shopping/Shopping3/shopping.gd" id="1_sd71p"]
+[ext_resource type="Script" uid="uid://vpwfn0xrgeuf" path="res://Scripts/Shopping/Shopping3/shopping3.gd" id="1_sd71p"]
 [ext_resource type="Texture2D" uid="uid://diif56b3hfcwv" path="res://Assets/Textures/shelf.jpg" id="2_yccae"]
 [ext_resource type="Script" uid="uid://chklspbue4vyt" path="res://Scripts/Shopping/Shopping3/scrollCameraScript.gd" id="3_piprj"]
-[ext_resource type="FontFile" uid="uid://bxvituh4qj3ga" path="res://Assets/Fonts/Xolonium-Regular.ttf" id="3_riwj3"]
 [ext_resource type="PackedScene" uid="uid://d3kk3sqhaesx4" path="res://Scenes/Shopping/Shopping3/item_spawner.tscn" id="4_8mf5g"]
+[ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="4_sd71p"]
 [ext_resource type="PackedScene" uid="uid://bv65ar0grg57c" path="res://Scenes/Shopping/Shopping3/hand_spawner.tscn" id="5_yr1ar"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="7_sd71p"]
+[ext_resource type="AudioStream" uid="uid://c13gy764mopl6" path="res://Assets/SFX/Show Your Moves - Shop.mp3" id="8_6ujwd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aogmo"]
 texture = ExtResource("2_yccae")
@@ -15,9 +16,6 @@ texture = ExtResource("2_yccae")
 
 [sub_resource type="TileSet" id="TileSet_yccae"]
 sources/0 = SubResource("TileSetAtlasSource_aogmo")
-
-[sub_resource type="FontVariation" id="FontVariation_yjfng"]
-base_font = ExtResource("3_riwj3")
 
 [node name="Shopping3" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("wallet_label")]
 script = ExtResource("1_sd71p")
@@ -39,16 +37,16 @@ scrollSpeed = 150.0
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = -301.0
-offset_right = 391.0
-offset_bottom = -201.0
+offset_left = -74.0
+offset_top = -280.0
+offset_right = 380.0
+offset_bottom = -180.0
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("FontVariation_yjfng")
-theme_override_font_sizes/font_size = 64
+theme = ExtResource("4_sd71p")
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 80
 text = "$999999999"
-horizontal_alignment = 1
+horizontal_alignment = 2
 
 [node name="UpperLeft" type="Node2D" parent="Camera2D" unique_id=1184108534]
 position = Vector2(-400, -300)
@@ -61,14 +59,19 @@ upLeft = NodePath("../Camera2D/UpperLeft")
 lowerRight = NodePath("../Camera2D/LowerRight")
 
 [node name="GameTimer" type="Timer" parent="." unique_id=169254731]
-wait_time = 35.0
+wait_time = 30.0
 one_shot = true
 
 [node name="SceneTransition" parent="." unique_id=1029859877 instance=ExtResource("7_sd71p")]
-position = Vector2(971.83826, 21.610474)
+z_index = 100
+position = Vector2(176, 24)
 
 [node name="ItemSpawner" parent="." unique_id=1422229041 instance=ExtResource("4_8mf5g")]
 max_items = 100000
 item_count = 50
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1205862209]
+stream = ExtResource("8_6ujwd")
+autoplay = true
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

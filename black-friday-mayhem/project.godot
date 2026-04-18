@@ -23,6 +23,7 @@ TerrainRebuildCoordinator="*uid://brautlco0ivx3"
 
 window/size/viewport_width=800
 window/size/viewport_height=600
+window/stretch/mode="canvas_items"
 window/depth_of_field/depth_of_field_use_jitter=false
 
 [editor_plugins]

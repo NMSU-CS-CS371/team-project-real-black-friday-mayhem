@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://ccyc5rcpydalj"]
+
+[ext_resource type="Script" uid="uid://uxhec68s2tss" path="res://Scripts/options_panel.gd" id="1_jbjff"]
+[ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="1_ndwmh"]
+[ext_resource type="FontFile" uid="uid://b1p4kw1jll2xf" path="res://Assets/Fonts/Awake.ttf" id="2_jbjff"]
+
+[node name="OptionsPanel" type="Control" unique_id=1421833873]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jbjff")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1015778553]
+z_index = -1
+layout_mode = 0
+offset_right = 550.0
+offset_bottom = 460.0
+color = Color(0.1732435, 1.9929139e-07, 0.0040034526, 1)
+
+[node name="VolumeSliders" type="VBoxContainer" parent="." unique_id=2000226396]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 26.0
+offset_top = 58.0
+offset_right = 512.0
+offset_bottom = 227.0
+alignment = 1
+
+[node name="MusicVolume" type="HSlider" parent="VolumeSliders" unique_id=1234084996]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="SFXVolume" type="HSlider" parent="VolumeSliders" unique_id=657457806]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="MusicLabel" type="Label" parent="." unique_id=128811799]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 53.0
+offset_right = 133.0
+offset_bottom = 88.0
+theme = ExtResource("1_ndwmh")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jbjff")
+text = "Music"
+
+[node name="SFXLabel" type="Label" parent="." unique_id=678069610]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 115.0
+offset_right = 134.0
+offset_bottom = 150.0
+theme = ExtResource("1_ndwmh")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jbjff")
+text = "SFX"
+
+[node name="WindowButton" type="OptionButton" parent="." unique_id=1581473799]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 217.0
+offset_right = 500.94287
+offset_bottom = 276.0
+theme = ExtResource("1_ndwmh")
+theme_override_font_sizes/font_size = 28
+item_count = 2
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+
+[node name="WindowLabel" type="Label" parent="." unique_id=2016707071]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 228.0
+offset_right = 252.0
+offset_bottom = 263.0
+theme = ExtResource("1_ndwmh")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jbjff")
+text = "Window Mode"
+
+[node name="SaveButton" type="Button" parent="." unique_id=941349521]
+custom_minimum_size = Vector2(340, 100)
+layout_mode = 0
+offset_left = 110.0
+offset_top = 331.0
+offset_right = 450.0
+offset_bottom = 431.0
+theme = ExtResource("1_ndwmh")
+theme_override_colors/font_pressed_color = Color(0.3807297, 0, 0.07526115, 1)
+theme_override_colors/font_hover_color = Color(0.626041, 0, 0.15000352, 1)
+text = "Save Changes"
+
+[node name="XButton" type="Button" parent="." unique_id=517578214]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 4.0
+offset_right = 547.0
+offset_bottom = 54.0
+theme = ExtResource("1_ndwmh")
+theme_override_colors/font_pressed_color = Color(0.3807297, 0, 0.07526115, 1)
+theme_override_colors/font_hover_color = Color(0.626041, 0, 0.15000352, 1)
+text = "X"
+icon_alignment = 1
+
+[node name="ConfirmPanel" type="ColorRect" parent="." unique_id=1280692098]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 94.0
+offset_top = 113.0
+offset_right = 454.0
+offset_bottom = 313.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ConfirmBackground" type="ColorRect" parent="ConfirmPanel" unique_id=1925176990]
+show_behind_parent = true
+z_index = -10
+layout_mode = 0
+offset_left = -94.0
+offset_top = -113.0
+offset_right = 456.0
+offset_bottom = 347.0
+mouse_force_pass_scroll_events = false
+color = Color(0, 0, 0, 0.16862746)
+
+[node name="ConfirmLabel" type="Label" parent="ConfirmPanel" unique_id=108896627]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 28.0
+offset_right = 340.0
+offset_bottom = 109.0
+theme = ExtResource("1_ndwmh")
+theme_override_fonts/font = ExtResource("2_jbjff")
+theme_override_font_sizes/font_size = 40
+text = "You have not saved your changes. Discard them?"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CancelButton" type="Button" parent="ConfirmPanel" unique_id=1264980234]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
+offset_left = 191.0
+offset_top = 122.0
+offset_right = 347.0
+offset_bottom = 182.0
+theme = ExtResource("1_ndwmh")
+theme_override_colors/font_pressed_color = Color(0.3807297, 0, 0.07526115, 1)
+theme_override_colors/font_hover_color = Color(0.626041, 0, 0.15000352, 1)
+text = "Cancel
+"
+
+[node name="DiscardButton" type="Button" parent="ConfirmPanel" unique_id=1779445115]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 122.0
+offset_right = 172.0
+offset_bottom = 182.0
+theme = ExtResource("1_ndwmh")
+theme_override_colors/font_pressed_color = Color(0.3807297, 0, 0.07526115, 1)
+theme_override_colors/font_hover_color = Color(0.626041, 0, 0.15000352, 1)
+text = "Discard
+"
+
+[connection signal="value_changed" from="VolumeSliders/MusicVolume" to="." method="_on_music_volume_changed"]
+[connection signal="value_changed" from="VolumeSliders/SFXVolume" to="." method="_on_sfx_volume_changed"]
+[connection signal="item_selected" from="WindowButton" to="." method="_on_window_changed"]
+[connection signal="pressed" from="SaveButton" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="XButton" to="." method="_on_x_button_pressed"]
+[connection signal="pressed" from="ConfirmPanel/CancelButton" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="ConfirmPanel/DiscardButton" to="." method="_on_discard_pressed"]

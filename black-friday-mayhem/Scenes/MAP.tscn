@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://k8vgfxancgy0"]
 
 [ext_resource type="Texture2D" uid="uid://bliql7yyjcinf" path="res://Assets/Textures/floorMesh2.jpg" id="1_rq85h"]
+[ext_resource type="AudioStream" uid="uid://3a78lui8c7p2" path="res://Assets/SFX/Rollin at 5 - electronic - Map.mp3" id="2_53y2r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 
@@ -78,6 +79,7 @@ gi_lightmap_texel_scale = 0.01
 mesh = SubResource("BoxMesh_f3sb7")
 
 [node name="Columns" type="Node3D" parent="." unique_id=1746547597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.874988, 0)
 
 [node name="Column East 1" type="Node3D" parent="Columns" unique_id=1940482095]
 transform = Transform3D(8.5, 0, 0, 0, 25, 0, 0, 0, 8.5, 50, 0, 60)
@@ -194,6 +196,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99, 1, 60)
 mesh = SubResource("BoxMesh_036b0")
 
 [node name="Walls" type="Node3D" parent="." unique_id=1593764907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.415955, 0)
 
 [node name="South Wall" type="Node3D" parent="Walls" unique_id=1150633506]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100)
@@ -224,7 +227,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 mesh = SubResource("BoxMesh_fj7yv")
 
 [node name="East Wall" type="Node3D" parent="Walls" unique_id=169373865]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Walls/East Wall" unique_id=664040066]
 
@@ -236,7 +239,7 @@ shape = SubResource("BoxShape3D_f3sb7")
 mesh = SubResource("BoxMesh_fj7yv")
 
 [node name="West Wall" type="Node3D" parent="Walls" unique_id=1845765364]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Walls/West Wall" unique_id=1284127048]
 
@@ -248,6 +251,7 @@ shape = SubResource("BoxShape3D_f3sb7")
 mesh = SubResource("BoxMesh_fj7yv")
 
 [node name="Ceiling" type="Node3D" parent="." unique_id=778859775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.756969, 0)
 
 [node name="Near_Wall_Outlines" type="Node3D" parent="Ceiling" unique_id=565949583]
 
@@ -530,31 +534,6 @@ shape = SubResource("BoxShape3D_8j60k")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 23/StaticBody3D" unique_id=1428627159]
 mesh = SubResource("BoxMesh_fo5ed")
 
-[node name="Near_Wall_Outlines2" type="Node3D" parent="Ceiling" unique_id=2127568663]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11, 0)
-
-[node name="East" type="Node3D" parent="Ceiling/Near_Wall_Outlines2" unique_id=959708904]
-transform = Transform3D(110, 0, 0, 0, 1, 0, 0, 0, 200, 100, 25, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Near_Wall_Outlines2/East" unique_id=1665007192]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Near_Wall_Outlines2/East/StaticBody3D" unique_id=2050607330]
-shape = SubResource("BoxShape3D_go701")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines2/East/StaticBody3D" unique_id=1365540446]
-mesh = SubResource("BoxMesh_5a7ea")
-
-[node name="West" type="Node3D" parent="Ceiling/Near_Wall_Outlines2" unique_id=2034529201]
-transform = Transform3D(110, 0, 0, 0, 1, 0, 0, 0, 200, -100, 25, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Near_Wall_Outlines2/West" unique_id=1788171873]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Near_Wall_Outlines2/West/StaticBody3D" unique_id=217659717]
-shape = SubResource("BoxShape3D_go701")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines2/West/StaticBody3D" unique_id=883882757]
-mesh = SubResource("BoxMesh_5a7ea")
-
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=2024841804]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 24.858952, 0)
 light_color = Color(0.98039216, 1, 1, 1)
@@ -563,3 +542,7 @@ light_volumetric_fog_energy = 16.0
 light_angular_distance = 90.0
 directional_shadow_mode = 0
 sky_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1941107631]
+stream = ExtResource("2_53y2r")
+parameters/looping = true
