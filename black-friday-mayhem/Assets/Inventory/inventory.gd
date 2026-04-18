@@ -10,16 +10,39 @@ signal update
 @export var beatScalper: bool = false
 @export var beatGrandma: bool = false
 @export var beatKaren: bool = false
+var numItems = 0
 
 func insert(item: InvItem):
+	
 	var itemSlots = slots.filter(func(slot): return slot.item == item)
 	if not itemSlots.is_empty():
 		itemSlots[0].amount += 1
+		numItems = numItems + 1
 	else:
 		var emptySlots = slots.filter(func(slot): return slot.item == null)
 		if not emptySlots.is_empty():
 			emptySlots[0].item = item
 			emptySlots[0].amount = 1
+			numItems = numItems + 1
+	update.emit()
+
+func getItem():
+	#get an item that is not a mini game item
+	if (numItems == 0) :
+		return null
+	for slot in slots:
+		if slot.item != null && slot.item.specialItem == false :
+			return slot.item.sprite
+	return null
+		
+func remove(item: InvItem):
+	for stuff in slots:
+		if slots[stuff].item == slots[item].item :
+			if slots[stuff].amount == 1 :
+				slots[stuff].amount = 0
+				slots[stuff] = null
+			else :
+				slots[stuff].amount -= 1
 	update.emit()
 
 func reset():

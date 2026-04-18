@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://425lrnjqm2sd"]
+
+[ext_resource type="Script" uid="uid://jylju3dqdq3a" path="res://Scripts/Enemies/Karen/button_masher.gd" id="1_y1kjv"]
+[ext_resource type="Texture2D" uid="uid://c1fykmsunyljp" path="res://Assets/Textures/mall.jpeg" id="2_sxbc2"]
+[ext_resource type="Texture2D" uid="uid://bxwt0m7maotgq" path="res://Assets/Textures/temp.jpeg" id="3_78gnj"]
+[ext_resource type="Texture2D" uid="uid://dfsnd4hgikf6o" path="res://Assets/Sprites/jam.png" id="4_78gnj"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5npmi"]
+blend_mode = 4
+light_mode = 1
+
+[node name="Button_Masher" type="Node2D" unique_id=1527775403]
+script = ExtResource("1_y1kjv")
+
+[node name="Background" type="TextureRect" parent="." unique_id=965619530]
+offset_right = 805.0
+offset_bottom = 601.0
+texture = ExtResource("2_sxbc2")
+
+[node name="Karen" type="TextureRect" parent="." unique_id=1766726619]
+material = SubResource("CanvasItemMaterial_5npmi")
+offset_left = 192.0
+offset_top = 63.0
+offset_right = 642.0
+offset_bottom = 719.0
+texture = ExtResource("3_78gnj")
+
+[node name="Item" type="TextureRect" parent="." unique_id=190503163]
+offset_left = 348.0
+offset_top = 454.0
+offset_right = 460.0
+offset_bottom = 599.0
+texture = ExtResource("4_78gnj")

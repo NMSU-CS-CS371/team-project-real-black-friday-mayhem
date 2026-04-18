@@ -12,6 +12,7 @@ var angle = 0.0
 var center : Vector3
 var last_position = Vector3.ZERO
 @onready var sprite = $AnimatedSprite3D
+var game = preload("res://Scenes/Enemies/Karen/button_masher.tscn")
 
 #mini game varibles
 var is_defeated = false
@@ -88,4 +89,7 @@ func play_if_not(anim):
 
 func _on_hit_box_body_entered(_body: Node3D) -> void:
 	print("karen hit")
+	var battle = game.instantiate()
+	add_child(battle)
+	
 	

@@ -138,7 +138,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ngycw"]
 radius = 0.08300781
-height = 0.34926796
+height = 0.23078632
 
 [node name="Scalper" unique_id=1282377910 instance=ExtResource("1_qdkv4")]
 script = ExtResource("2_pyl3l")
@@ -152,7 +152,7 @@ animation = &"forward"
 collision_mask = 2
 
 [node name="CollisionShape3D" parent="HitBox" index="0" unique_id=413488198]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010440946, 0.056928113, -0.00058466196)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010440946, 0.11616893, -0.00058466196)
 shape = SubResource("CapsuleShape3D_ngycw")
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
