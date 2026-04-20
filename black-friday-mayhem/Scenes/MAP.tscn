@@ -9,10 +9,18 @@ size = Vector3(0.04876709, 1, 0.899292)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlwt5"]
 albedo_color = Color(0.9254902, 1, 1, 1)
 albedo_texture = ExtResource("1_rq85h")
-uv1_scale = Vector3(1000, 1000, 1000)
+uv1_scale = Vector3(400, 250, 1000)
 
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
 material = SubResource("StandardMaterial3D_tlwt5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53y2r"]
+albedo_texture = ExtResource("1_rq85h")
+uv1_scale = Vector3(100, 30, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3620"]
+albedo_texture = ExtResource("1_rq85h")
+uv1_scale = Vector3(3, 100, 1)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_go701"]
 
@@ -75,11 +83,15 @@ transform = Transform3D(250, 0, 0, 0, 2, 0, 0, 0, 250, 0, 12.5, 0)
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="Floor2" unique_id=1723286756]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Floor2/CSGCombiner3D" unique_id=621466088]
+gi_lightmap_texel_scale = 0.01
 size = Vector3(0.24, 2, 0.8)
+material = SubResource("StandardMaterial3D_53y2r")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D" unique_id=600545358]
+gi_lightmap_texel_scale = 0.01
 operation = 2
 size = Vector3(0.11, 2, 0.71)
+material = SubResource("StandardMaterial3D_m3620")
 
 [node name="Columns" type="Node3D" parent="." unique_id=1746547597]
 
