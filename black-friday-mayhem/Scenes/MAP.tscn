@@ -84,13 +84,13 @@ transform = Transform3D(250, 0, 0, 0, 2, 0, 0, 0, 250, 0, 12.5, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Floor2/CSGCombiner3D" unique_id=621466088]
 gi_lightmap_texel_scale = 0.01
-size = Vector3(0.24, 2, 0.8)
+size = Vector3(0.24, 1, 0.8)
 material = SubResource("StandardMaterial3D_53y2r")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D" unique_id=600545358]
 gi_lightmap_texel_scale = 0.01
 operation = 2
-size = Vector3(0.11, 2, 0.71)
+size = Vector3(0.11, 1, 0.71)
 material = SubResource("StandardMaterial3D_m3620")
 
 [node name="Columns" type="Node3D" parent="." unique_id=1746547597]
@@ -457,91 +457,91 @@ spot_angle = 90.0
 [node name="Bottom East" type="Node" parent="Ceiling/Lighting" unique_id=2102678157]
 
 [node name="East_SpotLight3D" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=705813889]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, -90)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, -90)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D2" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=34544854]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, -75)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, -75)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D3" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=156889776]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, -60)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, -60)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D4" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=1605678337]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, -45)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, -45)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D5" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=1747339727]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, -29.999916)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, -29.999916)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D6" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=1242112073]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, -14.999915)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, -14.999915)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D7" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=1932481410]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, -0.00025177002)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, -0.00025177002)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D8" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=1530386932]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, 14.999748)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, 14.999748)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D9" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=526219561]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, 29.999748)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, 29.999748)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D10" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=532890410]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, 44.99975)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, 44.99975)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D11" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=1867044064]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, 59.999832)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, 59.999832)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D12" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=1273147471]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, 74.999825)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, 74.999825)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="East_SpotLight3D13" type="SpotLight3D" parent="Ceiling/Lighting/Bottom East" unique_id=1327164338]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 10.4, 90)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 20, 11.4, 90)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
@@ -550,91 +550,91 @@ spot_angle = 90.0
 [node name="Bottom West" type="Node" parent="Ceiling/Lighting" unique_id=680080745]
 
 [node name="West_SpotLight3D" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=786024773]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, -90)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, -90)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D2" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=1353207043]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, -75)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, -75)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D3" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=918665444]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, -60)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, -60)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D4" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=1985936902]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, -45)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, -45)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D5" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=427516999]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, -29.999916)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, -29.999916)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D6" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=165768605]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, -14.999915)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, -14.999915)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D7" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=628443649]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, -0.00025177002)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, -0.00025177002)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D8" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=287731784]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, 14.999748)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, 14.999748)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D9" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=242698369]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, 29.999748)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, 29.999748)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D10" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=455871226]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, 44.99975)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, 44.99975)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D11" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=634113730]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, 59.999832)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, 59.999832)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D12" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=1791608784]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, 74.999825)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, 74.999825)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
 [node name="West_SpotLight3D13" type="SpotLight3D" parent="Ceiling/Lighting/Bottom West" unique_id=1229303575]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 10.4, 90)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -20, 11.4, 90)
 light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
 light_energy = 8.272
 spot_range = 14.852
