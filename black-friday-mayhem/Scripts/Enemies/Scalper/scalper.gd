@@ -78,12 +78,15 @@ func play_if_not(anim):
 
 
 func _on_hit_box_body_entered(body: Node3D) -> void:
+	if not body.is_in_group("Player"): # Check if collision is not player
+		return
 	
 	if (is_defeated || playing_game) :
 		return
 	playing_game = true
 	#Tells the player to stop velocity
-	body.stop_velocity.emit()
+	if body.has_signal("stop_velocity"):
+		body.stop_velocity.emit()
 	var battle = Palcomon.instantiate()
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))

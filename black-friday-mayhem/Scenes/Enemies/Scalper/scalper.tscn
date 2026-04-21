@@ -136,23 +136,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ngycw"]
-radius = 0.08300781
-height = 0.34926796
-
 [node name="Scalper" unique_id=1282377910 instance=ExtResource("1_qdkv4")]
 script = ExtResource("2_pyl3l")
 
 [node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
-offset = Vector2(0, 15)
 sprite_frames = SubResource("SpriteFrames_tkbos")
 animation = &"forward"
-
-[node name="HitBox" parent="." index="1" unique_id=1793053768]
-collision_mask = 2
-
-[node name="CollisionShape3D" parent="HitBox" index="0" unique_id=413488198]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010440946, 0.056928113, -0.00058466196)
-shape = SubResource("CapsuleShape3D_ngycw")
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
