@@ -240,7 +240,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
 collision_layer = 3
 
 [node name="Camera3D" type="Camera3D" parent="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" unique_id=1322557545]
-transform = Transform3D(1, 0, 0, 0, 0.99452186, 0.10452846, 0, -0.10452846, 0.99452186, 0, 1.1628699, 1.6341922)
+transform = Transform3D(1, 0, 0, 0, 0.9694453, 0.24530737, 0, -0.24530737, 0.9694453, 0, 1.1628699, 1.6341922)
 cull_mask = 1048543
 
 [node name="Main Viewport" type="SubViewport" parent="Main Camera/SubViewportContainer" unique_id=1830492384]
