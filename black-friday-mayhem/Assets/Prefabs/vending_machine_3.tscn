@@ -22,21 +22,21 @@ texture = ExtResource("3_6cncu")
 entity_name = "Vending Machine"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=936403119]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=729517197]
 shape = SubResource("BoxShape3D_6mgjk")
-metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0072875, -0.9, 0.21646899)
 mesh = ExtResource("2_6mgjk")
 surface_material_override/0 = SubResource("StandardMaterial3D_6cncu")
-metadata/_edit_lock_ = true
 
 [node name="TriggerZone" type="Area3D" parent="." unique_id=17846116]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
 shape = SubResource("BoxShape3D_532bl")
-metadata/_edit_lock_ = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2066546484]
+light_color = Color(0.50980395, 0.76862746, 0.9647059, 1)
+light_energy = 0.2
+omni_range = 2.5
