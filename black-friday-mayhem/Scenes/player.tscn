@@ -265,7 +265,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody3D" unique_id=1293440747]
+[node name="player" type="CharacterBody3D" unique_id=1293440747 groups=["Player"]]
 slide_on_ceiling = false
 script = ExtResource("1_cvnsp")
 inventory = ExtResource("2_vgqql")
