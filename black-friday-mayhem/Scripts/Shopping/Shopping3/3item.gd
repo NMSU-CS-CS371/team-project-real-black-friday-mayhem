@@ -105,13 +105,13 @@ func purchaseItem():
 	var item: InvItem
 	match id:
 		0:
-			item = load("res://Assets/Inventory/Items/jam.tres")
+			item = load("res://Assets/Inventory/Items/Placeholders/jam.tres")
 		1:
-			item = load("res://Assets/Inventory/Items/cereal.tres")
+			item = load("res://Assets/Inventory/Items/Placeholders/cereal.tres")
 		2:
-			item = load("res://Assets/Inventory/Items/corn.tres")
+			item = load("res://Assets/Inventory/Items/Placeholders/corn.tres")
 		3:
-			item = load("res://Assets/Inventory/Items/toilet_paper.tres")
+			item = load("res://Assets/Inventory/Items/Placeholders/toilet_paper.tres")
 	player.inventory.insert(item)
 	parent.update_wallet_label()
 	queue_free()
