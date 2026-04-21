@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cxhl6r63ugnvj" path="res://Scenes/Enemies/enemy.tscn" id="1_w6adf"]
 [ext_resource type="Texture2D" uid="uid://bjpf2n2mch4mp" path="res://Assets/Sprites/KarenSheet.png" id="2_b26ap"]
-[ext_resource type="Script" uid="uid://c5vc41qf8m83a" path="res://Scripts/Enemies/karen.gd" id="2_yl5dt"]
+[ext_resource type="Script" uid="uid://c5vc41qf8m83a" path="res://Scripts/Enemies/Karen/karen.gd" id="2_yl5dt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yl5dt"]
 atlas = ExtResource("2_b26ap")

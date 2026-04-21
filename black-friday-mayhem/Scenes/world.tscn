@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ca777g5pbeirm" path="res://Scenes/Enemies/Grandma/granny.tscn" id="5_axeuq"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/Scalper/scalper.tscn" id="6_5ukr8"]
 [ext_resource type="Script" uid="uid://03rqiqf5wyxb" path="res://Scripts/mask_camera.gd" id="6_e0ngr"]
-[ext_resource type="PackedScene" uid="uid://bakriia4ytcfp" path="res://Scenes/Enemies/karen.tscn" id="6_pt3ps"]
+[ext_resource type="PackedScene" uid="uid://bakriia4ytcfp" path="res://Scenes/Enemies/Karen/karen.tscn" id="6_pt3ps"]
 [ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
@@ -200,7 +200,7 @@ obstacle_size = Vector3(2, 2, 2)
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.39, 1, 10.941)
 
 [node name="Granny" parent="." unique_id=96948668 instance=ExtResource("5_axeuq")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -14.879, 1, -69.988)
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.879175, 1, -69.98772)
 
 [node name="Karen" parent="." unique_id=1890375671 instance=ExtResource("6_pt3ps")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9, 1.8, -19.925)
@@ -240,7 +240,7 @@ size = Vector2i(800, 600)
 render_target_update_mode = 4
 
 [node name="MainPlayerSHOPPING" parent="Main Camera/SubViewportContainer/Player Viewport" unique_id=1293440747 instance=ExtResource("2_5a7ea")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3706998, 90)
 collision_layer = 3
 
 [node name="Camera3D" type="Camera3D" parent="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" unique_id=1322557545]
@@ -1123,7 +1123,7 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 60)
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 40)
 
 [node name="Plant6" parent="Objects/Plant_Group" unique_id=1000367517 instance=ExtResource("25_pt3ps")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, -16.848003, -5.216652)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 40)
 
 [node name="Plant7" parent="Objects/Plant_Group" unique_id=1714187388 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 20)

@@ -9,11 +9,13 @@ var time = 0.0
 var radius = 5.0
 var angle = 0.0
 var center : Vector3
+var game = preload("res://Scenes/Enemies/Karen/button_masher.tscn")
 
 #mini game varibles
 var is_defeated = false
 var playing_game = false
 
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	center = global_position  # starting point = center of circle
 	cycle()
@@ -29,9 +31,12 @@ func cycle():
 			sprite.play("idle")
 		await get_tree().create_timer(pause_time).timeout
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if is_defeated :
-		sprite.offset.y = 7
+		#sprite.play("defeated") #need to implement
+		sprite.play("idle")
+		sprite.offset.y = 15
 		velocity = Vector3.ZERO
 	elif playing_game :
 		sprite.play("idle")
@@ -57,5 +62,27 @@ func _physics_process(delta: float) -> void:
 	
 # moved movement and animation logic to entity_movement.gd
 
-func _on_hit_box_body_entered(_body: Node3D) -> void:
+func _on_hit_box_body_entered(body: Node3D) -> void:
+	if not body.is_in_group("Player"):
+		return
+	if body.inventory.numItems <= 0 :
+		return
+	if body.inventory.getItem() == null :
+		return
+	if playing_game || is_defeated :
+		return
 	print("karen hit")
+	body.stop_velocity.emit()
+	
+	playing_game = true
+	var battle = game.instantiate()
+	add_child(battle)
+	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))
+
+func _on_minigame_finished(result):
+	if result == "win" :
+		is_defeated = true
+		#print("Enemy defeated")
+	else :
+		is_defeated = false
+	playing_game = false
