@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://csu734d30ye8j"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_ubk65"]
+[ext_resource type="Texture2D" uid="uid://b6lxorfd0t0n3" path="res://Assets/Sprites/polo.png" id="2_uedby"]
+
+[resource]
+script = ExtResource("1_ubk65")
+name = "Polo Shirt"
+sprite = ExtResource("2_uedby")
+itemDesc = "Perfect for a 65 year old man going golfing. You're not quite sure why you bought this."
+spriteScale = Vector2(0.1, 0.1)
+metadata/_custom_type_script = "uid://cu5shqx502vy4"

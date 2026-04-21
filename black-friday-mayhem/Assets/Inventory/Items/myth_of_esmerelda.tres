@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://k2cw32ri8v7q"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_a4cx4"]
+[ext_resource type="Texture2D" uid="uid://cy5hlruoahvow" path="res://Assets/Sprites/myth_of_esmerelda.png" id="2_u0j7l"]
+
+[resource]
+script = ExtResource("1_a4cx4")
+name = "The Myth of Esmerelda"
+sprite = ExtResource("2_u0j7l")
+itemDesc = "Holding this projects the image of a green tee and khaki shorts into your mind."
+spriteScale = Vector2(0.2, 0.2)
+metadata/_custom_type_script = "uid://cu5shqx502vy4"
