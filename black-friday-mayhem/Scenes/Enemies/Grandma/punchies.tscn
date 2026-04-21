@@ -403,6 +403,7 @@ vertical_alignment = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2100007618]
 stream = ExtResource("8_gwv23")
 autoplay = true
+bus = &"Music"
 
 [connection signal="timeout" from="Grandma/Timer" to="Grandma" method="_on_timer_timeout"]
 [connection signal="knockedOut" from="Player" to="Grandma" method="stopDisrespectingMyGangsYo"]

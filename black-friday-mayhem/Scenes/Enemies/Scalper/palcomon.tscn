@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cpwithll7q61f"]
 
 [ext_resource type="Script" uid="uid://blkewc3234s5x" path="res://Scripts/Enemies/Scalper/palcomon.gd" id="1_2ybmw"]
-[ext_resource type="Shader" path="res://Scripts/pixel.gdshader" id="2_1xjt3"]
+[ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="2_1xjt3"]
 [ext_resource type="Texture2D" uid="uid://gc34io4jmolk" path="res://Assets/Textures/StoreBackground.png" id="2_2ybmw"]
 [ext_resource type="FontFile" uid="uid://dpewd1wcpt3hq" path="res://Assets/Fonts/Wacky Pixels.ttf" id="3_ssak1"]
 [ext_resource type="Texture2D" uid="uid://1a67q208byl8" path="res://Assets/Textures/ScalperIdle.png" id="4_2ybmw"]
@@ -661,6 +661,7 @@ animation = &"done"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=700157121]
 stream = ExtResource("12_hmm1d")
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Defend" to="." method="_on_defend_pressed"]

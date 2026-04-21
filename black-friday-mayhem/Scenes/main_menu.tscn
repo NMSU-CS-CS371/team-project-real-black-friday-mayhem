@@ -99,6 +99,7 @@ offset_bottom = 72.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2007940004]
 stream = ExtResource("6_opfnp")
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_pressed"]
