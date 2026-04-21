@@ -7,14 +7,6 @@
 script = ExtResource("2_qnduc")
 metadata/_custom_type_script = "uid://b8osk211ooncn"
 
-[sub_resource type="Resource" id="Resource_lwqfr"]
-script = ExtResource("2_qnduc")
-metadata/_custom_type_script = "uid://b8osk211ooncn"
-
-[sub_resource type="Resource" id="Resource_6fhmq"]
-script = ExtResource("2_qnduc")
-metadata/_custom_type_script = "uid://b8osk211ooncn"
-
 [sub_resource type="Resource" id="Resource_7henx"]
 script = ExtResource("2_qnduc")
 metadata/_custom_type_script = "uid://b8osk211ooncn"
@@ -71,6 +63,14 @@ metadata/_custom_type_script = "uid://b8osk211ooncn"
 script = ExtResource("2_qnduc")
 metadata/_custom_type_script = "uid://b8osk211ooncn"
 
+[sub_resource type="Resource" id="Resource_o64nn"]
+script = ExtResource("2_qnduc")
+metadata/_custom_type_script = "uid://b8osk211ooncn"
+
+[sub_resource type="Resource" id="Resource_edp7q"]
+script = ExtResource("2_qnduc")
+metadata/_custom_type_script = "uid://b8osk211ooncn"
+
 [sub_resource type="Resource" id="Resource_h4ame"]
 script = ExtResource("2_qnduc")
 metadata/_custom_type_script = "uid://b8osk211ooncn"
@@ -85,5 +85,5 @@ metadata/_custom_type_script = "uid://b8osk211ooncn"
 
 [resource]
 script = ExtResource("5_0rque")
-slots = Array[ExtResource("2_qnduc")]([SubResource("Resource_qnduc"), SubResource("Resource_lwqfr"), SubResource("Resource_6fhmq"), SubResource("Resource_7henx"), SubResource("Resource_dqj5g"), SubResource("Resource_mm788"), SubResource("Resource_m0ptn"), SubResource("Resource_0rque"), SubResource("Resource_j7twm"), SubResource("Resource_npv3j"), SubResource("Resource_poqs1"), SubResource("Resource_3uytj"), SubResource("Resource_m1c4s"), SubResource("Resource_td3t4"), SubResource("Resource_jxcm1"), SubResource("Resource_pyioc"), SubResource("Resource_t83k2"), SubResource("Resource_h4ame"), SubResource("Resource_c46l4"), SubResource("Resource_2peo6")])
+slots = Array[ExtResource("2_qnduc")]([SubResource("Resource_qnduc"), SubResource("Resource_7henx"), SubResource("Resource_dqj5g"), SubResource("Resource_mm788"), SubResource("Resource_m0ptn"), SubResource("Resource_0rque"), SubResource("Resource_j7twm"), SubResource("Resource_npv3j"), SubResource("Resource_poqs1"), SubResource("Resource_3uytj"), SubResource("Resource_m1c4s"), SubResource("Resource_td3t4"), SubResource("Resource_jxcm1"), SubResource("Resource_pyioc"), SubResource("Resource_t83k2"), SubResource("Resource_o64nn"), SubResource("Resource_edp7q"), SubResource("Resource_h4ame"), SubResource("Resource_c46l4"), SubResource("Resource_2peo6")])
 metadata/_custom_type_script = "uid://dyio2hqf3htfw"

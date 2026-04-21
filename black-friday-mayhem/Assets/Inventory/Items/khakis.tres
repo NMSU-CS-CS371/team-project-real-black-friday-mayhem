@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://dwk24iiuc88xn"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_baeiv"]
+[ext_resource type="Texture2D" uid="uid://ddrke4f0rsr7l" path="res://Assets/Sprites/khakis.png" id="2_3fxlp"]
+
+[resource]
+script = ExtResource("1_baeiv")
+name = "Khakis"
+sprite = ExtResource("2_3fxlp")
+itemDesc = "They do not spark joy."
+spriteScale = Vector2(0.12, 0.12)
+metadata/_custom_type_script = "uid://cu5shqx502vy4"
