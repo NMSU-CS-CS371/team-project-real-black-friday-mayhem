@@ -143,4 +143,3 @@ script = ExtResource("2_pyl3l")
 sprite_frames = SubResource("SpriteFrames_tkbos")
 animation = &"forward"
 
-[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
