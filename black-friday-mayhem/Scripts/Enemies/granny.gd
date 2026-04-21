@@ -8,7 +8,7 @@ var angle = 0.0
 var center : Vector3
 @export var game : Node3D
 var last_position = Vector3.ZERO
-@onready var player = get_tree().root.get_child(1).player
+@onready var player = get_tree().get_first_node_in_group("Player")
 var is_defeated = false
 var playing_game = false
 var punchies = preload("res://Scenes/Enemies/Grandma/punchies.tscn")
@@ -129,4 +129,3 @@ func when_hit(_num) :
 
 	#TO DO:
 	#write comment that make sense pls ^
-

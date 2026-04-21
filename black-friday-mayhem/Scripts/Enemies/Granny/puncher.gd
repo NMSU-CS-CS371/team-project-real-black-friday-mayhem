@@ -6,7 +6,7 @@ signal recovered
 var health = 100
 var isDodging : bool = false
 var isHoldingUP : bool = false
-@onready var player = get_tree().root.get_child(1).player
+@onready var player = get_tree().get_first_node_in_group("Player")
 @export var ROOT : Node2D
 @export var Grandma : Node2D
 @export var MAX_HEALTH : float
