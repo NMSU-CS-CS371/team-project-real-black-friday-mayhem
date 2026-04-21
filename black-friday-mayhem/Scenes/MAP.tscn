@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bliql7yyjcinf" path="res://Assets/Textures/floorMesh2.jpg" id="1_rq85h"]
 [ext_resource type="AudioStream" uid="uid://3a78lui8c7p2" path="res://Assets/SFX/Rollin at 5 - electronic - Map.mp3" id="2_53y2r"]
+[ext_resource type="Material" uid="uid://bis8aksbkd07j" path="res://Assets/Textures/floor_preset.tres" id="2_m3620"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 size = Vector3(0.04876709, 1, 0.899292)
@@ -13,10 +14,6 @@ uv1_scale = Vector3(400, 250, 1000)
 
 [sub_resource type="BoxMesh" id="BoxMesh_f3sb7"]
 material = SubResource("StandardMaterial3D_tlwt5")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53y2r"]
-albedo_texture = ExtResource("1_rq85h")
-uv1_scale = Vector3(100, 30, 100)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3620"]
 albedo_texture = ExtResource("1_rq85h")
@@ -84,13 +81,41 @@ transform = Transform3D(250, 0, 0, 0, 2, 0, 0, 0, 250, 0, 12.5, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Floor2/CSGCombiner3D" unique_id=621466088]
 gi_lightmap_texel_scale = 0.01
-size = Vector3(0.24, 1, 0.8)
-material = SubResource("StandardMaterial3D_53y2r")
+size = Vector3(0.24, 0.75, 0.8)
+material = ExtResource("2_m3620")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D" unique_id=600545358]
 gi_lightmap_texel_scale = 0.01
 operation = 2
-size = Vector3(0.11, 1, 0.71)
+size = Vector3(0.11, 0.75, 0.71)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="SW_Corner" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=508876114]
+transform = Transform3D(0.7071094, 0, 0.7071094, 0, 1, 0, -0.7071094, 0, 0.7071094, -0.055, 0, 0.355)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="SE_Corner" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=96422173]
+transform = Transform3D(0.707108, 0, -0.707108, 0, 1, 0, 0.707108, 0, 0.707108, 0.055, 0, 0.355)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="NW_Corner" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=2026841534]
+transform = Transform3D(0.7071094, 0, -0.7071094, 0, 1, 0, 0.7071094, 0, 0.7071094, -0.05500002, 0, -0.355)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="NE_Corner" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=443360539]
+transform = Transform3D(0.70710826, 0, 0.70710826, 0, 1, 0, -0.70710826, 0, 0.70710826, 0.05500002, 0, -0.355)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
 material = SubResource("StandardMaterial3D_m3620")
 
 [node name="Columns" type="Node3D" parent="." unique_id=1746547597]
@@ -640,7 +665,111 @@ light_energy = 8.272
 spot_range = 14.852
 spot_angle = 90.0
 
+[node name="South Bottom" type="Node" parent="Ceiling/Lighting" unique_id=1866872724]
+
+[node name="South_SpotLight3D13" type="SpotLight3D" parent="Ceiling/Lighting/South Bottom" unique_id=1827673526]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 12.5, 11.4, 95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="South_SpotLight3D15" type="SpotLight3D" parent="Ceiling/Lighting/South Bottom" unique_id=1137864669]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 11.4, 95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="South_SpotLight3D14" type="SpotLight3D" parent="Ceiling/Lighting/South Bottom" unique_id=1429242532]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, -12.5, 11.4, 95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="South Top" type="Node" parent="Ceiling/Lighting" unique_id=266787187]
+
+[node name="South_SpotLight3D13" type="SpotLight3D" parent="Ceiling/Lighting/South Top" unique_id=55571041]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 12.5, 23.4, 95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="South_SpotLight3D15" type="SpotLight3D" parent="Ceiling/Lighting/South Top" unique_id=1170200829]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 23.4, 95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="South_SpotLight3D14" type="SpotLight3D" parent="Ceiling/Lighting/South Top" unique_id=1828913449]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, -12.5, 23.4, 95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="North Bottom" type="Node" parent="Ceiling/Lighting" unique_id=96572616]
+
+[node name="North_SpotLight3D13" type="SpotLight3D" parent="Ceiling/Lighting/North Bottom" unique_id=1186639555]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 12.5, 11.4, -95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="North_SpotLight3D15" type="SpotLight3D" parent="Ceiling/Lighting/North Bottom" unique_id=686004515]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 11.4, -95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="North_SpotLight3D14" type="SpotLight3D" parent="Ceiling/Lighting/North Bottom" unique_id=2081440941]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, -12.5, 11.4, -95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="North Top" type="Node" parent="Ceiling/Lighting" unique_id=2057929773]
+
+[node name="North_SpotLight3D13" type="SpotLight3D" parent="Ceiling/Lighting/North Top" unique_id=1988158784]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 12.5, 23.4, -95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="North_SpotLight3D15" type="SpotLight3D" parent="Ceiling/Lighting/North Top" unique_id=1184385818]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 23.4, -95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
+[node name="North_SpotLight3D14" type="SpotLight3D" parent="Ceiling/Lighting/North Top" unique_id=1246617145]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, -12.5, 23.4, -95)
+light_color = Color(0.9411765, 0.8862745, 0.6666667, 1)
+light_energy = 8.272
+spot_range = 14.852
+spot_angle = 90.0
+
 [node name="Near_Wall_Outlines" type="Node3D" parent="Ceiling" unique_id=565949583]
+
+[node name="North" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=1392083134]
+transform = Transform3D(28, 0, 0, 0, 1, 0, 0, 0, 12, 0, 25, -94.75)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Near_Wall_Outlines/North" unique_id=338850006]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Near_Wall_Outlines/North/StaticBody3D" unique_id=633479449]
+transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_go701")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines/North/StaticBody3D" unique_id=1689720464]
+mesh = SubResource("BoxMesh_5a7ea")
 
 [node name="East" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=358224888]
 transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 200, 21.2, 25, 0)
@@ -652,6 +781,18 @@ transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_go701")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines/East/StaticBody3D" unique_id=1209790087]
+mesh = SubResource("BoxMesh_5a7ea")
+
+[node name="South" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=1036825682]
+transform = Transform3D(28, 0, 0, 0, 1, 0, 0, 0, 12, 0, 25, 94.75)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ceiling/Near_Wall_Outlines/South" unique_id=1989680751]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ceiling/Near_Wall_Outlines/South/StaticBody3D" unique_id=1266956663]
+transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_go701")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Near_Wall_Outlines/South/StaticBody3D" unique_id=1338774065]
 mesh = SubResource("BoxMesh_5a7ea")
 
 [node name="West" type="Node3D" parent="Ceiling/Near_Wall_Outlines" unique_id=296832572]
