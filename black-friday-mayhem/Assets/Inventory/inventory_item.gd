@@ -11,5 +11,5 @@ class_name InvItem
 @export var itemDesc: String = ""
 @export var spriteScale: Vector2 = Vector2(1,1)
 
-# Special items do not stack, they are from enemies
+# Special items are from enemies
 @export var specialItem: bool

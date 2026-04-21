@@ -4,8 +4,8 @@ extends "res://Scripts/obstacle_base.gd"
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 enum checkpointType {SHOP, RESULTS}
 @export var type: checkpointType 
-var shopScenes = [preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
-#var shopScenes = [preload("res://Scenes/Shopping/Shopping1/shopping1.tscn"), preload("res://Scenes/Shopping/Shopping2/shopping2.tscn"), preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
+#var shopScenes = [preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
+var shopScenes = [preload("res://Scenes/Shopping/Shopping1/shopping1.tscn"), preload("res://Scenes/Shopping/Shopping2/shopping2.tscn"), preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
 var resultScreen = preload("res://Scenes/results_screen.tscn")
 
 func _ready() -> void:

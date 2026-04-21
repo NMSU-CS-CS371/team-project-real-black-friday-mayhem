@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://bq86hrjq51yhx"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_y7x57"]
+[ext_resource type="Texture2D" uid="uid://dwgecxbem5ycm" path="res://Assets/Sprites/branded_plush.png" id="2_wwju4"]
+
+[resource]
+script = ExtResource("1_y7x57")
+name = "Branded Plush"
+sprite = ExtResource("2_wwju4")
+itemDesc = "It's a plush of a character from a famous cartoon. It was a little too expensive."
+spriteScale = Vector2(0.35, 0.35)
+metadata/_custom_type_script = "uid://cu5shqx502vy4"
