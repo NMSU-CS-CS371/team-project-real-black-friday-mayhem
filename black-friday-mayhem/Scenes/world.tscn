@@ -176,12 +176,14 @@ player = NodePath("Main Camera/SubViewportContainer/Player Viewport/MainPlayerSH
 [node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 49.302113, 1.6413479, 80.929886)
 visible = true
+shopName = 2
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="ExitCheckpoint" parent="." unique_id=1923526849 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.7829776, 1.6413479, 99.84778)
 visible = true
-type = 1
+checkpointType = 1
+shopName = 0
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
@@ -1065,6 +1067,7 @@ mesh = SubResource("PlaneMesh_hmc15")
 [node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.11260414, 1.6413479, 85.735374)
 visible = true
+shopName = 5
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]

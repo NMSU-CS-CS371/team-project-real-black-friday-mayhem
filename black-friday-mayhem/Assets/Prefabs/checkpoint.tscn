@@ -19,7 +19,8 @@ billboard_mode = 1
 [node name="Checkpoint" unique_id=1452118021 instance=ExtResource("1_3ys4h")]
 visible = false
 script = ExtResource("2_aa6p3")
-type = 0
+checkpointType = 0
+shopName = null
 
 [node name="CollisionShape3D" parent="StaticBody3D" parent_id_path=PackedInt32Array(1734889358) index="0" unique_id=729517197]
 shape = SubResource("BoxShape3D_cj4bi")

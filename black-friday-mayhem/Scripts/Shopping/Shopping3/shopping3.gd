@@ -5,6 +5,7 @@ extends Node2D #Hand Mini Game
 
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 @onready var player = get_parent().get_parent().player
+@onready var checkpoint = get_parent()
 enum GameState{IDLE, RUNNING, FINISHED}
 var state: GameState = GameState.IDLE
 var items: Array[Node2D] = []
@@ -14,6 +15,8 @@ signal shop_finished
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	update_wallet_label()
+	reskin_background()
+	
 	# finish transitioning scene
 	SceneTransition.get_parent().get_node("ColorRect").color.a = 255
 	SceneTransition.play("fade_out")
@@ -68,7 +71,27 @@ func register_item(item: Node2D) -> void:
 #function to unregister items for mini game
 func unregister_item(item: Node2D) -> void:
 	items.erase(item)
+
+# reskins shop depending on which shop the player entered
+func reskin_background():
+	var source = $TileMapLayer.tile_set.get_source(0)
 	
+	match checkpoint.shopName:
+		checkpoint.shop.GAME_SLOP:
+			source.texture = load("res://Assets/Textures/gameslop_shelf.jpg")
+		checkpoint.shop.JKNICKELS:
+			source.texture = load("res://Assets/Textures/stacys_jknickels_shelf.png")
+		checkpoint.shop.HINDS_NOBLE:
+			source.texture = load("res://Assets/Textures/hinds_noble_shelf.png")
+		checkpoint.shop.RADIO_SHACK:
+			source.texture = load("res://Assets/Textures/shelf.jpg")
+		checkpoint.shop.STACYS:
+			source.texture = load("res://Assets/Textures/stacys_jknickels_shelf.png")
+		checkpoint.shop.DEBATE:
+			source.texture = load("res://Assets/Textures/debate_shelf.png")
+		_:
+			print("error: unknown shop in reskin_background()")
+
 # update label with wallet balance
 func update_wallet_label(): 
 	if player.inventory.wallet < 0:
