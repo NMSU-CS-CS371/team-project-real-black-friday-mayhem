@@ -42,8 +42,9 @@ func cycle():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_defeated :
-		#$AnimatedSprite3D.play("defeated")
-		sprite.offset.y = 7
+		#sprite.play("defeated") #need to implement
+		sprite.play("idle")
+		sprite.offset.y = 15
 	elif playing_game :
 		sprite.play("idle")
 	else :
@@ -90,7 +91,7 @@ func play_if_not(anim):
 func _on_hit_box_body_entered(body: Node3D) -> void:
 	if body.inventory.numItems <= 0 :
 		return
-	if playing_game :
+	if playing_game || is_defeated :
 		return
 	print("karen hit")
 	body.stop_velocity.emit()
@@ -102,6 +103,9 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 
 func _on_minigame_finished(result):
 	if result == "win" :
-		is_defeated = false
+		is_defeated = true
 		#print("Enemy defeated")
+	else :
+		is_defeated = false
 	playing_game = false
+	
