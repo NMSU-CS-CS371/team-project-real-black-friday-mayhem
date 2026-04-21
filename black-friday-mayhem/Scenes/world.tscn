@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cja07lh1kaks4" path="res://Scripts/world.gd" id="1_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
+[ext_resource type="Texture2D" uid="uid://prmie2p64mvl" path="res://Assets/Textures/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="2_hmc15"]
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://ca777g5pbeirm" path="res://Scenes/Enemies/Grandma/granny.tscn" id="5_axeuq"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/Scalper/scalper.tscn" id="6_5ukr8"]
 [ext_resource type="Script" uid="uid://03rqiqf5wyxb" path="res://Scripts/mask_camera.gd" id="6_e0ngr"]
-[ext_resource type="Texture2D" uid="uid://c0tpkpp1eg1ah" path="res://Assets/Textures/Sky_Clouds_Photo_Texture_A_P4171314.jpg" id="6_kn0ld"]
 [ext_resource type="PackedScene" uid="uid://bakriia4ytcfp" path="res://Scenes/Enemies/karen.tscn" id="6_pt3ps"]
 [ext_resource type="Shader" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
@@ -27,37 +27,22 @@
 [ext_resource type="PackedScene" uid="uid://m57n0n3tjke1" path="res://Assets/Prefabs/gameSlop.tscn" id="25_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://dnhf125eqduw0" path="res://Assets/Prefabs/plant_1.tscn" id="25_pt3ps"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i4fjy"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pt3ps"]
+panorama = ExtResource("2_hmc15")
 
-[sub_resource type="Sky" id="Sky_pt3ps"]
-sky_material = SubResource("ProceduralSkyMaterial_i4fjy")
+[sub_resource type="Sky" id="Sky_hmc15"]
+sky_material = SubResource("PanoramaSkyMaterial_pt3ps")
 
 [sub_resource type="Environment" id="Environment_hmc15"]
 background_mode = 2
-background_color = Color(1, 1, 1, 1)
-sky = SubResource("Sky_pt3ps")
-tonemap_mode = 2
+sky = SubResource("Sky_hmc15")
+sky_rotation = Vector3(0, 1.7732545, 0)
+tonemap_agx_white = 2.0
+tonemap_agx_contrast = 1.1
 
 [sub_resource type="Environment" id="Environment_c5t2i"]
 background_mode = 1
 background_color = Color(0, 0, 0, 0)
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hgpy0"]
-panorama = ExtResource("6_kn0ld")
-energy_multiplier = 1.63
-
-[sub_resource type="Sky" id="Sky_x3wgy"]
-sky_material = SubResource("PanoramaSkyMaterial_hgpy0")
-process_mode = 1
-
-[sub_resource type="Environment" id="Environment_t2t4p"]
-background_mode = 2
-background_energy_multiplier = 0.52
-sky = SubResource("Sky_x3wgy")
-sky_custom_fov = 43.8
-sky_rotation = Vector3(-2.4609141, -1.6563175, -0.3577925)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_c5t2i"]
 viewport_path = NodePath("Main Camera/SubViewportContainer/Mask Viewport")
@@ -191,8 +176,7 @@ script = ExtResource("1_fo5ed")
 player = NodePath("Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=954260089]
-transform = Transform3D(-0.99649286, -0.07096275, -0.044342503, -4.6327013e-08, -0.52991927, 0.8480481, -0.08367777, 0.8450739, 0.5280608, 0, 20, 0)
-sky_mode = 1
+transform = Transform3D(-0.9198215, 0.33272064, 0.20790699, 4.6327013e-08, -0.52991927, 0.8480481, 0.39233705, 0.7800529, 0.48743114, 0, 20, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639120086]
 environment = SubResource("Environment_hmc15")
@@ -256,9 +240,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9824796, 90)
 collision_layer = 3
 
 [node name="Camera3D" type="Camera3D" parent="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" unique_id=1322557545]
-transform = Transform3D(1, 0, 0, 0, 0.9763015, 0.21641482, 0, -0.21641482, 0.9763015, 0, 1.1628699, 1.6341922)
+transform = Transform3D(1, 0, 0, 0, 0.99452186, 0.10452846, 0, -0.10452846, 0.99452186, 0, 1.1628699, 1.6341922)
 cull_mask = 1048543
-environment = SubResource("Environment_t2t4p")
 
 [node name="Main Viewport" type="SubViewport" parent="Main Camera/SubViewportContainer" unique_id=1830492384]
 handle_input_locally = false
@@ -1136,7 +1119,7 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 60)
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 40)
 
 [node name="Plant6" parent="Objects/Plant_Group" unique_id=1000367517 instance=ExtResource("25_pt3ps")]
-transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 40)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, -16.848003, -5.216652)
 
 [node name="Plant7" parent="Objects/Plant_Group" unique_id=1714187388 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 20)
