@@ -2,12 +2,168 @@
 
 [ext_resource type="Script" uid="uid://jylju3dqdq3a" path="res://Scripts/Enemies/Karen/button_masher.gd" id="1_y1kjv"]
 [ext_resource type="Texture2D" uid="uid://c1fykmsunyljp" path="res://Assets/Textures/mall.jpeg" id="2_sxbc2"]
-[ext_resource type="Texture2D" uid="uid://bxwt0m7maotgq" path="res://Assets/Textures/temp.jpeg" id="3_78gnj"]
+[ext_resource type="Texture2D" uid="uid://dmylajiidl8xf" path="res://Assets/Textures/Karen.png" id="3_5npmi"]
 [ext_resource type="Texture2D" uid="uid://dfsnd4hgikf6o" path="res://Assets/Sprites/jam.png" id="4_78gnj"]
+[ext_resource type="Texture2D" uid="uid://cdlru3rcf8u0n" path="res://Assets/Textures/HANDS.png" id="5_idsrd"]
+[ext_resource type="Texture2D" uid="uid://cukpot3exicx2" path="res://Assets/Textures/BabyAttacking.png" id="6_d3ajb"]
+[ext_resource type="Texture2D" uid="uid://do785xrh272j5" path="res://Assets/Textures/BabyKick.png" id="6_dworv"]
+[ext_resource type="Texture2D" uid="uid://chi1lnso8k6kf" path="res://Assets/Textures/KidAttacking.png" id="7_kxdh1"]
+[ext_resource type="Texture2D" uid="uid://dh5vyabbcoo8g" path="res://Assets/Textures/KidKick.png" id="9_bang0"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5npmi"]
 blend_mode = 4
 light_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3ajb"]
+bg_color = Color(0.02745098, 0.6862745, 0.65882355, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxdh1"]
+bg_color = Color(0.91743773, 0, 0.09795187, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 10
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_dworv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Karen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(185, 27)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Item:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(329, 337)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hands:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(268, 373)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Karen:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hands:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bang0"]
+resource_name = "Shake"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Karen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(185, 27), Vector2(185, 10), Vector2(185, 27), Vector2(185, 30), Vector2(185, 27)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Item:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(329, 337), Vector2(329, 320), Vector2(329, 337), Vector2(329, 354), Vector2(329, 337)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("hands:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(268, 373), Vector2(268, 370), Vector2(268, 373), Vector2(268, 380), Vector2(268, 373)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Karen:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.1333333, 1.1666666, 1.2, 1.2333333, 1.2666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.03490658503988659, 0.0, -0.03490658503988659, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("hands:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.33333334, 0.36666667, 0.4, 0.43333334, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.03490658503988659, 0.0, -0.03490658503988659, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jucje"]
+_data = {
+&"RESET": SubResource("Animation_dworv"),
+&"Shake": SubResource("Animation_bang0")
+}
 
 [node name="Button_Masher" type="Node2D" unique_id=1527775403]
 script = ExtResource("1_y1kjv")
@@ -19,15 +175,72 @@ texture = ExtResource("2_sxbc2")
 
 [node name="Karen" type="TextureRect" parent="." unique_id=1766726619]
 material = SubResource("CanvasItemMaterial_5npmi")
-offset_left = 192.0
-offset_top = 63.0
-offset_right = 642.0
-offset_bottom = 719.0
-texture = ExtResource("3_78gnj")
+offset_left = 185.0
+offset_top = 27.0
+offset_right = 616.0
+offset_bottom = 669.0
+texture = ExtResource("3_5npmi")
 
 [node name="Item" type="TextureRect" parent="." unique_id=190503163]
-offset_left = 348.0
-offset_top = 454.0
-offset_right = 460.0
-offset_bottom = 599.0
+offset_left = 329.0
+offset_top = 337.0
+offset_right = 441.0
+offset_bottom = 482.0
 texture = ExtResource("4_78gnj")
+
+[node name="hands" type="TextureRect" parent="." unique_id=1603974180]
+offset_left = 268.0
+offset_top = 373.0
+offset_right = 847.99994
+offset_bottom = 960.4999
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_idsrd")
+
+[node name="BabyKick" type="TextureRect" parent="." unique_id=1897026808]
+visible = false
+offset_left = 5.9999967
+offset_top = 225.0
+offset_right = 247.24997
+offset_bottom = 627.75
+rotation = -0.08726646
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_dworv")
+
+[node name="Baby" type="TextureRect" parent="." unique_id=152891721]
+visible = false
+offset_left = 8.0
+offset_top = 104.0
+offset_right = 675.49994
+offset_bottom = 740.24994
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_d3ajb")
+
+[node name="Kid" type="TextureRect" parent="." unique_id=842548398]
+visible = false
+offset_left = 344.0
+offset_top = 121.0
+offset_right = 822.0
+offset_bottom = 613.0
+texture = ExtResource("7_kxdh1")
+
+[node name="KidKick" type="TextureRect" parent="." unique_id=1876260640]
+visible = false
+offset_left = 542.00006
+offset_top = 204.99998
+offset_right = 910.00006
+offset_bottom = 606.0
+rotation = -0.08726646
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_bang0")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=407287965]
+offset_left = -1.0
+offset_right = 805.0
+offset_bottom = 27.0
+theme_override_styles/background = SubResource("StyleBoxFlat_d3ajb")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kxdh1")
+value = 50.0
+show_percentage = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2136709519]
+libraries/ = SubResource("AnimationLibrary_jucje")

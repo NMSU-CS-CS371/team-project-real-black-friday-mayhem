@@ -87,9 +87,21 @@ func play_if_not(anim):
 	if sprite.animation != anim:
 		sprite.play(anim)
 
-func _on_hit_box_body_entered(_body: Node3D) -> void:
+func _on_hit_box_body_entered(body: Node3D) -> void:
+	if body.inventory.numItems <= 0 :
+		return
+	if playing_game :
+		return
 	print("karen hit")
+	body.stop_velocity.emit()
+	
+	playing_game = true
 	var battle = game.instantiate()
 	add_child(battle)
-	
-	
+	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))
+
+func _on_minigame_finished(result):
+	if result == "win" :
+		is_defeated = false
+		#print("Enemy defeated")
+	playing_game = false

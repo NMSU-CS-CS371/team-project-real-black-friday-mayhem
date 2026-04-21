@@ -32,17 +32,19 @@ func getItem():
 		return null
 	for slot in slots:
 		if slot.item != null && slot.item.specialItem == false :
-			return slot.item.sprite
+			return slot.item
 	return null
 		
-func remove(item: InvItem):
-	for stuff in slots:
-		if slots[stuff].item == slots[item].item :
-			if slots[stuff].amount == 1 :
-				slots[stuff].amount = 0
-				slots[stuff] = null
+func remove(i: InvItem):
+	for slot in slots:
+		if slot.item == i:
+			if slot.amount <= 1:
+				slot.item = null
+				slot.amount = 0
 			else :
-				slots[stuff].amount -= 1
+				slot.amount -= 1
+	
+	numItems -= 1
 	update.emit()
 
 func reset():
