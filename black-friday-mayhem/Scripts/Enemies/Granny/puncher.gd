@@ -67,6 +67,7 @@ func click():
 		player.playing_game = false
 		player.controlAllowed = true
 		ROOT.queue_free()
+		AudioManager.resume_main_music()
 		pass
 	
 	pass

@@ -19,10 +19,11 @@ func _ready() -> void:
 # Fires the player_entered signal when a body enters the trigger zone
 # Only responds to nodes in the "player" group to avoid false triggers
 func _on_trigger_zone_body_entered(body: Node3D) -> void:
-	print("collision!")
-	$SceneTransition/ColorRect.visible = true
 	if body.is_in_group("player"):
+		print("collision!")
+		$SceneTransition/ColorRect.visible = true
 		player_entered.emit()
+		AudioManager.pause_main_music()
 		SceneTransition.play("fade_in")
 		await get_tree().create_timer(0.5).timeout
 		
@@ -43,4 +44,5 @@ func _on_shopping_minigame_finished():
 	SceneTransition.get_parent().get_node("ColorRect").visible = true
 	SceneTransition.play("fade_out")
 	await get_tree().create_timer(0.5).timeout
+	AudioManager.resume_main_music()
 	SceneTransition.get_parent().get_node("ColorRect").visible = false
