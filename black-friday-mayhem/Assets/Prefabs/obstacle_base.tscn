@@ -19,20 +19,15 @@ script = ExtResource("1_1nlf5")
 obstacle_color = Color(1, 0, 1, 1)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1734889358]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=729517197]
 shape = SubResource("BoxShape3D_1nlf5")
-metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
 mesh = SubResource("QuadMesh_s00e5")
 surface_material_override/0 = SubResource("StandardMaterial3D_5ww3c")
-metadata/_edit_lock_ = true
 
 [node name="TriggerZone" type="Area3D" parent="." unique_id=17846116]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
 shape = SubResource("BoxShape3D_yjnpr")
-metadata/_edit_lock_ = true
