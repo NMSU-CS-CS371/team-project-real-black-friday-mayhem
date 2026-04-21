@@ -1,4 +1,4 @@
-extends EntityMovement
+extends BaseCharacter
 
 var time = 0.0
 var radius = 5.0
@@ -49,6 +49,8 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	if (is_defeated || playing_game) :
 		return
 	playing_game = true
+	AudioManager.pause_main_music()
+	
 	#Tells the player to stop velocity
 	if body.has_signal("stop_velocity"):
 		body.stop_velocity.emit()
@@ -61,3 +63,4 @@ func _on_minigame_finished(result):
 		is_defeated = true
 		print("Enemy defeated")
 	playing_game = false
+	AudioManager.resume_main_music()

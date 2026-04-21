@@ -1,4 +1,4 @@
-extends EntityMovement
+extends BaseCharacter
 
 #movement varibles
 var time = 0.0
@@ -111,6 +111,7 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 			player.playing_game = true
 		if body.has_signal("stop_velocity"):
 			body.stop_velocity.emit()
+		AudioManager.pause_main_music()
 		var killer_instinct = punchies.instantiate()
 		add_child(killer_instinct)
 	else:

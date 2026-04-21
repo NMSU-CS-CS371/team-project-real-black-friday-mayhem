@@ -16,8 +16,8 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://Assets/Sprites/icon.svg"
 
 [autoload]
-AudioManager="*res://Scripts/AudioManager.gd"
 
+AudioManager="*res://Scripts/AudioManager.gd"
 TerrainRebuildCoordinator="*uid://brautlco0ivx3"
 
 [display]

@@ -1,4 +1,4 @@
-extends EntityMovement
+extends BaseCharacter
 
 #movement varibles
 @export var speed := 1.0

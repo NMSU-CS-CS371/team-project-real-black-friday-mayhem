@@ -1,4 +1,4 @@
-extends EntityMovement
+extends BaseCharacter
 
 var target_position: Vector3
 var move_speed := 2.5
