@@ -26,6 +26,10 @@
 [ext_resource type="PackedScene" uid="uid://cy06ifcejxu6r" path="res://Assets/Prefabs/christmasTree.tscn" id="20_yq1aw"]
 [ext_resource type="PackedScene" uid="uid://m57n0n3tjke1" path="res://Assets/Prefabs/gameSlop.tscn" id="25_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://dnhf125eqduw0" path="res://Assets/Prefabs/plant_1.tscn" id="25_pt3ps"]
+[ext_resource type="PackedScene" uid="uid://dkgjh0skteeui" path="res://Assets/Prefabs/trashcan1.tscn" id="27_qebug"]
+[ext_resource type="PackedScene" uid="uid://cn2kvg01twjbh" path="res://Assets/Prefabs/vending_machine_1.tscn" id="28_o2rbt"]
+[ext_resource type="PackedScene" uid="uid://c4fw7cw13pnco" path="res://Assets/Prefabs/vending_machine_3.tscn" id="29_1vso6"]
+[ext_resource type="PackedScene" uid="uid://dk2hv8s0l84gn" path="res://Assets/Prefabs/vending_machine_2.tscn" id="30_o2rbt"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pt3ps"]
 panorama = ExtResource("2_hmc15")
@@ -1157,6 +1161,25 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -80)
 [node name="Plant18" parent="Objects/Plant_Group" unique_id=2005531035 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -80)
 
+[node name="Trash Cans" type="Node" parent="Objects" unique_id=397054411]
+
+[node name="Trashcan" parent="Objects/Trash Cans" unique_id=1656698358 instance=ExtResource("27_qebug")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -24.6, 1.358, 64.85)
+
+[node name="Trashcan2" parent="Objects/Trash Cans" unique_id=340081329 instance=ExtResource("27_qebug")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 24.6, 1.358, 17.46514)
+
+[node name="Vending Machines" type="Node" parent="Objects" unique_id=300656244]
+
+[node name="Vending Machine" parent="Objects/Vending Machines" unique_id=1115818209 instance=ExtResource("28_o2rbt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.6, 1.9, 66)
+
+[node name="Vending Machine2" parent="Objects/Vending Machines" unique_id=1353097296 instance=ExtResource("29_1vso6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.6, 1.9, 67.16195)
+
+[node name="Vending Machine4" parent="Objects/Vending Machines" unique_id=308709333 instance=ExtResource("29_1vso6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6, 1.9, 19.77709)
+
 [node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.11260414, 1.6413479, 85.735374)
 visible = true
@@ -1166,3 +1189,6 @@ obstacle_size = Vector3(2, 2, 2)
 
 [node name="GameSlop" parent="." unique_id=790083064 instance=ExtResource("25_i4fjy")]
 transform = Transform3D(-3.496911e-07, -1, 1.5298986e-07, 0, -4.371139e-08, -3.5, 8, -4.371139e-08, 6.6873992e-15, 24.99, 4.484, 0)
+
+[node name="Vending Machine" parent="." unique_id=413136914 instance=ExtResource("30_o2rbt")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6, 1.9, 18.614704)
