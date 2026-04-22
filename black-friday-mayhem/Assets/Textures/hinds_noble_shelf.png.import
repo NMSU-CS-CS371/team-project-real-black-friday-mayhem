@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ki0bbluu74m2"
-path="res://.godot/imported/KarenGlasses.jpg-dbb4c0cac6ced43e3afec6f1ef0cd554.ctex"
+uid="uid://bc7owitmk0owh"
+path="res://.godot/imported/hinds_noble_shelf.png-750bfb5ebc904031c9b500dba89b7b02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/KarenGlasses.jpg"
-dest_files=["res://.godot/imported/KarenGlasses.jpg-dbb4c0cac6ced43e3afec6f1ef0cd554.ctex"]
+source_file="res://Assets/Textures/hinds_noble_shelf.png"
+dest_files=["res://.godot/imported/hinds_noble_shelf.png-750bfb5ebc904031c9b500dba89b7b02.ctex"]
 
 [params]
 

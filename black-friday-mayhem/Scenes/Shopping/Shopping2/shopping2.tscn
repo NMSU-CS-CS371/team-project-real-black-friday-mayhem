@@ -13,14 +13,14 @@ script = ExtResource("1_yjfng")
 wallet_label = NodePath("WalletLabel")
 
 [node name="Background" type="TextureRect" parent="." unique_id=255902574]
-offset_left = -180.0
-offset_top = -236.0
-offset_right = 1360.0
-offset_bottom = 763.0
+offset_left = -183.0
+offset_top = -195.0
+offset_right = 1188.0
+offset_bottom = 742.0
 texture = ExtResource("2_qa6v8")
 
 [node name="GameTimer" type="Timer" parent="." unique_id=169254731]
-wait_time = 40.0
+wait_time = 30.0
 one_shot = true
 
 [node name="WalletLabel" type="Label" parent="." unique_id=147841446]

@@ -36,7 +36,7 @@ func spawn_item():
 	#var screen_size = get_viewport_rect().size
 	#spawn on the right side of the screen
 	var spawn_x = 50
-	var spawn_y = 270 #or 500
+	var spawn_y = 260 #or 500
 	for x in item_count:
 		print("TESTSEINTGST")
 		var item = item_scene.instantiate()

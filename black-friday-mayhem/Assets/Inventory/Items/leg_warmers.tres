@@ -7,6 +7,6 @@
 script = ExtResource("1_o7vsq")
 name = "Leg Warmers"
 sprite = ExtResource("2_d46a8")
-itemDesc = "The best person you know owns one of these. You just don't get it, mom!"
+itemDesc = "The best person you know owns one of these. And the worst one. You just don't get it, mom!"
 spriteScale = Vector2(0.35, 0.35)
 metadata/_custom_type_script = "uid://cu5shqx502vy4"
