@@ -141,7 +141,9 @@ radius = 0.08300781
 height = 0.2759583
 
 [node name="Scalper" unique_id=1282377910 instance=ExtResource("1_qdkv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15865682, 0)
 script = ExtResource("2_pyl3l")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
 sprite_frames = SubResource("SpriteFrames_tkbos")

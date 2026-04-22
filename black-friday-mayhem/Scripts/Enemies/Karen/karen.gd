@@ -36,7 +36,6 @@ func _physics_process(delta: float) -> void:
 	if is_defeated :
 		#sprite.play("defeated") #need to implement
 		sprite.play("idle")
-		sprite.offset.y = 15
 		velocity = Vector3.ZERO
 	#else if playing game dont move
 	elif playing_game :
@@ -44,7 +43,6 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector3.ZERO
 	#else moving
 	else :
-		sprite.offset.y = 15
 		if moving:
 			#-move-
 			angle += speed * delta

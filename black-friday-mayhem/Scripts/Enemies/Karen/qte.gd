@@ -1,4 +1,4 @@
-extends Node2D
+extends Node2D #Quick Time Event
 
 #Varibles for QTE
 signal finished(success)
@@ -19,19 +19,19 @@ func _ready() -> void:
 	add_to_group("QTE")
 	key_label.text = keyString
 	_animation()  # don't await
-	
 	await get_tree().create_timer(eventDurtion).timeout
-	
 	if not success:
 		finished.emit(false) # failure
 		success = false
 		hide()
 
+#animation for colorrect
 func _animation() :
 	tween = create_tween()
 	tween.tween_property(color_rect, "material:shader_parameter/value", 0, eventDurtion)
 	await tween.finished
 	
+#when key is inputted
 func _input(_event: InputEvent) -> void:
 	if Input.is_key_pressed(keyCode) and not success_label.visible:
 		success_label.show()
