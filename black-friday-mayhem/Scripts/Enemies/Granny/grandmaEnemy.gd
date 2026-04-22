@@ -31,6 +31,7 @@ func take_damage(damage_taken : int):
 		player.player.playing_game = false
 		player.player.controlAllowed = true
 		ROOT.queue_free()
+		AudioManager.resume_main_music()
 	pass
 
 func stopDisrespectingMyGangsYo():

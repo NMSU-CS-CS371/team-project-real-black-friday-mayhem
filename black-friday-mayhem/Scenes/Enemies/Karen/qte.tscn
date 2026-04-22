@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bpi47gu0br0hg"]
+
+[ext_resource type="Script" uid="uid://7qkalvs1vnht" path="res://Scripts/Enemies/Karen/qte.gd" id="1_r4of5"]
+[ext_resource type="Shader" uid="uid://kdq5k7j5t521" path="res://Scripts/Enemies/Karen/qte.gdshader" id="2_ohfct"]
+[ext_resource type="FontFile" uid="uid://b1p4kw1jll2xf" path="res://Assets/Fonts/Awake.ttf" id="3_r6vww"]
+
+[sub_resource type="FontVariation" id="FontVariation_eyon3"]
+base_font = ExtResource("3_r6vww")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jucje"]
+resource_local_to_scene = true
+shader = ExtResource("2_ohfct")
+shader_parameter/first_color = Color(0, 1, 0.3254902, 1)
+shader_parameter/second_color = Color(1, 1, 0, 1)
+shader_parameter/third_color = Color(1, 0, 0, 1)
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/unfilled_color = Color(0.443, 0.443, 0.443, 1)
+shader_parameter/value = 1.0
+shader_parameter/smooth_ = 0.005
+shader_parameter/width_in = 0.78
+shader_parameter/width_out = 0.95
+shader_parameter/border_width = 0.03
+
+[sub_resource type="FontVariation" id="FontVariation_ld5yn"]
+base_font = ExtResource("3_r6vww")
+
+[node name="QTE" type="Node2D" unique_id=130158706]
+script = ExtResource("1_r4of5")
+metadata/_edit_group_ = true
+
+[node name="SuccessLabel" type="Label" parent="." unique_id=995257176]
+visible = false
+offset_left = -48.489494
+offset_top = 120.48162
+offset_right = 237.10992
+offset_bottom = 175.48163
+rotation = -0.43633232
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontVariation_eyon3")
+theme_override_font_sizes/font_size = 80
+text = "Success"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=63258472]
+material = SubResource("ShaderMaterial_jucje")
+offset_right = 178.0
+offset_bottom = 174.0
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="KeyLabel" type="Label" parent="ColorRect" unique_id=1347003966]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 44.0
+offset_right = 152.0
+offset_bottom = 148.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("FontVariation_ld5yn")
+theme_override_font_sizes/font_size = 150
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

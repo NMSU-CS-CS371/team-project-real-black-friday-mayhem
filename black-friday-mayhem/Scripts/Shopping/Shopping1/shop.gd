@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var player = get_parent().get_parent().player
+@onready var checkpoint = get_parent()
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 @onready var walletLabel = $WalletLabel
 var itemsRemoved: int = 0
@@ -10,6 +11,7 @@ signal shop_finished
 # called upon entering the scene
 func _ready() -> void:
 	update_wallet_label()
+	reskin_background()
 	
 	# finish transitioning scene
 	SceneTransition.get_parent().get_node("ColorRect").color.a = 255
@@ -44,6 +46,23 @@ func minigameOver() -> void:
 	emit_signal("shop_finished")
 	queue_free()
 	
+
+# reskins shop depending on which shop the player entered
+func reskin_background():
+	match checkpoint.shopName:
+		checkpoint.shop.GAME_SLOP:
+			$Background.texture = load("res://Assets/Textures/gameslop_shelf.jpg")
+			print("game slop")
+		checkpoint.shop.JKNICKELS_STACYS:
+			$Background.texture = load("res://Assets/Textures/stacys_jknickels_shelf.png")
+		checkpoint.shop.HINDS_NOBLE:
+			$Background.texture = load("res://Assets/Textures/hinds_noble_shelf.png")
+		checkpoint.shop.RADIO_SHACK:
+			$Background.texture = load("res://Assets/Textures/shelf.jpg")
+		checkpoint.shop.DEBATE:
+			$Background.texture = load("res://Assets/Textures/debate_shelf.png")
+		_:
+			print("error: unknown shop in reskin_background()")
 
 # update label with wallet balance
 func update_wallet_label():
