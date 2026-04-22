@@ -7,6 +7,7 @@ height = 0.5487671
 radius = 0.2734375
 
 [node name="Trashcan" unique_id=1656698358 instance=ExtResource("1_ljie2")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=2117290257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.005645752, 0)
