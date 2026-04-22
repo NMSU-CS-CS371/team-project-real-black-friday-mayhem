@@ -208,7 +208,6 @@ obstacle_size = Vector3(2, 2, 2)
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.7829776, 1.6413479, 99.84778)
 visible = true
 checkpointType = 1
-shopName = 0
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
@@ -1198,7 +1197,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6
 
 [node name="GameSlop_check" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -0.16439772)
-shopName = 0
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="SoD_check" parent="." unique_id=1618437645 instance=ExtResource("3_8j60k")]
