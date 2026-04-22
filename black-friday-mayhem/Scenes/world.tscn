@@ -186,14 +186,22 @@ player = NodePath("Main Camera/SubViewportContainer/Player Viewport/MainPlayerSH
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=954260089]
 transform = Transform3D(-0.9198215, 0.33272064, 0.20790699, 4.6327013e-08, -0.52991927, 0.8480481, 0.39233705, 0.7800529, 0.48743114, 0, 20, 0)
+shadow_bias = 10.0
+shadow_normal_bias = 10.0
+shadow_transmittance_bias = 16.0
+shadow_blur = 10.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639120086]
 environment = SubResource("Environment_hmc15")
 
-[node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
+[node name="JKNickel_check" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -23.851583, 1.641, -0.018862247)
-visible = true
 shopName = 2
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="HindsNobel_check" parent="." unique_id=1920992833 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -23.851583, 1.641, -42.44495)
+shopName = 1
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="ExitCheckpoint" parent="." unique_id=1923526849 instance=ExtResource("3_8j60k")]
@@ -1188,10 +1196,24 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.
 [node name="Vending Machine4" parent="Objects/Vending Machines" unique_id=308709333 instance=ExtResource("29_1vso6")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6, 1.9, 19.77709)
 
-[node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
+[node name="GameSlop_check" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -0.16439772)
-visible = true
 shopName = 0
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="SoD_check" parent="." unique_id=1618437645 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -42.13826)
+shopName = 4
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="Stacys_check" parent="." unique_id=310179556 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -24.112827, 1.6413479, 42.43651)
+shopName = 2
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="Radioshack_check" parent="." unique_id=266669433 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.465897, 1.6413479, 42.43651)
+shopName = 3
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]

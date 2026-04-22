@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://do785xrh272j5" path="res://Assets/Textures/BabyKick.png" id="6_dworv"]
 [ext_resource type="Texture2D" uid="uid://chi1lnso8k6kf" path="res://Assets/Textures/KidAttacking.png" id="7_kxdh1"]
 [ext_resource type="Texture2D" uid="uid://dh5vyabbcoo8g" path="res://Assets/Textures/KidKick.png" id="9_bang0"]
+[ext_resource type="AudioStream" uid="uid://c25fruf7b1x3r" path="res://Assets/SFX/Reformat - Karen.mp3" id="11_jucje"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5npmi"]
 blend_mode = 4
@@ -385,5 +386,10 @@ libraries/ = SubResource("AnimationLibrary_jucje")
 
 [node name="Timer" type="Timer" parent="." unique_id=275581598]
 wait_time = 5.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=110885249]
+stream = ExtResource("11_jucje")
+autoplay = true
+bus = &"Music"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
