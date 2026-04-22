@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://k8vgfxancgy0"]
 
 [ext_resource type="AudioStream" uid="uid://3a78lui8c7p2" path="res://Assets/SFX/Rollin at 5 - electronic - Map.mp3" id="2_53y2r"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/floorMesh2.jpg" id="2_m3620"]
+[ext_resource type="Texture2D" uid="uid://bliql7yyjcinf" path="res://Assets/Textures/floorMesh2.jpg" id="2_m3620"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 size = Vector3(0.04876709, 1, 0.899292)
@@ -213,29 +213,9 @@ mesh = SubResource("CylinderMesh_8j60k")
 
 [node name="Markers" type="Node3D" parent="." unique_id=426178103]
 
-[node name="Subject of Debate" type="MeshInstance3D" parent="Markers" unique_id=537328418]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 1, -42.5)
-mesh = SubResource("BoxMesh_036b0")
-
-[node name="Hinds and Noble" type="MeshInstance3D" parent="Markers" unique_id=990845085]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 1, -42.5)
-mesh = SubResource("BoxMesh_036b0")
-
 [node name="GameSlop" type="MeshInstance3D" parent="Markers" unique_id=1771602411]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 1, 0)
 visible = false
-mesh = SubResource("BoxMesh_036b0")
-
-[node name="Radio Shack" type="MeshInstance3D" parent="Markers" unique_id=1536684997]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 1, 0)
-mesh = SubResource("BoxMesh_036b0")
-
-[node name="JK Nickels" type="MeshInstance3D" parent="Markers" unique_id=207414603]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 1, 42.5)
-mesh = SubResource("BoxMesh_036b0")
-
-[node name="Stacy\'s" type="MeshInstance3D" parent="Markers" unique_id=1627094550]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 1, 42.5)
 mesh = SubResource("BoxMesh_036b0")
 
 [node name="Walls" type="Node3D" parent="." unique_id=1593764907]
