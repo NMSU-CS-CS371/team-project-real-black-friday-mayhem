@@ -49,19 +49,6 @@ sky_rotation = Vector3(0, 1.7732545, 0)
 tonemap_agx_white = 2.0
 tonemap_agx_contrast = 1.1
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pt3ps"]
-panorama = ExtResource("2_hmc15")
-
-[sub_resource type="Sky" id="Sky_hmc15"]
-sky_material = SubResource("PanoramaSkyMaterial_pt3ps")
-
-[sub_resource type="Environment" id="Environment_hmc15"]
-background_mode = 2
-sky = SubResource("Sky_hmc15")
-sky_rotation = Vector3(0, 1.7732545, 0)
-tonemap_agx_white = 2.0
-tonemap_agx_contrast = 1.1
-
 [sub_resource type="Environment" id="Environment_c5t2i"]
 background_mode = 1
 background_color = Color(0, 0, 0, 0)
