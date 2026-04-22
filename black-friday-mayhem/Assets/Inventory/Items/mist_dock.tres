@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://cfdexuvovvdon"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_l7wju"]
+[ext_resource type="Texture2D" uid="uid://7ef1kgm3s6gn" path="res://Assets/Sprites/mist_dock.png" id="2_tq2qw"]
+
+[resource]
+script = ExtResource("1_l7wju")
+name = "Mist Dock"
+sprite = ExtResource("2_tq2qw")
+itemDesc = "It's surprisingly light. You wonder how anybody could buy any other handheld."
+spriteScale = Vector2(0.1, 0.1)
+metadata/_custom_type_script = "uid://cu5shqx502vy4"

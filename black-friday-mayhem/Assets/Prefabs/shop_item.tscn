@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bn4fjk21yr3xd"]
 
-[ext_resource type="Script" uid="uid://dd408yijb5xl" path="res://Scripts/Shopping1/shop_item.gd" id="1_es6jb"]
+[ext_resource type="Script" uid="uid://dd408yijb5xl" path="res://Scripts/Shopping/Shopping1/shop_item.gd" id="1_es6jb"]
+[ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="2_es6jb"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h2lxn"]
 load_path = "res://.godot/imported/sample_sprite.png-c5e401b963383d4cbb1bbcb234b9fecb.ctex"
@@ -14,13 +15,16 @@ script = ExtResource("1_es6jb")
 texture = SubResource("CompressedTexture2D_h2lxn")
 
 [node name="PriceTag" type="Label" parent="." unique_id=238070488]
-offset_left = -35.0
-offset_top = -28.0
-offset_right = 5.0
-offset_bottom = 14.0
+offset_left = -14.0
+offset_top = 5.0
+offset_right = 86.0
+offset_bottom = 54.0
+theme = ExtResource("2_es6jb")
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 30
+text = "99% OFF!
+$9999"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -8,7 +8,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Enemy" type="Node3D" unique_id=1282377910]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_613su"]
+radius = 0.11
+height = 0.37
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3pdns"]
+radius = 0.103027344
+height = 0.34020996
+
+[node name="Enemy" type="CharacterBody3D" unique_id=74096720]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=357323051]
 billboard = 1
@@ -17,8 +25,17 @@ sprite_frames = SubResource("SpriteFrames_3pdns")
 animation = &"Idle"
 
 [node name="HitBox" type="Area3D" parent="." unique_id=1793053768]
+collision_layer = 2
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" unique_id=413488198]
+shape = SubResource("CapsuleShape3D_613su")
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=1394386149]
 target_position = Vector3(0, -10, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1959478342]
+shape = SubResource("CapsuleShape3D_3pdns")
+disabled = true

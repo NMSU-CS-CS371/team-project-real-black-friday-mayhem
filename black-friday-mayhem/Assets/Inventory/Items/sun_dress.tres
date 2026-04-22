@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://iqqdcp0loynj"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_lsrq1"]
+[ext_resource type="Texture2D" uid="uid://cdemrgvj20i1r" path="res://Assets/Sprites/sun_dress.png" id="2_2av87"]
+
+[resource]
+script = ExtResource("1_lsrq1")
+name = "Sun Dress"
+sprite = ExtResource("2_2av87")
+itemDesc = "It reminds you of your mom. Not because she'd wear it, but because she used to make fun of people who did."
+spriteScale = Vector2(0.12, 0.12)
+metadata/_custom_type_script = "uid://cu5shqx502vy4"

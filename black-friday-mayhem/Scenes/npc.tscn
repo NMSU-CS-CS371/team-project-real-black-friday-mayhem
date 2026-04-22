@@ -18,18 +18,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1ig1v"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6unj"]
+radius = 0.49902344
+height = 3.6728516
 
-[node name="Npc" type="Node3D" unique_id=1527463142]
+[node name="Npc" type="CharacterBody3D" unique_id=1570048502]
 script = ExtResource("1_g6unj")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1594509034]
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_h1ryf")
-frame_progress = 0.4266425
+frame = 1
+frame_progress = 0.5486387
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=890553123]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=752736541]
-transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 0, 0)
-shape = SubResource("BoxShape3D_1ig1v")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
+shape = SubResource("CapsuleShape3D_g6unj")

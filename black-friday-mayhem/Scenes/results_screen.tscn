@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://c85dqyu6hx2vh" path="res://Scripts/results_screen.gd" id="1_6256f"]
 [ext_resource type="Texture2D" uid="uid://b1t5lkbbolbc6" path="res://Assets/Sprites/pokemon_cards.png" id="2_isile"]
 [ext_resource type="Texture2D" uid="uid://clspkecdy1h1u" path="res://Assets/Sprites/grandma_candy.png" id="3_bmsfq"]
-[ext_resource type="Texture2D" uid="uid://dihg3uns7yenp" path="res://Assets/Sprites/sample_sprite.png" id="4_6256f"]
 [ext_resource type="Texture2D" uid="uid://cmlii7i5i3edr" path="res://Assets/Sprites/explosion_sprite_sheet.png" id="5_rej3g"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="5_yth4j"]
 [ext_resource type="PackedScene" uid="uid://cjiq8hw5td00b" path="res://Scenes/results_highlight.tscn" id="6_bmsfq"]
+[ext_resource type="Texture2D" uid="uid://b1s3b42raest7" path="res://Assets/Sprites/KarenGlasses.png" id="8_ff1st"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="8_yth4j"]
 [ext_resource type="AudioStream" uid="uid://b7mf24yccfgew" path="res://Assets/SFX/Theme for Harold var 1 - End.mp3" id="10_ff1st"]
 
@@ -500,7 +500,7 @@ color = Color(0, 0, 0, 0.4745098)
 
 [node name="ScalperExplosion" type="AnimatedSprite2D" parent="." unique_id=1553474889]
 z_index = 5
-position = Vector2(261, 21.000008)
+position = Vector2(141, 21.000008)
 scale = Vector2(2.96, 2.96)
 sprite_frames = SubResource("SpriteFrames_ujf8m")
 frame = 49
@@ -514,7 +514,7 @@ texture = ExtResource("2_isile")
 
 [node name="GrandmaExplosion" type="AnimatedSprite2D" parent="." unique_id=126384935]
 z_index = 5
-position = Vector2(578, 21)
+position = Vector2(400, 23)
 scale = Vector2(2.9599998, 2.9599998)
 sprite_frames = SubResource("SpriteFrames_ujf8m")
 frame = 49
@@ -528,7 +528,7 @@ texture = ExtResource("3_bmsfq")
 
 [node name="KarenExplosion" type="AnimatedSprite2D" parent="." unique_id=1073488088]
 z_index = 5
-position = Vector2(894, 21)
+position = Vector2(664.00006, 14)
 scale = Vector2(2.9599998, 2.9599998)
 sprite_frames = SubResource("SpriteFrames_ujf8m")
 frame = 49
@@ -537,7 +537,8 @@ frame_progress = 1.0
 [node name="KarenReward" type="Sprite2D" parent="." unique_id=485715056]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(658, 99)
-texture = ExtResource("4_6256f")
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("8_ff1st")
 
 [node name="MoneySaved" type="Label" parent="." unique_id=1722648159]
 z_index = 1
@@ -569,6 +570,7 @@ libraries/ = SubResource("AnimationLibrary_2isyb")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1678728106]
 stream = ExtResource("10_ff1st")
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttons/MenuButton" to="." method="_on_menu_pressed"]

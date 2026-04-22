@@ -19,13 +19,13 @@ extends Node2D #Hand Enemy
 enum HandState {WAITING, MOVING_TO_ITEM, RETURNING}
 var state : = HandState.WAITING
 #how long the hand pauses at spawn
-@export var wait_time : = 2.0 #seconds to wait when spawned
+@export var wait_time : = 0.6 #seconds to wait when spawned
 #Timer counts elapsed time
 var wait_timer : = 0.0
 #the item the hand will go for
 var target_item : Node2D = null
 #speed toward item
-@export var move_speed: = 100.0
+@export var move_speed: = 250
 var elapsed_time := 0.0
 
 #Variables for Spawning Hands

@@ -11,35 +11,35 @@ visibility_layer = 2
 script = ExtResource("1_a148l")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2137579883]
-offset_left = -76.0
-offset_top = -171.0
-offset_right = 1304.0
-offset_bottom = 749.0
+offset_left = -84.0
+offset_top = -237.0
+offset_right = 1296.0
+offset_bottom = 683.0
 texture = ExtResource("2_bygdm")
 
 [node name="ShopItem1" parent="." unique_id=1748581523 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
-position = Vector2(149, 196)
+position = Vector2(141, 199)
 
 [node name="ShopItem2" parent="." unique_id=65281389 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
-position = Vector2(402, 196)
+position = Vector2(394, 199)
 
 [node name="ShopItem3" parent="." unique_id=711618290 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
-position = Vector2(654, 196)
+position = Vector2(646, 199)
 
 [node name="ShopItem4" parent="." unique_id=1405839974 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
-position = Vector2(149, 431)
+position = Vector2(141, 434)
 
 [node name="ShopItem5" parent="." unique_id=132437186 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
-position = Vector2(402, 431)
+position = Vector2(394, 434)
 
 [node name="ShopItem6" parent="." unique_id=330223020 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
-position = Vector2(654, 431)
+position = Vector2(646, 434)
 
 [node name="SceneTransition" parent="." unique_id=1029859877 instance=ExtResource("4_tamj1")]
 visibility_layer = 4
