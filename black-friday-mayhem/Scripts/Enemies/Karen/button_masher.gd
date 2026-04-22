@@ -101,9 +101,9 @@ func lose():
 	queue_free()
 	
 func defeated():
-	#var item: InvItem
-	#item = load("res://Assets/Inventory/Items/karen_glasses.tres")
-	#player.inventory.insert(item)
+	var item: InvItem
+	item = load("res://Assets/Inventory/Items/karen_glasses.tres")
+	player.inventory.insert(item)
 	player.inventory.beatKaren = true
 	player.controlAllowed = true
 	invContainer.visible = true
