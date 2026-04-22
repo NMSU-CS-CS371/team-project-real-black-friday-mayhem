@@ -196,13 +196,11 @@ environment = SubResource("Environment_hmc15")
 
 [node name="JKNickel_check" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -23.851583, 1.641, -0.018862247)
-visible = true
 shopName = 2
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="HindsNobel_check" parent="." unique_id=1920992833 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -23.851583, 1.641, -42.44495)
-visible = true
 shopName = 1
 obstacle_size = Vector3(2, 2, 2)
 
@@ -1200,25 +1198,21 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6
 
 [node name="GameSlop_check" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -0.16439772)
-visible = true
 shopName = 0
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="SoD_check" parent="." unique_id=1618437645 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -42.13826)
-visible = true
 shopName = 4
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="Stacys_check" parent="." unique_id=310179556 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -24.112827, 1.6413479, 42.43651)
-visible = true
 shopName = 2
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="Radioshack_check" parent="." unique_id=266669433 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.465897, 1.6413479, 42.43651)
-visible = true
 shopName = 3
 obstacle_size = Vector3(2, 2, 2)
 
