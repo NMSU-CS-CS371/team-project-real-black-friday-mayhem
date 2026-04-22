@@ -45,7 +45,7 @@ func play_if_not_flip(anim, flip):
 		sprite.flip_h = flip
 		sprite.play(anim)
 
-#update the animation baised on what
+#update the animation
 func update_animation() -> void:
 	var direction = velocity	# global_position - last_position = velocity
 	direction.y = 0				# ignore vertical movement for animation purposes
@@ -81,17 +81,14 @@ func update_animation() -> void:
 		else :
 			play_if_not_flip("Back", false)
 
-
 func _on_hit_box_body_entered(body: Node3D) -> void:
 	# Ensure the player exists and has stop_velocity signal
 	if not body.is_in_group("Player"):
 		return
-
 	# Temporary fallback if player variable isn't fully set
 	var game_active = false
 	if player and "playing_game" in player:
 		game_active = player.playing_game
-
 	# Check if the player is currently playing the minigame before processing the hit
 	if hit >= 2 && !game_active:
 		print("oh heck no")
@@ -105,7 +102,6 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	else:
 		hit = hit + 1
 		print("sorry.!")
-
 
 #this function is for the textbox when grandma is hit
 func when_hit(_num) :

@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cja07lh1kaks4" path="res://Scripts/world.gd" id="1_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="2_hmc15"]
+[ext_resource type="Texture2D" uid="uid://prmie2p64mvl" path="res://Assets/Textures/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="2_hmc15"]
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://ca777g5pbeirm" path="res://Scenes/Enemies/Grandma/granny.tscn" id="5_axeuq"]
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/Scalper/scalper.tscn" id="6_5ukr8"]
 [ext_resource type="Script" uid="uid://03rqiqf5wyxb" path="res://Scripts/mask_camera.gd" id="6_e0ngr"]
 [ext_resource type="PackedScene" uid="uid://bakriia4ytcfp" path="res://Scenes/Enemies/Karen/karen.tscn" id="6_pt3ps"]
-[ext_resource type="Shader" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
+[ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
 [ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="9_7yui6"]
@@ -58,7 +58,7 @@ viewport_path = NodePath("Main Camera/SubViewportContainer/Mask Viewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c5t2i"]
 shader = ExtResource("6_yky5r")
-shader_parameter/pixel_count = Vector2(192, 192)
+shader_parameter/pixel_count = Vector2(128, 128)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e0ngr"]
 viewport_path = NodePath("Main Camera/SubViewportContainer/Player Viewport")
@@ -186,14 +186,22 @@ player = NodePath("Main Camera/SubViewportContainer/Player Viewport/MainPlayerSH
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=954260089]
 transform = Transform3D(-0.9198215, 0.33272064, 0.20790699, 4.6327013e-08, -0.52991927, 0.8480481, 0.39233705, 0.7800529, 0.48743114, 0, 20, 0)
+shadow_bias = 10.0
+shadow_normal_bias = 10.0
+shadow_transmittance_bias = 16.0
+shadow_blur = 10.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639120086]
 environment = SubResource("Environment_hmc15")
 
-[node name="ShopCheckpoint" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
+[node name="JKNickel_check" parent="." unique_id=1452118021 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -23.851583, 1.641, -0.018862247)
-visible = true
 shopName = 2
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="HindsNobel_check" parent="." unique_id=1920992833 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -23.851583, 1.641, -42.44495)
+shopName = 1
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="ExitCheckpoint" parent="." unique_id=1923526849 instance=ExtResource("3_8j60k")]
@@ -204,13 +212,13 @@ shopName = 0
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.39, 1.7466624, 10.941)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.39, 1.7789459, 10.941)
 
 [node name="Granny" parent="." unique_id=96948668 instance=ExtResource("5_axeuq")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.879175, 1.8927884, -69.98772)
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.879, 1.9248326, -69.988)
 
 [node name="Karen" parent="." unique_id=1890375671 instance=ExtResource("6_pt3ps")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9, 1.7443717, -19.925)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9, 1.7206182, -19.925)
 
 [node name="SceneTransition" parent="." unique_id=1118554034 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
@@ -1118,55 +1126,55 @@ mesh = SubResource("PlaneMesh_hmc15")
 [node name="Plant1" parent="Objects/Plant_Group" unique_id=337281523 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 80)
 
-[node name="Plant2" parent="Objects/Plant_Group" unique_id=848476549 instance=ExtResource("25_pt3ps")]
+[node name="Plant2" parent="Objects/Plant_Group" unique_id=1402831183 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 80)
 
-[node name="Plant3" parent="Objects/Plant_Group" unique_id=668656448 instance=ExtResource("25_pt3ps")]
+[node name="Plant3" parent="Objects/Plant_Group" unique_id=1240155120 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 60)
 
-[node name="Plant4" parent="Objects/Plant_Group" unique_id=465448379 instance=ExtResource("25_pt3ps")]
+[node name="Plant4" parent="Objects/Plant_Group" unique_id=509143296 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 60)
 
-[node name="Plant5" parent="Objects/Plant_Group" unique_id=43805776 instance=ExtResource("25_pt3ps")]
+[node name="Plant5" parent="Objects/Plant_Group" unique_id=463887439 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 40)
 
-[node name="Plant6" parent="Objects/Plant_Group" unique_id=1000367517 instance=ExtResource("25_pt3ps")]
+[node name="Plant6" parent="Objects/Plant_Group" unique_id=1062209424 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 40)
 
-[node name="Plant7" parent="Objects/Plant_Group" unique_id=1714187388 instance=ExtResource("25_pt3ps")]
+[node name="Plant7" parent="Objects/Plant_Group" unique_id=163076704 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 20)
 
-[node name="Plant8" parent="Objects/Plant_Group" unique_id=755061401 instance=ExtResource("25_pt3ps")]
+[node name="Plant8" parent="Objects/Plant_Group" unique_id=146058747 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 20)
 
-[node name="Plant9" parent="Objects/Plant_Group" unique_id=878264646 instance=ExtResource("25_pt3ps")]
+[node name="Plant9" parent="Objects/Plant_Group" unique_id=1375294223 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -0.0004234314)
 
-[node name="Plant10" parent="Objects/Plant_Group" unique_id=1283373374 instance=ExtResource("25_pt3ps")]
+[node name="Plant10" parent="Objects/Plant_Group" unique_id=432513989 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -0.0004234314)
 
-[node name="Plant11" parent="Objects/Plant_Group" unique_id=439816138 instance=ExtResource("25_pt3ps")]
+[node name="Plant11" parent="Objects/Plant_Group" unique_id=39622564 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -20.000423)
 
-[node name="Plant12" parent="Objects/Plant_Group" unique_id=1716277862 instance=ExtResource("25_pt3ps")]
+[node name="Plant12" parent="Objects/Plant_Group" unique_id=2135397956 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -20.000423)
 
-[node name="Plant13" parent="Objects/Plant_Group" unique_id=649691162 instance=ExtResource("25_pt3ps")]
+[node name="Plant13" parent="Objects/Plant_Group" unique_id=392266983 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -40.000423)
 
-[node name="Plant14" parent="Objects/Plant_Group" unique_id=632452059 instance=ExtResource("25_pt3ps")]
+[node name="Plant14" parent="Objects/Plant_Group" unique_id=179679889 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -40.000423)
 
-[node name="Plant15" parent="Objects/Plant_Group" unique_id=2138661355 instance=ExtResource("25_pt3ps")]
+[node name="Plant15" parent="Objects/Plant_Group" unique_id=1351506651 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -60.000423)
 
-[node name="Plant16" parent="Objects/Plant_Group" unique_id=777884136 instance=ExtResource("25_pt3ps")]
+[node name="Plant16" parent="Objects/Plant_Group" unique_id=1914807042 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -60.000423)
 
-[node name="Plant17" parent="Objects/Plant_Group" unique_id=873714802 instance=ExtResource("25_pt3ps")]
+[node name="Plant17" parent="Objects/Plant_Group" unique_id=1466684430 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -80)
 
-[node name="Plant18" parent="Objects/Plant_Group" unique_id=2005531035 instance=ExtResource("25_pt3ps")]
+[node name="Plant18" parent="Objects/Plant_Group" unique_id=401152528 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -80)
 
 [node name="Trash Cans" type="Node" parent="Objects" unique_id=397054411]
@@ -1188,10 +1196,24 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.
 [node name="Vending Machine4" parent="Objects/Vending Machines" unique_id=308709333 instance=ExtResource("29_1vso6")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6, 1.9, 19.77709)
 
-[node name="DebugShop" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
+[node name="GameSlop_check" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -0.16439772)
-visible = true
 shopName = 0
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="SoD_check" parent="." unique_id=1618437645 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -42.13826)
+shopName = 4
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="Stacys_check" parent="." unique_id=310179556 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -24.112827, 1.6413479, 42.43651)
+shopName = 2
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="Radioshack_check" parent="." unique_id=266669433 instance=ExtResource("3_8j60k")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.465897, 1.6413479, 42.43651)
+shopName = 3
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="MAP" parent="." unique_id=1739568515 instance=ExtResource("7_o06y3")]

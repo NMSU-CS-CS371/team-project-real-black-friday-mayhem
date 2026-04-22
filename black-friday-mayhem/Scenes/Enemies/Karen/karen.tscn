@@ -128,13 +128,23 @@ radius = 0.07519531
 height = 0.29977417
 
 [node name="Karen" unique_id=1282377910 instance=ExtResource("1_w6adf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16283754, 0)
 script = ExtResource("2_yl5dt")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
 sprite_frames = SubResource("SpriteFrames_cdurs")
 animation = &"Back"
 frame_progress = 0.9990915
+metadata/_edit_group_ = true
 
-[node name="CollisionShape3D" parent="HitBox" parent_id_path=PackedInt32Array(1793053768) index="0" unique_id=413488198]
+[node name="HitBox" parent="." index="1" unique_id=1793053768]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" parent="HitBox" index="0" unique_id=413488198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.009719849, 0)
 shape = SubResource("CapsuleShape3D_b26ap")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" parent="." index="2" unique_id=1959478342]
+metadata/_edit_group_ = true
