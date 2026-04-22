@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ki0bbluu74m2"
-path="res://.godot/imported/KarenGlasses.jpg-dbb4c0cac6ced43e3afec6f1ef0cd554.ctex"
+uid="uid://b1s3b42raest7"
+path="res://.godot/imported/KarenGlasses.png-8ad1984a56b33d73fda41dc6674c8130.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/KarenGlasses.jpg"
-dest_files=["res://.godot/imported/KarenGlasses.jpg-dbb4c0cac6ced43e3afec6f1ef0cd554.ctex"]
+source_file="res://Assets/Sprites/KarenGlasses.png"
+dest_files=["res://.godot/imported/KarenGlasses.png-8ad1984a56b33d73fda41dc6674c8130.ctex"]
 
 [params]
 

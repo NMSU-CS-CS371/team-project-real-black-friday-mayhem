@@ -79,14 +79,12 @@ func reskin_background():
 	match checkpoint.shopName:
 		checkpoint.shop.GAME_SLOP:
 			source.texture = load("res://Assets/Textures/gameslop_shelf.jpg")
-		checkpoint.shop.JKNICKELS:
+		checkpoint.shop.JKNICKELS_STACYS:
 			source.texture = load("res://Assets/Textures/stacys_jknickels_shelf.png")
 		checkpoint.shop.HINDS_NOBLE:
 			source.texture = load("res://Assets/Textures/hinds_noble_shelf.png")
 		checkpoint.shop.RADIO_SHACK:
 			source.texture = load("res://Assets/Textures/shelf.jpg")
-		checkpoint.shop.STACYS:
-			source.texture = load("res://Assets/Textures/stacys_jknickels_shelf.png")
 		checkpoint.shop.DEBATE:
 			source.texture = load("res://Assets/Textures/debate_shelf.png")
 		_:

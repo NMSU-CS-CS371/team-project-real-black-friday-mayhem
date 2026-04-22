@@ -20,7 +20,7 @@ offset_bottom = 742.0
 texture = ExtResource("2_qa6v8")
 
 [node name="GameTimer" type="Timer" parent="." unique_id=169254731]
-wait_time = 40.0
+wait_time = 30.0
 one_shot = true
 
 [node name="WalletLabel" type="Label" parent="." unique_id=147841446]

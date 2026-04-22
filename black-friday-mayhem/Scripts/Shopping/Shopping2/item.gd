@@ -8,28 +8,48 @@ extends Node2D
 #adds to a group to be found
 #will delete itself when clicked by mouse
 @onready var player = get_tree().get_first_node_in_group("Player")
+@onready var checkpoint = get_parent().get_parent()
 
 signal item_clicked()
-#textures for the sprite
-var texture_jam = preload("res://Assets/Sprites/jam.png")
-var texture_corn = preload("res://Assets/Sprites/corncan.png")
-var texture_toiletpaper = preload("res://Assets/Sprites/toiletPaper.png")
-var texture_cereal = preload("res://Assets/Sprites/cereal.png")
+
+# arrays for items of different shops
+var gameSlopItems = ["res://Assets/Inventory/Items/mist_dock.tres",
+"res://Assets/Inventory/Items/grand_larceny.tres", "res://Assets/Inventory/Items/myth_of_esmerelda.tres"]
+var hindsNobleItems = ["res://Assets/Inventory/Items/romance_novel.tres","res://Assets/Inventory/Items/manga.tres",
+"res://Assets/Inventory/Items/dice.tres"]
+var stacysJKNickelsItems = ["res://Assets/Inventory/Items/mom_jeans.tres","res://Assets/Inventory/Items/sun_dress.tres",
+"res://Assets/Inventory/Items/polo.tres","res://Assets/Inventory/Items/khakis.tres",
+"res://Assets/Inventory/Items/perfume.tres"]
+var radioShackItems = ["res://Assets/Inventory/Items/radio.tres","res://Assets/Inventory/Items/phone_charger.tres",
+"res://Assets/Inventory/Items/flip_phone.tres"]
+var debateItems = ["res://Assets/Inventory/Items/branded_plush.tres","res://Assets/Inventory/Items/graphic_tee.tres",
+"res://Assets/Inventory/Items/leg_warmers.tres"]
+var itemSets = [gameSlopItems, hindsNobleItems, stacysJKNickelsItems,
+radioShackItems, debateItems]
+
 #Variables
 var is_taken : bool = false
-var id: int
+#var id: int
 var item_price: int
 var spawn_point: Node2D = null
+var thisItem: InvItem
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var area: Area2D = $Area2D
-@export var move_speed := 120
+@export var move_speed := 180
 
 # Item enters scene and registers itself with game
 func _ready() -> void:
 	randomize()
-	id = randi() % 4  # 0 to 3
-	#set sprite texture to the item texture
-	sprite.texture = item_texture()
+	
+	# select which shop the items are reskinning to
+	var items = itemSets[checkpoint.shopName]
+	
+	# Pick random item
+	thisItem = load(items.pick_random())
+	sprite.texture = thisItem.sprite
+	sprite.scale = thisItem.spriteScale * 1.3
+	calculate_price()
+	
 	#when the node get initialized then register the node in the minigame
 	get_parent().register_item(self) 
 	#when clicked got to clicked function
@@ -47,26 +67,11 @@ func _process(delta):
 		queue_free()
 
 #choose random Item
-func item_texture() -> Texture2D:
-	match id:
-		0: 
-			item_price = 9
-			sprite.offset.y = -50
-			return texture_jam
-		1:
-			item_price = 6
-			sprite.offset.y = -70
-			return texture_cereal
-			
-		2:
-			item_price = 7
-			sprite.offset.y = -55
-			return texture_corn
-		3:
-			item_price = 12
-			sprite.offset.y = -25
-			return texture_toiletpaper
-	return null
+func calculate_price() -> void:
+	if checkpoint.shopName == checkpoint.shop.GAME_SLOP:
+		item_price = randi_range(6,20)*10
+	else:
+		item_price = randi_range(15,30)
 
 #Item leaves scene and unregisters itself
 func _exit_tree() -> void:
@@ -84,16 +89,6 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 func purchaseItem():
 	player.inventory.wallet -= item_price
 	# player.inventory.moneySaved += moneySaved
-	var item: InvItem
-	match id:
-		0:
-			item = load("res://Assets/Inventory/Items/Placeholders/jam.tres")
-		1:
-			item = load("res://Assets/Inventory/Items/Placeholders/cereal.tres")
-		2:
-			item = load("res://Assets/Inventory/Items/Placeholders/corn.tres")
-		3:
-			item = load("res://Assets/Inventory/Items/Placeholders/toilet_paper.tres")
-	player.inventory.insert(item)
+	player.inventory.insert(thisItem)
 	get_parent().update_wallet_label()
 	queue_free()

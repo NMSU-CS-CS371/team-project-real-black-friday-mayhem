@@ -32,7 +32,7 @@ tile_set = SubResource("TileSet_yccae")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1365001331]
 position = Vector2(576, 324)
 script = ExtResource("3_piprj")
-scrollSpeed = 150.0
+scrollSpeed = 180.0
 
 [node name="ScoreLabel" type="Label" parent="Camera2D" unique_id=147841446]
 anchors_preset = 4

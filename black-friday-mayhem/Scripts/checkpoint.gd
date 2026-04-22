@@ -3,11 +3,11 @@ extends "res://Scripts/obstacle_base.gd"
 
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 enum type {SHOP, RESULTS}
-enum shop {GAME_SLOP,HINDS_NOBLE,JKNICKELS,STACYS,RADIO_SHACK,DEBATE}
+enum shop {GAME_SLOP,HINDS_NOBLE,JKNICKELS_STACYS,RADIO_SHACK,DEBATE}
 @export var checkpointType: type 
 @export var shopName: shop
 var shopScenes = [preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
-#var shopScenes = [preload("res://Scenes/Shopping/Shopping1/shopping1.tscn"), preload("res://Scenes/Shopping/Shopping2/shopping2.tscn"), preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
+# var shopScenes = [preload("res://Scenes/Shopping/Shopping1/shopping1.tscn"), preload("res://Scenes/Shopping/Shopping2/shopping2.tscn"), preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
 var resultScreen = preload("res://Scenes/results_screen.tscn")
 
 func _ready() -> void:
