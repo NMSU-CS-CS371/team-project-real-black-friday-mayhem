@@ -212,13 +212,13 @@ shopName = 0
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.39, 1.7466624, 10.941)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.39, 1.7789459, 10.941)
 
 [node name="Granny" parent="." unique_id=96948668 instance=ExtResource("5_axeuq")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.879175, 1.8927884, -69.98772)
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.879, 1.9248326, -69.988)
 
 [node name="Karen" parent="." unique_id=1890375671 instance=ExtResource("6_pt3ps")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9, 1.7443717, -19.925)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9, 1.7206182, -19.925)
 
 [node name="SceneTransition" parent="." unique_id=1118554034 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
