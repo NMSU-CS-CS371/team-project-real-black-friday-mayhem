@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d1qpb7wtc0m2f" path="res://Scenes/Enemies/Scalper/scalper.tscn" id="6_5ukr8"]
 [ext_resource type="Script" uid="uid://03rqiqf5wyxb" path="res://Scripts/mask_camera.gd" id="6_e0ngr"]
 [ext_resource type="PackedScene" uid="uid://bakriia4ytcfp" path="res://Scenes/Enemies/Karen/karen.tscn" id="6_pt3ps"]
-[ext_resource type="Shader" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
+[ext_resource type="Shader" uid="uid://cueydy82r4u5j" path="res://Scripts/pixel.gdshader" id="6_yky5r"]
 [ext_resource type="PackedScene" uid="uid://k8vgfxancgy0" path="res://Scenes/MAP.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
 [ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="9_7yui6"]
@@ -186,6 +186,10 @@ player = NodePath("Main Camera/SubViewportContainer/Player Viewport/MainPlayerSH
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=954260089]
 transform = Transform3D(-0.9198215, 0.33272064, 0.20790699, 4.6327013e-08, -0.52991927, 0.8480481, 0.39233705, 0.7800529, 0.48743114, 0, 20, 0)
+shadow_bias = 10.0
+shadow_normal_bias = 10.0
+shadow_transmittance_bias = 16.0
+shadow_blur = 10.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639120086]
 environment = SubResource("Environment_hmc15")
