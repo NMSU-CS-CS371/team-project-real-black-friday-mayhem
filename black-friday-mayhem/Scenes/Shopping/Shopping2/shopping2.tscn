@@ -50,5 +50,6 @@ horizontal_alignment = 2
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1991542882]
 stream = ExtResource("7_03m0q")
 autoplay = true
+bus = &"Music"
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

@@ -23,23 +23,23 @@ entity_name = "Vending Machine"
 is_interactable = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=287630393]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=729517197]
 shape = SubResource("BoxShape3D_hc8ui")
-metadata/_edit_lock_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0881801, -0.9, 0.272846)
 mesh = ExtResource("2_hc8ui")
 surface_material_override/0 = SubResource("StandardMaterial3D_dqb6v")
-metadata/_edit_lock_ = true
 
 [node name="TriggerZone" type="Area3D" parent="." unique_id=17846116]
 monitoring = false
 monitorable = false
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
 shape = SubResource("BoxShape3D_tj8nk")
-metadata/_edit_lock_ = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1558575659]
+light_color = Color(0.96862745, 0.90588236, 0.40784314, 1)
+light_energy = 0.2
+omni_range = 2.5

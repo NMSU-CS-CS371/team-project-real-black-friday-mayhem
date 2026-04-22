@@ -50,7 +50,10 @@ func _ready() -> void:
 		$Item.texture = texture.sprite
 	else :
 		invContainer.visible = true
+		player.controlAllowed = true
+		emit_signal("game_finished", "win")
 		queue_free()
+		return
 		
 	#before I start the game I need a transition sceen with story 
 	#and instructions on how to play game
@@ -65,6 +68,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if not $ProgressBar.visible:
+		return
 	
 	#need to add an if statement that if the item gets to a certain point the game ends
 	if $ProgressBar.value <= 0:

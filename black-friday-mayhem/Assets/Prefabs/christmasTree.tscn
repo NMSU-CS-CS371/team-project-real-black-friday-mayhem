@@ -4,14 +4,14 @@
 [ext_resource type="ArrayMesh" uid="uid://bdxynhhc17rh2" path="res://Assets/Textures/Christmas Tree Color mm.obj" id="2_0iwe0"]
 [ext_resource type="Texture2D" uid="uid://dhobaaamd6vgm" path="res://Assets/Textures/Christmas Tree Color mm_0.jpg" id="3_5hpbs"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_edohk"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_0iwe0"]
 size = Vector3(6.595863, 6.7235937, 11.346244)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0jo7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hpbs"]
 albedo_color = Color(0.8, 0.8, 0.8, 1)
 albedo_texture = ExtResource("3_5hpbs")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_bigqs"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_edohk"]
 size = Vector3(6.595863, 6.7235937, 11.346244)
 
 [node name="christmasTree" type="Node3D" unique_id=1452118021]
@@ -23,21 +23,16 @@ mesh = ExtResource("2_0iwe0")
 texture = ExtResource("3_5hpbs")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1734889358]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=729517197]
-shape = SubResource("BoxShape3D_edohk")
-metadata/_edit_lock_ = true
+shape = SubResource("BoxShape3D_0iwe0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
 transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, -0.41665953, -1.7686304, -5.6207166)
 mesh = ExtResource("2_0iwe0")
-surface_material_override/0 = SubResource("StandardMaterial3D_p0jo7")
-metadata/_edit_lock_ = true
+surface_material_override/0 = SubResource("StandardMaterial3D_5hpbs")
 
 [node name="TriggerZone" type="Area3D" parent="." unique_id=17846116]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
-shape = SubResource("BoxShape3D_bigqs")
-metadata/_edit_lock_ = true
+shape = SubResource("BoxShape3D_edohk")
