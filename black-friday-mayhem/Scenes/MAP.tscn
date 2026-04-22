@@ -85,7 +85,7 @@ transform = Transform3D(250, 0, 0, 0, 2, 0, 0, 0, 250, 0, 12.5, 0)
 [node name="CSGBox3D" type="CSGBox3D" parent="Floor2/CSGCombiner3D" unique_id=621466088]
 gi_lightmap_texel_scale = 0.01
 size = Vector3(0.24, 0.75, 0.8)
-material = ExtResource("2_m3620")
+material = SubResource("StandardMaterial3D_53y2r")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D" unique_id=600545358]
 gi_lightmap_texel_scale = 0.01
@@ -1068,7 +1068,7 @@ shape = SubResource("BoxShape3D_8j60k")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 23/StaticBody3D" unique_id=1428627159]
 mesh = SubResource("BoxMesh_fo5ed")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1941107631]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1941107631 groups=["MainMusic"]]
 stream = ExtResource("2_53y2r")
 autoplay = true
 bus = &"Music"
