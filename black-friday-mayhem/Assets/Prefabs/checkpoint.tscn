@@ -20,7 +20,7 @@ billboard_mode = 1
 visible = false
 script = ExtResource("2_aa6p3")
 checkpointType = 0
-shopName = null
+shopName = 0
 
 [node name="CollisionShape3D" parent="StaticBody3D" parent_id_path=PackedInt32Array(1734889358) index="0" unique_id=729517197]
 shape = SubResource("BoxShape3D_cj4bi")
@@ -38,3 +38,8 @@ collision_mask = 2
 shape = SubResource("BoxShape3D_br0fs")
 
 [node name="SceneTransition" parent="." index="3" unique_id=1029859877 instance=ExtResource("3_cj4bi")]
+
+[node name="Timer" type="Timer" parent="." index="4" unique_id=1229174777]
+wait_time = 150.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

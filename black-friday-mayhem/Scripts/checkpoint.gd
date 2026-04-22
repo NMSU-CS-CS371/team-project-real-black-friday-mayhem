@@ -9,6 +9,7 @@ enum shop {GAME_SLOP,HINDS_NOBLE,JKNICKELS_STACYS,RADIO_SHACK,DEBATE}
 #var shopScenes = [preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
 var shopScenes = [preload("res://Scenes/Shopping/Shopping1/shopping1.tscn"), preload("res://Scenes/Shopping/Shopping2/shopping2.tscn"), preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
 var resultScreen = preload("res://Scenes/results_screen.tscn")
+var closed = false
 
 func _ready() -> void:
 	# Apply initial size and color when the scene loads
@@ -22,6 +23,12 @@ func _ready() -> void:
 # Only responds to nodes in the "player" group to avoid false triggers
 func _on_trigger_zone_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
+		if closed:
+			return
+		else:
+			closed = true
+			# start timer
+			$Timer.start()
 		print("collision!")
 		$SceneTransition/ColorRect.visible = true
 		player_entered.emit()
@@ -48,3 +55,10 @@ func _on_shopping_minigame_finished():
 	await get_tree().create_timer(0.5).timeout
 	AudioManager.resume_main_music()
 	SceneTransition.get_parent().get_node("ColorRect").visible = false
+
+
+func _on_timer_timeout() -> void:
+	closed = false
+	$Timer.start()
+	print("shop is opened")
+	pass # Replace with function body.
