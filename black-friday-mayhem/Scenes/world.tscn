@@ -58,7 +58,7 @@ viewport_path = NodePath("Main Camera/SubViewportContainer/Mask Viewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c5t2i"]
 shader = ExtResource("6_yky5r")
-shader_parameter/pixel_count = Vector2(192, 192)
+shader_parameter/pixel_count = Vector2(128, 128)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e0ngr"]
 viewport_path = NodePath("Main Camera/SubViewportContainer/Player Viewport")
@@ -214,13 +214,13 @@ shopName = 0
 obstacle_size = Vector3(2, 2, 2)
 
 [node name="Scalper" parent="." unique_id=1282377910 instance=ExtResource("6_5ukr8")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.39, 1, 10.941)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.39, 1.7466624, 10.941)
 
 [node name="Granny" parent="." unique_id=96948668 instance=ExtResource("5_axeuq")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.879175, 1, -69.98772)
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.879175, 1.8927884, -69.98772)
 
 [node name="Karen" parent="." unique_id=1890375671 instance=ExtResource("6_pt3ps")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9, 1.8, -19.925)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9, 1.7443717, -19.925)
 
 [node name="SceneTransition" parent="." unique_id=1118554034 instance=ExtResource("4_fo5ed")]
 visibility_layer = 2
@@ -1128,55 +1128,55 @@ mesh = SubResource("PlaneMesh_hmc15")
 [node name="Plant1" parent="Objects/Plant_Group" unique_id=337281523 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 80)
 
-[node name="Plant2" parent="Objects/Plant_Group" unique_id=848476549 instance=ExtResource("25_pt3ps")]
+[node name="Plant2" parent="Objects/Plant_Group" unique_id=1402831183 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 80)
 
-[node name="Plant3" parent="Objects/Plant_Group" unique_id=668656448 instance=ExtResource("25_pt3ps")]
+[node name="Plant3" parent="Objects/Plant_Group" unique_id=1240155120 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 60)
 
-[node name="Plant4" parent="Objects/Plant_Group" unique_id=465448379 instance=ExtResource("25_pt3ps")]
+[node name="Plant4" parent="Objects/Plant_Group" unique_id=509143296 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 60)
 
-[node name="Plant5" parent="Objects/Plant_Group" unique_id=43805776 instance=ExtResource("25_pt3ps")]
+[node name="Plant5" parent="Objects/Plant_Group" unique_id=463887439 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 40)
 
-[node name="Plant6" parent="Objects/Plant_Group" unique_id=1000367517 instance=ExtResource("25_pt3ps")]
+[node name="Plant6" parent="Objects/Plant_Group" unique_id=1062209424 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 40)
 
-[node name="Plant7" parent="Objects/Plant_Group" unique_id=1714187388 instance=ExtResource("25_pt3ps")]
+[node name="Plant7" parent="Objects/Plant_Group" unique_id=163076704 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, 20)
 
-[node name="Plant8" parent="Objects/Plant_Group" unique_id=755061401 instance=ExtResource("25_pt3ps")]
+[node name="Plant8" parent="Objects/Plant_Group" unique_id=146058747 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, 20)
 
-[node name="Plant9" parent="Objects/Plant_Group" unique_id=878264646 instance=ExtResource("25_pt3ps")]
+[node name="Plant9" parent="Objects/Plant_Group" unique_id=1375294223 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -0.0004234314)
 
-[node name="Plant10" parent="Objects/Plant_Group" unique_id=1283373374 instance=ExtResource("25_pt3ps")]
+[node name="Plant10" parent="Objects/Plant_Group" unique_id=432513989 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -0.0004234314)
 
-[node name="Plant11" parent="Objects/Plant_Group" unique_id=439816138 instance=ExtResource("25_pt3ps")]
+[node name="Plant11" parent="Objects/Plant_Group" unique_id=39622564 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -20.000423)
 
-[node name="Plant12" parent="Objects/Plant_Group" unique_id=1716277862 instance=ExtResource("25_pt3ps")]
+[node name="Plant12" parent="Objects/Plant_Group" unique_id=2135397956 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -20.000423)
 
-[node name="Plant13" parent="Objects/Plant_Group" unique_id=649691162 instance=ExtResource("25_pt3ps")]
+[node name="Plant13" parent="Objects/Plant_Group" unique_id=392266983 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -40.000423)
 
-[node name="Plant14" parent="Objects/Plant_Group" unique_id=632452059 instance=ExtResource("25_pt3ps")]
+[node name="Plant14" parent="Objects/Plant_Group" unique_id=179679889 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -40.000423)
 
-[node name="Plant15" parent="Objects/Plant_Group" unique_id=2138661355 instance=ExtResource("25_pt3ps")]
+[node name="Plant15" parent="Objects/Plant_Group" unique_id=1351506651 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -60.000423)
 
-[node name="Plant16" parent="Objects/Plant_Group" unique_id=777884136 instance=ExtResource("25_pt3ps")]
+[node name="Plant16" parent="Objects/Plant_Group" unique_id=1914807042 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -60.000423)
 
-[node name="Plant17" parent="Objects/Plant_Group" unique_id=873714802 instance=ExtResource("25_pt3ps")]
+[node name="Plant17" parent="Objects/Plant_Group" unique_id=1466684430 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 12.5, 1, -80)
 
-[node name="Plant18" parent="Objects/Plant_Group" unique_id=2005531035 instance=ExtResource("25_pt3ps")]
+[node name="Plant18" parent="Objects/Plant_Group" unique_id=401152528 instance=ExtResource("25_pt3ps")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -12.5, 1, -80)
 
 [node name="Trash Cans" type="Node" parent="Objects" unique_id=397054411]

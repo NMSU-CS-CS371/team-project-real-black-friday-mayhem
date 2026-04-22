@@ -1,4 +1,4 @@
-extends BaseCharacter
+extends BaseCharacter #Grandma
 
 #movement varibles
 var time = 0.0
@@ -6,20 +6,17 @@ var radius = 5.0
 var speed = 0.4
 var angle = 0.0
 var center : Vector3
+#game variables
 @export var game : Node3D
-var last_position = Vector3.ZERO
 @onready var player = get_tree().get_first_node_in_group("Player")
 var is_defeated = false
 var playing_game = false
 var punchies = preload("res://Scenes/Enemies/Grandma/punchies.tscn")
 var hit = 0
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	center = global_position  # starting point = center of circle
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -29,22 +26,17 @@ func _physics_process(delta: float) -> void:
 		sprite.play("Final")
 		velocity = Vector3.ZERO
 	else :
-		sprite.offset.y = 15
 		#-move-
 		time += delta * speed
-
 		#calculate new position
 		var new_x = center.x + cos(time) * radius
 		var new_z = center.z + sin(time) * radius
 		var target_pos = Vector3(new_x, global_position.y, new_z)
-
 		var direction = (target_pos - global_position)
 		direction.y = 0
 		velocity = direction / delta
-
 	# velocity + apply_movement_and_animation() handles grounding now
 	# no more per-frame raycasting :)
-
 	apply_movement_and_animation(delta)
 
 # Override update_animation since Granny uses specific hit-based animations
@@ -53,19 +45,15 @@ func play_if_not_flip(anim, flip):
 		sprite.flip_h = flip
 		sprite.play(anim)
 
-
-
+#update the animation baised on what
 func update_animation() -> void:
 	var direction = velocity	# global_position - last_position = velocity
 	direction.y = 0				# ignore vertical movement for animation purposes
-
 	#prevents tiny jittering movements
 	if direction.length() < 0.001 :
 		return
-
 	#normalize the direction
 	direction = direction.normalized()
-
 	#decide animation
 	if abs(direction.x) > abs(direction.z) :
 		if direction.x > 0 :
@@ -123,9 +111,10 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 func when_hit(_num) :
 	pass
 	#when the granny is hit I want to have you and the grandma stop
-	#and a text box of the grandma and you to be locked in
-	#until you tap/press a button
-	#wont increase granny hit until text box is closed
+	#and a voice line of the grandma 
+	#and you to be locked in
+	#until you sound is over
+	#wont increase granny hit until sound over
 
 	#TO DO:
 	#write comment that make sense pls ^

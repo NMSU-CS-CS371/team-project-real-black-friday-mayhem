@@ -226,10 +226,5 @@ script = ExtResource("2_iv0je")
 sprite_frames = SubResource("SpriteFrames_1mjgs")
 animation = &"Side1_2"
 
-[node name="HitBox" parent="." index="1" unique_id=1793053768]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" parent="HitBox" index="0" unique_id=413488198]
+[node name="CollisionShape3D" parent="HitBox" parent_id_path=PackedInt32Array(1793053768) index="0" unique_id=413488198]
 shape = SubResource("CapsuleShape3D_4lo45")
-
