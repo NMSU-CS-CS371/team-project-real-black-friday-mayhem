@@ -661,6 +661,7 @@ animation = &"done"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=700157121]
 stream = ExtResource("12_hmm1d")
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Defend" to="." method="_on_defend_pressed"]

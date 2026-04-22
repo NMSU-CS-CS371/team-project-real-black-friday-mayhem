@@ -73,5 +73,6 @@ item_count = 50
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1205862209]
 stream = ExtResource("8_6ujwd")
 autoplay = true
+bus = &"Music"
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

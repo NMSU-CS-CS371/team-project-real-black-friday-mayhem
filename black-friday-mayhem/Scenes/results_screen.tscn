@@ -569,6 +569,7 @@ libraries/ = SubResource("AnimationLibrary_2isyb")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1678728106]
 stream = ExtResource("10_ff1st")
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Buttons/MenuButton" to="." method="_on_menu_pressed"]
