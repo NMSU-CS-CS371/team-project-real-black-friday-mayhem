@@ -5,6 +5,7 @@ extends Node2D #Karen's Mini Game
 @onready var invContainer = get_parent().get_parent().get_node("CenterContainer")
 signal game_finished(result)
 var texture
+var speed = 0.4
 var scene1 = preload("res://Assets/Textures/KarenStop.png")
 var scene2 = preload("res://Assets/Textures/KarenStealing.png")
 #varibles for QTE
@@ -69,7 +70,9 @@ func _ready() -> void:
 	startgame()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	speed = speed * delta
+	
 	#changes the progress bar every frame
 	if not $ProgressBar.visible:
 		return
@@ -78,7 +81,7 @@ func _process(_delta: float) -> void:
 	elif $ProgressBar.value >= 400:
 		lose()
 	else :
-		$ProgressBar.value += 0.4 
+		$ProgressBar.value += 0.4
 		if not $AnimationPlayer.is_playing() :
 			$AnimationPlayer.play("Shake")
 
