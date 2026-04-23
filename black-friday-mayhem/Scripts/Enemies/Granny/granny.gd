@@ -90,7 +90,7 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	if player and "playing_game" in player:
 		game_active = player.playing_game
 	# Check if the player is currently playing the minigame before processing the hit
-	if hit >= 2 && !game_active:
+	if hit >= 2 && !game_active: #wait- who did this..? - Jaiden
 		print("oh heck no")
 		if player and "playing_game" in player:
 			player.playing_game = true
@@ -99,9 +99,21 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 		AudioManager.pause_main_music()
 		var killer_instinct = punchies.instantiate()
 		add_child(killer_instinct)
+		killer_instinct.connect("game_finished", Callable(self, "_on_minigame_finished"))
 	else:
 		hit = hit + 1
 		print("sorry.!")
+		
+# *jolena's code, thank you :, ) 
+#function to recieve game results 
+func _on_minigame_finished(result):
+	if result == "win" :
+		is_defeated = true
+		print("granny defeated")
+	playing_game = false
+	AudioManager.resume_main_music()
+	queue_free() # you killed grandma
+	# how could you??? D, :
 
 #this function is for the textbox when grandma is hit
 func when_hit(_num) :

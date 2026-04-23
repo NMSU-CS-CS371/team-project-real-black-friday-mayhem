@@ -48,6 +48,7 @@ func click():
 		punchtype = "punch mid"
 	
 	if health > 0:
+		isDodging = false
 		animationPlayer.play(punchtype)
 	else:
 		tries += 1
@@ -61,13 +62,16 @@ func click():
 		isKnockedOut = false
 		recovered.emit()
 		print("and he's back in the game!!")
+	
+	# This is the state when the player looses
 	if penalizations >= MAX_HEALTH:
 		print("GAME OVER")
 		knockedOut.emit()
 		player.playing_game = false
 		player.controlAllowed = true
-		ROOT.queue_free()
 		AudioManager.resume_main_music()
+		ROOT.emit_gamestate("lose")
+		ROOT.queue_free()
 		pass
 	
 	pass
