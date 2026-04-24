@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://nv1pbgpty4wu"]
 
 [ext_resource type="Texture2D" uid="uid://bwtnhrthp7rpo" path="res://Assets/Sprites/grandma/idle.png" id="1_2fmcf"]
-[ext_resource type="Script" path="res://Scripts/Enemies/Granny/punchies.gd" id="1_e2wbm"]
+[ext_resource type="Script" uid="uid://bkw3yio7tmvrv" path="res://Scripts/Enemies/Granny/punchies.gd" id="1_e2wbm"]
 [ext_resource type="Texture2D" uid="uid://cxa2e6o2aahp4" path="res://Assets/Sprites/grandma/1000_F_656624199_Xqh1sXeNeoBsnUd4rkdDqSqpHmVAfsra.jpg" id="1_to6mo"]
 [ext_resource type="Texture2D" uid="uid://c7x76id3kqi2b" path="res://Assets/Sprites/grandma/hit.png" id="2_7fpuf"]
 [ext_resource type="Texture2D" uid="uid://c2j8n1hv4qg7h" path="res://Assets/Sprites/grandma/little_mac.png" id="4_j1bio"]
