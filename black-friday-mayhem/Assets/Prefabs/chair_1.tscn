@@ -13,6 +13,7 @@ albedo_color = Color(0.8, 0.8, 0.8, 1)
 size = Vector3(0.428868, 0.853117, 0.518972)
 
 [node name="Chair" type="Node3D" unique_id=1452118021]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("1_8rnqw")
 visual_mode = "3D Mesh"
 mesh = ExtResource("2_8drul")
