@@ -2,16 +2,18 @@ extends Panel
 
 @onready var itemSprite: Sprite2D = $CenterContainer/Panel/ItemDisplay
 @onready var stack_text: Label = $CenterContainer/Panel/StackNum
+@onready var inventoryUI = get_parent().get_parent().get_parent()
+
 #@onready var itemTag: Panel = $ItemTag
 var itemName = ""
 var itemDesc = ""
 var slotGlobal: InvSlot
+var hovering
 
 func _process(_delta: float):
 	var local_mouse_pos = get_local_mouse_position()
-	var hovering = Rect2(Vector2(), size).has_point(local_mouse_pos)
-	if hovering:
-		mouse_entered.emit()
+	hovering = Rect2(Vector2(), $ColorRect.size).has_point(local_mouse_pos)
+	
 
 func update(slot: InvSlot):
 	slotGlobal = slot
@@ -28,14 +30,19 @@ func update(slot: InvSlot):
 		stack_text.text = str(slot.amount)
 
 func _on_mouse_hover():
+	print("mouse entered")
 	if slotGlobal != null and slotGlobal.item != null:
 		itemName = slotGlobal.item.name
 		itemDesc = slotGlobal.item.itemDesc
 		
 		print(itemName)
 		print(itemDesc)
-		#itemTag.visible = true
+		inventoryUI.show_item_tag(itemName, itemDesc)
+		
 	
 func _on_mouse_leave():
-	#itemTag.visible = false
-	pass
+	if hovering:
+		return
+	print("mouse left")
+	inventoryUI.hide_item_tag()
+	

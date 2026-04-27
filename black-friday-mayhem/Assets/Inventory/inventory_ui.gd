@@ -8,6 +8,7 @@ var is_open: bool = false
 func _ready():
 	inventory.update.connect(update_slots)
 	update_slots()
+	$ItemTag.visible = false
 	close()
 
 func update_slots():
@@ -28,6 +29,27 @@ func _process(_delta):
 			close()
 		else:
 			open()
+
+func show_item_tag(name: String, desc: String):
+	if $ItemTag.visible:
+		return
+	
+	var tagPos
+	
+	$ItemTag.get_child(1).text = name
+	$ItemTag.get_child(2).text = desc
+	# put item 
+	tagPos = get_local_mouse_position()
+	print(str(tagPos))
+	if tagPos.x > 370.0:
+		tagPos.x = 370.0
+	$ItemTag.position = tagPos
+	$ItemTag.visible = true
+
+func hide_item_tag():
+	if $ItemTag.visible == false:
+		return
+	$ItemTag.visible = false
 
 func open():
 	self.visible = true

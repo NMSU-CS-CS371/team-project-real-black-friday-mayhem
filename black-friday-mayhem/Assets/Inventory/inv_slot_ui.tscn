@@ -7,6 +7,7 @@ self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(165, 165)
 offset_right = 165.0
 offset_bottom = 165.0
+mouse_filter = 2
 script = ExtResource("1_j3wrx")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=247614511]
@@ -31,9 +32,11 @@ offset_left = 15.0
 offset_top = 15.0
 offset_right = 151.0
 offset_bottom = 151.0
+mouse_filter = 2
 
 [node name="Panel" type="Panel" parent="CenterContainer" unique_id=165072528]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="ItemDisplay" type="Sprite2D" parent="CenterContainer/Panel" unique_id=1775041089]
 
@@ -54,5 +57,3 @@ horizontal_alignment = 2
 
 [connection signal="mouse_entered" from="ColorRect" to="." method="_on_mouse_hover"]
 [connection signal="mouse_exited" from="ColorRect" to="." method="_on_mouse_leave"]
-[connection signal="mouse_entered" from="CenterContainer" to="." method="_on_mouse_hover"]
-[connection signal="mouse_exited" from="CenterContainer" to="." method="_on_mouse_leave"]

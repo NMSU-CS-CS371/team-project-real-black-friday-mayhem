@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bdbvfsbssgrc7"]
+
+[ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="1_ulgd8"]
+
+[node name="ItemTag" type="Control" unique_id=1723856918]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -495.0
+offset_bottom = -500.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=856432832]
+layout_mode = 0
+offset_right = 305.0
+offset_bottom = 100.0
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="ItemName" type="Label" parent="." unique_id=656255302]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 289.0
+offset_bottom = 25.0
+theme = ExtResource("1_ulgd8")
+theme_override_font_sizes/font_size = 27
+text = "Item Name"
+
+[node name="ItemDesc" type="Label" parent="." unique_id=1208256029]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 31.0
+offset_right = 304.0
+offset_bottom = 100.0
+theme = ExtResource("1_ulgd8")
+theme_override_font_sizes/font_size = 18
+text = "It reminds you of your mom. Not because she'd wear it, but because she used to make fun of people who did."
+autowrap_mode = 2
