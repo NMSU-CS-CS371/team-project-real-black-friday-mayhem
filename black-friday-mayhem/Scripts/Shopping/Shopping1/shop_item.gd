@@ -75,12 +75,10 @@ func _on_timer_timeout():
 	queue_free()
 
 # On player clicking the item
-func _input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if $Sprite2D.get_rect().has_point(to_local(event.position)):
-			print("Market Value: ", marketVal, "\nDiscount: ", discount,
-			"\nPrice: ", discountedPrice, "\nMoney Saved: ", moneySaved)
-			purchase_item()
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	#if the mouse clicks on item purchase it
+	if event is InputEventMouseButton and event.pressed:
+		purchase_item()
 
 # Take money, place item in inventory
 func purchase_item():
