@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_tamj1"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="5_es823"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a148l"]
+radius = 59.0
+height = 120.0
+
 [node name="Shop" type="Node2D" unique_id=1138335139]
 visibility_layer = 2
 script = ExtResource("1_a148l")
@@ -21,25 +25,91 @@ texture = ExtResource("2_bygdm")
 visibility_layer = 2
 position = Vector2(141, 199)
 
+[node name="Area2D" type="Area2D" parent="ShopItem1" unique_id=2044990134]
+position = Vector2(8, 31)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopItem1/Area2D" unique_id=928957043]
+position = Vector2(-9.333334, -48)
+shape = SubResource("CapsuleShape2D_a148l")
+metadata/_edit_group_ = true
+
 [node name="ShopItem2" parent="." unique_id=65281389 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
 position = Vector2(394, 199)
+
+[node name="Area2D" type="Area2D" parent="ShopItem2" unique_id=1130799831]
+position = Vector2(8, 31)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopItem2/Area2D" unique_id=1999951091]
+position = Vector2(-9.333334, -48)
+shape = SubResource("CapsuleShape2D_a148l")
+metadata/_edit_group_ = true
 
 [node name="ShopItem3" parent="." unique_id=711618290 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
 position = Vector2(646, 199)
 
+[node name="Area2D" type="Area2D" parent="ShopItem3" unique_id=1783506938]
+position = Vector2(8, 31)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopItem3/Area2D" unique_id=975551019]
+position = Vector2(-9.333334, -48)
+shape = SubResource("CapsuleShape2D_a148l")
+metadata/_edit_group_ = true
+
 [node name="ShopItem4" parent="." unique_id=1405839974 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
 position = Vector2(141, 434)
+
+[node name="Area2D" type="Area2D" parent="ShopItem4" unique_id=860484155]
+position = Vector2(8, 31)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopItem4/Area2D" unique_id=552931801]
+position = Vector2(-9.333334, -48)
+shape = SubResource("CapsuleShape2D_a148l")
+metadata/_edit_group_ = true
 
 [node name="ShopItem5" parent="." unique_id=132437186 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
 position = Vector2(394, 434)
 
+[node name="Area2D" type="Area2D" parent="ShopItem5" unique_id=638009916]
+position = Vector2(8, 31)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopItem5/Area2D" unique_id=1114104713]
+position = Vector2(-9.333334, -48)
+shape = SubResource("CapsuleShape2D_a148l")
+metadata/_edit_group_ = true
+
 [node name="ShopItem6" parent="." unique_id=330223020 instance=ExtResource("3_qcloi")]
 visibility_layer = 2
 position = Vector2(646, 434)
+
+[node name="Area2D" type="Area2D" parent="ShopItem6" unique_id=789221045]
+position = Vector2(8, 31)
+collision_layer = 2
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopItem6/Area2D" unique_id=846114354]
+position = Vector2(-9.333334, -48)
+shape = SubResource("CapsuleShape2D_a148l")
+metadata/_edit_group_ = true
 
 [node name="SceneTransition" parent="." unique_id=1029859877 instance=ExtResource("4_tamj1")]
 visibility_layer = 4
@@ -63,8 +133,14 @@ text = "$999999"
 horizontal_alignment = 2
 
 [connection signal="item_exiting_tree" from="ShopItem1" to="." method="_on_item_exiting"]
+[connection signal="input_event" from="ShopItem1/Area2D" to="ShopItem1" method="_on_area_2d_input_event"]
 [connection signal="item_exiting_tree" from="ShopItem2" to="." method="_on_item_exiting"]
+[connection signal="input_event" from="ShopItem2/Area2D" to="ShopItem2" method="_on_area_2d_input_event"]
 [connection signal="item_exiting_tree" from="ShopItem3" to="." method="_on_item_exiting"]
+[connection signal="input_event" from="ShopItem3/Area2D" to="ShopItem3" method="_on_area_2d_input_event"]
 [connection signal="item_exiting_tree" from="ShopItem4" to="." method="_on_item_exiting"]
+[connection signal="input_event" from="ShopItem4/Area2D" to="ShopItem4" method="_on_area_2d_input_event"]
 [connection signal="item_exiting_tree" from="ShopItem5" to="." method="_on_item_exiting"]
+[connection signal="input_event" from="ShopItem5/Area2D" to="ShopItem5" method="_on_area_2d_input_event"]
 [connection signal="item_exiting_tree" from="ShopItem6" to="." method="_on_item_exiting"]
+[connection signal="input_event" from="ShopItem6/Area2D" to="ShopItem6" method="_on_area_2d_input_event"]
