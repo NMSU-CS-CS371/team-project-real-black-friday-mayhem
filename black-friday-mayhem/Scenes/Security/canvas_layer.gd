@@ -13,7 +13,7 @@ var dialogue = [
 	{"text": "...", "frame": 3},
 	{"text": "...exactly what I thought, another Black Friday shopper.", "frame": 2},
 	{"text": "Look, you're obviously here for the mall's GOOD DEALS, so lets get this out of the way.", "frame": 1},
-	{"text": "We got six shops, so have your pick of merchandise.", "frame": 1},
+	{"text": "We got six shops, so have your pick of merchandise. The upstairs is currently under maintanence, sorry.", "frame": 1},
 	{"text": "Shoppers are greedy, so grab as much as you can as fast as possible. But don't spend everything at once.", "frame": 1},
 	{"text": "There's also greedier shoppers than you, so stay clear of them... or don't if you're up for a challenge.", "frame": 2},
 	{"text": "When you're done with all your shopping, just leave the same way you came in.", "frame": 1},
