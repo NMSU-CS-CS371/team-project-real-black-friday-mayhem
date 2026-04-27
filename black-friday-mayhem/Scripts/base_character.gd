@@ -51,4 +51,3 @@ func play_if_not(anim1: String, anim2: String = "", anim3: String = "") -> void:
 	elif anim3 != "" and sprite.sprite_frames.has_animation(anim3):
 		if sprite.animation != anim3:
 			sprite.play(anim3)
-
