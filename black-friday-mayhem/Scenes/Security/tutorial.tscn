@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bsvpjnoj07jik"]
+
+[ext_resource type="Texture2D" uid="uid://dhb1yhfw0tb01" path="res://Assets/Textures/security_background.png" id="1_27hpu"]
+[ext_resource type="Script" uid="uid://baav83a4acerm" path="res://Scenes/Security/canvas_layer.gd" id="1_wsbln"]
+[ext_resource type="Texture2D" uid="uid://bh3vjom4b8g54" path="res://Assets/Textures/sec_idle.png" id="2_5l5jj"]
+[ext_resource type="Texture2D" uid="uid://csximpwajljcv" path="res://Assets/Textures/sec_mad.png" id="3_d7j4l"]
+[ext_resource type="Texture2D" uid="uid://dps73wh1wtgk7" path="res://Assets/Textures/sec_mad_talk.png" id="4_wsbln"]
+[ext_resource type="Texture2D" uid="uid://bp118qp5nrd25" path="res://Assets/Textures/sec_talk.png" id="5_fxovi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q1itp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5l5jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fxovi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wsbln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_d7j4l")
+}],
+"loop": true,
+"name": &"security",
+"speed": 5.0
+}]
+
+[node name="Tutorial" type="Node2D" unique_id=1134294922]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1788334059]
+script = ExtResource("1_wsbln")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1055382699]
+offset_right = 804.0
+offset_bottom = 597.0
+texture = ExtResource("1_27hpu")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=998435332]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control" unique_id=421208446]
+position = Vector2(438, 404)
+scale = Vector2(1.1295025, 1.1538461)
+sprite_frames = SubResource("SpriteFrames_q1itp")
+animation = &"security"
+frame_progress = 0.255871
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=817715945]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 419.0
+offset_right = 570.0
+offset_bottom = 501.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Panel" unique_id=559430003]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 384.0
+offset_bottom = 147.0
+text = "temp"
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Panel" unique_id=813853745]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 71.0
+offset_right = 441.0
+offset_bottom = 149.0
+text = "Next"

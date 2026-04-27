@@ -81,6 +81,10 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_b4kx4"]
 material = SubResource("StandardMaterial3D_c0rar")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_v41eo"]
+height = 3.2475586
+radius = 0.57373047
+
 [node name="Security" type="Node3D" unique_id=39786801]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=175247611]
@@ -160,3 +164,9 @@ mesh = SubResource("CylinderMesh_b4kx4")
 [node name="baton2" type="MeshInstance3D" parent="." unique_id=27947583]
 transform = Transform3D(0.020768395, 0.059320677, 0.034480978, 0.0409576, -0.057357647, 0, 0.019777477, 0.05649032, -0.036208592, -0.54080015, -0.43015754, 0.12187743)
 mesh = SubResource("CylinderMesh_b4kx4")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1987699221]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=18577909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24642062, 0)
+shape = SubResource("CylinderShape3D_v41eo")
