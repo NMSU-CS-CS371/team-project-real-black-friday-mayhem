@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://caitkxhgbjt1m" path="res://Assets/Prefabs/HindsNobel.tscn" id="34_opbav"]
 [ext_resource type="PackedScene" uid="uid://p81qi7ibnvtl" path="res://Assets/Prefabs/subjectOfDebate.tscn" id="35_coyub"]
 [ext_resource type="PackedScene" uid="uid://bb72cyg50fji" path="res://Assets/Prefabs/Entrance.tscn" id="36_ochwf"]
+[ext_resource type="PackedScene" uid="uid://bdqvxaaf7koco" path="res://Assets/Prefabs/security.tscn" id="37_p5wkl"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pt3ps"]
 panorama = ExtResource("2_hmc15")
@@ -1220,3 +1221,6 @@ transform = Transform3D(-3.496911e-07, -1, 1.5298986e-07, 0, -4.371139e-08, -3.5
 
 [node name="Entrance" parent="." unique_id=343526050 instance=ExtResource("36_ochwf")]
 transform = Transform3D(-6, -1.509958e-07, 2.970106e-14, 0, -4.371139e-08, -4.5, 9.0597484e-07, -1, 1.9670125e-07, 0, 5.3486977, 99.7)
+
+[node name="Security" parent="." unique_id=39786801 instance=ExtResource("37_p5wkl")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 1, 0.49371052, 2.4148436, 74.92677)
