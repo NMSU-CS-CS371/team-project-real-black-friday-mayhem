@@ -11,5 +11,5 @@ class_name InvItem
 @export var itemDesc: String = ""
 @export var spriteScale: Vector2 = Vector2(1,1)
 
-# Special items are from enemies
+# Special items are from enemies, cannot be stolen
 @export var specialItem: bool

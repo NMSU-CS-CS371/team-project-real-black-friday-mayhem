@@ -13,6 +13,7 @@ func _ready():
 
 func update_slots():
 	
+	# turn wallet balance red if negative, white otherwise
 	if inventory.wallet < 0:
 		$WalletLabel.text = "-$"+str(abs(inventory.wallet))
 		$WalletLabel.add_theme_color_override("font_color", Color(1,0,0,1))
@@ -35,9 +36,12 @@ func show_item_tag(name: String, desc: String):
 	
 	$ItemTag.get_child(1).text = name
 	$ItemTag.get_child(2).text = desc
-	# put item 
+	
+	# put item name and description on tag 
 	tagPos = get_local_mouse_position()
 	print(str(tagPos))
+	
+	# prevent tag from falling off screen
 	if tagPos.x > 370.0:
 		tagPos.x = 370.0
 	$ItemTag.position = tagPos
