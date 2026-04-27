@@ -31,9 +31,6 @@ func _process(_delta):
 			open()
 
 func show_item_tag(name: String, desc: String):
-	if $ItemTag.visible:
-		return
-	
 	var tagPos
 	
 	$ItemTag.get_child(1).text = name
@@ -47,8 +44,6 @@ func show_item_tag(name: String, desc: String):
 	$ItemTag.visible = true
 
 func hide_item_tag():
-	if $ItemTag.visible == false:
-		return
 	$ItemTag.visible = false
 
 func open():

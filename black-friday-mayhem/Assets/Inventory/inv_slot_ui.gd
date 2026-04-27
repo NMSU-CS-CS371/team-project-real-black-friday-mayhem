@@ -41,8 +41,8 @@ func _on_mouse_hover():
 		
 	
 func _on_mouse_leave():
-	if hovering:
-		return
+	#if hovering:
+	#	return
 	print("mouse left")
 	inventoryUI.hide_item_tag()
 	
