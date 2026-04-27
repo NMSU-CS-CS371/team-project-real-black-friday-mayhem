@@ -6,6 +6,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhbvv"]
 albedo_texture = ExtResource("1_kwhff")
+emission_enabled = true
+emission_energy_multiplier = 10.53
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7anmf"]
 material = SubResource("StandardMaterial3D_rhbvv")
@@ -30,6 +32,7 @@ shape = SubResource("BoxShape3D_rhbvv")
 
 [node name="Background" type="MeshInstance3D" parent="." unique_id=305437147]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transparency = 1.0
 mesh = SubResource("PlaneMesh_7anmf")
 
 [node name="Pillar" type="MeshInstance3D" parent="." unique_id=391507021]
@@ -63,3 +66,7 @@ mesh = SubResource("BoxMesh_5w373")
 [node name="window2" type="MeshInstance3D" parent="." unique_id=1573941389]
 transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 2, 1.4818867, 0.3099469, 1.8098834e-08)
 mesh = SubResource("BoxMesh_5w373")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=135441131]
+transform = Transform3D(-1, 6.181724e-08, -6.181724e-08, 0, 0.70710677, 0.70710677, 8.742278e-08, 0.70710677, -0.70710677, 0, 0, 0)
+light_energy = 0.9
