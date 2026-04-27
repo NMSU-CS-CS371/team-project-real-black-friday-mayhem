@@ -216,20 +216,26 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4lo45"]
-radius = 0.10205078
-height = 0.31336212
+radius = 0.084472656
+height = 0.28222656
 
 [node name="Granny" unique_id=1282377910 instance=ExtResource("1_q4vah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16738972, 0)
 script = ExtResource("2_iv0je")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
 sprite_frames = SubResource("SpriteFrames_1mjgs")
 animation = &"Side1_2"
+metadata/_edit_group_ = true
 
 [node name="HitBox" parent="." index="1" unique_id=1793053768]
-collision_layer = 2
-collision_mask = 2
+metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" parent="HitBox" index="0" unique_id=413488198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0043945313, 0)
 shape = SubResource("CapsuleShape3D_4lo45")
+metadata/_edit_group_ = true
 
+[node name="CollisionShape3D" parent="." index="2" unique_id=1959478342]
+metadata/_edit_group_ = true

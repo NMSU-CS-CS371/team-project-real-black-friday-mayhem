@@ -6,6 +6,8 @@
 - Samiel Thai
 
 ## What it's about:
-Black Friday Mario Kart Florida Massacre (TEMP)
+Black Friday Mario Kart Christmas mish mash sale buy buy buy simulator.
 
-copyright to us 2026
+using Godot 4.6.1-stable
+
+copyright to us 2026 

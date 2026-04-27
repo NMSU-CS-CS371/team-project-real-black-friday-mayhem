@@ -30,8 +30,9 @@ func take_damage(damage_taken : int):
 		print("GAME WIN!")
 		player.player.playing_game = false
 		player.player.controlAllowed = true
-		ROOT.queue_free()
 		AudioManager.resume_main_music()
+		ROOT.emit_gamestate("win")
+		ROOT.queue_free()
 	pass
 
 func stopDisrespectingMyGangsYo():

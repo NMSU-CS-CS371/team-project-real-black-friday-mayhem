@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://k8vgfxancgy0"]
 
+[ext_resource type="PackedScene" uid="uid://cj1noksfvq1fw" path="res://Assets/Prefabs/handrail.tscn" id="2_16hua"]
 [ext_resource type="AudioStream" uid="uid://3a78lui8c7p2" path="res://Assets/SFX/Rollin at 5 - electronic - Map.mp3" id="2_53y2r"]
 [ext_resource type="Texture2D" path="res://Assets/Textures/floorMesh2.jpg" id="2_m3620"]
 
@@ -16,11 +17,18 @@ material = SubResource("StandardMaterial3D_tlwt5")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53y2r"]
 albedo_texture = ExtResource("2_m3620")
-uv1_scale = Vector3(65.225, 25, 1)
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3620"]
 albedo_texture = ExtResource("2_m3620")
-uv1_scale = Vector3(3, 100, 1)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16hua"]
+albedo_texture = ExtResource("2_m3620")
+uv1_triplanar = true
+uv1_world_triplanar = true
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_go701"]
 
@@ -93,8 +101,76 @@ operation = 2
 size = Vector3(0.11, 0.75, 0.71)
 material = SubResource("StandardMaterial3D_m3620")
 
+[node name="N_Catwalk" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=1485830634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.172)
+operation = 2
+size = Vector3(0.111, 0.75, 0.045)
+material = SubResource("StandardMaterial3D_16hua")
+
+[node name="S_Catwalk" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=1152431041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.172)
+operation = 2
+size = Vector3(0.111, 0.75, 0.045)
+material = SubResource("StandardMaterial3D_16hua")
+
+[node name="NW_Corner" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=2026841534]
+transform = Transform3D(0.7071094, 0, -0.7071094, 0, 1, 0, 0.7071094, 0, 0.7071094, -0.055000022, 0, -0.35500002)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="NW_Corner2" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=2002188703]
+transform = Transform3D(0.7071094, 0, -0.7071094, 0, 1, 0, 0.7071094, 0, 0.7071094, -0.055, 0, -0.15)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="NW_Corner3" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=2005319541]
+transform = Transform3D(0.7071094, 0, -0.7071094, 0, 1, 0, 0.7071094, 0, 0.7071094, -0.055, 0, 0.195)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="NE_Corner" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=443360539]
+transform = Transform3D(0.7071083, 0, 0.7071083, 0, 1, 0, -0.7071083, 0, 0.7071083, 0.055000022, 0, -0.35500002)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="NE_Corner2" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=1831493346]
+transform = Transform3D(0.7071085, 0, 0.7071085, 0, 1, 0, -0.7071085, 0, 0.7071085, 0.055, 0, -0.15)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="NE_Corner3" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=1381770408]
+transform = Transform3D(0.7071085, 0, 0.7071085, 0, 1, 0, -0.7071085, 0, 0.7071085, 0.055, 0, 0.195)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
 [node name="SW_Corner" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=508876114]
 transform = Transform3D(0.7071094, 0, 0.7071094, 0, 1, 0, -0.7071094, 0, 0.7071094, -0.055, 0, 0.355)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="SW_Corner2" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=2071470572]
+transform = Transform3D(0.7071094, 0, 0.7071094, 0, 1, 0, -0.7071094, 0, 0.7071094, -0.055, 0, 0.15)
+gi_lightmap_texel_scale = 0.01
+operation = 2
+size = Vector3(0.045355987, 0.75, 0.062426757)
+material = SubResource("StandardMaterial3D_m3620")
+
+[node name="SW_Corner3" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=1385604761]
+transform = Transform3D(0.7071094, 0, 0.7071094, 0, 1, 0, -0.7071094, 0, 0.7071094, -0.055, 0, -0.195)
 gi_lightmap_texel_scale = 0.01
 operation = 2
 size = Vector3(0.045355987, 0.75, 0.062426757)
@@ -107,15 +183,15 @@ operation = 2
 size = Vector3(0.045355987, 0.75, 0.062426757)
 material = SubResource("StandardMaterial3D_m3620")
 
-[node name="NW_Corner" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=2026841534]
-transform = Transform3D(0.7071094, 0, -0.7071094, 0, 1, 0, 0.7071094, 0, 0.7071094, -0.05500002, 0, -0.355)
+[node name="SE_Corner2" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=639299817]
+transform = Transform3D(0.70710844, 0, -0.70710844, 0, 1, 0, 0.70710844, 0, 0.70710844, 0.055, 0, 0.15)
 gi_lightmap_texel_scale = 0.01
 operation = 2
 size = Vector3(0.045355987, 0.75, 0.062426757)
 material = SubResource("StandardMaterial3D_m3620")
 
-[node name="NE_Corner" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=443360539]
-transform = Transform3D(0.70710826, 0, 0.70710826, 0, 1, 0, -0.70710826, 0, 0.70710826, 0.05500002, 0, -0.355)
+[node name="SE_Corner3" type="CSGBox3D" parent="Floor2/CSGCombiner3D/CSGBox3D/CSGBox3D2" unique_id=556613699]
+transform = Transform3D(0.70710826, 0, -0.70710826, 0, 1, 0, 0.70710826, 0, 0.70710826, 0.055, 0, -0.195)
 gi_lightmap_texel_scale = 0.01
 operation = 2
 size = Vector3(0.045355987, 0.75, 0.062426757)
@@ -213,29 +289,9 @@ mesh = SubResource("CylinderMesh_8j60k")
 
 [node name="Markers" type="Node3D" parent="." unique_id=426178103]
 
-[node name="Subject of Debate" type="MeshInstance3D" parent="Markers" unique_id=537328418]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 1, -42.5)
-mesh = SubResource("BoxMesh_036b0")
-
-[node name="Hinds and Noble" type="MeshInstance3D" parent="Markers" unique_id=990845085]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 1, -42.5)
-mesh = SubResource("BoxMesh_036b0")
-
 [node name="GameSlop" type="MeshInstance3D" parent="Markers" unique_id=1771602411]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 1, 0)
 visible = false
-mesh = SubResource("BoxMesh_036b0")
-
-[node name="Radio Shack" type="MeshInstance3D" parent="Markers" unique_id=1536684997]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 1, 0)
-mesh = SubResource("BoxMesh_036b0")
-
-[node name="JK Nickels" type="MeshInstance3D" parent="Markers" unique_id=207414603]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.5, 1, 42.5)
-mesh = SubResource("BoxMesh_036b0")
-
-[node name="Stacy\'s" type="MeshInstance3D" parent="Markers" unique_id=1627094550]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.5, 1, 42.5)
 mesh = SubResource("BoxMesh_036b0")
 
 [node name="Walls" type="Node3D" parent="." unique_id=1593764907]
@@ -1067,6 +1123,406 @@ shape = SubResource("BoxShape3D_8j60k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ceiling/Window_Outlines/Prism Outlines/Outline 23/StaticBody3D" unique_id=1428627159]
 mesh = SubResource("BoxMesh_fo5ed")
+
+[node name="Handrails" type="Node3D" parent="." unique_id=1837107476]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.562319, 13.25674, 79.501274)
+
+[node name="North" type="Node3D" parent="Handrails" unique_id=1199689664]
+
+[node name="Handrail44" parent="Handrails/North" unique_id=888959212 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, -2.134, 0, 0.885)
+
+[node name="Handrail45" parent="Handrails/North" unique_id=397185836 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, -4.77, 0, 3.52)
+
+[node name="Handrail46" parent="Handrails/North" unique_id=1841677214 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, -7.392166, 0, 6.142)
+
+[node name="Handrail47" parent="Handrails/North" unique_id=1815666073 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, -9.15184, 0, 7.9090004)
+
+[node name="Handrail48" parent="Handrails/North" unique_id=1902069634 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -10.051765, 0, 11.575264)
+
+[node name="Handrail51" parent="Handrails/North" unique_id=1563998557 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, 49.15448, -1.9073486e-06, 0.88470745)
+
+[node name="Handrail52" parent="Handrails/North" unique_id=1860761330 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, 45.282013, -1.9073486e-06, 4.742895)
+
+[node name="Handrail53" parent="Handrails/North" unique_id=939863682 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, 48.27047, 0, 1.7670078)
+
+[node name="Handrail54" parent="Handrails/North" unique_id=1540455994 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 42.513824, -1.9073486e-06, 7.517848)
+
+[node name="Handrail59" parent="Handrails/North" unique_id=658756652 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, 135.18494, -1.9073486e-06, 0.8847189)
+
+[node name="Handrail60" parent="Handrails/North" unique_id=770018413 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, 131.31247, -1.9073486e-06, 4.742901)
+
+[node name="Handrail61" parent="Handrails/North" unique_id=181028730 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, 134.30093, 0, 1.7670174)
+
+[node name="Handrail62" parent="Handrails/North" unique_id=1862281677 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 128.54428, -1.9073486e-06, 7.517853)
+
+[node name="Handrail49" parent="Handrails/North" unique_id=1022557453 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -10.051765, 0, 15.275264)
+
+[node name="Handrail50" parent="Handrails/North" unique_id=1026407412 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -10.051765, 0, 18.975262)
+
+[node name="Handrail55" parent="Handrails/North" unique_id=71742654 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, -9.165146, 0, 21.10474)
+
+[node name="Handrail56" parent="Handrails/North" unique_id=500014795 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, -6.531021, 0, 23.739662)
+
+[node name="Handrail57" parent="Handrails/North" unique_id=344977921 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, -3.904129, 0, 26.361248)
+
+[node name="Handrail58" parent="Handrails/North" unique_id=1355868851 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, -2.1333466, 0, 28.128838)
+
+[node name="East" type="Node3D" parent="Handrails" unique_id=1023398322]
+
+[node name="Handrail1" parent="Handrails/East" unique_id=143027716 instance=ExtResource("2_16hua")]
+
+[node name="Handrail8" parent="Handrails/East" unique_id=2108820822 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.288483, -1.9073486e-06, -0.00029087067)
+
+[node name="Handrail2" parent="Handrails/East" unique_id=1474390784 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.699997, 0, 9.536743e-07)
+
+[node name="Handrail3" parent="Handrails/East" unique_id=1529897988 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4000015, 0, 9.536743e-07)
+
+[node name="Handrail4" parent="Handrails/East" unique_id=1728379189 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.09433, 0, 9.536743e-07)
+
+[node name="Handrail5" parent="Handrails/East" unique_id=1335037340 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.607956, 0, 9.536743e-07)
+
+[node name="Handrail6" parent="Handrails/East" unique_id=1074190106 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.611874, 0, 9.536743e-07)
+
+[node name="Handrail7" parent="Handrails/East" unique_id=773803241 instance=ExtResource("2_16hua")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 21.60968, 0, 9.536743e-07)
+
+[node name="Handrail59" parent="Handrails/East" unique_id=728895430 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 26.699429, 0, 3.8338223)
+
+[node name="Handrail60" parent="Handrails/East" unique_id=308020076 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 23.744747, 0, 0.88858604)
+
+[node name="Handrail61" parent="Handrails/East" unique_id=1711140077 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 27.582134, 0, 4.7187634)
+
+[node name="Handrail62" parent="Handrails/East" unique_id=1437562673 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 30.354427, 0, 7.489813)
+
+[node name="Handrail9" parent="Handrails/East" unique_id=1724327215 instance=ExtResource("2_16hua")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 107.81958, 0, 4.7683716e-06)
+
+[node name="Handrail67" parent="Handrails/East" unique_id=1284121412 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 112.90933, 0, 3.833829)
+
+[node name="Handrail68" parent="Handrails/East" unique_id=325065277 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 109.95465, 0, 0.88858986)
+
+[node name="Handrail69" parent="Handrails/East" unique_id=1812256542 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 113.79204, 0, 4.71877)
+
+[node name="Handrail70" parent="Handrails/East" unique_id=354739382 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 116.56433, 0, 7.489817)
+
+[node name="Handrail63" parent="Handrails/East" unique_id=1648780333 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 45.4325, 0, 24.504736)
+
+[node name="Handrail64" parent="Handrails/East" unique_id=2095193543 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 42.477818, 0, 21.5595)
+
+[node name="Handrail65" parent="Handrails/East" unique_id=328113557 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 46.315205, 0, 25.389675)
+
+[node name="Handrail66" parent="Handrails/East" unique_id=236814947 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 49.087498, 0, 28.160728)
+
+[node name="Handrail10" parent="Handrails/East" unique_id=146691904 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.31894, -1.9073486e-06, -0.00027942657)
+
+[node name="Handrail71" parent="Handrails/East" unique_id=408161755 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 131.46295, 0, 24.50474)
+
+[node name="Handrail72" parent="Handrails/East" unique_id=162065459 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 128.50827, 0, 21.559504)
+
+[node name="Handrail73" parent="Handrails/East" unique_id=1852416169 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 132.34567, 0, 25.38968)
+
+[node name="Handrail74" parent="Handrails/East" unique_id=1155193502 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 135.11795, 0, 28.160736)
+
+[node name="Handrail16" parent="Handrails/East" unique_id=1687190403 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.94745, 0, 3.8146973e-06)
+
+[node name="Handrail17" parent="Handrails/East" unique_id=935017652 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.69023, 0, 2.861023e-06)
+
+[node name="Handrail18" parent="Handrails/East" unique_id=1581363151 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.631325, 0, 2.861023e-06)
+
+[node name="Handrail19" parent="Handrails/East" unique_id=451393876 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.65043, 0, 2.861023e-06)
+
+[node name="Handrail20" parent="Handrails/East" unique_id=1628297829 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.350426, 0, 7.6293945e-06)
+
+[node name="Handrail21" parent="Handrails/East" unique_id=1835443112 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.05043, 0, 8.583069e-06)
+
+[node name="Handrail22" parent="Handrails/East" unique_id=1261251679 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.759834, 0, 4.7683716e-06)
+
+[node name="Handrail23" parent="Handrails/East" unique_id=1617093155 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.45983, 0, 3.8146973e-06)
+
+[node name="Handrail24" parent="Handrails/East" unique_id=225707980 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.159836, 0, 3.8146973e-06)
+
+[node name="Handrail25" parent="Handrails/East" unique_id=2020237342 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.808556, 0, 3.8146973e-06)
+
+[node name="Handrail26" parent="Handrails/East" unique_id=1523883629 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.50855, 0, 8.583069e-06)
+
+[node name="Handrail27" parent="Handrails/East" unique_id=1483601092 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.20855, 0, 1.04904175e-05)
+
+[node name="Handrail28" parent="Handrails/East" unique_id=1262573034 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.91796, 0, 6.67572e-06)
+
+[node name="Handrail29" parent="Handrails/East" unique_id=1341321281 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.61796, 0, 4.7683716e-06)
+
+[node name="Handrail39" parent="Handrails/East" unique_id=1578099138 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141.12454, 0, 1.6212463e-05)
+
+[node name="Handrail40" parent="Handrails/East" unique_id=950638604 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144.621, 0, 8.583069e-06)
+
+[node name="Handrail41" parent="Handrails/East" unique_id=1673714290 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.05954, 0, 6.67572e-06)
+
+[node name="Handrail42" parent="Handrails/East" unique_id=450557779 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.75955, 0, 6.67572e-06)
+
+[node name="Handrail43" parent="Handrails/East" unique_id=1683977369 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155.45895, 0, 9.536743e-06)
+
+[node name="Handrail44" parent="Handrails/East" unique_id=996257980 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 157.9592, 0, 1.8119812e-05)
+
+[node name="South" type="Node3D" parent="Handrails" unique_id=1978156621]
+
+[node name="Handrail44" parent="Handrails/South" unique_id=845480332 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 161.33597, 0, 0.8850002)
+
+[node name="Handrail45" parent="Handrails/South" unique_id=1408142558 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 163.9701, 0, 3.519925)
+
+[node name="Handrail46" parent="Handrails/South" unique_id=1309425327 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, 0.7071067, 166.59698, 0, 6.141512)
+
+[node name="Handrail47" parent="Handrails/South" unique_id=1171441574 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.7071067, 168.36777, 0, 7.9091005)
+
+[node name="Handrail48" parent="Handrails/South" unique_id=13526906 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.3711385e-08, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -4.3711385e-08, 169.251, 0, 10.044)
+
+[node name="Handrail49" parent="Handrails/South" unique_id=1839982853 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.3711385e-08, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -4.3711385e-08, 169.251, 0, 13.744)
+
+[node name="Handrail50" parent="Handrails/South" unique_id=2008550161 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.3711385e-08, 0, -0.9999999, 0, 1, 0, 0.9999999, 0, -4.3711385e-08, 169.251, 0, 17.444)
+
+[node name="Handrail51" parent="Handrails/South" unique_id=1027781596 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.70710677, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, -0.70710677, 168.25992, 9.536743e-07, 21.134357)
+
+[node name="Handrail52" parent="Handrails/South" unique_id=306898455 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 166.4938, 0, 22.902346)
+
+[node name="Handrail53" parent="Handrails/South" unique_id=430981342 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 163.88998, 0, 25.508162)
+
+[node name="Handrail54" parent="Handrails/South" unique_id=2111666028 instance=ExtResource("2_16hua")]
+transform = Transform3D(0.7071067, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, 0.7071067, 161.27005, 0, 28.132692)
+
+[node name="Handrail56" parent="Handrails/South" unique_id=1794951015 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071067, 27.605595, 0, 24.394302)
+
+[node name="Handrail59" parent="Handrails/South" unique_id=1001988185 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071067, 30.40744, 0, 21.581667)
+
+[node name="Handrail57" parent="Handrails/South" unique_id=2013402311 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071067, 25.839138, 0, 26.162027)
+
+[node name="Handrail58" parent="Handrails/South" unique_id=298425546 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071067, 24.956493, 0, 27.045189)
+
+[node name="Handrail60" parent="Handrails/South" unique_id=580568258 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071067, 113.815506, 0, 24.394306)
+
+[node name="Handrail61" parent="Handrails/South" unique_id=2137135156 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071067, 116.61734, 0, 21.58167)
+
+[node name="Handrail62" parent="Handrails/South" unique_id=1552516159 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071067, 112.04904, 0, 26.162033)
+
+[node name="Handrail63" parent="Handrails/South" unique_id=1232494086 instance=ExtResource("2_16hua")]
+transform = Transform3D(-0.7071067, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071067, 111.1664, 0, 27.045193)
+
+[node name="West" type="Node3D" parent="Handrails" unique_id=1640701124]
+
+[node name="Handrail45" parent="Handrails/West" unique_id=877892552 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29.015)
+
+[node name="Handrail46" parent="Handrails/West" unique_id=76471443 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.699997, 0, 29.015)
+
+[node name="Handrail47" parent="Handrails/West" unique_id=1610539917 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4000015, 0, 29.015)
+
+[node name="Handrail48" parent="Handrails/West" unique_id=1243797338 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1094055, 0, 29.015)
+
+[node name="Handrail49" parent="Handrails/West" unique_id=1931363242 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.171616, 0, 29.015)
+
+[node name="Handrail50" parent="Handrails/West" unique_id=890008028 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.287292, 0, 29.015)
+
+[node name="Handrail51" parent="Handrails/West" unique_id=135729244 instance=ExtResource("2_16hua")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 21.787014, 0, 29.015)
+
+[node name="Handrail90" parent="Handrails/West" unique_id=189395971 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 41.6, 0, 19.424309)
+
+[node name="Handrail91" parent="Handrails/West" unique_id=942542187 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 41.6, 0, 15.797816)
+
+[node name="Handrail92" parent="Handrails/West" unique_id=513080269 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 41.6, 0, 13.301367)
+
+[node name="Handrail93" parent="Handrails/West" unique_id=1946068385 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 41.632206, 0, 9.655215)
+
+[node name="Handrail99" parent="Handrails/West" unique_id=224226882 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.291195, 0, 19.448069)
+
+[node name="Handrail100" parent="Handrails/West" unique_id=407899033 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.291195, 0, 16.065248)
+
+[node name="Handrail101" parent="Handrails/West" unique_id=1240869951 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.291195, 0, 12.100519)
+
+[node name="Handrail102" parent="Handrails/West" unique_id=1639112437 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31.291195, 0, 9.600275)
+
+[node name="Handrail52" parent="Handrails/West" unique_id=1059175778 instance=ExtResource("2_16hua")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 107.99692, 0, 29.015007)
+
+[node name="Handrail103" parent="Handrails/West" unique_id=571152853 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 117.5011, 0, 19.448072)
+
+[node name="Handrail104" parent="Handrails/West" unique_id=866654847 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 117.5011, 0, 16.065252)
+
+[node name="Handrail105" parent="Handrails/West" unique_id=940740182 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 117.5011, 0, 12.100527)
+
+[node name="Handrail106" parent="Handrails/West" unique_id=897530367 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 117.5011, 0, 9.600279)
+
+[node name="Handrail59" parent="Handrails/West" unique_id=1549079261 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.22239, 0, 29.015)
+
+[node name="Handrail94" parent="Handrails/West" unique_id=2068474290 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 127.63047, 0, 19.424314)
+
+[node name="Handrail95" parent="Handrails/West" unique_id=560191034 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 127.63047, 0, 15.797821)
+
+[node name="Handrail96" parent="Handrails/West" unique_id=1558588879 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 127.63047, 0, 13.301372)
+
+[node name="Handrail97" parent="Handrails/West" unique_id=820275775 instance=ExtResource("2_16hua")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 127.66268, 0, 9.65522)
+
+[node name="Handrail74" parent="Handrails/West" unique_id=1949780244 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.25284, 0, 29.015007)
+
+[node name="Handrail60" parent="Handrails/West" unique_id=769081824 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.23149, 0, 29.015)
+
+[node name="Handrail61" parent="Handrails/West" unique_id=2009682664 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.251, 0, 29.015)
+
+[node name="Handrail62" parent="Handrails/West" unique_id=2065566041 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.951004, 0, 29.015)
+
+[node name="Handrail63" parent="Handrails/West" unique_id=2066759548 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.65043, 0, 29.015)
+
+[node name="Handrail64" parent="Handrails/West" unique_id=1442923168 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.350426, 0, 29.015)
+
+[node name="Handrail65" parent="Handrails/West" unique_id=1917654476 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.05043, 0, 29.015)
+
+[node name="Handrail66" parent="Handrails/West" unique_id=1315909437 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.759834, 0, 29.015)
+
+[node name="Handrail67" parent="Handrails/West" unique_id=1499792034 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.45983, 0, 29.015)
+
+[node name="Handrail68" parent="Handrails/West" unique_id=1986440181 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.159836, 0, 29.015)
+
+[node name="Handrail69" parent="Handrails/West" unique_id=455811709 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.808556, 0, 29.015)
+
+[node name="Handrail70" parent="Handrails/West" unique_id=1737485359 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.50855, 0, 29.015)
+
+[node name="Handrail71" parent="Handrails/West" unique_id=676616718 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.20855, 0, 29.015)
+
+[node name="Handrail72" parent="Handrails/West" unique_id=614618929 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.91796, 0, 29.015)
+
+[node name="Handrail73" parent="Handrails/West" unique_id=1041902763 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.92255, 0, 29.015)
+
+[node name="Handrail83" parent="Handrails/West" unique_id=2175897 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.65015, 0, 29.015)
+
+[node name="Handrail84" parent="Handrails/West" unique_id=554254498 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144.35956, 0, 29.015)
+
+[node name="Handrail85" parent="Handrails/West" unique_id=497816204 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.05954, 0, 29.015)
+
+[node name="Handrail86" parent="Handrails/West" unique_id=1621894125 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.75955, 0, 29.015)
+
+[node name="Handrail87" parent="Handrails/West" unique_id=689281782 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155.45895, 0, 29.015)
+
+[node name="Handrail88" parent="Handrails/West" unique_id=1961153810 instance=ExtResource("2_16hua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 157.9592, 0, 29.015)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1941107631 groups=["MainMusic"]]
 stream = ExtResource("2_53y2r")

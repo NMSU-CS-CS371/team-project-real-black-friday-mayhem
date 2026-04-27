@@ -1,9 +1,8 @@
-extends Node2D
-#JUST NEEDS AUDIO
+extends Node2D #Palcomon Mini Game
 
+#variables for changing inventory status
 @onready var player = get_parent().get_parent().player
 @onready var invContainer = get_parent().get_parent().get_node("CenterContainer")
-
 #variables for the UI
 signal textbox_closed
 var can_close_textbox = false
@@ -28,8 +27,10 @@ var cartTexture = preload("res://Assets/Textures/Cart.png")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	invContainer.visible = false
+	#set main health
 	set_health($EnemyContatainer/Enemy/EnemyHealth, enemy_health, enemy_max)
 	set_health($PlayerContatainer/PlayerHealth, player_health, player_max)
+	#hiding all assets
 	$Background.hide()
 	$EnemyContatainer.hide()
 	$PlayerContatainer.hide()
@@ -38,9 +39,10 @@ func _ready() -> void:
 	$ButtonPanel.hide()
 	$PalButtons.hide()
 	$AttackButtons.hide()
+	#start game
 	start_game()
-	
 
+#start game with transition and base decisions
 func start_game() :
 	#transition animation
 	transition.show()
@@ -48,7 +50,6 @@ func start_game() :
 	await get_tree().create_timer(1).timeout
 	transition.hide()
 	$Background.show()
-	
 	#start enemy animation
 	$EnemyContatainer/Enemy.texture = idleTexture
 	transition.show()
@@ -58,19 +59,17 @@ func start_game() :
 	$AnimationPlayer.play("enemyStart")
 	$EnemyContatainer.show()
 	await $AnimationPlayer.animation_finished
-	
 	#start text
 	display_text("You Encounter a Palcomon Scalper!!!")
 	await textbox_closed
 	display_text("Choose a Palcomon to fight with!")
 	await textbox_closed
-	
 	#choose pal to fight with
 	$PalButtons.show()
 	await pal_chosen
-	
 	#show button panel
 	$ButtonPanel.show()	
+
 #
 #UI Functions
 #
@@ -83,7 +82,7 @@ func display_text(text) :
 	cant_hit_buttons = true
 	await get_tree().create_timer(0.1).timeout
 	can_close_textbox = true
-#
+
 #used for when the UI is interacted with
 func _input(_event: InputEvent) -> void:
 	if can_close_textbox and $TextBox.visible and (
@@ -95,6 +94,7 @@ func _input(_event: InputEvent) -> void:
 		if !attacking :
 			$ButtonPanel/MarginContainer/HBoxContainer.show()
 			cant_hit_buttons = false
+
 #
 #Game Play Functions
 #
@@ -104,7 +104,8 @@ func set_health(progress_bar, health, max_hp):
 	progress_bar.value = health
 	progress_bar.max_value = max_hp
 	progress_bar.get_node("Health").text = "HP: %d/%d" % [health, max_hp]
-#
+
+#used to attack
 func attack(text, damage, type) :
 	display_text(text)
 	await textbox_closed
@@ -125,7 +126,8 @@ func attack(text, damage, type) :
 	display_text("You dealt %d damage" % [damage])
 	await textbox_closed
 	enemy_turn()
-#
+	
+#used when its the enemies turn
 func enemy_turn() :
 	if enemy_health <= 0 :
 		enemy_defeated()
@@ -140,7 +142,8 @@ func enemy_turn() :
 		2: # crazy attack
 			enemy_attack("Scalper LUNGES at you", 40)
 			enemy_attack_count = 0
-#
+
+#function for when the enemy attacks player
 func enemy_attack(text, damage) :
 	display_text(text)
 	await textbox_closed
@@ -165,7 +168,8 @@ func enemy_attack(text, damage) :
 		player_defeated()
 	attacking = false
 	cant_hit_buttons = false
-#
+
+#when the enemy is defeated
 func enemy_defeated() :
 	$EnemyContatainer/Enemy.texture = hurtTexture
 	display_text("You have defeated the Scalper!!!")
@@ -183,7 +187,8 @@ func enemy_defeated() :
 	emit_signal("game_finished", "win")
 	invContainer.visible = true
 	queue_free()
-#
+
+#when the player loses 
 func player_defeated() :
 	display_text("You have been Defeated!!!")
 	$ButtonPanel/MarginContainer/HBoxContainer.hide()
@@ -209,6 +214,7 @@ func _on_run_pressed() -> void:
 	player.controlAllowed = true
 	queue_free()
 	
+#when the attack button is pressed
 func _on_attack_pressed() -> void:
 	if cant_hit_buttons :
 		return
@@ -223,6 +229,7 @@ func _on_attack_pressed() -> void:
 	$ButtonPanel/MarginContainer/HBoxContainer.hide()
 	$AttackButtons.show()
 	
+#when crowbar is pressed 
 func _on_crowbar_pressed() -> void:
 	$PlayerContatainer/Player.texture = crowbarTexture
 	set_health($PlayerContatainer/PlayerHealth, player_health, player_max)
@@ -233,6 +240,7 @@ func _on_crowbar_pressed() -> void:
 	$PalButtons.hide()
 	emit_signal("pal_chosen")
 
+#when the cart button is pressed
 func _on_cart_pressed() -> void:
 	$PlayerContatainer/Player.texture = cartTexture
 	set_health($PlayerContatainer/PlayerHealth, player_health-20, player_max-20)
@@ -242,22 +250,24 @@ func _on_cart_pressed() -> void:
 	await $AnimationPlayer.animation_finished
 	$PalButtons.hide()
 	emit_signal("pal_chosen")
-#
+
+#when a normal attack button is pressed 
 func _on_normal_pressed() -> void:
 	$AttackButtons.hide()
 	if $PlayerContatainer/Player.texture == crowbarTexture :
 		attack("You SWING at the Scalper!", 25, "swing")
 	if $PlayerContatainer/Player.texture == cartTexture :
-		attack("You BASH you cart into the Scalper!", 35, "bash")
-#
+		attack("You BASH you cart into the Scalper!", 25, "bash")
+
+#when insult button is pressed
 func _on_insult_pressed() -> void:
 	$AttackButtons.hide()
 	if $PlayerContatainer/Player.texture == crowbarTexture :
-		attack("You try to INSULT the Scalper!", 5,"insult")
+		attack("You try to INSULT the Scalper!", 10,"insult")
 	if $PlayerContatainer/Player.texture == cartTexture :
-		attack("You INSULT the Scalper!", 40,"insult")
+		attack("You INSULT the Scalper!", 30,"insult")
 
-
+#when defend button is pressed 
 func _on_defend_pressed() -> void:
 	display_text("You get ready to DEFEND!")
 	await textbox_closed

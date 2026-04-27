@@ -1,13 +1,13 @@
-extends Node2D
+extends Node2D #Karen's Mini Game
 
+#varibles for game
 @onready var player = get_parent().get_parent().player
 @onready var invContainer = get_parent().get_parent().get_node("CenterContainer")
 signal game_finished(result)
 var texture
+@export var speed: float = 40.0
 var scene1 = preload("res://Assets/Textures/KarenStop.png")
 var scene2 = preload("res://Assets/Textures/KarenStealing.png")
-
-
 #varibles for QTE
 @onready var timer : Timer = $Timer
 const QTE = preload("res://Scenes/Enemies/Karen/qte.tscn")
@@ -32,6 +32,7 @@ var whatKid = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#hide assets
 	invContainer.visible = false
 	$Background.hide()
 	$scene.hide()
@@ -45,13 +46,15 @@ func _ready() -> void:
 	$BabyKick.hide()
 	$Kid.hide()
 	$KidKick.hide()
+	#checks if have a correct item
 	texture = player.inventory.getItem()
 	if texture != null :
 		$Item.texture = texture.sprite
-	else :
+		$Item.scale = texture.spriteScale
+	else : #else item is null cant play game
 		invContainer.visible = true
 		player.controlAllowed = true
-		emit_signal("game_finished", "win")
+		emit_signal("game_finished", "lose")
 		queue_free()
 		return
 		
@@ -67,22 +70,20 @@ func _ready() -> void:
 	startgame()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	#changes the progress bar every frame
 	if not $ProgressBar.visible:
 		return
-	
-	#need to add an if statement that if the item gets to a certain point the game ends
 	if $ProgressBar.value <= 0:
 		defeated()
 	elif $ProgressBar.value >= 400:
 		lose()
 	else :
-		$ProgressBar.value += 0.4 
+		$ProgressBar.value += speed * delta
 		if not $AnimationPlayer.is_playing() :
 			$AnimationPlayer.play("Shake")
 
-	
-
+#start game function
 func startgame() :
 	#set bool to true that the game has started letting the procces func know it can start going
 	$Background.show()
@@ -92,7 +93,8 @@ func startgame() :
 	$ProgressBar.show()
 	$AnimationPlayer.play("Shake")
 	timer.start()
-	
+
+#lose funciton she will steal an item
 func lose():
 	invContainer.visible = true
 	player.controlAllowed = true
@@ -100,6 +102,7 @@ func lose():
 	player.inventory.remove(texture)
 	queue_free()
 	
+#she is defeated you get her special item
 func defeated():
 	var item: InvItem
 	item = load("res://Assets/Inventory/Items/karen_glasses.tres")
@@ -115,11 +118,11 @@ func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept") :
 		$ProgressBar.value += -7
 
-
+#when timer is done reset QTE count
 func _on_timer_timeout() -> void:
 	if count >= keyList.size() :
 		count = 0
-	
+	#make QuickTimeEvent scene
 	var qte = QTE.instantiate()
 	# set position
 	qte.global_position = spawn_positions.pick_random()
@@ -134,7 +137,8 @@ func _on_timer_timeout() -> void:
 	qte.finished.connect(_on_key_finished)
 	add_child(qte)
 	count += 1
-	
+
+#when the qte key scene is finished 
 func  _on_key_finished(success) :
 	keyPressedList.append(success)
 	if success :
@@ -148,13 +152,10 @@ func  _on_key_finished(success) :
 			showKids($Kid, "Attacked")
 		elif whatKid == 2 :
 			showKids($Baby, "Attacked")
-		
-		
+
+#showKids a helper for _on_key_finished()
 func showKids(child, a) :
 	child.show()
 	$AnimationPlayer.play(a)
 	await $AnimationPlayer.animation_finished
 	child.hide()
-	
-	
-	
