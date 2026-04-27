@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://bdqvxaaf7koco"]
 
 [ext_resource type="Texture2D" uid="uid://b6tjairkfmefe" path="res://Assets/Textures/security.jpg" id="1_v7poi"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_33tgn"]
+[ext_resource type="Script" uid="uid://bgkrqdx77cf58" path="res://Scenes/Security/security.gd" id="1_xfchy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_33tgn"]
 albedo_color = Color(0.9529412, 0.7176471, 0.4117647, 1)
@@ -86,12 +85,7 @@ height = 3.2475586
 radius = 0.57373047
 
 [node name="Security" type="Node3D" unique_id=39786801]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=175247611]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2065959151]
-transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 0, -0.45325923, 0)
-shape = SubResource("CylinderShape3D_33tgn")
+script = ExtResource("1_xfchy")
 
 [node name="body" type="MeshInstance3D" parent="." unique_id=856785381]
 transform = Transform3D(0.7, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0.25681633, 0)
@@ -170,3 +164,5 @@ mesh = SubResource("CylinderMesh_b4kx4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=18577909]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24642062, 0)
 shape = SubResource("CylinderShape3D_v41eo")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]
