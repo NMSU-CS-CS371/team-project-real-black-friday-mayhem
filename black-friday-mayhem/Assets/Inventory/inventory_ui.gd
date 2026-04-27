@@ -8,10 +8,12 @@ var is_open: bool = false
 func _ready():
 	inventory.update.connect(update_slots)
 	update_slots()
+	$ItemTag.visible = false
 	close()
 
 func update_slots():
 	
+	# turn wallet balance red if negative, white otherwise
 	if inventory.wallet < 0:
 		$WalletLabel.text = "-$"+str(abs(inventory.wallet))
 		$WalletLabel.add_theme_color_override("font_color", Color(1,0,0,1))
@@ -28,6 +30,25 @@ func _process(_delta):
 			close()
 		else:
 			open()
+
+func show_item_tag(name: String, desc: String):
+	var tagPos
+	
+	$ItemTag.get_child(1).text = name
+	$ItemTag.get_child(2).text = desc
+	
+	# put item name and description on tag 
+	tagPos = get_local_mouse_position()
+	print(str(tagPos))
+	
+	# prevent tag from falling off screen
+	if tagPos.x > 370.0:
+		tagPos.x = 370.0
+	$ItemTag.position = tagPos
+	$ItemTag.visible = true
+
+func hide_item_tag():
+	$ItemTag.visible = false
 
 func open():
 	self.visible = true
