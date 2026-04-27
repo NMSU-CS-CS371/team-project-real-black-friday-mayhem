@@ -35,7 +35,6 @@
 [ext_resource type="PackedScene" uid="uid://belmw8gxhtjl7" path="res://Assets/Prefabs/RadioShack.tscn" id="33_opbav"]
 [ext_resource type="PackedScene" uid="uid://caitkxhgbjt1m" path="res://Assets/Prefabs/HindsNobel.tscn" id="34_opbav"]
 [ext_resource type="PackedScene" uid="uid://p81qi7ibnvtl" path="res://Assets/Prefabs/subjectOfDebate.tscn" id="35_coyub"]
-[ext_resource type="PackedScene" uid="uid://cj1noksfvq1fw" path="res://Assets/Prefabs/handrail.tscn" id="36_ochwf"]
 [ext_resource type="PackedScene" uid="uid://bdqvxaaf7koco" path="res://Scenes/Security/security.tscn" id="37_p5wkl"]
 [ext_resource type="PackedScene" uid="uid://bb72cyg50fji" path="res://Assets/Prefabs/Entrance.tscn" id="38_r74th"]
 
@@ -1242,44 +1241,6 @@ transform = Transform3D(-3.496911e-07, -1, 1.5298986e-07, 0, -4.371139e-08, -3.5
 
 [node name="Security" parent="." unique_id=39786801 instance=ExtResource("37_p5wkl")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.49371052, 2.5589726, 74.92677)
-
-[node name="Handrails" type="Node3D" parent="." unique_id=869956025]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.562319, 13.25674, 79.501274)
-
-[node name="Handrail1" parent="Handrails" unique_id=888959212 instance=ExtResource("36_ochwf")]
-
-[node name="Handrail2" parent="Handrails" unique_id=345368728 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0, 0)
-
-[node name="Handrail3" parent="Handrails" unique_id=974889105 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4, 0, 0)
-
-[node name="Handrail4" parent="Handrails" unique_id=660960480 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1094055, 0, 9.536743e-07)
-
-[node name="Handrail5" parent="Handrails" unique_id=278609326 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.809402, 0, 9.536743e-07)
-
-[node name="Handrail6" parent="Handrails" unique_id=1830501411 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.509407, 0, 9.536743e-07)
-
-[node name="Handrail7" parent="Handrails" unique_id=203136201 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.208832, 0, 9.536743e-07)
-
-[node name="Handrail8" parent="Handrails" unique_id=215546423 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.908829, 0, 2.861023e-06)
-
-[node name="Handrail9" parent="Handrails" unique_id=1050242381 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.608833, 0, 2.861023e-06)
-
-[node name="Handrail10" parent="Handrails" unique_id=1680097469 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.318237, 0, 1.9073486e-06)
-
-[node name="Handrail11" parent="Handrails" unique_id=387022605 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.018234, 0, 1.9073486e-06)
-
-[node name="Handrail12" parent="Handrails" unique_id=956923104 instance=ExtResource("36_ochwf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.71824, 0, 1.9073486e-06)
 
 [node name="Entrance" parent="." unique_id=3549006 instance=ExtResource("38_r74th")]
 transform = Transform3D(-6, -1.509958e-07, 2.970106e-14, 0, -4.371139e-08, -4.5, 9.0597484e-07, -1, 1.9670125e-07, 0, 5.509898, 99.9)
