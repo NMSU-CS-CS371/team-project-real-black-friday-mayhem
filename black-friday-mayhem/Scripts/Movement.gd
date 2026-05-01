@@ -179,4 +179,22 @@ func _on_stop_velocity() -> void:
 	isTurning = false
 	isMovingForward = false
 	isMovingBackward = false
-	pass # Replace with function body.
+
+# places the player outside of the shop facing away
+# when the player is in the shopping minigames
+func _on_shop_entered(checkpointX: float, checkpointZ: float):
+	_on_stop_velocity()
+	if checkpointX < 0:
+		# if x is negative, shop is on the left side
+		position.x = checkpointX + 2
+		position.z = checkpointZ
+		rotation_degrees.y = -90.0
+	else:
+		# if x is positive, shop is on the right side
+		position.x = checkpointX - 2
+		position.z = checkpointZ
+		rotation_degrees.y = 90.0
+
+
+func _on_shop_exited() -> void:
+	controlAllowed = true

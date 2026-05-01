@@ -1244,3 +1244,16 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.49371052, 2.5589726, 
 
 [node name="Entrance" parent="." unique_id=3549006 instance=ExtResource("38_r74th")]
 transform = Transform3D(-6, -1.509958e-07, 2.970106e-14, 0, -4.371139e-08, -4.5, 9.0597484e-07, -1, 1.9670125e-07, 0, 5.509898, 99.9)
+
+[connection signal="entered_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
+[connection signal="exited_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
+[connection signal="entered_shop" from="HindsNobel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
+[connection signal="exited_shop" from="HindsNobel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
+[connection signal="entered_shop" from="GameSlop_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
+[connection signal="exited_shop" from="GameSlop_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
+[connection signal="entered_shop" from="SoD_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
+[connection signal="exited_shop" from="SoD_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
+[connection signal="entered_shop" from="Stacys_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
+[connection signal="exited_shop" from="Stacys_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
+[connection signal="entered_shop" from="Radioshack_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
+[connection signal="exited_shop" from="Radioshack_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
