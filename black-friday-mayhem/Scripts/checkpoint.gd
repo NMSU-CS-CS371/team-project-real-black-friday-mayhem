@@ -6,10 +6,13 @@ enum type {SHOP, RESULTS}
 enum shop {GAME_SLOP,HINDS_NOBLE,JKNICKELS_STACYS,RADIO_SHACK,DEBATE}
 @export var checkpointType: type 
 @export var shopName: shop
-var shopScenes = [preload("res://Scenes/Shopping/Shopping1/shopping1.tscn")]
-#var shopScenes = [preload("res://Scenes/Shopping/Shopping1/shopping1.tscn"), preload("res://Scenes/Shopping/Shopping2/shopping2.tscn"), preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
+#var shopScenes = [preload("res://Scenes/Shopping/Shopping1/shopping1.tscn")]
+var shopScenes = [preload("res://Scenes/Shopping/Shopping1/shopping1.tscn"), preload("res://Scenes/Shopping/Shopping2/shopping2.tscn"), preload("res://Scenes/Shopping/Shopping3/shopping3.tscn")]
 var resultScreen = preload("res://Scenes/results_screen.tscn")
 var closed = false
+
+signal entered_shop(x: float, z: float)
+signal exited_shop
 
 func _ready() -> void:
 	# Apply initial size and color when the scene loads
@@ -43,12 +46,14 @@ func _on_trigger_zone_body_entered(body: Node3D) -> void:
 				target = shopScenes.pick_random().instantiate()
 				add_child(target)
 				target.connect("shop_finished", Callable(self, "_on_shopping_minigame_finished"))
+				entered_shop.emit(position.x, position.z)
 			type.RESULTS:
 				target = resultScreen.instantiate()
 				add_child(target)
 		$SceneTransition/ColorRect.visible = false
 
 func _on_shopping_minigame_finished():
+	exited_shop.emit()
 	print("reached shopping minigame finished")
 	SceneTransition.get_parent().get_node("ColorRect").visible = true
 	SceneTransition.play("fade_out")
