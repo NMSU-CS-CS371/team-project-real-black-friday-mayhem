@@ -17,6 +17,7 @@ var isHoldingUP : bool = false
 
 @export var damage_value_up : int = 2
 @export var damage_value_mid : int = 1
+@export var laser_health : int
 enum punchType {PUNCH_UP, PUNCH_MID}
 enum dodgeDirection {DODGE_LEFT, DODGE_RIGHT}
 #Keeps track of how much effort the player should put in to get up
@@ -33,7 +34,7 @@ var isKnockedOut = false
 
 func _ready() -> void:
 	updateHealth()
-	print(player.name)
+	#print(player.name)
 
 func updateHealth():
 	healthBar.value = health
@@ -50,8 +51,9 @@ func click():
 	if health > 0:
 		isDodging = false
 		animationPlayer.play(punchtype)
-	else:
-		tries += 1
+	elif isKnockedOut:
+		animationPlayer.play("strugle")
+		#tries += 1
 		pass
 	var penalizations = (faints * penalties)
 	if effort < tries:
@@ -59,6 +61,7 @@ func click():
 		updateHealth()
 		tries = 0
 		effort += 5
+		animationPlayer.play("up")
 		isKnockedOut = false
 		recovered.emit()
 		print("and he's back in the game!!")
@@ -93,6 +96,10 @@ func hit(punchtype : punchType):
 	if health > 0:
 		Grandma.take_damage(damageGiven)
 	pass
+	
+func strugle():
+	tries += 1
+	pass
 
 func apply_damage(damage_taken : int):
 	if !isDodging and health > 0:
@@ -105,6 +112,7 @@ func apply_damage(damage_taken : int):
 		faints += 1
 		print("knocked out")
 		knockedOut.emit()
+		animationPlayer.play("down")
 	updateHealth()
 	pass	
 	print("health is ", health)
