@@ -6,8 +6,9 @@ extends Node2D #Karen's Mini Game
 signal game_finished(result)
 var texture
 var playing = false
+var space = false
 signal space_pressed
-@export var speed: float = 40.0
+@export var speed: float = 60.0
 var scene1 = preload("res://Assets/Textures/KarenStop.png")
 var scene2 = preload("res://Assets/Textures/KarenStealing.png")
 #varibles for QTE
@@ -144,7 +145,13 @@ func defeated():
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept") :
 		space_pressed.emit()
-		$ProgressBar.value += -7
+		if space :
+			await get_tree().create_timer(0.5).timeout
+		else :
+			space = true
+			$ProgressBar.value += -8
+		space = false
+		
 
 #when timer is done reset QTE count
 func _on_timer_timeout() -> void:
@@ -175,7 +182,7 @@ func  _on_key_finished(success) :
 		elif whatKid == 2 :
 			showKids($BabyKick, "kicked")
 	else :
-		$ProgressBar.value += +50
+		$ProgressBar.value += +90
 		if whatKid == 1 :
 			showKids($Kid, "Attacked")
 		elif whatKid == 2 :
