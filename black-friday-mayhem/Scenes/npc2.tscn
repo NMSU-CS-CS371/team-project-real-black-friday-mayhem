@@ -22,6 +22,8 @@ animations = [{
 radius = 0.49902344
 height = 3.6728516
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lqs13"]
+
 [node name="Npc" type="CharacterBody3D" unique_id=1570048502]
 script = ExtResource("1_lqs13")
 
@@ -30,3 +32,9 @@ sprite_frames = SubResource("SpriteFrames_h1ryf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
 shape = SubResource("CapsuleShape3D_g6unj")
+
+[node name="HitboxArea3D" type="Area3D" parent="." unique_id=1753731018]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitboxArea3D" unique_id=330719646]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_lqs13")
