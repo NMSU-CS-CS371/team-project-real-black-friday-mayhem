@@ -134,6 +134,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(416, 530)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_j5x1a"]
 resource_name = "dodge left"
@@ -198,6 +210,34 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_ph07j"]
+resource_name = "down"
+length = 0.46666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0471975511965976]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(416, 530), Vector2(416, 610)]
+}
+
 [sub_resource type="Animation" id="Animation_0puyn"]
 resource_name = "punch mid"
 length = 0.53333336
@@ -226,6 +266,18 @@ tracks/1/keys = {
 "args": [0],
 "method": &"hit"
 }]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_e2wbm"]
@@ -257,14 +309,99 @@ tracks/1/keys = {
 "method": &"hit"
 }]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1vn1j"]
+resource_name = "strugle"
+length = 0.23333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0471975511965976, 0.7853981633974483, 1.0471975511965976]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(416, 610)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"strugle"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_t0tbt"]
+resource_name = "up"
+length = 0.33333334
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(416, 610), Vector2(416, 530)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0471975511965976, 0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gwv23"]
 _data = {
 &"RESET": SubResource("Animation_to6mo"),
 &"dodge left": SubResource("Animation_j5x1a"),
 &"dodge right": SubResource("Animation_gwv23"),
+&"down": SubResource("Animation_ph07j"),
 &"punch mid": SubResource("Animation_0puyn"),
-&"punch up": SubResource("Animation_e2wbm")
+&"punch up": SubResource("Animation_e2wbm"),
+&"strugle": SubResource("Animation_1vn1j"),
+&"up": SubResource("Animation_t0tbt")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwv23"]
@@ -319,6 +456,7 @@ script = ExtResource("4_to6mo")
 ROOT = NodePath("..")
 player = NodePath("../Player")
 MAX_HEALTH = 200
+laser_health = 50
 animationPlayer = NodePath("AnimationPlayer")
 healthBar = NodePath("../EnemyHealth")
 healthText = NodePath("../EnemyHealth/Health")
@@ -349,16 +487,16 @@ libraries/ = SubResource("AnimationLibrary_gwv23")
 
 [node name="EnemyHealth" type="ProgressBar" parent="." unique_id=1197981983]
 custom_minimum_size = Vector2(0, 30)
-offset_left = 525.0
+offset_left = 373.0
 offset_top = 38.0
-offset_right = 929.0
+offset_right = 777.0
 offset_bottom = 68.0
 size_flags_vertical = 1
 theme_override_constants/outline_size = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_gwv23")
 theme_override_styles/fill = SubResource("StyleBoxFlat_e2wbm")
 step = 1.0
-value = 50.0
+value = 100.0
 show_percentage = false
 
 [node name="Health" type="Label" parent="EnemyHealth" unique_id=913207618]
@@ -385,7 +523,7 @@ theme_override_constants/outline_size = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_j5x1a")
 theme_override_styles/fill = SubResource("StyleBoxFlat_0puyn")
 step = 1.0
-value = 50.0
+value = 100.0
 show_percentage = false
 
 [node name="Health" type="Label" parent="PlayerHealth" unique_id=1359805552]
