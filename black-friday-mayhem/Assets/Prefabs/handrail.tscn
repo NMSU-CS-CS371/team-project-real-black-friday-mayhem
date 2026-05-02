@@ -1,32 +1,43 @@
 [gd_scene format=3 uid="uid://cj1noksfvq1fw"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jj7cn"]
-albedo_color = Color(0, 0, 0, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_jj7cn"]
+size = Vector3(4.25, 2.65, 0.413)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pu74"]
 albedo_color = Color(0.27450982, 0.16470589, 0.09411765, 1)
 
-[node name="Handrail" type="Node3D" unique_id=888959212]
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1646427297]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
-radius = 0.125
-height = 2.5
-material = SubResource("StandardMaterial3D_jj7cn")
-
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="." unique_id=875077451]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 1.25, 0)
-radius = 0.125
-height = 2.5
-material = SubResource("StandardMaterial3D_jj7cn")
-
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="." unique_id=821942849]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 1.25, 0)
-radius = 0.125
-height = 2.5
-material = SubResource("StandardMaterial3D_jj7cn")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=947834354]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 2.5, 0)
-size = Vector3(4.25, 0.15, 0.413)
+[sub_resource type="BoxMesh" id="BoxMesh_x7ag5"]
 material = SubResource("StandardMaterial3D_0pu74")
+size = Vector3(4.25, 0.15, 0.413)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k11m6"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_iegmo"]
+material = SubResource("StandardMaterial3D_k11m6")
+top_radius = 0.125
+bottom_radius = 0.125
+height = 2.5
+
+[node name="Handrail" type="StaticBody3D" unique_id=401454356]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=384351871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 1.25, 0)
+visible = false
+shape = SubResource("BoxShape3D_jj7cn")
+
+[node name="Rail" type="MeshInstance3D" parent="." unique_id=2000571318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 2.5, 0)
+mesh = SubResource("BoxMesh_x7ag5")
+
+[node name="Left Peg" type="MeshInstance3D" parent="." unique_id=1291705277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 1.25, 0)
+mesh = SubResource("CylinderMesh_iegmo")
+
+[node name="Middle Peg" type="MeshInstance3D" parent="." unique_id=1488329003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+mesh = SubResource("CylinderMesh_iegmo")
+
+[node name="Right Peg" type="MeshInstance3D" parent="." unique_id=1210815191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 1.25, 0)
+mesh = SubResource("CylinderMesh_iegmo")
