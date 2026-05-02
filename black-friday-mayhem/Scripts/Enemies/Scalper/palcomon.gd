@@ -135,7 +135,7 @@ func enemy_turn() :
 		return
 	match enemy_attack_count:
 		0 : # normal attack
-			enemy_attack("Scalper SCRACHES you", 15)
+			enemy_attack("Scalper SCRATCHES you", 15)
 			enemy_attack_count += 1
 		1 : # insult attack
 			enemy_attack("Scalper INSULTS you", 25)
@@ -155,6 +155,7 @@ func enemy_attack(text, damage) :
 		$EnemyContatainer/Enemy.texture = idleTexture
 		display_text("you succsefully DEFENDED!")
 		await textbox_closed
+		$ButtonPanel.show()
 		is_Defending = false
 	else :
 		player_health = max(0, player_health-damage)
@@ -270,7 +271,12 @@ func _on_insult_pressed() -> void:
 
 #when defend button is pressed 
 func _on_defend_pressed() -> void:
+	if cant_hit_buttons :
+		return
+	cant_hit_buttons = true
+	$ButtonPanel.hide()
 	display_text("You get ready to DEFEND!")
 	await textbox_closed
 	is_Defending = true
+	$ButtonPanel/MarginContainer/HBoxContainer.hide()
 	enemy_turn()

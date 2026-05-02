@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://hdqc6cvvl3db"]
+
+[ext_resource type="Script" uid="uid://ckw66imoabpip" path="res://Scripts/npc.gd" id="1_lqs13"]
+[ext_resource type="Texture2D" uid="uid://duk7j7171he2q" path="res://Assets/Sprites/Girl_NPC1.png" id="2_lqs13"]
+[ext_resource type="Texture2D" uid="uid://eijliwo48dnh" path="res://Assets/Sprites/Girl_NPC2.png" id="3_74ajd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h1ryf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lqs13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_74ajd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6unj"]
+radius = 0.49902344
+height = 3.6728516
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lqs13"]
+
+[node name="Npc" type="CharacterBody3D" unique_id=1570048502]
+script = ExtResource("1_lqs13")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1594509034]
+sprite_frames = SubResource("SpriteFrames_h1ryf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
+shape = SubResource("CapsuleShape3D_g6unj")
+
+[node name="HitboxArea3D" type="Area3D" parent="." unique_id=1753731018]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitboxArea3D" unique_id=330719646]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_lqs13")
