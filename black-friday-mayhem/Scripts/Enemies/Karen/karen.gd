@@ -79,6 +79,7 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 func _on_minigame_finished(result):
 	if result == "win" :
 		is_defeated = true
+		queue_free()
 		#print("Enemy defeated")
 	else :
 		is_defeated = false
