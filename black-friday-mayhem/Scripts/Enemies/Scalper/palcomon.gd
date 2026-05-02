@@ -56,6 +56,7 @@ func start_game() :
 	transition.play("outTransition")
 	await get_tree().create_timer(1).timeout
 	transition.hide()
+	$Music.play()
 	$AnimationPlayer.play("enemyStart")
 	$EnemyContatainer.show()
 	await $AnimationPlayer.animation_finished
