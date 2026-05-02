@@ -5,6 +5,8 @@ extends Node2D #Karen's Mini Game
 @onready var invContainer = get_parent().get_parent().get_node("CenterContainer")
 signal game_finished(result)
 var texture
+var playing = false
+signal space_pressed
 @export var speed: float = 40.0
 var scene1 = preload("res://Assets/Textures/KarenStop.png")
 var scene2 = preload("res://Assets/Textures/KarenStealing.png")
@@ -46,6 +48,7 @@ func _ready() -> void:
 	$BabyKick.hide()
 	$Kid.hide()
 	$KidKick.hide()
+	$Info.hide()
 	#checks if have a correct item
 	texture = player.inventory.getItem()
 	if texture != null :
@@ -67,6 +70,7 @@ func _ready() -> void:
 	$scene.texture = scene2
 	await get_tree().create_timer(1.0).timeout
 	$scene.hide()
+	
 	startgame()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -79,9 +83,12 @@ func _process(delta: float) -> void:
 	elif $ProgressBar.value >= 400:
 		lose()
 	else :
-		$ProgressBar.value += speed * delta
-		if not $AnimationPlayer.is_playing() :
-			$AnimationPlayer.play("Shake")
+		if playing :
+			$ProgressBar.value += speed * delta
+			if not $AnimationPlayer.is_playing() :
+				$AnimationPlayer.play("Shake")
+		else :
+			pass
 
 #start game function
 func startgame() :
@@ -92,7 +99,27 @@ func startgame() :
 	$hands.show()
 	$ProgressBar.show()
 	$AnimationPlayer.play("Shake")
+	playing = true
 	timer.start()
+	$Info.show()
+	await get_tree().create_timer(0.3).timeout
+	$Info.hide()
+	await get_tree().create_timer(0.2).timeout
+	$Info.show()
+	await get_tree().create_timer(0.3).timeout
+	$Info.hide()
+	await get_tree().create_timer(0.2).timeout
+	$Info.show()
+	await get_tree().create_timer(0.3).timeout
+	$Info.hide()
+	await get_tree().create_timer(0.2).timeout
+	$Info.show()
+	await get_tree().create_timer(0.3).timeout
+	$Info.hide()
+	await get_tree().create_timer(0.2).timeout
+	$Info.show()
+	await get_tree().create_timer(0.3).timeout
+	$Info.hide()
 
 #lose funciton she will steal an item
 func lose():
@@ -116,6 +143,7 @@ func defeated():
 #used for when the spacebar is interacted with
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept") :
+		space_pressed.emit()
 		$ProgressBar.value += -7
 
 #when timer is done reset QTE count
