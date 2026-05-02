@@ -107,12 +107,12 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 # *jolena's code, thank you :, ) 
 #function to recieve game results 
 func _on_minigame_finished(result):
+	playing_game = false
+	AudioManager.resume_main_music()
 	if result == "win" :
 		is_defeated = true
 		print("granny defeated")
-	playing_game = false
-	AudioManager.resume_main_music()
-	queue_free() # you killed grandma
+		queue_free() # you killed grandma
 	# how could you??? D, :
 
 #this function is for the textbox when grandma is hit
