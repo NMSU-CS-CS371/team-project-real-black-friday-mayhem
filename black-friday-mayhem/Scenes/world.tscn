@@ -61,7 +61,7 @@ viewport_path = NodePath("Main Camera/SubViewportContainer/Mask Viewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c5t2i"]
 shader = ExtResource("6_yky5r")
-shader_parameter/pixel_count = Vector2(128, 128)
+shader_parameter/pixel_count = Vector2(192, 192)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e0ngr"]
 viewport_path = NodePath("Main Camera/SubViewportContainer/Player Viewport")
