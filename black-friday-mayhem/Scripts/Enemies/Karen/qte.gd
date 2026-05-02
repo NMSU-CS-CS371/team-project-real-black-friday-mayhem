@@ -11,6 +11,7 @@ signal finished(success)
 @onready var success_label = $SuccessLabel
 var tween
 var success = false
+var timeout = false
 var spawn_index: Vector2
 
 # Called when the node enters the scene tree for the first time.
@@ -22,6 +23,7 @@ func _ready() -> void:
 	await get_tree().create_timer(eventDurtion).timeout
 	if not success:
 		finished.emit(false) # failure
+		timeout = true
 		success = false
 		hide()
 
@@ -33,7 +35,7 @@ func _animation() :
 	
 #when key is inputted
 func _input(_event: InputEvent) -> void:
-	if Input.is_key_pressed(keyCode) and not success_label.visible:
+	if Input.is_key_pressed(keyCode) and not success_label.visible and not timeout:
 		success_label.show()
 		color_rect.hide()
 		if tween and tween.is_running():
