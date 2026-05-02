@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://425lrnjqm2sd"]
 
 [ext_resource type="Script" uid="uid://jylju3dqdq3a" path="res://Scripts/Enemies/Karen/button_masher.gd" id="1_y1kjv"]
-[ext_resource type="Texture2D" uid="uid://c1fykmsunyljp" path="res://Assets/Textures/mall.jpeg" id="2_sxbc2"]
+[ext_resource type="Texture2D" uid="uid://bsrup7ga55v31" path="res://Assets/Textures/jknickels.png" id="2_7ekkb"]
 [ext_resource type="Texture2D" uid="uid://dmylajiidl8xf" path="res://Assets/Textures/Karen.png" id="3_5npmi"]
 [ext_resource type="Texture2D" uid="uid://xmsqp8rwhbk5" path="res://Assets/Textures/KarenStop.png" id="3_bang0"]
 [ext_resource type="Texture2D" uid="uid://dfsnd4hgikf6o" path="res://Assets/Sprites/jam.png" id="4_78gnj"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://chi1lnso8k6kf" path="res://Assets/Textures/KidAttacking.png" id="7_kxdh1"]
 [ext_resource type="Texture2D" uid="uid://dh5vyabbcoo8g" path="res://Assets/Textures/KidKick.png" id="9_bang0"]
 [ext_resource type="AudioStream" uid="uid://c25fruf7b1x3r" path="res://Assets/SFX/Reformat - Karen.mp3" id="11_jucje"]
+[ext_resource type="FontFile" uid="uid://b1p4kw1jll2xf" path="res://Assets/Fonts/Awake.ttf" id="12_284rt"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5npmi"]
 blend_mode = 4
@@ -297,13 +298,19 @@ _data = {
 &"kicked": SubResource("Animation_7ekkb")
 }
 
+[sub_resource type="FontVariation" id="FontVariation_74sdq"]
+base_font = ExtResource("12_284rt")
+
 [node name="Button_Masher" type="Node2D" unique_id=1527775403]
 script = ExtResource("1_y1kjv")
 
 [node name="Background" type="TextureRect" parent="." unique_id=965619530]
-offset_right = 805.0
-offset_bottom = 601.0
-texture = ExtResource("2_sxbc2")
+offset_left = -153.0
+offset_top = 3.0
+offset_right = 1149.0
+offset_bottom = 872.0
+texture = ExtResource("2_7ekkb")
+expand_mode = 1
 
 [node name="scene" type="TextureRect" parent="." unique_id=949056700]
 visible = false
@@ -312,6 +319,7 @@ offset_bottom = 40.0
 texture = ExtResource("3_bang0")
 
 [node name="Karen" type="TextureRect" parent="." unique_id=1766726619]
+visible = false
 material = SubResource("CanvasItemMaterial_5npmi")
 offset_left = 185.0
 offset_top = 27.0
@@ -320,6 +328,7 @@ offset_bottom = 669.0
 texture = ExtResource("3_5npmi")
 
 [node name="Item" type="TextureRect" parent="." unique_id=190503163]
+visible = false
 offset_left = 329.0
 offset_top = 337.0
 offset_right = 441.0
@@ -327,6 +336,7 @@ offset_bottom = 482.0
 texture = ExtResource("4_78gnj")
 
 [node name="hands" type="TextureRect" parent="." unique_id=1603974180]
+visible = false
 offset_left = 268.0
 offset_top = 373.0
 offset_right = 847.99994
@@ -391,5 +401,17 @@ wait_time = 5.0
 stream = ExtResource("11_jucje")
 autoplay = true
 bus = &"Music"
+
+[node name="Info" type="TextEdit" parent="." unique_id=587533393]
+offset_left = 268.0
+offset_top = 475.0
+offset_right = 531.0
+offset_bottom = 557.0
+theme_override_colors/font_color = Color(1, 0.82756, 0.8152376, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/background_color = Color(0, 0, 0, 0.54509807)
+theme_override_fonts/font = SubResource("FontVariation_74sdq")
+theme_override_font_sizes/font_size = 102
+text = "<SPACE>"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
