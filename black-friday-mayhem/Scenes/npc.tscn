@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://httpo0j712de"]
 
-[ext_resource type="Script" path="res://Scripts/npc.gd" id="1_g6unj"]
+[ext_resource type="Script" uid="uid://ckw66imoabpip" path="res://Scripts/npc.gd" id="1_g6unj"]
 [ext_resource type="Texture2D" uid="uid://pyb8qdstv338" path="res://Assets/Sprites/NPC1.png" id="1_xxsvc"]
 [ext_resource type="Texture2D" uid="uid://boofb6uhbeuyu" path="res://Assets/Sprites/NPC2.png" id="2_g6unj"]
 
@@ -22,14 +22,21 @@ animations = [{
 radius = 0.49902344
 height = 3.6728516
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h1ryf"]
+
 [node name="Npc" type="CharacterBody3D" unique_id=1570048502]
 script = ExtResource("1_g6unj")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1594509034]
-billboard = 1
 sprite_frames = SubResource("SpriteFrames_h1ryf")
 frame = 1
 frame_progress = 0.5486387
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
 shape = SubResource("CapsuleShape3D_g6unj")
+
+[node name="HitboxArea3D" type="Area3D" parent="." unique_id=822690595]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitboxArea3D" unique_id=106205584]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_h1ryf")

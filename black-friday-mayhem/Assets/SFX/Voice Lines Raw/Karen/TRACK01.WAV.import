@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cjf56daqoa4qc"
+path="res://.godot/imported/TRACK01.WAV-7f923162f350ae90e21fc4f1b0f4b74a.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines Raw/Karen/TRACK01.WAV"
+dest_files=["res://.godot/imported/TRACK01.WAV-7f923162f350ae90e21fc4f1b0f4b74a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
