@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://cp4ib6f4bf83s"]
+
+[ext_resource type="Script" uid="uid://cu5shqx502vy4" path="res://Assets/Inventory/inventory_item.gd" id="1_mcpm6"]
+[ext_resource type="Texture2D" uid="uid://clspkecdy1h1u" path="res://Assets/Sprites/grandma_candy.png" id="2_vg0mt"]
+
+[resource]
+script = ExtResource("1_mcpm6")
+name = "Strawberry Ban Bans"
+sprite = ExtResource("2_vg0mt")
+itemDesc = "If you wanted one of these you would've gone trick or treating at a nursing home."
+spriteScale = Vector2(0.14, 0.14)
+specialItem = true
+metadata/_custom_type_script = "uid://cu5shqx502vy4"
