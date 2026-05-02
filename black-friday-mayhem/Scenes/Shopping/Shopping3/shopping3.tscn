@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://w8er6cjd0kml"]
+[gd_scene format=4 uid="uid://w8er6cjd0kml"]
 
 [ext_resource type="Script" uid="uid://vpwfn0xrgeuf" path="res://Scripts/Shopping/Shopping3/shopping3.gd" id="1_sd71p"]
 [ext_resource type="Texture2D" uid="uid://diif56b3hfcwv" path="res://Assets/Textures/shelf.jpg" id="2_yccae"]
@@ -26,13 +26,13 @@ wallet_label = NodePath("Camera2D/ScoreLabel")
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1237547458]
 z_as_relative = false
 scale = Vector2(2.75, 2.75)
-tile_map_data = PackedByteArray(0, 0, 82, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 148, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 16, 115, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 16)
+tile_map_data = PackedByteArray("AABSAAUAAAAAAAAAAACUAAUAAAAAAAAAAAAQAAUAAAAAAAAAAAAxAAUAAAAAAAAAABBzAAUAAAAAAAAAABC1AAUAAAAAAAAAABDWAAUAAAAAAAAAAAD3AAUAAAAAAAAAABAYAQUAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_yccae")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1365001331]
 position = Vector2(576, 324)
 script = ExtResource("3_piprj")
-scrollSpeed = 180.0
+scrollSpeed = 320.0
 
 [node name="ScoreLabel" type="Label" parent="Camera2D" unique_id=147841446]
 anchors_preset = 4
@@ -56,6 +56,7 @@ position = Vector2(-400, -300)
 position = Vector2(400, 300)
 
 [node name="HandSpawner" parent="." unique_id=962083149 node_paths=PackedStringArray("upLeft", "lowerRight") instance=ExtResource("5_yr1ar")]
+spawn_interval = 0.4
 upLeft = NodePath("../Camera2D/UpperLeft")
 lowerRight = NodePath("../Camera2D/LowerRight")
 
@@ -69,7 +70,7 @@ position = Vector2(176, 24)
 
 [node name="ItemSpawner" parent="." unique_id=1422229041 instance=ExtResource("4_8mf5g")]
 max_items = 100000
-item_count = 50
+item_count = 80
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1205862209]
 stream = ExtResource("8_6ujwd")
