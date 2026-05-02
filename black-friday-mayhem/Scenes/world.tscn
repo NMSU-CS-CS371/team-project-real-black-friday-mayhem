@@ -388,69 +388,6 @@ collision_base_size = 0.0
 process_material = SubResource("ParticleProcessMaterial_yq1aw")
 draw_pass_1 = SubResource("SphereMesh_pyn1s")
 
-[node name="NPC_Group1" type="Node3D" parent="Objects" unique_id=1193090539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16662884, 0)
-
-[node name="Npc" parent="Objects/NPC_Group1" unique_id=1527463142 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 16, 1.706, 40)
-
-[node name="Npc2" parent="Objects/NPC_Group1" unique_id=1540345471 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -10, 1.706, -50)
-
-[node name="Npc3" parent="Objects/NPC_Group1" unique_id=1068120849 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 11, 1.706, -24)
-
-[node name="Npc4" parent="Objects/NPC_Group1" unique_id=130365394 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -18.5, 1.706, 33.77)
-
-[node name="Npc5" parent="Objects/NPC_Group1" unique_id=684165363 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -22, 1.706, -11.054)
-
-[node name="Npc6" parent="Objects/NPC_Group1" unique_id=1598869037 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 0, 1.7059035, 37.089066)
-
-[node name="Npc7" parent="Objects/NPC_Group1" unique_id=23277141 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -13.705, 1.706, -16.56)
-
-[node name="Npc8" parent="Objects/NPC_Group1" unique_id=1869751395 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 8.221, 1.706, -61.223)
-
-[node name="Npc9" parent="Objects/NPC_Group1" unique_id=153692637 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 21.364, 1.706, -45.131)
-
-[node name="Npc10" parent="Objects/NPC_Group1" unique_id=363137156 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 21.758, 1.706, 70.386)
-
-[node name="Npc11" parent="Objects/NPC_Group1" unique_id=1811994938 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -17.964558, 1.706, 60.976)
-
-[node name="Npc12" parent="Objects/NPC_Group1" unique_id=2108354821 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -14.913, 1.706, 40.839)
-
-[node name="Npc13" parent="Objects/NPC_Group1" unique_id=136918196 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 18.538, 1.706, 46.326)
-
-[node name="Npc14" parent="Objects/NPC_Group1" unique_id=1031448798 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 19.058, 1.706, -40.141)
-
-[node name="Npc15" parent="Objects/NPC_Group1" unique_id=1041735743 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 9.283, 1.706, 52.229)
-
-[node name="Npc16" parent="Objects/NPC_Group1" unique_id=1162972794 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -12.067, 1.706, 69.136)
-
-[node name="Npc17" parent="Objects/NPC_Group1" unique_id=1916129146 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 0, 1.7059035, 39.388367)
-
-[node name="Npc18" parent="Objects/NPC_Group1" unique_id=2118903016 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -11.92, 1.706, -37.039)
-
-[node name="Npc19" parent="Objects/NPC_Group1" unique_id=1407077286 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 18.937, 1.706, -59.905)
-
-[node name="Npc20" parent="Objects/NPC_Group1" unique_id=334072845 instance=ExtResource("12_c5t2i")]
-transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 19.102, 1.706, -19.125)
-
 [node name="cardStand" type="Node3D" parent="Objects" unique_id=1054967857]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1.90517, -9.123653)
 
@@ -1244,6 +1181,69 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0.49371052, 2.5589726, 
 
 [node name="Entrance" parent="." unique_id=3549006 instance=ExtResource("38_r74th")]
 transform = Transform3D(-6, -1.509958e-07, 2.970106e-14, 0, -4.371139e-08, -4.5, 9.0597484e-07, -1, 1.9670125e-07, 0, 5.509898, 99.9)
+
+[node name="NPC_Group1" type="Node3D" parent="." unique_id=45629119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16662884, 0)
+
+[node name="Npc" parent="NPC_Group1" unique_id=1570048502 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 16, 1.706, 40)
+
+[node name="Npc2" parent="NPC_Group1" unique_id=579683144 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -10, 1.706, -50)
+
+[node name="Npc3" parent="NPC_Group1" unique_id=1206607012 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 11, 1.706, -24)
+
+[node name="Npc4" parent="NPC_Group1" unique_id=1522851553 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -18.5, 1.706, 33.77)
+
+[node name="Npc5" parent="NPC_Group1" unique_id=458254887 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -22, 1.706, -11.054)
+
+[node name="Npc6" parent="NPC_Group1" unique_id=1866015684 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 0, 1.7059035, 37.089066)
+
+[node name="Npc7" parent="NPC_Group1" unique_id=939859997 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -13.705, 1.706, -16.56)
+
+[node name="Npc8" parent="NPC_Group1" unique_id=2012402521 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 8.221, 1.706, -61.223)
+
+[node name="Npc9" parent="NPC_Group1" unique_id=52305857 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 21.364, 1.706, -45.131)
+
+[node name="Npc10" parent="NPC_Group1" unique_id=1485161518 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 21.758, 1.706, 70.386)
+
+[node name="Npc11" parent="NPC_Group1" unique_id=515534148 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -17.964558, 1.706, 60.976)
+
+[node name="Npc12" parent="NPC_Group1" unique_id=1208387568 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -14.913, 1.706, 40.839)
+
+[node name="Npc13" parent="NPC_Group1" unique_id=446133446 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 18.538, 1.706, 46.326)
+
+[node name="Npc14" parent="NPC_Group1" unique_id=1816429444 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 19.058, 1.706, -40.141)
+
+[node name="Npc15" parent="NPC_Group1" unique_id=2009673401 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 9.283, 1.706, 52.229)
+
+[node name="Npc16" parent="NPC_Group1" unique_id=1374337738 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -12.067, 1.706, 69.136)
+
+[node name="Npc17" parent="NPC_Group1" unique_id=685703151 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 0, 1.7059035, 39.388367)
+
+[node name="Npc18" parent="NPC_Group1" unique_id=268131999 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, -11.92, 1.706, -37.039)
+
+[node name="Npc19" parent="NPC_Group1" unique_id=630235739 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 18.937, 1.706, -59.905)
+
+[node name="Npc20" parent="NPC_Group1" unique_id=2094507073 instance=ExtResource("12_c5t2i")]
+transform = Transform3D(0.34, 0, 0, 0, 0.34, 0, 0, 0, 0.34, 19.102, 1.706, -19.125)
 
 [connection signal="entered_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
 [connection signal="exited_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
