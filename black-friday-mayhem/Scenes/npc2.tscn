@@ -26,7 +26,6 @@ height = 3.6728516
 script = ExtResource("1_lqs13")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1594509034]
-billboard = 1
 sprite_frames = SubResource("SpriteFrames_h1ryf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
