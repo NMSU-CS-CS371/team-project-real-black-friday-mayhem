@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ckhj2fob31nxl"
+path="res://.godot/imported/get-your-hands-off-my-babies-3.ogg-14581017b0f5318053b8f4a9ed8f256f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/get-your-hands-off-my-babies-3.ogg"
+dest_files=["res://.godot/imported/get-your-hands-off-my-babies-3.ogg-14581017b0f5318053b8f4a9ed8f256f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvcr2t88307fa"
+path="res://.godot/imported/kidz-bop-1.ogg-aa005c1dd75ad1d267ff57b0da7a8d6b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/kidz-bop-1.ogg"
+dest_files=["res://.godot/imported/kidz-bop-1.ogg-aa005c1dd75ad1d267ff57b0da7a8d6b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

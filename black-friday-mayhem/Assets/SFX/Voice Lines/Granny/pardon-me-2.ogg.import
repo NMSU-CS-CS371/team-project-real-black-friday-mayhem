@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3idpgj8c30gw"
+path="res://.godot/imported/pardon-me-2.ogg-82de8369550a0d173add2cca343c93cf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Granny/pardon-me-2.ogg"
+dest_files=["res://.godot/imported/pardon-me-2.ogg-82de8369550a0d173add2cca343c93cf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

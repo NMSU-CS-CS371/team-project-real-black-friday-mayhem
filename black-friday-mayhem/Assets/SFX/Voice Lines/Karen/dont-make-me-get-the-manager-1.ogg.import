@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ciive4xqpbqy"
+path="res://.godot/imported/dont-make-me-get-the-manager-1.ogg-c64bb6182bc10270a175c1f5a0b7750e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/dont-make-me-get-the-manager-1.ogg"
+dest_files=["res://.godot/imported/dont-make-me-get-the-manager-1.ogg-c64bb6182bc10270a175c1f5a0b7750e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

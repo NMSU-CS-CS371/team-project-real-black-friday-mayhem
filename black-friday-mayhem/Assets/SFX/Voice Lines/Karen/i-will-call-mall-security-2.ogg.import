@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ry18kfkfc4k0"
+path="res://.godot/imported/i-will-call-mall-security-2.ogg-ba136fce7cfb228f368d7704372235e3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/i-will-call-mall-security-2.ogg"
+dest_files=["res://.godot/imported/i-will-call-mall-security-2.ogg-ba136fce7cfb228f368d7704372235e3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
