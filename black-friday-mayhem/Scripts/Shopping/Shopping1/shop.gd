@@ -7,6 +7,7 @@ extends Node2D
 var itemsRemoved: int = 0
 var totalItems: int = 6
 signal shop_finished
+signal countdown_finished
 
 # called upon entering the scene
 func _ready() -> void:
@@ -14,10 +15,17 @@ func _ready() -> void:
 	reskin_background()
 	
 	# finish transitioning scene
+	SceneTransition.speed_scale = 1.3
 	SceneTransition.get_parent().get_node("ColorRect").color.a = 255
 	SceneTransition.play("fade_out")
-	await get_tree().create_timer(0.5).timeout
+	
+	await get_tree().create_timer(0.35).timeout
 	$SceneTransition/ColorRect.visible = false
+	
+	# play countdown animation
+	$AnimationPlayer.play("flash_sale")
+	await $AnimationPlayer.animation_finished
+	countdown_finished.emit()
 
 # called every frame
 func _process(_delta: float) -> void:
