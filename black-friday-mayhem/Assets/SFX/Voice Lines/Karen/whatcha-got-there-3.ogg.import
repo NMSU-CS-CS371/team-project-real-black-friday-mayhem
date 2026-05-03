@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bdp7dogdetw4v"
+path="res://.godot/imported/whatcha-got-there-3.ogg-2213fc7d1a4843e95a2fe37cfa0491f4.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/whatcha-got-there-3.ogg"
+dest_files=["res://.godot/imported/whatcha-got-there-3.ogg-2213fc7d1a4843e95a2fe37cfa0491f4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

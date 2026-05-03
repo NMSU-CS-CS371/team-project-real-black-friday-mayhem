@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4lsuoeoxi67x"
+path="res://.godot/imported/wheres-my-sunglasses-2.ogg-27a8f3a0ccfed618eccc6d3e1e6367c3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/wheres-my-sunglasses-2.ogg"
+dest_files=["res://.godot/imported/wheres-my-sunglasses-2.ogg-27a8f3a0ccfed618eccc6d3e1e6367c3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

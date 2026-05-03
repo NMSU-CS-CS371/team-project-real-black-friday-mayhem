@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dyqna3b3qd55l"
+path="res://.godot/imported/that-wasnt-so-hard-1.ogg-4e9eb08b2f87ac3e75c7b8b450532879.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/that-wasnt-so-hard-1.ogg"
+dest_files=["res://.godot/imported/that-wasnt-so-hard-1.ogg-4e9eb08b2f87ac3e75c7b8b450532879.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,5 +1,6 @@
 extends Control
 
+var master_volume: float
 var music_volume: float
 var sfx_volume: float
 var fullscreen: int
@@ -14,17 +15,22 @@ func _ready() -> void:
 func load_settings(config: ConfigFile):
 	configGlobal = config
 	# get settings from config file
+	master_volume = config.get_value("options","master_volume")
 	music_volume = config.get_value("options","music_volume")
 	sfx_volume = config.get_value("options", "sfx_volume")
 	fullscreen = config.get_value("options", "fullscreen")
 	
 	# apply settings to the UI
+	$VolumeSliders/MasterVolume.value = master_volume
 	$VolumeSliders/MusicVolume.value = music_volume
 	$VolumeSliders/SFXVolume.value = sfx_volume
 	$WindowButton.selected = fullscreen
 	
 	# show the panel
 	visible = true
+
+func _on_master_volume_changed(value: float):
+	master_volume = value
 
 func _on_music_volume_changed(value: float):
 	music_volume = value
@@ -44,6 +50,7 @@ func _on_x_button_pressed():
 
 # checks if settings in the options match settings in the config file
 func check_settings() -> bool:
+	var master_check = configGlobal.get_value("options","master_volume") == master_volume
 	var music_check = configGlobal.get_value("options","music_volume") == music_volume
 	var sfx_check = configGlobal.get_value("options", "sfx_volume") == sfx_volume
 	var fullscreen_check = configGlobal.get_value("options", "fullscreen") == fullscreen
@@ -51,6 +58,7 @@ func check_settings() -> bool:
 
 func _on_save_pressed():
 	# save all settings into config file
+	configGlobal.set_value("options","master_volume",master_volume)
 	configGlobal.set_value("options","music_volume",music_volume)
 	configGlobal.set_value("options","sfx_volume",sfx_volume)
 	configGlobal.set_value("options","fullscreen",fullscreen)

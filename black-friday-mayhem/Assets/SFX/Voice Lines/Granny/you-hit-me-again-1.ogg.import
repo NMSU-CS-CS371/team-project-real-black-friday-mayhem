@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dfohmy7137v4i"
+path="res://.godot/imported/you-hit-me-again-1.ogg-2afa93d9f1f48c8c26ff9e536b8485bd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Granny/you-hit-me-again-1.ogg"
+dest_files=["res://.godot/imported/you-hit-me-again-1.ogg-2afa93d9f1f48c8c26ff9e536b8485bd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

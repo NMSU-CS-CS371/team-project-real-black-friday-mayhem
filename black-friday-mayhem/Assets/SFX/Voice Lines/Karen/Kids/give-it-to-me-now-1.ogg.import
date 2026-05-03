@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cl54ujf3a5r3f"
+path="res://.godot/imported/give-it-to-me-now-1.ogg-382cd5858ecb2753bef77f2f9f62ebfe.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/Kids/give-it-to-me-now-1.ogg"
+dest_files=["res://.godot/imported/give-it-to-me-now-1.ogg-382cd5858ecb2753bef77f2f9f62ebfe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
