@@ -232,7 +232,7 @@ func  _on_key_finished(success) :
 	if is_finished :
 		return
 	if success :
-		$SoundEffects/click.play()
+		$SoundEffects/Kick.play()
 		if whatKid == 1 :
 			showKids($KidKick, "kicked")
 		elif whatKid == 2 :
