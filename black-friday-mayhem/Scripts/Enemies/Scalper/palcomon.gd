@@ -54,11 +54,12 @@ func start_game() :
 	$EnemyContatainer/Enemy.texture = idleTexture
 	transition.show()
 	transition.play("outTransition")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2.2).timeout
 	transition.hide()
-	$Music.play()
 	$AnimationPlayer.play("enemyStart")
 	$EnemyContatainer.show()
+	await $TransitionMusic.finished
+	$Music.play()
 	await $AnimationPlayer.animation_finished
 	#start text
 	display_text("You Encounter a Palcomon Scalper!!!")

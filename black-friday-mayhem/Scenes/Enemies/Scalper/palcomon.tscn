@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dtyx7i14yi6gg" path="res://Assets/Textures/TransitionTexture3.png" id="7_c7epx"]
 [ext_resource type="Texture2D" uid="uid://buqx5nfli38rv" path="res://Assets/Textures/TransitionTexture4.png" id="8_kj4qc"]
 [ext_resource type="Texture2D" uid="uid://10xbg58t5f6j" path="res://Assets/Textures/TransitionTexture5.png" id="9_56dx4"]
-[ext_resource type="AudioStream" uid="uid://dejjy8f4xt4mc" path="res://Assets/SFX/scalper_begin_sfx.wav" id="12_fhox4"]
+[ext_resource type="AudioStream" uid="uid://bu2i8ng1iulk4" path="res://Assets/SFX/scalper_transition.wav" id="12_fhox4"]
 [ext_resource type="AudioStream" uid="uid://c07g5xwxnp0l5" path="res://Assets/SFX/Level Up - Palcomon.mp3" id="12_hmm1d"]
 [ext_resource type="AudioStream" uid="uid://kuwuastrrjkf" path="res://Assets/SFX/Voice Lines/Scalper/youre-so-old-1.ogg" id="14_qac1j"]
 [ext_resource type="AudioStream" uid="uid://dsjmfc4evofeb" path="res://Assets/SFX/Voice Lines/Scalper/youre-so-old-2.ogg" id="15_7fmt4"]
@@ -335,16 +335,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("6_r8t1f")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("7_c7epx")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("8_kj4qc")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("9_56dx4")
 }],
 "loop": true,
@@ -352,16 +352,16 @@ animations = [{
 "speed": 4.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("9_56dx4")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("8_kj4qc")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("7_c7epx")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("6_r8t1f")
 }],
 "loop": true,
@@ -808,7 +808,7 @@ visible = false
 position = Vector2(400, 300)
 scale = Vector2(0.69104993, 0.91641337)
 sprite_frames = SubResource("SpriteFrames_qc2s0")
-animation = &"done"
+animation = &"outTransition"
 
 [node name="TransitionMusic" type="AudioStreamPlayer" parent="." unique_id=155845051]
 stream = ExtResource("12_fhox4")
