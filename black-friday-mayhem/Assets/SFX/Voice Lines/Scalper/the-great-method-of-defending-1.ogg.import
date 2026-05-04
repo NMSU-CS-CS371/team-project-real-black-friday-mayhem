@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://w5vqnfj25cvj"
+path="res://.godot/imported/the-great-method-of-defending-1.ogg-a1c91e06560148f047fcd15de369c571.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/the-great-method-of-defending-1.ogg"
+dest_files=["res://.godot/imported/the-great-method-of-defending-1.ogg-a1c91e06560148f047fcd15de369c571.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

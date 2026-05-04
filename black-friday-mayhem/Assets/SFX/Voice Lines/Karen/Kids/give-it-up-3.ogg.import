@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://boce4ln1ak4hj"
+path="res://.godot/imported/give-it-up-3.ogg-66c6c7ca77b5b0095252e35c43380fee.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/Kids/give-it-up-3.ogg"
+dest_files=["res://.godot/imported/give-it-up-3.ogg-66c6c7ca77b5b0095252e35c43380fee.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0xl1faq1p3jg"
+path="res://.godot/imported/youre-gonna-do-what-down-my-throat-1.ogg-0177e4edeccb794e8b6cc904f56f391d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/youre-gonna-do-what-down-my-throat-1.ogg"
+dest_files=["res://.godot/imported/youre-gonna-do-what-down-my-throat-1.ogg-0177e4edeccb794e8b6cc904f56f391d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://70g85g3e5e57"
+path="res://.godot/imported/you-clearly-dont-own-an-airfryer-1.ogg-7eac8f7b5180c834444fd76c38496fb2.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/you-clearly-dont-own-an-airfryer-1.ogg"
+dest_files=["res://.godot/imported/you-clearly-dont-own-an-airfryer-1.ogg-7eac8f7b5180c834444fd76c38496fb2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
