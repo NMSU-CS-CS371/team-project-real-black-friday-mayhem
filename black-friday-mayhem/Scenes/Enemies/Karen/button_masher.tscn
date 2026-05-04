@@ -68,6 +68,8 @@
 [ext_resource type="AudioStream" uid="uid://c5wsv1f4dfo2l" path="res://Assets/SFX/Voice Lines/Karen/Kids/kid-scream-2.ogg" id="66_d1fkf"]
 [ext_resource type="AudioStream" uid="uid://n3t43cjrx8d4" path="res://Assets/SFX/Voice Lines/Karen/Kids/kid-scream-3.ogg" id="67_1myx8"]
 [ext_resource type="AudioStream" uid="uid://bidnkv4wwue4t" path="res://Assets/SFX/Voice Lines/Karen/Kids/waaaa-1.ogg" id="68_poh53"]
+[ext_resource type="AudioStream" uid="uid://crn5p03wvpbhq" path="res://Assets/SFX/SoundEffects/Karen/kick.ogg" id="69_npgh0"]
+[ext_resource type="AudioStream" uid="uid://8mnek4hnt5ge" path="res://Assets/SFX/SoundEffects/Karen/punch.ogg" id="70_gea8c"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5npmi"]
 blend_mode = 4
@@ -457,6 +459,11 @@ stream_6/stream = ExtResource("66_d1fkf")
 stream_7/stream = ExtResource("67_1myx8")
 stream_8/stream = ExtResource("68_poh53")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yvojo"]
+streams_count = 2
+stream_0/stream = ExtResource("69_npgh0")
+stream_1/stream = ExtResource("70_gea8c")
+
 [node name="Button_Masher" type="Node2D" unique_id=1527775403]
 script = ExtResource("1_y1kjv")
 
@@ -574,34 +581,43 @@ theme_override_fonts/font = SubResource("FontVariation_74sdq")
 theme_override_font_sizes/font_size = 102
 text = "<SPACE>"
 
-[node name="Encounter" type="AudioStreamPlayer" parent="." unique_id=620190565]
+[node name="VoiceLines" type="Node" parent="." unique_id=589156656]
+
+[node name="Encounter" type="AudioStreamPlayer" parent="VoiceLines" unique_id=620190565]
 stream = SubResource("AudioStreamRandomizer_xvkcs")
 volume_db = 10.0
 pitch_scale = 1.1
 
-[node name="Win" type="AudioStreamPlayer" parent="." unique_id=1680131988]
+[node name="Win" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1680131988]
 stream = SubResource("AudioStreamRandomizer_bk3sf")
 volume_db = 10.0
 pitch_scale = 1.1
 
-[node name="Lose" type="AudioStreamPlayer" parent="." unique_id=1052858010]
+[node name="Lose" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1052858010]
 stream = SubResource("AudioStreamRandomizer_q6elk")
 volume_db = 10.0
 pitch_scale = 1.1
 
-[node name="Playing" type="AudioStreamPlayer" parent="." unique_id=1646123535]
+[node name="Playing" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1646123535]
 stream = SubResource("AudioStreamRandomizer_elwk3")
 volume_db = 10.0
 pitch_scale = 1.1
 
-[node name="kidsAttack" type="AudioStreamPlayer" parent="." unique_id=1203996425]
+[node name="kidsAttack" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1203996425]
 stream = SubResource("AudioStreamRandomizer_pfwfl")
 volume_db = 10.0
 pitch_scale = 1.1
 
-[node name="kidsKick" type="AudioStreamPlayer" parent="." unique_id=1466040459]
+[node name="kidsKick" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1466040459]
 stream = SubResource("AudioStreamRandomizer_ftd78")
 volume_db = 10.0
 pitch_scale = 1.1
+
+[node name="SoundEffects" type="Node" parent="." unique_id=1050759952]
+
+[node name="Kick" type="AudioStreamPlayer" parent="SoundEffects" unique_id=2005110879]
+stream = SubResource("AudioStreamRandomizer_yvojo")
+volume_db = 10.0
+bus = &"SFX"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -7,6 +7,7 @@ extends Node2D #Hand Mini Game
 @onready var player = get_tree().get_first_node_in_group("Player")
 @onready var checkpoint = get_parent()
 
+var playing = false
 enum GameState{IDLE, RUNNING, FINISHED}
 var state: GameState = GameState.IDLE
 var items: Array[Node2D] = []
@@ -28,6 +29,7 @@ func _ready() -> void:
 	$SceneTransition/ColorRect.visible = false
 	
 	print("Mini-game ready")#print to make sure Mini Game Scene is running
+	playing = true
 	start_game()#start the game
 
 #start game function to start running the mini game
@@ -91,6 +93,8 @@ func reskin_background():
 
 # update label with wallet balance
 func update_wallet_label():
+	if playing :
+		$SoundEffects/money.play()
 	if player.inventory.wallet < 0:
 		wallet_label.text = "-$" + str(abs(player.inventory.wallet))
 		wallet_label.add_theme_color_override("font_color", Color(1,0,0,1))

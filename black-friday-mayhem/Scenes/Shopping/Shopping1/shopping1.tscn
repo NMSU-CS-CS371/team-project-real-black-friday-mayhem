@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_tamj1"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="5_es823"]
 [ext_resource type="Texture2D" uid="uid://dlmtwfg21rgus" path="res://Assets/Sprites/flash_sale.png" id="6_bygdm"]
+[ext_resource type="AudioStream" uid="uid://dyedx00ir7ry3" path="res://Assets/SFX/SoundEffects/Shopping/money.ogg" id="8_es823"]
+[ext_resource type="AudioStream" uid="uid://b377u7kt5wgua" path="res://Assets/SFX/SoundEffects/Shopping/count-down.ogg" id="8_tamj1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a148l"]
 radius = 59.0
@@ -365,6 +367,17 @@ z_index = 9
 offset_right = 800.0
 offset_bottom = 600.0
 color = Color(0, 0, 0, 0.24705882)
+
+[node name="SoundEffects" type="Node" parent="." unique_id=691990869]
+
+[node name="countdown" type="AudioStreamPlayer" parent="SoundEffects" unique_id=2130603600]
+stream = ExtResource("8_tamj1")
+bus = &"SFX"
+
+[node name="money" type="AudioStreamPlayer" parent="SoundEffects" unique_id=671191483]
+stream = ExtResource("8_es823")
+volume_db = 5.0
+bus = &"SFX"
 
 [connection signal="countdown_finished" from="." to="ShopItem1" method="_on_countdown_finished"]
 [connection signal="countdown_finished" from="." to="ShopItem2" method="_on_countdown_finished"]

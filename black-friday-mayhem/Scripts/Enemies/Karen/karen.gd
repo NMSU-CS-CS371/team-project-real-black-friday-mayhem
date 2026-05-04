@@ -71,6 +71,8 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	print("karen hit")
 	body.stop_velocity.emit()
 	playing_game = true
+	if $Lines.playing:
+			$Lines.stop()
 	var battle = game.instantiate()
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))

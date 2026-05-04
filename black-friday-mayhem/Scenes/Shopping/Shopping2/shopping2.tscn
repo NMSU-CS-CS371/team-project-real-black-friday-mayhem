@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="3_yjfng"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="6_yjfng"]
 [ext_resource type="AudioStream" uid="uid://c13gy764mopl6" path="res://Assets/SFX/Show Your Moves - Shop.mp3" id="7_03m0q"]
+[ext_resource type="AudioStream" uid="uid://dyedx00ir7ry3" path="res://Assets/SFX/SoundEffects/Shopping/money.ogg" id="8_nkfk1"]
 
 [node name="MiniGame" type="Node2D" unique_id=1466539220 node_paths=PackedStringArray("wallet_label")]
 script = ExtResource("1_yjfng")
@@ -53,5 +54,12 @@ spawn_interval = 0.5
 stream = ExtResource("7_03m0q")
 autoplay = true
 bus = &"Music"
+
+[node name="SoundEffects" type="Node" parent="." unique_id=1131384272]
+
+[node name="money" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1273557492]
+stream = ExtResource("8_nkfk1")
+volume_db = 5.0
+bus = &"SFX"
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
