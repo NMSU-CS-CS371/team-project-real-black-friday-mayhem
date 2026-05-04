@@ -9,6 +9,7 @@ shader_type canvas_item;
 // This variable tells us how many pixels we want there to be in our pixel art.
 // I give it a default of 192x192
 uniform vec2 pixel_count = vec2(192.0);
+uniform sampler2D mask_tex;
 
 void fragment()
 {
@@ -17,10 +18,12 @@ void fragment()
    // Upscale "uv" by pixel count, floor the result, then downscale it by pixel count.
    // This is a very common technique when making pixel shaders.
    vec2 uv = UV;
+   
    uv *= pixel_count;
    uv = floor(uv);
    uv = uv / pixel_count;
-   
+   vec4 msk = texture(TEXTURE, uv); // I won't lie y'all, not a lot happened in this...
+
    // COLOR parameter is provided by Godot. If we modify it, we control what color is displayed by each pixel.
    // We use a "texture" function to sample colors from "TEXTURE" parameter.
    // "TEXTURE" is another parameter provided by Godot. In this case, it points to our SubViewport texture.

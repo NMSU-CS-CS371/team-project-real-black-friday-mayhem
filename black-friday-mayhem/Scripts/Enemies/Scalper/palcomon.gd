@@ -54,14 +54,16 @@ func start_game() :
 	$EnemyContatainer/Enemy.texture = idleTexture
 	transition.show()
 	transition.play("outTransition")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2.2).timeout
 	transition.hide()
-	$Music.play()
 	$AnimationPlayer.play("enemyStart")
 	$EnemyContatainer.show()
+	await $TransitionMusic.finished
+	$Music.play()
 	await $AnimationPlayer.animation_finished
 	#start text
 	display_text("You Encounter a Palcomon Scalper!!!")
+	$Start.play()
 	await textbox_closed
 	display_text("Choose a Palcomon to fight with!")
 	await textbox_closed
@@ -110,6 +112,9 @@ func set_health(progress_bar, health, max_hp):
 func attack(text, damage, type) :
 	display_text(text)
 	await textbox_closed
+	if $PickCart.is_playing or $PickCrow.is_playing :
+		$PickCart.stop()
+		$PickCrow.stop()
 	enemy_health = max(0, enemy_health-damage)
 	set_health($EnemyContatainer/Enemy/EnemyHealth, enemy_health, enemy_max)
 	$EnemyContatainer/Enemy.texture = hurtTexture
@@ -117,10 +122,28 @@ func attack(text, damage, type) :
 	match type :
 		"swing":
 			$AnimationPlayer.play("player_attack")
+			if $GO.is_playing or $Insults.is_playing :
+				$GO.stop()
+				$Insults.stop()
+			$Attack.play()
 		"bash":
 			$AnimationPlayer.play("player_bash")
+			if $GO.is_playing or $Insults.is_playing :
+				$GO.stop()
+				$Insults.stop()
+			$Attack.play()
 		"insult":
 			$AnimationPlayer.play("player_insult")
+			if $PlayerContatainer/Player.texture == cartTexture :
+				if $GO.is_playing or $Insults.is_playing :
+					$GO.stop()
+					$Insults.stop()
+				$CartInsult.play()
+			else :
+				if $GO.is_playing or $Insults.is_playing :
+					$GO.stop()
+					$Insults.stop()
+				$CrowInsult.play()
 	await $AnimationPlayer.animation_finished
 	$PlayerContatainer/PlayerHealth.show()
 	$EnemyContatainer/Enemy.texture = idleTexture
@@ -149,8 +172,16 @@ func enemy_attack(text, damage) :
 	display_text(text)
 	await textbox_closed
 	if is_Defending :
+		if $PickCart.is_playing or $PickCrow.is_playing :
+			$PickCart.stop()
+			$PickCrow.stop()
 		$EnemyContatainer/Enemy.texture = attackTexture
 		$AnimationPlayer.play("player_damaged")
+		if $Attack.is_playing or $CrowInsult.is_playing or $CartInsult :
+			$Attack.stop()
+			$CrowInsult.stop()
+			$CartInsult.stop()
+		$Defend.play()
 		await $AnimationPlayer.animation_finished
 		$EnemyContatainer/Enemy.texture = idleTexture
 		display_text("you succsefully DEFENDED!")
@@ -162,6 +193,18 @@ func enemy_attack(text, damage) :
 		set_health($PlayerContatainer/PlayerHealth, player_health, player_max)
 		$EnemyContatainer/Enemy.texture = attackTexture
 		$AnimationPlayer.play("player_damaged")
+		if enemy_attack_count == 1 :
+			if $Attack.is_playing or $CrowInsult.is_playing or $CartInsult :
+				$Attack.stop()
+				$CrowInsult.stop()
+				$CartInsult.stop()
+			$Insults.play()
+		else :
+			if $Attack.is_playing or $CrowInsult.is_playing or $CartInsult :
+				$Attack.stop()
+				$CrowInsult.stop()
+				$CartInsult.stop()
+			$GO.play()
 		await $AnimationPlayer.animation_finished
 		$EnemyContatainer/Enemy.texture = idleTexture
 		display_text("Enemy dealt %d damage" % [damage])
@@ -175,6 +218,11 @@ func enemy_attack(text, damage) :
 func enemy_defeated() :
 	$EnemyContatainer/Enemy.texture = hurtTexture
 	display_text("You have defeated the Scalper!!!")
+	if $Attack.is_playing or $CrowInsult.is_playing or $CartInsult :
+		$Attack.stop()
+		$CrowInsult.stop()
+		$CartInsult.stop()
+	$Win.play()
 	await textbox_closed
 	display_text("The Scalper dropped a pack of palcomon cards!")
 	var item: InvItem
@@ -193,6 +241,10 @@ func enemy_defeated() :
 #when the player loses 
 func player_defeated() :
 	display_text("You have been Defeated!!!")
+	if $GO.is_playing or $Insults.is_playing :
+		$GO.stop()
+		$Insults.stop()
+	$Lose.play()
 	$ButtonPanel/MarginContainer/HBoxContainer.hide()
 	await textbox_closed
 	await get_tree().create_timer(0.25).timeout
@@ -207,6 +259,10 @@ func player_defeated() :
 func _on_run_pressed() -> void:
 	if cant_hit_buttons :
 		return
+	if $PickCart.is_playing or $PickCrow.is_playing :
+		$PickCart.stop()
+		$PickCrow.stop()
+	$Run.play()
 	display_text("Leaving Fight!!!")
 	$ButtonPanel/MarginContainer/HBoxContainer.hide()
 	await textbox_closed
@@ -236,6 +292,9 @@ func _on_crowbar_pressed() -> void:
 	$PlayerContatainer/Player.texture = crowbarTexture
 	set_health($PlayerContatainer/PlayerHealth, player_health, player_max)
 	$AnimationPlayer.play("playerStart")
+	if $Start.is_playing :
+		$Start.stop()
+	$PickCrow.play()
 	$PlayerContatainer.show()
 	$PalButtons.hide()
 	await $AnimationPlayer.animation_finished
@@ -247,6 +306,9 @@ func _on_cart_pressed() -> void:
 	$PlayerContatainer/Player.texture = cartTexture
 	set_health($PlayerContatainer/PlayerHealth, player_health-20, player_max-20)
 	$AnimationPlayer.play("playerStart")
+	if $Start.is_playing :
+		$Start.stop()
+	$PickCart.play()
 	$PlayerContatainer.show()
 	$PalButtons.hide()
 	await $AnimationPlayer.animation_finished
@@ -260,6 +322,7 @@ func _on_normal_pressed() -> void:
 		attack("You SWING at the Scalper!", 25, "swing")
 	if $PlayerContatainer/Player.texture == cartTexture :
 		attack("You BASH you cart into the Scalper!", 25, "bash")
+		
 
 #when insult button is pressed
 func _on_insult_pressed() -> void:

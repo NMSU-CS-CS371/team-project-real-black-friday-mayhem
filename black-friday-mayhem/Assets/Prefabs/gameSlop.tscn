@@ -28,6 +28,14 @@ albedo_texture = ExtResource("2_vnplm")
 [sub_resource type="PlaneMesh" id="PlaneMesh_rhbvv"]
 material = SubResource("StandardMaterial3D_n3sqv")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bdqx6"]
+blend_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vnplm"]
+lightmap_size_hint = Vector2i(12, 12)
+material = SubResource("StandardMaterial3D_bdqx6")
+add_uv2 = true
+
 [node name="GameSlop" type="Node3D" unique_id=790083064]
 transform = Transform3D(2, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
@@ -82,4 +90,9 @@ mesh = SubResource("BoxMesh_5w373")
 
 [node name="Logo" type="MeshInstance3D" parent="." unique_id=2047287325]
 transform = Transform3D(0.75, 0, 0, 0, 0.4, 0, 0, 0, 0.25, 0, 0.49542293, -1.014785)
+layers = 64
 mesh = SubResource("PlaneMesh_rhbvv")
+
+[node name="Logo2" type="MeshInstance3D" parent="." unique_id=185546110]
+transform = Transform3D(0.75, 0, 0, 0, 0.4, 0, 0, 0, 0.25, 0, 0.49542293, -1.014785)
+mesh = SubResource("PlaneMesh_vnplm")

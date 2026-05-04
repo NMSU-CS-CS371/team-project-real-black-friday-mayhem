@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://cj1noksfvq1fw"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jj7cn"]
-size = Vector3(4.25, 2.65, 0.413)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pu74"]
 albedo_color = Color(0.27450982, 0.16470589, 0.09411765, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_x7ag5"]
+lightmap_size_hint = Vector2i(27, 28)
 material = SubResource("StandardMaterial3D_0pu74")
+add_uv2 = true
 size = Vector3(4.25, 0.15, 0.413)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k11m6"]
@@ -19,12 +18,7 @@ top_radius = 0.125
 bottom_radius = 0.125
 height = 2.5
 
-[node name="Handrail" type="StaticBody3D" unique_id=401454356]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=384351871]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 1.25, 0)
-visible = false
-shape = SubResource("BoxShape3D_jj7cn")
+[node name="handrail" type="MultiMeshInstance3D" unique_id=727953554]
 
 [node name="Rail" type="MeshInstance3D" parent="." unique_id=2000571318]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 2.5, 0)

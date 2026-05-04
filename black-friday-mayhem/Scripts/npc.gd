@@ -14,14 +14,20 @@ var down_timer := 0.0
 
 var standing_y := 0.0
 var fallen_y_offset := -0.7
+@export var sprit : GeometryInstance3D
+var mask
 
 func _ready():
+	mask = sprit.material_override
 	randomize()
 	$AnimatedSprite3D.play("default")
-
+	$AnimatedSprite3D/Sprite3D/SubViewport/AnimatedSprite2D.play("default")
+	
 	standing_y = $AnimatedSprite3D.position.y
 	$AnimatedSprite3D.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-
+	
+	mask.billboard_mode = 1
+	mask.billboard_keep_scale = true
 	# Area3D player hit detection
 	if has_node("HitboxArea3D"):
 		$HitboxArea3D.body_entered.connect(_on_hitbox_body_entered)
@@ -53,7 +59,9 @@ func _physics_process(delta):
 
 	# Standing NPC keeps facing camera/player.
 	$AnimatedSprite3D.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-
+	mask.billboard_mode = 1
+	mask.billboard_keep_scale = true
+	
 	if wait_time > 0.0:
 		wait_time -= delta
 		velocity = Vector3.ZERO
@@ -100,7 +108,7 @@ func knock_down():
 	down_timer = down_time
 
 	$AnimatedSprite3D.billboard = BaseMaterial3D.BILLBOARD_DISABLED
-
+	mask.billboard_mode = 0
 	if has_node("CollisionShape3D"):
 		$CollisionShape3D.disabled = true
 
@@ -114,6 +122,9 @@ func get_back_up():
 	$AnimatedSprite3D.rotation.z = 0.0
 	$AnimatedSprite3D.position.y = standing_y
 	$AnimatedSprite3D.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	
+	mask.billboard_mode = 1
+	mask.billboard_keep_scale = true
 
 	if has_node("CollisionShape3D"):
 		$CollisionShape3D.disabled = false

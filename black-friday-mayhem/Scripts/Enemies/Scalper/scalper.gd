@@ -19,12 +19,15 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	#if enemy is defeated make sure has right sprite and is not moving
 	if is_defeated:
-		sprite.play("defeated")
+		play_animation("defeated")
+		#sprite.play("defeated")
 		sprite.offset.y = -8
+		$AnimatedSprite3D/Sprite3D.offset.y = -8
 		velocity = Vector3.ZERO
 	#else if you playing enemys mini game dont move
 	elif playing_game:
-		sprite.play("forward")
+		play_animation("forward")
+		#sprite.play("forward")
 		velocity = Vector3.ZERO
 	#else enemy is moving
 	else:
@@ -56,6 +59,10 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))
 	
+func play_animation(name : String):
+	sprite.play(name)
+	$AnimatedSprite3D/Sprite3D/SubViewport/AnimatedSprite2D.play(name)
+	pass
 #function to recieve game results 
 func _on_minigame_finished(result):
 	if result == "win" :
