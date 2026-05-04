@@ -50,6 +50,10 @@ sky_material = SubResource("PanoramaSkyMaterial_pt3ps")
 background_mode = 2
 sky = SubResource("Sky_hmc15")
 sky_rotation = Vector3(0, 1.7732545, 0)
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 10.0
+tonemap_exposure = 1.2
 tonemap_agx_white = 2.0
 tonemap_agx_contrast = 1.1
 
@@ -87,13 +91,17 @@ albedo_texture_force_srgb = true
 uv1_scale = Vector3(50, 1.5, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_t2t4p"]
+lightmap_size_hint = Vector2i(17, 19)
 material = SubResource("StandardMaterial3D_k7acu")
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fj1v"]
 albedo_color = Color(0, 0.21176471, 1, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_0pcbe"]
+lightmap_size_hint = Vector2i(17, 19)
 material = SubResource("StandardMaterial3D_0fj1v")
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axeuq"]
 albedo_color = Color(0, 1, 1, 1)
@@ -122,19 +130,25 @@ height = 0.2
 albedo_texture = ExtResource("13_t2t4p")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pyn1s"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_yq1aw")
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_no8kt"]
 albedo_texture = ExtResource("14_0pcbe")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_no8kt"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_no8kt")
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4fjy"]
 albedo_texture = ExtResource("15_axeuq")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xbk3s"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_i4fjy")
+add_uv2 = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i4fjy"]
 
@@ -142,7 +156,9 @@ material = SubResource("StandardMaterial3D_i4fjy")
 albedo_texture = ExtResource("16_1cojt")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dt0r1"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_dt0r1")
+add_uv2 = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t2t4p"]
 
@@ -252,10 +268,15 @@ player = NodePath("Main Camera/SubViewportContainer/Player Viewport/MainPlayerSH
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=954260089]
 transform = Transform3D(-0.83210844, 0.5268307, -0.17333485, -0.39200404, -0.33758986, 0.8557838, 0.39233702, 0.78005284, 0.4874311, 0, 20, 0)
 layers = 33
+light_bake_mode = 1
 shadow_bias = 10.0
 shadow_normal_bias = 10.0
 shadow_transmittance_bias = 16.0
 shadow_blur = 10.0
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=506673776]
+interior = true
+use_denoiser = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639120086]
 environment = SubResource("Environment_hmc15")

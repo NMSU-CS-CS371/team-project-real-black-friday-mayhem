@@ -9,7 +9,9 @@
 albedo_texture = ExtResource("1_c58rf")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7anmf"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_rhbvv")
+add_uv2 = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_yquf2"]
 

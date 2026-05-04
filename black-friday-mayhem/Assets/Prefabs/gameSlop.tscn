@@ -32,7 +32,9 @@ material = SubResource("StandardMaterial3D_n3sqv")
 blend_mode = 2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vnplm"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_bdqx6")
+add_uv2 = true
 
 [node name="GameSlop" type="Node3D" unique_id=790083064]
 transform = Transform3D(2, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
