@@ -39,9 +39,9 @@
 [ext_resource type="AudioStream" uid="uid://dw3emkkknlhv6" path="res://Assets/SFX/Voice Lines/Karen/dont-make-me-get-the-manager-3.ogg" id="37_vqiq0"]
 [ext_resource type="AudioStream" uid="uid://waifbdyl43rc" path="res://Assets/SFX/Voice Lines/Karen/dont-make-me-get-the-manager-4.ogg" id="38_wvxrs"]
 [ext_resource type="AudioStream" uid="uid://bjg0b0bvdj3g0" path="res://Assets/SFX/Voice Lines/Karen/dont-make-me-get-the-manager-5.ogg" id="39_s63qj"]
-[ext_resource type="AudioStream" uid="uid://dkk67j5d42b44" path="res://Assets/SFX/Voice Lines/Karen/give-it-1.ogg" id="40_aw85m"]
-[ext_resource type="AudioStream" uid="uid://v84s4ksf4uu8" path="res://Assets/SFX/Voice Lines/Karen/give-it-2.ogg" id="41_olj62"]
-[ext_resource type="AudioStream" uid="uid://42typyxms6t3" path="res://Assets/SFX/Voice Lines/Karen/give-it-up-3.ogg" id="42_88smt"]
+[ext_resource type="AudioStream" uid="uid://cotogld0i268m" path="res://Assets/SFX/Voice Lines/Karen/Kids/give-it-1.ogg" id="40_ssih0"]
+[ext_resource type="AudioStream" uid="uid://crtt3cyv5ohtc" path="res://Assets/SFX/Voice Lines/Karen/Kids/give-it-2.ogg" id="41_fwmok"]
+[ext_resource type="AudioStream" uid="uid://boce4ln1ak4hj" path="res://Assets/SFX/Voice Lines/Karen/Kids/give-it-up-3.ogg" id="42_npgh0"]
 [ext_resource type="AudioStream" uid="uid://b1tn1dr8lilgj" path="res://Assets/SFX/Voice Lines/Karen/just-give-it-up-1.ogg" id="43_mjlhf"]
 [ext_resource type="AudioStream" uid="uid://bd6v5yf57c8xh" path="res://Assets/SFX/Voice Lines/Karen/just-give-it-up-2.ogg" id="44_5vk5g"]
 [ext_resource type="AudioStream" uid="uid://qii8xs40g0hd" path="res://Assets/SFX/Voice Lines/Karen/grab-em-2.ogg" id="45_ysipn"]
@@ -420,9 +420,9 @@ stream_1/stream = ExtResource("36_wx170")
 stream_2/stream = ExtResource("37_vqiq0")
 stream_3/stream = ExtResource("38_wvxrs")
 stream_4/stream = ExtResource("39_s63qj")
-stream_5/stream = ExtResource("40_aw85m")
-stream_6/stream = ExtResource("41_olj62")
-stream_7/stream = ExtResource("42_88smt")
+stream_5/stream = ExtResource("40_ssih0")
+stream_6/stream = ExtResource("41_fwmok")
+stream_7/stream = ExtResource("42_npgh0")
 stream_8/stream = ExtResource("43_mjlhf")
 stream_9/stream = ExtResource("44_5vk5g")
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://st6gbs0s0cuh"
+path="res://.godot/imported/are-you-defending-1.ogg-4f1111da77539b4a2e18a4a5d430cd5e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/are-you-defending-1.ogg"
+dest_files=["res://.godot/imported/are-you-defending-1.ogg-4f1111da77539b4a2e18a4a5d430cd5e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

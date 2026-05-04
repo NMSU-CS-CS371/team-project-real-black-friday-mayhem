@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dwhoyyp5kw7dc"
+path="res://.godot/imported/wheres-the-tv-stuff-at-2.ogg-37c7359dcf6429381553a530ba34e230.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/wheres-the-tv-stuff-at-2.ogg"
+dest_files=["res://.godot/imported/wheres-the-tv-stuff-at-2.ogg-37c7359dcf6429381553a530ba34e230.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

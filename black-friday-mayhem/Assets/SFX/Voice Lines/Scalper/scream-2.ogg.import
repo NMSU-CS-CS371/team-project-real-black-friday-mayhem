@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://8e7y6as2g2lq"
+path="res://.godot/imported/scream-2.ogg-c947f2b821f4786934bdcba7ea8c02e8.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/scream-2.ogg"
+dest_files=["res://.godot/imported/scream-2.ogg-c947f2b821f4786934bdcba7ea8c02e8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

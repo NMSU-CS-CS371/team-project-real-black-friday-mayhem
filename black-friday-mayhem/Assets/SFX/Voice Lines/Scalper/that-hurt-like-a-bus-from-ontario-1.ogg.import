@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bceom08jynf4u"
+path="res://.godot/imported/that-hurt-like-a-bus-from-ontario-1.ogg-6c640dac8c18d8c06b7d4f19b7b29480.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/that-hurt-like-a-bus-from-ontario-1.ogg"
+dest_files=["res://.godot/imported/that-hurt-like-a-bus-from-ontario-1.ogg-6c640dac8c18d8c06b7d4f19b7b29480.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

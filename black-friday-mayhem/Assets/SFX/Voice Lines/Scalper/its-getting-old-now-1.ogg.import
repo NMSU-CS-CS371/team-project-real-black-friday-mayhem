@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cm1ua3k1nmkl6"
+path="res://.godot/imported/its-getting-old-now-1.ogg-22578eac480e1a9e15206e0898eca909.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/its-getting-old-now-1.ogg"
+dest_files=["res://.godot/imported/its-getting-old-now-1.ogg-22578eac480e1a9e15206e0898eca909.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

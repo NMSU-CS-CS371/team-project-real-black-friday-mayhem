@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c2cvehe6opesa"
+path="res://.godot/imported/screan-7.ogg-a9c1b02826b05041ba14c95bf11e1baf.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/screan-7.ogg"
+dest_files=["res://.godot/imported/screan-7.ogg-a9c1b02826b05041ba14c95bf11e1baf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

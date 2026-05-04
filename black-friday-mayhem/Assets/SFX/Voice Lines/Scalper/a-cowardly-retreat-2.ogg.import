@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bl1y86x8kq8ws"
+path="res://.godot/imported/a-cowardly-retreat-2.ogg-84055692dfce71b3d97a2442e7a804c2.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/a-cowardly-retreat-2.ogg"
+dest_files=["res://.godot/imported/a-cowardly-retreat-2.ogg-84055692dfce71b3d97a2442e7a804c2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
