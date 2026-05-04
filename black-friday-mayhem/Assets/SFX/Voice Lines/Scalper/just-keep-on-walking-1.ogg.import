@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bxukdyh4lf6cx"
+path="res://.godot/imported/just-keep-on-walking-1.ogg-c61317c068b5e63a81500f65f41800e1.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/just-keep-on-walking-1.ogg"
+dest_files=["res://.godot/imported/just-keep-on-walking-1.ogg-c61317c068b5e63a81500f65f41800e1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

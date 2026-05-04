@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://blsnj5yjfaqmw"
+path="res://.godot/imported/my-ip-starts-with-8-1-2.ogg-9bef53e19593ce883d85848a02dbcdf3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/my-ip-starts-with-8-1-2.ogg"
+dest_files=["res://.godot/imported/my-ip-starts-with-8-1-2.ogg-9bef53e19593ce883d85848a02dbcdf3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

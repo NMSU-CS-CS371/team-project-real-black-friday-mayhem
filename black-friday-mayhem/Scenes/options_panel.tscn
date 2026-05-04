@@ -29,37 +29,55 @@ offset_right = 512.0
 offset_bottom = 227.0
 alignment = 1
 
-[node name="MusicVolume" type="HSlider" parent="VolumeSliders" unique_id=1234084996]
+[node name="MasterVolume" type="HSlider" parent="VolumeSliders" unique_id=1234084996]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 tick_count = 10
 ticks_on_borders = true
 ticks_position = 3
 
-[node name="SFXVolume" type="HSlider" parent="VolumeSliders" unique_id=657457806]
+[node name="MusicVolume" type="HSlider" parent="VolumeSliders" unique_id=657457806]
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 tick_count = 10
 ticks_on_borders = true
 ticks_position = 3
 
-[node name="MusicLabel" type="Label" parent="." unique_id=128811799]
+[node name="SFXVolume" type="HSlider" parent="VolumeSliders" unique_id=189648961]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 3
+
+[node name="MasterLabel" type="Label" parent="." unique_id=299241266]
 layout_mode = 0
 offset_left = 47.0
-offset_top = 53.0
+offset_top = 103.0
 offset_right = 133.0
-offset_bottom = 88.0
+offset_bottom = 138.0
 theme = ExtResource("1_ndwmh")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_jbjff")
 text = "Music"
 
+[node name="MusicLabel" type="Label" parent="." unique_id=128811799]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 43.0
+offset_right = 133.0
+offset_bottom = 78.0
+theme = ExtResource("1_ndwmh")
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_jbjff")
+text = "Master"
+
 [node name="SFXLabel" type="Label" parent="." unique_id=678069610]
 layout_mode = 0
 offset_left = 48.0
-offset_top = 115.0
+offset_top = 165.0
 offset_right = 134.0
-offset_bottom = 150.0
+offset_bottom = 200.0
 theme = ExtResource("1_ndwmh")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_jbjff")
@@ -68,9 +86,9 @@ text = "SFX"
 [node name="WindowButton" type="OptionButton" parent="." unique_id=1581473799]
 layout_mode = 0
 offset_left = 353.0
-offset_top = 217.0
+offset_top = 257.0
 offset_right = 500.94287
-offset_bottom = 276.0
+offset_bottom = 316.0
 theme = ExtResource("1_ndwmh")
 theme_override_font_sizes/font_size = 28
 item_count = 2
@@ -82,9 +100,9 @@ popup/item_1/id = 1
 [node name="WindowLabel" type="Label" parent="." unique_id=2016707071]
 layout_mode = 0
 offset_left = 45.0
-offset_top = 228.0
+offset_top = 268.0
 offset_right = 252.0
-offset_bottom = 263.0
+offset_bottom = 303.0
 theme = ExtResource("1_ndwmh")
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_jbjff")
@@ -175,6 +193,7 @@ theme_override_colors/font_hover_color = Color(0.626041, 0, 0.15000352, 1)
 text = "Discard
 "
 
+[connection signal="value_changed" from="VolumeSliders/MasterVolume" to="." method="_on_master_volume_changed"]
 [connection signal="value_changed" from="VolumeSliders/MusicVolume" to="." method="_on_music_volume_changed"]
 [connection signal="value_changed" from="VolumeSliders/SFXVolume" to="." method="_on_sfx_volume_changed"]
 [connection signal="item_selected" from="WindowButton" to="." method="_on_window_changed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cwhn2hwp18b2m"
+path="res://.godot/imported/you-dont-know-what-your-getting-into-1.ogg-df02ce060c20bd0627a71d1e56cff45a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/you-dont-know-what-your-getting-into-1.ogg"
+dest_files=["res://.godot/imported/you-dont-know-what-your-getting-into-1.ogg-df02ce060c20bd0627a71d1e56cff45a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

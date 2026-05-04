@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bqdo80yykqix5"
+path="res://.godot/imported/my-leg-1.ogg-b4e4cdc000554891c76b5cf6f765cd2f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Female/my-leg-1.ogg"
+dest_files=["res://.godot/imported/my-leg-1.ogg-b4e4cdc000554891c76b5cf6f765cd2f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

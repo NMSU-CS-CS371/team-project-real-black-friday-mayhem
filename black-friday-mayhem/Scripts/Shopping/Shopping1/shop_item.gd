@@ -57,9 +57,8 @@ func _ready() -> void:
 	thisItem.discount = discount
 	
 	# Shorter timer for bigger deals
-	timerLength = (10 - (discount/10))*0.75
+	timerLength = (10 - (discount/10))*0.25
 	timer.wait_time = timerLength
-	timer.start()
 	
 	# Show price and discount on price tag
 	var tag = $PriceTag
@@ -117,6 +116,9 @@ func purchase_item():
 	#		item = load("res://Assets/Inventory/Items/Placeholders/cat.tres")
 	player.inventory.insert(thisItem)
 	queue_free()
+
+func _on_countdown_finished():
+	$Timer.start()
 
 func _exit_tree() -> void:
 	item_exiting_tree.emit()

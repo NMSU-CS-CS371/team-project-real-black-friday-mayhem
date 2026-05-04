@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dvgtcbkgv7tux"
+path="res://.godot/imported/what-in-my-what-2.ogg-0b3348d4f21b81b9bc0be6b7afa0b21c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/what-in-my-what-2.ogg"
+dest_files=["res://.godot/imported/what-in-my-what-2.ogg-0b3348d4f21b81b9bc0be6b7afa0b21c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

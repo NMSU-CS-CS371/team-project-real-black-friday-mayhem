@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://nqnv1d15r4f0"
+path="res://.godot/imported/ill-friend-you-on-skype-2.ogg-a1a5bc18b729501d79cb79a1871079db.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/ill-friend-you-on-skype-2.ogg"
+dest_files=["res://.godot/imported/ill-friend-you-on-skype-2.ogg-a1a5bc18b729501d79cb79a1871079db.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

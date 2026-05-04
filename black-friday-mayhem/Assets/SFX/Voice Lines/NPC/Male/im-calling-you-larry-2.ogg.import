@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bl7vyj8eucux2"
+path="res://.godot/imported/im-calling-you-larry-2.ogg-c76a3e8b6f7db4e95e6ab11dbcd35e35.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/im-calling-you-larry-2.ogg"
+dest_files=["res://.godot/imported/im-calling-you-larry-2.ogg-c76a3e8b6f7db4e95e6ab11dbcd35e35.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
