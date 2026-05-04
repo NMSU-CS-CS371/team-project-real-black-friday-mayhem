@@ -3,6 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://cxhl6r63ugnvj" path="res://Scenes/Enemies/enemy.tscn" id="1_q4vah"]
 [ext_resource type="Script" uid="uid://d3llu1tkny4nn" path="res://Scripts/Enemies/Granny/granny.gd" id="2_iv0je"]
 [ext_resource type="Texture2D" uid="uid://wsto8ric7qca" path="res://Assets/Sprites/GrannySheet.png" id="2_pjpcr"]
+[ext_resource type="AudioStream" uid="uid://b8hh1lsxjkiqu" path="res://Assets/SFX/Voice Lines/Granny/pardon-me-1.ogg" id="4_ppkis"]
+[ext_resource type="AudioStream" uid="uid://b3idpgj8c30gw" path="res://Assets/SFX/Voice Lines/Granny/pardon-me-2.ogg" id="5_na25d"]
+[ext_resource type="AudioStream" uid="uid://dfohmy7137v4i" path="res://Assets/SFX/Voice Lines/Granny/you-hit-me-again-1.ogg" id="6_06hvg"]
+[ext_resource type="AudioStream" uid="uid://brc4m2i51lscc" path="res://Assets/SFX/Voice Lines/Granny/you-hit-me-again-2.ogg" id="7_h8rwi"]
+[ext_resource type="AudioStream" uid="uid://wd6p8nhakxxi" path="res://Assets/SFX/Voice Lines/Granny/stop-that-1.ogg" id="8_yu1ir"]
+[ext_resource type="AudioStream" uid="uid://dinabjgr304ur" path="res://Assets/SFX/Voice Lines/Granny/stop-that-2.ogg" id="9_gehiq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iv0je"]
 atlas = ExtResource("2_pjpcr")
@@ -219,6 +225,21 @@ animations = [{
 radius = 0.084472656
 height = 0.28222656
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_e6b8a"]
+streams_count = 2
+stream_0/stream = ExtResource("4_ppkis")
+stream_1/stream = ExtResource("5_na25d")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_s71q8"]
+streams_count = 2
+stream_0/stream = ExtResource("6_06hvg")
+stream_1/stream = ExtResource("7_h8rwi")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5gs0h"]
+streams_count = 2
+stream_0/stream = ExtResource("8_yu1ir")
+stream_1/stream = ExtResource("9_gehiq")
+
 [node name="Granny" unique_id=1282377910 instance=ExtResource("1_q4vah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16738972, 0)
 script = ExtResource("2_iv0je")
@@ -239,3 +260,15 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" parent="." index="2" unique_id=1959478342]
 metadata/_edit_group_ = true
+
+[node name="Stage1" type="AudioStreamPlayer" parent="." index="3" unique_id=1523589280]
+stream = SubResource("AudioStreamRandomizer_e6b8a")
+volume_db = 15.0
+
+[node name="Stage2" type="AudioStreamPlayer" parent="." index="4" unique_id=1478922331]
+stream = SubResource("AudioStreamRandomizer_s71q8")
+volume_db = 15.0
+
+[node name="Stage3" type="AudioStreamPlayer" parent="." index="5" unique_id=1960881346]
+stream = SubResource("AudioStreamRandomizer_5gs0h")
+volume_db = 18.0

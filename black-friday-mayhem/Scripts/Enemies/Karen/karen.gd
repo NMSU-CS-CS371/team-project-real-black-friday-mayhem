@@ -2,7 +2,7 @@ extends BaseCharacter #Karen
 
 #movement varibles
 @export var speed := 1.0
-@export var pause_time := 1.5
+@export var pause_time := 8.0
 @export var move_time := 5.0
 var moving = true
 var time = 0.0
@@ -86,3 +86,16 @@ func _on_minigame_finished(result):
 		is_defeated = false
 	playing_game = false
 	AudioManager.resume_main_music()
+
+
+func _on_detection_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		$Lines.volume_db = 16
+		if not $Lines.playing:
+			$Lines.play()
+
+
+func _on_detection_body_exited(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		if $Lines.playing:
+			$Lines.volume_db = -10

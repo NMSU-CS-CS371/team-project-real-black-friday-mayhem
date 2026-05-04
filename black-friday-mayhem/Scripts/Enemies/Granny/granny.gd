@@ -91,16 +91,23 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 		game_active = player.playing_game
 	# Check if the player is currently playing the minigame before processing the hit
 	if hit >= 2 && !game_active: #wait- who did this..? - Jaiden
+		$Stage3.play()
 		print("oh heck no")
 		if player and "playing_game" in player:
 			player.playing_game = true
 		if body.has_signal("stop_velocity"):
 			body.stop_velocity.emit()
+			playing_game = true
 		AudioManager.pause_main_music()
+		await $Stage3.finished
 		var killer_instinct = punchies.instantiate()
 		add_child(killer_instinct)
 		killer_instinct.connect("game_finished", Callable(self, "_on_minigame_finished"))
 	else:
+		if hit == 0 :
+			$Stage1.play()
+		else :
+			$Stage2.play()
 		hit = hit + 1
 		print("sorry.!")
 		
