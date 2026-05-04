@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cppntbnhhgmao"
+path="res://.godot/imported/are-you-still-defending-2.ogg-d40e1043caf65191ce77a904f911a64b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/are-you-still-defending-2.ogg"
+dest_files=["res://.godot/imported/are-you-still-defending-2.ogg-d40e1043caf65191ce77a904f911a64b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

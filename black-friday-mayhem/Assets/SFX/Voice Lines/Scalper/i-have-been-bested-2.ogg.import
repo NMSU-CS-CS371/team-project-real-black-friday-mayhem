@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8ko2clovth4n"
+path="res://.godot/imported/i-have-been-bested-2.ogg-ea504eb7cc01bb229343328a6b35f92b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/i-have-been-bested-2.ogg"
+dest_files=["res://.godot/imported/i-have-been-bested-2.ogg-ea504eb7cc01bb229343328a6b35f92b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

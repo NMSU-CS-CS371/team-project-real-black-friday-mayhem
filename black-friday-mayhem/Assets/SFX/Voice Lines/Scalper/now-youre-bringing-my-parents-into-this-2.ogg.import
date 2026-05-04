@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dd1uys06nvgvf"
+path="res://.godot/imported/now-youre-bringing-my-parents-into-this-2.ogg-684854b27215728ea76d5873cb1c12f4.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/now-youre-bringing-my-parents-into-this-2.ogg"
+dest_files=["res://.godot/imported/now-youre-bringing-my-parents-into-this-2.ogg-684854b27215728ea76d5873cb1c12f4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

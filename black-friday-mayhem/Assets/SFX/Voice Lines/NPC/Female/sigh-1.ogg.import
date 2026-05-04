@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bu2gucuopm3u"
+path="res://.godot/imported/sigh-1.ogg-a48cd9f5fe97ac5983746e156e111401.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Female/sigh-1.ogg"
+dest_files=["res://.godot/imported/sigh-1.ogg-a48cd9f5fe97ac5983746e156e111401.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

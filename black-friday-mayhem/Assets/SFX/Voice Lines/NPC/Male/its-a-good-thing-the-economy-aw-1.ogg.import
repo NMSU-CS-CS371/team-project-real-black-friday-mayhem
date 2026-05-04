@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://di3pipana2vs8"
+path="res://.godot/imported/its-a-good-thing-the-economy-aw-1.ogg-ba895595e22b72cbd937cb42c74dd751.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/its-a-good-thing-the-economy-aw-1.ogg"
+dest_files=["res://.godot/imported/its-a-good-thing-the-economy-aw-1.ogg-ba895595e22b72cbd937cb42c74dd751.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

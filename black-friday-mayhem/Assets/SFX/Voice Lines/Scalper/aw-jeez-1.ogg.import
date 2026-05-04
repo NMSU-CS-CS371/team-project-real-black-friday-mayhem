@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmoaq6ja8amn5"
+path="res://.godot/imported/aw-jeez-1.ogg-597c76829b0c96e8793646e152ec4472.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/aw-jeez-1.ogg"
+dest_files=["res://.godot/imported/aw-jeez-1.ogg-597c76829b0c96e8793646e152ec4472.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

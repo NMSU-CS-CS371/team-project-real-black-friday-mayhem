@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0ygx2owct4im"
+path="res://.godot/imported/laugh-1.ogg-7a68828d32e47982df29cfb432dc35ff.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/laugh-1.ogg"
+dest_files=["res://.godot/imported/laugh-1.ogg-7a68828d32e47982df29cfb432dc35ff.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

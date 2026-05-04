@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5myjr1r3v7ej"
+path="res://.godot/imported/low-blow-2.ogg-e057581dff440de9db46856e5a9a5f7f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/low-blow-2.ogg"
+dest_files=["res://.godot/imported/low-blow-2.ogg-e057581dff440de9db46856e5a9a5f7f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

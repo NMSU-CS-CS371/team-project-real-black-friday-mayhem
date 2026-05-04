@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dnroul5pt82jl"
+path="res://.godot/imported/the-poor-children-1.ogg-7f303bb4a6b4c3fbc3baa68a2bbf7637.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/the-poor-children-1.ogg"
+dest_files=["res://.godot/imported/the-poor-children-1.ogg-7f303bb4a6b4c3fbc3baa68a2bbf7637.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

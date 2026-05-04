@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://pixgwfucmgxo"
+path="res://.godot/imported/why-would-you-say-that-1.ogg-f74d52ccb6020b095f4ce91c3adf5576.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/why-would-you-say-that-1.ogg"
+dest_files=["res://.godot/imported/why-would-you-say-that-1.ogg-f74d52ccb6020b095f4ce91c3adf5576.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
