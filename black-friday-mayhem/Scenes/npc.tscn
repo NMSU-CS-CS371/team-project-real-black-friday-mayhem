@@ -8,15 +8,28 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_xxsvc")
+"texture": ExtResource("2_g6unj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_g6unj")
+"texture": ExtResource("1_xxsvc")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_h1ryf"]
+viewport_path = NodePath("AnimatedSprite3D/Sprite3D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6unj"]
+resource_local_to_scene = true
+transparency = 1
+blend_mode = 2
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_h1ryf")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_g6unj"]
+viewport_path = NodePath("AnimatedSprite3D/Sprite3D/SubViewport")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6unj"]
 radius = 0.49902344
@@ -24,13 +37,26 @@ height = 3.6728516
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h1ryf"]
 
-[node name="Npc" type="CharacterBody3D" unique_id=1570048502]
+[node name="Npc" type="CharacterBody3D" unique_id=1570048502 node_paths=PackedStringArray("sprit")]
 script = ExtResource("1_g6unj")
+sprit = NodePath("AnimatedSprite3D/Sprite3D")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1594509034]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1284325897]
+layers = 32
 sprite_frames = SubResource("SpriteFrames_h1ryf")
-frame = 1
-frame_progress = 0.5486387
+
+[node name="Sprite3D" type="Sprite3D" parent="AnimatedSprite3D" unique_id=1149484778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010648251, 0, 0)
+material_override = SubResource("StandardMaterial3D_g6unj")
+texture_filter = 0
+texture = SubResource("ViewportTexture_g6unj")
+
+[node name="SubViewport" type="SubViewport" parent="AnimatedSprite3D/Sprite3D" unique_id=1073262224]
+transparent_bg = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite3D/Sprite3D/SubViewport" unique_id=1481846216]
+sprite_frames = SubResource("SpriteFrames_h1ryf")
+offset = Vector2(255, 258.57)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
 shape = SubResource("CapsuleShape3D_g6unj")

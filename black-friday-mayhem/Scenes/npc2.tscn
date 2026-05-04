@@ -18,17 +18,43 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_lqs13"]
+viewport_path = NodePath("AnimatedSprite3D/Sprite3D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqs13"]
+resource_local_to_scene = true
+transparency = 1
+blend_mode = 2
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_lqs13")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_74ajd"]
+viewport_path = NodePath("AnimatedSprite3D/Sprite3D/SubViewport")
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6unj"]
 radius = 0.49902344
 height = 3.6728516
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lqs13"]
 
-[node name="Npc" type="CharacterBody3D" unique_id=1570048502]
+[node name="Npc" type="CharacterBody3D" unique_id=1570048502 node_paths=PackedStringArray("sprit")]
 script = ExtResource("1_lqs13")
+sprit = NodePath("AnimatedSprite3D/Sprite3D")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1594509034]
+layers = 32
 sprite_frames = SubResource("SpriteFrames_h1ryf")
+
+[node name="Sprite3D" type="Sprite3D" parent="AnimatedSprite3D" unique_id=1556940867]
+material_override = SubResource("StandardMaterial3D_lqs13")
+texture = SubResource("ViewportTexture_74ajd")
+
+[node name="SubViewport" type="SubViewport" parent="AnimatedSprite3D/Sprite3D" unique_id=509728955]
+transparent_bg = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite3D/Sprite3D/SubViewport" unique_id=1159700820]
+sprite_frames = SubResource("SpriteFrames_h1ryf")
+offset = Vector2(256, 255)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
 shape = SubResource("CapsuleShape3D_g6unj")

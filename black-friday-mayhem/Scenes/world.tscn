@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://73rk06prmbqb" path="res://Scenes/inventory_ui.tscn" id="8_k7acu"]
 [ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="9_7yui6"]
 [ext_resource type="Texture2D" uid="uid://dqrhp0gp8krmf" path="res://Assets/Textures/BigSign.png" id="10_c5t2i"]
+[ext_resource type="Texture2D" uid="uid://cl1piqey8e73g" path="res://Assets/Textures/TEST-SPRITE.png" id="11_04jkj"]
 [ext_resource type="Texture2D" uid="uid://bxd2faxng1jjk" path="res://Assets/Textures/50.png" id="11_e0ngr"]
 [ext_resource type="PackedScene" uid="uid://httpo0j712de" path="res://Scenes/npc.tscn" id="12_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://b2ps72j644hs3" path="res://Assets/Textures/blackfriday.png" id="12_kn0ld"]
@@ -49,19 +50,35 @@ sky_material = SubResource("PanoramaSkyMaterial_pt3ps")
 background_mode = 2
 sky = SubResource("Sky_hmc15")
 sky_rotation = Vector3(0, 1.7732545, 0)
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 10.0
+tonemap_exposure = 1.2
 tonemap_agx_white = 2.0
 tonemap_agx_contrast = 1.1
 
-[sub_resource type="Environment" id="Environment_c5t2i"]
+[sub_resource type="Environment" id="Environment_04jkj"]
 background_mode = 1
 background_color = Color(0, 0, 0, 0)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_c5t2i"]
-viewport_path = NodePath("Main Camera/SubViewportContainer/Mask Viewport")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lkcvt"]
+shader = ExtResource("6_yky5r")
+shader_parameter/pixel_count = Vector2(160, 160)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lkcvt"]
+viewport_path = NodePath("Main Camera/SubViewportContainer/Entity Viewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_04jkj"]
+shader = ExtResource("6_yky5r")
+shader_parameter/pixel_count = Vector2(256, 256)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_04jkj"]
+viewport_path = NodePath("Main Camera/SubViewportContainer/Sign Viewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c5t2i"]
 shader = ExtResource("6_yky5r")
 shader_parameter/pixel_count = Vector2(128, 128)
+shader_parameter/mask_tex = ExtResource("11_04jkj")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e0ngr"]
 viewport_path = NodePath("Main Camera/SubViewportContainer/Player Viewport")
@@ -74,13 +91,17 @@ albedo_texture_force_srgb = true
 uv1_scale = Vector3(50, 1.5, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_t2t4p"]
+lightmap_size_hint = Vector2i(17, 19)
 material = SubResource("StandardMaterial3D_k7acu")
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fj1v"]
 albedo_color = Color(0, 0.21176471, 1, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_0pcbe"]
+lightmap_size_hint = Vector2i(17, 19)
 material = SubResource("StandardMaterial3D_0fj1v")
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axeuq"]
 albedo_color = Color(0, 1, 1, 1)
@@ -109,19 +130,25 @@ height = 0.2
 albedo_texture = ExtResource("13_t2t4p")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_pyn1s"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_yq1aw")
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_no8kt"]
 albedo_texture = ExtResource("14_0pcbe")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_no8kt"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_no8kt")
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4fjy"]
 albedo_texture = ExtResource("15_axeuq")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xbk3s"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_i4fjy")
+add_uv2 = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i4fjy"]
 
@@ -129,7 +156,9 @@ material = SubResource("StandardMaterial3D_i4fjy")
 albedo_texture = ExtResource("16_1cojt")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dt0r1"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_dt0r1")
+add_uv2 = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t2t4p"]
 
@@ -165,11 +194,44 @@ albedo_texture = ExtResource("9_7yui6")
 [sub_resource type="QuadMesh" id="QuadMesh_no8kt"]
 material = SubResource("StandardMaterial3D_5v1tr")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_atqvy"]
+load_path = "res://.godot/imported/start sale.jpg-5509ef42ca1d56557d991ac9efeac6d2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5giw"]
+blend_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_atqvy")
+
+[sub_resource type="QuadMesh" id="QuadMesh_jwdyn"]
+material = SubResource("StandardMaterial3D_w5giw")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikia7"]
+cull_mode = 2
 albedo_texture = ExtResource("10_c5t2i")
 
 [sub_resource type="QuadMesh" id="QuadMesh_xbk3s"]
 material = SubResource("StandardMaterial3D_ikia7")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_04jkj"]
+load_path = "res://.godot/imported/BigSign.png-e72640da0b60f1d70ce14f131fd486ff.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkcvt"]
+blend_mode = 2
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_04jkj")
+
+[sub_resource type="QuadMesh" id="QuadMesh_atqvy"]
+material = SubResource("StandardMaterial3D_lkcvt")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lkcvt"]
+load_path = "res://.godot/imported/BigSign.png-e72640da0b60f1d70ce14f131fd486ff.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_atqvy"]
+blend_mode = 2
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_lkcvt")
+
+[sub_resource type="QuadMesh" id="QuadMesh_w5giw"]
+material = SubResource("StandardMaterial3D_atqvy")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e0ngr"]
 albedo_texture = ExtResource("11_e0ngr")
@@ -177,11 +239,27 @@ albedo_texture = ExtResource("11_e0ngr")
 [sub_resource type="PlaneMesh" id="PlaneMesh_pt3ps"]
 material = SubResource("StandardMaterial3D_e0ngr")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w5giw"]
+load_path = "res://.godot/imported/50.png-ed7607f130900f039373ace43d3b0963.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwdyn"]
+blend_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_w5giw")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_t6yt7"]
+material = SubResource("StandardMaterial3D_jwdyn")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mv6e"]
 albedo_texture = ExtResource("12_kn0ld")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hmc15"]
 material = SubResource("StandardMaterial3D_8mv6e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04jkj"]
+blend_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lkcvt"]
+material = SubResource("StandardMaterial3D_04jkj")
 
 [node name="Main" type="Node" unique_id=1035745174 node_paths=PackedStringArray("player")]
 script = ExtResource("1_fo5ed")
@@ -189,10 +267,16 @@ player = NodePath("Main Camera/SubViewportContainer/Player Viewport/MainPlayerSH
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=954260089]
 transform = Transform3D(-0.83210844, 0.5268307, -0.17333485, -0.39200404, -0.33758986, 0.8557838, 0.39233702, 0.78005284, 0.4874311, 0, 20, 0)
+layers = 33
+light_bake_mode = 1
 shadow_bias = 10.0
 shadow_normal_bias = 10.0
 shadow_transmittance_bias = 16.0
 shadow_blur = 10.0
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=506673776]
+interior = true
+use_denoiser = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639120086]
 environment = SubResource("Environment_hmc15")
@@ -234,17 +318,31 @@ offset_right = 799.0
 offset_bottom = 600.0
 mouse_filter = 2
 
-[node name="Mask Viewport" type="SubViewport" parent="Main Camera/SubViewportContainer" unique_id=1522920678]
+[node name="Sign Viewport" type="SubViewport" parent="Main Camera/SubViewportContainer" unique_id=1522920678]
 transparent_bg = true
 handle_input_locally = false
 canvas_cull_mask = 4293918752
 size = Vector2i(800, 600)
 render_target_update_mode = 4
 
-[node name="Mask Camera" type="Camera3D" parent="Main Camera/SubViewportContainer/Mask Viewport" unique_id=463918364 node_paths=PackedStringArray("playerCamera")]
+[node name="Sign Camera" type="Camera3D" parent="Main Camera/SubViewportContainer/Sign Viewport" unique_id=463918364 node_paths=PackedStringArray("playerCamera")]
 transform = Transform3D(1, 0, 0, 0, 0.97630155, 0.21641484, 0, -0.21641484, 0.97630155, 0, 2.1453495, 91.63419)
-cull_mask = 32
-environment = SubResource("Environment_c5t2i")
+cull_mask = 64
+script = ExtResource("6_e0ngr")
+playerCamera = NodePath("../../Player Viewport/MainPlayerSHOPPING/Camera3D")
+
+[node name="Entity Viewport" type="SubViewport" parent="Main Camera/SubViewportContainer" unique_id=422791201]
+transparent_bg = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+canvas_cull_mask = 4294967263
+size = Vector2i(800, 600)
+render_target_update_mode = 4
+
+[node name="Entity Camera" type="Camera3D" parent="Main Camera/SubViewportContainer/Entity Viewport" unique_id=1619693303 node_paths=PackedStringArray("playerCamera")]
+transform = Transform3D(1, 0, 0, 0, 0.96944535, 0.24530739, 0, -0.24530739, 0.96944535, 0, 2.5335698, 91.63419)
+cull_mask = 1047584
+environment = SubResource("Environment_04jkj")
 script = ExtResource("6_e0ngr")
 playerCamera = NodePath("../../Player Viewport/MainPlayerSHOPPING/Camera3D")
 
@@ -268,18 +366,26 @@ handle_input_locally = false
 size = Vector2i(800, 600)
 render_target_update_mode = 4
 
-[node name="Mask View" type="Sprite2D" parent="Main Camera/SubViewportContainer/Main Viewport" unique_id=294596474]
-z_index = -2
+[node name="Entity View" type="Sprite2D" parent="Main Camera/SubViewportContainer/Main Viewport" unique_id=294596474]
+z_index = 2
+material = SubResource("ShaderMaterial_lkcvt")
 position = Vector2(400, 300)
-texture = SubResource("ViewportTexture_c5t2i")
+texture = SubResource("ViewportTexture_lkcvt")
+
+[node name="Sign View" type="Sprite2D" parent="Main Camera/SubViewportContainer/Main Viewport" unique_id=426133433]
+z_index = 1
+material = SubResource("ShaderMaterial_04jkj")
+position = Vector2(400, 300)
+texture = SubResource("ViewportTexture_04jkj")
 
 [node name="Game View" type="Sprite2D" parent="Main Camera/SubViewportContainer/Main Viewport" unique_id=1483663812]
-z_index = -3
+z_index = 3
 material = SubResource("ShaderMaterial_c5t2i")
 position = Vector2(400, 300)
 texture = SubResource("ViewportTexture_e0ngr")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1009804071]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -590,200 +696,340 @@ transform = Transform3D(-8.742278e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 99.9
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign" unique_id=1398126365]
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, 9.536743e-07, 0, 49.999775)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign" unique_id=1604436077]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, 9.536743e-07, 0, 49.999775)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign2" type="Node3D" parent="Objects/Sale Signs1" unique_id=1225513091]
 transform = Transform3D(-8.742278e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 99.99, 6.6631117, 36.431896)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign2" unique_id=2059355865]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign2" unique_id=1374742305]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign3" type="Node3D" parent="Objects/Sale Signs1" unique_id=730235339]
 transform = Transform3D(-8.7422784e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 99.990005, 6.3757133, -81.22898)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign3" unique_id=442735908]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign3" unique_id=228583028]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign4" type="Node3D" parent="Objects/Sale Signs1" unique_id=968465657]
 transform = Transform3D(-8.742278e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 99.99, 10.884, 90.0738)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign4" unique_id=1626263961]
 transform = Transform3D(1, 0, 8.881784e-15, 0, 1, 0, 0, 0, 1, 1.5258789e-05, 3.2220697, 49.99979)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign4" unique_id=246397277]
+transform = Transform3D(1, 0, 8.881784e-15, 0, 1, 0, 0, 0, 1, 1.5258789e-05, 3.2220697, 49.99979)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign5" type="Node3D" parent="Objects/Sale Signs1" unique_id=1710283800]
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, -99.99, 15.708444, -20.751)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign5" unique_id=630037974]
 transform = Transform3D(1, 0, -8.881784e-15, 0, 1, 0, 0, 0, 1, -1.0374193, 0, 50.000443)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign5" unique_id=653051494]
+transform = Transform3D(1, 0, -8.881784e-15, 0, 1, 0, 0, 0, 1, -1.0374193, 0, 50.000443)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign6" type="Node3D" parent="Objects/Sale Signs1" unique_id=1357970286]
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, -99.99, 12.251376, 34.858047)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign6" unique_id=2084709682]
 transform = Transform3D(1, 0, -8.881784e-15, 0, 1, 0, 0, 0, 1, 1.1236534, 0, 50.000443)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign6" unique_id=562233583]
+transform = Transform3D(1, 0, -8.881784e-15, 0, 1, 0, 0, 0, 1, 1.1236534, 0, 50.000443)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign7" type="Node3D" parent="Objects/Sale Signs1" unique_id=965145022]
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, -99.99, 21.291473, 86.45918)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign7" unique_id=689495281]
 transform = Transform3D(1, 0, -8.881784e-15, 0, 1, 0, 0, 0, 1, -1.5258789e-05, -3.3795185, 50.000423)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign7" unique_id=860465800]
+transform = Transform3D(1, 0, -8.881784e-15, 0, 1, 0, 0, 0, 1, -1.5258789e-05, -3.3795185, 50.000423)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign8" type="Node3D" parent="Objects/Sale Signs1" unique_id=1081441908]
 transform = Transform3D(-2, 0, -1.5099582e-07, 0, 1, 0, 3.019916e-07, 0, -1, 66.66003, 10.016169, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign8" unique_id=1468456641]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign8" unique_id=1664706074]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign9" type="Node3D" parent="Objects/Sale Signs1" unique_id=839947671]
 transform = Transform3D(-2, 0, -1.509958e-07, 0, 1, 0, 3.019916e-07, 0, -1, -65.60934, 10.409601, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign9" unique_id=2048594099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 8.526513e-14, 0, 1, -12.960878, 3.6499863, 7.6293945e-06)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign9" unique_id=1458421651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 8.526513e-14, 0, 1, -12.960878, 3.6499863, 7.6293945e-06)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign10" type="Node3D" parent="Objects/Sale Signs1" unique_id=991287611]
 transform = Transform3D(-2, 0, -1.5099582e-07, 0, 1, 0, 3.019916e-07, 0, -1, 54.9063, 6.8423786, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign10" unique_id=1489491751]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign10" unique_id=1228246472]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign11" type="Node3D" parent="Objects/Sale Signs1" unique_id=1700067621]
 transform = Transform3D(-2, 0, -1.5099583e-07, 0, 1, 0, 3.019916e-07, 0, -1, 40.88091, 3.4862375, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign11" unique_id=314710897]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign11" unique_id=1232241861]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign12" type="Node3D" parent="Objects/Sale Signs1" unique_id=917274711]
 transform = Transform3D(-2, 0, -1.5099582e-07, 0, 1, 0, 3.019916e-07, 0, -1, 41.207336, 10.235201, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign12" unique_id=2071509694]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 2.842171e-14, 0, 1, 0, 5.8452725, 0)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign12" unique_id=1634421644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 2.842171e-14, 0, 1, 0, 5.8452725, 0)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign13" type="Node3D" parent="Objects/Sale Signs1" unique_id=1189858425]
 transform = Transform3D(-2, 0, -1.5099582e-07, 0, 1, 0, 3.019916e-07, 0, -1, -24.881727, 10.235201, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign13" unique_id=1432834550]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 8.526513e-14, 0, 1, 1.8307409, 5.562113, 1.5258789e-05)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign13" unique_id=2015620451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 8.526513e-14, 0, 1, 1.8307409, 5.562113, 1.5258789e-05)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign14" type="Node3D" parent="Objects/Sale Signs1" unique_id=1040358446]
 transform = Transform3D(-2, 0, -1.509958e-07, 0, 1, 0, 3.019916e-07, 0, -1, -29.835854, 5.576687, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign14" unique_id=76060614]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign14" unique_id=1032864381]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign15" type="Node3D" parent="Objects/Sale Signs1" unique_id=2094744353]
 transform = Transform3D(-2, 0, -1.5099582e-07, 0, 1, 0, 3.019916e-07, 0, -1, -40.860786, 9.851791, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign15" unique_id=1392381552]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign15" unique_id=374591271]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign16" type="Node3D" parent="Objects/Sale Signs1" unique_id=1951836696]
 transform = Transform3D(-2, 0, -1.5099582e-07, 0, 1, 0, 3.019916e-07, 0, -1, 11.587105, 6.8543777, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign16" unique_id=99525515]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 2.842171e-14, 0, 1, 0, 0, 0)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign16" unique_id=2040572870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 2.842171e-14, 0, 1, 0, 0, 0)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign17" type="Node3D" parent="Objects/Sale Signs1" unique_id=1174482338]
 transform = Transform3D(-2, 0, -1.5099582e-07, 0, 1, 0, 3.019916e-07, 0, -1, -10.405197, 10.136341, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign17" unique_id=1448600559]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 2.842171e-14, 0, 1, 0, 5.898095, 0)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign17" unique_id=709603130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 2.842171e-14, 0, 1, 0, 5.898095, 0)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign18" type="Node3D" parent="Objects/Sale Signs1" unique_id=617182813]
 transform = Transform3D(-2, 0, -1.5099582e-07, 0, 1, 0, 3.019916e-07, 0, -1, -80.128204, -4.7487297, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign18" unique_id=864115045]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign18" unique_id=1906439889]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign19" type="Node3D" parent="Objects/Sale Signs1" unique_id=1608880678]
 transform = Transform3D(-2, 0, -1.5099582e-07, 0, 1, 0, 3.019916e-07, 0, -1, -56.58247, 8.480944, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign19" unique_id=376104815]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign19" unique_id=1996484617]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign20" type="Node3D" parent="Objects/Sale Signs1" unique_id=1327123382]
 transform = Transform3D(-2, 0, -1.509958e-07, 0, 1, 0, 3.019916e-07, 0, -1, -92.31856, 16.343336, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign20" unique_id=433030318]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 8.526513e-14, 0, 1, -23.15641, 0, -7.6293945e-06)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign20" unique_id=247025629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 8.526513e-14, 0, 1, -23.15641, 0, -7.6293945e-06)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign21" type="Node3D" parent="Objects/Sale Signs1" unique_id=1204202458]
 transform = Transform3D(-8.742278e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 99.99, 18.84705, -33.087204)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign21" unique_id=1279834826]
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, -3.8146973e-06, 0, 49.999775)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign21" unique_id=223339982]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, -3.8146973e-06, 0, 49.999775)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign22" type="Node3D" parent="Objects/Sale Signs1" unique_id=165750542]
 transform = Transform3D(-8.742278e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 99.99, 20.503002, -68.676285)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign22" unique_id=1113737761]
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, 1.5258789e-05, 0, 49.99979)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign22" unique_id=1782406988]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, 1.5258789e-05, 0, 49.99979)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign23" type="Node3D" parent="Objects/Sale Signs1" unique_id=1867501638]
 transform = Transform3D(-8.742278e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 99.99, 19.438862, 66.12176)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign23" unique_id=2064064525]
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, 1.5258789e-05, 0, 49.99976)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign23" unique_id=1001622253]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, 1.5258789e-05, 0, 49.99976)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign24" type="Node3D" parent="Objects/Sale Signs1" unique_id=946524918]
 transform = Transform3D(-8.742278e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 99.99, 17.993107, 39.788773)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign24" unique_id=1246919649]
 transform = Transform3D(0.9999998, 0, 1.7763568e-15, 0, 0.9999998, 0, 0, 0, 1, -2.3580284, 1.8106937, 49.999775)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign24" unique_id=1418708129]
+transform = Transform3D(0.9999998, 0, 1.7763568e-15, 0, 0.9999998, 0, 0, 0, 1, -2.3580284, 1.8106937, 49.999775)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign25" type="Node3D" parent="Objects/Sale Signs1" unique_id=150397128]
 transform = Transform3D(-8.742278e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 99.99, 19.552036, 19.783394)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign25" unique_id=961982539]
 transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, 9.536743e-07, 0, 49.999775)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign25" unique_id=211617676]
+transform = Transform3D(1, 0, 7.1054274e-15, 0, 1, 0, 0, 0, 1, 9.536743e-07, 0, 49.999775)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign26" type="Node3D" parent="Objects/Sale Signs1" unique_id=1585698174]
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, -99.99, 12.251376, 79.606926)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign26" unique_id=311004621]
 transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 0, 0, 1, -1.5258789e-05, 0, 50.000423)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign26" unique_id=1153795694]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 0, 0, 1, -1.5258789e-05, 0, 50.000423)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign27" type="Node3D" parent="Objects/Sale Signs1" unique_id=71509926]
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, -99.99, 19.289875, 20.274887)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign27" unique_id=1486479045]
 transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 0, 0, 1, 2.277938, 0, 50.00044)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign27" unique_id=763242815]
+transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 0, 0, 1, 2.277938, 0, 50.00044)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign28" type="Node3D" parent="Objects/Sale Signs1" unique_id=977286956]
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, -99.99, 6.716357, 23.570053)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign28" unique_id=2073070456]
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign28" unique_id=1645044871]
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign29" type="Node3D" parent="Objects/Sale Signs1" unique_id=1638894075]
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, -99.99, 12.251376, -32.743538)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign29" unique_id=1323646507]
 transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 0, 0, 1, 5.722046e-06, 0, 50.00044)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign29" unique_id=1478454248]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 0, 0, 1, 5.722046e-06, 0, 50.00044)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign30" type="Node3D" parent="Objects/Sale Signs1" unique_id=535213810]
 transform = Transform3D(-8.742278e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, -99.99, 12.251376, -84.321594)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign30" unique_id=1886571229]
 transform = Transform3D(1, 0, -8.881784e-15, 0, 1, 0, 0, 0, 1, -1.9073486e-05, 0, 50.000103)
+layers = 64
 mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign30" unique_id=1940154909]
+transform = Transform3D(1, 0, -8.881784e-15, 0, 1, 0, 0, 0, 1, -1.9073486e-05, 0, 50.000103)
+mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="HugeSign" type="Node3D" parent="Objects" unique_id=1090322631]
 
@@ -791,11 +1037,22 @@ mesh = SubResource("QuadMesh_no8kt")
 transform = Transform3D(25, 0, 0, 0, 5, 0, 0, 0, 0.005, 0, 20.678, -60)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/HugeSign/bigSign" unique_id=358141704]
+transform = Transform3D(1.0000005, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 0, 20537.352)
+layers = 64
 mesh = SubResource("QuadMesh_xbk3s")
+
+[node name="mask1" type="MeshInstance3D" parent="Objects/HugeSign/bigSign" unique_id=331937096]
+transform = Transform3D(1.0000005, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 0, 20537.352)
+mesh = SubResource("QuadMesh_atqvy")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/HugeSign/bigSign" unique_id=454570714]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+layers = 64
 mesh = SubResource("QuadMesh_xbk3s")
+
+[node name="mask2" type="MeshInstance3D" parent="Objects/HugeSign/bigSign" unique_id=1040065400]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+mesh = SubResource("QuadMesh_w5giw")
 
 [node name="Sale Signs2" type="Node3D" parent="Objects" unique_id=296283342]
 transform = Transform3D(0.499, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.7250786, 0)
@@ -805,195 +1062,332 @@ transform = Transform3D(-2.1855694e-08, -1, 2.1855694e-08, 0, -4.371139e-08, -0.
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign" unique_id=1563241911]
 transform = Transform3D(1, 2.842171e-14, -8.4703295e-22, 0, 1, -4.1759346e-23, -8.4703295e-22, -2.842171e-14, 1, 3.6331873, 0, 11.056904)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign" unique_id=1822719483]
+transform = Transform3D(1, 2.842171e-14, -8.4703295e-22, 0, 1, -4.1759346e-23, -8.4703295e-22, -2.842171e-14, 1, 3.6331873, 0, 11.056904)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign2" type="Node3D" parent="Objects/Sale Signs2" unique_id=1194677246]
 transform = Transform3D(-2.1855694e-08, -1, 2.1855694e-08, 0, -4.371139e-08, -0.5, 0.5, -4.371139e-08, 9.553427e-16, 50, 19.523098, -22.539719)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign2" unique_id=1646890259]
 transform = Transform3D(1, 2.842171e-14, -8.4703295e-22, 0, 1, -4.1759346e-23, -8.4703295e-22, -2.842171e-14, 1, 6.557686, 0, 13.358822)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign2" unique_id=1460425405]
+transform = Transform3D(1, 2.842171e-14, -8.4703295e-22, 0, 1, -4.1759346e-23, -8.4703295e-22, -2.842171e-14, 1, 6.557686, 0, 13.358822)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign3" type="Node3D" parent="Objects/Sale Signs2" unique_id=1170563486]
 transform = Transform3D(-2.1855694e-08, -1, 2.1855694e-08, 0, -4.371139e-08, -0.5, 0.5, -4.371139e-08, 9.553427e-16, 50, 7.514, -36.772247)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign3" unique_id=1041434699]
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign3" unique_id=1010183372]
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign4" type="Node3D" parent="Objects/Sale Signs2" unique_id=2062854213]
 transform = Transform3D(-2.1855696e-08, -1, 2.1855696e-08, 0, -4.371139e-08, -0.5, 0.5, -4.371139e-08, 9.553427e-16, 50.000004, 11.736729, 30.447552)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign4" unique_id=168616100]
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign4" unique_id=812661337]
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign5" type="Node3D" parent="Objects/Sale Signs2" unique_id=990863935]
 transform = Transform3D(-2.1855694e-08, -1, 2.1855694e-08, 0, -4.371139e-08, -0.5, 0.5, -4.371139e-08, 9.553427e-16, 50, 7.899727, 43.48262)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign5" unique_id=594575536]
 transform = Transform3D(1, 7.1054274e-15, -2.1175824e-22, 0, 1, -4.1759362e-23, -2.1175824e-22, -7.1054274e-15, 1, 15.859276, -3.8146973e-06, 0)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign5" unique_id=2120826424]
+transform = Transform3D(1, 7.1054274e-15, -2.1175824e-22, 0, 1, -4.1759362e-23, -2.1175824e-22, -7.1054274e-15, 1, 15.859276, -3.8146973e-06, 0)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign6" type="Node3D" parent="Objects/Sale Signs2" unique_id=463359324]
 transform = Transform3D(-2.1855694e-08, -1, 2.1855694e-08, 0, -4.371139e-08, -0.5, 0.5, -4.371139e-08, 9.553427e-16, 50, 10.150108, -74.41849)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign6" unique_id=1016829327]
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign6" unique_id=228936292]
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign7" type="Node3D" parent="Objects/Sale Signs2" unique_id=1229551989]
 transform = Transform3D(-2.1855696e-08, -1, 2.1855696e-08, 0, -4.371139e-08, -0.5, 0.5, -4.371139e-08, 9.553427e-16, 50.000004, 12.018594, -48.23348)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign7" unique_id=213045380]
 transform = Transform3D(1, 7.1054274e-15, -2.1175824e-22, 0, 1, -4.1759362e-23, -2.1175824e-22, -7.1054274e-15, 1, 0, 0, 0)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign7" unique_id=1898758770]
+transform = Transform3D(1, 7.1054274e-15, -2.1175824e-22, 0, 1, -4.1759362e-23, -2.1175824e-22, -7.1054274e-15, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign9" type="Node3D" parent="Objects/Sale Signs2" unique_id=572769283]
 transform = Transform3D(-2.1855696e-08, -1, 2.1855696e-08, 0, -4.371139e-08, -0.5, 0.5, -4.371139e-08, 9.553427e-16, 50.000004, 11.107176, 75.02551)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign9" unique_id=999761883]
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign9" unique_id=1060241625]
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign10" type="Node3D" parent="Objects/Sale Signs2" unique_id=1803818405]
 transform = Transform3D(-2.1855694e-08, -1, 2.1855694e-08, 0, -4.371139e-08, -0.5, 0.5, -4.371139e-08, 9.553427e-16, 50, 7.009, -89.701)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign10" unique_id=740821987]
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign10" unique_id=2059079708]
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign11" type="Node3D" parent="Objects/Sale Signs2" unique_id=93938112]
 transform = Transform3D(-0.5, -1.509958e-07, 3.300118e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, 0, 9.172492, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign11" unique_id=1854889753]
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign11" unique_id=737273975]
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign12" type="Node3D" parent="Objects/Sale Signs2" unique_id=305015575]
 transform = Transform3D(-0.5, -1.509958e-07, 3.300118e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, 24.936077, 8.836944, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign12" unique_id=459522824]
 transform = Transform3D(1, 0, 0, 7.1054274e-15, 1, 1.7763568e-15, 4.2351647e-22, -7.1054274e-15, 1, -2.6906204, 0, 0)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign12" unique_id=1775027003]
+transform = Transform3D(1, 0, 0, 7.1054274e-15, 1, 1.7763568e-15, 4.2351647e-22, -7.1054274e-15, 1, -2.6906204, 0, 0)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign13" type="Node3D" parent="Objects/Sale Signs2" unique_id=801715530]
 transform = Transform3D(-0.5, -1.5099582e-07, 3.3001183e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, -36.165527, 11.541251, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign13" unique_id=1386837493]
 transform = Transform3D(1, 0, 0, 7.1054274e-15, 1, 1.7763568e-15, 4.2351647e-22, -7.1054274e-15, 1, 0, 0, 0)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign13" unique_id=873851907]
+transform = Transform3D(1, 0, 0, 7.1054274e-15, 1, 1.7763568e-15, 4.2351647e-22, -7.1054274e-15, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign14" type="Node3D" parent="Objects/Sale Signs2" unique_id=1079358164]
 transform = Transform3D(-0.5, -1.509958e-07, 3.300118e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, -51.54065, 5.4047346, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign14" unique_id=658789331]
 transform = Transform3D(1, 0, 8.4703295e-22, 3.5527137e-14, 1, 8.881784e-15, 2.1175824e-21, -3.5527137e-14, 1, -44.655426, 7.6293945e-06, -3.964939)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign14" unique_id=1263646215]
+transform = Transform3D(1, 0, 8.4703295e-22, 3.5527137e-14, 1, 8.881784e-15, 2.1175824e-21, -3.5527137e-14, 1, -44.655426, 7.6293945e-06, -3.964939)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign15" type="Node3D" parent="Objects/Sale Signs2" unique_id=55627295]
 transform = Transform3D(-0.5, -1.5099583e-07, 3.3001185e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, 42.41213, 6.9518104, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign15" unique_id=708939210]
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign15" unique_id=5100550]
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign16" type="Node3D" parent="Objects/Sale Signs2" unique_id=1998503736]
 transform = Transform3D(-0.5, -1.509958e-07, 3.300118e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, 75.10328, 12.089953, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign16" unique_id=665911790]
 transform = Transform3D(1, 0, 0, 1.4210855e-14, 1, 3.5527137e-15, 8.4703295e-22, -1.4210855e-14, 1, 88.96248, 7.6293945e-06, 0)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign16" unique_id=1805474957]
+transform = Transform3D(1, 0, 0, 1.4210855e-14, 1, 3.5527137e-15, 8.4703295e-22, -1.4210855e-14, 1, 88.96248, 7.6293945e-06, 0)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign17" type="Node3D" parent="Objects/Sale Signs2" unique_id=1964935075]
 transform = Transform3D(-0.5, -1.509958e-07, 3.300118e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, -76.04035, 18.351559, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign17" unique_id=290106070]
 transform = Transform3D(1, 0, 8.4703295e-22, 2.842171e-14, 1, 7.1054274e-15, 1.6940659e-21, -2.842171e-14, 1, -68.43095, 7.6293945e-06, 8.733562)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign17" unique_id=1010145965]
+transform = Transform3D(1, 0, 8.4703295e-22, 2.842171e-14, 1, 7.1054274e-15, 1.6940659e-21, -2.842171e-14, 1, -68.43095, 7.6293945e-06, 8.733562)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign18" type="Node3D" parent="Objects/Sale Signs2" unique_id=400145912]
 transform = Transform3D(-0.5, -1.509958e-07, 3.300118e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, -21.729397, 5.8529463, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign18" unique_id=2087430696]
 transform = Transform3D(1, 0, 0, 1.4210855e-14, 1, 3.5527137e-15, 8.4703295e-22, -1.4210855e-14, 1, 0, 0, -15.636365)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign18" unique_id=1985187223]
+transform = Transform3D(1, 0, 0, 1.4210855e-14, 1, 3.5527137e-15, 8.4703295e-22, -1.4210855e-14, 1, 0, 0, -15.636365)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign19" type="Node3D" parent="Objects/Sale Signs2" unique_id=470010926]
 transform = Transform3D(-0.5, -1.509958e-07, 3.300118e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, 15.186155, 5.4306345, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign19" unique_id=395987852]
 transform = Transform3D(1, 0, 0, 1.4210855e-14, 1, 3.5527137e-15, 8.4703295e-22, -1.4210855e-14, 1, -2.1442814, 0, -6.4414163)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign19" unique_id=1753287862]
+transform = Transform3D(1, 0, 0, 1.4210855e-14, 1, 3.5527137e-15, 8.4703295e-22, -1.4210855e-14, 1, -2.1442814, 0, -6.4414163)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign20" type="Node3D" parent="Objects/Sale Signs2" unique_id=1353436695]
 transform = Transform3D(-0.5, -1.509958e-07, 3.300118e-15, 0, -4.371139e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, 32.110382, 6.176055, 99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign20" unique_id=411373738]
 transform = Transform3D(1, 0, 0, 7.1054274e-15, 1, 1.7763568e-15, 4.2351647e-22, -7.1054274e-15, 1, 0, 0, -2.0824587)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign20" unique_id=996787410]
+transform = Transform3D(1, 0, 0, 7.1054274e-15, 1, 1.7763568e-15, 4.2351647e-22, -7.1054274e-15, 1, 0, 0, -2.0824587)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign21" type="Node3D" parent="Objects/Sale Signs2" unique_id=144425425]
 transform = Transform3D(-2.1855694e-08, 1, -2.1855694e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 7.009, -89.701)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign21" unique_id=725414677]
 transform = Transform3D(1, -3.5527137e-14, 1.0587912e-21, 0, 1, -4.1759343e-23, 1.0587912e-21, -3.5527137e-14, 1, -7.6293945e-05, 50.000046, -3.8146973e-06)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign21" unique_id=1377673904]
+transform = Transform3D(1, -3.5527137e-14, 1.0587912e-21, 0, 1, -4.1759343e-23, 1.0587912e-21, -3.5527137e-14, 1, -7.6293945e-05, 50.000046, -3.8146973e-06)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign22" type="Node3D" parent="Objects/Sale Signs2" unique_id=1910599970]
 transform = Transform3D(-2.1855694e-08, 1, -2.1855694e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 7.995229, -46.489563)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign22" unique_id=1891595449]
 transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, 2.2888184e-05, 50.00044, -4.2915344e-06)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign22" unique_id=1555527329]
+transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, 2.2888184e-05, 50.00044, -4.2915344e-06)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign23" type="Node3D" parent="Objects/Sale Signs2" unique_id=578348527]
 transform = Transform3D(-2.1855694e-08, 1, -2.1855694e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 7.009, -28.499863)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign23" unique_id=44052251]
 transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, -3.8146973e-06, 50.000423, -4.2915344e-06)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign23" unique_id=850587357]
+transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, -3.8146973e-06, 50.000423, -4.2915344e-06)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign24" type="Node3D" parent="Objects/Sale Signs2" unique_id=397204940]
 transform = Transform3D(-2.1855694e-08, 1, -2.1855694e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 16.492802, -70.8595)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign24" unique_id=1179992404]
 transform = Transform3D(1, -4.973799e-14, 1.4823077e-21, 0, 1, -4.1759333e-23, 1.4823077e-21, -4.973799e-14, 1, -0.00010681152, 50.00009, 4.832012)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign24" unique_id=42834923]
+transform = Transform3D(1, -4.973799e-14, 1.4823077e-21, 0, 1, -4.1759333e-23, 1.4823077e-21, -4.973799e-14, 1, -0.00010681152, 50.00009, 4.832012)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign25" type="Node3D" parent="Objects/Sale Signs2" unique_id=632780274]
 transform = Transform3D(-2.1855694e-08, 1, -2.1855694e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 12.225232, 21.429688)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign25" unique_id=1817838818]
 transform = Transform3D(1, -3.5527137e-14, 1.0587912e-21, 0, 1, -4.1759343e-23, 1.0587912e-21, -3.5527137e-14, 1, 4.6610184, 50.000423, -9.536743e-07)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign25" unique_id=1666646023]
+transform = Transform3D(1, -3.5527137e-14, 1.0587912e-21, 0, 1, -4.1759343e-23, 1.0587912e-21, -3.5527137e-14, 1, 4.6610184, 50.000423, -9.536743e-07)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign26" type="Node3D" parent="Objects/Sale Signs2" unique_id=1056951486]
 transform = Transform3D(-2.1855694e-08, 1, -2.1855694e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 7.009, -12.11779)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign26" unique_id=561779080]
 transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, -1.1444092e-05, 50.000423, -4.2915344e-06)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign26" unique_id=932113730]
+transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, -1.1444092e-05, 50.000423, -4.2915344e-06)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign27" type="Node3D" parent="Objects/Sale Signs2" unique_id=1980644921]
 transform = Transform3D(-2.1855696e-08, 1, -2.1855696e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 13.603191, 50.457584)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign27" unique_id=1788718657]
 transform = Transform3D(1, -3.5527137e-14, 0, 0, 1, -4.1759365e-23, 0, -3.5527137e-14, 1, -3.8327484, 50.000404, -1.335144e-05)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign27" unique_id=1450769230]
+transform = Transform3D(1, -3.5527137e-14, 0, 0, 1, -4.1759365e-23, 0, -3.5527137e-14, 1, -3.8327484, 50.000404, -1.335144e-05)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign28" type="Node3D" parent="Objects/Sale Signs2" unique_id=787246797]
 transform = Transform3D(-2.1855694e-08, 1, -2.1855694e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 7.009, 72.975105)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign28" unique_id=1023621264]
 transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, -6.1035156e-05, 50.00041, -4.2915344e-06)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign28" unique_id=789929551]
+transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, -6.1035156e-05, 50.00041, -4.2915344e-06)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign29" type="Node3D" parent="Objects/Sale Signs2" unique_id=1489038799]
 transform = Transform3D(-2.1855694e-08, 1, -2.1855694e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 12.985909, 91.59728)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign29" unique_id=431477957]
 transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, -6.1035156e-05, 50.00044, -1.1444092e-05)
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign29" unique_id=498182136]
+transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, -6.1035156e-05, 50.00044, -1.1444092e-05)
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign30" type="Node3D" parent="Objects/Sale Signs2" unique_id=1828775046]
 transform = Transform3D(-2.1855694e-08, 1, -2.1855694e-08, 0, -4.371139e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -99.9, 3.8984041, 39.47098)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign30" unique_id=1209067239]
+layers = 64
 mesh = SubResource("PlaneMesh_pt3ps")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign30" unique_id=2065969461]
+mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="Sale Signs3" type="Node3D" parent="Objects" unique_id=450400710]
 
@@ -1002,63 +1396,108 @@ transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0,
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign" unique_id=2013609420]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4594917, 0, 0.8467908)
+layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign" unique_id=215928988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4594917, 0, 0.8467908)
+mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign2" type="Node3D" parent="Objects/Sale Signs3" unique_id=142609323]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -37.19952, 8.556566, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign2" unique_id=418687175]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6474133, 0, -3.4980304)
+layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign2" unique_id=1211734149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6474133, 0, -3.4980304)
+mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign3" type="Node3D" parent="Objects/Sale Signs3" unique_id=1658746874]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 13.147577, 7.945343, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign3" unique_id=495734645]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3618755, 0, 0.38084197)
+layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign3" unique_id=1325320032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3618755, 0, 0.38084197)
+mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign4" type="Node3D" parent="Objects/Sale Signs3" unique_id=1839567416]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -24.943779, 6.9223995, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign4" unique_id=767764101]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3962302, 0, -0.00834918)
+layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign4" unique_id=1334702718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3962302, 0, -0.00834918)
+mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign6" type="Node3D" parent="Objects/Sale Signs3" unique_id=1555631145]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 81.97423, 4.80916, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign6" unique_id=998866414]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.90596, 0, -5.486082)
+layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign6" unique_id=1098117988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.90596, 0, -5.486082)
+mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign7" type="Node3D" parent="Objects/Sale Signs3" unique_id=706609372]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 53.052216, 16.357725, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign7" unique_id=98991416]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.327854, 0, -0.85136795)
+layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign7" unique_id=414218919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.327854, 0, -0.85136795)
+mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign8" type="Node3D" parent="Objects/Sale Signs3" unique_id=1502409947]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 32.12686, 5.31357, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign8" unique_id=451715243]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2267213, 0, 0.12757683)
+layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign8" unique_id=1063090969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2267213, 0, 0.12757683)
+mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign9" type="Node3D" parent="Objects/Sale Signs3" unique_id=2013432848]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 96.72033, 8.849642, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign9" unique_id=426704769]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.37097, 0, -3.9259524)
+layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign9" unique_id=1245916748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.37097, 0, -3.9259524)
+mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign10" type="Node3D" parent="Objects/Sale Signs3" unique_id=1168642368]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -66.48279, 7.878931, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign10" unique_id=352796270]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.954378, 0, 0)
+layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign10" unique_id=1181515400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.954378, 0, 0)
+mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="Plant_Group" type="Node" parent="Objects" unique_id=598853517]
 
