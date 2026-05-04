@@ -6,10 +6,17 @@ extends Node2D #Karen's Mini Game
 signal game_finished(result)
 var texture
 var playing = false
+var space = false
+var is_finished = false
+var can_play = true
+var buffer_time = 3.0
 signal space_pressed
-@export var speed: float = 40.0
+@export var speed: float = 55.0
 var scene1 = preload("res://Assets/Textures/KarenStop.png")
 var scene2 = preload("res://Assets/Textures/KarenStealing.png")
+var scene3 = preload("res://Assets/Textures/KaerenLose.png")
+var scene4 = preload("res://Assets/Textures/KaerenWin.png")
+var scene5 = preload("res://Assets/Textures/KaerenWin2.png")
 #varibles for QTE
 @onready var timer : Timer = $Timer
 const QTE = preload("res://Scenes/Enemies/Karen/qte.tscn")
@@ -64,6 +71,7 @@ func _ready() -> void:
 	#before I start the game I need a transition sceen with story 
 	#and instructions on how to play game
 	$Background.show()
+	$Encounter.play()
 	$scene.texture = scene1
 	$scene.show()
 	await get_tree().create_timer(1.0).timeout
@@ -78,17 +86,32 @@ func _process(delta: float) -> void:
 	#changes the progress bar every frame
 	if not $ProgressBar.visible:
 		return
+	if is_finished :
+		return 
 	if $ProgressBar.value <= 0:
 		defeated()
 	elif $ProgressBar.value >= 400:
 		lose()
 	else :
 		if playing :
+			#if its playing progress the game
 			$ProgressBar.value += speed * delta
+			#if there is not another animation playing play shake animation
 			if not $AnimationPlayer.is_playing() :
 				$AnimationPlayer.play("Shake")
+			#if there is not another voice line playing play base voice lines
+			if can_play and not $Playing.is_playing() and (not $kidsAttack.is_playing() and not $kidsKick.is_playing()):
+				can_play = false
+				$Playing.play()
+				wait_and_reset()
+				
 		else :
 			pass
+
+func wait_and_reset() :
+	await $Playing.finished
+	await get_tree().create_timer(buffer_time).timeout
+	can_play = true
 
 #start game function
 func startgame() :
@@ -123,6 +146,19 @@ func startgame() :
 
 #lose funciton she will steal an item
 func lose():
+	is_finished = true
+	$Playing.stop()
+	$kidsAttack.stop()
+	$kidsKick.stop()
+	$Karen.hide()
+	$Item.hide()
+	$hands.hide()
+	$ProgressBar.hide()
+	$scene.texture = scene3
+	$scene.show()
+	await get_tree().create_timer(0.5).timeout
+	$Lose.play()
+	await get_tree().create_timer(2.0).timeout
 	invContainer.visible = true
 	player.controlAllowed = true
 	emit_signal("game_finished", "lose")
@@ -131,6 +167,22 @@ func lose():
 	
 #she is defeated you get her special item
 func defeated():
+	is_finished = true
+	$Playing.stop()
+	$kidsAttack.stop()
+	$kidsKick.stop()
+	$Karen.hide()
+	$Item.hide()
+	$hands.hide()
+	$ProgressBar.hide()
+	$scene.texture = scene4
+	$scene.show()
+	await get_tree().create_timer(0.4).timeout
+	$Win.play()
+	await get_tree().create_timer(2.0).timeout
+	$scene.texture = scene5
+	$scene.show()
+	await get_tree().create_timer(1.6).timeout
 	var item: InvItem
 	item = load("res://Assets/Inventory/Items/karen_glasses.tres")
 	player.inventory.insert(item)
@@ -144,12 +196,20 @@ func defeated():
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept") :
 		space_pressed.emit()
-		$ProgressBar.value += -7
+		if space :
+			await get_tree().create_timer(0.5).timeout
+		else :
+			space = true
+			$ProgressBar.value += -8
+		space = false
+		
 
 #when timer is done reset QTE count
 func _on_timer_timeout() -> void:
 	if count >= keyList.size() :
 		count = 0
+	if is_finished :
+		return
 	#make QuickTimeEvent scene
 	var qte = QTE.instantiate()
 	# set position
@@ -169,13 +229,15 @@ func _on_timer_timeout() -> void:
 #when the qte key scene is finished 
 func  _on_key_finished(success) :
 	keyPressedList.append(success)
+	if is_finished :
+		return
 	if success :
 		if whatKid == 1 :
 			showKids($KidKick, "kicked")
 		elif whatKid == 2 :
 			showKids($BabyKick, "kicked")
 	else :
-		$ProgressBar.value += +50
+		$ProgressBar.value += +90
 		if whatKid == 1 :
 			showKids($Kid, "Attacked")
 		elif whatKid == 2 :
@@ -184,6 +246,10 @@ func  _on_key_finished(success) :
 #showKids a helper for _on_key_finished()
 func showKids(child, a) :
 	child.show()
+	if a == "Attacked" :
+		$kidsAttack.play()
+	else :
+		$kidsKick.play()
 	$AnimationPlayer.play(a)
 	await $AnimationPlayer.animation_finished
 	child.hide()

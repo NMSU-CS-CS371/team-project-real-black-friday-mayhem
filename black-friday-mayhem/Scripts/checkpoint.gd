@@ -33,6 +33,8 @@ func _on_trigger_zone_body_entered(body: Node3D) -> void:
 			# start timer
 			$Timer.start()
 		print("collision!")
+		
+		# begin scene transitition
 		$SceneTransition/ColorRect.visible = true
 		player_entered.emit()
 		AudioManager.pause_main_music()

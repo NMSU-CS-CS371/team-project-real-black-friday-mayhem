@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b62xcbb20olji"
+path="res://.godot/imported/thank-you-2.ogg-6ebff64528729de3fcaab08ff4b09b72.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/thank-you-2.ogg"
+dest_files=["res://.godot/imported/thank-you-2.ogg-6ebff64528729de3fcaab08ff4b09b72.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

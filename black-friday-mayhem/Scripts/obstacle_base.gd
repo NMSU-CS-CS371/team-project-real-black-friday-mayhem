@@ -22,12 +22,17 @@ extends Entity
 		auto_align_collision = value
 		_apply_size()
 
+# When true, it will not apply color
+# Otherwise, use _apply_color() code
+@export var keepDefaults : bool = false
+
 func _ready() -> void:
 	# Call super _ready() to handle mesh initialization and interaction state
 	super._ready()
 	# Apply initial size and color when the scene loads
 	_apply_size()
-	_apply_color()
+	if !keepDefaults:
+		_apply_color()
 	
 	# Connect the TriggerZone's body_entered signal to our handler (runtime only)
 	if not Engine.is_editor_hint():

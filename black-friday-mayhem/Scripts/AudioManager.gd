@@ -11,15 +11,36 @@ func resume_main_music() -> void:
 		main_music.stream_paused = false
 
 # control the master volume bus (implement main menu slider)
-#func set_master_volume(value: float) -> void:
+func set_master_volume(value: float) -> void:
 	# get the index of the master bus
-	# convert the slider value (0.0 to 1.0) into dB - idk how
-	# apply the new volume to the master bus
+	var index = AudioServer.get_bus_index("Master")
 	
-	# maybe if the value is 0, mute the bus
+	# convert to decibels
+	value = linear_to_db(value)
+	
+	# apply it specifically to the master bus
+	AudioServer.set_bus_volume_db(index, value)
 
 # control the specific music bus
-#func set_music_volume(value: float) -> void:
+func set_music_volume(value: float) -> void:
+	
 	# get the index of the music bus
+	var index = AudioServer.get_bus_index("Music")
+	
 	# convert to decibels
+	value = linear_to_db(value)
+	
 	# apply it specifically to the music bus
+	AudioServer.set_bus_volume_db(index, value)
+
+# control the sfx bus
+func set_sfx_volume(value: float) -> void:
+	
+	# get the index of the sfx bus
+	var index = AudioServer.get_bus_index("SFX")
+	
+	# convert to decibels
+	value = linear_to_db(value)
+	
+	# apply it specifically to the sfx bus
+	AudioServer.set_bus_volume_db(index, value)

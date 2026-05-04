@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dkxiv2wkguntl"
+path="res://.godot/imported/kid-scream-1.ogg-5d002ec500d5f97e5658f9cc08c3cccd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/Kids/kid-scream-1.ogg"
+dest_files=["res://.godot/imported/kid-scream-1.ogg-5d002ec500d5f97e5658f9cc08c3cccd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

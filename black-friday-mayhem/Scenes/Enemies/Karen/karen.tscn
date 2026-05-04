@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cxhl6r63ugnvj" path="res://Scenes/Enemies/enemy.tscn" id="1_w6adf"]
 [ext_resource type="Texture2D" uid="uid://bjpf2n2mch4mp" path="res://Assets/Sprites/KarenSheet.png" id="2_b26ap"]
 [ext_resource type="Script" uid="uid://c5vc41qf8m83a" path="res://Scripts/Enemies/Karen/karen.gd" id="2_yl5dt"]
+[ext_resource type="AudioStream" uid="uid://cmdsu7xagn77g" path="res://Assets/SFX/Voice Lines/Karen/why-do-you-have-a-shopping-cart-1.ogg" id="4_wt3rr"]
+[ext_resource type="AudioStream" uid="uid://bbbjosrhcsymc" path="res://Assets/SFX/Voice Lines/Karen/why-do-you-have-a-shopping-cart-2.ogg" id="5_bqwxa"]
+[ext_resource type="AudioStream" uid="uid://brb0jvvtggavn" path="res://Assets/SFX/Voice Lines/Karen/why-do-you-have-a-shopping-cart-3.ogg" id="6_e5khw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yl5dt"]
 atlas = ExtResource("2_b26ap")
@@ -127,6 +130,15 @@ animations = [{
 radius = 0.07519531
 height = 0.29977417
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_mye1j"]
+radius = 1.4660579
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wqsnw"]
+streams_count = 3
+stream_0/stream = ExtResource("4_wt3rr")
+stream_1/stream = ExtResource("5_bqwxa")
+stream_2/stream = ExtResource("6_e5khw")
+
 [node name="Karen" unique_id=1282377910 instance=ExtResource("1_w6adf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16283754, 0)
 script = ExtResource("2_yl5dt")
@@ -148,3 +160,16 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape3D" parent="." index="2" unique_id=1959478342]
 metadata/_edit_group_ = true
+
+[node name="Area3D" type="Area3D" parent="." index="3" unique_id=308546083]
+
+[node name="Detection" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1673800982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012212992, -0.020061731, 0.017125845)
+shape = SubResource("SphereShape3D_mye1j")
+
+[node name="Lines" type="AudioStreamPlayer" parent="." index="4" unique_id=989675800]
+stream = SubResource("AudioStreamRandomizer_wqsnw")
+volume_db = 16.0
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_detection_body_exited"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ddjm0ga6objgv"
+path="res://.godot/imported/my-iq-is-dumb-high-2.ogg-6d48c8b859f0a2da0bbe1c34331e03e3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/my-iq-is-dumb-high-2.ogg"
+dest_files=["res://.godot/imported/my-iq-is-dumb-high-2.ogg-6d48c8b859f0a2da0bbe1c34331e03e3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

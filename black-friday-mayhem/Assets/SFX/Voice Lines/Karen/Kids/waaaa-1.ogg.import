@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bidnkv4wwue4t"
+path="res://.godot/imported/waaaa-1.ogg-b009615832bcf480a44a0b3f970671e2.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/Kids/waaaa-1.ogg"
+dest_files=["res://.godot/imported/waaaa-1.ogg-b009615832bcf480a44a0b3f970671e2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

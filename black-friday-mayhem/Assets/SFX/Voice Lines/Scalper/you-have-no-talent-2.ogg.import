@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cm5twpy7utrq2"
+path="res://.godot/imported/you-have-no-talent-2.ogg-b58a3c9ccbdaf56294b8b06b2431c228.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/you-have-no-talent-2.ogg"
+dest_files=["res://.godot/imported/you-have-no-talent-2.ogg-b58a3c9ccbdaf56294b8b06b2431c228.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

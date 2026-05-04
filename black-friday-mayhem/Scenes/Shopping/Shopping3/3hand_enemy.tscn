@@ -13,7 +13,6 @@ radius = 57.035076
 z_index = 9
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_yrr01")
-move_speed = 300.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1427166623]
 rotation = 1.5707964

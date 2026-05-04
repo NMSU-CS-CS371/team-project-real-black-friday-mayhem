@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dkdy8iw0cec16"
+path="res://.godot/imported/we-get-it-you-like-to-defend-1.ogg-9d65a46df32fa41ebb6f78f7af68754d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/we-get-it-you-like-to-defend-1.ogg"
+dest_files=["res://.godot/imported/we-get-it-you-like-to-defend-1.ogg-9d65a46df32fa41ebb6f78f7af68754d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

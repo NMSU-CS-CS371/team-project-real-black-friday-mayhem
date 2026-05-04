@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cnd2alhaobe57"
+path="res://.godot/imported/grab-em-5.ogg-0b26ce47d7da6f092bb3c9c18603b56a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Karen/grab-em-5.ogg"
+dest_files=["res://.godot/imported/grab-em-5.ogg-0b26ce47d7da6f092bb3c9c18603b56a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

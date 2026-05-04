@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d3gu35bcm1u14"
+path="res://.godot/imported/that-hurts-my-feelings-1.ogg-2d77af016ec889a58718280ecba18979.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Scalper/that-hurts-my-feelings-1.ogg"
+dest_files=["res://.godot/imported/that-hurts-my-feelings-1.ogg-2d77af016ec889a58718280ecba18979.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

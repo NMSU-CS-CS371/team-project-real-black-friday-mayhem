@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ciqtvpmjqfs0b"
+path="res://.godot/imported/george-forman-grill-2.ogg-ad7700d4efa9a61f2e13c625762f6ca6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/george-forman-grill-2.ogg"
+dest_files=["res://.godot/imported/george-forman-grill-2.ogg-ad7700d4efa9a61f2e13c625762f6ca6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

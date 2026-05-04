@@ -11,8 +11,59 @@
 [ext_resource type="Texture2D" uid="uid://dtyx7i14yi6gg" path="res://Assets/Textures/TransitionTexture3.png" id="7_c7epx"]
 [ext_resource type="Texture2D" uid="uid://buqx5nfli38rv" path="res://Assets/Textures/TransitionTexture4.png" id="8_kj4qc"]
 [ext_resource type="Texture2D" uid="uid://10xbg58t5f6j" path="res://Assets/Textures/TransitionTexture5.png" id="9_56dx4"]
-[ext_resource type="AudioStream" uid="uid://dejjy8f4xt4mc" path="res://Assets/SFX/scalper_begin_sfx.wav" id="12_fhox4"]
+[ext_resource type="AudioStream" uid="uid://bu2i8ng1iulk4" path="res://Assets/SFX/scalper_transition.wav" id="12_fhox4"]
 [ext_resource type="AudioStream" uid="uid://c07g5xwxnp0l5" path="res://Assets/SFX/Level Up - Palcomon.mp3" id="12_hmm1d"]
+[ext_resource type="AudioStream" uid="uid://kuwuastrrjkf" path="res://Assets/SFX/Voice Lines/Scalper/youre-so-old-1.ogg" id="14_qac1j"]
+[ext_resource type="AudioStream" uid="uid://dsjmfc4evofeb" path="res://Assets/SFX/Voice Lines/Scalper/youre-so-old-2.ogg" id="15_7fmt4"]
+[ext_resource type="AudioStream" uid="uid://cm5twpy7utrq2" path="res://Assets/SFX/Voice Lines/Scalper/you-have-no-talent-2.ogg" id="16_y7us2"]
+[ext_resource type="AudioStream" uid="uid://6m0lqfxuh4uy" path="res://Assets/SFX/Voice Lines/Scalper/you-have-no-talent-1.ogg" id="17_xgyx7"]
+[ext_resource type="AudioStream" uid="uid://bmoaq6ja8amn5" path="res://Assets/SFX/Voice Lines/Scalper/aw-jeez-1.ogg" id="18_hcf34"]
+[ext_resource type="AudioStream" uid="uid://cj56gfx1qwwmf" path="res://Assets/SFX/Voice Lines/Scalper/aw-jeez-2.ogg" id="19_xps8k"]
+[ext_resource type="AudioStream" uid="uid://3qwetbjput8h" path="res://Assets/SFX/Voice Lines/Scalper/i-have-been-bested-1.ogg" id="20_0opgk"]
+[ext_resource type="AudioStream" uid="uid://ddjm0ga6objgv" path="res://Assets/SFX/Voice Lines/Scalper/my-iq-is-dumb-high-2.ogg" id="21_ab4vy"]
+[ext_resource type="AudioStream" uid="uid://0ygx2owct4im" path="res://Assets/SFX/Voice Lines/Scalper/laugh-1.ogg" id="22_ogtig"]
+[ext_resource type="AudioStream" uid="uid://70g85g3e5e57" path="res://Assets/SFX/Voice Lines/Scalper/you-clearly-dont-own-an-airfryer-1.ogg" id="23_mu5oe"]
+[ext_resource type="AudioStream" uid="uid://15s2uuxgeyl2" path="res://Assets/SFX/Voice Lines/Scalper/rare-rusty-crowbar-1.ogg" id="24_wdhh2"]
+[ext_resource type="AudioStream" uid="uid://bmlkyvw72hkes" path="res://Assets/SFX/Voice Lines/Scalper/rare-rusty-crowbar-2.ogg" id="25_fwasg"]
+[ext_resource type="AudioStream" uid="uid://dpkfrov304whr" path="res://Assets/SFX/Voice Lines/Scalper/lvl-13-splunk-1.ogg" id="26_hnfhn"]
+[ext_resource type="AudioStream" uid="uid://bfvwlc3s1kkdb" path="res://Assets/SFX/Voice Lines/Scalper/lvl-13-splunk-2.ogg" id="27_fb0vk"]
+[ext_resource type="AudioStream" uid="uid://st6gbs0s0cuh" path="res://Assets/SFX/Voice Lines/Scalper/are-you-defending-1.ogg" id="28_sy1u3"]
+[ext_resource type="AudioStream" uid="uid://dgneyvbii8ddn" path="res://Assets/SFX/Voice Lines/Scalper/are-you-defending-2.ogg" id="29_0fx0q"]
+[ext_resource type="AudioStream" uid="uid://16dsq75nwb3h" path="res://Assets/SFX/Voice Lines/Scalper/we-get-it-you-like-to-defend-2.ogg" id="30_yapxw"]
+[ext_resource type="AudioStream" uid="uid://blfn3u5emy7c3" path="res://Assets/SFX/Voice Lines/Scalper/are-you-still-defending-1.ogg" id="31_s03at"]
+[ext_resource type="AudioStream" uid="uid://cppntbnhhgmao" path="res://Assets/SFX/Voice Lines/Scalper/are-you-still-defending-2.ogg" id="32_8b1nn"]
+[ext_resource type="AudioStream" uid="uid://cm1ua3k1nmkl6" path="res://Assets/SFX/Voice Lines/Scalper/its-getting-old-now-1.ogg" id="33_57ris"]
+[ext_resource type="AudioStream" uid="uid://3y12ch4e5kys" path="res://Assets/SFX/Voice Lines/Scalper/its-getting-old-now-2.ogg" id="34_bfb6w"]
+[ext_resource type="AudioStream" uid="uid://do0ddvlyi1okt" path="res://Assets/SFX/Voice Lines/Scalper/stop-with-the-stupid-defending-2.ogg" id="35_7xrp3"]
+[ext_resource type="AudioStream" uid="uid://w5vqnfj25cvj" path="res://Assets/SFX/Voice Lines/Scalper/the-great-method-of-defending-1.ogg" id="36_2axqc"]
+[ext_resource type="AudioStream" uid="uid://8h6e52dnpf8m" path="res://Assets/SFX/Voice Lines/Scalper/the-great-method-of-defending-2.ogg" id="37_wm61u"]
+[ext_resource type="AudioStream" uid="uid://dkdy8iw0cec16" path="res://Assets/SFX/Voice Lines/Scalper/we-get-it-you-like-to-defend-1.ogg" id="38_idv06"]
+[ext_resource type="AudioStream" uid="uid://bxukdyh4lf6cx" path="res://Assets/SFX/Voice Lines/Scalper/just-keep-on-walking-1.ogg" id="39_56vdr"]
+[ext_resource type="AudioStream" uid="uid://526qyvy8sdtq" path="res://Assets/SFX/Voice Lines/Scalper/a-cowardly-retreat-1.ogg" id="40_g7vno"]
+[ext_resource type="AudioStream" uid="uid://bl1y86x8kq8ws" path="res://Assets/SFX/Voice Lines/Scalper/a-cowardly-retreat-2.ogg" id="41_1315c"]
+[ext_resource type="AudioStream" uid="uid://c0113r5cxbb14" path="res://Assets/SFX/Voice Lines/Scalper/3-12-olive-street-1.ogg" id="42_hsms5"]
+[ext_resource type="AudioStream" uid="uid://dv8c6j1r20gft" path="res://Assets/SFX/Voice Lines/Scalper/i-have-heard-worse-in-cod-lobbies-1.ogg" id="43_kuu8g"]
+[ext_resource type="AudioStream" uid="uid://dic4ypre2604" path="res://Assets/SFX/Voice Lines/Scalper/ive-have-heard-worse-in-cod-lobbies-2.ogg" id="44_i3j1t"]
+[ext_resource type="AudioStream" uid="uid://dbsl21nmit2ld" path="res://Assets/SFX/Voice Lines/Scalper/my-mind-is-a-steel-cage-1.ogg" id="45_qfh1a"]
+[ext_resource type="AudioStream" uid="uid://dvypv00rt1xps" path="res://Assets/SFX/Voice Lines/Scalper/youre-gonna-do-what-down-my-throat-2.ogg" id="46_viw2l"]
+[ext_resource type="AudioStream" uid="uid://bl8xph2ih5hu0" path="res://Assets/SFX/Voice Lines/Scalper/that-hurts-my-feelings-2.ogg" id="47_1rmth"]
+[ext_resource type="AudioStream" uid="uid://cmfptm3i2hly4" path="res://Assets/SFX/Voice Lines/Scalper/my-ip-starts-with-8-1-1.ogg" id="48_i233v"]
+[ext_resource type="AudioStream" uid="uid://cd4pm8g7hmtew" path="res://Assets/SFX/Voice Lines/Scalper/you-dont-need-to-bring-my-xbox-into-this-1.ogg" id="49_188bm"]
+[ext_resource type="AudioStream" uid="uid://epqquiibfhnl" path="res://Assets/SFX/Voice Lines/Scalper/you-dont-need-to-bring-my-xbox-into-this-2.ogg" id="50_qoovm"]
+[ext_resource type="AudioStream" uid="uid://pixgwfucmgxo" path="res://Assets/SFX/Voice Lines/Scalper/why-would-you-say-that-1.ogg" id="51_nohvi"]
+[ext_resource type="AudioStream" uid="uid://c0ul3hpoaudtb" path="res://Assets/SFX/Voice Lines/Scalper/why-would-you-say-that-2.ogg" id="52_ektjx"]
+[ext_resource type="AudioStream" uid="uid://ctll1dleyqavh" path="res://Assets/SFX/Voice Lines/Scalper/what-in-my-what-1.ogg" id="53_m2q5v"]
+[ext_resource type="AudioStream" uid="uid://dybwqm1raqmwe" path="res://Assets/SFX/Voice Lines/Scalper/now-youre-bringing-my-parents-into-this-1.ogg" id="54_oa0cy"]
+[ext_resource type="AudioStream" uid="uid://dj6p8ii6ryge5" path="res://Assets/SFX/Voice Lines/Scalper/didnt-know-you-can-invent-that-slur-1.ogg" id="55_xnn6v"]
+[ext_resource type="AudioStream" uid="uid://bceom08jynf4u" path="res://Assets/SFX/Voice Lines/Scalper/that-hurt-like-a-bus-from-ontario-1.ogg" id="56_js3cn"]
+[ext_resource type="AudioStream" uid="uid://bfw2ktjrx3fv0" path="res://Assets/SFX/Voice Lines/Scalper/that-hurt-like-a-bus-from-ontario-2.ogg" id="57_sigsr"]
+[ext_resource type="AudioStream" uid="uid://ccof5ps3vrxep" path="res://Assets/SFX/Voice Lines/Scalper/scream-4.ogg" id="58_24tqt"]
+[ext_resource type="AudioStream" uid="uid://bkgqkhxao0vak" path="res://Assets/SFX/Voice Lines/Scalper/scream-6.ogg" id="59_7te2n"]
+[ext_resource type="AudioStream" uid="uid://ccgrrhbfe3s08" path="res://Assets/SFX/Voice Lines/Scalper/scream-3.ogg" id="60_4prxy"]
+[ext_resource type="AudioStream" uid="uid://c2cvehe6opesa" path="res://Assets/SFX/Voice Lines/Scalper/screan-7.ogg" id="61_2ha37"]
+[ext_resource type="AudioStream" uid="uid://c164sr46c3nkv" path="res://Assets/SFX/Voice Lines/Scalper/this-is-a-big-mistake-1.ogg" id="62_n7g1f"]
+[ext_resource type="AudioStream" uid="uid://cwhn2hwp18b2m" path="res://Assets/SFX/Voice Lines/Scalper/you-dont-know-what-your-getting-into-1.ogg" id="63_6pa2g"]
+[ext_resource type="AudioStream" uid="uid://cj6fg8b66gdca" path="res://Assets/SFX/Voice Lines/Scalper/you-dont-know-what-your-getting-into-2.ogg" id="64_5tucw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hmm1d"]
 shader = ExtResource("2_1xjt3")
@@ -284,16 +335,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("6_r8t1f")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("7_c7epx")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("8_kj4qc")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("9_56dx4")
 }],
 "loop": true,
@@ -301,22 +352,121 @@ animations = [{
 "speed": 4.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("9_56dx4")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("8_kj4qc")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("7_c7epx")
 }, {
-"duration": 1.0,
+"duration": 2.2,
 "texture": ExtResource("6_r8t1f")
 }],
 "loop": true,
 "name": &"outTransition",
 "speed": 4.0
 }]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8g0hk"]
+streams_count = 4
+stream_0/stream = ExtResource("14_qac1j")
+stream_1/stream = ExtResource("15_7fmt4")
+stream_2/stream = ExtResource("16_y7us2")
+stream_3/stream = ExtResource("17_xgyx7")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rgly6"]
+streams_count = 3
+stream_0/stream = ExtResource("18_hcf34")
+stream_1/stream = ExtResource("19_xps8k")
+stream_2/stream = ExtResource("20_0opgk")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8h7pb"]
+streams_count = 4
+stream_0/stream = ExtResource("21_ab4vy")
+stream_0/weight = 2.0
+stream_1/stream = ExtResource("22_ogtig")
+stream_2/stream = ExtResource("17_xgyx7")
+stream_2/weight = 2.0
+stream_3/stream = ExtResource("23_mu5oe")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_if1uj"]
+streams_count = 2
+stream_0/stream = ExtResource("24_wdhh2")
+stream_1/stream = ExtResource("25_fwasg")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qww76"]
+streams_count = 2
+stream_0/stream = ExtResource("26_hnfhn")
+stream_1/stream = ExtResource("27_fb0vk")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_y50ci"]
+streams_count = 11
+stream_0/stream = ExtResource("28_sy1u3")
+stream_0/weight = 5.0
+stream_1/stream = ExtResource("29_0fx0q")
+stream_1/weight = 5.0
+stream_2/stream = ExtResource("31_s03at")
+stream_2/weight = 2.0
+stream_3/stream = ExtResource("32_8b1nn")
+stream_3/weight = 2.0
+stream_4/stream = ExtResource("33_57ris")
+stream_5/stream = ExtResource("34_bfb6w")
+stream_5/weight = 2.0
+stream_6/stream = ExtResource("35_7xrp3")
+stream_7/stream = ExtResource("36_2axqc")
+stream_7/weight = 5.0
+stream_8/stream = ExtResource("37_wm61u")
+stream_8/weight = 5.0
+stream_9/stream = ExtResource("38_idv06")
+stream_9/weight = 3.0
+stream_10/stream = ExtResource("30_yapxw")
+stream_10/weight = 2.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_20s1q"]
+streams_count = 3
+stream_0/stream = ExtResource("39_56vdr")
+stream_1/stream = ExtResource("40_g7vno")
+stream_2/stream = ExtResource("41_1315c")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l0gox"]
+streams_count = 7
+stream_0/stream = ExtResource("42_hsms5")
+stream_1/stream = ExtResource("43_kuu8g")
+stream_2/stream = ExtResource("44_i3j1t")
+stream_3/stream = ExtResource("45_qfh1a")
+stream_4/stream = ExtResource("46_viw2l")
+stream_5/stream = ExtResource("47_1rmth")
+stream_6/stream = ExtResource("48_i233v")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5gnpb"]
+streams_count = 7
+stream_0/stream = ExtResource("49_188bm")
+stream_1/stream = ExtResource("50_qoovm")
+stream_2/stream = ExtResource("51_nohvi")
+stream_3/stream = ExtResource("52_ektjx")
+stream_4/stream = ExtResource("53_m2q5v")
+stream_5/stream = ExtResource("54_oa0cy")
+stream_6/stream = ExtResource("55_xnn6v")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nkt63"]
+streams_count = 2
+stream_0/stream = ExtResource("56_js3cn")
+stream_1/stream = ExtResource("57_sigsr")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3vac6"]
+streams_count = 4
+stream_0/stream = ExtResource("58_24tqt")
+stream_1/stream = ExtResource("59_7te2n")
+stream_2/stream = ExtResource("60_4prxy")
+stream_3/stream = ExtResource("61_2ha37")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_f0mp3"]
+streams_count = 3
+stream_0/stream = ExtResource("62_n7g1f")
+stream_1/stream = ExtResource("63_6pa2g")
+stream_2/stream = ExtResource("64_5tucw")
 
 [node name="Palcomon" type="Node2D" unique_id=489667661]
 script = ExtResource("1_2ybmw")
@@ -658,7 +808,7 @@ visible = false
 position = Vector2(400, 300)
 scale = Vector2(0.69104993, 0.91641337)
 sprite_frames = SubResource("SpriteFrames_qc2s0")
-animation = &"done"
+animation = &"outTransition"
 
 [node name="TransitionMusic" type="AudioStreamPlayer" parent="." unique_id=155845051]
 stream = ExtResource("12_fhox4")
@@ -667,7 +817,56 @@ bus = &"Music"
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=700157121]
 stream = ExtResource("12_hmm1d")
+volume_db = -10.0
 bus = &"Music"
+
+[node name="Insults" type="AudioStreamPlayer" parent="." unique_id=1217681991]
+stream = SubResource("AudioStreamRandomizer_8g0hk")
+volume_db = 20.0
+
+[node name="Win" type="AudioStreamPlayer" parent="." unique_id=1566605202]
+stream = SubResource("AudioStreamRandomizer_rgly6")
+volume_db = 20.0
+
+[node name="Lose" type="AudioStreamPlayer" parent="." unique_id=602103215]
+stream = SubResource("AudioStreamRandomizer_8h7pb")
+volume_db = 20.0
+
+[node name="PickCrow" type="AudioStreamPlayer" parent="." unique_id=493685138]
+stream = SubResource("AudioStreamRandomizer_if1uj")
+volume_db = 20.0
+
+[node name="PickCart" type="AudioStreamPlayer" parent="." unique_id=1689240993]
+stream = SubResource("AudioStreamRandomizer_qww76")
+volume_db = 20.0
+
+[node name="Defend" type="AudioStreamPlayer" parent="." unique_id=575137286]
+stream = SubResource("AudioStreamRandomizer_y50ci")
+volume_db = 20.0
+
+[node name="Run" type="AudioStreamPlayer" parent="." unique_id=393726476]
+stream = SubResource("AudioStreamRandomizer_20s1q")
+volume_db = 20.0
+
+[node name="CrowInsult" type="AudioStreamPlayer" parent="." unique_id=1939677032]
+stream = SubResource("AudioStreamRandomizer_l0gox")
+volume_db = 20.0
+
+[node name="CartInsult" type="AudioStreamPlayer" parent="." unique_id=1251193256]
+stream = SubResource("AudioStreamRandomizer_5gnpb")
+volume_db = 20.0
+
+[node name="Attack" type="AudioStreamPlayer" parent="." unique_id=786136423]
+stream = SubResource("AudioStreamRandomizer_nkt63")
+volume_db = 20.0
+
+[node name="GO" type="AudioStreamPlayer" parent="." unique_id=1861535154]
+stream = SubResource("AudioStreamRandomizer_3vac6")
+volume_db = 20.0
+
+[node name="Start" type="AudioStreamPlayer" parent="." unique_id=1532447733]
+stream = SubResource("AudioStreamRandomizer_f0mp3")
+volume_db = 20.0
 
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Defend" to="." method="_on_defend_pressed"]

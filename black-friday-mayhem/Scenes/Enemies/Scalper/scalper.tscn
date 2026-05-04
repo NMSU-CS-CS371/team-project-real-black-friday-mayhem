@@ -136,6 +136,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_6v17p"]
+viewport_path = NodePath("AnimatedSprite3D/Sprite3D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_etvls"]
+resource_local_to_scene = true
+transparency = 1
+blend_mode = 2
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_6v17p")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_etvls"]
+viewport_path = NodePath("AnimatedSprite3D/Sprite3D/SubViewport")
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ngycw"]
 radius = 0.08300781
 height = 0.2759583
@@ -146,6 +161,23 @@ script = ExtResource("2_pyl3l")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
+layers = 32
+sprite_frames = SubResource("SpriteFrames_tkbos")
+animation = &"forward"
+
+[node name="Sprite3D" type="Sprite3D" parent="AnimatedSprite3D" index="0" unique_id=944759191]
+material_override = SubResource("StandardMaterial3D_etvls")
+texture = SubResource("ViewportTexture_etvls")
+
+[node name="SubViewport" type="SubViewport" parent="AnimatedSprite3D/Sprite3D" index="0" unique_id=1091176171]
+transparent_bg = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+size = Vector2i(22, 32)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite3D/Sprite3D/SubViewport" index="0" unique_id=144583411]
+position = Vector2(10.57, 15.82)
 sprite_frames = SubResource("SpriteFrames_tkbos")
 animation = &"forward"
 

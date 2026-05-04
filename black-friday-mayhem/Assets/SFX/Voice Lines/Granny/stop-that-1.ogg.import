@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://wd6p8nhakxxi"
+path="res://.godot/imported/stop-that-1.ogg-238d9686bd05aa24e52f679b3fa6386a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Granny/stop-that-1.ogg"
+dest_files=["res://.godot/imported/stop-that-1.ogg-238d9686bd05aa24e52f679b3fa6386a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
