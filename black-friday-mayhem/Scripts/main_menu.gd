@@ -9,6 +9,7 @@ func _ready() -> void:
 	# attempt to load config file
 	var err = config.load("res://config.ini")
 	
+	# if config file could not be loaded, set default settings
 	if err != OK:
 		set_default_settings()
 	
@@ -18,7 +19,9 @@ func _ready() -> void:
 	sceneTransition.play("fade_out")
 	await get_tree().create_timer(0.5).timeout
 
+# set default settings if config file could not be loaded
 func set_default_settings():
+	config.set_value("options","master_volume",100.0)
 	config.set_value("options","music_volume",100.0)
 	config.set_value("options","sfx_volume",100.0)
 	config.set_value("options","fullscreen",0)
@@ -35,12 +38,18 @@ func _on_options_pressed():
 	# open options menu
 	$OptionsPanel.load_settings(config)
 
+# apply settings from config file
 func apply_settings():
-	# apply settings from config file
-	# the sound settings don't do anything right now
-	# because we don't have sound :P
-	# config.get_value("options","music_volume")
-	# config.get_value("options", "sfx_volume")
+	
+	# fetch volume settings
+	var masterVolume = config.get_value("options","master_volume") / 100.0
+	var musicVolume = config.get_value("options","music_volume") / 100.0
+	var sfxVolume = config.get_value("options", "sfx_volume") / 100.0
+	
+	# set the audio bus volume
+	AudioManager.set_master_volume(masterVolume)
+	AudioManager.set_music_volume(musicVolume)
+	AudioManager.set_sfx_volume(sfxVolume)
 	if config.get_value("options", "fullscreen") == 0:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	else:

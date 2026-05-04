@@ -74,6 +74,7 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	var battle = game.instantiate()
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))
+	AudioManager.pause_main_music()
 
 #minigame finished results
 func _on_minigame_finished(result):
@@ -84,3 +85,4 @@ func _on_minigame_finished(result):
 	else :
 		is_defeated = false
 	playing_game = false
+	AudioManager.resume_main_music()
