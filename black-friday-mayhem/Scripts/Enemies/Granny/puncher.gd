@@ -32,6 +32,12 @@ var penalties = 20
 #keeps track if the player is knocked out
 var isKnockedOut = false
 
+#keeps track of left punch or right punch
+var isLeft : bool = false
+
+#keeps track of the type of punch the player inflicted
+var leftPunch : bool = false
+
 func _ready() -> void:
 	updateHealth()
 	#print(player.name)
@@ -41,18 +47,35 @@ func updateHealth():
 	healthBar.max_value = MAX_HEALTH
 	healthText.text = "HP %d/%d" % [health, MAX_HEALTH]
 
-func click():
-	var punchtype : String
+func punch():
 	if isHoldingUP:
-		punchtype = "punch up"
+		animationPlayer.play("punch up")
+		return
+	
+	if isLeft:
+		animationPlayer.play("punch_mid_L")
+		isLeft = false
 	else:
-		punchtype = "punch mid"
+		animationPlayer.play("punch_mid_R")
+		isLeft = true
+	
+	pass
+
+func grandmaPunchType(grandmaLeftPunch : bool):
+	leftPunch = grandmaLeftPunch
+	pass
+
+func click():
 	
 	if health > 0:
 		isDodging = false
-		animationPlayer.play(punchtype)
+		punch()
+		#animationPlayer.play(punchtype)
 	elif isKnockedOut:
-		animationPlayer.play("strugle")
+		if leftPunch:
+			animationPlayer.play("strugle_L")
+		else:
+			animationPlayer.play("strugle_R")
 		#tries += 1
 		pass
 	var penalizations = (faints * penalties)
@@ -61,7 +84,10 @@ func click():
 		updateHealth()
 		tries = 0
 		effort += 5
-		animationPlayer.play("up")
+		if leftPunch:
+			animationPlayer.play("up_L")
+		else:
+			animationPlayer.play("up_R")
 		isKnockedOut = false
 		recovered.emit()
 		print("and he's back in the game!!")
@@ -106,13 +132,16 @@ func apply_damage(damage_taken : int):
 		health = health - damage_taken
 		#print("took 99 damage")
 		pass
-	if !isKnockedOut and health < 0:
+	if !isKnockedOut and health <= 0:
 		isKnockedOut = true
 		health = 0
 		faints += 1
 		print("knocked out")
 		knockedOut.emit()
-		animationPlayer.play("down")
+		if leftPunch:
+			animationPlayer.play("down_L")
+		else:
+			animationPlayer.play("down_R")
 	updateHealth()
 	pass	
 	print("health is ", health)
