@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmow66lkcujjb"
+path="res://.godot/imported/what-a-good-time-to-be-living-1.ogg-574a82317a3555662ad3d1ce2cd7192c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/what-a-good-time-to-be-living-1.ogg"
+dest_files=["res://.godot/imported/what-a-good-time-to-be-living-1.ogg-574a82317a3555662ad3d1ce2cd7192c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

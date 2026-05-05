@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dllo6wmr245aq"
+path="res://.godot/imported/that-frickin-hurts-1.ogg-4dbd78c2be74d8c3ba8547c879c1f3a3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Female/Collision/that-frickin-hurts-1.ogg"
+dest_files=["res://.godot/imported/that-frickin-hurts-1.ogg-4dbd78c2be74d8c3ba8547c879c1f3a3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

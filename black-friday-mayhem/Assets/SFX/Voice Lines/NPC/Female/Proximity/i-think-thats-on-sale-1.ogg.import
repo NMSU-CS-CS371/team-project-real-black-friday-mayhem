@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://mqqaqqet7ygk"
+path="res://.godot/imported/i-think-thats-on-sale-1.ogg-5da1df588cf708b0b2973be660ad5319.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/i-think-thats-on-sale-1.ogg"
+dest_files=["res://.godot/imported/i-think-thats-on-sale-1.ogg-5da1df588cf708b0b2973be660ad5319.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

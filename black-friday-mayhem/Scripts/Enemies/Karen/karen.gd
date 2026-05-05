@@ -91,12 +91,11 @@ func _on_minigame_finished(result):
 
 func _on_detection_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		$Lines.volume_db = 10
+		$Lines.volume_db = 8
 		if not $Lines.playing:
 			$Lines.play()
 
 func _on_detection_body_exited(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		if $Lines.playing:
-			$Lines.volume_db = -10
-			
+			$Lines.volume_db = -4

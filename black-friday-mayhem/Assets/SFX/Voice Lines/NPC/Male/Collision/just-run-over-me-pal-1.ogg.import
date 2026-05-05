@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btyd7x60nh8sm"
+path="res://.godot/imported/just-run-over-me-pal-1.ogg-bdd8cfe9c636cd51912c63848acb7063.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Collision/just-run-over-me-pal-1.ogg"
+dest_files=["res://.godot/imported/just-run-over-me-pal-1.ogg-bdd8cfe9c636cd51912c63848acb7063.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

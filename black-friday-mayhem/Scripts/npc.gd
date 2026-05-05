@@ -1,6 +1,8 @@
 extends BaseCharacter
 
 var target_position: Vector3
+var home_position: Vector3
+
 var move_speed := 2.5
 var move_range := 10.0
 var wait_time := 0.0
@@ -14,25 +16,31 @@ var down_timer := 0.0
 
 var standing_y := 0.0
 var fallen_y_offset := -0.7
-@export var sprit : GeometryInstance3D
+
+@export var sprit: GeometryInstance3D
 var mask
 
 func _ready():
+	home_position = global_position
+
 	mask = sprit.material_override
 	randomize()
+
 	$AnimatedSprite3D.play("default")
 	$AnimatedSprite3D/Sprite3D/SubViewport/AnimatedSprite2D.play("default")
-	
+
 	standing_y = $AnimatedSprite3D.position.y
 	$AnimatedSprite3D.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	
+
 	mask.billboard_mode = 1
 	mask.billboard_keep_scale = true
-	# Area3D player hit detection
+
 	if has_node("HitboxArea3D"):
 		$HitboxArea3D.body_entered.connect(_on_hitbox_body_entered)
+		$HitboxArea3D.body_shape_entered.connect(_on_hitbox_body_shape_entered)
 
 	pick_new_target()
+
 
 func _physics_process(delta):
 	if knocked_down:
@@ -57,11 +65,10 @@ func _physics_process(delta):
 
 		return
 
-	# Standing NPC keeps facing camera/player.
 	$AnimatedSprite3D.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 	mask.billboard_mode = 1
 	mask.billboard_keep_scale = true
-	
+
 	if wait_time > 0.0:
 		wait_time -= delta
 		velocity = Vector3.ZERO
@@ -74,7 +81,6 @@ func _physics_process(delta):
 
 	apply_movement_and_animation(delta)
 
-	# Backup collision check, but only player can knock them down.
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var body = collision.get_collider()
@@ -83,22 +89,42 @@ func _physics_process(delta):
 			knock_down()
 			return
 
+		wait_time = randf_range(0.2, 0.6)
+		pick_new_target()
+		return
+
 	if global_position.distance_to(target_position) < 0.5:
 		wait_time = randf_range(0.5, 2.0)
 		pick_new_target()
 
-func _on_hitbox_body_entered(body):
+
+func try_knock_down(body: Node3D) -> void:
 	if knocked_down:
 		return
 
 	if is_player(body):
 		knock_down()
 
+
+func _on_hitbox_body_entered(body: Node3D) -> void:
+	try_knock_down(body)
+
+
+func _on_hitbox_body_shape_entered(
+	body_rid: RID,
+	body: Node3D,
+	body_shape_index: int,
+	local_shape_index: int
+) -> void:
+	try_knock_down(body)
+
+
 func is_player(body) -> bool:
 	if body == null:
 		return false
 
-	return body.name == "Player" or body.is_in_group("player")
+	return body.name == "Player" or body.is_in_group("player") or body.is_in_group("Player")
+
 
 func knock_down():
 	print("NPC knocked down")
@@ -109,8 +135,10 @@ func knock_down():
 
 	$AnimatedSprite3D.billboard = BaseMaterial3D.BILLBOARD_DISABLED
 	mask.billboard_mode = 0
+
 	if has_node("CollisionShape3D"):
 		$CollisionShape3D.disabled = true
+
 
 func get_back_up():
 	print("NPC got back up")
@@ -122,7 +150,7 @@ func get_back_up():
 	$AnimatedSprite3D.rotation.z = 0.0
 	$AnimatedSprite3D.position.y = standing_y
 	$AnimatedSprite3D.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	
+
 	mask.billboard_mode = 1
 	mask.billboard_keep_scale = true
 
@@ -131,12 +159,46 @@ func get_back_up():
 
 	pick_new_target()
 
+
 func pick_new_target():
 	var offset_x = randf_range(-move_range, move_range)
 	var offset_z = randf_range(-move_range, move_range)
 
 	target_position = Vector3(
-		global_position.x + offset_x,
+		home_position.x + offset_x,
 		global_position.y,
-		global_position.z + offset_z
+		home_position.z + offset_z
 	)
+
+
+func _on_detection_body_entered(body: Node3D) -> void:
+	if is_player(body):
+		$Lines.volume_db = 6
+
+		if $Lines2.playing:
+			$Lines2.stop()
+
+		if not $Lines.playing:
+			$Lines.play()
+
+
+func _on_detection_body_exited(body: Node3D) -> void:
+	if is_player(body):
+		if $Lines.playing:
+			$Lines.volume_db = 2
+
+
+func _on_detection_2_body_entered(body: Node3D) -> void:
+	if is_player(body):
+		if $Lines.playing:
+			return
+
+		$Lines2.volume_db = 4
+		if not $Lines2.playing:
+			$Lines2.play()
+
+
+func _on_detection_2_body_exited(body: Node3D) -> void:
+	if is_player(body):
+		if $Lines2.playing:
+			$Lines2.volume_db = 1

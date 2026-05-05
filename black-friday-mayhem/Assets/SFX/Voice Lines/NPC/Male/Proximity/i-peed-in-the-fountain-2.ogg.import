@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dr1clfdat0t0a"
+path="res://.godot/imported/i-peed-in-the-fountain-2.ogg-1dd204511fcea76f511dfea98f45bf4a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/i-peed-in-the-fountain-2.ogg"
+dest_files=["res://.godot/imported/i-peed-in-the-fountain-2.ogg-1dd204511fcea76f511dfea98f45bf4a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
