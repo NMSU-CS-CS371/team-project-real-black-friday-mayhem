@@ -17,13 +17,13 @@
 [ext_resource type="AudioStream" uid="uid://dooxpesiwhkhp" path="res://Assets/SFX/Voice Lines/NPC/Male/Collision/scream-4.ogg" id="15_bldck"]
 [ext_resource type="AudioStream" uid="uid://drjbrm4tu6w48" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/i-peed-in-the-fountain-1.ogg" id="16_hq1fa"]
 [ext_resource type="AudioStream" uid="uid://ck0myj7efgj8g" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/george-foreman-grill-1.ogg" id="16_mc8fj"]
-[ext_resource type="AudioStream" uid="uid://bd7gtu5h20bcu" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/that-guy-over-there-stole-my-palcomon-cards-2.ogg" id="18_eofwx"]
 [ext_resource type="AudioStream" uid="uid://bjgpqqfp1w5q1" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/that-karen-and-her-little-ankle-biters-2.ogg" id="19_v5mqp"]
 [ext_resource type="AudioStream" uid="uid://cgmj70ymqdt7n" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/the-poor-children-2.ogg" id="20_tcw0l"]
 [ext_resource type="AudioStream" uid="uid://beg36qo1yb6j5" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/they-took-all-of-the-mayo-2.ogg" id="21_ssrpf"]
 [ext_resource type="AudioStream" uid="uid://cmow66lkcujjb" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/what-a-good-time-to-be-living-1.ogg" id="22_mcnrs"]
 [ext_resource type="AudioStream" uid="uid://c0f6h02d4a2qd" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/wheres-the-bathroom-2.ogg" id="23_rvr1d"]
 [ext_resource type="AudioStream" uid="uid://cuyrohax5d01" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/whats-that-over-there-1.ogg" id="24_v0784"]
+[ext_resource type="AudioStream" uid="uid://bf8evftfw68bx" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/stole-my-cards2.ogg" id="25_hq1fa"]
 [ext_resource type="AudioStream" uid="uid://dpvktg8n8edm4" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/wheres-the-tv-stuff-at-1.ogg" id="25_lu1jh"]
 [ext_resource type="AudioStream" uid="uid://dr6f2uc0fvksq" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/i-sold-my-car-to-be-here-2.ogg" id="26_pangt"]
 [ext_resource type="AudioStream" uid="uid://coyjnnqet3wky" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/i-think-thats-on-sale-2.ogg" id="27_1r2oq"]
@@ -93,14 +93,14 @@ stream_6/stream = ExtResource("30_1kybt")
 stream_7/stream = ExtResource("31_wlihl")
 stream_8/stream = ExtResource("32_hgkh6")
 stream_9/stream = ExtResource("33_rbryy")
-stream_10/stream = ExtResource("18_eofwx")
-stream_11/stream = ExtResource("19_v5mqp")
-stream_12/stream = ExtResource("20_tcw0l")
-stream_13/stream = ExtResource("21_ssrpf")
-stream_14/stream = ExtResource("22_mcnrs")
-stream_15/stream = ExtResource("23_rvr1d")
-stream_16/stream = ExtResource("24_v0784")
-stream_17/stream = ExtResource("25_lu1jh")
+stream_10/stream = ExtResource("19_v5mqp")
+stream_11/stream = ExtResource("20_tcw0l")
+stream_12/stream = ExtResource("21_ssrpf")
+stream_13/stream = ExtResource("22_mcnrs")
+stream_14/stream = ExtResource("23_rvr1d")
+stream_15/stream = ExtResource("24_v0784")
+stream_16/stream = ExtResource("25_lu1jh")
+stream_17/stream = ExtResource("25_hq1fa")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hq1fa"]
 
