@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://db2wk30hrr8al"
+path="res://.godot/imported/stole-my-cards.ogg-130259a4150f7222e6a1434f04f95238.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/stole-my-cards.ogg"
+dest_files=["res://.godot/imported/stole-my-cards.ogg-130259a4150f7222e6a1434f04f95238.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
