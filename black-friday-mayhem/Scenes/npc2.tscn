@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://ckw66imoabpip" path="res://Scripts/npc.gd" id="1_lqs13"]
 [ext_resource type="Texture2D" uid="uid://duk7j7171he2q" path="res://Assets/Sprites/Girl_NPC1.png" id="2_lqs13"]
 [ext_resource type="Texture2D" uid="uid://eijliwo48dnh" path="res://Assets/Sprites/Girl_NPC2.png" id="3_74ajd"]
+[ext_resource type="AudioStream" uid="uid://bma6t8gnbwg0a" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/i-have-been-crushed-1.ogg" id="4_6wr7h"]
+[ext_resource type="AudioStream" uid="uid://btry44dg101bj" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/im-walking-here-1.ogg" id="5_huiwv"]
+[ext_resource type="AudioStream" uid="uid://bqdo80yykqix5" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/my-leg-1.ogg" id="6_kkp7g"]
+[ext_resource type="AudioStream" uid="uid://dyb314jh2ols5" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/okay-buddy-1.ogg" id="7_3wt0m"]
+[ext_resource type="AudioStream" uid="uid://phn7msl3ddrs" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/scream-1.ogg" id="8_xvntd"]
+[ext_resource type="AudioStream" uid="uid://kd706kdp8nqw" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/scream-2.ogg" id="9_xe5bl"]
+[ext_resource type="AudioStream" uid="uid://bbfmqe5c6555k" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/scream-4.ogg" id="10_1t3un"]
+[ext_resource type="AudioStream" uid="uid://cm1c14r7ryudi" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/scream-3.ogg" id="11_056sq"]
+[ext_resource type="AudioStream" uid="uid://dllo6wmr245aq" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/that-frickin-hurts-1.ogg" id="12_sbu2v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h1ryf"]
 animations = [{
@@ -37,6 +46,18 @@ height = 3.6728516
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lqs13"]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ylssn"]
+streams_count = 9
+stream_0/stream = ExtResource("4_6wr7h")
+stream_1/stream = ExtResource("5_huiwv")
+stream_2/stream = ExtResource("6_kkp7g")
+stream_3/stream = ExtResource("7_3wt0m")
+stream_4/stream = ExtResource("8_xvntd")
+stream_5/stream = ExtResource("9_xe5bl")
+stream_6/stream = ExtResource("10_1t3un")
+stream_7/stream = ExtResource("11_056sq")
+stream_8/stream = ExtResource("12_sbu2v")
+
 [node name="Npc" type="CharacterBody3D" unique_id=1570048502 node_paths=PackedStringArray("sprit")]
 script = ExtResource("1_lqs13")
 sprit = NodePath("AnimatedSprite3D/Sprite3D")
@@ -59,8 +80,23 @@ offset = Vector2(256, 255)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
 shape = SubResource("CapsuleShape3D_g6unj")
 
-[node name="HitboxArea3D" type="Area3D" parent="." unique_id=1753731018]
+[node name="Detection" type="Area3D" parent="." unique_id=1753731018]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HitboxArea3D" unique_id=330719646]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detection" unique_id=330719646]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_lqs13")
+
+[node name="Lines" type="AudioStreamPlayer" parent="." unique_id=528360321]
+stream = SubResource("AudioStreamRandomizer_ylssn")
+volume_db = 16.0
+
+[node name="Detection2" type="Area3D" parent="." unique_id=2139898842]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detection2" unique_id=738177093]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_lqs13")
+
+[node name="Lines2" type="AudioStreamPlayer" parent="." unique_id=452651502]
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]

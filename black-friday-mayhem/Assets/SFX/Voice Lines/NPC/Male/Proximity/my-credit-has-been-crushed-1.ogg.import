@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcg4jfp1d7wjm"
+path="res://.godot/imported/my-credit-has-been-crushed-1.ogg-cc247af125ccced800c2e3b923504654.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/my-credit-has-been-crushed-1.ogg"
+dest_files=["res://.godot/imported/my-credit-has-been-crushed-1.ogg-cc247af125ccced800c2e3b923504654.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

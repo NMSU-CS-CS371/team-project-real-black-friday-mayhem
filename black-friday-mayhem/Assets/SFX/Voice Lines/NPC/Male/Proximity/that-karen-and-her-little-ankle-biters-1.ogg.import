@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://tjcuy4iv2och"
+path="res://.godot/imported/that-karen-and-her-little-ankle-biters-1.ogg-a5e2d84e2ce6fad7b373642c0b2c25a3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/that-karen-and-her-little-ankle-biters-1.ogg"
+dest_files=["res://.godot/imported/that-karen-and-her-little-ankle-biters-1.ogg-a5e2d84e2ce6fad7b373642c0b2c25a3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

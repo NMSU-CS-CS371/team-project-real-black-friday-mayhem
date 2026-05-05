@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvn67sa86wvp8"
+path="res://.godot/imported/i-hate-all-of-these-xxxx-2.ogg-eeea1b774f79a2bbdc61a8bbdeb6b334.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/i-hate-all-of-these-xxxx-2.ogg"
+dest_files=["res://.godot/imported/i-hate-all-of-these-xxxx-2.ogg-eeea1b774f79a2bbdc61a8bbdeb6b334.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

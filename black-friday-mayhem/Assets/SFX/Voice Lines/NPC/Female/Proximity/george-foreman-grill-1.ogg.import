@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://y3kr8cy4h0ug"
+path="res://.godot/imported/george-foreman-grill-1.ogg-07e20d02dca05771bc0fdad66c4f0b94.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/george-foreman-grill-1.ogg"
+dest_files=["res://.godot/imported/george-foreman-grill-1.ogg-07e20d02dca05771bc0fdad66c4f0b94.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
