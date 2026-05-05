@@ -169,7 +169,7 @@ shape = SubResource("SphereShape3D_mye1j")
 
 [node name="Lines" type="AudioStreamPlayer" parent="." index="4" unique_id=989675800]
 stream = SubResource("AudioStreamRandomizer_wqsnw")
-volume_db = 16.0
+volume_db = 10.0
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_detection_body_exited"]

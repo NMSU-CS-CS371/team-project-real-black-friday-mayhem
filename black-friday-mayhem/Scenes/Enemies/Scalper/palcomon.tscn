@@ -64,6 +64,12 @@
 [ext_resource type="AudioStream" uid="uid://c164sr46c3nkv" path="res://Assets/SFX/Voice Lines/Scalper/this-is-a-big-mistake-1.ogg" id="62_n7g1f"]
 [ext_resource type="AudioStream" uid="uid://cwhn2hwp18b2m" path="res://Assets/SFX/Voice Lines/Scalper/you-dont-know-what-your-getting-into-1.ogg" id="63_6pa2g"]
 [ext_resource type="AudioStream" uid="uid://cj6fg8b66gdca" path="res://Assets/SFX/Voice Lines/Scalper/you-dont-know-what-your-getting-into-2.ogg" id="64_5tucw"]
+[ext_resource type="AudioStream" uid="uid://cdqb53yt3tujl" path="res://Assets/SFX/SoundEffects/Scalper/crowbar.ogg" id="65_hcf34"]
+[ext_resource type="AudioStream" uid="uid://dasn3piti45os" path="res://Assets/SFX/SoundEffects/Scalper/CartHit.ogg" id="66_xps8k"]
+[ext_resource type="AudioStream" uid="uid://bkx3myo3f4rvu" path="res://Assets/SFX/SoundEffects/Scalper/button-click.ogg" id="67_0opgk"]
+[ext_resource type="AudioStream" uid="uid://dv3s2pyr8e2j0" path="res://Assets/SFX/SoundEffects/Scalper/textboxClose.ogg" id="68_ab4vy"]
+[ext_resource type="AudioStream" uid="uid://b1eobfshehcib" path="res://Assets/SFX/SoundEffects/Scalper/cartInsult.ogg" id="69_xps8k"]
+[ext_resource type="AudioStream" uid="uid://m5xbi7is4hol" path="res://Assets/SFX/SoundEffects/Scalper/scalper-damage.ogg" id="70_0opgk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hmm1d"]
 shader = ExtResource("2_1xjt3")
@@ -369,13 +375,6 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8g0hk"]
-streams_count = 4
-stream_0/stream = ExtResource("14_qac1j")
-stream_1/stream = ExtResource("15_7fmt4")
-stream_2/stream = ExtResource("16_y7us2")
-stream_3/stream = ExtResource("17_xgyx7")
-
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rgly6"]
 streams_count = 3
 stream_0/stream = ExtResource("18_hcf34")
@@ -402,27 +401,35 @@ stream_0/stream = ExtResource("26_hnfhn")
 stream_1/stream = ExtResource("27_fb0vk")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_y50ci"]
-streams_count = 11
+streams_count = 2
 stream_0/stream = ExtResource("28_sy1u3")
 stream_0/weight = 5.0
 stream_1/stream = ExtResource("29_0fx0q")
 stream_1/weight = 5.0
-stream_2/stream = ExtResource("31_s03at")
-stream_2/weight = 2.0
-stream_3/stream = ExtResource("32_8b1nn")
-stream_3/weight = 2.0
-stream_4/stream = ExtResource("33_57ris")
-stream_5/stream = ExtResource("34_bfb6w")
-stream_5/weight = 2.0
-stream_6/stream = ExtResource("35_7xrp3")
-stream_7/stream = ExtResource("36_2axqc")
-stream_7/weight = 5.0
-stream_8/stream = ExtResource("37_wm61u")
-stream_8/weight = 5.0
-stream_9/stream = ExtResource("38_idv06")
-stream_9/weight = 3.0
-stream_10/stream = ExtResource("30_yapxw")
-stream_10/weight = 2.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xgyx7"]
+streams_count = 2
+stream_0/stream = ExtResource("36_2axqc")
+stream_1/stream = ExtResource("37_wm61u")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qac1j"]
+streams_count = 2
+stream_0/stream = ExtResource("38_idv06")
+stream_1/stream = ExtResource("30_yapxw")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hcf34"]
+streams_count = 2
+stream_0/stream = ExtResource("31_s03at")
+stream_1/stream = ExtResource("32_8b1nn")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7fmt4"]
+streams_count = 2
+stream_0/stream = ExtResource("33_57ris")
+stream_1/stream = ExtResource("34_bfb6w")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_y7us2"]
+streams_count = 1
+stream_0/stream = ExtResource("35_7xrp3")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_20s1q"]
 streams_count = 3
@@ -467,6 +474,13 @@ streams_count = 3
 stream_0/stream = ExtResource("62_n7g1f")
 stream_1/stream = ExtResource("63_6pa2g")
 stream_2/stream = ExtResource("64_5tucw")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8g0hk"]
+streams_count = 4
+stream_0/stream = ExtResource("14_qac1j")
+stream_1/stream = ExtResource("15_7fmt4")
+stream_2/stream = ExtResource("16_y7us2")
+stream_3/stream = ExtResource("17_xgyx7")
 
 [node name="Palcomon" type="Node2D" unique_id=489667661]
 script = ExtResource("1_2ybmw")
@@ -527,8 +541,8 @@ vertical_alignment = 2
 [node name="PlayerContatainer" type="VBoxContainer" parent="." unique_id=916769989]
 offset_left = 33.0
 offset_top = 189.0
-offset_right = 433.00357
-offset_bottom = 623.0001
+offset_right = 433.00433
+offset_bottom = 623.00006
 rotation = 0.7853982
 alignment = 1
 metadata/_edit_group_ = true
@@ -820,53 +834,102 @@ stream = ExtResource("12_hmm1d")
 volume_db = -10.0
 bus = &"Music"
 
-[node name="Insults" type="AudioStreamPlayer" parent="." unique_id=1217681991]
-stream = SubResource("AudioStreamRandomizer_8g0hk")
-volume_db = 15.0
+[node name="VoiceLines" type="Node" parent="." unique_id=1004516409]
 
-[node name="Win" type="AudioStreamPlayer" parent="." unique_id=1566605202]
+[node name="Win" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1566605202]
 stream = SubResource("AudioStreamRandomizer_rgly6")
 volume_db = 15.0
 
-[node name="Lose" type="AudioStreamPlayer" parent="." unique_id=602103215]
+[node name="Lose" type="AudioStreamPlayer" parent="VoiceLines" unique_id=602103215]
 stream = SubResource("AudioStreamRandomizer_8h7pb")
 volume_db = 15.0
 
-[node name="PickCrow" type="AudioStreamPlayer" parent="." unique_id=493685138]
+[node name="PickCrow" type="AudioStreamPlayer" parent="VoiceLines" unique_id=493685138]
 stream = SubResource("AudioStreamRandomizer_if1uj")
 volume_db = 15.0
 
-[node name="PickCart" type="AudioStreamPlayer" parent="." unique_id=1689240993]
+[node name="PickCart" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1689240993]
 stream = SubResource("AudioStreamRandomizer_qww76")
 volume_db = 15.0
 
-[node name="Defend" type="AudioStreamPlayer" parent="." unique_id=575137286]
+[node name="Defend" type="AudioStreamPlayer" parent="VoiceLines" unique_id=575137286]
 stream = SubResource("AudioStreamRandomizer_y50ci")
 volume_db = 15.0
 
-[node name="Run" type="AudioStreamPlayer" parent="." unique_id=393726476]
+[node name="Defend2" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1738885956]
+stream = SubResource("AudioStreamRandomizer_xgyx7")
+volume_db = 15.0
+
+[node name="Defend3" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1219360064]
+stream = SubResource("AudioStreamRandomizer_qac1j")
+volume_db = 15.0
+
+[node name="Defend4" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1173790219]
+stream = SubResource("AudioStreamRandomizer_hcf34")
+volume_db = 15.0
+
+[node name="Defend5" type="AudioStreamPlayer" parent="VoiceLines" unique_id=705047768]
+stream = SubResource("AudioStreamRandomizer_7fmt4")
+volume_db = 15.0
+
+[node name="Defend6" type="AudioStreamPlayer" parent="VoiceLines" unique_id=2010345294]
+stream = SubResource("AudioStreamRandomizer_y7us2")
+volume_db = 15.0
+
+[node name="Run" type="AudioStreamPlayer" parent="VoiceLines" unique_id=393726476]
 stream = SubResource("AudioStreamRandomizer_20s1q")
 volume_db = 15.0
 
-[node name="CrowInsult" type="AudioStreamPlayer" parent="." unique_id=1939677032]
+[node name="CrowInsult" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1939677032]
 stream = SubResource("AudioStreamRandomizer_l0gox")
 volume_db = 15.0
 
-[node name="CartInsult" type="AudioStreamPlayer" parent="." unique_id=1251193256]
+[node name="CartInsult" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1251193256]
 stream = SubResource("AudioStreamRandomizer_5gnpb")
 volume_db = 15.0
 
-[node name="Attack" type="AudioStreamPlayer" parent="." unique_id=786136423]
+[node name="Attack" type="AudioStreamPlayer" parent="VoiceLines" unique_id=786136423]
 stream = SubResource("AudioStreamRandomizer_nkt63")
 volume_db = 15.0
 
-[node name="GO" type="AudioStreamPlayer" parent="." unique_id=1861535154]
+[node name="GO" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1861535154]
 stream = SubResource("AudioStreamRandomizer_3vac6")
 volume_db = 15.0
 
-[node name="Start" type="AudioStreamPlayer" parent="." unique_id=1532447733]
+[node name="Start" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1532447733]
 stream = SubResource("AudioStreamRandomizer_f0mp3")
 volume_db = 15.0
+
+[node name="Insults" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1217681991]
+stream = SubResource("AudioStreamRandomizer_8g0hk")
+volume_db = 15.0
+
+[node name="SoundEffects" type="Node" parent="." unique_id=1241367690]
+
+[node name="crowHit" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1525508043]
+stream = ExtResource("65_hcf34")
+bus = &"SFX"
+
+[node name="cartHit" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1262448427]
+stream = ExtResource("66_xps8k")
+bus = &"SFX"
+
+[node name="button" type="AudioStreamPlayer" parent="SoundEffects" unique_id=529174709]
+stream = ExtResource("67_0opgk")
+bus = &"SFX"
+
+[node name="textbox" type="AudioStreamPlayer" parent="SoundEffects" unique_id=663510983]
+stream = ExtResource("68_ab4vy")
+bus = &"SFX"
+
+[node name="cartInsult" type="AudioStreamPlayer" parent="SoundEffects" unique_id=2093021842]
+stream = ExtResource("69_xps8k")
+bus = &"SFX"
+
+[node name="damage" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1981495593]
+stream = ExtResource("70_0opgk")
+volume_db = -5.0
+bus = &"SFX"
 
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Defend" to="." method="_on_defend_pressed"]

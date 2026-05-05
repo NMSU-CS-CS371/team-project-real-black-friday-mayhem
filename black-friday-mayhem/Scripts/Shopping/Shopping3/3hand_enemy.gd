@@ -161,7 +161,9 @@ func steal_item():
 	#if the target item is not null and is valid
 	if is_instance_valid(target_item):
 		#delete item
+		$grab.play()
 		target_item.queue_free()
+		await $grab.finished
 	#delete hand
 	queue_free()
 	#state = HandState.RETURNING

@@ -71,7 +71,7 @@ func _ready() -> void:
 	#before I start the game I need a transition sceen with story 
 	#and instructions on how to play game
 	$Background.show()
-	$Encounter.play()
+	$VoiceLines/Encounter.play()
 	$scene.texture = scene1
 	$scene.show()
 	await get_tree().create_timer(1.0).timeout
@@ -100,16 +100,16 @@ func _process(delta: float) -> void:
 			if not $AnimationPlayer.is_playing() :
 				$AnimationPlayer.play("Shake")
 			#if there is not another voice line playing play base voice lines
-			if can_play and not $Playing.is_playing() and (not $kidsAttack.is_playing() and not $kidsKick.is_playing()):
+			if can_play and not $VoiceLines/Playing.is_playing() and (not $VoiceLines/kidsAttack.is_playing() and not $VoiceLines/kidsKick.is_playing()):
 				can_play = false
-				$Playing.play()
+				$VoiceLines/Playing.play()
 				wait_and_reset()
 				
 		else :
 			pass
 
 func wait_and_reset() :
-	await $Playing.finished
+	await $VoiceLines/Playing.finished
 	await get_tree().create_timer(buffer_time).timeout
 	can_play = true
 
@@ -147,9 +147,9 @@ func startgame() :
 #lose funciton she will steal an item
 func lose():
 	is_finished = true
-	$Playing.stop()
-	$kidsAttack.stop()
-	$kidsKick.stop()
+	$VoiceLines/Playing.stop()
+	$VoiceLines/kidsAttack.stop()
+	$VoiceLines/kidsKick.stop()
 	$Karen.hide()
 	$Item.hide()
 	$hands.hide()
@@ -157,7 +157,7 @@ func lose():
 	$scene.texture = scene3
 	$scene.show()
 	await get_tree().create_timer(0.5).timeout
-	$Lose.play()
+	$VoiceLines/Lose.play()
 	await get_tree().create_timer(2.0).timeout
 	invContainer.visible = true
 	player.controlAllowed = true
@@ -168,9 +168,9 @@ func lose():
 #she is defeated you get her special item
 func defeated():
 	is_finished = true
-	$Playing.stop()
-	$kidsAttack.stop()
-	$kidsKick.stop()
+	$VoiceLines/Playing.stop()
+	$VoiceLines/kidsAttack.stop()
+	$VoiceLines/kidsKick.stop()
 	$Karen.hide()
 	$Item.hide()
 	$hands.hide()
@@ -178,7 +178,7 @@ func defeated():
 	$scene.texture = scene4
 	$scene.show()
 	await get_tree().create_timer(0.4).timeout
-	$Win.play()
+	$VoiceLines/Win.play()
 	await get_tree().create_timer(2.0).timeout
 	$scene.texture = scene5
 	$scene.show()
@@ -232,6 +232,7 @@ func  _on_key_finished(success) :
 	if is_finished :
 		return
 	if success :
+		$SoundEffects/Kick.play()
 		if whatKid == 1 :
 			showKids($KidKick, "kicked")
 		elif whatKid == 2 :
@@ -247,9 +248,14 @@ func  _on_key_finished(success) :
 func showKids(child, a) :
 	child.show()
 	if a == "Attacked" :
-		$kidsAttack.play()
+		if $VoiceLines/Playing.is_playing :
+			$VoiceLines/Playing.stop()
+		$VoiceLines/kidsAttack.play()
 	else :
-		$kidsKick.play()
+		if $VoiceLines/Playing.is_playing :
+			$VoiceLines/Playing.stop()
+		$SoundEffects/Kick.play()
+		$VoiceLines/kidsKick.play()
 	$AnimationPlayer.play(a)
 	await $AnimationPlayer.animation_finished
 	child.hide()

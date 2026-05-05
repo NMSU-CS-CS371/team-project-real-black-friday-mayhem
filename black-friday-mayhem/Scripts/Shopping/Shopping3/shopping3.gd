@@ -11,6 +11,7 @@ var state: GameState = GameState.IDLE
 var items: Array[Node2D] = []
 @export var wallet_label: Label
 signal shop_finished
+var playing = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,6 +28,7 @@ func _ready() -> void:
 	$SceneTransition/ColorRect.visible = false
 	
 	print("Mini-game ready")#print to make sure Mini Game Scene is running
+	playing = true
 	start_game()#start the game
 
 #start game function to start running the mini game
@@ -92,6 +94,8 @@ func reskin_background():
 
 # update label with wallet balance
 func update_wallet_label(): 
+	if playing :
+		$SoundEffects/money.play()
 	if player.inventory.wallet < 0:
 		wallet_label.text = "-$" + str(abs(player.inventory.wallet))
 		wallet_label.add_theme_color_override("font_color", Color(1,0,0,1))

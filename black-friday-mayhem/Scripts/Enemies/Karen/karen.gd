@@ -71,6 +71,8 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	print("karen hit")
 	body.stop_velocity.emit()
 	playing_game = true
+	if $Lines.playing:
+			$Lines.stop()
 	var battle = game.instantiate()
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))
@@ -87,13 +89,11 @@ func _on_minigame_finished(result):
 	playing_game = false
 	AudioManager.resume_main_music()
 
-
 func _on_detection_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		$Lines.volume_db = 8
 		if not $Lines.playing:
 			$Lines.play()
-
 
 func _on_detection_body_exited(body: Node3D) -> void:
 	if body.is_in_group("player"):
