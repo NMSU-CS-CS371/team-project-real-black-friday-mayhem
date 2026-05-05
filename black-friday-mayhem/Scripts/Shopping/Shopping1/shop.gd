@@ -8,6 +8,7 @@ var itemsRemoved: int = 0
 var totalItems: int = 6
 signal shop_finished
 signal countdown_finished
+var playing = false
 
 # called upon entering the scene
 func _ready() -> void:
@@ -23,9 +24,11 @@ func _ready() -> void:
 	$SceneTransition/ColorRect.visible = false
 	
 	# play countdown animation
+	$SoundEffects/countdown.play()
 	$AnimationPlayer.play("flash_sale")
 	await $AnimationPlayer.animation_finished
 	countdown_finished.emit()
+	playing = true
 
 # called every frame
 func _process(_delta: float) -> void:
@@ -74,6 +77,8 @@ func reskin_background():
 
 # update label with wallet balance
 func update_wallet_label():
+	if playing :
+		$SoundEffects/money.play()
 	if player.inventory.wallet < 0:
 		walletLabel.text = "-$" + str(abs(player.inventory.wallet))
 		walletLabel.add_theme_color_override("font_color", Color(1,0,0,1))

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btry44dg101bj"
+path="res://.godot/imported/im-walking-here-1.ogg-446719e9a2c553ec9983b877f3a6b992.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Female/Collision/im-walking-here-1.ogg"
+dest_files=["res://.godot/imported/im-walking-here-1.ogg-446719e9a2c553ec9983b877f3a6b992.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

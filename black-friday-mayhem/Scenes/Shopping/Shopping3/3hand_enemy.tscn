@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://08l2xeqc1ssc" path="res://Scripts/Shopping/Shopping3/3hand_enemy.gd" id="1_yrr01"]
 [ext_resource type="Texture2D" uid="uid://dby1utd2o8642" path="res://Assets/Sprites/Hands.png" id="2_ogy7t"]
+[ext_resource type="AudioStream" uid="uid://b5etoqx3lvkdl" path="res://Assets/SFX/SoundEffects/Shopping/Grab.ogg" id="3_pspy2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5245f"]
 radius = 18.609673
@@ -34,3 +35,8 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea" unique_id=1438331754]
 shape = SubResource("CircleShape2D_ra4fw")
+
+[node name="grab" type="AudioStreamPlayer" parent="." unique_id=1997462220]
+stream = ExtResource("3_pspy2")
+volume_db = -5.0
+bus = &"SFX"
