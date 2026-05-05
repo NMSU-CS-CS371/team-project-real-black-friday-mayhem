@@ -15,7 +15,24 @@
 [ext_resource type="AudioStream" uid="uid://3qld7io8v028" path="res://Assets/SFX/Voice Lines/NPC/Male/Collision/scream-2.ogg" id="13_6m7nr"]
 [ext_resource type="AudioStream" uid="uid://be6r6p7sk5fci" path="res://Assets/SFX/Voice Lines/NPC/Male/Collision/scream-3.ogg" id="14_ywcbh"]
 [ext_resource type="AudioStream" uid="uid://dooxpesiwhkhp" path="res://Assets/SFX/Voice Lines/NPC/Male/Collision/scream-4.ogg" id="15_bldck"]
+[ext_resource type="AudioStream" uid="uid://drjbrm4tu6w48" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/i-peed-in-the-fountain-1.ogg" id="16_hq1fa"]
 [ext_resource type="AudioStream" uid="uid://ck0myj7efgj8g" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/george-foreman-grill-1.ogg" id="16_mc8fj"]
+[ext_resource type="AudioStream" uid="uid://bd7gtu5h20bcu" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/that-guy-over-there-stole-my-palcomon-cards-2.ogg" id="18_eofwx"]
+[ext_resource type="AudioStream" uid="uid://bjgpqqfp1w5q1" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/that-karen-and-her-little-ankle-biters-2.ogg" id="19_v5mqp"]
+[ext_resource type="AudioStream" uid="uid://cgmj70ymqdt7n" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/the-poor-children-2.ogg" id="20_tcw0l"]
+[ext_resource type="AudioStream" uid="uid://beg36qo1yb6j5" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/they-took-all-of-the-mayo-2.ogg" id="21_ssrpf"]
+[ext_resource type="AudioStream" uid="uid://cmow66lkcujjb" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/what-a-good-time-to-be-living-1.ogg" id="22_mcnrs"]
+[ext_resource type="AudioStream" uid="uid://c0f6h02d4a2qd" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/wheres-the-bathroom-2.ogg" id="23_rvr1d"]
+[ext_resource type="AudioStream" uid="uid://cuyrohax5d01" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/whats-that-over-there-1.ogg" id="24_v0784"]
+[ext_resource type="AudioStream" uid="uid://dpvktg8n8edm4" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/wheres-the-tv-stuff-at-1.ogg" id="25_lu1jh"]
+[ext_resource type="AudioStream" uid="uid://dr6f2uc0fvksq" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/i-sold-my-car-to-be-here-2.ogg" id="26_pangt"]
+[ext_resource type="AudioStream" uid="uid://coyjnnqet3wky" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/i-think-thats-on-sale-2.ogg" id="27_1r2oq"]
+[ext_resource type="AudioStream" uid="uid://bl7vyj8eucux2" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/im-calling-you-larry-2.ogg" id="28_vscu3"]
+[ext_resource type="AudioStream" uid="uid://cq2boqlbh85vi" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/its-a-good-thing-the-economy-aw-2.ogg" id="29_yr0si"]
+[ext_resource type="AudioStream" uid="uid://bcg4jfp1d7wjm" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/my-credit-has-been-crushed-1.ogg" id="30_1kybt"]
+[ext_resource type="AudioStream" uid="uid://cqhvtbaeaguo3" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/my-wife-telling-me-to-get-toilet-paper-2.ogg" id="31_wlihl"]
+[ext_resource type="AudioStream" uid="uid://ds08w6mbs3t3f" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/out-of-my-way-2.ogg" id="32_hgkh6"]
+[ext_resource type="AudioStream" uid="uid://bfq153yexofqk" path="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/somethings-up-with-that-grandma-1.ogg" id="33_rbryy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h1ryf"]
 animations = [{
@@ -44,9 +61,8 @@ albedo_texture = SubResource("ViewportTexture_h1ryf")
 [sub_resource type="ViewportTexture" id="ViewportTexture_g6unj"]
 viewport_path = NodePath("AnimatedSprite3D/Sprite3D/SubViewport")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g6unj"]
-radius = 0.49902344
-height = 3.6728516
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eofwx"]
+height = 3.1489258
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h1ryf"]
 
@@ -66,8 +82,27 @@ stream_10/stream = ExtResource("6_y54i2")
 stream_11/stream = ExtResource("7_mc8fj")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_letlb"]
-streams_count = 2
-stream_0/stream = ExtResource("16_mc8fj")
+streams_count = 18
+stream_0/stream = ExtResource("16_hq1fa")
+stream_1/stream = ExtResource("16_mc8fj")
+stream_2/stream = ExtResource("26_pangt")
+stream_3/stream = ExtResource("27_1r2oq")
+stream_4/stream = ExtResource("28_vscu3")
+stream_5/stream = ExtResource("29_yr0si")
+stream_6/stream = ExtResource("30_1kybt")
+stream_7/stream = ExtResource("31_wlihl")
+stream_8/stream = ExtResource("32_hgkh6")
+stream_9/stream = ExtResource("33_rbryy")
+stream_10/stream = ExtResource("18_eofwx")
+stream_11/stream = ExtResource("19_v5mqp")
+stream_12/stream = ExtResource("20_tcw0l")
+stream_13/stream = ExtResource("21_ssrpf")
+stream_14/stream = ExtResource("22_mcnrs")
+stream_15/stream = ExtResource("23_rvr1d")
+stream_16/stream = ExtResource("24_v0784")
+stream_17/stream = ExtResource("25_lu1jh")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hq1fa"]
 
 [node name="Npc" type="CharacterBody3D" unique_id=1570048502 node_paths=PackedStringArray("sprit")]
 script = ExtResource("1_g6unj")
@@ -91,8 +126,8 @@ sprite_frames = SubResource("SpriteFrames_h1ryf")
 offset = Vector2(255, 258.57)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_g6unj")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08081055, 0)
+shape = SubResource("CapsuleShape3D_eofwx")
 
 [node name="Detection" type="Area3D" parent="." unique_id=1757549104]
 
@@ -105,7 +140,7 @@ stream = SubResource("AudioStreamRandomizer_h1ryf")
 volume_db = 16.0
 
 [node name="Detection2" type="Area3D" parent="." unique_id=550252042]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Detection2" unique_id=1948182543]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -113,7 +148,12 @@ shape = SubResource("CapsuleShape3D_h1ryf")
 
 [node name="Lines2" type="AudioStreamPlayer" parent="." unique_id=1919135787]
 stream = SubResource("AudioStreamRandomizer_letlb")
-volume_db = 16.0
+
+[node name="HitboxArea3D" type="Area3D" parent="." unique_id=254006634]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitboxArea3D" unique_id=782294107]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_hq1fa")
 
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]

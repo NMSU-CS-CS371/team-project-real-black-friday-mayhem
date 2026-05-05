@@ -37,8 +37,10 @@ func _ready():
 
 	if has_node("HitboxArea3D"):
 		$HitboxArea3D.body_entered.connect(_on_hitbox_body_entered)
+		$HitboxArea3D.body_shape_entered.connect(_on_hitbox_body_shape_entered)
 
 	pick_new_target()
+
 
 func _physics_process(delta):
 	if knocked_down:
@@ -79,7 +81,6 @@ func _physics_process(delta):
 
 	apply_movement_and_animation(delta)
 
-	# Collision check: player knocks NPC down, walls/obstacles make NPC pick a new target.
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var body = collision.get_collider()
@@ -96,18 +97,34 @@ func _physics_process(delta):
 		wait_time = randf_range(0.5, 2.0)
 		pick_new_target()
 
-func _on_hitbox_body_entered(body):
+
+func try_knock_down(body: Node3D) -> void:
 	if knocked_down:
 		return
 
 	if is_player(body):
 		knock_down()
 
+
+func _on_hitbox_body_entered(body: Node3D) -> void:
+	try_knock_down(body)
+
+
+func _on_hitbox_body_shape_entered(
+	body_rid: RID,
+	body: Node3D,
+	body_shape_index: int,
+	local_shape_index: int
+) -> void:
+	try_knock_down(body)
+
+
 func is_player(body) -> bool:
 	if body == null:
 		return false
 
-	return body.name == "Player" or body.is_in_group("player")
+	return body.name == "Player" or body.is_in_group("player") or body.is_in_group("Player")
+
 
 func knock_down():
 	print("NPC knocked down")
@@ -121,6 +138,7 @@ func knock_down():
 
 	if has_node("CollisionShape3D"):
 		$CollisionShape3D.disabled = true
+
 
 func get_back_up():
 	print("NPC got back up")
@@ -141,6 +159,7 @@ func get_back_up():
 
 	pick_new_target()
 
+
 func pick_new_target():
 	var offset_x = randf_range(-move_range, move_range)
 	var offset_z = randf_range(-move_range, move_range)
@@ -150,22 +169,31 @@ func pick_new_target():
 		global_position.y,
 		home_position.z + offset_z
 	)
+
+
 func _on_detection_body_entered(body: Node3D) -> void:
-	if body.is_in_group("player"):
-		$Lines.volume_db = 8
+	if is_player(body):
+		$Lines.volume_db = 6
+
+		if $Lines2.playing:
+			$Lines2.stop()
+
 		if not $Lines.playing:
 			$Lines.play()
 
 
 func _on_detection_body_exited(body: Node3D) -> void:
-	if body.is_in_group("player"):
+	if is_player(body):
 		if $Lines.playing:
-			$Lines.volume_db = 5
+			$Lines.volume_db = 2
 
 
 func _on_detection_2_body_entered(body: Node3D) -> void:
 	if is_player(body):
-		$Lines2.volume_db = 10
+		if $Lines.playing:
+			return
+
+		$Lines2.volume_db = 4
 		if not $Lines2.playing:
 			$Lines2.play()
 
@@ -173,4 +201,4 @@ func _on_detection_2_body_entered(body: Node3D) -> void:
 func _on_detection_2_body_exited(body: Node3D) -> void:
 	if is_player(body):
 		if $Lines2.playing:
-			$Lines2.volume_db = 5
+			$Lines2.volume_db = 1

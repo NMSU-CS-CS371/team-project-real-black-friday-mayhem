@@ -822,51 +822,51 @@ bus = &"Music"
 
 [node name="Insults" type="AudioStreamPlayer" parent="." unique_id=1217681991]
 stream = SubResource("AudioStreamRandomizer_8g0hk")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="Win" type="AudioStreamPlayer" parent="." unique_id=1566605202]
 stream = SubResource("AudioStreamRandomizer_rgly6")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="Lose" type="AudioStreamPlayer" parent="." unique_id=602103215]
 stream = SubResource("AudioStreamRandomizer_8h7pb")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="PickCrow" type="AudioStreamPlayer" parent="." unique_id=493685138]
 stream = SubResource("AudioStreamRandomizer_if1uj")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="PickCart" type="AudioStreamPlayer" parent="." unique_id=1689240993]
 stream = SubResource("AudioStreamRandomizer_qww76")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="Defend" type="AudioStreamPlayer" parent="." unique_id=575137286]
 stream = SubResource("AudioStreamRandomizer_y50ci")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="Run" type="AudioStreamPlayer" parent="." unique_id=393726476]
 stream = SubResource("AudioStreamRandomizer_20s1q")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="CrowInsult" type="AudioStreamPlayer" parent="." unique_id=1939677032]
 stream = SubResource("AudioStreamRandomizer_l0gox")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="CartInsult" type="AudioStreamPlayer" parent="." unique_id=1251193256]
 stream = SubResource("AudioStreamRandomizer_5gnpb")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="Attack" type="AudioStreamPlayer" parent="." unique_id=786136423]
 stream = SubResource("AudioStreamRandomizer_nkt63")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="GO" type="AudioStreamPlayer" parent="." unique_id=1861535154]
 stream = SubResource("AudioStreamRandomizer_3vac6")
-volume_db = 20.0
+volume_db = 15.0
 
 [node name="Start" type="AudioStreamPlayer" parent="." unique_id=1532447733]
 stream = SubResource("AudioStreamRandomizer_f0mp3")
-volume_db = 20.0
+volume_db = 15.0
 
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Defend" to="." method="_on_defend_pressed"]
