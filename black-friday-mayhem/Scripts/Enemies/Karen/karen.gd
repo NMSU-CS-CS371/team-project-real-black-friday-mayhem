@@ -89,15 +89,14 @@ func _on_minigame_finished(result):
 	playing_game = false
 	AudioManager.resume_main_music()
 
-
 func _on_detection_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		$Lines.volume_db = 16
+		$Lines.volume_db = 10
 		if not $Lines.playing:
 			$Lines.play()
-
 
 func _on_detection_body_exited(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		if $Lines.playing:
 			$Lines.volume_db = -10
+			

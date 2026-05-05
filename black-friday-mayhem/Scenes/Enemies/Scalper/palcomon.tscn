@@ -69,6 +69,7 @@
 [ext_resource type="AudioStream" uid="uid://bkx3myo3f4rvu" path="res://Assets/SFX/SoundEffects/Scalper/button-click.ogg" id="67_0opgk"]
 [ext_resource type="AudioStream" uid="uid://dv3s2pyr8e2j0" path="res://Assets/SFX/SoundEffects/Scalper/textboxClose.ogg" id="68_ab4vy"]
 [ext_resource type="AudioStream" uid="uid://b1eobfshehcib" path="res://Assets/SFX/SoundEffects/Scalper/cartInsult.ogg" id="69_xps8k"]
+[ext_resource type="AudioStream" uid="uid://m5xbi7is4hol" path="res://Assets/SFX/SoundEffects/Scalper/scalper-damage.ogg" id="70_0opgk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hmm1d"]
 shader = ExtResource("2_1xjt3")
@@ -540,8 +541,8 @@ vertical_alignment = 2
 [node name="PlayerContatainer" type="VBoxContainer" parent="." unique_id=916769989]
 offset_left = 33.0
 offset_top = 189.0
-offset_right = 433.00357
-offset_bottom = 623.0001
+offset_right = 433.00433
+offset_bottom = 623.00006
 rotation = 0.7853982
 alignment = 1
 metadata/_edit_group_ = true
@@ -923,6 +924,11 @@ bus = &"SFX"
 
 [node name="cartInsult" type="AudioStreamPlayer" parent="SoundEffects" unique_id=2093021842]
 stream = ExtResource("69_xps8k")
+bus = &"SFX"
+
+[node name="damage" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1981495593]
+stream = ExtResource("70_0opgk")
+volume_db = -5.0
 bus = &"SFX"
 
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]

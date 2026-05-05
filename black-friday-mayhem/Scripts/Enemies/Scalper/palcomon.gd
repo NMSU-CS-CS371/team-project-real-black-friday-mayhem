@@ -124,17 +124,22 @@ func attack(text, damage, type) :
 	match type :
 		"swing":
 			$AnimationPlayer.play("player_attack")
-			$SoundEffects/crowHit.play()
+			
 			if $VoiceLines/GO.is_playing or $VoiceLines/Insults.is_playing :
 				$VoiceLines/GO.stop()
 				$VoiceLines/Insults.stop()
+			await get_tree().create_timer(0.4).timeout
+			$SoundEffects/crowHit.play()
+			$SoundEffects/damage.play()
 			$VoiceLines/Attack.play()
 		"bash":
 			$AnimationPlayer.play("player_bash")
-			$SoundEffects/cartHit.play()
 			if $VoiceLines/GO.is_playing or $VoiceLines/Insults.is_playing :
 				$VoiceLines/GO.stop()
 				$VoiceLines/Insults.stop()
+			await get_tree().create_timer(0.4).timeout
+			$SoundEffects/cartHit.play()
+			$SoundEffects/damage.play()
 			$VoiceLines/Attack.play()
 		"insult":
 			$AnimationPlayer.play("player_insult")
@@ -142,11 +147,16 @@ func attack(text, damage, type) :
 				if $VoiceLines/GO.is_playing or $VoiceLines/Insults.is_playing :
 					$VoiceLines/GO.stop()
 					$VoiceLines/Insults.stop()
+				$SoundEffects/cartInsult.play()
+				await get_tree().create_timer(0.5).timeout
+				$SoundEffects/damage.play()
 				$VoiceLines/CartInsult.play()
 			else :
 				if $VoiceLines/GO.is_playing or $VoiceLines/Insults.is_playing :
 					$VoiceLines/GO.stop()
 					$VoiceLines/Insults.stop()
+				await get_tree().create_timer(0.4).timeout
+				$SoundEffects/damage.play()
 				$VoiceLines/CrowInsult.play()
 	await $AnimationPlayer.animation_finished
 	$PlayerContatainer/PlayerHealth.show()
@@ -188,16 +198,28 @@ func enemy_attack(text, damage) :
 			$VoiceLines/CartInsult.stop()
 		#if else loop for defending voice lines
 		if defending_count <= 1 :
+			if $VoiceLines/Defend6.is_playing :
+				$VoiceLines/Defend6.stop()
 			$VoiceLines/Defend.play()
 		elif defending_count <= 2 :
+			if $VoiceLines/Defend.is_playing :
+				$VoiceLines/Defend.stop()
 			$VoiceLines/Defend2.play()
 		elif defending_count <= 3 :
+			if $VoiceLines/Defend2.is_playing :
+				$VoiceLines/Defend2.stop()
 			$VoiceLines/Defend3.play()
 		elif defending_count <= 4 :
+			if $VoiceLines/Defend3.is_playing :
+				$VoiceLines/Defend3.stop()
 			$VoiceLines/Defend4.play()
 		elif defending_count <= 5 :
+			if $VoiceLines/Defend4.is_playing :
+				$VoiceLines/Defend4.stop()
 			$VoiceLines/Defend5.play()
 		else :
+			if $VoiceLines/Defend5.is_playing :
+				$VoiceLines/Defend5.stop()
 			$VoiceLines/Defend6.play()
 			defending_count = 0
 		await $AnimationPlayer.animation_finished
@@ -210,6 +232,7 @@ func enemy_attack(text, damage) :
 		player_health = max(0, player_health-damage)
 		set_health($PlayerContatainer/PlayerHealth, player_health, player_max)
 		$EnemyContatainer/Enemy.texture = attackTexture
+		$SoundEffects/damage.play()
 		$AnimationPlayer.play("player_damaged")
 		if enemy_attack_count == 2 :
 			if $VoiceLines/Attack.is_playing or $VoiceLines/CrowInsult.is_playing or $VoiceLines/CartInsult :
@@ -248,9 +271,10 @@ func enemy_defeated() :
 	player.inventory.insert(item)
 	player.inventory.beatScalper = true
 	player.controlAllowed = true
-	$ButtonPanel/MarginContainer/HBoxContainer.hide()
+	$ButtonPanel.hide()
 	await textbox_closed
 	await get_tree().create_timer(0.25).timeout
+	await $VoiceLines/Win.finished
 	# Emit the win signal 
 	emit_signal("game_finished", "win")
 	invContainer.visible = true
@@ -263,9 +287,10 @@ func player_defeated() :
 		$VoiceLines/GO.stop()
 		$VoiceLines/Insults.stop()
 	$VoiceLines/Lose.play()
-	$ButtonPanel/MarginContainer/HBoxContainer.hide()
+	$ButtonPanel.hide()
 	await textbox_closed
 	await get_tree().create_timer(0.25).timeout
+	await $VoiceLines/Lose.finished
 	emit_signal("game_finished", "lose")
 	invContainer.visible = true
 	player.controlAllowed = true
@@ -277,6 +302,7 @@ func player_defeated() :
 func _on_run_pressed() -> void:
 	if cant_hit_buttons :
 		return
+	$ButtonPanel.hide()
 	$SoundEffects/button.play()
 	if $VoiceLines/PickCart.is_playing or $VoiceLines/PickCrow.is_playing :
 		$VoiceLines/PickCart.stop()
@@ -286,6 +312,7 @@ func _on_run_pressed() -> void:
 	$ButtonPanel/MarginContainer/HBoxContainer.hide()
 	await textbox_closed
 	await get_tree().create_timer(0.25).timeout
+	await $VoiceLines/Run.finished
 	emit_signal("game_finished", "run")
 	invContainer.visible = true
 	player.controlAllowed = true
