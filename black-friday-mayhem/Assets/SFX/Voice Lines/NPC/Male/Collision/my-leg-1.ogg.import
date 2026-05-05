@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgnbvgpsyck1d"
+path="res://.godot/imported/my-leg-1.ogg-ca6bb7bf39450eb048b600b9ea2262dc.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Collision/my-leg-1.ogg"
+dest_files=["res://.godot/imported/my-leg-1.ogg-ca6bb7bf39450eb048b600b9ea2262dc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

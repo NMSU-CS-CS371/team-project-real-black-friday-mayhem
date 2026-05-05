@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dr6f2uc0fvksq"
+path="res://.godot/imported/i-sold-my-car-to-be-here-2.ogg-2510fc8b8af602bf8c508d842d300008.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/i-sold-my-car-to-be-here-2.ogg"
+dest_files=["res://.godot/imported/i-sold-my-car-to-be-here-2.ogg-2510fc8b8af602bf8c508d842d300008.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

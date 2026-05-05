@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://phn7msl3ddrs"
+path="res://.godot/imported/scream-1.ogg-f369e1c924ed6b3e17daf25999fc3892.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Female/Collision/scream-1.ogg"
+dest_files=["res://.godot/imported/scream-1.ogg-f369e1c924ed6b3e17daf25999fc3892.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cuyrohax5d01"
+path="res://.godot/imported/whats-that-over-there-1.ogg-7b8f69457c84167665ed470952ea5d2e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/whats-that-over-there-1.ogg"
+dest_files=["res://.godot/imported/whats-that-over-there-1.ogg-7b8f69457c84167665ed470952ea5d2e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -3,6 +3,34 @@
 [ext_resource type="Script" uid="uid://ckw66imoabpip" path="res://Scripts/npc.gd" id="1_lqs13"]
 [ext_resource type="Texture2D" uid="uid://duk7j7171he2q" path="res://Assets/Sprites/Girl_NPC1.png" id="2_lqs13"]
 [ext_resource type="Texture2D" uid="uid://eijliwo48dnh" path="res://Assets/Sprites/Girl_NPC2.png" id="3_74ajd"]
+[ext_resource type="AudioStream" uid="uid://bma6t8gnbwg0a" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/i-have-been-crushed-1.ogg" id="4_6wr7h"]
+[ext_resource type="AudioStream" uid="uid://btry44dg101bj" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/im-walking-here-1.ogg" id="5_huiwv"]
+[ext_resource type="AudioStream" uid="uid://bqdo80yykqix5" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/my-leg-1.ogg" id="6_kkp7g"]
+[ext_resource type="AudioStream" uid="uid://dyb314jh2ols5" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/okay-buddy-1.ogg" id="7_3wt0m"]
+[ext_resource type="AudioStream" uid="uid://phn7msl3ddrs" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/scream-1.ogg" id="8_xvntd"]
+[ext_resource type="AudioStream" uid="uid://kd706kdp8nqw" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/scream-2.ogg" id="9_xe5bl"]
+[ext_resource type="AudioStream" uid="uid://bbfmqe5c6555k" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/scream-4.ogg" id="10_1t3un"]
+[ext_resource type="AudioStream" uid="uid://cm1c14r7ryudi" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/scream-3.ogg" id="11_056sq"]
+[ext_resource type="AudioStream" uid="uid://dllo6wmr245aq" path="res://Assets/SFX/Voice Lines/NPC/Female/Collision/that-frickin-hurts-1.ogg" id="12_sbu2v"]
+[ext_resource type="AudioStream" uid="uid://y3kr8cy4h0ug" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/george-foreman-grill-1.ogg" id="13_ltf1j"]
+[ext_resource type="AudioStream" uid="uid://biv4iud8sxver" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/i-hate-all-of-these-xxxx-1.ogg" id="14_3r12f"]
+[ext_resource type="AudioStream" uid="uid://b25bvx15xq8w5" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/somethings-up-with-that-grandma-1.ogg" id="15_v8kxp"]
+[ext_resource type="AudioStream" uid="uid://7nebhl223x3s" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/that-guy-over-there-stole-my-palcomon-cards-1.ogg" id="16_qqbe7"]
+[ext_resource type="AudioStream" uid="uid://7ugaklrjxxdp" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/that-karen-and-her-little-ankle-biters-1.ogg" id="17_2qwuo"]
+[ext_resource type="AudioStream" uid="uid://dv81epx2srtoh" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/the-poor-children-1.ogg" id="18_c7dsp"]
+[ext_resource type="AudioStream" uid="uid://de1p38ekmfstg" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/they-took-all-of-the-mayo-1.ogg" id="19_7fc6q"]
+[ext_resource type="AudioStream" uid="uid://nj8xpdhti8nq" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/what-a-good-time-to-be-living-1.ogg" id="20_4m26q"]
+[ext_resource type="AudioStream" uid="uid://bqa1ro7nvjf55" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/whats-that-over-there-1.ogg" id="21_uv5hw"]
+[ext_resource type="AudioStream" uid="uid://f8qvopuem35n" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/wheres-the-bathroom-1.ogg" id="22_qxirg"]
+[ext_resource type="AudioStream" uid="uid://cypajjrx74ww8" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/wheres-the-tv-stuff-at-1.ogg" id="23_8325v"]
+[ext_resource type="AudioStream" uid="uid://fna36ml10seo" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/i-peed-in-the-fountain-1.ogg" id="24_65cr6"]
+[ext_resource type="AudioStream" uid="uid://wvuu1jtlknb6" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/i-sold-my-car-to-be-here-1.ogg" id="25_74xct"]
+[ext_resource type="AudioStream" uid="uid://mqqaqqet7ygk" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/i-think-thats-on-sale-1.ogg" id="26_iet3q"]
+[ext_resource type="AudioStream" uid="uid://db1csorc2c24b" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/im-calling-you-larry-1.ogg" id="27_x44jb"]
+[ext_resource type="AudioStream" uid="uid://bfwaxvi42bhjh" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/its-a-good-thing-the-economy-aw-1.ogg" id="28_bqk4o"]
+[ext_resource type="AudioStream" uid="uid://b3qf16b01cn1w" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/my-credit-has-been-crushed-1.ogg" id="29_l8gwc"]
+[ext_resource type="AudioStream" uid="uid://dn3xs5qb7o731" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/my-husband-telling-me-to-get-toilet-paper-1.ogg" id="30_8wbsb"]
+[ext_resource type="AudioStream" uid="uid://xtrd4aa07yke" path="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/out-of-my-way-1.ogg" id="31_3n0qo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h1ryf"]
 animations = [{
@@ -37,6 +65,42 @@ height = 3.6728516
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lqs13"]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ylssn"]
+streams_count = 9
+stream_0/stream = ExtResource("4_6wr7h")
+stream_1/stream = ExtResource("5_huiwv")
+stream_2/stream = ExtResource("6_kkp7g")
+stream_3/stream = ExtResource("7_3wt0m")
+stream_4/stream = ExtResource("8_xvntd")
+stream_5/stream = ExtResource("9_xe5bl")
+stream_6/stream = ExtResource("10_1t3un")
+stream_7/stream = ExtResource("11_056sq")
+stream_8/stream = ExtResource("12_sbu2v")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qifcm"]
+streams_count = 19
+stream_0/stream = ExtResource("13_ltf1j")
+stream_1/stream = ExtResource("14_3r12f")
+stream_2/stream = ExtResource("24_65cr6")
+stream_3/stream = ExtResource("25_74xct")
+stream_4/stream = ExtResource("26_iet3q")
+stream_5/stream = ExtResource("27_x44jb")
+stream_6/stream = ExtResource("28_bqk4o")
+stream_7/stream = ExtResource("29_l8gwc")
+stream_8/stream = ExtResource("30_8wbsb")
+stream_9/stream = ExtResource("31_3n0qo")
+stream_10/stream = ExtResource("15_v8kxp")
+stream_11/stream = ExtResource("16_qqbe7")
+stream_12/stream = ExtResource("17_2qwuo")
+stream_13/stream = ExtResource("18_c7dsp")
+stream_14/stream = ExtResource("19_7fc6q")
+stream_15/stream = ExtResource("20_4m26q")
+stream_16/stream = ExtResource("21_uv5hw")
+stream_17/stream = ExtResource("22_qxirg")
+stream_18/stream = ExtResource("23_8325v")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ltf1j"]
+
 [node name="Npc" type="CharacterBody3D" unique_id=1570048502 node_paths=PackedStringArray("sprit")]
 script = ExtResource("1_lqs13")
 sprit = NodePath("AnimatedSprite3D/Sprite3D")
@@ -59,8 +123,33 @@ offset = Vector2(256, 255)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=752736541]
 shape = SubResource("CapsuleShape3D_g6unj")
 
-[node name="HitboxArea3D" type="Area3D" parent="." unique_id=1753731018]
+[node name="Detection" type="Area3D" parent="." unique_id=1753731018]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HitboxArea3D" unique_id=330719646]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detection" unique_id=330719646]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_lqs13")
+
+[node name="Lines" type="AudioStreamPlayer" parent="." unique_id=528360321]
+stream = SubResource("AudioStreamRandomizer_ylssn")
+volume_db = 16.0
+
+[node name="Detection2" type="Area3D" parent="." unique_id=2139898842]
+transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Detection2" unique_id=738177093]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_lqs13")
+
+[node name="Lines2" type="AudioStreamPlayer" parent="." unique_id=452651502]
+stream = SubResource("AudioStreamRandomizer_qifcm")
+
+[node name="HitboxArea3D" type="Area3D" parent="." unique_id=1540170922]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitboxArea3D" unique_id=326328534]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_ltf1j")
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
+[connection signal="body_entered" from="Detection2" to="." method="_on_detection_2_body_entered"]
+[connection signal="body_exited" from="Detection2" to="." method="_on_detection_2_body_exited"]

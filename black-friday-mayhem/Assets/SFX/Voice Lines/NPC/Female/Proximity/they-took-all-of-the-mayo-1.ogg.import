@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://de1p38ekmfstg"
+path="res://.godot/imported/they-took-all-of-the-mayo-1.ogg-437d7ba2c5c974d17254ee54c477969b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/they-took-all-of-the-mayo-1.ogg"
+dest_files=["res://.godot/imported/they-took-all-of-the-mayo-1.ogg-437d7ba2c5c974d17254ee54c477969b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

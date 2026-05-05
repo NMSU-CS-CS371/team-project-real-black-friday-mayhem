@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://xtrd4aa07yke"
+path="res://.godot/imported/out-of-my-way-1.ogg-4eed99b7e560144c549a43cef009402a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Female/Proximity/out-of-my-way-1.ogg"
+dest_files=["res://.godot/imported/out-of-my-way-1.ogg-4eed99b7e560144c549a43cef009402a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

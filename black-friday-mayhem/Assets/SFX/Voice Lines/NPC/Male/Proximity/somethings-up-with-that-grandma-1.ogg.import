@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfq153yexofqk"
+path="res://.godot/imported/somethings-up-with-that-grandma-1.ogg-eca1e791f79df6ed9b635b435eb45c80.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/NPC/Male/Proximity/somethings-up-with-that-grandma-1.ogg"
+dest_files=["res://.godot/imported/somethings-up-with-that-grandma-1.ogg-eca1e791f79df6ed9b635b435eb45c80.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
