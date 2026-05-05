@@ -274,7 +274,8 @@ func enemy_defeated() :
 	$ButtonPanel.hide()
 	await textbox_closed
 	await get_tree().create_timer(0.25).timeout
-	await $VoiceLines/Win.finished
+	if $VoiceLines/Win.playing :
+		await $VoiceLines/Win.finished
 	# Emit the win signal 
 	emit_signal("game_finished", "win")
 	invContainer.visible = true
@@ -290,7 +291,8 @@ func player_defeated() :
 	$ButtonPanel.hide()
 	await textbox_closed
 	await get_tree().create_timer(0.25).timeout
-	await $VoiceLines/Lose.finished
+	if $VoiceLines/Lose.playing :
+		await $VoiceLines/Lose.finished
 	emit_signal("game_finished", "lose")
 	invContainer.visible = true
 	player.controlAllowed = true
@@ -312,7 +314,8 @@ func _on_run_pressed() -> void:
 	$ButtonPanel/MarginContainer/HBoxContainer.hide()
 	await textbox_closed
 	await get_tree().create_timer(0.25).timeout
-	await $VoiceLines/Run.finished
+	if $VoiceLines/Run.playing :
+		await $VoiceLines/Run.finished
 	emit_signal("game_finished", "run")
 	invContainer.visible = true
 	player.controlAllowed = true
