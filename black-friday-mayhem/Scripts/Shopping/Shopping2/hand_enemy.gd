@@ -28,6 +28,9 @@ var target_item : Node2D = null
 var move_speed: = 250
 var elapsed_time := 0.0
 
+# stop the hand when its been clicked
+var slapped: bool = false
+
 #Variables for Spawning Hands
 var base_position: Vector2
 var spawn_side: int
@@ -50,6 +53,9 @@ func _ready() -> void:
 
 #function that gets called every frame
 func _process(delta):
+	if slapped:
+		return
+		
 	# if the minigame is over, delete
 	if not get_parent().get_parent().is_running():
 		queue_free()
@@ -111,6 +117,11 @@ func _on_click_area_input(_viewport, event, _shape_idx):
 	#if the mouse clicks on hand delete
 	if event is InputEventMouseButton and event.pressed:
 		#print("Hand clicked!")
+		$slap.pitch_scale = randf_range(0.9,1.1)
+		$slap.play()
+		slapped = true
+		visible = false
+		await $slap.finished
 		queue_free()#delete hand
 		
 #for finding an item to go for 
@@ -145,6 +156,8 @@ func steal_item():
 		#delete item
 		$grab.play()
 		target_item.queue_free()
+		slapped = true
+		visible = false
 		await $grab.finished
 	#delete hand
 	queue_free()
