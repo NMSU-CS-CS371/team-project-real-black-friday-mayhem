@@ -4,6 +4,10 @@ extends AnimatedSprite2D
 @export var player : Node2D
 @export var MAX_HEALTH : int
 @export var laser_health : int
+# this is the value if the player get's grandma to this health 
+# before the first punch
+# (IE, make the game even harder if they're too good
+@export var skill_check_health : int = 160
 var health = 100
 @export var animationPlayer : AnimationPlayer
 @export var healthBar : ProgressBar
@@ -11,7 +15,6 @@ var health = 100
 
 var willGoForKill : bool = true
 var murderObliteration : bool = false
-var laserPhaseTransition : bool = false
 
 @export var damage : int = 99
 var isLeft = false
@@ -23,6 +26,7 @@ func _ready() -> void:
 	healthBar.max_value = MAX_HEALTH
 	healthBar.value = health
 	healthText.text = "HP %d/%d" % [health, MAX_HEALTH]
+	animationPlayer.play("startup")
 	pass
 
 func apply_force():
@@ -39,19 +43,24 @@ func take_damage(damage_taken : int):
 	healthText.text = "HP %d/%d" % [health, MAX_HEALTH]
 	print("grandma health: ", health)
 	# enable laser beam eyes
-	if !laserPhaseTransition and health <= laser_health:
+	if !murderObliteration and health <= laser_health:
 		murderObliteration = true
 		animationPlayer.play("ANGER")
-		laserPhaseTransition = true
 		pass
 	if health <= 0:
+		healthText.text = "HP 0/%d" % [MAX_HEALTH]
+		stopDisrespectingMyGangsYo()
+		player.game_end = true
 		print("GAME WIN!")
-		player.player.playing_game = false
-		player.player.controlAllowed = true
-		AudioManager.resume_main_music()
-		ROOT.emit_gamestate("win")
-		ROOT.queue_free()
+		animationPlayer.play("granniesdead")
 	pass
+
+func grannydied():
+	player.player.playing_game = false
+	player.player.controlAllowed = true
+	AudioManager.resume_main_music()
+	ROOT.emit_gamestate("win")
+	ROOT.queue_free()
 
 func stopDisrespectingMyGangsYo():
 	#print("yup")
@@ -63,13 +72,16 @@ func decimation():
 	pass
 
 func _on_timer_timeout() -> void:
-	#if !skillCheck:
-		#if health < 160:
-			#player.
+	if !skillCheck:
+		if health < skill_check_health:
+			murderObliteration = true
+			animationPlayer.play("ANGER")
+		skillCheck = true
 	if willGoForKill:
-		$Timer.wait_time = randf_range(1.5, 3.5)
+		var time = randf_range(1.5, 3.5)
 		if murderObliteration:
-				$Timer.wait_time = randf_range(1, 2)
+				time = randf_range(1, 1.85)
+		$Timer.wait_time = time
 		chooseAttackStyle()
 		#animationPlayer.play("punch_start")
 	pass # Replace with function body.

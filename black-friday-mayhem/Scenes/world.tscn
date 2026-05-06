@@ -302,7 +302,6 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.39, 1.7789459, 10.941)
 
 [node name="Granny" parent="." unique_id=96948668 instance=ExtResource("5_axeuq")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.879, 1.9248326, -69.988)
-visible = false
 
 [node name="Karen" parent="." unique_id=1890375671 instance=ExtResource("6_pt3ps")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9, 1.7206182, -19.925)
@@ -355,9 +354,11 @@ canvas_cull_mask = 4294967263
 size = Vector2i(800, 600)
 render_target_update_mode = 4
 
-[node name="MainPlayerSHOPPING" parent="Main Camera/SubViewportContainer/Player Viewport" unique_id=1293440747 instance=ExtResource("2_5a7ea")]
+[node name="MainPlayerSHOPPING" parent="Main Camera/SubViewportContainer/Player Viewport" unique_id=1293440747 node_paths=PackedStringArray("objectTracking") instance=ExtResource("2_5a7ea")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3706998, 90)
 collision_layer = 3
+useArrow = true
+objectTracking = NodePath("../../../../Granny")
 
 [node name="Camera3D" type="Camera3D" parent="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" unique_id=1322557545]
 transform = Transform3D(1, 0, 0, 0, 0.9694453, 0.24530737, 0, -0.24530737, 0.9694453, 0, 1.1628699, 1.6341922)
@@ -1018,7 +1019,6 @@ mesh = SubResource("QuadMesh_no8kt")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs1/Sale Sign29" unique_id=1478454248]
 transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 0, 0, 1, 5.722046e-06, 0, 50.00044)
-visible = false
 mesh = SubResource("QuadMesh_jwdyn")
 
 [node name="Sale Sign30" type="Node3D" parent="Objects/Sale Signs1" unique_id=535213810]
@@ -1295,7 +1295,6 @@ mesh = SubResource("PlaneMesh_pt3ps")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign22" unique_id=1555527329]
 transform = Transform3D(1, -2.842171e-14, 8.4703295e-22, 0, 1, -4.1759346e-23, 8.4703295e-22, -2.842171e-14, 1, 2.2888184e-05, 50.00044, -4.2915344e-06)
-visible = false
 mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign23" type="Node3D" parent="Objects/Sale Signs2" unique_id=578348527]
@@ -1320,7 +1319,6 @@ mesh = SubResource("PlaneMesh_pt3ps")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs2/blackfridaysign24" unique_id=42834923]
 transform = Transform3D(1, -4.973799e-14, 1.4823077e-21, 0, 1, -4.1759333e-23, 1.4823077e-21, -4.973799e-14, 1, -0.00010681152, 50.00009, 4.832012)
-visible = false
 mesh = SubResource("PlaneMesh_t6yt7")
 
 [node name="blackfridaysign25" type="Node3D" parent="Objects/Sale Signs2" unique_id=632780274]

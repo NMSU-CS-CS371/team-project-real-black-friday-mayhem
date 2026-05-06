@@ -12,8 +12,10 @@ var Palcomon = preload("res://Scenes/Enemies/Scalper/palcomon.tscn") #minigame
 var is_defeated = false
 var playing_game = false
 
+var mask
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	mask = $AnimatedSprite3D/Sprite3D/SubViewport/AnimatedSprite2D
 	center = global_position  # starting point = center of circle
 
 func _physics_process(delta: float) -> void:
@@ -59,9 +61,9 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))
 	
-func play_animation(name : String):
-	sprite.play(name)
-	$AnimatedSprite3D/Sprite3D/SubViewport/AnimatedSprite2D.play(name)
+func play_animation(aname : String):
+	sprite.play(aname)
+	mask.play(aname)
 	pass
 #function to recieve game results 
 func _on_minigame_finished(result):

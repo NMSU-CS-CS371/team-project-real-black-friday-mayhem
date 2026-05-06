@@ -164,6 +164,8 @@ metadata/_edit_group_ = true
 layers = 32
 sprite_frames = SubResource("SpriteFrames_tkbos")
 animation = &"forward"
+frame = 1
+frame_progress = 0.6792945
 
 [node name="Sprite3D" type="Sprite3D" parent="AnimatedSprite3D" index="0" unique_id=944759191]
 material_override = SubResource("StandardMaterial3D_etvls")
