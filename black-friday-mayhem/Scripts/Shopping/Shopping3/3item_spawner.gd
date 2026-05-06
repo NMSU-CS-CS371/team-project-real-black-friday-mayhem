@@ -38,7 +38,7 @@ func spawn_item():
 	var spawn_x = 50
 	var spawn_y = 260 #or 500
 	for x in item_count:
-		print("TESTSEINTGST")
+		#print("TESTSEINTGST")
 		var item = item_scene.instantiate()
 		item.end = end
 		item.position = Vector2(spawn_x, spawn_y)

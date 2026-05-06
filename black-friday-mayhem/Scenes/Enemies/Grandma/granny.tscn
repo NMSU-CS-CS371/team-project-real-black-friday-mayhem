@@ -7,7 +7,9 @@
 [ext_resource type="AudioStream" uid="uid://b3idpgj8c30gw" path="res://Assets/SFX/Voice Lines/Granny/pardon-me-2.ogg" id="5_na25d"]
 [ext_resource type="AudioStream" uid="uid://dfohmy7137v4i" path="res://Assets/SFX/Voice Lines/Granny/you-hit-me-again-1.ogg" id="6_06hvg"]
 [ext_resource type="AudioStream" uid="uid://brc4m2i51lscc" path="res://Assets/SFX/Voice Lines/Granny/you-hit-me-again-2.ogg" id="7_h8rwi"]
-[ext_resource type="AudioStream" uid="uid://dxvolpb7j27fc" path="res://Assets/SFX/Voice Lines/Granny/now-youve-gone-and-done-it-1.ogg" id="8_gch6t"]
+[ext_resource type="AudioStream" uid="uid://wd6p8nhakxxi" path="res://Assets/SFX/Voice Lines/Granny/stop-that-1.ogg" id="8_yu1ir"]
+[ext_resource type="AudioStream" uid="uid://dinabjgr304ur" path="res://Assets/SFX/Voice Lines/Granny/stop-that-2.ogg" id="9_gehiq"]
+[ext_resource type="AudioStream" uid="uid://dxvolpb7j27fc" path="res://Assets/SFX/Voice Lines/Granny/now-youve-gone-and-done-it-1.ogg" id="10_na25d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iv0je"]
 atlas = ExtResource("2_pjpcr")
@@ -245,13 +247,11 @@ stream_0/stream = ExtResource("4_ppkis")
 stream_1/stream = ExtResource("5_na25d")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_s71q8"]
-streams_count = 2
+streams_count = 4
 stream_0/stream = ExtResource("6_06hvg")
 stream_1/stream = ExtResource("7_h8rwi")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_5gs0h"]
-streams_count = 1
-stream_0/stream = ExtResource("8_gch6t")
+stream_2/stream = ExtResource("8_yu1ir")
+stream_3/stream = ExtResource("9_gehiq")
 
 [node name="Granny" unique_id=1282377910 instance=ExtResource("1_q4vah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16738972, 0)
@@ -291,17 +291,20 @@ metadata/_edit_group_ = true
 [node name="CollisionShape3D" parent="." index="2" unique_id=1959478342]
 metadata/_edit_group_ = true
 
-[node name="Stage1" type="AudioStreamPlayer" parent="." index="3" unique_id=1523589280]
+[node name="Stage1" type="AudioStreamPlayer3D" parent="." index="3" unique_id=1541317490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16738972, 0)
 stream = SubResource("AudioStreamRandomizer_e6b8a")
 volume_db = 4.0
-bus = &"SFX"
+max_distance = 15.0
 
-[node name="Stage2" type="AudioStreamPlayer" parent="." index="4" unique_id=1478922331]
+[node name="Stage2" type="AudioStreamPlayer3D" parent="." index="4" unique_id=315290389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16738972, 0)
 stream = SubResource("AudioStreamRandomizer_s71q8")
 volume_db = 4.0
-bus = &"SFX"
+max_distance = 15.0
 
-[node name="Stage3" type="AudioStreamPlayer" parent="." index="5" unique_id=1960881346]
-stream = SubResource("AudioStreamRandomizer_5gs0h")
+[node name="Stage3" type="AudioStreamPlayer3D" parent="." index="5" unique_id=1768489341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16738972, 0)
+stream = ExtResource("10_na25d")
 volume_db = 4.0
-bus = &"SFX"
+max_distance = 15.0

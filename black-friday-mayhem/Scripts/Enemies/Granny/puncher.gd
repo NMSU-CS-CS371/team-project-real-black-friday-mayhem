@@ -46,6 +46,8 @@ var leftPunch : bool = false
 
 var game_end : bool = false
 
+var isInAnimation : bool = false
+
 func _ready() -> void:
 	updateHealth()
 	#print(player.name)
@@ -92,6 +94,8 @@ func click():
 		updateHealth()
 		tries = 0
 		effort += 5
+		#this is for when the player gets up
+		#not punches
 		if leftPunch:
 			animationPlayer.play("up_L")
 		else:
@@ -103,13 +107,14 @@ func click():
 		print("and he's back in the game!!")
 	
 	# This is the state when the player looses
-	if penalizations >= MAX_HEALTH:
+	if !game_end and penalizations >= MAX_HEALTH:
 		#GAME OVER FROM LOST HEALTH
+		$"../SoundEffects/beeplate/AnimationPlayer".play("beepend")
 		game_end = true
 		card_number = -2
 		number_card_label.text = "KO"
-		number_card_animator.play("next")
-		$Timer.wait_time = 1.5
+		number_card_animator.play("start")
+		$Timer.wait_time = 6
 		$Timer.start()
 		pass
 	
@@ -117,7 +122,6 @@ func click():
 
 func game_over(game_state : String):
 	print("GAME OVER")
-	$die.play()
 	knockedOut.emit()
 	player.controlAllowed = true
 	player.playing_game = false
@@ -148,8 +152,22 @@ func strugle():
 
 func apply_damage(damage_taken : int):
 	if !isDodging and health > 0:
+		if Grandma.weAttackinWithTheLazersYo == false:
+			$"../SoundEffects/GrandmaHit".play()
+		else:
+			$"../SoundEffects/Grandmapewpew".play()
 		health = health - damage_taken
-		
+	var temp_faints = faints + 1
+	if !game_end and (temp_faints * penalties) >= MAX_HEALTH:
+		#GAME OVER FROM LOST HEALTH
+		$"../SoundEffects/beeplate/AnimationPlayer".play("beepend")
+		game_end = true
+		card_number = -2
+		number_card_label.text = "KO"
+		number_card_animator.play("start")
+		$Timer.wait_time = 5
+		$Timer.start()
+	
 	if !isKnockedOut and health <= 0:
 		isKnockedOut = true
 		$Playerhit.play()
@@ -186,16 +204,22 @@ func dodge(dodgetype : dodgeDirection):
 		pass
 	pass
 
+func changeIsInAnimation(value : bool):
+	isInAnimation = value
+	pass
+
 func _input(event: InputEvent) -> void:
 	if game_end:
 		return
 	
 	if event.is_action_pressed("Left"):
 		#animationPlayer.play("dodge left")
+		isInAnimation = false
 		dodge(dodgeDirection.DODGE_LEFT)
 		$dodge.play()
 		pass
 	if event.is_action_pressed("Right"):
+		isInAnimation = false
 		dodge(dodgeDirection.DODGE_RIGHT)
 		$dodge.play()
 		print("dodging")
@@ -205,9 +229,13 @@ func _input(event: InputEvent) -> void:
 		pass
 	if event.is_action_released("Forward"):
 		isHoldingUP = false
-
+	if event.is_action_pressed("ui_accept"):
+		if !isInAnimation:
+			click()
+		print("space click")
 	if event.is_action_pressed("click"):
 		click()
+		isInAnimation = false
 		print("click")
 		pass
 	
@@ -228,12 +256,20 @@ func _on_timer_timeout() -> void:
 		#GAME OVER FROM GIVE UP
 		game_over("lose")
 		return
+	if card_number > 4:
+		$"../SoundEffects/beepearly".play()
 	if card_number >= 0:
 		update_text()
+	if card_number <= 3 && card_number >= 0:
+		$"../SoundEffects/beeplate".play()
+		pass
+	if card_number == 0:
+		$"../SoundEffects/beeplate/AnimationPlayer".play("loop")
 	if card_number == -1:
+		$"../SoundEffects/beeplate/AnimationPlayer".play("beepend")
 		number_card_label.text = "TKO"
 		number_card_animator.play("next")
-		card_number -= 1
+		
 	$Timer.wait_time = 1
 	$Timer.start()
 	# check it that time limit is 0

@@ -26,23 +26,41 @@
 [ext_resource type="Texture2D" uid="uid://nhk84oby2gi" path="res://Assets/Sprites/GrannyReadyLazer.png" id="16_huqyo"]
 [ext_resource type="Texture2D" uid="uid://cmlii7i5i3edr" path="res://Assets/Sprites/explosion_sprite_sheet.png" id="16_t6tsm"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="23_rym8o"]
-[ext_resource type="AudioStream" uid="uid://s7lr2s16xwif" path="res://Assets/SFX/Voice Lines/Granny/are-all-you-kids-this-weak-1.ogg" id="27_f3bct"]
-[ext_resource type="AudioStream" uid="uid://c2fcas1ckt4m7" path="res://Assets/SFX/SoundEffects/Granny/punch.ogg" id="27_m8j3q"]
-[ext_resource type="AudioStream" uid="uid://q2ra2tpc2mp3" path="res://Assets/SFX/Voice Lines/Granny/are-all-you-kids-this-weak-2.ogg" id="28_70tq7"]
-[ext_resource type="AudioStream" uid="uid://bkjlt6gm6hrl7" path="res://Assets/SFX/SoundEffects/Granny/granny_dodge.ogg" id="28_iipx1"]
-[ext_resource type="AudioStream" uid="uid://cml42n48cdkue" path="res://Assets/SFX/SoundEffects/Granny/grandma_die2.ogg" id="29_me3d5"]
-[ext_resource type="AudioStream" uid="uid://b2pn78q0jrv30" path="res://Assets/SFX/Voice Lines/Granny/how-could-you-beat-up-an-old-woman-1.ogg" id="29_ruqql"]
-[ext_resource type="AudioStream" uid="uid://cx7f8vrbypghx" path="res://Assets/SFX/SoundEffects/Granny/wobble.ogg" id="30_70tq7"]
-[ext_resource type="AudioStream" uid="uid://3i6grx7u0smo" path="res://Assets/SFX/Voice Lines/Granny/this-isnt-the-end-1.ogg" id="30_oaose"]
-[ext_resource type="AudioStream" uid="uid://lu6inck83mde" path="res://Assets/SFX/SoundEffects/Granny/grandma_die1ogg.ogg" id="30_w48fp"]
-[ext_resource type="AudioStream" uid="uid://c4ygc6cmequtc" path="res://Assets/SFX/Voice Lines/Granny/this-isnt-the-end-2.ogg" id="31_1p8bn"]
-[ext_resource type="AudioStream" uid="uid://7pcoswwuhxa1" path="res://Assets/SFX/Voice Lines/Granny/you-think-you-can-defeat-me-1.ogg" id="32_jylej"]
-[ext_resource type="AudioStream" uid="uid://dxvolpb7j27fc" path="res://Assets/SFX/Voice Lines/Granny/now-youve-gone-and-done-it-1.ogg" id="33_ft3rn"]
-[ext_resource type="AudioStream" uid="uid://ke4dxgpnpmwh" path="res://Assets/SFX/Voice Lines/Granny/you-hit-like-a-4-year-old-1.ogg" id="34_ent04"]
-[ext_resource type="AudioStream" uid="uid://bsn2sfdr43hn0" path="res://Assets/SFX/Voice Lines/Granny/ill-turn-your-kneecaps-into-hockey-pucks-1.ogg" id="35_jylej"]
-[ext_resource type="AudioStream" uid="uid://c6ongwmfhsu8v" path="res://Assets/SFX/Voice Lines/Granny/ill-turn-your-kneecaps-into-hockey-pucks-2.ogg" id="36_ft3rn"]
-[ext_resource type="AudioStream" uid="uid://1o6igx1c3jmk" path="res://Assets/SFX/Voice Lines/Granny/ill-turn-your-kneecaps-into-hockey-pucks-3.ogg" id="37_ent04"]
-[ext_resource type="AudioStream" uid="uid://qkbexsw4n3y6" path="res://Assets/SFX/Voice Lines/Granny/respect-your-elders-1.ogg" id="38_v011p"]
+[ext_resource type="AudioStream" uid="uid://bsn2sfdr43hn0" path="res://Assets/SFX/Voice Lines/Granny/ill-turn-your-kneecaps-into-hockey-pucks-1.ogg" id="27_m8j3q"]
+[ext_resource type="AudioStream" uid="uid://c6ongwmfhsu8v" path="res://Assets/SFX/Voice Lines/Granny/ill-turn-your-kneecaps-into-hockey-pucks-2.ogg" id="28_iipx1"]
+[ext_resource type="AudioStream" uid="uid://1o6igx1c3jmk" path="res://Assets/SFX/Voice Lines/Granny/ill-turn-your-kneecaps-into-hockey-pucks-3.ogg" id="29_me3d5"]
+[ext_resource type="AudioStream" uid="uid://7pcoswwuhxa1" path="res://Assets/SFX/Voice Lines/Granny/you-think-you-can-defeat-me-1.ogg" id="30_w48fp"]
+[ext_resource type="AudioStream" uid="uid://q2ra2tpc2mp3" path="res://Assets/SFX/Voice Lines/Granny/are-all-you-kids-this-weak-2.ogg" id="31_me3d5"]
+[ext_resource type="AudioStream" uid="uid://s7lr2s16xwif" path="res://Assets/SFX/Voice Lines/Granny/are-all-you-kids-this-weak-1.ogg" id="32_w48fp"]
+[ext_resource type="AudioStream" uid="uid://ke4dxgpnpmwh" path="res://Assets/SFX/Voice Lines/Granny/you-hit-like-a-4-year-old-1.ogg" id="33_w48fp"]
+[ext_resource type="AudioStream" uid="uid://qkbexsw4n3y6" path="res://Assets/SFX/Voice Lines/Granny/respect-your-elders-1.ogg" id="34_14arc"]
+[ext_resource type="AudioStream" uid="uid://d1nyihchvq5xv" path="res://Assets/SFX/Voice Lines/Granny/this-reminds-me-of-the-fight-of-77-1.ogg" id="34_dhugj"]
+[ext_resource type="AudioStream" uid="uid://bsqh4ag5aq4p8" path="res://Assets/SFX/Voice Lines/Granny/this-reminds-me-of-the-fight-of-77-2.ogg" id="35_14arc"]
+[ext_resource type="AudioStream" uid="uid://b2pn78q0jrv30" path="res://Assets/SFX/Voice Lines/Granny/how-could-you-beat-up-an-old-woman-1.ogg" id="37_pkqnv"]
+[ext_resource type="AudioStream" uid="uid://3i6grx7u0smo" path="res://Assets/SFX/Voice Lines/Granny/this-isnt-the-end-1.ogg" id="38_70tq7"]
+[ext_resource type="AudioStream" uid="uid://c4ygc6cmequtc" path="res://Assets/SFX/Voice Lines/Granny/this-isnt-the-end-2.ogg" id="39_ruqql"]
+[ext_resource type="AudioStream" uid="uid://caja8h0hsaxit" path="res://Assets/SFX/SoundEffects/Granny/hitHurt/1hitHurt.wav" id="40_ft3rn"]
+[ext_resource type="AudioStream" uid="uid://1cvs05s3a42f" path="res://Assets/SFX/SoundEffects/Granny/hitHurt/2hitHurt.wav" id="41_ent04"]
+[ext_resource type="AudioStream" uid="uid://ct786wfolh4cv" path="res://Assets/SFX/SoundEffects/Granny/hitHurt/3hitHurt.wav" id="42_v011p"]
+[ext_resource type="AudioStream" uid="uid://d0uqjx7fgytj5" path="res://Assets/SFX/SoundEffects/Granny/hitHurt/hitHurt.wav" id="43_dyhkv"]
+[ext_resource type="AudioStream" uid="uid://dpp2u5dkv8ilp" path="res://Assets/SFX/SoundEffects/Granny/woosh/woosh1.wav" id="44_ft3rn"]
+[ext_resource type="AudioStream" uid="uid://d37dlveoxnaci" path="res://Assets/SFX/SoundEffects/Granny/swoosh/0swoosh.wav" id="44_xqs1m"]
+[ext_resource type="AudioStream" uid="uid://du10u3lsqsrap" path="res://Assets/SFX/SoundEffects/Granny/woosh/wooshend.wav" id="45_ent04"]
+[ext_resource type="AudioStream" uid="uid://bdubyccrbvla3" path="res://Assets/SFX/SoundEffects/Granny/swoosh/1swoosh.wav" id="45_g4b1e"]
+[ext_resource type="AudioStream" uid="uid://citejt5h7wy4w" path="res://Assets/SFX/SoundEffects/Granny/granny-hit/0grandma-hit.wav" id="46_jw273"]
+[ext_resource type="AudioStream" uid="uid://hfr1g3kk6u18" path="res://Assets/SFX/SoundEffects/Granny/granny-hit/1grandma-hit.wav" id="47_0vq0i"]
+[ext_resource type="AudioStream" uid="uid://bebr513xvej5p" path="res://Assets/SFX/SoundEffects/Granny/granny-hit/2grandma-hit.wav" id="48_8lrej"]
+[ext_resource type="AudioStream" uid="uid://dorwopso3dxk7" path="res://Assets/SFX/SoundEffects/Granny/laserpew/0laserShoot.wav" id="49_8iya8"]
+[ext_resource type="AudioStream" uid="uid://b7mk6r7xkokei" path="res://Assets/SFX/SoundEffects/Granny/laserpew/1laserShoot.wav" id="50_t6apc"]
+[ext_resource type="AudioStream" uid="uid://wo8p7lcqhvn7" path="res://Assets/SFX/SoundEffects/Granny/laserpew/2laserShoot.wav" id="51_dsoej"]
+[ext_resource type="AudioStream" uid="uid://dyqcketbvowrl" path="res://Assets/SFX/SoundEffects/Granny/charge/0charge.wav" id="52_dsoej"]
+[ext_resource type="AudioStream" uid="uid://b1bx1pyjpndr0" path="res://Assets/SFX/SoundEffects/Granny/charge/1charge.wav" id="53_4riro"]
+[ext_resource type="AudioStream" uid="uid://bqt2tvcxyledx" path="res://Assets/SFX/SoundEffects/Granny/beep/1blipSelect.wav" id="54_4riro"]
+[ext_resource type="AudioStream" uid="uid://dvxuqrnyr05vf" path="res://Assets/SFX/SoundEffects/Granny/beep/0blipSelect.wav" id="55_vy2o7"]
+[ext_resource type="AudioStream" uid="uid://bvplui6aq3twn" path="res://Assets/SFX/SoundEffects/Granny/beep/4blipSelect.wav" id="56_1uce0"]
+[ext_resource type="AudioStream" uid="uid://btrma3twhq78j" path="res://Assets/SFX/SoundEffects/Granny/grannydeathpow/woosh.long.wav" id="57_12fqn"]
+[ext_resource type="AudioStream" uid="uid://72fpntfgd8kt" path="res://Assets/SFX/SoundEffects/Granny/grannydeathpow/wooshBoom.short.wav" id="58_bsy1w"]
+[ext_resource type="AudioStream" uid="uid://ddmobqcw1vw0g" path="res://Assets/SFX/SoundEffects/Granny/click.wav" id="59_g4b1e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mtg6x"]
 shader = ExtResource("2_eqd8u")
@@ -490,20 +508,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dyhkv"]
-streams_count = 3
-stream_0/stream = ExtResource("29_ruqql")
-stream_1/stream = ExtResource("30_oaose")
-stream_2/stream = ExtResource("31_1p8bn")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jw273"]
-streams_count = 1
-stream_0/stream = ExtResource("32_jylej")
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0vq0i"]
-streams_count = 1
-stream_0/stream = ExtResource("33_ft3rn")
-
 [sub_resource type="Animation" id="Animation_1qmhv"]
 resource_name = "ANGER"
 length = 0.5
@@ -545,7 +549,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.43333334, 0.56666666, 0.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(414.75003, 298.13635), Vector2(414.75, 280), Vector2(600, 410), Vector2(450, 410), Vector2(414.75003, 298.13635)]
+"values": [Vector2(414.75, 365), Vector2(414.75, 280), Vector2(625, 410), Vector2(450, 410), Vector2(414.75, 365)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -554,11 +558,14 @@ tracks/1/path = NodePath("Grandma")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.43333334),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.43333334, 0.73333335),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"apply_force"
+}, {
+"args": [],
+"method": &"playInsults"
 }]
 }
 tracks/2/type = "value"
@@ -585,6 +592,34 @@ tracks/3/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SoundEffects/WooshStart")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.06666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SoundEffects/WooshEnd")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.43333334),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_coviq"]
 resource_name = "A_PUNCH_R"
@@ -599,7 +634,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.43333334, 0.56666666, 0.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(414.75003, 298.13635), Vector2(414.75, 280), Vector2(200, 410), Vector2(450, 410), Vector2(414.75003, 298.13635)]
+"values": [Vector2(414.75, 365), Vector2(414.75, 280), Vector2(200, 410), Vector2(450, 410), Vector2(414.75, 365)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -608,11 +643,14 @@ tracks/1/path = NodePath("Grandma")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.43333334),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.43333334, 0.73333335),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"apply_force"
+}, {
+"args": [],
+"method": &"playInsults"
 }]
 }
 tracks/2/type = "value"
@@ -626,6 +664,34 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [&"power", &"wind up power", &"punch power", &"power"]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SoundEffects/WooshStart")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.06666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SoundEffects/WooshEnd")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_mtg6x"]
@@ -641,7 +707,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.43333334, 0.76666665, 0.96666664, 1.1666666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(414.75003, 298.13635), Vector2(414.75, 280), Vector2(500, 410), Vector2(450, 410), Vector2(414.75003, 298.13635)]
+"values": [Vector2(414.75, 365), Vector2(414.75, 280), Vector2(575, 410), Vector2(450, 410), Vector2(414.75, 365)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -650,11 +716,14 @@ tracks/1/path = NodePath("Grandma")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.76666665),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.76666665, 1.1666666),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"apply_force"
+}, {
+"args": [],
+"method": &"playInsults"
 }]
 }
 tracks/2/type = "value"
@@ -681,6 +750,34 @@ tracks/3/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SoundEffects/WooshStart")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.06666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SoundEffects/WooshEnd")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_xiukh"]
 resource_name = "punch_start"
@@ -704,11 +801,14 @@ tracks/1/path = NodePath("Grandma")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.76666665),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.76666665, 1.1666666),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
 "method": &"apply_force"
+}, {
+"args": [],
+"method": &"playInsults"
 }]
 }
 tracks/2/type = "value"
@@ -721,7 +821,35 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.43333334, 0.76666665, 0.96666664, 1.1666666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(414.75003, 298.13635), Vector2(414.75, 280), Vector2(380, 410), Vector2(380, 410), Vector2(414.75003, 298.13635)]
+"values": [Vector2(414.75, 365), Vector2(414.75, 280), Vector2(250, 410), Vector2(380, 410), Vector2(414.75, 365)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SoundEffects/WooshStart")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.06666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SoundEffects/WooshEnd")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.73333335),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_7fpuf"]
@@ -777,106 +905,14 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("GrandmaExplosion:animation")
+tracks/4/path = NodePath("Grandma:modulate:a")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"default"]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Grandma:modulate:a")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1.0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("CenterContainer/Label2:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_iipx1"]
-resource_name = "granniesdead"
-length = 2.6333334
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GrandmaExplosion:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GrandmaExplosion")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"default"],
-"method": &"play"
-}]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Grandma:modulate:a")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1.1666666, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [1.0, 1.0, 0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Grandma:animation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"dead"]
-}
-tracks/4/type = "method"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Grandma")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(2.6333334),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"grannydied"
-}]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -885,10 +921,157 @@ tracks/5/path = NodePath("CenterContainer/Label2:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.4),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_iipx1"]
+resource_name = "granniesdead"
+length = 5.8333335
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GrandmaExplosion")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default"],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Grandma:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.4666665, 3.7000003),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Grandma:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"dead"]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Grandma")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5.8333335),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grannydied"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CenterContainer/Label2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.5333333, 4.9333334),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VoiceLines/End/Howcouldyou")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Music")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VoiceLines/End/ThisIsn\'tTheEnd")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3.0333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("deathboom1")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("deathboom2")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(3.9666667, 4.266667, 4.5666666, 4.818208),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_6clyk"]
@@ -912,8 +1095,8 @@ tracks/1/path = NodePath("Grandma")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.46666667, 0.6666667, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.46666667, 0.6666667, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "values": [{
 "args": [10],
 "method": &"apply_custom_force"
@@ -923,12 +1106,29 @@ tracks/1/keys = {
 }, {
 "args": [10],
 "method": &"apply_custom_force"
+}, {
+"args": [],
+"method": &"playInsults"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SoundEffects/Grandmacharge")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
 }]
 }
 
 [sub_resource type="Animation" id="Animation_huqyo"]
 resource_name = "startup"
-length = 1.5
+length = 2.4666667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -948,10 +1148,38 @@ tracks/1/path = NodePath("Grandma:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.46666667, 1, 1.2333333),
+"times": PackedFloat32Array(0.4, 0.8666667, 1.8666667, 2.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VoiceLines/Start")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Music")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j1bio"]
@@ -1013,16 +1241,6 @@ animations = [{
 "name": &"upper_punch",
 "speed": 5.0
 }]
-
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8lrej"]
-streams_count = 7
-stream_0/stream = ExtResource("34_ent04")
-stream_1/stream = ExtResource("27_f3bct")
-stream_2/stream = ExtResource("28_70tq7")
-stream_3/stream = ExtResource("35_jylej")
-stream_4/stream = ExtResource("36_ft3rn")
-stream_5/stream = ExtResource("37_ent04")
-stream_6/stream = ExtResource("38_v011p")
 
 [sub_resource type="Animation" id="Animation_to6mo"]
 length = 0.001
@@ -1131,6 +1349,34 @@ tracks/3/keys = {
 "update": 1,
 "values": [true, false, true]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SoundEffects/SwooshStart")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../SoundEffects/SwooshEnd")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_gwv23"]
 resource_name = "dodge right"
@@ -1188,6 +1434,34 @@ tracks/3/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SoundEffects/SwooshStart")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../SoundEffects/SwooshEnd")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.23333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_ph07j"]
 resource_name = "down"
@@ -1239,6 +1513,20 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"setIsDodging"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_rym8o"]
@@ -1292,6 +1580,20 @@ tracks/3/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"setIsDodging"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_e2wbm"]
 resource_name = "punch up"
@@ -1315,11 +1617,17 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
+"args": [true],
+"method": &"changeIsInAnimation"
+}, {
 "args": [0],
 "method": &"hit"
+}, {
+"args": [false],
+"method": &"changeIsInAnimation"
 }]
 }
 tracks/2/type = "value"
@@ -1346,6 +1654,20 @@ tracks/3/keys = {
 "update": 1,
 "values": [&"idle", &"upper_punch", &"idle"]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SoundEffects/playernotstrong")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_4hqvr"]
 resource_name = "punch_mid_L"
@@ -1362,18 +1684,27 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(416, 450), Vector2(416, 350), Vector2(416, 450)]
 }
-tracks/1/type = "method"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.009960937, 0.1, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "values": [{
+"args": [true],
+"method": &"changeIsInAnimation"
+}, {
+"args": [false],
+"method": &"setIsDodging"
+}, {
 "args": [1],
 "method": &"hit"
+}, {
+"args": [false],
+"method": &"changeIsInAnimation"
 }]
 }
 tracks/2/type = "value"
@@ -1412,6 +1743,20 @@ tracks/4/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../SoundEffects/Hit")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_0puyn"]
 resource_name = "punch_mid_R"
@@ -1435,11 +1780,20 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.010032907, 0.1, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "values": [{
+"args": [true],
+"method": &"changeIsInAnimation"
+}, {
+"args": [false],
+"method": &"setIsDodging"
+}, {
 "args": [1],
 "method": &"hit"
+}, {
+"args": [false],
+"method": &"changeIsInAnimation"
 }]
 }
 tracks/2/type = "value"
@@ -1465,6 +1819,20 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [&"idle", &"punch", &"idle"]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../SoundEffects/Hit")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_1vn1j"]
@@ -1501,9 +1869,12 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.16666667),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [false],
+"method": &"setIsDodging"
+}, {
 "args": [],
 "method": &"strugle"
 }]
@@ -1531,6 +1902,20 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../strugle")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_vnbpt"]
@@ -1567,9 +1952,12 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.16666667),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [false],
+"method": &"setIsDodging"
+}, {
 "args": [],
 "method": &"strugle"
 }]
@@ -1597,6 +1985,44 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../strugle")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"idle", &"dodge", &"idle"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_t0tbt"]
@@ -1650,6 +2076,44 @@ tracks/3/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"setIsDodging"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.43333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"idle", &"dodge", &"idle"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.033333335, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_t6tsm"]
 resource_name = "up_R"
@@ -1701,6 +2165,20 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"setIsDodging"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gwv23"]
@@ -1756,6 +2234,395 @@ expand_margin_bottom = 2.0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0puyn"]
 bg_color = Color(0.9160156, 0.050094604, 0.050094604, 1)
 border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eqd8u"]
+shader = ExtResource("2_eqd8u")
+shader_parameter/pixel_count = Vector2(256, 256)
+
+[sub_resource type="Animation" id="Animation_wofl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(313, 231)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.033333335, 0.1, 0.23333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"idle", &"punch", &"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_m8j3q"]
+resource_name = "keep going"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(313, 231), Vector2(-330, -190)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -3.141592653589793, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_2dcnf"]
+resource_name = "next"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Grandma")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"playInsults"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"down"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_yvrxi"]
+resource_name = "start"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"down", &"idle"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_t6tsm"]
+resource_name = "up_R"
+length = 0.23333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.16666667, 0.23, 0.2333),
+"transitions": PackedFloat32Array(1, 1, 2.3943649e-05, 3.270796e-05),
+"update": 0,
+"values": [Vector2(650, 365), Vector2(450, 300), Vector2(125, 409.25), Vector2(416, 450)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.23, 0.2333),
+"transitions": PackedFloat32Array(1, 1, 1.328354e-05, 7.514305e-05),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2dcnf"]
+_data = {
+&"RESET": SubResource("Animation_wofl7"),
+&"keep going": SubResource("Animation_m8j3q"),
+&"next": SubResource("Animation_2dcnf"),
+&"start": SubResource("Animation_yvrxi")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pkqnv"]
+streams_count = 2
+stream_0/stream = ExtResource("34_dhugj")
+stream_1/stream = ExtResource("35_14arc")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_f3bct"]
+streams_count = 3
+stream_0/stream = ExtResource("27_m8j3q")
+stream_1/stream = ExtResource("28_iipx1")
+stream_2/stream = ExtResource("29_me3d5")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_70tq7"]
+streams_count = 2
+stream_0/stream = ExtResource("32_w48fp")
+stream_1/stream = ExtResource("31_me3d5")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_m8j3q"]
+streams_count = 5
+stream_0/stream = SubResource("AudioStreamRandomizer_pkqnv")
+stream_1/stream = ExtResource("33_w48fp")
+stream_2/stream = ExtResource("34_14arc")
+stream_3/stream = SubResource("AudioStreamRandomizer_f3bct")
+stream_4/stream = SubResource("AudioStreamRandomizer_70tq7")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_oaose"]
+streams_count = 2
+stream_0/stream = ExtResource("38_70tq7")
+stream_1/stream = ExtResource("39_ruqql")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1p8bn"]
+random_pitch = 1.0293022
+streams_count = 4
+stream_0/stream = ExtResource("40_ft3rn")
+stream_1/stream = ExtResource("41_ent04")
+stream_2/stream = ExtResource("42_v011p")
+stream_3/stream = ExtResource("43_dyhkv")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8iya8"]
+random_pitch = 1.0293022
+streams_count = 3
+stream_0/stream = ExtResource("46_jw273")
+stream_1/stream = ExtResource("47_0vq0i")
+stream_2/stream = ExtResource("48_8lrej")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4riro"]
+random_pitch = 1.0293022
+streams_count = 3
+stream_0/stream = ExtResource("49_8iya8")
+stream_1/stream = ExtResource("50_t6apc")
+stream_2/stream = ExtResource("51_dsoej")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vy2o7"]
+random_pitch = 1.0293022
+streams_count = 2
+stream_0/stream = ExtResource("52_dsoej")
+stream_1/stream = ExtResource("53_4riro")
+
+[sub_resource type="Animation" id="Animation_1uce0"]
+resource_name = "beepend"
+length = 0.75
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../beepend")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.73333335),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["lose"],
+"method": &"game_over"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vy2o7"]
+resource_name = "loop"
+length = 0.2
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../beeplate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.055980872, 0.116626814, 0.17260769),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1uce0"]
+_data = {
+&"beepend": SubResource("Animation_1uce0"),
+&"loop": SubResource("Animation_vy2o7")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eqd8u"]
 shader = ExtResource("2_eqd8u")
@@ -1999,7 +2866,7 @@ volume_db = 5.0
 bus = &"SFX"
 
 [node name="Timer" type="Timer" parent="Grandma" unique_id=1836330250]
-wait_time = 4.5
+wait_time = 4.6000000000000005
 autostart = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Grandma" unique_id=270051611]
@@ -2023,20 +2890,6 @@ healthBar = NodePath("../PlayerHealth")
 healthText = NodePath("../PlayerHealth/Health")
 number_card_label = NodePath("../Label")
 number_card_animator = NodePath("../Label/AnimationPlayer")
-
-[node name="Playerhit" type="AudioStreamPlayer" parent="Player" unique_id=812909136]
-stream = SubResource("AudioStreamRandomizer_8lrej")
-volume_db = 10.0
-bus = &"SFX"
-
-[node name="dodge" type="AudioStreamPlayer" parent="Player" unique_id=1626408977]
-stream = ExtResource("28_iipx1")
-volume_db = 5.0
-bus = &"SFX"
-
-[node name="die" type="AudioStreamPlayer" parent="Player" unique_id=1992415313]
-stream = ExtResource("29_me3d5")
-bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player" unique_id=628803585]
 libraries/ = SubResource("AnimationLibrary_gwv23")
@@ -2104,18 +2957,17 @@ text = "HP: 25/50"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2100007618]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=2100007618]
 stream = ExtResource("8_gwv23")
-volume_db = -5.0
-autoplay = true
+volume_db = -8.0
 bus = &"Music"
 
 [node name="Label" type="Label" parent="." unique_id=756172349]
 visible = false
 offset_left = 313.0
 offset_top = 231.0
-offset_right = 499.99997
-offset_bottom = 382.0
+offset_right = 499.99994
+offset_bottom = 382.00003
 theme = ExtResource("23_rym8o")
 theme_override_colors/font_color = Color(0.9941406, 0.013591766, 0.013591766, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -2146,7 +2998,106 @@ text = "GAME WIN"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="VoiceLines" type="Node" parent="." unique_id=956402565]
+
+[node name="Start" type="AudioStreamPlayer" parent="VoiceLines" unique_id=946525915]
+stream = ExtResource("30_w48fp")
+bus = &"SFX"
+
+[node name="Insults" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1379266853]
+stream = SubResource("AudioStreamRandomizer_m8j3q")
+volume_db = 2.0
+bus = &"SFX"
+
+[node name="End" type="Node" parent="VoiceLines" unique_id=2137415522]
+
+[node name="Howcouldyou" type="AudioStreamPlayer" parent="VoiceLines/End" unique_id=1977612036]
+stream = ExtResource("37_pkqnv")
+
+[node name="ThisIsn\'tTheEnd" type="AudioStreamPlayer" parent="VoiceLines/End" unique_id=1424717737]
+stream = SubResource("AudioStreamRandomizer_oaose")
+
+[node name="SoundEffects" type="Node" parent="." unique_id=302382008]
+
+[node name="Hit" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1164269034]
+stream = SubResource("AudioStreamRandomizer_1p8bn")
+volume_db = -16.0
+
+[node name="SwooshStart" type="AudioStreamPlayer" parent="SoundEffects" unique_id=97628111]
+stream = ExtResource("44_xqs1m")
+volume_db = -21.0
+bus = &"SFX"
+
+[node name="SwooshEnd" type="AudioStreamPlayer" parent="SoundEffects" unique_id=543495465]
+stream = ExtResource("45_g4b1e")
+volume_db = -21.0
+bus = &"SFX"
+
+[node name="WooshStart" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1100425491]
+stream = ExtResource("44_ft3rn")
+volume_db = -4.0
+bus = &"SFX"
+
+[node name="WooshEnd" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1815427262]
+stream = ExtResource("45_ent04")
+volume_db = -4.0
+bus = &"SFX"
+
+[node name="GrandmaHit" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1614530611]
+stream = SubResource("AudioStreamRandomizer_8iya8")
+volume_db = -4.0
+bus = &"SFX"
+
+[node name="playernotstrong" type="AudioStreamPlayer" parent="SoundEffects" unique_id=53576238]
+stream = SubResource("AudioStreamRandomizer_8iya8")
+volume_db = -16.0
+bus = &"SFX"
+
+[node name="Grandmapewpew" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1793365060]
+stream = SubResource("AudioStreamRandomizer_4riro")
+volume_db = -6.0
+bus = &"SFX"
+
+[node name="Grandmacharge" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1761654149]
+stream = SubResource("AudioStreamRandomizer_vy2o7")
+volume_db = -16.0
+bus = &"SFX"
+
+[node name="beepearly" type="AudioStreamPlayer" parent="SoundEffects" unique_id=31050756]
+stream = ExtResource("54_4riro")
+volume_db = -4.0
+bus = &"SFX"
+
+[node name="beeplate" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1342641871]
+stream = ExtResource("55_vy2o7")
+bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SoundEffects/beeplate" unique_id=1535014130]
+root_node = NodePath("../../beepearly")
+libraries/ = SubResource("AnimationLibrary_1uce0")
+
+[node name="beepend" type="AudioStreamPlayer" parent="." unique_id=1491654270]
+stream = ExtResource("56_1uce0")
+volume_db = -4.0
+bus = &"SFX"
+
+[node name="strugle" type="AudioStreamPlayer" parent="." unique_id=793616886]
+stream = ExtResource("59_g4b1e")
+volume_db = -16.0
+bus = &"SFX"
+
+[node name="deathboom1" type="AudioStreamPlayer" parent="." unique_id=1534271130]
+stream = ExtResource("57_12fqn")
+volume_db = -20.0
+bus = &"SFX"
+
+[node name="deathboom2" type="AudioStreamPlayer" parent="." unique_id=589678173]
+stream = ExtResource("58_bsy1w")
+volume_db = -25.0
+bus = &"SFX"
+
 [connection signal="timeout" from="Grandma/Timer" to="Grandma" method="_on_timer_timeout"]
 [connection signal="knockedOut" from="Player" to="Grandma" method="stopDisrespectingMyGangsYo"]
 [connection signal="recovered" from="Player" to="Grandma" method="decimation"]
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
+[connection signal="finished" from="VoiceLines/Insults" to="Grandma" method="_on_insults_finished"]

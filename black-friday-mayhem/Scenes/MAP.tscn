@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cj1noksfvq1fw" path="res://Assets/Prefabs/handrail.tscn" id="2_16hua"]
 [ext_resource type="AudioStream" uid="uid://3a78lui8c7p2" path="res://Assets/SFX/Rollin at 5 - electronic - Map.mp3" id="2_53y2r"]
 [ext_resource type="Texture2D" uid="uid://bliql7yyjcinf" path="res://Assets/Textures/floorMesh2.jpg" id="2_m3620"]
+[ext_resource type="AudioStream" uid="uid://6qlfv4wv10hn" path="res://Assets/SFX/background.ogg" id="4_16hua"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gv5m4"]
 size = Vector3(0.04876709, 1, 0.899292)
@@ -1185,3 +1186,8 @@ stream = ExtResource("2_53y2r")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
+
+[node name="Background" type="AudioStreamPlayer" parent="AudioStreamPlayer" unique_id=29978215 groups=["MainMusic"]]
+stream = ExtResource("4_16hua")
+volume_db = -14.0
+autoplay = true

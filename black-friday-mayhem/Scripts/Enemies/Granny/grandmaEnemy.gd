@@ -21,14 +21,16 @@ var isLeft = false
 
 var skillCheck = false
 
+var isPlayingAudio : bool = false
+
+var weAttackinWithTheLazersYo : bool = false
+
 func _ready() -> void:
 	health = MAX_HEALTH
 	healthBar.max_value = MAX_HEALTH
 	healthBar.value = health
 	healthText.text = "HP %d/%d" % [health, MAX_HEALTH]
-	$VoiceLines/Stage1.play()
 	animationPlayer.play("startup")
-	randomize() 
 	pass
 
 func apply_force():
@@ -36,7 +38,6 @@ func apply_force():
 	player.apply_damage(damage)
 	pass
 func apply_custom_force(strength : int):
-	$SoundEffects/hit.play()
 	player.apply_damage(strength)
 	pass
 
@@ -50,16 +51,12 @@ func take_damage(damage_taken : int):
 	# enable laser beam eyes
 	if !murderObliteration and health <= laser_health:
 		murderObliteration = true
-		$SoundEffects/powerup.play()
-		$VoiceLines/Stage2.play()
 		animationPlayer.play("ANGER")
 		pass
 	if health <= 0:
+		$"../VoiceLines/Insults".stop()
 		healthText.text = "HP 0/%d" % [MAX_HEALTH]
 		stopDisrespectingMyGangsYo()
-		$VoiceLines/Lose.play()
-		if $VoiceLines/Lose.playing :
-			await $VoiceLines/Lose.finished
 		player.game_end = true
 		print("GAME WIN!")
 		animationPlayer.play("granniesdead")
@@ -85,8 +82,6 @@ func _on_timer_timeout() -> void:
 	if !skillCheck:
 		if health < skill_check_health:
 			murderObliteration = true
-			$SoundEffects/powerup.play()
-			$VoiceLines/Stage2.play()
 			animationPlayer.play("ANGER")
 		skillCheck = true
 	if willGoForKill:
@@ -103,17 +98,20 @@ func chooseAttackStyle():
 	match randOption:
 		2:
 			if murderObliteration:
-				$SoundEffects/lazer.play()
+				weAttackinWithTheLazersYo = true
 				animationPlayer.play("laser_attack")
 			else:
+				weAttackinWithTheLazersYo = false
 				punchDir()
 		0: 
 			if murderObliteration:
-				$SoundEffects/lazer.play()
+				weAttackinWithTheLazersYo = true
 				animationPlayer.play("laser_attack")
 			else:
+				weAttackinWithTheLazersYo = false
 				punchDir()
 		1:
+			weAttackinWithTheLazersYo = false
 			punchDir()
 			pass	
 	pass
@@ -141,4 +139,15 @@ func punchDir():
 		player.grandmaPunchType(false)
 		isLeft = true
 		pass
+
+func playInsults():
+	if !isPlayingAudio:
+		$"../VoiceLines/Insults".play()
+		isPlayingAudio = true
+	
 	pass
+
+
+func _on_insults_finished() -> void:
+	isPlayingAudio = false
+	pass # Replace with function body.
