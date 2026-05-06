@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cyk75lw831sr"]
+
+[ext_resource type="Texture2D" uid="uid://dn6ddskbfq6m4" path="res://Assets/Textures/restaurant_back.png" id="1_6sfkb"]
+[ext_resource type="Texture2D" uid="uid://c7d0of6eoghbj" path="res://Assets/Textures/weiner_logo.png" id="2_6sfkb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rhbvv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhbvv"]
+albedo_texture = ExtResource("1_6sfkb")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7anmf"]
+material = SubResource("StandardMaterial3D_rhbvv")
+
+[sub_resource type="BoxMesh" id="BoxMesh_yquf2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rhbvv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3sqv"]
+albedo_texture = ExtResource("2_6sfkb")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rhbvv"]
+material = SubResource("StandardMaterial3D_n3sqv")
+
+[node name="StoreBase" type="Node3D" unique_id=790083064]
+transform = Transform3D(2, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=443067339]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=598038690]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, -0.09122586, 3.987609e-09)
+shape = SubResource("BoxShape3D_rhbvv")
+
+[node name="Background" type="MeshInstance3D" parent="." unique_id=305437147]
+mesh = SubResource("PlaneMesh_7anmf")
+
+[node name="Pillar" type="MeshInstance3D" parent="." unique_id=391507021]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 2, -0.95, 0.32294798, 1.7530539e-08)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Pillar2" type="MeshInstance3D" parent="." unique_id=738314523]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 2, 0.95, 0.32294798, 1.7530539e-08)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Pillar3" type="MeshInstance3D" parent="." unique_id=1829043746]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.5, -0.0042409003, 0.322948, 0.7403259)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Top" type="MeshInstance3D" parent="." unique_id=812482023]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.8, 0, 0.323, -1.016)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="side" type="MeshInstance3D" parent="." unique_id=988541794]
+transform = Transform3D(0.1, 0, 0, 0, 0.3, 0, 0, 0, 2.4, -0.954, 0.147, -0.2)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="side2" type="MeshInstance3D" parent="." unique_id=1310351546]
+transform = Transform3D(0.1, 0, 0, 0, 0.3, 0, 0, 0, 2.4, 0.9542861, 0.14716767, -0.20022157)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Top2" type="MeshInstance3D" parent="." unique_id=1888224460]
+transform = Transform3D(1.5, 0, 0, 0, 0.1, 0, 0, 0, 0.5, 0, 0.4378969, -1.016)
+mesh = SubResource("BoxMesh_rhbvv")
+
+[node name="Logo" type="MeshInstance3D" parent="." unique_id=2047287325]
+transform = Transform3D(0.9, 0, 0, 0, 0.4, 0, 0, 0, 0.35, 0, 0.48833796, -1.014785)
+mesh = SubResource("PlaneMesh_rhbvv")

@@ -18,6 +18,12 @@ var isHoldingUP : bool = false
 @export var damage_value_up : int = 2
 @export var damage_value_mid : int = 1
 @export var laser_health : int
+
+@export var number_card_label : Label
+@export var number_card_animator : AnimationPlayer
+
+var card_number : int = 10
+
 enum punchType {PUNCH_UP, PUNCH_MID}
 enum dodgeDirection {DODGE_LEFT, DODGE_RIGHT}
 #Keeps track of how much effort the player should put in to get up
@@ -32,6 +38,14 @@ var penalties = 20
 #keeps track if the player is knocked out
 var isKnockedOut = false
 
+#keeps track of left punch or right punch
+var isLeft : bool = false
+
+#keeps track of the type of punch the player inflicted
+var leftPunch : bool = false
+
+var game_end : bool = false
+
 func _ready() -> void:
 	updateHealth()
 	#print(player.name)
@@ -41,18 +55,35 @@ func updateHealth():
 	healthBar.max_value = MAX_HEALTH
 	healthText.text = "HP %d/%d" % [health, MAX_HEALTH]
 
-func click():
-	var punchtype : String
+func punch():
 	if isHoldingUP:
-		punchtype = "punch up"
+		animationPlayer.play("punch up")
+		return
+	
+	if isLeft:
+		animationPlayer.play("punch_mid_L")
+		isLeft = false
 	else:
-		punchtype = "punch mid"
+		animationPlayer.play("punch_mid_R")
+		isLeft = true
+	
+	pass
+
+func grandmaPunchType(grandmaLeftPunch : bool):
+	leftPunch = grandmaLeftPunch
+	pass
+
+func click():
 	
 	if health > 0:
 		isDodging = false
-		animationPlayer.play(punchtype)
+		punch()
+		#animationPlayer.play(punchtype)
 	elif isKnockedOut:
-		animationPlayer.play("strugle")
+		if leftPunch:
+			animationPlayer.play("strugle_L")
+		else:
+			animationPlayer.play("strugle_R")
 		#tries += 1
 		pass
 	var penalizations = (faints * penalties)
@@ -61,24 +92,38 @@ func click():
 		updateHealth()
 		tries = 0
 		effort += 5
-		animationPlayer.play("up")
+		if leftPunch:
+			animationPlayer.play("up_L")
+		else:
+			animationPlayer.play("up_R")
 		isKnockedOut = false
 		recovered.emit()
+		#stop timer stuff here:
+		number_card_animator.play("keep going")
 		print("and he's back in the game!!")
 	
 	# This is the state when the player looses
 	if penalizations >= MAX_HEALTH:
-		print("GAME OVER")
-		knockedOut.emit()
-		player.playing_game = false
-		player.controlAllowed = true
-		AudioManager.resume_main_music()
-		ROOT.emit_gamestate("lose")
-		ROOT.queue_free()
+		#GAME OVER FROM LOST HEALTH
+		game_end = true
+		card_number = -2
+		number_card_label.text = "KO"
+		number_card_animator.play("next")
+		$Timer.wait_time = 1.5
+		$Timer.start()
 		pass
 	
 	pass
 
+func game_over(game_state : String):
+	print("GAME OVER")
+	$die.play()
+	knockedOut.emit()
+	player.controlAllowed = true
+	player.playing_game = false
+	AudioManager.resume_main_music()
+	ROOT.emit_gamestate(game_state)
+	ROOT.queue_free()
 
 func hit(punchtype : punchType):
 	var input_dir = Input.get_vector("Left", "Right", "Backward", "Forward")
@@ -104,18 +149,25 @@ func strugle():
 func apply_damage(damage_taken : int):
 	if !isDodging and health > 0:
 		health = health - damage_taken
-		#print("took 99 damage")
-		pass
-	if !isKnockedOut and health < 0:
+		
+	if !isKnockedOut and health <= 0:
 		isKnockedOut = true
+		$Playerhit.play()
 		health = 0
 		faints += 1
 		print("knocked out")
 		knockedOut.emit()
-		animationPlayer.play("down")
-	updateHealth()
-	pass	
-	print("health is ", health)
+		if !game_end:
+			card_number = 10
+			number_card_label.text = "%d" % [card_number]
+			number_card_animator.play("start")
+			$Timer.start()
+		#keep this in here! This is the animation for when the player is hit down...
+		if leftPunch:
+			animationPlayer.play("down_L")
+		else:
+			animationPlayer.play("down_R")
+	updateHealth()	
 
 func setIsDodging(value : bool):
 	isDodging = value
@@ -135,13 +187,17 @@ func dodge(dodgetype : dodgeDirection):
 	pass
 
 func _input(event: InputEvent) -> void:
+	if game_end:
+		return
 	
 	if event.is_action_pressed("Left"):
 		#animationPlayer.play("dodge left")
 		dodge(dodgeDirection.DODGE_LEFT)
+		$dodge.play()
 		pass
 	if event.is_action_pressed("Right"):
 		dodge(dodgeDirection.DODGE_RIGHT)
+		$dodge.play()
 		print("dodging")
 	
 	if event.is_action_pressed("Forward"):
@@ -156,3 +212,30 @@ func _input(event: InputEvent) -> void:
 		pass
 	
 	pass
+
+func update_text():
+	card_number -= 1
+	number_card_label.text = "%d" % [card_number]
+	number_card_animator.play("next")
+	pass
+
+func _on_timer_timeout() -> void:
+	print("updated text: ", card_number)
+	if !isKnockedOut: 
+		return
+	#decrease time limit
+	if card_number == -2:
+		#GAME OVER FROM GIVE UP
+		game_over("lose")
+		return
+	if card_number >= 0:
+		update_text()
+	if card_number == -1:
+		number_card_label.text = "TKO"
+		number_card_animator.play("next")
+		card_number -= 1
+	$Timer.wait_time = 1
+	$Timer.start()
+	# check it that time limit is 0
+	# if 0, end game
+	pass # Replace with function body.

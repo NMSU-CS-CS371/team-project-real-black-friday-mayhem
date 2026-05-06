@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://rnu2qslu1tgm" path="res://Scripts/Shopping/Shopping2/hand_enemy.gd" id="1_ma1if"]
 [ext_resource type="Texture2D" uid="uid://dby1utd2o8642" path="res://Assets/Sprites/Hands.png" id="2_pyopn"]
 [ext_resource type="AudioStream" uid="uid://b5etoqx3lvkdl" path="res://Assets/SFX/SoundEffects/Shopping/Grab.ogg" id="3_b1p3o"]
+[ext_resource type="AudioStream" uid="uid://b6rvgcencis2g" path="res://Assets/SFX/slap.ogg" id="4_dg7an"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5245f"]
 radius = 18.609673
@@ -37,5 +38,10 @@ shape = SubResource("CircleShape2D_ra4fw")
 
 [node name="grab" type="AudioStreamPlayer" parent="." unique_id=1489852129]
 stream = ExtResource("3_b1p3o")
+volume_db = -15.0
+bus = &"SFX"
+
+[node name="slap" type="AudioStreamPlayer" parent="." unique_id=1992359125]
+stream = ExtResource("4_dg7an")
 volume_db = -5.0
 bus = &"SFX"

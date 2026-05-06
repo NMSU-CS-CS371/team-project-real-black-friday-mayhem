@@ -56,3 +56,7 @@ func apply_settings():
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+
+
+func _on_credits_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/credits.tscn")
