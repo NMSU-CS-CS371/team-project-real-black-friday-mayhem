@@ -78,8 +78,8 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	print("karen hit")
 	body.stop_velocity.emit()
 	playing_game = true
-	if $Lines.playing:
-			$Lines.stop()
+	if $Lines2.playing:
+			$Lines2.stop()
 	
 	for npc in get_tree().get_nodes_in_group("npc"):
 		if npc.has_method("mute_voice_lines"):
@@ -107,11 +107,11 @@ func _on_minigame_finished(result):
 
 func _on_detection_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		$Lines.volume_db = 8
-		if not $Lines.playing:
-			$Lines.play()
+		$Lines2.volume_db = 8
+		if not $Lines2.playing:
+			$Lines2.play()
 
 func _on_detection_body_exited(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		if $Lines.playing:
-			$Lines.volume_db = -4
+		if $Lines2.playing:
+			$Lines2.volume_db = -4
