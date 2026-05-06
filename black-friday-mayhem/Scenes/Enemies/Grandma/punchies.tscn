@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dinoianssf53v" path="res://Assets/Sprites/GrannyStart3.png" id="11_vnbpt"]
 [ext_resource type="Texture2D" uid="uid://3oeseefllvdn" path="res://Assets/Sprites/GrannyPlayerPunch.png" id="11_y5h7r"]
 [ext_resource type="Texture2D" uid="uid://bvlx8ebr0ts8j" path="res://Assets/Sprites/GrannyPlayerUppercut.png" id="12_h21qg"]
+[ext_resource type="Texture2D" uid="uid://nhk84oby2gi" path="res://Assets/Sprites/GrannyReadyLazer.png" id="16_huqyo"]
 [ext_resource type="Texture2D" uid="uid://cmlii7i5i3edr" path="res://Assets/Sprites/explosion_sprite_sheet.png" id="16_t6tsm"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="23_rym8o"]
 
@@ -462,6 +463,14 @@ animations = [{
 "loop": true,
 "name": &"wind up power",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_huqyo")
+}],
+"loop": true,
+"name": &"yes_grandma_powerup",
+"speed": 5.0
 }]
 
 [sub_resource type="Animation" id="Animation_1qmhv"]
@@ -696,7 +705,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"idle"]
+"values": [&"startup"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -860,10 +869,10 @@ tracks/0/path = NodePath("Grandma:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.26666668, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.46666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [&"power", &"laser", &"power"]
+"values": [&"power", &"yes_grandma_powerup", &"laser", &"power"]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -872,7 +881,7 @@ tracks/1/path = NodePath("Grandma")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5, 0.6666667, 0.8333333),
+"times": PackedFloat32Array(0.46666667, 0.6666667, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": [10],
@@ -1905,7 +1914,7 @@ frame_progress = 1.0
 position = Vector2(414.75, 365)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_7fpuf")
-animation = &"idle"
+animation = &"startup"
 script = ExtResource("4_to6mo")
 ROOT = NodePath("..")
 player = NodePath("../Player")
