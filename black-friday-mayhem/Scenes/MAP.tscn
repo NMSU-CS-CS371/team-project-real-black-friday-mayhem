@@ -1191,3 +1191,4 @@ parameters/looping = true
 stream = ExtResource("4_16hua")
 volume_db = -14.0
 autoplay = true
+bus = &"Music"
