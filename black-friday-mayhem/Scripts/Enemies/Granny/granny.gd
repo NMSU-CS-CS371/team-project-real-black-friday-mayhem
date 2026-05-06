@@ -105,6 +105,9 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 		if body.has_signal("stop_velocity"):
 			body.stop_velocity.emit()
 			playing_game = true
+			for npc in get_tree().get_nodes_in_group("npc"):
+				if npc.has_method("mute_voice_lines"):
+					npc.mute_voice_lines()
 		AudioManager.pause_main_music()
 		await $Stage3.finished
 		var killer_instinct = punchies.instantiate()
@@ -122,6 +125,9 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 #function to recieve game results 
 func _on_minigame_finished(result):
 	playing_game = false
+	for npc in get_tree().get_nodes_in_group("npc"):
+		if npc.has_method("unmute_voice_lines"):
+			npc.unmute_voice_lines()
 	AudioManager.resume_main_music()
 	if result == "win" :
 		is_defeated = true

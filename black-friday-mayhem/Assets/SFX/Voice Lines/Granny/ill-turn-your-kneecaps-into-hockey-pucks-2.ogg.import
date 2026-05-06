@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c6ongwmfhsu8v"
+path="res://.godot/imported/ill-turn-your-kneecaps-into-hockey-pucks-2.ogg-4313bc4eaf1ac69f9986670b5d942733.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Granny/ill-turn-your-kneecaps-into-hockey-pucks-2.ogg"
+dest_files=["res://.godot/imported/ill-turn-your-kneecaps-into-hockey-pucks-2.ogg-4313bc4eaf1ac69f9986670b5d942733.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

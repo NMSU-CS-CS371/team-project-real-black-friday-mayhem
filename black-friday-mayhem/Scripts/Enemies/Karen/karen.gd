@@ -80,6 +80,11 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	playing_game = true
 	if $Lines.playing:
 			$Lines.stop()
+	
+	for npc in get_tree().get_nodes_in_group("npc"):
+		if npc.has_method("mute_voice_lines"):
+			npc.mute_voice_lines()
+			
 	var battle = game.instantiate()
 	add_child(battle)
 	battle.connect("game_finished", Callable(self, "_on_minigame_finished"))
@@ -94,6 +99,10 @@ func _on_minigame_finished(result):
 	else :
 		is_defeated = false
 	playing_game = false
+	
+	for npc in get_tree().get_nodes_in_group("npc"):
+		if npc.has_method("unmute_voice_lines"):
+			npc.unmute_voice_lines()
 	AudioManager.resume_main_music()
 
 func _on_detection_body_entered(body: Node3D) -> void:

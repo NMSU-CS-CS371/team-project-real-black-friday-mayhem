@@ -17,10 +17,14 @@ var down_timer := 0.0
 var standing_y := 0.0
 var fallen_y_offset := -0.7
 
+var voices_muted := false
+
 @export var sprit: GeometryInstance3D
 var mask
 
 func _ready():
+	add_to_group("npc")
+	
 	home_position = global_position
 
 	mask = sprit.material_override
@@ -172,6 +176,9 @@ func pick_new_target():
 
 
 func _on_detection_body_entered(body: Node3D) -> void:
+	if voices_muted:
+		return
+
 	if is_player(body):
 		$Lines.volume_db = 6
 
@@ -183,12 +190,18 @@ func _on_detection_body_entered(body: Node3D) -> void:
 
 
 func _on_detection_body_exited(body: Node3D) -> void:
+	if voices_muted:
+		return
+
 	if is_player(body):
 		if $Lines.playing:
 			$Lines.volume_db = 2
 
 
 func _on_detection_2_body_entered(body: Node3D) -> void:
+	if voices_muted:
+		return
+
 	if is_player(body):
 		if $Lines.playing:
 			return
@@ -199,6 +212,22 @@ func _on_detection_2_body_entered(body: Node3D) -> void:
 
 
 func _on_detection_2_body_exited(body: Node3D) -> void:
+	if voices_muted:
+		return
+
 	if is_player(body):
 		if $Lines2.playing:
 			$Lines2.volume_db = 1
+
+func mute_voice_lines() -> void:
+	voices_muted = true
+
+	if has_node("Lines") and $Lines.playing:
+		$Lines.stop()
+
+	if has_node("Lines2") and $Lines2.playing:
+		$Lines2.stop()
+
+
+func unmute_voice_lines() -> void:
+	voices_muted = false

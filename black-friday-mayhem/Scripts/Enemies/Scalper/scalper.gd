@@ -51,6 +51,9 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 	if (is_defeated || playing_game) : 
 		return
 	playing_game = true
+	for npc in get_tree().get_nodes_in_group("npc"):
+		if npc.has_method("mute_voice_lines"):
+			npc.mute_voice_lines()
 	AudioManager.pause_main_music()
 	
 	#Tells the player to stop velocity
@@ -71,4 +74,7 @@ func _on_minigame_finished(result):
 		is_defeated = true
 		print("Enemy defeated")
 	playing_game = false
+	for npc in get_tree().get_nodes_in_group("npc"):
+		if npc.has_method("unmute_voice_lines"):
+			npc.unmute_voice_lines()
 	AudioManager.resume_main_music()
