@@ -18,6 +18,7 @@ offset_left = -183.0
 offset_top = -195.0
 offset_right = 1188.0
 offset_bottom = 742.0
+mouse_filter = 2
 texture = ExtResource("2_qa6v8")
 
 [node name="GameTimer" type="Timer" parent="." unique_id=169254731]
@@ -60,6 +61,7 @@ bus = &"Music"
 [node name="money" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1273557492]
 stream = ExtResource("8_nkfk1")
 volume_db = 5.0
+pitch_scale = 0.4
 bus = &"SFX"
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

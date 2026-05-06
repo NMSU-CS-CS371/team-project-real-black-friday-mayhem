@@ -2,7 +2,7 @@ extends Node2D #Hand Mini Game
 #this is the main mini game node which starts the game 
 #and connects everything together
 #
-
+@onready var optionsPanel = $Camera2D.optionsPanel
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 @onready var player = get_parent().get_parent().player
 @onready var checkpoint = get_parent()
@@ -17,6 +17,7 @@ var playing = false
 func _ready() -> void:
 	update_wallet_label()
 	reskin_background()
+	optionsPanel.position.x = $Camera2D.position.x - 275
 	
 	# finish transitioning scene
 	SceneTransition.get_parent().get_node("ColorRect").color.a = 255
@@ -53,6 +54,7 @@ func end_game():
 	SceneTransition.play("fade_in")
 	await get_tree().create_timer(0.5).timeout
 	emit_signal("shop_finished")
+	optionsPanel.reset_position()
 	queue_free()
 	
 	
@@ -95,6 +97,8 @@ func reskin_background():
 # update label with wallet balance
 func update_wallet_label(): 
 	if playing :
+		# random pitch shift
+		$SoundEffects/money.pitch_scale = randf_range(0.95,1.05)
 		$SoundEffects/money.play()
 	if player.inventory.wallet < 0:
 		wallet_label.text = "-$" + str(abs(player.inventory.wallet))

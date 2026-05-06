@@ -115,6 +115,7 @@ func purchase_item():
 	#	2:
 	#		item = load("res://Assets/Inventory/Items/Placeholders/cat.tres")
 	player.inventory.insert(thisItem)
+	get_parent().update_wallet_label()
 	queue_free()
 
 func _on_countdown_finished():
