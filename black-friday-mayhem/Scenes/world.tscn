@@ -1974,12 +1974,6 @@ offset_bottom = 530.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="crowd" type="AudioStreamPlayer" parent="." unique_id=1468638605]
-stream = ExtResource("44_6mm6r")
-volume_db = -15.0
-autoplay = true
-bus = &"SFX"
-
 [node name="UncleTony" parent="." unique_id=662486931 instance=ExtResource("44_t6yt7")]
 transform = Transform3D(-3.934025e-07, 1.5, -1.5298986e-07, 0, -6.556708e-08, -3.5, -9, -6.556708e-08, 6.6873992e-15, -25.226393, 3.6456518, -81.0833)
 
