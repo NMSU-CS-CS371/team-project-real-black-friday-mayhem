@@ -80,7 +80,7 @@ viewport_path = NodePath("Main Camera/SubViewportContainer/Sign Viewport")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c5t2i"]
 shader = ExtResource("6_yky5r")
-shader_parameter/pixel_count = Vector2(192, 192)
+shader_parameter/pixel_count = Vector2(256, 256)
 shader_parameter/mask_tex = ExtResource("11_04jkj")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_e0ngr"]
@@ -303,7 +303,7 @@ obstacle_size = Vector3(2, 2, 2)
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.39, 1.7789459, 10.941)
 
 [node name="Granny" parent="." unique_id=96948668 instance=ExtResource("5_axeuq")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.879, 1.9248326, -69.988)
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -15, 1.925, -50)
 
 [node name="Karen" parent="." unique_id=1890375671 instance=ExtResource("6_pt3ps")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9, 1.7206182, -19.925)
