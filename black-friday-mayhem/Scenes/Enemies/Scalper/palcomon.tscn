@@ -930,6 +930,7 @@ bus = &"SFX"
 
 [node name="cartHit" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1262448427]
 stream = ExtResource("66_xps8k")
+volume_db = -6.0
 bus = &"SFX"
 
 [node name="button" type="AudioStreamPlayer" parent="SoundEffects" unique_id=529174709]
@@ -938,15 +939,17 @@ bus = &"SFX"
 
 [node name="textbox" type="AudioStreamPlayer" parent="SoundEffects" unique_id=663510983]
 stream = ExtResource("68_ab4vy")
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="cartInsult" type="AudioStreamPlayer" parent="SoundEffects" unique_id=2093021842]
 stream = ExtResource("69_xps8k")
+volume_db = -6.0
 bus = &"SFX"
 
 [node name="damage" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1981495593]
 stream = ExtResource("70_0opgk")
-volume_db = -5.0
+volume_db = -6.0
 bus = &"SFX"
 
 [connection signal="pressed" from="ButtonPanel/MarginContainer/HBoxContainer/Attack" to="." method="_on_attack_pressed"]
