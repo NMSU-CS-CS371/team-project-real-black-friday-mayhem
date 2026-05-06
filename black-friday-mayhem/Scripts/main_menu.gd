@@ -50,6 +50,8 @@ func apply_settings():
 	AudioManager.set_master_volume(masterVolume)
 	AudioManager.set_music_volume(musicVolume)
 	AudioManager.set_sfx_volume(sfxVolume)
+	
+	# set window settings
 	if config.get_value("options", "fullscreen") == 0:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	else:
