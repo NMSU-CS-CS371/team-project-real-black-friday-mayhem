@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://ccyc5rcpydalj" path="res://Scenes/options_panel.tscn" id="13_atqvy"]
 [ext_resource type="Texture2D" uid="uid://mpltxjryajvu" path="res://Assets/Textures/CardStand_Front.png" id="13_t2t4p"]
 [ext_resource type="Texture2D" uid="uid://cxbc3dlddg4wb" path="res://Assets/Textures/CardStandSides2.png" id="14_0pcbe"]
+[ext_resource type="PackedScene" uid="uid://dwlx432ijbvev" path="res://Assets/Textures/the_rolling_giantchristmas.glb" id="14_gwaj6"]
 [ext_resource type="Texture2D" uid="uid://d0psqhdu6swe0" path="res://Assets/Textures/CardStandSides.png" id="15_axeuq"]
 [ext_resource type="Texture2D" uid="uid://7x3erj8ce7vt" path="res://Assets/Textures/CardStandSign_Top.png" id="16_1cojt"]
 [ext_resource type="PackedScene" uid="uid://bpmoy7jgaerya" path="res://Assets/Prefabs/bench_1.tscn" id="17_0pcbe"]
@@ -33,7 +34,6 @@
 [ext_resource type="PackedScene" uid="uid://be120ua8ptsyq" path="res://Assets/Prefabs/table_group_2.tscn" id="28_atqvy"]
 [ext_resource type="PackedScene" uid="uid://cn2kvg01twjbh" path="res://Assets/Prefabs/vending_machine_1.tscn" id="28_o2rbt"]
 [ext_resource type="PackedScene" uid="uid://c4fw7cw13pnco" path="res://Assets/Prefabs/vending_machine_3.tscn" id="29_1vso6"]
-[ext_resource type="PackedScene" uid="uid://dwlx432ijbvev" path="res://Assets/Textures/the_rolling_giantchristmas.glb" id="30_6mm6r"]
 [ext_resource type="PackedScene" uid="uid://dk2hv8s0l84gn" path="res://Assets/Prefabs/vending_machine_2.tscn" id="30_o2rbt"]
 [ext_resource type="PackedScene" uid="uid://dx4gclkv1klyo" path="res://Assets/Prefabs/table_group_1.tscn" id="30_w5giw"]
 [ext_resource type="PackedScene" uid="uid://rdnsb0qw1eg5" path="res://Assets/Prefabs/JKNickels.tscn" id="31_1vso6"]
@@ -421,6 +421,9 @@ mouse_filter = 2
 
 [node name="InventoryUI" parent="CenterContainer" unique_id=1984823051 instance=ExtResource("8_k7acu")]
 layout_mode = 2
+
+[node name="Sketchfab_Scene" parent="." unique_id=572255975 instance=ExtResource("14_gwaj6")]
+transform = Transform3D(3.9342859, 0, -0.7220766, 0, 4, 0, 0.7220766, 0, 3.9342859, -11.009502, 0.9615617, 88.59821)
 
 [node name="Objects" type="Node3D" parent="." unique_id=48724979]
 
