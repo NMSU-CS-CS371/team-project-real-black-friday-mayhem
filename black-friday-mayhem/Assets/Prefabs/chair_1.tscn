@@ -6,15 +6,15 @@
 albedo_color = Color(0.8, 0.8, 0.8, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8drul"]
-size = Vector3(0.428868, 0.853117, 0.518972)
+size = Vector3(0.428868, 0.85771084, 0.518972)
 
 [node name="Chair" type="StaticBody3D" unique_id=201268420]
-transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0.55, 0)
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4265585, 0.028549999)
 mesh = ExtResource("2_8drul")
 surface_material_override/0 = SubResource("StandardMaterial3D_qimx7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=729517197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43029696, 0)
 shape = SubResource("BoxShape3D_8drul")
