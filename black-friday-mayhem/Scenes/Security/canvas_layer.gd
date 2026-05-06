@@ -57,5 +57,4 @@ func next_dialogue():
 func finish_dialogue():
 	music.stop()
 	dialogue_finished.emit()
-	AudioManager.resume_main_music()
-	queue_free()
+	get_parent().queue_free()

@@ -21,6 +21,10 @@ var isLeft = false
 
 var skillCheck = false
 
+var isPlayingAudio : bool = false
+
+var weAttackinWithTheLazersYo : bool = false
+
 func _ready() -> void:
 	health = MAX_HEALTH
 	healthBar.max_value = MAX_HEALTH
@@ -48,6 +52,7 @@ func take_damage(damage_taken : int):
 		animationPlayer.play("ANGER")
 		pass
 	if health <= 0:
+		$"../VoiceLines/Insults".stop()
 		healthText.text = "HP 0/%d" % [MAX_HEALTH]
 		stopDisrespectingMyGangsYo()
 		player.game_end = true
@@ -91,15 +96,20 @@ func chooseAttackStyle():
 	match randOption:
 		2:
 			if murderObliteration:
+				weAttackinWithTheLazersYo = true
 				animationPlayer.play("laser_attack")
 			else:
+				weAttackinWithTheLazersYo = false
 				punchDir()
 		0: 
 			if murderObliteration:
+				weAttackinWithTheLazersYo = true
 				animationPlayer.play("laser_attack")
 			else:
+				weAttackinWithTheLazersYo = false
 				punchDir()
 		1:
+			weAttackinWithTheLazersYo = false
 			punchDir()
 			pass	
 	pass
@@ -127,4 +137,15 @@ func punchDir():
 		player.grandmaPunchType(false)
 		isLeft = true
 		pass
+
+func playInsults():
+	if !isPlayingAudio:
+		$"../VoiceLines/Insults".play()
+		isPlayingAudio = true
+	
 	pass
+
+
+func _on_insults_finished() -> void:
+	isPlayingAudio = false
+	pass # Replace with function body.

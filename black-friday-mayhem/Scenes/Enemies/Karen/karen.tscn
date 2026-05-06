@@ -199,9 +199,10 @@ metadata/_edit_group_ = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012212992, -0.020061731, 0.017125845)
 shape = SubResource("SphereShape3D_mye1j")
 
-[node name="Lines" type="AudioStreamPlayer" parent="." index="4" unique_id=989675800]
+[node name="Lines2" type="AudioStreamPlayer3D" parent="." index="4" unique_id=1324882564]
 stream = SubResource("AudioStreamRandomizer_wqsnw")
 volume_db = 10.0
+max_distance = 20.0
 bus = &"SFX"
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_detection_body_entered"]

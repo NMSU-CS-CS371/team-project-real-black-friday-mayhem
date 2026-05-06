@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://1seau3a5k072"]
+
+[ext_resource type="Script" uid="uid://bt26ogw7ys2hk" path="res://Scripts/credits.gd" id="1_gryuy"]
+[ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="2_ccovl"]
+[ext_resource type="AudioStream" uid="uid://b7mf24yccfgew" path="res://Assets/SFX/Theme for Harold var 1 - End.mp3" id="3_ccovl"]
+
+[node name="Credits" type="Control" unique_id=1050250793]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gryuy")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1218879476]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.55021006, 0.16750184, 0.2250574, 1)
+
+[node name="CreditText" type="RichTextLabel" parent="." unique_id=1508636135]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = 571.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ccovl")
+bbcode_enabled = true
+text = "[center]
+[font_size=68][color=black]Black Friday Mayhem[/color][/font_size]
+[font_size=64]A Game By[/font_size]
+
+Jaiden Covarrubias
+Jaiden Hernandez
+Jolena Stolp
+Logan Flowers
+Samiel Thai
+
+
+[font_size=52][color=yellow]Programming[/color][/font_size]
+Sprites: Jolena Stolp
+NPCs: Logan Flowers, Jolena Stolp
+Map and Objects: Logan Flowers, Samiel Thai
+Player Physics: Jaiden Covarrubias
+Shaders: Jaiden Covarrubias
+Minigames: Jaiden Hernandez, Jolena Stolp, Jaiden Covarrubias
+Inventory and Items: Jaiden Hernandez
+
+
+[font_size=52][color=cyan]Art And Assets[/color][/font_size]
+Enemies: Jolena Stolp
+NPC's: Logan Flowers
+
+
+[font_size=52][color=purple]Music and Sound[/color][/font_size]
+Music: Kevin MacLeod
+
+Voices:
+Male NPCs: Logan Flowers
+Female NPCs: Jolena Stolp
+Scalper: Logan Flowers
+Karen: Jaiden Hernandez
+Grandma: Mia Flowers
+[/center]
+
+"
+fit_content = true
+scroll_active = false
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=101950308]
+stream = ExtResource("3_ccovl")
+autoplay = true
