@@ -43,7 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://hdqc6cvvl3db" path="res://Scenes/npc2.tscn" id="38_04jkj"]
 [ext_resource type="PackedScene" uid="uid://bb72cyg50fji" path="res://Assets/Prefabs/Entrance.tscn" id="38_r74th"]
 [ext_resource type="PackedScene" uid="uid://jfn5xlts2mih" path="res://Assets/Prefabs/camaro.tscn" id="40_lkcvt"]
-[ext_resource type="AudioStream" uid="uid://6qlfv4wv10hn" path="res://Assets/SFX/background.ogg" id="44_t6yt7"]
+[ext_resource type="AudioStream" uid="uid://6qlfv4wv10hn" path="res://Assets/SFX/background.ogg" id="44_6mm6r"]
 [ext_resource type="PackedScene" uid="uid://ty8fkiet13xa" path="res://Assets/Prefabs/UncleTony.tscn" id="44_t6yt7"]
 [ext_resource type="PackedScene" uid="uid://cyk75lw831sr" path="res://Assets/Prefabs/weiner.tscn" id="45_al5m0"]
 
@@ -1932,10 +1932,11 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="crowd" type="AudioStreamPlayer" parent="." unique_id=1468638605]
-stream = ExtResource("44_t6yt7")
+stream = ExtResource("44_6mm6r")
 volume_db = -15.0
 autoplay = true
 bus = &"SFX"
+
 [node name="UncleTony" parent="." unique_id=662486931 instance=ExtResource("44_t6yt7")]
 transform = Transform3D(-3.934025e-07, 1.5, -1.5298986e-07, 0, -6.556708e-08, -3.5, -9, -6.556708e-08, 6.6873992e-15, -25.226393, 3.6456518, -81.0833)
 
