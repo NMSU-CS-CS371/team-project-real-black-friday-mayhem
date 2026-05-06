@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cw7k0fd1xs3bg"]
+
+[ext_resource type="PackedScene" uid="uid://dc5tyo6exe0bu" path="res://Assets/Sprites/transformers_2007_movie_bumblebee_2007_vehicle.glb" id="1_dxnba"]
+
+[node name="Sketchfab_Scene" unique_id=1705195733 instance=ExtResource("1_dxnba")]
+
+[node name="Object_5" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/mat0 _17" parent_id_path=PackedInt32Array(282331860) index="0" unique_id=1151153521]
+layers = 32
+
+[node name="Object_7" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/mat0  _16" parent_id_path=PackedInt32Array(1833477844) index="0" unique_id=1401596120]
+layers = 32
+
+[node name="Object_9" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/mat0  1_15" parent_id_path=PackedInt32Array(1078222474) index="0" unique_id=1050404353]
+layers = 32
+
+[node name="Object_11" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/mat0 1_14" parent_id_path=PackedInt32Array(1267255843) index="0" unique_id=1305230577]
+layers = 32
+
+[node name="Object_13" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/mat0 2_13" parent_id_path=PackedInt32Array(1992842286) index="0" unique_id=2028516032]
+layers = 32
+
+[node name="Object_15" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/mat0 3_12" parent_id_path=PackedInt32Array(496045534) index="0" unique_id=1152674884]
+layers = 32
+
+[node name="Object_17" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/mat0 4_11" parent_id_path=PackedInt32Array(1966492939) index="0" unique_id=771301188]
+layers = 32
+
+[node name="Object_19" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/mat0 5_10" parent_id_path=PackedInt32Array(586859868) index="0" unique_id=814403510]
+layers = 32
+
+[node name="Object_21" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/mat0 6_9" parent_id_path=PackedInt32Array(997470674) index="0" unique_id=340899960]
+layers = 32
+
+[node name="Object_28" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/Material_002_7/GLTF_created_3/Skeleton3D" parent_id_path=PackedInt32Array(1176148963) index="0" unique_id=2048866585]
+layers = 32
+
+[node name="Object_35" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/Material_002_5/GLTF_created_2/Skeleton3D" parent_id_path=PackedInt32Array(526846388) index="0" unique_id=1093000658]
+layers = 32
+
+[node name="Object_42" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/Material_002_3/GLTF_created_1/Skeleton3D" parent_id_path=PackedInt32Array(128728281) index="0" unique_id=1693690809]
+layers = 32
+
+[node name="Object_49" parent="Sketchfab_model/root/GLTF_SceneRootNode/Bee 2007 Car_0/Material_002_1/GLTF_created_0/Skeleton3D" parent_id_path=PackedInt32Array(328923320) index="0" unique_id=616957401]
+layers = 32

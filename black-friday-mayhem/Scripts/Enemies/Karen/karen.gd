@@ -13,8 +13,12 @@ var game = preload("res://Scenes/Enemies/Karen/button_masher.tscn")
 #mini game varibles
 var is_defeated = false
 var playing_game = false
+
+var mask
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	mask = $AnimatedSprite3D/Sprite3D/SubViewport/AnimatedSprite2D
 	center = global_position  # starting point = center of circle
 	cycle()
 
@@ -28,6 +32,7 @@ func cycle():
 		moving = false
 		if not is_defeated and not playing_game:
 			sprite.play("idle")
+			mask.play("idle")
 		await get_tree().create_timer(pause_time).timeout
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,10 +41,12 @@ func _physics_process(delta: float) -> void:
 	if is_defeated :
 		#sprite.play("defeated") #need to implement
 		sprite.play("idle")
+		mask.play("idle")
 		velocity = Vector3.ZERO
 	#else if playing game dont move
 	elif playing_game :
 		sprite.play("idle")
+		mask.play("idle")
 		velocity = Vector3.ZERO
 	#else moving
 	else :
