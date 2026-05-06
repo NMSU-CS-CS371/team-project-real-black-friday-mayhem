@@ -24,7 +24,7 @@ func _ready() -> void:
 	$SceneTransition/ColorRect.visible = false
 	
 	# play countdown animation
-	$SoundEffects/countdown.play()
+	#$SoundEffects/countdown.play()
 	$AnimationPlayer.play("flash_sale")
 	await $AnimationPlayer.animation_finished
 	countdown_finished.emit()

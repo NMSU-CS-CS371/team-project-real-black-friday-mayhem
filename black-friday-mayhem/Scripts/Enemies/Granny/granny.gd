@@ -89,7 +89,6 @@ func update_animation() -> void:
 			play_if_not_flip("Back", false)
 
 func _on_hit_box_body_entered(body: Node3D) -> void:
-	# Ensure the player exists and has stop_velocity signal
 	if not body.is_in_group("Player"):
 		return
 	# Temporary fallback if player variable isn't fully set
@@ -102,6 +101,7 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 		print("oh heck no")
 		if player and "playing_game" in player:
 			player.playing_game = true
+		# Ensure the player exists and has stop_velocity signal
 		if body.has_signal("stop_velocity"):
 			body.stop_velocity.emit()
 			playing_game = true
