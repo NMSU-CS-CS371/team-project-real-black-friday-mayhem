@@ -31,10 +31,10 @@ func _process(_delta):
 		else:
 			open()
 
-func show_item_tag(name: String, desc: String):
+func show_item_tag(name_: String, desc: String):
 	var tagPos
 	
-	$ItemTag.get_child(1).text = name
+	$ItemTag.get_child(1).text = name_
 	$ItemTag.get_child(2).text = desc
 	
 	# put item name and description on tag 

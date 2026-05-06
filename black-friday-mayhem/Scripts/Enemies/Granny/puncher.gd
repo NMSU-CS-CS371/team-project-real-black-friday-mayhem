@@ -117,6 +117,7 @@ func click():
 
 func game_over(game_state : String):
 	print("GAME OVER")
+	$die.play()
 	knockedOut.emit()
 	player.controlAllowed = true
 	player.playing_game = false
@@ -151,6 +152,7 @@ func apply_damage(damage_taken : int):
 		
 	if !isKnockedOut and health <= 0:
 		isKnockedOut = true
+		$Playerhit.play()
 		health = 0
 		faints += 1
 		print("knocked out")
@@ -191,9 +193,11 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Left"):
 		#animationPlayer.play("dodge left")
 		dodge(dodgeDirection.DODGE_LEFT)
+		$dodge.play()
 		pass
 	if event.is_action_pressed("Right"):
 		dodge(dodgeDirection.DODGE_RIGHT)
+		$dodge.play()
 		print("dodging")
 	
 	if event.is_action_pressed("Forward"):

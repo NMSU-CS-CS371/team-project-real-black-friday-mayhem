@@ -43,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://hdqc6cvvl3db" path="res://Scenes/npc2.tscn" id="38_04jkj"]
 [ext_resource type="PackedScene" uid="uid://bb72cyg50fji" path="res://Assets/Prefabs/Entrance.tscn" id="38_r74th"]
 [ext_resource type="PackedScene" uid="uid://jfn5xlts2mih" path="res://Assets/Prefabs/camaro.tscn" id="40_lkcvt"]
+[ext_resource type="AudioStream" uid="uid://6qlfv4wv10hn" path="res://Assets/SFX/background.ogg" id="44_t6yt7"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pt3ps"]
 panorama = ExtResource("2_hmc15")
@@ -1927,6 +1928,12 @@ offset_right = 675.0
 offset_bottom = 530.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="crowd" type="AudioStreamPlayer" parent="." unique_id=1468638605]
+stream = ExtResource("44_t6yt7")
+volume_db = -15.0
+autoplay = true
+bus = &"SFX"
 
 [connection signal="entered_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
 [connection signal="exited_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
