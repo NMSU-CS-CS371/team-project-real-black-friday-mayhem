@@ -224,7 +224,7 @@ func enemy_attack(text, damage) :
 			defending_count = 0
 		await $AnimationPlayer.animation_finished
 		$EnemyContatainer/Enemy.texture = idleTexture
-		display_text("you succsefully DEFENDED!")
+		display_text("you succesfully DEFENDED!")
 		await textbox_closed
 		$ButtonPanel.show()
 		is_Defending = false
