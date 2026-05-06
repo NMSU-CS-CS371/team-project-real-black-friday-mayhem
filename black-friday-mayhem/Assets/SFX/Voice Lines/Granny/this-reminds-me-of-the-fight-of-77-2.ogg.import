@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bsqh4ag5aq4p8"
+path="res://.godot/imported/this-reminds-me-of-the-fight-of-77-2.ogg-ab34a2b23ca4386eb2e58530b42c586b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/SFX/Voice Lines/Granny/this-reminds-me-of-the-fight-of-77-2.ogg"
+dest_files=["res://.godot/imported/this-reminds-me-of-the-fight-of-77-2.ogg-ab34a2b23ca4386eb2e58530b42c586b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
