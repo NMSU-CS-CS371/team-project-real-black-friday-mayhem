@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://0t614et1gy4j"]
+
+[ext_resource type="Texture2D" uid="uid://bonf7d7cfrpoa" path="res://Assets/Textures/Restroom.png" id="1_3y3hn"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xphsp"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 2.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1hj83"]
+albedo_texture = ExtResource("1_3y3hn")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rnyyx"]
+material = SubResource("StandardMaterial3D_1hj83")
+size = Vector2(2, 2.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3y3hn"]
+size = Vector3(2.5, 2.55, 0.25)
+
+[node name="Restroom_Sign" type="StaticBody3D" unique_id=99520409]
+
+[node name="Holder" type="MeshInstance3D" parent="." unique_id=1801764941]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.25, 1.204, 0)
+mesh = SubResource("CylinderMesh_xphsp")
+
+[node name="Sign" type="MeshInstance3D" parent="." unique_id=1081882897]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_rnyyx")
+
+[node name="Sign2" type="MeshInstance3D" parent="." unique_id=2109147089]
+transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, 0, 0, 0)
+mesh = SubResource("PlaneMesh_rnyyx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1000641855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.025, 0)
+shape = SubResource("BoxShape3D_3y3hn")
