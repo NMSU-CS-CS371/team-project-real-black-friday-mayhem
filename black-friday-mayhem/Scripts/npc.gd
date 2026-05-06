@@ -180,13 +180,13 @@ func _on_detection_body_entered(body: Node3D) -> void:
 		return
 
 	if is_player(body):
-		$Lines.volume_db = 6
+		$Lines3.volume_db = 6
 
-		if $Lines2.playing:
-			$Lines2.stop()
+		if $Lines4.playing:
+			$Lines4.stop()
 
-		if not $Lines.playing:
-			$Lines.play()
+		if not $Lines3.playing:
+			$Lines3.play()
 
 
 func _on_detection_body_exited(body: Node3D) -> void:
@@ -194,8 +194,8 @@ func _on_detection_body_exited(body: Node3D) -> void:
 		return
 
 	if is_player(body):
-		if $Lines.playing:
-			$Lines.volume_db = 2
+		if $Lines3.playing:
+			$Lines3.volume_db = 2
 
 
 func _on_detection_2_body_entered(body: Node3D) -> void:
@@ -203,12 +203,12 @@ func _on_detection_2_body_entered(body: Node3D) -> void:
 		return
 
 	if is_player(body):
-		if $Lines.playing:
+		if $Lines3.playing:
 			return
 
-		$Lines2.volume_db = 4
-		if not $Lines2.playing:
-			$Lines2.play()
+		$Lines4.volume_db = 4
+		if not $Lines4.playing:
+			$Lines4.play()
 
 
 func _on_detection_2_body_exited(body: Node3D) -> void:
@@ -216,17 +216,17 @@ func _on_detection_2_body_exited(body: Node3D) -> void:
 		return
 
 	if is_player(body):
-		if $Lines2.playing:
-			$Lines2.volume_db = 1
+		if $Lines4.playing:
+			$Lines4.volume_db = 1
 
 func mute_voice_lines() -> void:
 	voices_muted = true
 
-	if has_node("Lines") and $Lines.playing:
-		$Lines.stop()
+	if has_node("Lines3") and $Lines3.playing:
+		$Lines3.stop()
 
-	if has_node("Lines2") and $Lines2.playing:
-		$Lines2.stop()
+	if has_node("Lines4") and $Lines4.playing:
+		$Lines4.stop()
 
 
 func unmute_voice_lines() -> void:

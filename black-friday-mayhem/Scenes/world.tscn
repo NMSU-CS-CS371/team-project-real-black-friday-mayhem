@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://dkgjh0skteeui" path="res://Assets/Prefabs/trashcan1.tscn" id="27_qebug"]
 [ext_resource type="PackedScene" uid="uid://be120ua8ptsyq" path="res://Assets/Prefabs/table_group_2.tscn" id="28_atqvy"]
 [ext_resource type="PackedScene" uid="uid://cn2kvg01twjbh" path="res://Assets/Prefabs/vending_machine_1.tscn" id="28_o2rbt"]
+[ext_resource type="AudioStream" uid="uid://6qlfv4wv10hn" path="res://Assets/SFX/background.ogg" id="28_t6yt7"]
 [ext_resource type="PackedScene" uid="uid://c4fw7cw13pnco" path="res://Assets/Prefabs/vending_machine_3.tscn" id="29_1vso6"]
 [ext_resource type="PackedScene" uid="uid://dk2hv8s0l84gn" path="res://Assets/Prefabs/vending_machine_2.tscn" id="30_o2rbt"]
 [ext_resource type="PackedScene" uid="uid://dx4gclkv1klyo" path="res://Assets/Prefabs/table_group_1.tscn" id="30_w5giw"]
@@ -353,6 +354,7 @@ playerCamera = NodePath("../../Player Viewport/MainPlayerSHOPPING/Camera3D")
 [node name="Player Viewport" type="SubViewport" parent="Main Camera/SubViewportContainer" unique_id=1948652456]
 handle_input_locally = false
 snap_2d_transforms_to_pixel = true
+audio_listener_enable_3d = true
 canvas_cull_mask = 4294967263
 size = Vector2i(800, 600)
 render_target_update_mode = 4
@@ -1594,6 +1596,42 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.
 
 [node name="Vending Machine4" parent="Objects/Vending Machines" unique_id=308709333 instance=ExtResource("29_1vso6")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6, 1.9, 19.77709)
+
+[node name="Eating1" type="AudioStreamPlayer3D" parent="Objects" unique_id=1630676831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.02011, 2.4952266, -79.75135)
+stream = ExtResource("28_t6yt7")
+attenuation_model = 3
+volume_db = -2.0
+autoplay = true
+max_distance = 20.0
+bus = &"SFX"
+
+[node name="Eating4" type="AudioStreamPlayer3D" parent="Objects" unique_id=34539485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.02011, 2.4952266, -79.75135)
+stream = ExtResource("28_t6yt7")
+attenuation_model = 3
+volume_db = -2.0
+autoplay = true
+max_distance = 20.0
+bus = &"SFX"
+
+[node name="Eating2" type="AudioStreamPlayer3D" parent="Objects" unique_id=13505796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008343697, 2.4952266, -79.75135)
+stream = ExtResource("28_t6yt7")
+attenuation_model = 3
+volume_db = -2.0
+autoplay = true
+max_distance = 20.0
+bus = &"SFX"
+
+[node name="Eating3" type="AudioStreamPlayer3D" parent="Objects" unique_id=1127495722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.457383, 2.4952266, -79.75135)
+stream = ExtResource("28_t6yt7")
+attenuation_model = 3
+volume_db = -2.0
+autoplay = true
+max_distance = 20.0
+bus = &"SFX"
 
 [node name="Tables" type="Node" parent="Objects" unique_id=1379358546]
 

@@ -301,4 +301,8 @@ animation = &"idle"
 frame_progress = 0.027772715
 script = ExtResource("5_fkybt")
 
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=155057204]
+doppler_tracking = 2
+current = true
+
 [connection signal="stop_velocity" from="." to="." method="_on_stop_velocity"]
