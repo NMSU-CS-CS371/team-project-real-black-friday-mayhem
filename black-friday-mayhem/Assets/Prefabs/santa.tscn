@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cavye5a8538y2"]
+
+[ext_resource type="PackedScene" uid="uid://dwlx432ijbvev" path="res://Assets/Textures/the_rolling_giantchristmas.glb" id="1_kj1a7"]
+
+[node name="santa" type="Node3D" unique_id=859597871]
+
+[node name="Sketchfab_Scene" parent="." unique_id=572255975 instance=ExtResource("1_kj1a7")]

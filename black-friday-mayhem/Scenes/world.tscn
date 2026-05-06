@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://be120ua8ptsyq" path="res://Assets/Prefabs/table_group_2.tscn" id="28_atqvy"]
 [ext_resource type="PackedScene" uid="uid://cn2kvg01twjbh" path="res://Assets/Prefabs/vending_machine_1.tscn" id="28_o2rbt"]
 [ext_resource type="PackedScene" uid="uid://c4fw7cw13pnco" path="res://Assets/Prefabs/vending_machine_3.tscn" id="29_1vso6"]
+[ext_resource type="PackedScene" uid="uid://dwlx432ijbvev" path="res://Assets/Textures/the_rolling_giantchristmas.glb" id="30_6mm6r"]
 [ext_resource type="PackedScene" uid="uid://dk2hv8s0l84gn" path="res://Assets/Prefabs/vending_machine_2.tscn" id="30_o2rbt"]
 [ext_resource type="PackedScene" uid="uid://dx4gclkv1klyo" path="res://Assets/Prefabs/table_group_1.tscn" id="30_w5giw"]
 [ext_resource type="PackedScene" uid="uid://rdnsb0qw1eg5" path="res://Assets/Prefabs/JKNickels.tscn" id="31_1vso6"]
@@ -1616,6 +1617,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, -72.50007)
 
 [node name="table_group-SE" parent="Objects/Tables" unique_id=1352009745 instance=ExtResource("30_w5giw")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 1, -72.50007)
+
+[node name="Sketchfab_Scene" parent="Objects" unique_id=572255975 instance=ExtResource("30_6mm6r")]
+transform = Transform3D(3.7176135, 0, -1.4762625, 0, 4, 0, 1.4762625, 0, 3.7176135, -12.426657, 0.99893856, 88.42241)
 
 [node name="GameSlop_check" parent="." unique_id=2111298163 instance=ExtResource("3_8j60k")]
 transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -0.16439772)
