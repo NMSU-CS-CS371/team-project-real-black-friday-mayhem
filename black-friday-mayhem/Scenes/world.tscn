@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://httpo0j712de" path="res://Scenes/npc.tscn" id="12_c5t2i"]
 [ext_resource type="Texture2D" uid="uid://b2ps72j644hs3" path="res://Assets/Textures/blackfriday.png" id="12_kn0ld"]
 [ext_resource type="Texture2D" uid="uid://cta5gmbomrd7p" path="res://Assets/Textures/floorMesh.png" id="12_pt3ps"]
+[ext_resource type="PackedScene" uid="uid://ccyc5rcpydalj" path="res://Scenes/options_panel.tscn" id="13_atqvy"]
 [ext_resource type="Texture2D" uid="uid://mpltxjryajvu" path="res://Assets/Textures/CardStand_Front.png" id="13_t2t4p"]
 [ext_resource type="Texture2D" uid="uid://cxbc3dlddg4wb" path="res://Assets/Textures/CardStandSides2.png" id="14_0pcbe"]
 [ext_resource type="Texture2D" uid="uid://d0psqhdu6swe0" path="res://Assets/Textures/CardStandSides.png" id="15_axeuq"]
@@ -1913,6 +1914,20 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.255132, 1.9228578, 1
 [node name="Win_a_car" parent="." unique_id=1379428736 instance=ExtResource("40_lkcvt")]
 transform = Transform3D(-0.5179473, 0, -1.4077395, 0, 1.5, 0, 1.4077395, 0, -0.5179473, 16.24766, 0.9479971, 85.3299)
 
+[node name="OptionsPanel" parent="." unique_id=1421833873 instance=ExtResource("13_atqvy")]
+z_index = 1000
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 125.0
+offset_top = 70.0
+offset_right = 675.0
+offset_bottom = 530.0
+grow_horizontal = 1
+grow_vertical = 1
+
 [connection signal="entered_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
 [connection signal="exited_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
 [connection signal="entered_shop" from="HindsNobel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
@@ -1925,3 +1940,4 @@ transform = Transform3D(-0.5179473, 0, -1.4077395, 0, 1.5, 0, 1.4077395, 0, -0.5
 [connection signal="exited_shop" from="Stacys_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
 [connection signal="entered_shop" from="Radioshack_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
 [connection signal="exited_shop" from="Radioshack_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]
+[connection signal="settings_updated" from="OptionsPanel" to="." method="apply_settings"]
