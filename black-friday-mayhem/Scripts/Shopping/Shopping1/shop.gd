@@ -41,7 +41,6 @@ func _process(_delta: float) -> void:
 # called every time an item is removed
 func _on_item_exiting() -> void:
 	itemsRemoved += 1
-	update_wallet_label()
 
 func minigameOver() -> void:
 	# reactivate rectangle used for transition animation
@@ -78,6 +77,8 @@ func reskin_background():
 # update label with wallet balance
 func update_wallet_label():
 	if playing :
+		# random pitch shift
+		$SoundEffects/money.pitch_scale = randf_range(0.95,1.05)
 		$SoundEffects/money.play()
 	if player.inventory.wallet < 0:
 		walletLabel.text = "-$" + str(abs(player.inventory.wallet))

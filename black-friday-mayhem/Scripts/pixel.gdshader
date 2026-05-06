@@ -7,8 +7,8 @@ shader_type canvas_item;
 // Variables in Godot shader strats with "uniform"
 // This is a two-dimensional vector: vec2
 // This variable tells us how many pixels we want there to be in our pixel art.
-// I give it a default of 64x64
-uniform vec2 pixel_count = vec2(64.0);
+// I give it a default of 256x256
+uniform vec2 pixel_count = vec2(256.0);
 uniform sampler2D mask_tex;
 
 void fragment()

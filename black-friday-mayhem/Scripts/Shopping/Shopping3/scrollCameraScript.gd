@@ -2,6 +2,7 @@ extends Camera2D
 
 @export var scrollSpeed : float
 @onready var sceneTransition = $"../SceneTransition/AnimationPlayer"
+@onready var optionsPanel = get_tree().get_root().get_child(2).get_node("OptionsPanel")
 #var firstPosition : Vector3
 var scrollAllowed: bool = false
 
@@ -15,4 +16,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if scrollAllowed:
 		position.x += scrollSpeed * delta
+		optionsPanel.position.x = position.x - 275
 	#print(position)

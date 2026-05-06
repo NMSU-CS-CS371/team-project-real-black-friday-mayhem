@@ -925,6 +925,7 @@ bus = &"SFX"
 
 [node name="crowHit" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1525508043]
 stream = ExtResource("65_hcf34")
+volume_db = -2.0
 bus = &"SFX"
 
 [node name="cartHit" type="AudioStreamPlayer" parent="SoundEffects" unique_id=1262448427]

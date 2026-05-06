@@ -94,6 +94,8 @@ func reskin_background():
 # update label with wallet balance
 func update_wallet_label():
 	if playing :
+		# random pitch shift
+		$SoundEffects/money.pitch_scale = randf_range(0.95,1.05)
 		$SoundEffects/money.play()
 	if player.inventory.wallet < 0:
 		wallet_label.text = "-$" + str(abs(player.inventory.wallet))
