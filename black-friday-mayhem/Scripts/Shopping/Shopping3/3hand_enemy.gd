@@ -28,6 +28,9 @@ var target_item : Node2D = null
 @export var move_speed: = 280
 var elapsed_time := 0.0
 
+# stop the hand when its been clicked
+var slapped: bool = false
+
 #Variables for Spawning Hands
 var base_position: Vector2
 var spawn_side: int
@@ -50,6 +53,9 @@ func _ready() -> void:
 
 #function that gets called every frame
 func _process(delta):
+	if slapped:
+		return
+		
 	# Handle waiting and moving toward item
 	elapsed_time += delta
 	match state:
@@ -115,6 +121,12 @@ func _on_click_area_input(_viewport, event, _shape_idx):
 	#if the mouse clicks on hand delete
 	if event is InputEventMouseButton and event.pressed:
 		#print("Hand clicked!")
+		$slap.pitch_scale = randf_range(0.9,1.1)
+		$slap.play()
+		slapped = true
+		visible = false
+		await $slap.finished
+		print("clicked hand")
 		queue_free()#delete hand
 		
 #for finding an item to go for 
@@ -163,6 +175,8 @@ func steal_item():
 		#delete item
 		$grab.play()
 		target_item.queue_free()
+		slapped = true
+		visible = false
 		await $grab.finished
 	#delete hand
 	queue_free()
