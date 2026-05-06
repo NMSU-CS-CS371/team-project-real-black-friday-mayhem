@@ -14,8 +14,11 @@ var playing_game = false
 var punchies = preload("res://Scenes/Enemies/Grandma/punchies.tscn")
 var hit = 0
 
+var mask
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	mask = $AnimatedSprite3D/Sprite3D/SubViewport/AnimatedSprite2D
 	center = global_position  # starting point = center of circle
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,6 +27,7 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector3.ZERO
 	elif playing_game :
 		sprite.play("Final")
+		mask.play("Final")
 		velocity = Vector3.ZERO
 	else :
 		#-move-
@@ -44,6 +48,9 @@ func play_if_not_flip(anim, flip):
 	if sprite.animation != anim:
 		sprite.flip_h = flip
 		sprite.play(anim)
+		mask.flip_h = flip
+		mask.play(anim)
+		
 
 #update the animation
 func update_animation() -> void:
@@ -112,7 +119,7 @@ func _on_hit_box_body_entered(body: Node3D) -> void:
 		else :
 			$Stage2.play()
 		hit = hit + 1
-		print("sorry.!")
+		print("sorry.! : ", hit)
 		
 # *jolena's code, thank you :, ) 
 #function to recieve game results 

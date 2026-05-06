@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dog1ww3yna0an"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m656"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vg021"]
+material = SubResource("StandardMaterial3D_0m656")
+size = Vector3(5.32, 0.05, 0.22)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_taxbc"]
+albedo_color = Color(0.53333336, 0.3254902, 0.23137255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nhmwv"]
+material = SubResource("StandardMaterial3D_taxbc")
+size = Vector3(5.2, 1, 0.15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhpuk"]
+albedo_color = Color(0.1882353, 0.29411766, 0.39215687, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_scq8u"]
+material = SubResource("StandardMaterial3D_vhpuk")
+size = Vector3(5.3, 0.2, 0.46)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kyy8v"]
+albedo_color = Color(0.53333336, 0.3254902, 0.23137255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vob55"]
+material = SubResource("StandardMaterial3D_kyy8v")
+size = Vector3(5.2, 0.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_btd7j"]
+material = SubResource("StandardMaterial3D_0m656")
+size = Vector3(0.22, 0.05, 5.32)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vyy05"]
+material = SubResource("StandardMaterial3D_taxbc")
+size = Vector3(0.15, 1, 5.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sou2d"]
+material = SubResource("StandardMaterial3D_vhpuk")
+size = Vector3(0.46, 0.2, 5.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o4uqa"]
+material = SubResource("StandardMaterial3D_kyy8v")
+size = Vector3(0.5, 0.5, 5.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_btd7j"]
+size = Vector3(0.65, 1.25, 5.375)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vyy05"]
+size = Vector3(5.375, 1.25, 0.65)
+
+[node name="bench" type="StaticBody3D" unique_id=1883675947]
+
+[node name="Back Top" type="MeshInstance3D" parent="." unique_id=1809445799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 1.025, 0)
+mesh = SubResource("BoxMesh_vg021")
+
+[node name="Back" type="MeshInstance3D" parent="." unique_id=128644085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0.5, 0)
+mesh = SubResource("BoxMesh_nhmwv")
+
+[node name="Cushion" type="MeshInstance3D" parent="." unique_id=1210983664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0.5, 0.305)
+mesh = SubResource("BoxMesh_scq8u")
+
+[node name="Seat" type="MeshInstance3D" parent="." unique_id=78744407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0.25, 0.25)
+mesh = SubResource("BoxMesh_vob55")
+
+[node name="Back Top2" type="MeshInstance3D" parent="." unique_id=2097399527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.025, 2.6)
+mesh = SubResource("BoxMesh_btd7j")
+
+[node name="Back2" type="MeshInstance3D" parent="." unique_id=1460611312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 2.6)
+mesh = SubResource("BoxMesh_vyy05")
+
+[node name="Cushion2" type="MeshInstance3D" parent="." unique_id=1388228007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305, 0.5, 2.6)
+mesh = SubResource("BoxMesh_sou2d")
+
+[node name="Seat2" type="MeshInstance3D" parent="." unique_id=1193786028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.25, 2.6)
+mesh = SubResource("BoxMesh_o4uqa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1706276899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.625, 2.575)
+shape = SubResource("BoxShape3D_btd7j")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=754507185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.575, 0.625, 0.2)
+shape = SubResource("BoxShape3D_vyy05")

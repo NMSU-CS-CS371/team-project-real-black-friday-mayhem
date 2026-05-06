@@ -54,7 +54,7 @@ func check_settings() -> bool:
 	var music_check = configGlobal.get_value("options","music_volume") == music_volume
 	var sfx_check = configGlobal.get_value("options", "sfx_volume") == sfx_volume
 	var fullscreen_check = configGlobal.get_value("options", "fullscreen") == fullscreen
-	return music_check and sfx_check and fullscreen_check
+	return master_check and music_check and sfx_check and fullscreen_check
 
 func _on_save_pressed():
 	# save all settings into config file
@@ -76,3 +76,6 @@ func _on_cancel_pressed():
 func _on_discard_pressed():
 	$ConfirmPanel.visible = false
 	visible = false
+	
+func reset_position():
+	position = Vector2(125.0,70.0)

@@ -1,0 +1,324 @@
+[gd_scene format=3 uid="uid://be120ua8ptsyq"]
+
+[ext_resource type="PackedScene" uid="uid://deduoysww6qei" path="res://Assets/Prefabs/table_1.tscn" id="1_ltkvh"]
+[ext_resource type="PackedScene" uid="uid://bkefcj4aqvtr4" path="res://Assets/Prefabs/chair_1.tscn" id="2_cohmv"]
+[ext_resource type="PackedScene" uid="uid://b8abm6vuqaf2e" path="res://Assets/Prefabs/bench_2.tscn" id="3_n1pna"]
+[ext_resource type="PackedScene" uid="uid://dog1ww3yna0an" path="res://Assets/Prefabs/bench_3.tscn" id="4_tng3q"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xjpnb"]
+height = 1.2
+radius = 1.0
+
+[node name="table_group" type="Node3D" unique_id=1323420013]
+
+[node name="table_cluster" type="StaticBody3D" parent="." unique_id=550644585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 1.5)
+
+[node name="Table" parent="table_cluster" unique_id=1651096817 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster" unique_id=201268420 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster" unique_id=1493337656 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair4" parent="table_cluster" unique_id=829209412 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster" unique_id=560028413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster2" type="StaticBody3D" parent="." unique_id=1906630702]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 1.5)
+
+[node name="Table" parent="table_cluster2" unique_id=1688956557 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster2" unique_id=134612517 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster2" unique_id=1099081436 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster2" unique_id=1650924763 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="Chair4" parent="table_cluster2" unique_id=459733233 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster2" unique_id=614678583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster3" type="StaticBody3D" parent="." unique_id=408238149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
+
+[node name="Table" parent="table_cluster3" unique_id=783801636 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster3" unique_id=990304493 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster3" unique_id=11755966 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster3" unique_id=1967266913 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="Chair4" parent="table_cluster3" unique_id=1194648625 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster3" unique_id=390356829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster4" type="StaticBody3D" parent="." unique_id=171877870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 1.5)
+
+[node name="Table" parent="table_cluster4" unique_id=570175664 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster4" unique_id=1302268757 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster4" unique_id=1421298784 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster4" unique_id=1085532463 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster4" unique_id=540478343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster13" type="StaticBody3D" parent="." unique_id=1464720842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 4.5)
+
+[node name="Table" parent="table_cluster13" unique_id=473264799 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster13" unique_id=2134175125 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster13" unique_id=478010400 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair4" parent="table_cluster13" unique_id=1066938307 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster13" unique_id=1717135148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster14" type="StaticBody3D" parent="." unique_id=126487666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 4.5)
+
+[node name="Table" parent="table_cluster14" unique_id=1077552436 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster14" unique_id=679730836 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster14" unique_id=1377692166 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster14" unique_id=1643048421 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="Chair4" parent="table_cluster14" unique_id=843878180 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster14" unique_id=1470125763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster15" type="StaticBody3D" parent="." unique_id=652520188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 4.5)
+
+[node name="Table" parent="table_cluster15" unique_id=1505721901 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster15" unique_id=211639504 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster15" unique_id=1668957881 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster15" unique_id=1053915004 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="Chair4" parent="table_cluster15" unique_id=1628034365 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster15" unique_id=628000954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster16" type="StaticBody3D" parent="." unique_id=936823258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 4.5)
+
+[node name="Table" parent="table_cluster16" unique_id=1651715842 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster16" unique_id=642077528 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster16" unique_id=1085260385 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster16" unique_id=1270937942 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster16" unique_id=977243510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster5" type="StaticBody3D" parent="." unique_id=1274665248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -1.5)
+
+[node name="Table" parent="table_cluster5" unique_id=1601747566 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster5" unique_id=719333564 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster5" unique_id=1483219514 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair4" parent="table_cluster5" unique_id=1925365955 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster5" unique_id=1658082372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster6" type="StaticBody3D" parent="." unique_id=1310032316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -1.5)
+
+[node name="Table" parent="table_cluster6" unique_id=355623132 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster6" unique_id=1358777024 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster6" unique_id=1048184501 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster6" unique_id=1013741544 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="Chair4" parent="table_cluster6" unique_id=836368947 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster6" unique_id=254484420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster7" type="StaticBody3D" parent="." unique_id=242209522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -1.5)
+
+[node name="Table" parent="table_cluster7" unique_id=2007348463 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster7" unique_id=856913580 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster7" unique_id=935532618 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster7" unique_id=702903555 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="Chair4" parent="table_cluster7" unique_id=416681152 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster7" unique_id=181685498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster8" type="StaticBody3D" parent="." unique_id=406316370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -1.5)
+
+[node name="Table" parent="table_cluster8" unique_id=186907943 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair" parent="table_cluster8" unique_id=1453578105 instance=ExtResource("2_cohmv")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+
+[node name="Chair2" parent="table_cluster8" unique_id=542877812 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster8" unique_id=1830344122 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster8" unique_id=2036615196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster9" type="StaticBody3D" parent="." unique_id=1355736972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -4.5)
+
+[node name="Table" parent="table_cluster9" unique_id=1941088174 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair2" parent="table_cluster9" unique_id=448008133 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair4" parent="table_cluster9" unique_id=1956011448 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster9" unique_id=612800586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster10" type="StaticBody3D" parent="." unique_id=1816390858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -4.5)
+
+[node name="Table" parent="table_cluster10" unique_id=567700000 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair2" parent="table_cluster10" unique_id=1192149993 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster10" unique_id=1910234433 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="Chair4" parent="table_cluster10" unique_id=1399474451 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster10" unique_id=530179467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster11" type="StaticBody3D" parent="." unique_id=1319735000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -4.5)
+
+[node name="Table" parent="table_cluster11" unique_id=1476985042 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair2" parent="table_cluster11" unique_id=760201463 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster11" unique_id=962582790 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="Chair4" parent="table_cluster11" unique_id=1304619851 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster11" unique_id=971249108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="table_cluster12" type="StaticBody3D" parent="." unique_id=242998618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -4.5)
+
+[node name="Table" parent="table_cluster12" unique_id=1067605979 instance=ExtResource("1_ltkvh")]
+
+[node name="Chair2" parent="table_cluster12" unique_id=2590864 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair3" parent="table_cluster12" unique_id=1775430834 instance=ExtResource("2_cohmv")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table_cluster12" unique_id=604554888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")
+
+[node name="bench" parent="." unique_id=1979223082 instance=ExtResource("3_n1pna")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.6, 0, 3)
+
+[node name="bench4" parent="." unique_id=1020899287 instance=ExtResource("3_n1pna")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.6, 0, 3)
+
+[node name="bench2" parent="." unique_id=1883675947 instance=ExtResource("4_tng3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6, 0, -5.6)
+
+[node name="bench3" parent="." unique_id=1938975885 instance=ExtResource("4_tng3q")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.6, 0, -5.6)

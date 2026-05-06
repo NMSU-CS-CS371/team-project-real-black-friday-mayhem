@@ -126,6 +126,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_wt3rr"]
+viewport_path = NodePath("AnimatedSprite3D/Sprite3D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqwxa"]
+resource_local_to_scene = true
+transparency = 1
+blend_mode = 2
+cull_mode = 2
+albedo_texture = SubResource("ViewportTexture_wt3rr")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_e5khw"]
+viewport_path = NodePath("AnimatedSprite3D/Sprite3D/SubViewport")
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b26ap"]
 radius = 0.07519531
 height = 0.29977417
@@ -145,10 +160,27 @@ script = ExtResource("2_yl5dt")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
+layers = 32
 sprite_frames = SubResource("SpriteFrames_cdurs")
 animation = &"Back"
 frame_progress = 0.9990915
 metadata/_edit_group_ = true
+
+[node name="Sprite3D" type="Sprite3D" parent="AnimatedSprite3D" index="0" unique_id=1155363674]
+material_override = SubResource("StandardMaterial3D_bqwxa")
+texture = SubResource("ViewportTexture_e5khw")
+
+[node name="SubViewport" type="SubViewport" parent="AnimatedSprite3D/Sprite3D" index="0" unique_id=1318511241]
+transparent_bg = true
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+size = Vector2i(22, 32)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite3D/Sprite3D/SubViewport" index="0" unique_id=1252083201]
+position = Vector2(10.57, 15.82)
+sprite_frames = SubResource("SpriteFrames_cdurs")
+animation = &"Back"
 
 [node name="HitBox" parent="." index="1" unique_id=1793053768]
 metadata/_edit_group_ = true
@@ -170,6 +202,7 @@ shape = SubResource("SphereShape3D_mye1j")
 [node name="Lines" type="AudioStreamPlayer" parent="." index="4" unique_id=989675800]
 stream = SubResource("AudioStreamRandomizer_wqsnw")
 volume_db = 10.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_detection_body_exited"]

@@ -1,0 +1,5 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://de82a3g327nry"]
+
+[resource]
+blend_mode = 2
+cull_mode = 2
