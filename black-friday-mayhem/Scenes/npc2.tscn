@@ -132,6 +132,7 @@ shape = SubResource("CapsuleShape3D_lqs13")
 [node name="Lines" type="AudioStreamPlayer" parent="." unique_id=528360321]
 stream = SubResource("AudioStreamRandomizer_ylssn")
 volume_db = 16.0
+bus = &"SFX"
 
 [node name="Detection2" type="Area3D" parent="." unique_id=2139898842]
 transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
@@ -142,6 +143,7 @@ shape = SubResource("CapsuleShape3D_lqs13")
 
 [node name="Lines2" type="AudioStreamPlayer" parent="." unique_id=452651502]
 stream = SubResource("AudioStreamRandomizer_qifcm")
+bus = &"SFX"
 
 [node name="HitboxArea3D" type="Area3D" parent="." unique_id=1540170922]
 

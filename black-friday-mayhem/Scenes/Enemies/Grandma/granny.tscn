@@ -264,11 +264,14 @@ metadata/_edit_group_ = true
 [node name="Stage1" type="AudioStreamPlayer" parent="." index="3" unique_id=1523589280]
 stream = SubResource("AudioStreamRandomizer_e6b8a")
 volume_db = 7.0
+bus = &"SFX"
 
 [node name="Stage2" type="AudioStreamPlayer" parent="." index="4" unique_id=1478922331]
 stream = SubResource("AudioStreamRandomizer_s71q8")
 volume_db = 7.0
+bus = &"SFX"
 
 [node name="Stage3" type="AudioStreamPlayer" parent="." index="5" unique_id=1960881346]
 stream = SubResource("AudioStreamRandomizer_5gs0h")
 volume_db = 8.0
+bus = &"SFX"

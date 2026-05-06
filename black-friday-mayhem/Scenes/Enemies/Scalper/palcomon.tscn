@@ -839,70 +839,87 @@ bus = &"Music"
 [node name="Win" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1566605202]
 stream = SubResource("AudioStreamRandomizer_rgly6")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Lose" type="AudioStreamPlayer" parent="VoiceLines" unique_id=602103215]
 stream = SubResource("AudioStreamRandomizer_8h7pb")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="PickCrow" type="AudioStreamPlayer" parent="VoiceLines" unique_id=493685138]
 stream = SubResource("AudioStreamRandomizer_if1uj")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="PickCart" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1689240993]
 stream = SubResource("AudioStreamRandomizer_qww76")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Defend" type="AudioStreamPlayer" parent="VoiceLines" unique_id=575137286]
 stream = SubResource("AudioStreamRandomizer_y50ci")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Defend2" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1738885956]
 stream = SubResource("AudioStreamRandomizer_xgyx7")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Defend3" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1219360064]
 stream = SubResource("AudioStreamRandomizer_qac1j")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Defend4" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1173790219]
 stream = SubResource("AudioStreamRandomizer_hcf34")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Defend5" type="AudioStreamPlayer" parent="VoiceLines" unique_id=705047768]
 stream = SubResource("AudioStreamRandomizer_7fmt4")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Defend6" type="AudioStreamPlayer" parent="VoiceLines" unique_id=2010345294]
 stream = SubResource("AudioStreamRandomizer_y7us2")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Run" type="AudioStreamPlayer" parent="VoiceLines" unique_id=393726476]
 stream = SubResource("AudioStreamRandomizer_20s1q")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="CrowInsult" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1939677032]
 stream = SubResource("AudioStreamRandomizer_l0gox")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="CartInsult" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1251193256]
 stream = SubResource("AudioStreamRandomizer_5gnpb")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Attack" type="AudioStreamPlayer" parent="VoiceLines" unique_id=786136423]
 stream = SubResource("AudioStreamRandomizer_nkt63")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="GO" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1861535154]
 stream = SubResource("AudioStreamRandomizer_3vac6")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Start" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1532447733]
 stream = SubResource("AudioStreamRandomizer_f0mp3")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="Insults" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1217681991]
 stream = SubResource("AudioStreamRandomizer_8g0hk")
 volume_db = 15.0
+bus = &"SFX"
 
 [node name="SoundEffects" type="Node" parent="." unique_id=1241367690]
 
