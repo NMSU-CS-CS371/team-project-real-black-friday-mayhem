@@ -115,10 +115,10 @@ func _on_hitbox_body_entered(body: Node3D) -> void:
 
 
 func _on_hitbox_body_shape_entered(
-	body_rid: RID,
+	_body_rid: RID,
 	body: Node3D,
-	body_shape_index: int,
-	local_shape_index: int
+	_body_shape_index: int,
+	_local_shape_index: int
 ) -> void:
 	try_knock_down(body)
 

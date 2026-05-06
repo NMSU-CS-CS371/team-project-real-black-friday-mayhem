@@ -14,7 +14,7 @@ func _ready() -> void:
 	await get_tree().create_timer(0.5).timeout
 	SceneTransition.get_parent().get_node("ColorRect").visible = false
 
-func _input(event: InputEvent):
+func _input(_event: InputEvent):
 	if Input.is_action_just_pressed("esc"):
 		if $OptionsPanel.visible:
 			$OptionsPanel._on_x_button_pressed()

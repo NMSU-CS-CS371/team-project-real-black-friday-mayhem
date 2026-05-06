@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cja07lh1kaks4" path="res://Scripts/world.gd" id="1_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
-[ext_resource type="Texture2D" uid="uid://prmie2p64mvl" path="res://Assets/Textures/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="2_hmc15"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="2_hmc15"]
 [ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/checkpoint.tscn" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://ca777g5pbeirm" path="res://Scenes/Enemies/Grandma/granny.tscn" id="5_axeuq"]
@@ -29,12 +29,12 @@
 [ext_resource type="PackedScene" uid="uid://m57n0n3tjke1" path="res://Assets/Prefabs/gameSlop.tscn" id="25_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://dnhf125eqduw0" path="res://Assets/Prefabs/plant_1.tscn" id="25_pt3ps"]
 [ext_resource type="PackedScene" uid="uid://dkgjh0skteeui" path="res://Assets/Prefabs/trashcan1.tscn" id="27_qebug"]
-[ext_resource type="PackedScene" uid="uid://be120ua8ptsyq" path="res://Assets/Prefabs/table_group_2.tscn" id="28_atqvy"]
+[ext_resource type="PackedScene" path="res://Assets/Prefabs/table_group_2.tscn" id="28_atqvy"]
 [ext_resource type="PackedScene" uid="uid://cn2kvg01twjbh" path="res://Assets/Prefabs/vending_machine_1.tscn" id="28_o2rbt"]
 [ext_resource type="AudioStream" uid="uid://6qlfv4wv10hn" path="res://Assets/SFX/background.ogg" id="28_t6yt7"]
 [ext_resource type="PackedScene" uid="uid://c4fw7cw13pnco" path="res://Assets/Prefabs/vending_machine_3.tscn" id="29_1vso6"]
 [ext_resource type="PackedScene" uid="uid://dk2hv8s0l84gn" path="res://Assets/Prefabs/vending_machine_2.tscn" id="30_o2rbt"]
-[ext_resource type="PackedScene" uid="uid://dx4gclkv1klyo" path="res://Assets/Prefabs/table_group_1.tscn" id="30_w5giw"]
+[ext_resource type="PackedScene" path="res://Assets/Prefabs/table_group_1.tscn" id="30_w5giw"]
 [ext_resource type="PackedScene" uid="uid://rdnsb0qw1eg5" path="res://Assets/Prefabs/JKNickels.tscn" id="31_1vso6"]
 [ext_resource type="PackedScene" uid="uid://c4ggjrujmnp14" path="res://Assets/Prefabs/Stacys.tscn" id="32_r0ikl"]
 [ext_resource type="PackedScene" uid="uid://belmw8gxhtjl7" path="res://Assets/Prefabs/RadioShack.tscn" id="33_opbav"]
@@ -44,6 +44,9 @@
 [ext_resource type="PackedScene" uid="uid://hdqc6cvvl3db" path="res://Scenes/npc2.tscn" id="38_04jkj"]
 [ext_resource type="PackedScene" uid="uid://bb72cyg50fji" path="res://Assets/Prefabs/Entrance.tscn" id="38_r74th"]
 [ext_resource type="PackedScene" uid="uid://jfn5xlts2mih" path="res://Assets/Prefabs/camaro.tscn" id="40_lkcvt"]
+[ext_resource type="AudioStream" uid="uid://6qlfv4wv10hn" path="res://Assets/SFX/background.ogg" id="44_6mm6r"]
+[ext_resource type="PackedScene" uid="uid://ty8fkiet13xa" path="res://Assets/Prefabs/UncleTony.tscn" id="44_t6yt7"]
+[ext_resource type="PackedScene" uid="uid://cyk75lw831sr" path="res://Assets/Prefabs/weiner.tscn" id="45_al5m0"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_pt3ps"]
 panorama = ExtResource("2_hmc15")
@@ -1400,12 +1403,12 @@ mesh = SubResource("PlaneMesh_t6yt7")
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, 8.849642, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign" unique_id=2013609420]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4594917, 0, 0.8467908)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4594917, -0.30631256, -0.0059962273)
 layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign" unique_id=215928988]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4594917, 0, 0.8467908)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4594917, 0, 0.050364733)
 mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign2" type="Node3D" parent="Objects/Sale Signs3" unique_id=142609323]
@@ -1424,24 +1427,24 @@ mesh = SubResource("PlaneMesh_lkcvt")
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 13.147577, 7.945343, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign3" unique_id=495734645]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3618755, 0, 0.38084197)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3732858, 0, -0.29079795)
 layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign3" unique_id=1325320032]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3618755, 0, 0.38084197)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3618755, 0.021156311, -0.295429)
 mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign4" type="Node3D" parent="Objects/Sale Signs3" unique_id=1839567416]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -24.943779, 6.9223995, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign4" unique_id=767764101]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3962302, 0, -0.00834918)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3962302, 0, -0.6762295)
 layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign4" unique_id=1334702718]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3962302, 0, -0.00834918)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3962302, 0.022346497, -0.64547443)
 mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign6" type="Node3D" parent="Objects/Sale Signs3" unique_id=1555631145]
@@ -1472,12 +1475,12 @@ mesh = SubResource("PlaneMesh_lkcvt")
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 32.12686, 5.31357, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign8" unique_id=451715243]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2267213, 0, 0.12757683)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2267213, -0.007736206, -1.3530458)
 layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign8" unique_id=1063090969]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2267213, 0, 0.12757683)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2267213, 0, -1.3439754)
 mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="backSign9" type="Node3D" parent="Objects/Sale Signs3" unique_id=2013432848]
@@ -1496,12 +1499,12 @@ mesh = SubResource("PlaneMesh_lkcvt")
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -66.48279, 7.878931, -99.9)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign10" unique_id=352796270]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.954378, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.95438, 0, -0.2979915)
 layers = 64
 mesh = SubResource("PlaneMesh_hmc15")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects/Sale Signs3/backSign10" unique_id=1181515400]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.954378, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.954382, 0.013496399, -0.29984856)
 mesh = SubResource("PlaneMesh_lkcvt")
 
 [node name="Plant_Group" type="Node" parent="Objects" unique_id=598853517]
@@ -1965,6 +1968,22 @@ offset_right = 675.0
 offset_bottom = 530.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="crowd" type="AudioStreamPlayer" parent="." unique_id=1468638605]
+stream = ExtResource("44_6mm6r")
+volume_db = -15.0
+autoplay = true
+bus = &"SFX"
+
+[node name="UncleTony" parent="." unique_id=662486931 instance=ExtResource("44_t6yt7")]
+transform = Transform3D(-3.934025e-07, 1.5, -1.5298986e-07, 0, -6.556708e-08, -3.5, -9, -6.556708e-08, 6.6873992e-15, -25.226393, 3.6456518, -81.0833)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="UncleTony" unique_id=1614845070]
+transform = Transform3D(-1.6173214e-08, -6.661338e-16, 0.8999998, -1.8452577e-14, 0.2, 1.4210855e-14, -0.37, -4.440892e-15, -3.9340243e-08, 0.019000053, 0.41114807, -1.021)
+mesh = SubResource("PlaneMesh_lkcvt")
+
+[node name="Weiner" parent="." unique_id=1473297403 instance=ExtResource("45_al5m0")]
+transform = Transform3D(-3.934025e-07, -1.5, 1.5298986e-07, 0, -6.556708e-08, -3.5, 9, -6.556708e-08, 6.6873992e-15, 25.226, 3.646, -81.083)
 
 [connection signal="entered_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_entered"]
 [connection signal="exited_shop" from="JKNickel_check" to="Main Camera/SubViewportContainer/Player Viewport/MainPlayerSHOPPING" method="_on_shop_exited"]

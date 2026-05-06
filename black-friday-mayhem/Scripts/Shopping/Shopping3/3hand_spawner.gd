@@ -62,7 +62,7 @@ func get_spawn_position_from_side(side: int) -> Vector2:
 	#get the screen size
 	#var screen_size = get_viewport_rect().size
 	#set the margin between the edges and the hands
-	var margin := 30
+	var _margin := 30
 	#match side (cases)
 	var output : Vector2
 	#if upLeft == null or lowerRight == null:
