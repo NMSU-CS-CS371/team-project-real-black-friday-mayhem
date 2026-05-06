@@ -10,5 +10,6 @@ func _on_body_entered(body):
 	if not body.is_in_group("Player"):
 		return
 	AudioManager.pause_main_music()
+	body.stop_velocity.emit()
 	var tutorial = dialogue_scene.instantiate()
 	add_child(tutorial)

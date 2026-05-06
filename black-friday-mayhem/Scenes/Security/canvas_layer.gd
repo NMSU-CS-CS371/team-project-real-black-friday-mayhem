@@ -57,5 +57,10 @@ func next_dialogue():
 func finish_dialogue():
 	music.stop()
 	dialogue_finished.emit()
+	#the proper way to get the player...
+	get_tree().get_root().get_child(2).player.controlAllowed = true
+	# instead of godot looking for the first node in the player group
+	# and checking all the nodes
+	# this get's the very top root node, and gets the pointer to the player, without all the search...
 	AudioManager.resume_main_music()
 	queue_free()
