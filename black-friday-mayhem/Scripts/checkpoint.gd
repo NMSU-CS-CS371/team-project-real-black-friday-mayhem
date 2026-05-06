@@ -40,6 +40,9 @@ func _on_trigger_zone_body_entered(body: Node3D) -> void:
 		AudioManager.pause_main_music()
 		SceneTransition.play("fade_in")
 		await get_tree().create_timer(0.5).timeout
+		for npc in get_tree().get_nodes_in_group("npc"):
+				if npc.has_method("mute_voice_lines"):
+					npc.mute_voice_lines()
 		
 		var target
 		# Change scene depending on checkpoint type
@@ -59,6 +62,9 @@ func _on_shopping_minigame_finished():
 	print("reached shopping minigame finished")
 	SceneTransition.get_parent().get_node("ColorRect").visible = true
 	SceneTransition.play("fade_out")
+	for npc in get_tree().get_nodes_in_group("npc"):
+		if npc.has_method("unmute_voice_lines"):
+			npc.unmute_voice_lines()
 	await get_tree().create_timer(0.5).timeout
 	AudioManager.resume_main_music()
 	SceneTransition.get_parent().get_node("ColorRect").visible = false
