@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_tamj1"]
 [ext_resource type="Theme" uid="uid://cwq4umoio8ete" path="res://Assets/Textures/button.tres" id="5_es823"]
 [ext_resource type="Texture2D" uid="uid://dlmtwfg21rgus" path="res://Assets/Sprites/flash_sale.png" id="6_bygdm"]
+[ext_resource type="AudioStream" uid="uid://tujeatds53wo" path="res://Assets/SFX/count-down.wav" id="7_tamj1"]
 [ext_resource type="AudioStream" uid="uid://dyedx00ir7ry3" path="res://Assets/SFX/SoundEffects/Shopping/money.ogg" id="8_es823"]
-[ext_resource type="AudioStream" uid="uid://b377u7kt5wgua" path="res://Assets/SFX/SoundEffects/Shopping/count-down.ogg" id="8_tamj1"]
+[ext_resource type="AudioStream" uid="uid://6qlfv4wv10hn" path="res://Assets/SFX/background.ogg" id="9_es823"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a148l"]
 radius = 59.0
@@ -211,6 +212,20 @@ tracks/7/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SoundEffects/countdown")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.7333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_es823"]
 _data = {
@@ -355,7 +370,7 @@ visible = false
 z_index = 11
 offset_left = 319.0
 offset_top = 182.0
-offset_right = 744.0056
+offset_right = 744.0046
 offset_bottom = 482.0
 theme = ExtResource("5_es823")
 theme_override_font_sizes/font_size = 400
@@ -371,13 +386,18 @@ color = Color(0, 0, 0, 0.24705882)
 [node name="SoundEffects" type="Node" parent="." unique_id=691990869]
 
 [node name="countdown" type="AudioStreamPlayer" parent="SoundEffects" unique_id=2130603600]
-stream = ExtResource("8_tamj1")
+stream = ExtResource("7_tamj1")
 bus = &"SFX"
 
 [node name="money" type="AudioStreamPlayer" parent="SoundEffects" unique_id=671191483]
 stream = ExtResource("8_es823")
 volume_db = 5.0
 bus = &"SFX"
+
+[node name="CrowdNoise" type="AudioStreamPlayer" parent="." unique_id=308268628]
+stream = ExtResource("9_es823")
+volume_db = -6.411
+autoplay = true
 
 [connection signal="countdown_finished" from="." to="ShopItem1" method="_on_countdown_finished"]
 [connection signal="countdown_finished" from="." to="ShopItem2" method="_on_countdown_finished"]
