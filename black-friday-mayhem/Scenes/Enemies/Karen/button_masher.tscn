@@ -587,31 +587,37 @@ text = "<SPACE>"
 stream = SubResource("AudioStreamRandomizer_xvkcs")
 volume_db = 10.0
 pitch_scale = 1.1
+bus = &"SFX"
 
 [node name="Win" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1680131988]
 stream = SubResource("AudioStreamRandomizer_bk3sf")
 volume_db = 10.0
 pitch_scale = 1.1
+bus = &"SFX"
 
 [node name="Lose" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1052858010]
 stream = SubResource("AudioStreamRandomizer_q6elk")
 volume_db = 10.0
 pitch_scale = 1.1
+bus = &"SFX"
 
 [node name="Playing" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1646123535]
 stream = SubResource("AudioStreamRandomizer_elwk3")
 volume_db = 10.0
 pitch_scale = 1.1
+bus = &"SFX"
 
 [node name="kidsAttack" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1203996425]
 stream = SubResource("AudioStreamRandomizer_pfwfl")
 volume_db = 10.0
 pitch_scale = 1.1
+bus = &"SFX"
 
 [node name="kidsKick" type="AudioStreamPlayer" parent="VoiceLines" unique_id=1466040459]
 stream = SubResource("AudioStreamRandomizer_ftd78")
 volume_db = 10.0
 pitch_scale = 1.1
+bus = &"SFX"
 
 [node name="SoundEffects" type="Node" parent="." unique_id=1050759952]
 
