@@ -44,3 +44,4 @@ bus = &"SFX"
 [node name="slap" type="AudioStreamPlayer" parent="." unique_id=1992359125]
 stream = ExtResource("4_dg7an")
 volume_db = -5.0
+bus = &"SFX"
