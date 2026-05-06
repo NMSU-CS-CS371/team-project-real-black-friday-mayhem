@@ -78,7 +78,7 @@ background_color = Color(0, 0, 0, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_04jkj"]
 shader = ExtResource("6_yky5r")
-shader_parameter/pixel_count = Vector2(256, 256)
+shader_parameter/pixel_count = Vector2(384, 384)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_04jkj"]
 viewport_path = NodePath("Main Camera/SubViewportContainer/Sign Viewport")
