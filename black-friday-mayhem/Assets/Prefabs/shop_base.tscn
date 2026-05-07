@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cp7qu3xtic5ra"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yquf2"]
+lightmap_size_hint = Vector2i(14, 21)
+add_uv2 = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_rhbvv"]
+lightmap_size_hint = Vector2i(14, 21)
+add_uv2 = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7anmf"]
+transparency = 1
+albedo_color = Color(0.23921569, 1, 1, 0.39215687)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5w373"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_7anmf")
+add_uv2 = true
+
+[node name="ShopBase" type="Node3D" unique_id=973829081]
+
+[node name="Pillar" type="MeshInstance3D" parent="." unique_id=645190201]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 2, -0.95, 0.32294798, 1.7530539e-08)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Pillar2" type="MeshInstance3D" parent="." unique_id=1252199785]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 2, 0.95, 0.32294798, 1.7530539e-08)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Pillar3" type="MeshInstance3D" parent="." unique_id=857808328]
+transform = Transform3D(0.07, 0, 0, 0, 0.1, 0, 0, 0, 2, -0.35, 0.32294798, 1.7530539e-08)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Pillar4" type="MeshInstance3D" parent="." unique_id=2048075169]
+transform = Transform3D(0.07, 0, 0, 0, 0.1, 0, 0, 0, 2, 0.35, 0.32294798, 1.7530539e-08)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Top" type="MeshInstance3D" parent="." unique_id=1318583720]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.8, 0, 0.323, -1.016)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="side" type="MeshInstance3D" parent="." unique_id=1742232384]
+transform = Transform3D(0.1, 0, 0, 0, 0.3, 0, 0, 0, 2.4, -0.954, 0.147, -0.2)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="side2" type="MeshInstance3D" parent="." unique_id=1277777393]
+transform = Transform3D(0.1, 0, 0, 0, 0.3, 0, 0, 0, 2.4, 0.9542861, 0.14716767, -0.20022157)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Top2" type="MeshInstance3D" parent="." unique_id=809807313]
+transform = Transform3D(1.5, 0, 0, 0, 0.1, 0, 0, 0, 0.5, 0, 0.4378969, -1.016)
+mesh = SubResource("BoxMesh_rhbvv")
+
+[node name="window" type="MeshInstance3D" parent="." unique_id=41246334]
+transform = Transform3D(0.6, 0, 0, 0, 0.1, 0, 0, 0, 2, -0.64272535, 0.3099469, 1.8098834e-08)
+mesh = SubResource("BoxMesh_5w373")
+
+[node name="window2" type="MeshInstance3D" parent="." unique_id=1373706603]
+transform = Transform3D(0.6, 0, 0, 0, 0.1, 0, 0, 0, 2, 0.64378595, 0.3099469, 1.8098834e-08)
+mesh = SubResource("BoxMesh_5w373")

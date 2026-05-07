@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://f1g6dekt5dna"]
+
+[ext_resource type="PackedScene" uid="uid://0r7w1tuky4xv" path="res://Assets/Prefabs/seating/table_seating.tscn" id="1_aw5ow"]
+
+[node name="dining set" type="Node3D" unique_id=53269072]
+
+[node name="table seating2" parent="." unique_id=1509202109 instance=ExtResource("1_aw5ow")]
+
+[node name="table seating4" parent="." unique_id=2064839299 instance=ExtResource("1_aw5ow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="table seating" parent="." unique_id=1073150640 instance=ExtResource("1_aw5ow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+
+[node name="table seating3" parent="." unique_id=401418656 instance=ExtResource("1_aw5ow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)

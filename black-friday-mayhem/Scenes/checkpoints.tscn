@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://241lmhfwsr0h"]
+
+[ext_resource type="PackedScene" uid="uid://dj7b3logase36" path="res://Assets/Prefabs/checkpoint.tscn" id="1_e0pgn"]
+
+[node name="Checkpoints" type="Node" unique_id=1958326267]
+
+[node name="GameSlop_check" parent="." unique_id=1452118021 instance=ExtResource("1_e0pgn")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -0.16439772)
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="SoD_check" parent="." unique_id=1942286701 instance=ExtResource("1_e0pgn")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.53303, 1.6413479, -42.13826)
+shopName = 4
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="Stacys_check" parent="." unique_id=1782800711 instance=ExtResource("1_e0pgn")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -24.112827, 1.6413479, 42.43651)
+shopName = 2
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="Radioshack_check" parent="." unique_id=1073168368 instance=ExtResource("1_e0pgn")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 24.465897, 1.6413479, 42.43651)
+shopName = 3
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="JKNickel_check" parent="." unique_id=427300115 instance=ExtResource("1_e0pgn")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -23.851583, 1.641, -0.018862247)
+shopName = 2
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="HindsNobel_check" parent="." unique_id=1345268009 instance=ExtResource("1_e0pgn")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, -23.851583, 1.641, -42.44495)
+shopName = 1
+obstacle_size = Vector3(2, 2, 2)
+
+[node name="ExitCheckpoint" parent="." unique_id=1591276085 instance=ExtResource("1_e0pgn")]
+transform = Transform3D(0.012077352, 0, -0.99992704, 0, 1, 0, 0.99992704, 0, 0.012077352, 0.7829776, 1.6413479, 99.84778)
+checkpointType = 1
+obstacle_size = Vector3(2, 2, 2)

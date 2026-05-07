@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dx700aiwb8sjm"]
+
+[ext_resource type="PackedScene" uid="uid://ch8ajgugmd60g" path="res://Assets/Prefabs/seating/tri_banquet_seating.tscn" id="1_whbub"]
+[ext_resource type="PackedScene" uid="uid://b8abm6vuqaf2e" path="res://Assets/Prefabs/bench_2.tscn" id="2_er561"]
+[ext_resource type="PackedScene" uid="uid://0r7w1tuky4xv" path="res://Assets/Prefabs/seating/table_seating.tscn" id="3_cplk1"]
+
+[node name="Side" type="Node3D" unique_id=659241759]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="tri banquet seating" parent="." unique_id=4992535 instance=ExtResource("1_whbub")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5000002, 0, 1.0999999)
+
+[node name="boothSingle1" parent="." unique_id=1979223082 instance=ExtResource("2_er561")]
+
+[node name="tri banquet seating2" parent="." unique_id=638622391 instance=ExtResource("1_whbub")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 0, 1.0999999)
+
+[node name="table seating" parent="." unique_id=1509202109 instance=ExtResource("3_cplk1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.4999999, 0, 4.1)
+
+[node name="table seating2" parent="." unique_id=478209416 instance=ExtResource("3_cplk1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.5000002, 0, 4.0999994)

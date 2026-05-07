@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dgqto2l75r8xq"]
+
+[ext_resource type="PackedScene" uid="uid://deduoysww6qei" path="res://Assets/Prefabs/table_1.tscn" id="1_lpflh"]
+[ext_resource type="PackedScene" uid="uid://bkefcj4aqvtr4" path="res://Assets/Prefabs/chair_1.tscn" id="2_vweqc"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xjpnb"]
+height = 1.2
+radius = 1.0
+
+[node name="bi banquet seating" type="StaticBody3D" unique_id=730508003]
+
+[node name="Table" parent="." unique_id=1651096817 instance=ExtResource("1_lpflh")]
+
+[node name="Chair2" parent="." unique_id=201268420 instance=ExtResource("2_vweqc")]
+transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+
+[node name="Chair4" parent="." unique_id=1870789425 instance=ExtResource("2_vweqc")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2076263653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("CylinderShape3D_xjpnb")

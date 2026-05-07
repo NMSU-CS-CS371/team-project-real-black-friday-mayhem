@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://cpcg2xxjhqygu"]
+
+[ext_resource type="PackedScene" uid="uid://d32fyf70r1wq0" path="res://Assets/Prefabs/black_friday_sign.tscn" id="1_hfaps"]
+
+[node name="Sale Signs Group 22" type="Node3D" unique_id=1405414237]
+transform = Transform3D(0.499, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="blackFridaySign" parent="." unique_id=632376959 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, -1, 2.185566e-08, 5.293956e-22, -4.371137e-08, -0.5, 0.5, -4.371139e-08, 9.553417e-16, 50.000004, 13.994646, 9.785126)
+
+[node name="blackFridaySign2" parent="." unique_id=1040797103 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, -1, 2.1855696e-08, 1.0587912e-21, -4.3711353e-08, -0.5, 0.5, -4.3711353e-08, 9.553417e-16, 50.000004, 12.843687, -19.260876)
+
+[node name="blackFridaySign3" parent="." unique_id=746404707 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, -1, 2.1855696e-08, 5.293956e-22, -4.371137e-08, -0.5, 0.5, -4.371137e-08, 9.553422e-16, 50.000004, 7.514, -36.772247)
+
+[node name="blackFridaySign4" parent="." unique_id=799037861 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855698e-08, -1, 2.1855698e-08, 5.293956e-22, -4.371137e-08, -0.5, 0.5, -4.371137e-08, 9.553422e-16, 50.000008, 11.736729, 30.447552)
+
+[node name="blackFridaySign5" parent="." unique_id=194590110 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, -1, 2.1855696e-08, 7.4115383e-22, -4.3711363e-08, -0.5, 0.5, -4.3711363e-08, 9.55342e-16, 50.000008, 7.899727, 51.420105)
+
+[node name="blackFridaySign6" parent="." unique_id=916314240 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, -1, 2.1855696e-08, 5.293956e-22, -4.371137e-08, -0.5, 0.5, -4.371137e-08, 9.553422e-16, 50.000004, 10.150108, -74.41849)
+
+[node name="blackFridaySign7" parent="." unique_id=1706025164 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855698e-08, -1, 2.1855698e-08, 5.293956e-22, -4.371137e-08, -0.5, 0.5, -4.371137e-08, 9.553422e-16, 50.000008, 11.107176, 75.02551)
+
+[node name="blackFridaySign8" parent="." unique_id=2113271406 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.18557e-08, -1, 2.18557e-08, 5.293956e-22, -4.371137e-08, -0.5, 0.5, -4.371137e-08, 9.553422e-16, 50.56743, 7.009, -91.116684)
+
+[node name="blackFridaySign9" parent="." unique_id=1995536504 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-0.5, -1.5099583e-07, 3.3001185e-15, 1.1292838e-22, -4.3711367e-08, -0.5, 7.5497894e-08, -1, 2.1855692e-08, 5.580039e-13, 9.172492, 99.849174)
+
+[node name="blackFridaySign10" parent="." unique_id=1200325067 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-0.5, -1.5099583e-07, 3.3001185e-15, 7.049261e-24, -4.3711367e-08, -0.5, 7.5497894e-08, -1, 2.1855692e-08, 26.281387, 8.836944, 99.9)
+
+[node name="blackFridaySign11" parent="." unique_id=2016635614 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-0.5, -1.5099585e-07, 3.3001187e-15, 7.049261e-24, -4.3711367e-08, -0.5, 7.5497894e-08, -1, 2.1855692e-08, -36.165527, 11.541251, 99.9)
+
+[node name="blackFridaySign12" parent="." unique_id=1314814632 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-0.5, -1.5099583e-07, 3.300117e-15, -2.0823361e-21, -4.3711353e-08, -0.5, 7.5497866e-08, -1, 2.1855685e-08, -29.212936, 7.387204, 99.899994)
+
+[node name="blackFridaySign13" parent="." unique_id=706526419 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-0.5, -1.5099585e-07, 3.3001191e-15, 5.293956e-22, -4.371137e-08, -0.5, 7.54979e-08, -1, 2.1855694e-08, 42.41213, 6.9518104, 99.9)
+
+[node name="blackFridaySign14" parent="." unique_id=990940708 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-0.5, -1.5099583e-07, 3.300118e-15, -5.1529707e-22, -4.3711363e-08, -0.5, 7.549789e-08, -1, 2.185569e-08, 30.62204, 12.089953, 99.9)
+
+[node name="blackFridaySign15" parent="." unique_id=365649414 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-0.5, -1.5099583e-07, 3.3001172e-15, -1.5599897e-21, -4.3711356e-08, -0.5, 7.549787e-08, -1, 2.1855687e-08, -41.824883, 13.984777, 99.89999)
+
+[node name="blackFridaySign16" parent="." unique_id=2118496331 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-0.5, -1.5099583e-07, 3.3001179e-15, -9.317642e-22, -4.371136e-08, -0.5, 7.549788e-08, -1, 2.1855689e-08, 16.258297, 8.651342, 99.8065)
+
+[node name="blackFridaySign17" parent="." unique_id=1211002338 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-0.5, -1.5099583e-07, 3.3001185e-15, 7.049261e-24, -4.3711367e-08, -0.5, 7.5497894e-08, -1, 2.1855692e-08, 32.110382, 7.217284, 99.9)
+
+[node name="blackFridaySign18" parent="." unique_id=937245217 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, 1, -2.1855696e-08, 1.0587912e-22, -4.3711356e-08, -0.5, -0.5, -4.3711392e-08, 9.553428e-16, -49.899563, 7.995229, -46.48958)
+
+[node name="blackFridaySign19" parent="." unique_id=1926497348 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, 1, -2.1855696e-08, -2.1175824e-22, -4.3711346e-08, -0.5, -0.5, -4.371138e-08, 9.553425e-16, -49.89991, 14.076794, -70.85944)
+
+[node name="blackFridaySign20" parent="." unique_id=1120876449 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, 1, -2.1855696e-08, 0, -4.3711353e-08, -0.5, -0.5, -4.371139e-08, 9.553427e-16, -49.89958, 12.22523, 19.099176)
+
+[node name="blackFridaySign21" parent="." unique_id=653964141 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, 1, -2.1855696e-08, 1.0587912e-22, -4.3711356e-08, -0.5, -0.5, -4.3711392e-08, 9.553428e-16, -49.89958, 7.009, -12.117786)
+
+[node name="blackFridaySign22" parent="." unique_id=1472667525 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855698e-08, 1, -2.1855698e-08, 5.293956e-22, -4.3711353e-08, -0.5, -0.5, -4.371139e-08, 9.553433e-16, -49.899597, 13.603196, 52.373955)
+
+[node name="blackFridaySign23" parent="." unique_id=56217182 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855698e-08, 1, -2.1855698e-08, 1.0587912e-22, -4.3711356e-08, -0.5, -0.5, -4.3711392e-08, 9.553428e-16, -49.899593, 15.356604, 72.975136)
+
+[node name="blackFridaySign24" parent="." unique_id=17703319 instance=ExtResource("1_hfaps")]
+transform = Transform3D(-2.1855696e-08, 1, -2.1855696e-08, 1.0587912e-22, -4.3711356e-08, -0.5, -0.5, -4.3711392e-08, 9.553428e-16, -49.899563, 12.985913, 91.59731)

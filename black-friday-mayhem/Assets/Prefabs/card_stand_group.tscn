@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c4yr5o1blwtnu"]
+
+[ext_resource type="PackedScene" uid="uid://oypubi3uks1v" path="res://Assets/Prefabs/card_stand.tscn" id="1_dija2"]
+
+[node name="cardStandGroup" type="Node3D" unique_id=1135544355]
+
+[node name="cardStand2" parent="." unique_id=1582768020 instance=ExtResource("1_dija2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.292593)
+
+[node name="cardStand" parent="." unique_id=1246403800 instance=ExtResource("1_dija2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.455531)

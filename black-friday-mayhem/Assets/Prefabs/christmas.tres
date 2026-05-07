@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://br5ta0h65y6b"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j0l2d"]
+load_path = "res://.godot/imported/Christmas Tree Color mm_0.jpg-da60fae6316b9783509c0eb7c62a4c4c.s3tc.ctex"
+
+[resource]
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = SubResource("CompressedTexture2D_j0l2d")

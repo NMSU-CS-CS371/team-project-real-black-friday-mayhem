@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bt5lfm7srqx8g"]
+
+[ext_resource type="PackedScene" uid="uid://m57n0n3tjke1" path="res://Assets/Prefabs/gameSlop.tscn" id="1_71okw"]
+[ext_resource type="PackedScene" uid="uid://rdnsb0qw1eg5" path="res://Assets/Prefabs/JKNickels.tscn" id="2_kefvh"]
+[ext_resource type="PackedScene" uid="uid://c4ggjrujmnp14" path="res://Assets/Prefabs/Stacys.tscn" id="3_tj0o7"]
+[ext_resource type="PackedScene" uid="uid://belmw8gxhtjl7" path="res://Assets/Prefabs/RadioShack.tscn" id="4_dusp8"]
+[ext_resource type="PackedScene" uid="uid://caitkxhgbjt1m" path="res://Assets/Prefabs/HindsNobel.tscn" id="5_jl82x"]
+[ext_resource type="PackedScene" uid="uid://p81qi7ibnvtl" path="res://Assets/Prefabs/subjectOfDebate.tscn" id="6_svm72"]
+[ext_resource type="PackedScene" uid="uid://ty8fkiet13xa" path="res://Assets/Prefabs/UncleTony.tscn" id="7_ms2lc"]
+[ext_resource type="PackedScene" uid="uid://cyk75lw831sr" path="res://Assets/Prefabs/weiner.tscn" id="8_7rsjc"]
+[ext_resource type="PackedScene" uid="uid://bjmi6gylohtwh" path="res://Assets/Prefabs/Sweetrolls.tscn" id="9_cahc7"]
+[ext_resource type="PackedScene" uid="uid://b2v0u3bejmy4i" path="res://Assets/Prefabs/Sombrero.tscn" id="10_wq4yq"]
+[ext_resource type="PackedScene" uid="uid://c5dn7we5kbbfs" path="res://Assets/Prefabs/KungChow.tscn" id="11_kgwxc"]
+[ext_resource type="PackedScene" uid="uid://bb72cyg50fji" path="res://Assets/Prefabs/Entrance.tscn" id="12_kefvh"]
+
+[node name="Shop Models" type="Node" unique_id=1748801901]
+
+[node name="GameSlop" parent="." unique_id=790083064 instance=ExtResource("1_71okw")]
+transform = Transform3D(-3.496911e-07, -1, 1.5298986e-07, 0, -4.371139e-08, -3.5, 8, -4.371139e-08, 6.6873992e-15, 24.99, 4.484, 0)
+
+[node name="JKNickel" parent="." unique_id=1743863354 instance=ExtResource("2_kefvh")]
+transform = Transform3D(-3.496911e-07, 1, -1.5298986e-07, 0, -4.371139e-08, -3.5, -8, -4.371139e-08, 6.6873992e-15, -24.99, 4.484, 0)
+
+[node name="Stacys" parent="." unique_id=1121137306 instance=ExtResource("3_tj0o7")]
+transform = Transform3D(-3.496911e-07, 1, -1.5298986e-07, 0, -4.371139e-08, -3.5, -8, -4.371139e-08, 6.6873992e-15, -24.99, 4.481, 42.53448)
+
+[node name="RadioShack" parent="." unique_id=1842612919 instance=ExtResource("4_dusp8")]
+transform = Transform3D(-3.496911e-07, -1, 1.5298986e-07, 0, -4.371139e-08, -3.5, 8, -4.371139e-08, 6.6873992e-15, 24.99, 4.481, 42.534)
+
+[node name="HindsNobel" parent="." unique_id=481351384 instance=ExtResource("5_jl82x")]
+transform = Transform3D(-3.496911e-07, 1, -1.5298986e-07, 0, -4.371139e-08, -3.5, -8, -4.371139e-08, 6.6873992e-15, -24.99, 4.481, -42.4857)
+
+[node name="subjectOfDebate" parent="." unique_id=721226382 instance=ExtResource("6_svm72")]
+transform = Transform3D(-3.496911e-07, -1, 1.5298986e-07, 0, -4.371139e-08, -3.5, 8, -4.371139e-08, 6.6873992e-15, 24.99, 4.481, -42.486)
+
+[node name="UncleTony" parent="." unique_id=915767947 instance=ExtResource("7_ms2lc")]
+transform = Transform3D(-3.934025e-07, 1.5, -1.5298986e-07, 0, -6.556708e-08, -3.5, -9, -6.556708e-08, 6.6873992e-15, -24.9, 3.646, -81.083)
+
+[node name="Weiner" parent="." unique_id=1704921491 instance=ExtResource("8_7rsjc")]
+transform = Transform3D(-3.934025e-07, -1.5, 1.5298986e-07, 0, -6.556708e-08, -3.5, 9, -6.556708e-08, 6.6873992e-15, 25.226, 3.646, -81.083)
+
+[node name="Sweetrolls" parent="." unique_id=1457541486 instance=ExtResource("9_cahc7")]
+transform = Transform3D(7.5, 0, 0, 0, -6.556708e-08, -3.5, 0, 1.5, -1.5298986e-07, 0, 3.646, -99.9)
+
+[node name="Sombrero" parent="." unique_id=1413917835 instance=ExtResource("10_wq4yq")]
+transform = Transform3D(7.5, 0, 0, 0, -6.556708e-08, -3.5, 0, 1.5, -1.5298986e-07, -16.3, 3.646, -99.9)
+
+[node name="KungChow" parent="." unique_id=1082276626 instance=ExtResource("11_kgwxc")]
+transform = Transform3D(7.5, 0, 0, 0, -6.556708e-08, -3.5, 0, 1.5, -1.5298986e-07, 16.3, 3.646, -99.499)
+
+[node name="Entrance" parent="." unique_id=1794353446 instance=ExtResource("12_kefvh")]
+transform = Transform3D(-6, -1.509958e-07, 2.970106e-14, 0, -4.371139e-08, -4.5, 9.0597484e-07, -1, 1.9670125e-07, 0, 5.509898, 99.9)

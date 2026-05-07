@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://fqrtwt3kbp4s"]
+
+[ext_resource type="PackedScene" uid="uid://hdqc6cvvl3db" path="res://Scenes/npc2.tscn" id="1_3bg2n"]
+
+[node name="NPC_Group2" type="Node3D" unique_id=2096410429]
+
+[node name="Npc" parent="." unique_id=1570048502 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.956335, 1.9228578, -50.4243)
+
+[node name="Npc2" parent="." unique_id=457822159 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.0320773, 1.9228578, 68.369385)
+
+[node name="Npc3" parent="." unique_id=1556909332 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.180084, 1.9228578, 55.588623)
+
+[node name="Npc4" parent="." unique_id=279904027 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.2779179, 1.9228578, 17.244663)
+
+[node name="Npc5" parent="." unique_id=1826674810 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.458049, 1.9228578, 62.996864)
+
+[node name="Npc6" parent="." unique_id=398598862 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.5597115, 1.9228578, -34.86722)
+
+[node name="Npc7" parent="." unique_id=1319453211 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9228578, -72.43342)
+
+[node name="Npc8" parent="." unique_id=320580739 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -15.534787, 1.9228578, 26.627731)
+
+[node name="Npc9" parent="." unique_id=657531132 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.7936363, 1.9228578, 82.20238)
+
+[node name="Npc10" parent="." unique_id=837136290 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -17.508373, 1.9228578, 6.6384144)
+
+[node name="Npc11" parent="." unique_id=1244859541 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.120892, 1.9228578, 26.627731)
+
+[node name="Npc12" parent="." unique_id=1140868055 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.7228713, 1.9228578, -27.394035)
+
+[node name="Npc13" parent="." unique_id=599468822 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.258916, 1.9228578, 36.678204)
+
+[node name="Npc14" parent="." unique_id=847021432 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -19.168179, 1.9228578, 46.47896)
+
+[node name="Npc15" parent="." unique_id=1685465680 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9228578, -20.801983)
+
+[node name="Npc16" parent="." unique_id=1523299360 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.9228578, 64.23449)
+
+[node name="Npc17" parent="." unique_id=1116088077 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.491444, 1.9228578, -26.285236)
+
+[node name="Npc18" parent="." unique_id=1508833366 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.405527, 1.9228578, -89.575485)
+
+[node name="Npc19" parent="." unique_id=2037539243 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -20.507195, 1.9228578, -83.17589)
+
+[node name="Npc20" parent="." unique_id=1763018409 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.443772, 1.9228578, 16.59774)
+
+[node name="Npc21" parent="." unique_id=1705342520 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.645842, 1.9228578, -59.641197)
+
+[node name="Npc22" parent="." unique_id=1648511028 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.721584, 1.9228578, 59.15249)
+
+[node name="Npc23" parent="." unique_id=33042419 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.4905777, 1.9228578, 46.371727)
+
+[node name="Npc24" parent="." unique_id=681409064 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.41158867, 1.9228578, 8.027767)
+
+[node name="Npc25" parent="." unique_id=1085479044 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 18.147556, 1.9228578, 53.77997)
+
+[node name="Npc26" parent="." unique_id=394735259 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.249218, 1.9228578, -44.084118)
+
+[node name="Npc27" parent="." unique_id=205884189 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.6895065, 1.9228578, -81.31669)
+
+[node name="Npc28" parent="." unique_id=1297167782 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.845281, 1.9228578, 17.410835)
+
+[node name="Npc29" parent="." unique_id=1102625550 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.483143, 1.9228578, 72.98548)
+
+[node name="Npc30" parent="." unique_id=101020632 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.818867, 1.9228578, -2.5784817)
+
+[node name="Npc31" parent="." unique_id=1008639948 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.697014, 1.9228578, 3.0504398)
+
+[node name="Npc32" parent="." unique_id=1332056486 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.932251, 1.9228578, 23.039757)
+
+[node name="Npc33" parent="." unique_id=1018991203 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.9115119, 1.9228578, -30.98201)
+
+[node name="Npc34" parent="." unique_id=287961031 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.4475565, 1.9228578, 33.09023)
+
+[node name="Npc35" parent="." unique_id=8612940 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.356819, 1.9228578, 42.890984)
+
+[node name="Npc36" parent="." unique_id=940477857 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.8113594, 1.9228578, -24.389957)
+
+[node name="Npc37" parent="." unique_id=231423202 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.8113594, 1.9228578, 60.646515)
+
+[node name="Npc38" parent="." unique_id=257312182 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 16.302803, 1.9228578, -29.87321)
+
+[node name="Npc39" parent="." unique_id=885416929 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.2168865, 1.9228578, -95.57979)
+
+[node name="Npc40" parent="." unique_id=1768546768 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.626696, 1.9228578, -86.76386)
+
+[node name="Npc41" parent="." unique_id=2016361961 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.255132, 1.9228578, 13.009766)
+
+[node name="Npc42" parent="." unique_id=780835018 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.255132, 1.9228578, -69.59993)
+
+[node name="Npc43" parent="." unique_id=1316928509 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 14.968186, 1.9228578, -72.38243)
+
+[node name="Npc44" parent="." unique_id=322007257 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 18.236595, 1.9228578, -84.74152)
+
+[node name="Npc45" parent="." unique_id=1692531691 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -17.65143, 1.9228578, -75.35173)
+
+[node name="Npc46" parent="." unique_id=1057138054 instance=ExtResource("1_3bg2n")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -18.706463, 1.9228578, -72.6642)

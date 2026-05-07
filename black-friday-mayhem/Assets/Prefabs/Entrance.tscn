@@ -10,16 +10,22 @@ emission_enabled = true
 emission_energy_multiplier = 10.53
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7anmf"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_rhbvv")
+add_uv2 = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_yquf2"]
+lightmap_size_hint = Vector2i(14, 21)
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7anmf"]
 transparency = 1
 albedo_color = Color(0.23921569, 1, 1, 0.39215687)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5w373"]
+lightmap_size_hint = Vector2i(14, 21)
 material = SubResource("StandardMaterial3D_7anmf")
+add_uv2 = true
 
 [node name="Entrance" type="Node3D" unique_id=790083064]
 transform = Transform3D(2, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
@@ -32,7 +38,6 @@ shape = SubResource("BoxShape3D_rhbvv")
 
 [node name="Background" type="MeshInstance3D" parent="." unique_id=305437147]
 transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-transparency = 1.0
 mesh = SubResource("PlaneMesh_7anmf")
 
 [node name="Pillar" type="MeshInstance3D" parent="." unique_id=391507021]

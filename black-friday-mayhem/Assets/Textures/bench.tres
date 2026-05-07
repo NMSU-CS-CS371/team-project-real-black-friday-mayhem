@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ycgbeph6obu1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vwkqb"]
+load_path = "res://.godot/imported/bench_1_albedo.jpg-c79536b4a254896e4e041c31651c08d9.s3tc.ctex"
+
+[resource]
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = SubResource("CompressedTexture2D_vwkqb")

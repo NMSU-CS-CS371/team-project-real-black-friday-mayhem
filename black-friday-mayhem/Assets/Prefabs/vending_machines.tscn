@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://lpfe1r6a3lb7"]
+
+[ext_resource type="PackedScene" uid="uid://cn2kvg01twjbh" path="res://Assets/Prefabs/vending_machine_1.tscn" id="1_yj2lb"]
+[ext_resource type="PackedScene" uid="uid://c4fw7cw13pnco" path="res://Assets/Prefabs/vending_machine_3.tscn" id="2_tnkl2"]
+[ext_resource type="PackedScene" uid="uid://dk2hv8s0l84gn" path="res://Assets/Prefabs/vending_machine_2.tscn" id="3_xcxab"]
+
+[node name="Vending Machines" type="Node" unique_id=1795573429]
+
+[node name="Vending Machine" parent="." unique_id=1452118021 instance=ExtResource("1_yj2lb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.6, 1.9, 53.346947)
+
+[node name="Vending Machine2" parent="." unique_id=1141723803 instance=ExtResource("2_tnkl2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.6, 1.9, 54.508896)
+
+[node name="Vending Machine4" parent="." unique_id=209989678 instance=ExtResource("2_tnkl2")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6, 1.9, 19.77709)
+
+[node name="Vending Machine3" parent="." unique_id=1290370391 instance=ExtResource("3_xcxab")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6, 1.9, 18.614704)
+
+[node name="Vending Machine5" parent="." unique_id=1618776157 instance=ExtResource("1_yj2lb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.6, 1.9, -65.08431)
+
+[node name="Vending Machine6" parent="." unique_id=859834186 instance=ExtResource("2_tnkl2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24.6, 1.9, -66.3)
+
+[node name="Vending Machine8" parent="." unique_id=1510444242 instance=ExtResource("2_tnkl2")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6, 1.9, -95.243744)
+
+[node name="Vending Machine9" parent="." unique_id=302039507 instance=ExtResource("3_xcxab")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.6, 1.9, -96.523575)

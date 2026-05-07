@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cj7ggyp4mji30"]
+
+[ext_resource type="PackedScene" uid="uid://budr6u47xfl83" path="res://Scenes/sale_sign-0.tscn" id="1_eumet"]
+
+[node name="Sale Signs Group 1" type="Node3D" unique_id=580257003]
+transform = Transform3D(0.499, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Sale Sign2" parent="." unique_id=866724917 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.7422784e-08, 0, 1, 0, 1, 0, -2, 0, -4.371139e-08, -49.989555, 15.708444, -18.676163)
+
+[node name="Sale Sign4" parent="." unique_id=1284022075 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.7422784e-08, 0, 1, 0, 1, 0, -2, 0, -4.3711392e-08, -49.98956, 12.251376, 32.610737)
+
+[node name="Sale Sign5" parent="." unique_id=40843659 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.7422784e-08, 0, 1, 0, 1, 0, -2, 0, -4.3711392e-08, -49.98958, 17.911955, 86.45921)
+
+[node name="Sale Sign6" parent="." unique_id=125850779 instance=ExtResource("1_eumet")]
+transform = Transform3D(-2, 0, -1.5099583e-07, 0, 1, 0, 3.0199152e-07, 0, -1, -39.687584, 14.0595875, 99.89999)
+
+[node name="Sale Sign7" parent="." unique_id=1096761312 instance=ExtResource("1_eumet")]
+transform = Transform3D(-2, 0, -1.5099585e-07, 0, 1, 0, 3.0199158e-07, 0, -1, 41.20734, 16.080473, 99.9)
+
+[node name="Sale Sign8" parent="." unique_id=622790457 instance=ExtResource("1_eumet")]
+transform = Transform3D(-2, 0, -1.5099585e-07, 0, 1, 0, 3.0199152e-07, 0, -1, -28.543211, 15.797314, 99.89999)
+
+[node name="Sale Sign9" parent="." unique_id=592969127 instance=ExtResource("1_eumet")]
+transform = Transform3D(-2, 0, -1.5099585e-07, 0, 1, 0, 3.0199158e-07, 0, -1, -10.405197, 16.034435, 99.9)
+
+[node name="Sale Sign10" parent="." unique_id=1776722885 instance=ExtResource("1_eumet")]
+transform = Transform3D(-2, 0, -1.5099583e-07, 0, 1, 0, 3.0199152e-07, 0, -1, -46.00574, 16.343336, 99.9)
+
+[node name="Sale Sign11" parent="." unique_id=1491577913 instance=ExtResource("1_eumet")]
+transform = Transform3D(-2, 0, -1.5099559e-07, 0, 1, 0, 3.019915e-07, 0, -1, -46.005737, 16.343336, 99.9)
+
+[node name="Sale Sign12" parent="." unique_id=299821775 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.74229e-08, 0, -1, 0, 1, 0, 2, 0, -4.3711374e-08, 49.99023, 18.84705, -33.087215)
+
+[node name="Sale Sign13" parent="." unique_id=2037718128 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.7422904e-08, 0, -1, 0, 1, 0, 2, 0, -4.3711374e-08, 49.990223, 18.357092, -68.676254)
+
+[node name="Sale Sign14" parent="." unique_id=266390626 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.74229e-08, 0, -1, 0, 1, 0, 2, 0, -4.3711374e-08, 49.990246, 19.438862, 66.12179)
+
+[node name="Sale Sign15" parent="." unique_id=1236073805 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.742288e-08, 0, -1, 0, 0.9999998, 0, 1.9999996, 0, -4.3711385e-08, 49.99023, 19.8038, 35.072712)
+
+[node name="Sale Sign16" parent="." unique_id=1149516954 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.74229e-08, 0, -1, 0, 1, 0, 2, 0, -4.3711374e-08, 49.99023, 19.552036, 19.783394)
+
+[node name="Sale Sign17" parent="." unique_id=1182690479 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.7422684e-08, 0, 1, 0, 1, 0, -2, 0, -4.3711374e-08, -49.989594, 19.975498, 79.60696)
+
+[node name="Sale Sign18" parent="." unique_id=195898758 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.742267e-08, 0, 1, 0, 1, 0, -2, 0, -4.371138e-08, -49.989563, 19.289875, 15.719009)
+
+[node name="Sale Sign19" parent="." unique_id=1550756878 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.742267e-08, 0, 1, 0, 1, 0, -2, 0, -4.3711374e-08, -49.989563, 12.251376, -32.743553)
+
+[node name="Sale Sign20" parent="." unique_id=426065842 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.759799e-08, 0, -1, 0, 1, 0, 2.004008, 0, -4.371139e-08, 50.323643, 12.384527, -18.64662)
+
+[node name="Sale Sign3" parent="." unique_id=1161661409 instance=ExtResource("1_eumet")]
+transform = Transform3D(-8.742279e-08, 0, -1, 0, 1, 0, 2, 0, -4.371139e-08, 49.990215, 14.10607, 90.07384)

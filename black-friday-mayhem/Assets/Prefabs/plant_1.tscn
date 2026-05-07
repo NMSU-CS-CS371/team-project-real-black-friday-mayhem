@@ -47,7 +47,7 @@ radius = 0.65283203
 [node name="Plant1" unique_id=337281523 instance=ExtResource("1_8mg4p")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
-[node name="Houseplant_mesh" parent="." index="0" unique_id=1900166563]
+[node name="Houseplant_mesh" parent="." index="0" unique_id=241715439]
 layers = 32
 
 [node name="Houseplant_mesh2" type="MeshInstance3D" parent="." index="1" unique_id=1948605553]
@@ -57,3 +57,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_muuyd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=739128612]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4519043, 0)
 shape = SubResource("CylinderShape3D_8mg4p")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." index="3" unique_id=1758657666]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17482519, 1.450038, 0.051420033)
+aabb = AABB(-1.0798168, -1.5683042, -1, 2.1596336, 3.1366084, 2)

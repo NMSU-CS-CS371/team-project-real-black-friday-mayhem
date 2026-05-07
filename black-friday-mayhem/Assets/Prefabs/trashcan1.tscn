@@ -12,3 +12,6 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1" unique_id=2117290257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.005645752, 0)
 shape = SubResource("CylinderShape3D_vr4ph")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." index="2" unique_id=1108269422]
+aabb = AABB(-0.24681473, -0.27698132, -0.24133047, 0.49362946, 0.55396265, 0.48266095)

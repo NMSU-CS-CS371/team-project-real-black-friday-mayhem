@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bein30qa5thxu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yquf2"]
+lightmap_size_hint = Vector2i(14, 21)
+add_uv2 = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_rhbvv"]
+lightmap_size_hint = Vector2i(14, 21)
+add_uv2 = true
+
+[node name="FoodShopBase" type="Node3D" unique_id=1834857914]
+
+[node name="Pillar" type="MeshInstance3D" parent="." unique_id=707471827]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 2, -0.95, 0.32294798, 1.7530539e-08)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Pillar2" type="MeshInstance3D" parent="." unique_id=164139305]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 2, 0.95, 0.32294798, 1.7530539e-08)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Pillar3" type="MeshInstance3D" parent="." unique_id=1592490208]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.5, -0.0042409003, 0.322948, 0.7403259)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Top" type="MeshInstance3D" parent="." unique_id=1563211526]
+transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.8, 0, 0.323, -1.016)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="side" type="MeshInstance3D" parent="." unique_id=270125212]
+transform = Transform3D(0.1, 0, 0, 0, 0.3, 0, 0, 0, 2.4, -0.954, 0.147, -0.2)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="side2" type="MeshInstance3D" parent="." unique_id=585107285]
+transform = Transform3D(0.1, 0, 0, 0, 0.3, 0, 0, 0, 2.4, 0.9542861, 0.14716767, -0.20022157)
+mesh = SubResource("BoxMesh_yquf2")
+
+[node name="Top2" type="MeshInstance3D" parent="." unique_id=1505072371]
+transform = Transform3D(1.5, 0, 0, 0, 0.1, 0, 0, 0, 0.5, 0, 0.4378969, -1.016)
+mesh = SubResource("BoxMesh_rhbvv")

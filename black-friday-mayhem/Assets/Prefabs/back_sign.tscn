@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cdu33mffmkpm4"]
+
+[ext_resource type="Texture2D" uid="uid://b2ps72j644hs3" path="res://Assets/Textures/blackfriday.png" id="1_2px3p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mv6e"]
+albedo_texture = ExtResource("1_2px3p")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hmc15"]
+lightmap_size_hint = Vector2i(12, 12)
+material = SubResource("StandardMaterial3D_8mv6e")
+add_uv2 = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04jkj"]
+blend_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lkcvt"]
+material = SubResource("StandardMaterial3D_04jkj")
+
+[node name="backSign" type="Node3D" unique_id=1981700781]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1888870110]
+layers = 64
+mesh = SubResource("PlaneMesh_hmc15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1678912017]
+gi_mode = 0
+mesh = SubResource("PlaneMesh_lkcvt")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=1341493291]
+aabb = AABB(-1, -0.13574828, -1, 2, 0.27149656, 2)

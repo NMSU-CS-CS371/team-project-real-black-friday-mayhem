@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://yfmgduwyeq64"]
+
+[ext_resource type="PackedScene" uid="uid://0t614et1gy4j" path="res://Assets/Prefabs/restroom_sign.tscn" id="1_exy1a"]
+[ext_resource type="PackedScene" uid="uid://cnh6wdochhtli" path="res://Assets/Textures/wet_floor_sign.glb" id="2_8qx37"]
+
+[node name="Restroom" type="Node" unique_id=99606392]
+
+[node name="Restroom_Sign" parent="." unique_id=99520409 instance=ExtResource("1_exy1a")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -23.87, 5, -96.5)
+
+[node name="Wet Floor Sign" parent="." unique_id=859457676 instance=ExtResource("2_8qx37")]
+transform = Transform3D(0.3469357, 0, 0.9378889, 0, 1, 0, -0.9378889, 0, 0.3469357, -24.809, 1, -96.452)
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Wet Floor Sign" unique_id=626168681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49581409, 0)
+aabb = AABB(-0.27712438, -0.45779222, -0.27253008, 0.55424875, 1.0064048, 0.54506016)
