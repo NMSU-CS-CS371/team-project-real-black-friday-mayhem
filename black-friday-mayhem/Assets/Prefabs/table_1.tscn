@@ -43,3 +43,7 @@ mesh = SubResource("CylinderMesh_gqwyt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=927916584]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.425, 0)
 shape = SubResource("CylinderShape3D_0l01a")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=452951204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4195856, 0)
+aabb = AABB(-0.4607215, -0.44015336, -0.48540258, 0.921443, 0.8803067, 0.97080517)

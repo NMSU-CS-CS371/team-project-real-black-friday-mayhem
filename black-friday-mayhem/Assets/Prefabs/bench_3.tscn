@@ -90,3 +90,11 @@ shape = SubResource("BoxShape3D_btd7j")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=754507185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.575, 0.625, 0.2)
 shape = SubResource("BoxShape3D_vyy05")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=1968664376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5915575, 0.5018573, 0.40313148)
+aabb = AABB(-2.673829, -0.54607844, -0.523684, 5.347658, 1.0921569, 1.047368)
+
+[node name="VisibleOnScreenEnabler3D2" type="VisibleOnScreenEnabler3D" parent="." unique_id=1779532469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21973014, 0.5347657, 2.5751023)
+aabb = AABB(-0.34779143, -0.5296241, -2.6874294, 0.69558287, 1.0592482, 5.374859)

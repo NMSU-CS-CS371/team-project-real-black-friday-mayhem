@@ -18,3 +18,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_qimx7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=729517197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43029696, 0)
 shape = SubResource("BoxShape3D_8drul")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=2062901694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45413953, -0.008295059)
+aabb = AABB(-0.25010568, -0.46401235, -0.27788985, 0.50021136, 0.9280247, 0.5557797)

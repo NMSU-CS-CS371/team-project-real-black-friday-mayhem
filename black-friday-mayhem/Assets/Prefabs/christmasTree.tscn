@@ -49,3 +49,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5hpbs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
 shape = SubResource("BoxShape3D_p0jo7")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=431400053]
+transform = Transform3D(1, 0, 0, 0, 1.0000005, 4.656613e-10, 0, -4.656613e-10, 1.0000005, -0.046365738, 0, 0)
+aabb = AABB(-3.3420837, -3.214443, -5.801907, 6.6841674, 6.428886, 11.603814)

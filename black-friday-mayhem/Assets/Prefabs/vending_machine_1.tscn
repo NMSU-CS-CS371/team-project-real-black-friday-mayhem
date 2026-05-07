@@ -43,3 +43,6 @@ shape = SubResource("BoxShape3D_tj8nk")
 light_color = Color(0.96862745, 0.90588236, 0.40784314, 1)
 light_energy = 0.2
 omni_range = 2.5
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=654428219]
+aabb = AABB(-0.6334915, -1, -0.403131, 1.266983, 2, 0.806262)

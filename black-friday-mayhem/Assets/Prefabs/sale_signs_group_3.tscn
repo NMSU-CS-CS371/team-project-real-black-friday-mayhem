@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b8281dxlb6gqr"]
+
+[ext_resource type="PackedScene" uid="uid://cdu33mffmkpm4" path="res://Assets/Prefabs/back_sign.tscn" id="1_gg7eh"]
+
+[node name="Sale Signs Group 3" type="Node3D" unique_id=1525665536]
+
+[node name="backSign" parent="." unique_id=1981700781 instance=ExtResource("1_gg7eh")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -17.25728, 19.050657, -99.9)
+
+[node name="backSign2" parent="." unique_id=1142087739 instance=ExtResource("1_gg7eh")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 7.2563477, 21.267406, -99.9)
+
+[node name="backSign3" parent="." unique_id=597983533 instance=ExtResource("1_gg7eh")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 16.068653, 18.911829, -99.9)
+
+[node name="backSign4" parent="." unique_id=2047060936 instance=ExtResource("1_gg7eh")]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, -3.3925858, 20.627499, -99.9)

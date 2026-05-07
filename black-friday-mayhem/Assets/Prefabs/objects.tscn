@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://rd83y8goxqpk"]
+
+[ext_resource type="PackedScene" uid="uid://d75fh6dwelno" path="res://Assets/Prefabs/fountain.tscn" id="1_24n60"]
+[ext_resource type="PackedScene" uid="uid://c4yr5o1blwtnu" path="res://Assets/Prefabs/card_stand_group.tscn" id="2_3ri04"]
+[ext_resource type="PackedScene" uid="uid://dlmrufdtfyem6" path="res://Assets/Prefabs/bench_group.tscn" id="3_yxecn"]
+[ext_resource type="PackedScene" uid="uid://dasfexvfwdfhi" path="res://Assets/Prefabs/christmas_trees.tscn" id="4_s8m3q"]
+[ext_resource type="PackedScene" uid="uid://71vsufhdc5eo" path="res://Assets/Prefabs/all_signs.tscn" id="5_dg52q"]
+[ext_resource type="PackedScene" uid="uid://chac3g0tly614" path="res://Assets/Prefabs/plant_group.tscn" id="6_mola8"]
+[ext_resource type="PackedScene" uid="uid://cx48kk1d7ffsm" path="res://Assets/Prefabs/trash_cans.tscn" id="7_hc7ww"]
+[ext_resource type="PackedScene" uid="uid://lpfe1r6a3lb7" path="res://Assets/Prefabs/vending_machines.tscn" id="8_yi8yh"]
+[ext_resource type="PackedScene" uid="uid://udgriwvynaa5" path="res://Assets/Prefabs/tables.tscn" id="9_ssu8o"]
+[ext_resource type="PackedScene" uid="uid://yfmgduwyeq64" path="res://Assets/Prefabs/restroom.tscn" id="10_m56eq"]
+[ext_resource type="PackedScene" uid="uid://jfn5xlts2mih" path="res://Assets/Prefabs/camaro.tscn" id="11_3ri04"]
+[ext_resource type="PackedScene" uid="uid://dwlx432ijbvev" path="res://Assets/Textures/the_rolling_giantchristmas.glb" id="12_yxecn"]
+
+[node name="Objects" type="Node3D" unique_id=401563250]
+
+[node name="Fountain" parent="." unique_id=200004366 instance=ExtResource("1_24n60")]
+
+[node name="cardStandGroup" parent="." unique_id=1135544355 instance=ExtResource("2_3ri04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1.90517, 2.3318777)
+
+[node name="Bench_Group" parent="." unique_id=2056425123 instance=ExtResource("3_yxecn")]
+
+[node name="Christmas Trees" parent="." unique_id=1260907229 instance=ExtResource("4_s8m3q")]
+
+[node name="All Signs" parent="." unique_id=1801674551 instance=ExtResource("5_dg52q")]
+
+[node name="Plant_Group" parent="." unique_id=1376329908 instance=ExtResource("6_mola8")]
+
+[node name="Trash Cans" parent="." unique_id=1104926334 instance=ExtResource("7_hc7ww")]
+
+[node name="Vending Machines" parent="." unique_id=1795573429 instance=ExtResource("8_yi8yh")]
+
+[node name="Tables" parent="." unique_id=543594735 instance=ExtResource("9_ssu8o")]
+
+[node name="Restroom" parent="." unique_id=99606392 instance=ExtResource("10_m56eq")]
+
+[node name="Win_a_car" parent="." unique_id=1379428736 instance=ExtResource("11_3ri04")]
+transform = Transform3D(-0.5179473, 0, -1.4077395, 0, 1.5, 0, 1.4077395, 0, -0.5179473, 16.24766, 0.9479971, 85.3299)
+
+[node name="Santa" parent="." unique_id=1852824695 instance=ExtResource("12_yxecn")]
+transform = Transform3D(3.9342859, 0, -0.7220766, 0, 4, 0, 0.7220766, 0, 3.9342859, -11.009502, 0.9615617, 88.59821)
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Santa" unique_id=1078549460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2756898, 1.0970654, -0.16135597)
+aabb = AABB(-0.8412971, -1.1713004, -1.2329055, 1.6825942, 2.3426008, 2.465811)

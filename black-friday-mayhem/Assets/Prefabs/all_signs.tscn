@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://71vsufhdc5eo"]
+
+[ext_resource type="PackedScene" uid="uid://cj7ggyp4mji30" path="res://Assets/Prefabs/sale_signs_group_1.tscn" id="1_okrow"]
+[ext_resource type="PackedScene" uid="uid://dovqcygwxh5o7" path="res://Assets/Prefabs/huge_signs.tscn" id="2_vjv2t"]
+[ext_resource type="PackedScene" uid="uid://cpcg2xxjhqygu" path="res://Assets/Prefabs/sale_signs_group_22.tscn" id="3_640cg"]
+[ext_resource type="PackedScene" uid="uid://b8281dxlb6gqr" path="res://Assets/Prefabs/sale_signs_group_3.tscn" id="4_2walg"]
+
+[node name="All Signs" type="Node" unique_id=1801674551]
+
+[node name="Sale Signs Group 1" parent="." unique_id=580257003 instance=ExtResource("1_okrow")]
+transform = Transform3D(0.499, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.396685, 0)
+
+[node name="HugeSigns" parent="." unique_id=1974199897 instance=ExtResource("2_vjv2t")]
+transform = Transform3D(25, 0, 0, 0, 5, 0, 0, 0, 0.005, 0, 20.678, -60)
+
+[node name="Sale Signs Group 22" parent="." unique_id=1405414237 instance=ExtResource("3_640cg")]
+transform = Transform3D(0.499, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.7250786, 0)
+
+[node name="Sale Signs Group 3" parent="." unique_id=1525665536 instance=ExtResource("4_2walg")]

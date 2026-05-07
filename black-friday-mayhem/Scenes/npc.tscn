@@ -159,6 +159,10 @@ bus = &"SFX"
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_hq1fa")
 
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=1335877416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16544867, 0)
+aabb = AABB(-1, -1.7429698, -0.35027426, 2, 3.4859395, 0.7005485)
+
 [connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
 [connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
 [connection signal="body_entered" from="Detection2" to="." method="_on_detection_2_body_entered"]

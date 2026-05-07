@@ -26,6 +26,10 @@ material = ExtResource("3_mxqxp")
 
 [node name="Sketchfab_Scene3" parent="." unique_id=1705195733 instance=ExtResource("2_5gn5g")]
 
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Sketchfab_Scene3" unique_id=1062685426]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6380005, 0.011193037)
+aabb = AABB(-1, -0.720085, -2.4212275, 2, 1.44017, 4.842455)
+
 [node name="Sketchfab_Scene2" parent="." unique_id=1258242354 instance=ExtResource("3_5gn5g")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene2" unique_id=1900767375]
@@ -60,3 +64,7 @@ mesh = SubResource("PlaneMesh_5gn5g")
 transform = Transform3D(-4.371139e-08, -1, 4.3711392e-08, 0, -4.371139e-08, -1.0000001, 1, -4.371139e-08, 1.9106857e-15, -0.06846142, 1.0128689, 0)
 layers = 32
 mesh = SubResource("PlaneMesh_bhlfx")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="sign" unique_id=289473178]
+transform = Transform3D(1, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1, 0, 0.5316675, 0)
+aabb = AABB(-0.08753473, -1.5849174, -1, 0.17506947, 3.1698349, 2)

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://udgriwvynaa5"]
+
+[ext_resource type="PackedScene" uid="uid://be120ua8ptsyq" path="res://Assets/Prefabs/table_group_2.tscn" id="1_ekblp"]
+[ext_resource type="PackedScene" uid="uid://dx4gclkv1klyo" path="res://Assets/Prefabs/table_group_1.tscn" id="2_npvse"]
+[ext_resource type="PackedScene" uid="uid://hay0gdr00c78" path="res://Assets/Prefabs/eating_group.tscn" id="3_wxmwe"]
+
+[node name="Tables" type="Node" unique_id=543594735]
+
+[node name="table_group-N" parent="." unique_id=1323420013 instance=ExtResource("1_ekblp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -72.50007)
+
+[node name="table_group-NW" parent="." unique_id=467769597 instance=ExtResource("2_npvse")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -15, 1, -87.50007)
+
+[node name="table_group-NE" parent="." unique_id=1971676300 instance=ExtResource("2_npvse")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15, 1, -87.50007)
+
+[node name="table_group-S" parent="." unique_id=1373981476 instance=ExtResource("1_ekblp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1, -87.50007)
+
+[node name="table_group-SW" parent="." unique_id=1846798243 instance=ExtResource("2_npvse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, -72.50007)
+
+[node name="table_group-SE" parent="." unique_id=1830862507 instance=ExtResource("2_npvse")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 1, -72.50007)
+
+[node name="Eating Group" parent="." unique_id=734897725 instance=ExtResource("3_wxmwe")]

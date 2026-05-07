@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c7cbqhi1rvqe5"]
+
+[ext_resource type="PackedScene" uid="uid://fqrtwt3kbp4s" path="res://Assets/Prefabs/npc_group_2.tscn" id="1_cv5nh"]
+[ext_resource type="PackedScene" uid="uid://bdciuu3lbdurj" path="res://Assets/Prefabs/npc_group_1.tscn" id="2_rv623"]
+
+[node name="NPC_Groups" type="Node" unique_id=519095640]
+
+[node name="NPC_Group2" parent="." unique_id=2096410429 instance=ExtResource("1_cv5nh")]
+
+[node name="NPC_Group1" parent="." unique_id=523594838 instance=ExtResource("2_rv623")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16662884, 0)

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cx48kk1d7ffsm"]
+
+[ext_resource type="PackedScene" uid="uid://dkgjh0skteeui" path="res://Assets/Prefabs/trashcan1.tscn" id="1_gqrqd"]
+
+[node name="Trash Cans" type="Node" unique_id=1104926334]
+
+[node name="Trashcan" parent="." unique_id=1656698358 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -24.6, 1.55, 52.196945)
+
+[node name="Trashcan2" parent="." unique_id=2025375263 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 24.6, 1.55, 17.46514)
+
+[node name="Trashcan3" parent="." unique_id=340460190 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -9.55, 1.55, -66.5)
+
+[node name="Trashcan9" parent="." unique_id=589339994 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -24.6, 1.55, -67.501)
+
+[node name="Trashcan10" parent="." unique_id=1639118461 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 24.6, 1.55, -94.00783)
+
+[node name="Trashcan4" parent="." unique_id=779359463 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 9.5, 1.55, -66.5)
+
+[node name="Trashcan5" parent="." unique_id=1199559719 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -9.65, 1.55, -93.5)
+
+[node name="Trashcan11" parent="." unique_id=33423781 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -24.5, 1.55, -98.3)
+
+[node name="Trashcan6" parent="." unique_id=1587214800 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 9.5, 1.55, -93.5)
+
+[node name="Trashcan7" parent="." unique_id=1676434791 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, -21, 1.55, -82)
+
+[node name="Trashcan8" parent="." unique_id=27895305 instance=ExtResource("1_gqrqd")]
+transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 21.01, 1.55, -77.85)

@@ -123,14 +123,14 @@ func _on_hitbox_body_shape_entered(
 	try_knock_down(body)
 
 
-func is_player(body) -> bool:
+func is_player(body : Node3D) -> bool:
 	if body == null:
 		return false
 
 	return body.name == "Player" or body.is_in_group("player") or body.is_in_group("Player")
 
 
-func knock_down():
+func knock_down() -> void:
 	print("NPC knocked down")
 
 	knocked_down = true
@@ -144,7 +144,7 @@ func knock_down():
 		$CollisionShape3D.disabled = true
 
 
-func get_back_up():
+func get_back_up() -> void:
 	print("NPC got back up")
 
 	knocked_down = false
@@ -164,7 +164,7 @@ func get_back_up():
 	pick_new_target()
 
 
-func pick_new_target():
+func pick_new_target() -> void:
 	var offset_x = randf_range(-move_range, move_range)
 	var offset_z = randf_range(-move_range, move_range)
 

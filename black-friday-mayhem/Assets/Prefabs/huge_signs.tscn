@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dovqcygwxh5o7"]
+
+[ext_resource type="Texture2D" uid="uid://dqrhp0gp8krmf" path="res://Assets/Textures/BigSign.png" id="1_ffl4e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ikia7"]
+cull_mode = 2
+albedo_texture = ExtResource("1_ffl4e")
+
+[sub_resource type="QuadMesh" id="QuadMesh_xbk3s"]
+lightmap_size_hint = Vector2i(7, 7)
+material = SubResource("StandardMaterial3D_ikia7")
+add_uv2 = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_04jkj"]
+load_path = "res://.godot/imported/BigSign.png-e72640da0b60f1d70ce14f131fd486ff.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkcvt"]
+blend_mode = 2
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_04jkj")
+
+[sub_resource type="QuadMesh" id="QuadMesh_atqvy"]
+material = SubResource("StandardMaterial3D_lkcvt")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lkcvt"]
+load_path = "res://.godot/imported/BigSign.png-e72640da0b60f1d70ce14f131fd486ff.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_atqvy"]
+blend_mode = 2
+cull_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_lkcvt")
+
+[sub_resource type="QuadMesh" id="QuadMesh_w5giw"]
+material = SubResource("StandardMaterial3D_atqvy")
+
+[node name="HugeSigns" type="Node3D" unique_id=1974199897]
+transform = Transform3D(25, 0, 0, 0, 5, 0, 0, 0, 0.005, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=979775436]
+transform = Transform3D(1.0000005, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 0, 20537.352)
+layers = 64
+mesh = SubResource("QuadMesh_xbk3s")
+
+[node name="mask1" type="MeshInstance3D" parent="." unique_id=1223297208]
+transform = Transform3D(1.0000005, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 0, 20537.352)
+gi_mode = 0
+mesh = SubResource("QuadMesh_atqvy")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=291661575]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+layers = 64
+mesh = SubResource("QuadMesh_xbk3s")
+
+[node name="mask2" type="MeshInstance3D" parent="." unique_id=1296988006]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+gi_mode = 0
+mesh = SubResource("QuadMesh_w5giw")

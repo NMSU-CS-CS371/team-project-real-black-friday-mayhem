@@ -34,3 +34,7 @@ mesh = SubResource("PlaneMesh_rnyyx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1000641855]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.025, 0)
 shape = SubResource("BoxShape3D_3y3hn")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=2104991135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23036051, 0, 0)
+aabb = AABB(-1.3245735, -1.2875516, -0.1727705, 2.649147, 2.5751033, 0.345541)

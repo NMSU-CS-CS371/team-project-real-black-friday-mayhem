@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://budr6u47xfl83"]
+
+[ext_resource type="Texture2D" uid="uid://81d4qkj2aqou" path="res://Assets/Textures/start sale.jpg" id="1_ltgar"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5v1tr"]
+albedo_texture = ExtResource("1_ltgar")
+
+[sub_resource type="QuadMesh" id="QuadMesh_no8kt"]
+lightmap_size_hint = Vector2i(7, 7)
+material = SubResource("StandardMaterial3D_5v1tr")
+add_uv2 = true
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_atqvy"]
+load_path = "res://.godot/imported/start sale.jpg-5509ef42ca1d56557d991ac9efeac6d2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5giw"]
+blend_mode = 2
+albedo_texture = SubResource("CompressedTexture2D_atqvy")
+
+[sub_resource type="QuadMesh" id="QuadMesh_jwdyn"]
+material = SubResource("StandardMaterial3D_w5giw")
+
+[node name="Sale Sign" type="Node3D" unique_id=866724917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 1.1368684e-13, 0, 1, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21655659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, 0, 0)
+layers = 64
+mesh = SubResource("QuadMesh_no8kt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=820114064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9073486e-06, 0, 0)
+gi_mode = 0
+mesh = SubResource("QuadMesh_jwdyn")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=2085383738]
+aabb = AABB(-0.53855467, -0.5255247, -0.017605267, 1.0771093, 1.0510494, 0.035210535)

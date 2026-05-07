@@ -25,6 +25,7 @@ TerrainRebuildCoordinator="*uid://brautlco0ivx3"
 window/size/viewport_width=800
 window/size/viewport_height=600
 window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
 window/depth_of_field/depth_of_field_use_jitter=false
 
 [editor_plugins]
@@ -82,3 +83,4 @@ esc={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+occlusion_culling/use_occlusion_culling=true

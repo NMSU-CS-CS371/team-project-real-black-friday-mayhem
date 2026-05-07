@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c5dn7we5kbbfs"]
 
+[ext_resource type="PackedScene" uid="uid://bein30qa5thxu" path="res://Assets/Prefabs/food_shop_base.tscn" id="1_6kni2"]
 [ext_resource type="Texture2D" uid="uid://dn6ddskbfq6m4" path="res://Assets/Textures/restaurant_back.png" id="1_yvn54"]
 [ext_resource type="Texture2D" uid="uid://jwhftasq60pi" path="res://Assets/Textures/kung_chow_board.png" id="2_yvn54"]
 [ext_resource type="Material" uid="uid://de82a3g327nry" path="res://Assets/Textures/negative.tres" id="3_ty6ln"]
@@ -11,17 +12,17 @@ size = Vector3(2.015, 1.041, 2.48)
 albedo_texture = ExtResource("1_yvn54")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7anmf"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_rhbvv")
-
-[sub_resource type="BoxMesh" id="BoxMesh_yquf2"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_rhbvv"]
+add_uv2 = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3sqv"]
 albedo_texture = ExtResource("2_yvn54")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4a3ru"]
+lightmap_size_hint = Vector2i(10, 5)
 material = SubResource("StandardMaterial3D_n3sqv")
+add_uv2 = true
 size = Vector2(1.795, 0.695)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_6kni2"]
@@ -37,36 +38,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.899036e-09, -0.22646356
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=598038690]
 shape = SubResource("BoxShape3D_rhbvv")
 
+[node name="FoodShopBase" parent="." unique_id=1834857914 instance=ExtResource("1_6kni2")]
+
 [node name="Background" type="MeshInstance3D" parent="." unique_id=305437147]
 mesh = SubResource("PlaneMesh_7anmf")
-
-[node name="Pillar" type="MeshInstance3D" parent="." unique_id=391507021]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 2, -0.95, 0.32294798, 1.7530539e-08)
-mesh = SubResource("BoxMesh_yquf2")
-
-[node name="Pillar2" type="MeshInstance3D" parent="." unique_id=738314523]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 2, 0.95, 0.32294798, 1.7530539e-08)
-mesh = SubResource("BoxMesh_yquf2")
-
-[node name="Pillar3" type="MeshInstance3D" parent="." unique_id=1829043746]
-transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.5, -0.0042409003, 0.322948, 0.7403259)
-mesh = SubResource("BoxMesh_yquf2")
-
-[node name="Top" type="MeshInstance3D" parent="." unique_id=812482023]
-transform = Transform3D(2, 0, 0, 0, 0.1, 0, 0, 0, 0.8, 0, 0.323, -1.016)
-mesh = SubResource("BoxMesh_yquf2")
-
-[node name="side" type="MeshInstance3D" parent="." unique_id=988541794]
-transform = Transform3D(0.1, 0, 0, 0, 0.3, 0, 0, 0, 2.4, -0.954, 0.147, -0.2)
-mesh = SubResource("BoxMesh_yquf2")
-
-[node name="side2" type="MeshInstance3D" parent="." unique_id=1310351546]
-transform = Transform3D(0.1, 0, 0, 0, 0.3, 0, 0, 0, 2.4, 0.9542861, 0.14716767, -0.20022157)
-mesh = SubResource("BoxMesh_yquf2")
-
-[node name="Top2" type="MeshInstance3D" parent="." unique_id=1888224460]
-transform = Transform3D(1.5, 0, 0, 0, 0.1, 0, 0, 0, 0.5, 0, 0.4378969, -1.016)
-mesh = SubResource("BoxMesh_rhbvv")
 
 [node name="Logo" type="MeshInstance3D" parent="." unique_id=206514571]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5114971, -1.014785)
@@ -75,4 +50,5 @@ mesh = SubResource("PlaneMesh_4a3ru")
 
 [node name="mask" type="MeshInstance3D" parent="." unique_id=1849966544]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5114971, -1.014785)
+gi_mode = 0
 mesh = SubResource("PlaneMesh_6kni2")
