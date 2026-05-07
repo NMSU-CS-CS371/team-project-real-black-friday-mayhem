@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://dasfexvfwdfhi"]
 
-[ext_resource type="PackedScene" uid="uid://fa6bgj4qmlcq" path="res://Assets/Prefabs/christmas_tree.scn" id="2_cikm3"]
+[ext_resource type="PackedScene" uid="uid://cfighnjk1ufiu" path="res://Assets/Prefabs/christmas_tree0.scn" id="1_cikm3"]
 
 [node name="Christmas Trees" type="Node" unique_id=1260907229]
 
-[node name="christmasTree6" parent="." unique_id=1877513247 instance=ExtResource("2_cikm3")]
-transform = Transform3D(1, 0, 0, 0, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, 0, 6.7, -50.006)
+[node name="christmasTree5" parent="." unique_id=1452118021 instance=ExtResource("1_cikm3")]
+transform = Transform3D(1, 0, 0, 0, -4.3711378e-08, 0.9999998, 0, -0.9999998, -4.3711378e-08, 0, 6.7, -50.006)
 
-[node name="christmasTree" parent="." unique_id=1452118021 instance=ExtResource("2_cikm3")]
-transform = Transform3D(1, 0, 0, 0, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, 10, 6.7, -8)
+[node name="christmasTree6" parent="." unique_id=423680199 instance=ExtResource("1_cikm3")]
+transform = Transform3D(1, 0, 0, 0, -4.3711378e-08, 0.9999998, 0, -0.9999998, -4.3711378e-08, 10, 6.7, -8)
 
-[node name="christmasTree2" parent="." unique_id=1749883361 instance=ExtResource("2_cikm3")]
-transform = Transform3D(1, 0, 0, 0, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, -10, 6.7, 8)
+[node name="christmasTree" parent="." unique_id=1282718554 instance=ExtResource("1_cikm3")]
+transform = Transform3D(1, 0, 0, 0, -4.3711378e-08, 0.9999998, 0, -0.9999998, -4.3711378e-08, -10, 6.7, 8)
 
-[node name="christmasTree3" parent="." unique_id=173510696 instance=ExtResource("2_cikm3")]
-transform = Transform3D(1, 0, 0, 0, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, -10, 6.7, 45)
+[node name="christmasTree2" parent="." unique_id=434088188 instance=ExtResource("1_cikm3")]
+transform = Transform3D(1, 0, 0, 0, -4.3711378e-08, 0.9999998, 0, -0.9999998, -4.3711378e-08, -10, 6.7, 45)
 
-[node name="christmasTree4" parent="." unique_id=58876461 instance=ExtResource("2_cikm3")]
-transform = Transform3D(1, 0, 0, 0, -4.371138e-08, 0.9999999, 0, -0.9999999, -4.371138e-08, 10, 6.7, 45)
+[node name="christmasTree3" parent="." unique_id=1119310170 instance=ExtResource("1_cikm3")]
+transform = Transform3D(1, 0, 0, 0, -4.3711378e-08, 0.9999998, 0, -0.9999998, -4.3711378e-08, 10, 6.7, 45)
