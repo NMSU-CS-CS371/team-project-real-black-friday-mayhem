@@ -8,7 +8,7 @@ var angle = 0.0
 var center : Vector3
 #game variables
 @export var game : Node3D
-@onready var player = get_tree().get_first_node_in_group("Player")
+@onready var player = get_tree().get_root().get_child(2).player
 var is_defeated = false
 var playing_game = false
 var punchies = preload("res://Scenes/Enemies/Grandma/punchies.tscn")

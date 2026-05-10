@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b4woik3ytcllt" path="res://Scenes/player.tscn" id="2_5a7ea"]
 [ext_resource type="Texture2D" uid="uid://prmie2p64mvl" path="res://Assets/Textures/kloofendal_48d_partly_cloudy_puresky_4k.exr" id="2_hmc15"]
 [ext_resource type="PackedScene" uid="uid://241lmhfwsr0h" path="res://Scenes/checkpoints.tscn" id="2_lkcvt"]
+[ext_resource type="LightmapGIData" uid="uid://clng0jr7uw6dd" path="res://Assets/world.lmbake" id="3_pyn1s"]
 [ext_resource type="PackedScene" uid="uid://dmbhbjsklc45r" path="res://Scenes/scene_transition.tscn" id="4_fo5ed"]
 [ext_resource type="ArrayOccluder3D" uid="uid://5owiuavpajmr" path="res://Assets/Prefabs/world.occ" id="4_pyn1s"]
 [ext_resource type="PackedScene" uid="uid://ca777g5pbeirm" path="res://Scenes/Enemies/Grandma/granny.tscn" id="5_axeuq"]
@@ -80,11 +81,9 @@ shadow_normal_bias = 10.0
 shadow_transmittance_bias = 16.0
 shadow_blur = 10.0
 
-[node name="LightmapGI" type="LightmapGI" parent="." unique_id=506673776]
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=1625220837]
 layers = 97
-interior = true
-use_denoiser = false
-texel_scale = 6.0
+light_data = ExtResource("3_pyn1s")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639120086]
 environment = SubResource("Environment_hmc15")
@@ -210,6 +209,7 @@ layout_mode = 2
 
 [node name="CurtainCall" parent="." unique_id=1010271353 instance=ExtResource("52_13n8b")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -24.999107, 4.481, 82)
+visible = false
 collision_layer = 0
 collision_mask = 0
 

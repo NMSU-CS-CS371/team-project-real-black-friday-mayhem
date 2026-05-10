@@ -4,7 +4,7 @@ extends Node2D #Hand Mini Game
 #
 @onready var optionsPanel = $Camera2D.optionsPanel
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
-@onready var player = get_parent().get_parent().player
+@onready var player = get_tree().get_root().get_child(2).player #get_.get_parent().player
 @onready var checkpoint = get_parent()
 enum GameState{IDLE, RUNNING, FINISHED}
 var state: GameState = GameState.IDLE

@@ -1,5 +1,5 @@
 extends Node2D
-@onready var player = get_tree().get_first_node_in_group("Player")
+@onready var player = get_tree().get_root().get_child(2).player
 signal game_finished(result)
 
 func _ready() -> void:
