@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpp0m8vn3ltgf"]
+
+[resource]
+resource_name = "BlackTrashCan02"
+albedo_color = Color(0.12156819, 0.12156819, 0.12156819, 1)
+roughness = 0.775
+emission_enabled = true

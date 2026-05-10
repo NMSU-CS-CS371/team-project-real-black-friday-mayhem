@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7d0of6eoghbj"
 path.s3tc="res://.godot/imported/weiner_logo.png-60c6d9a97e7141fcb3e7e12684e132e4.s3tc.ctex"
+path.etc2="res://.godot/imported/weiner_logo.png-60c6d9a97e7141fcb3e7e12684e132e4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/weiner_logo.png"
-dest_files=["res://.godot/imported/weiner_logo.png-60c6d9a97e7141fcb3e7e12684e132e4.s3tc.ctex"]
+dest_files=["res://.godot/imported/weiner_logo.png-60c6d9a97e7141fcb3e7e12684e132e4.s3tc.ctex", "res://.godot/imported/weiner_logo.png-60c6d9a97e7141fcb3e7e12684e132e4.etc2.ctex"]
 
 [params]
 

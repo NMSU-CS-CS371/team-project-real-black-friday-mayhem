@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://6pyn3l3usj17"
 path.s3tc="res://.godot/imported/hindsNobel_logo.png-ee3feb504269fb27b618e1e1ae40a18b.s3tc.ctex"
+path.etc2="res://.godot/imported/hindsNobel_logo.png-ee3feb504269fb27b618e1e1ae40a18b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/hindsNobel_logo.png"
-dest_files=["res://.godot/imported/hindsNobel_logo.png-ee3feb504269fb27b618e1e1ae40a18b.s3tc.ctex"]
+dest_files=["res://.godot/imported/hindsNobel_logo.png-ee3feb504269fb27b618e1e1ae40a18b.s3tc.ctex", "res://.godot/imported/hindsNobel_logo.png-ee3feb504269fb27b618e1e1ae40a18b.etc2.ctex"]
 
 [params]
 

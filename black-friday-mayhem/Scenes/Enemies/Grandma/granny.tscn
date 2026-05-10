@@ -260,12 +260,14 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
 layers = 32
+gi_mode = 2
 sprite_frames = SubResource("SpriteFrames_1mjgs")
 animation = &"Side1_2"
 metadata/_edit_group_ = true
 
 [node name="Sprite3D" type="Sprite3D" parent="AnimatedSprite3D" index="0" unique_id=16569325]
 material_override = SubResource("StandardMaterial3D_na25d")
+gi_mode = 0
 texture = SubResource("ViewportTexture_06hvg")
 
 [node name="SubViewport" type="SubViewport" parent="AnimatedSprite3D/Sprite3D" index="0" unique_id=418266416]

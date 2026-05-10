@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dixg3iy6a0cuy"
 path.s3tc="res://.godot/imported/radio_shack_logo.png-cd5f092849678956be99e3854732a518.s3tc.ctex"
+path.etc2="res://.godot/imported/radio_shack_logo.png-cd5f092849678956be99e3854732a518.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/radio_shack_logo.png"
-dest_files=["res://.godot/imported/radio_shack_logo.png-cd5f092849678956be99e3854732a518.s3tc.ctex"]
+dest_files=["res://.godot/imported/radio_shack_logo.png-cd5f092849678956be99e3854732a518.s3tc.ctex", "res://.godot/imported/radio_shack_logo.png-cd5f092849678956be99e3854732a518.etc2.ctex"]
 
 [params]
 

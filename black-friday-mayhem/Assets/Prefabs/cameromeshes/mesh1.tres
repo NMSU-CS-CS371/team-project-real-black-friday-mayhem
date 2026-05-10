@@ -1,0 +1,41 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://b508u3bvhcv26"]
+
+[ext_resource type="Texture2D" uid="uid://c0fph6t44ka2g" path="res://Assets/Sprites/transformers_2007_movie_bumblebee_2007_vehicle_0.png" id="1_b35vn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1cll"]
+resource_name = "material_0"
+cull_mode = 2
+albedo_texture = ExtResource("1_b35vn")
+roughness = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nrmte"]
+_surfaces = [{
+"aabb": AABB(-1.043086, 0.741462, -0.33912808, 2.086172, 0.06350303, 0.112167165),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAQAAAAQABQAEAAAABAAFAAYABwAGAAUACAAJAAoACQAIAAsADAALAAgACwAMAA0ADgANAAwADQAOAA8A"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("OwL//93/AABWAF1uDNYAAHoB3+/+/wAAAADOgVrgAACAEQAA0RQAALsPg/SLgwAAlRS4DwAAAAALEqC5s1UAAKj/XW4M1gAAhP7f7///AAD//86BWuAAAMP9///d/wAAfu4AANEUAABD8IP0i4MAAGnruA8AAAAA8+2gubNVAAA=")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "Sketchfab_Scene_Object_0"
+_surfaces = [{
+"aabb": AABB(-1.043086, 0.741462, -0.33912808, 2.086172, 0.06350303, 0.112167165),
+"attribute_data": PackedByteArray("11pSBP1aZAGIWu4D/VpkAddaUgQyZl4BB2OrBTJmXgHXWlIEMmZeAQdjqwXnZwUC9mTUBOdnBQIHY6sFn1q1AYha7gP9WmQB/VpkAYha7gOfWrUBiFruA/1aZAHXWlIEMmZeAddaUgT9WmQB11pSBDJmXgEHY6sF52cFAgdjqwUyZl4BB2OrBednBQL2ZNQE"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMA"),
+"material": SubResource("StandardMaterial3D_c1cll"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("OwL//93/fmBWAF1uDNZ+YHoB3+/+/35gVgBdbgzWkGA7Av//3f+QYIARAADRFJBguw+D9IuD5GCAEQAA0RTkYDsC///d/+RggBEAANEU7GC7D4P0i4PsYJUUuA8AAOxgCxKgubNVT2GVFLgPAABPYbsPg/SLg09hAADOgVrgKmF6Ad/v/v8qYVYAXW4M1iphqP9dbgzWLvOE/t/v//8u8///zoFa4C7zhP7f7///lvOo/11uDNaW88P9///d/5bzfu4AANEUkfPD/f//3f+R86j/XW4M1pHzw/3//93/xfN+7gAA0RTF80Pwg/SLg8Xzaeu4DwAArvND8IP0i4Ou837uAADRFK7zQ/CD9IuDd/Vp67gPAAB39fPtoLmzVXf1ZU31UGVN9VBlTfVQVE0hUVRNIVFUTSFRQ04DUENOA1BDTgNQ+02EUPtNhFD7TYRQC1X3RQtV90ULVfdFdkxtU3ZMbVN2TG1TAWzhaAFs4WgBbOFouWodablqHWm5ah1p0mobadJqG2nSahtpf2q3aX9qt2l/ardpt2qUabdqlGm3apRp5WZqbeVmam3lZmpt")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nrmte")

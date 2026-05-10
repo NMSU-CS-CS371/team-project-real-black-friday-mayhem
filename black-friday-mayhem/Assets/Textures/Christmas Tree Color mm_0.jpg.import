@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhobaaamd6vgm"
 path.s3tc="res://.godot/imported/Christmas Tree Color mm_0.jpg-da60fae6316b9783509c0eb7c62a4c4c.s3tc.ctex"
+path.etc2="res://.godot/imported/Christmas Tree Color mm_0.jpg-da60fae6316b9783509c0eb7c62a4c4c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/Christmas Tree Color mm_0.jpg"
-dest_files=["res://.godot/imported/Christmas Tree Color mm_0.jpg-da60fae6316b9783509c0eb7c62a4c4c.s3tc.ctex"]
+dest_files=["res://.godot/imported/Christmas Tree Color mm_0.jpg-da60fae6316b9783509c0eb7c62a4c4c.s3tc.ctex", "res://.godot/imported/Christmas Tree Color mm_0.jpg-da60fae6316b9783509c0eb7c62a4c4c.etc2.ctex"]
 
 [params]
 

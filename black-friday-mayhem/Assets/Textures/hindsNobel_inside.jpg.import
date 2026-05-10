@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhitycyhohrmt"
 path.s3tc="res://.godot/imported/hindsNobel_inside.jpg-3b53087228cbfbcad75ecf599d98dfaf.s3tc.ctex"
+path.etc2="res://.godot/imported/hindsNobel_inside.jpg-3b53087228cbfbcad75ecf599d98dfaf.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/hindsNobel_inside.jpg"
-dest_files=["res://.godot/imported/hindsNobel_inside.jpg-3b53087228cbfbcad75ecf599d98dfaf.s3tc.ctex"]
+dest_files=["res://.godot/imported/hindsNobel_inside.jpg-3b53087228cbfbcad75ecf599d98dfaf.s3tc.ctex", "res://.godot/imported/hindsNobel_inside.jpg-3b53087228cbfbcad75ecf599d98dfaf.etc2.ctex"]
 
 [params]
 

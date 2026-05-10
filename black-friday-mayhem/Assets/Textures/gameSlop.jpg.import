@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bamjlrbcq3xrj"
 path.s3tc="res://.godot/imported/gameSlop.jpg-0c6d5aec4b1198ef55ce8aebbeb90b52.s3tc.ctex"
+path.etc2="res://.godot/imported/gameSlop.jpg-0c6d5aec4b1198ef55ce8aebbeb90b52.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/gameSlop.jpg"
-dest_files=["res://.godot/imported/gameSlop.jpg-0c6d5aec4b1198ef55ce8aebbeb90b52.s3tc.ctex"]
+dest_files=["res://.godot/imported/gameSlop.jpg-0c6d5aec4b1198ef55ce8aebbeb90b52.s3tc.ctex", "res://.godot/imported/gameSlop.jpg-0c6d5aec4b1198ef55ce8aebbeb90b52.etc2.ctex"]
 
 [params]
 

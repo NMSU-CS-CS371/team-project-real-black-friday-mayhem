@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bliql7yyjcinf"
 path.s3tc="res://.godot/imported/floorMesh2.jpg-8eea1110e7f529eff046eea2d6613dda.s3tc.ctex"
+path.etc2="res://.godot/imported/floorMesh2.jpg-8eea1110e7f529eff046eea2d6613dda.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/floorMesh2.jpg"
-dest_files=["res://.godot/imported/floorMesh2.jpg-8eea1110e7f529eff046eea2d6613dda.s3tc.ctex"]
+dest_files=["res://.godot/imported/floorMesh2.jpg-8eea1110e7f529eff046eea2d6613dda.s3tc.ctex", "res://.godot/imported/floorMesh2.jpg-8eea1110e7f529eff046eea2d6613dda.etc2.ctex"]
 
 [params]
 

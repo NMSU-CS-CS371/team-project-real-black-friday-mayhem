@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr3834u7mslvv"
 path.s3tc="res://.godot/imported/sweetrolls_board.png-cbf84ee49da71dd75c9c763fe74e7e52.s3tc.ctex"
+path.etc2="res://.godot/imported/sweetrolls_board.png-cbf84ee49da71dd75c9c763fe74e7e52.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/sweetrolls_board.png"
-dest_files=["res://.godot/imported/sweetrolls_board.png-cbf84ee49da71dd75c9c763fe74e7e52.s3tc.ctex"]
+dest_files=["res://.godot/imported/sweetrolls_board.png-cbf84ee49da71dd75c9c763fe74e7e52.s3tc.ctex", "res://.godot/imported/sweetrolls_board.png-cbf84ee49da71dd75c9c763fe74e7e52.etc2.ctex"]
 
 [params]
 

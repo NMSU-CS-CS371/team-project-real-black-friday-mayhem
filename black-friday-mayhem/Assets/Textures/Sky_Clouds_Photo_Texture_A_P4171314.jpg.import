@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0tpkpp1eg1ah"
 path.s3tc="res://.godot/imported/Sky_Clouds_Photo_Texture_A_P4171314.jpg-f4e35ee765cc702ca2070762ea4a3dec.s3tc.ctex"
+path.etc2="res://.godot/imported/Sky_Clouds_Photo_Texture_A_P4171314.jpg-f4e35ee765cc702ca2070762ea4a3dec.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/Sky_Clouds_Photo_Texture_A_P4171314.jpg"
-dest_files=["res://.godot/imported/Sky_Clouds_Photo_Texture_A_P4171314.jpg-f4e35ee765cc702ca2070762ea4a3dec.s3tc.ctex"]
+dest_files=["res://.godot/imported/Sky_Clouds_Photo_Texture_A_P4171314.jpg-f4e35ee765cc702ca2070762ea4a3dec.s3tc.ctex", "res://.godot/imported/Sky_Clouds_Photo_Texture_A_P4171314.jpg-f4e35ee765cc702ca2070762ea4a3dec.etc2.ctex"]
 
 [params]
 

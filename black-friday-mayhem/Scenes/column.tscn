@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b8xag5ihlhxit"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_go701"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5a7ea"]
+albedo_color = Color(0.72345924, 0.48818868, 0.21370092, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8j60k"]
+lightmap_size_hint = Vector2i(17, 19)
+material = SubResource("StandardMaterial3D_5a7ea")
+add_uv2 = true
+
+[node name="Column East 1" type="Node3D" unique_id=1110007823]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1727577709]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=80493875]
+shape = SubResource("CylinderShape3D_go701")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1009755474]
+mesh = SubResource("CylinderMesh_8j60k")

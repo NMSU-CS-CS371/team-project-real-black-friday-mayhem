@@ -81,8 +81,10 @@ shadow_transmittance_bias = 16.0
 shadow_blur = 10.0
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=506673776]
+layers = 97
 interior = true
 use_denoiser = false
+texel_scale = 6.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639120086]
 environment = SubResource("Environment_hmc15")
@@ -208,7 +210,6 @@ layout_mode = 2
 
 [node name="CurtainCall" parent="." unique_id=1010271353 instance=ExtResource("52_13n8b")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, -24.999107, 4.481, 82)
-visible = false
 collision_layer = 0
 collision_mask = 0
 

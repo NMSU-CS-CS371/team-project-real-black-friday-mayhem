@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpr4jldorrphl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xv7ak"]
+load_path = "res://.godot/imported/vending_machine_3.png-5d3a4169a09ef264ca7e6bedea401ccc.s3tc.ctex"
+
+[resource]
+albedo_color = Color(0.8, 0.8, 0.8, 1)
+albedo_texture = SubResource("CompressedTexture2D_xv7ak")

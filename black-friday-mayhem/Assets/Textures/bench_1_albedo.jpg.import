@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvv158fathr47"
 path.s3tc="res://.godot/imported/bench_1_albedo.jpg-c79536b4a254896e4e041c31651c08d9.s3tc.ctex"
+path.etc2="res://.godot/imported/bench_1_albedo.jpg-c79536b4a254896e4e041c31651c08d9.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/bench_1_albedo.jpg"
-dest_files=["res://.godot/imported/bench_1_albedo.jpg-c79536b4a254896e4e041c31651c08d9.s3tc.ctex"]
+dest_files=["res://.godot/imported/bench_1_albedo.jpg-c79536b4a254896e4e041c31651c08d9.s3tc.ctex", "res://.godot/imported/bench_1_albedo.jpg-c79536b4a254896e4e041c31651c08d9.etc2.ctex"]
 
 [params]
 
