@@ -1,0 +1,75 @@
+[gd_scene format=4 uid="uid://cwx6hknlki5md"]
+
+[ext_resource type="Script" uid="uid://c7ylb52nywdiy" path="res://Scripts/obstacle_base.gd" id="1_xys5f"]
+[ext_resource type="ArrayMesh" uid="uid://cgndnpib0ocl5" path="res://Assets/Textures/vending_machine_1.obj" id="2_nh0lh"]
+[ext_resource type="Texture2D" uid="uid://cpoi8726xt8am" path="res://Assets/Textures/vending_machine_1.png" id="3_ctxc7"]
+[ext_resource type="Material" uid="uid://bfrc7l3xm46jx" path="res://Assets/Prefabs/vendmat.tres" id="4_up4da"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0mpvk"]
+size = Vector3(1.1999999, 1.8, 0.7)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lahtt"]
+_surfaces = [{
+"aabb": AABB(-1.68818, 0, -0.622846, 1.1999999, 1.8, 0.7),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAACAAEAAwAFAAAAAQAAAAUABAABAAYABQAGAAEAAgAEAAcABwADAAIABgAHAAQAAwAHAAUABgAFAAcA"),
+"name": "Vending_machine_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP//AAD//wAAAAAAAAAAAAD//wAA////////AAAAAAAAAAAAAP////8AAAAAAAD//wAAAAAAAP////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a4u0r"]
+lightmap_size_hint = Vector2i(74, 78)
+_surfaces = [{
+"aabb": AABB(-1.68818, 0, -0.622846, 1.1999999, 1.8, 0.7),
+"attribute_data": PackedByteArray("hQUFP7eAtju0brA+5lt+P4UFBT/kuGM+tG6wPmmQRj/8SXw/t4C2O8ln3TvmW34//El8P+S4Yz7JZ907aZBGP/xJfD/kuGM+KvIZP0/sBD+FBQU/5LhjPrRucD9P7AQ//El8P7eAtjsq8hk/y7c8P4UFBT+3gLY7tG5wP8u3PD+7kjo//pV9P8ln3TshDdI7iBAIP/6VfT+0brA+IQ3SO7uSOj/+MH4+yWfdO2In9j6IEAg//jB+PrRusD5iJ/Y+/k1+P/5Wfj/JZ907y7c8P8KLQT/+Vn4/yWfdO0/sBD/+TX4/9/x2PtC6AT/Ltzw/wotBP/f8dj7QugE/T+wEP4K1AT/+yX0/whQ5PyEN0juWgBU8/sl9P28wxT4hDdI7grUBP8MAwzvCFDk/Yif2PpaAFTzDAMM7bzDFPmIn9j7Ci0E//lZ+P591Qz9iJ/Y+/k1+P/5Wfj8wRX4/Yif2PsKLQT/3/HY+n3VDPyEN0jv+TX4/9/x2PjBFfj8hDdI7"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwACAAEABAAFAAYABwAGAAUACAAJAAoACwAKAAkADAANAA4ADwAOAA0AEAARABIAEwASABEAFAAVABYAFwAWABUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("vPL5vgAAAADoAp49vPL5vgAAAADWch+/SBbYvwAAAADoAp49SBbYvwAAAADWch+/SBbYv2Zm5j/Wch+/vPL5vmZm5j/Wch+/SBbYv2Zm5j/oAp49vPL5vmZm5j/oAp49SBbYvwAAAADWch+/vPL5vgAAAADWch+/SBbYv2Zm5j/Wch+/vPL5vmZm5j/Wch+/SBbYvwAAAADoAp49SBbYvwAAAADWch+/SBbYv2Zm5j/oAp49SBbYv2Zm5j/Wch+/vPL5vgAAAADoAp49SBbYvwAAAADoAp49vPL5vmZm5j/oAp49SBbYv2Zm5j/oAp49vPL5vgAAAADWch+/vPL5vgAAAADoAp49vPL5vmZm5j/Wch+/vPL5vmZm5j/oAp49+n8BAAEA/j/6fwEAAQD+P/p/AQABAP4/+n8BAAEA/j/+f/7/AAD+v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+/AQD/fwCA/78BAP9/AID/vwEA/38AgP+/AQD/fwCA/7/9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/7//n//fwBA/v/+f/9/AED+//5//38AQP7//n//fwBA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lahtt")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vnlc8"]
+size = Vector3(1.1999999, 1.8, 0.7)
+
+[node name="Vending Machine" type="Node3D" unique_id=1452118021]
+script = ExtResource("1_xys5f")
+visual_mode = "3D Mesh"
+mesh = ExtResource("2_nh0lh")
+texture = ExtResource("3_ctxc7")
+entity_name = "Vending Machine"
+is_interactable = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=287630393]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=729517197]
+shape = SubResource("BoxShape3D_0mpvk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0881801, -0.9, 0.272846)
+mesh = SubResource("ArrayMesh_a4u0r")
+surface_material_override/0 = ExtResource("4_up4da")
+
+[node name="TriggerZone" type="Area3D" parent="." unique_id=17846116]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
+shape = SubResource("BoxShape3D_vnlc8")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1558575659]
+light_color = Color(0.96862745, 0.90588236, 0.40784314, 1)
+light_energy = 0.2
+omni_range = 2.5
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="." unique_id=654428219]
+aabb = AABB(-0.6334915, -1, -0.403131, 1.266983, 2, 0.806262)

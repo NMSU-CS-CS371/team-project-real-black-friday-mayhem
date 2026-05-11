@@ -154,22 +154,27 @@ shape = SubResource("CylinderShape3D_0lmpv")
 
 [node name="Background" type="MeshInstance3D" parent="." unique_id=305437147]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+gi_mode = 0
 mesh = SubResource("PlaneMesh_7anmf")
 
 [node name="Pillar" type="MeshInstance3D" parent="." unique_id=391507021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95, 0, 0.323)
+gi_mode = 0
 mesh = SubResource("BoxMesh_gql0l")
 
 [node name="side" type="MeshInstance3D" parent="." unique_id=988541794]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.954, 0.364, 0.147)
+gi_mode = 0
 mesh = SubResource("BoxMesh_2yghv")
 
 [node name="Pillar2" type="MeshInstance3D" parent="." unique_id=738314523]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.95, 0, 0.323)
+gi_mode = 0
 mesh = SubResource("BoxMesh_yquf2")
 
 [node name="side2" type="MeshInstance3D" parent="." unique_id=1310351546]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.95, 0.364, 0.147)
+gi_mode = 0
 mesh = SubResource("BoxMesh_2yghv")
 
 [node name="Windows" type="Node3D" parent="." unique_id=624597991]
@@ -178,10 +183,12 @@ mesh = SubResource("BoxMesh_2yghv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.855754, 0, 0.18)
 
 [node name="window" type="MeshInstance3D" parent="Windows/Window1" unique_id=1611828431]
+gi_mode = 0
 mesh = SubResource("BoxMesh_5w373")
 
 [node name="Pillar3" type="MeshInstance3D" parent="Windows/Window1" unique_id=1829043746]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0, 0)
+gi_mode = 0
 mesh = SubResource("BoxMesh_0lmpv")
 
 [node name="Window2" type="Node3D" parent="Windows" unique_id=379657103]
@@ -189,13 +196,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.32554, 0, 0.18)
 
 [node name="Pillar4" type="MeshInstance3D" parent="Windows/Window2" unique_id=310565701]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.525, 0, 0)
+gi_mode = 0
 mesh = SubResource("BoxMesh_0lmpv")
 
 [node name="window" type="MeshInstance3D" parent="Windows/Window2" unique_id=1402705021]
+gi_mode = 0
 mesh = SubResource("BoxMesh_7bnfx")
 
 [node name="Pillar3" type="MeshInstance3D" parent="Windows/Window2" unique_id=367794579]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.525, 0, 0)
+gi_mode = 0
 mesh = SubResource("BoxMesh_0lmpv")
 
 [node name="Window3" type="Node3D" parent="Windows" unique_id=1995275101]
@@ -203,23 +213,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.326, 0, 0.18)
 
 [node name="Pillar4" type="MeshInstance3D" parent="Windows/Window3" unique_id=2065375007]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.525, 0, 0)
+gi_mode = 0
 mesh = SubResource("BoxMesh_0lmpv")
 
 [node name="window" type="MeshInstance3D" parent="Windows/Window3" unique_id=448552575]
+gi_mode = 0
 mesh = SubResource("BoxMesh_7bnfx")
 
 [node name="Pillar3" type="MeshInstance3D" parent="Windows/Window3" unique_id=1791057279]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.525, 0, 0)
+gi_mode = 0
 mesh = SubResource("BoxMesh_0lmpv")
 
 [node name="Window4" type="Node3D" parent="Windows" unique_id=378171365]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.856, 0, 0.18)
 
 [node name="window" type="MeshInstance3D" parent="Windows/Window4" unique_id=1203509528]
+gi_mode = 0
 mesh = SubResource("BoxMesh_5w373")
 
 [node name="Pillar3" type="MeshInstance3D" parent="Windows/Window4" unique_id=1849504444]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05, 0, 0)
+gi_mode = 0
 mesh = SubResource("BoxMesh_0lmpv")
 
 [node name="TicketBooth" type="Node3D" parent="." unique_id=1732250955]
@@ -227,74 +242,92 @@ transform = Transform3D(1.5, 0, 0, 0, 1.75, 0, 0, 0, 1.5, -5.4326105, 0, 0.849)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="TicketBooth" unique_id=543485221]
 transform = Transform3D(0.42261824, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.42261824, -0.00012580554, -0.85, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_arbq4")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="TicketBooth" unique_id=980050124]
 transform = Transform3D(0.42261824, 0, 0.9063079, 0, 1, 0, -0.9063079, 0, 0.42261824, 1.4878738, -0.85, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_arbq4")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="TicketBooth" unique_id=457649698]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.745, -0.85, 0.426)
+gi_mode = 0
 mesh = SubResource("BoxMesh_865cm")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="TicketBooth" unique_id=1774310567]
 transform = Transform3D(0.42261824, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.42261824, -0.00012580554, 0.405, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_7u1p7")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="TicketBooth" unique_id=1480210754]
 transform = Transform3D(0.42261824, 0, 0.9063079, 0, 1, 0, -0.9063079, 0, 0.42261824, 1.4878738, 0.405, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_7u1p7")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="TicketBooth" unique_id=815339182]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.745, 0.405, 0.426)
+gi_mode = 0
 mesh = SubResource("BoxMesh_wsox2")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="TicketBooth" unique_id=1666439638]
 transform = Transform3D(0.42261824, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.42261824, -0.00012580554, -0.675, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_m5arn")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="TicketBooth" unique_id=1655009689]
 transform = Transform3D(0.42261824, 0, 0.9063079, 0, 1, 0, -0.9063079, 0, 0.42261824, 1.4878738, -0.675, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_m5arn")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="TicketBooth" unique_id=1265134710]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.7447657, -0.675, 0.4255744)
+gi_mode = 0
 mesh = SubResource("BoxMesh_t8hpu")
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="TicketBooth" unique_id=91655301]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.74487376, 0.595, -0.042926967)
+gi_mode = 0
 mesh = SubResource("BoxMesh_8ilb1")
 
 [node name="MeshInstance3D11" type="MeshInstance3D" parent="TicketBooth" unique_id=1983607278]
 transform = Transform3D(-0.4146932, 0.9099614, -3.9775667e-08, 0, -4.371139e-08, -0.9999999, -0.90996116, -0.41469324, 1.8126816e-08, 0.3516662, 0.595, -0.19930428)
+gi_mode = 0
 mesh = SubResource("PrismMesh_xml8i")
 
 [node name="MeshInstance3D12" type="MeshInstance3D" parent="TicketBooth" unique_id=530586919]
 transform = Transform3D(-0.4146932, -0.9099614, 3.9775667e-08, 0, -4.371139e-08, -0.9999999, 0.90996116, -0.41469324, 1.8126816e-08, 1.1621239, 0.595, -0.19930428)
+gi_mode = 0
 mesh = SubResource("PrismMesh_xml8i")
 
 [node name="Pillar4" type="MeshInstance3D" parent="TicketBooth" unique_id=731241851]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19675581, -0.3, 0.38286132)
+gi_mode = 0
 mesh = SubResource("BoxMesh_bjwvg")
 
 [node name="Pillar5" type="MeshInstance3D" parent="TicketBooth" unique_id=1048626517]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2893367, -0.3, 0.38809985)
+gi_mode = 0
 mesh = SubResource("BoxMesh_bjwvg")
 
 [node name="window2" type="MeshInstance3D" parent="TicketBooth" unique_id=653198186]
 transform = Transform3D(0.42261824, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.42261824, -0.01363349, -0.30000004, -0.019190669)
+gi_mode = 0
 mesh = SubResource("BoxMesh_xml8i")
 
 [node name="window3" type="MeshInstance3D" parent="TicketBooth" unique_id=234037429]
 transform = Transform3D(0.42261824, 0, 0.9063079, 0, 1, 0, -0.9063079, 0, 0.42261824, 1.5127332, -0.3, -0.062100913)
+gi_mode = 0
 mesh = SubResource("BoxMesh_xml8i")
 
 [node name="window4" type="MeshInstance3D" parent="TicketBooth" unique_id=962541435]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7414641, -0.3, 0.38418263)
+gi_mode = 0
 mesh = SubResource("BoxMesh_hdk4g")
 
 [node name="MeshInstance3D13" type="MeshInstance3D" parent="TicketBooth" unique_id=2050760689]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.75, -0.4, 0.39)
+gi_mode = 0
 mesh = SubResource("CylinderMesh_t8hpu")
 
 [node name="TicketBooth2" type="Node3D" parent="." unique_id=1811936916]
@@ -302,90 +335,112 @@ transform = Transform3D(1.5, 0, 0, 0, 1.75, 0, 0, 0, 1.5, 3.221, 0, 0.849)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="TicketBooth2" unique_id=1796133103]
 transform = Transform3D(0.42261824, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.42261824, -0.00012580554, -0.85, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_arbq4")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="TicketBooth2" unique_id=1162375782]
 transform = Transform3D(0.42261824, 0, 0.9063079, 0, 1, 0, -0.9063079, 0, 0.42261824, 1.4878738, -0.85, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_arbq4")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="TicketBooth2" unique_id=1166379418]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.745, -0.85, 0.426)
+gi_mode = 0
 mesh = SubResource("BoxMesh_865cm")
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="TicketBooth2" unique_id=1776971701]
 transform = Transform3D(0.42261824, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.42261824, -0.00012580554, 0.405, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_7u1p7")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="TicketBooth2" unique_id=1033359658]
 transform = Transform3D(0.42261824, 0, 0.9063079, 0, 1, 0, -0.9063079, 0, 0.42261824, 1.4878738, 0.405, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_7u1p7")
 
 [node name="MeshInstance3D9" type="MeshInstance3D" parent="TicketBooth2" unique_id=1175640170]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.745, 0.405, 0.426)
+gi_mode = 0
 mesh = SubResource("BoxMesh_wsox2")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="TicketBooth2" unique_id=1195145837]
 transform = Transform3D(0.42261824, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.42261824, -0.00012580554, -0.675, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_m5arn")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="TicketBooth2" unique_id=233002162]
 transform = Transform3D(0.42261824, 0, 0.9063079, 0, 1, 0, -0.9063079, 0, 0.42261824, 1.4878738, -0.675, 7.3095165e-05)
+gi_mode = 0
 mesh = SubResource("BoxMesh_m5arn")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="TicketBooth2" unique_id=1334700828]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.7447657, -0.675, 0.4255744)
+gi_mode = 0
 mesh = SubResource("BoxMesh_t8hpu")
 
 [node name="MeshInstance3D10" type="MeshInstance3D" parent="TicketBooth2" unique_id=574777203]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.74487376, 0.595, -0.042926967)
+gi_mode = 0
 mesh = SubResource("BoxMesh_8ilb1")
 
 [node name="MeshInstance3D11" type="MeshInstance3D" parent="TicketBooth2" unique_id=1519965483]
 transform = Transform3D(-0.4146932, 0.9099614, -3.9775667e-08, 0, -4.371139e-08, -0.9999999, -0.90996116, -0.41469324, 1.8126816e-08, 0.3516662, 0.595, -0.19930428)
+gi_mode = 0
 mesh = SubResource("PrismMesh_xml8i")
 
 [node name="MeshInstance3D12" type="MeshInstance3D" parent="TicketBooth2" unique_id=2049129653]
 transform = Transform3D(-0.4146932, -0.9099614, 3.9775667e-08, 0, -4.371139e-08, -0.9999999, 0.90996116, -0.41469324, 1.8126816e-08, 1.1621239, 0.595, -0.19930428)
+gi_mode = 0
 mesh = SubResource("PrismMesh_xml8i")
 
 [node name="Pillar4" type="MeshInstance3D" parent="TicketBooth2" unique_id=411283732]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19675581, -0.3, 0.38286132)
+gi_mode = 0
 mesh = SubResource("BoxMesh_bjwvg")
 
 [node name="Pillar5" type="MeshInstance3D" parent="TicketBooth2" unique_id=911493955]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2893367, -0.3, 0.38809985)
+gi_mode = 0
 mesh = SubResource("BoxMesh_bjwvg")
 
 [node name="window2" type="MeshInstance3D" parent="TicketBooth2" unique_id=467718099]
 transform = Transform3D(0.42261824, 0, -0.9063079, 0, 1, 0, 0.9063079, 0, 0.42261824, -0.01363349, -0.30000004, -0.019190669)
+gi_mode = 0
 mesh = SubResource("BoxMesh_xml8i")
 
 [node name="window3" type="MeshInstance3D" parent="TicketBooth2" unique_id=1759578366]
 transform = Transform3D(0.42261824, 0, 0.9063079, 0, 1, 0, -0.9063079, 0, 0.42261824, 1.5127332, -0.3, -0.062100913)
+gi_mode = 0
 mesh = SubResource("BoxMesh_xml8i")
 
 [node name="window4" type="MeshInstance3D" parent="TicketBooth2" unique_id=344661868]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7414641, -0.3, 0.38418263)
+gi_mode = 0
 mesh = SubResource("BoxMesh_hdk4g")
 
 [node name="MeshInstance3D13" type="MeshInstance3D" parent="TicketBooth2" unique_id=1650598912]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.75, -0.4, 0.39)
+gi_mode = 0
 mesh = SubResource("CylinderMesh_t8hpu")
 
 [node name="Top" type="MeshInstance3D" parent="." unique_id=812482023]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.778, 0.323)
+gi_mode = 0
 mesh = SubResource("BoxMesh_3vxax")
 
 [node name="Top2" type="MeshInstance3D" parent="." unique_id=1888224460]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.778, 0.438)
+gi_mode = 0
 mesh = SubResource("BoxMesh_rhbvv")
 
 [node name="Logo" type="MeshInstance3D" parent="." unique_id=2047287325]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.776, 0.49)
 layers = 64
+gi_mode = 0
 mesh = SubResource("PlaneMesh_rhbvv")
 
 [node name="Logo2" type="MeshInstance3D" parent="." unique_id=924761422]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.776, 0.49)
 visible = false
+gi_mode = 0
 mesh = SubResource("PlaneMesh_2ka0l")

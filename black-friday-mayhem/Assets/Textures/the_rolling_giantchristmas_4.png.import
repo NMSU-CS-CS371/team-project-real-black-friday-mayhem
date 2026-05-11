@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ovxcqfl5gnif"
 path.s3tc="res://.godot/imported/the_rolling_giantchristmas_4.png-8c908e42ca1e8a237d98603d5e27f61d.s3tc.ctex"
+path.etc2="res://.godot/imported/the_rolling_giantchristmas_4.png-8c908e42ca1e8a237d98603d5e27f61d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Textures/the_rolling_giantchristmas_4.png"
-dest_files=["res://.godot/imported/the_rolling_giantchristmas_4.png-8c908e42ca1e8a237d98603d5e27f61d.s3tc.ctex"]
+dest_files=["res://.godot/imported/the_rolling_giantchristmas_4.png-8c908e42ca1e8a237d98603d5e27f61d.s3tc.ctex", "res://.godot/imported/the_rolling_giantchristmas_4.png-8c908e42ca1e8a237d98603d5e27f61d.etc2.ctex"]
 
 [params]
 

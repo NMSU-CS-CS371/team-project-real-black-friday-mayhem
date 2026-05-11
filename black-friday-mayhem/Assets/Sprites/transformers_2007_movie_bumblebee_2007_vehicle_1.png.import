@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://t03bw53b6fn6"
 path.s3tc="res://.godot/imported/transformers_2007_movie_bumblebee_2007_vehicle_1.png-3e845af16aee2e4d536459bd0b04acc0.s3tc.ctex"
+path.etc2="res://.godot/imported/transformers_2007_movie_bumblebee_2007_vehicle_1.png-3e845af16aee2e4d536459bd0b04acc0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Assets/Sprites/transformers_2007_movie_bumblebee_2007_vehicle_1.png"
-dest_files=["res://.godot/imported/transformers_2007_movie_bumblebee_2007_vehicle_1.png-3e845af16aee2e4d536459bd0b04acc0.s3tc.ctex"]
+dest_files=["res://.godot/imported/transformers_2007_movie_bumblebee_2007_vehicle_1.png-3e845af16aee2e4d536459bd0b04acc0.s3tc.ctex", "res://.godot/imported/transformers_2007_movie_bumblebee_2007_vehicle_1.png-3e845af16aee2e4d536459bd0b04acc0.etc2.ctex"]
 
 [params]
 

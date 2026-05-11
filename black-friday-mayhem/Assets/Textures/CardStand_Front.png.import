@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://mpltxjryajvu"
 path.s3tc="res://.godot/imported/CardStand_Front.png-b24a7d89faf822044ea65bdf28bc3667.s3tc.ctex"
+path.etc2="res://.godot/imported/CardStand_Front.png-b24a7d89faf822044ea65bdf28bc3667.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/CardStand_Front.png"
-dest_files=["res://.godot/imported/CardStand_Front.png-b24a7d89faf822044ea65bdf28bc3667.s3tc.ctex"]
+dest_files=["res://.godot/imported/CardStand_Front.png-b24a7d89faf822044ea65bdf28bc3667.s3tc.ctex", "res://.godot/imported/CardStand_Front.png-b24a7d89faf822044ea65bdf28bc3667.etc2.ctex"]
 
 [params]
 

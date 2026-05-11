@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://udgriwvynaa5" path="res://Assets/Prefabs/tables.tscn" id="9_ssu8o"]
 [ext_resource type="PackedScene" uid="uid://yfmgduwyeq64" path="res://Assets/Prefabs/restroom.tscn" id="10_m56eq"]
 [ext_resource type="PackedScene" uid="uid://jfn5xlts2mih" path="res://Assets/Prefabs/camaro.tscn" id="11_3ri04"]
-[ext_resource type="PackedScene" uid="uid://dwlx432ijbvev" path="res://Assets/Textures/the_rolling_giantchristmas.glb" id="12_yxecn"]
+[ext_resource type="PackedScene" uid="uid://dfdv5vleqg4lx" path="res://Assets/Prefabs/santa.scn" id="12_yxecn"]
 
 [node name="Objects" type="Node3D" unique_id=401563250]
 
@@ -39,9 +39,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1.90517, 2.3318777)
 [node name="Win_a_car" parent="." unique_id=1379428736 instance=ExtResource("11_3ri04")]
 transform = Transform3D(-0.5179473, 0, -1.4077395, 0, 1.5, 0, 1.4077395, 0, -0.5179473, 16.24766, 0.9479971, 85.3299)
 
-[node name="Santa" parent="." unique_id=1852824695 instance=ExtResource("12_yxecn")]
-transform = Transform3D(3.9342859, 0, -0.7220766, 0, 4, 0, 0.7220766, 0, 3.9342859, -11.009502, 0.9615617, 88.59821)
-
-[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Santa" unique_id=1078549460]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2756898, 1.0970654, -0.16135597)
-aabb = AABB(-0.8412971, -1.1713004, -1.2329055, 1.6825942, 2.3426008, 2.465811)
+[node name="Santa" parent="." unique_id=1239390487 instance=ExtResource("12_yxecn")]
+transform = Transform3D(0.047862686, 0, -0.008784447, 0, 0.048662134, 0, 0.008784447, 0, 0.047862686, -15.021799, 0.9615617, 88.59821)

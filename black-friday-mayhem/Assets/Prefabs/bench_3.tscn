@@ -3,44 +3,60 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m656"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_vg021"]
+lightmap_size_hint = Vector2i(31, 33)
 material = SubResource("StandardMaterial3D_0m656")
+add_uv2 = true
 size = Vector3(5.32, 0.05, 0.22)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_taxbc"]
 albedo_color = Color(0.53333336, 0.3254902, 0.23137255, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_nhmwv"]
+lightmap_size_hint = Vector2i(30, 42)
 material = SubResource("StandardMaterial3D_taxbc")
+add_uv2 = true
 size = Vector3(5.2, 1, 0.15)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhpuk"]
 albedo_color = Color(0.1882353, 0.29411766, 0.39215687, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_scq8u"]
+lightmap_size_hint = Vector2i(32, 34)
 material = SubResource("StandardMaterial3D_vhpuk")
+add_uv2 = true
 size = Vector3(5.3, 0.2, 0.46)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kyy8v"]
 albedo_color = Color(0.53333336, 0.3254902, 0.23137255, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_vob55"]
+lightmap_size_hint = Vector2i(32, 36)
 material = SubResource("StandardMaterial3D_kyy8v")
+add_uv2 = true
 size = Vector3(5.2, 0.5, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_btd7j"]
+lightmap_size_hint = Vector2i(31, 33)
 material = SubResource("StandardMaterial3D_0m656")
+add_uv2 = true
 size = Vector3(0.22, 0.05, 5.32)
 
 [sub_resource type="BoxMesh" id="BoxMesh_vyy05"]
+lightmap_size_hint = Vector2i(30, 42)
 material = SubResource("StandardMaterial3D_taxbc")
+add_uv2 = true
 size = Vector3(0.15, 1, 5.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_sou2d"]
+lightmap_size_hint = Vector2i(32, 34)
 material = SubResource("StandardMaterial3D_vhpuk")
+add_uv2 = true
 size = Vector3(0.46, 0.2, 5.3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_o4uqa"]
+lightmap_size_hint = Vector2i(32, 36)
 material = SubResource("StandardMaterial3D_kyy8v")
+add_uv2 = true
 size = Vector3(0.5, 0.5, 5.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_btd7j"]

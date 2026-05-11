@@ -110,11 +110,13 @@ sprit = NodePath("AnimatedSprite3D/Sprite3D")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1284325897]
 layers = 32
+gi_mode = 2
 sprite_frames = SubResource("SpriteFrames_h1ryf")
 
 [node name="Sprite3D" type="Sprite3D" parent="AnimatedSprite3D" unique_id=1149484778]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010648251, 0, 0)
 material_override = SubResource("StandardMaterial3D_g6unj")
+gi_mode = 0
 texture_filter = 0
 texture = SubResource("ViewportTexture_g6unj")
 
@@ -136,6 +138,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_h1ryf")
 
 [node name="Lines3" type="AudioStreamPlayer3D" parent="." unique_id=1174182704]
+process_mode = 3
 stream = SubResource("AudioStreamRandomizer_h1ryf")
 volume_db = 10.0
 max_distance = 10.0
@@ -149,6 +152,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_h1ryf")
 
 [node name="Lines4" type="AudioStreamPlayer3D" parent="." unique_id=998424534]
+process_mode = 3
 stream = SubResource("AudioStreamRandomizer_letlb")
 max_distance = 10.0
 bus = &"SFX"

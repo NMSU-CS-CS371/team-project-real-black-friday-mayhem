@@ -1,17 +1,45 @@
-[gd_scene format=3 uid="uid://dk2hv8s0l84gn"]
+[gd_scene format=4 uid="uid://dk2hv8s0l84gn"]
 
 [ext_resource type="Script" uid="uid://c7ylb52nywdiy" path="res://Scripts/obstacle_base.gd" id="1_3a60o"]
 [ext_resource type="ArrayMesh" uid="uid://bksrxpqias0jr" path="res://Assets/Textures/vending_machine_2.obj" id="2_1kif7"]
 [ext_resource type="Texture2D" uid="uid://p80fsgxc483m" path="res://Assets/Textures/vending_machine_2.png" id="3_fqide"]
+[ext_resource type="ArrayMesh" uid="uid://87jwv67ats51" path="res://Assets/Prefabs/vendmesh3.tres" id="4_nuulu"]
+[ext_resource type="Material" uid="uid://bytuxqlsvsf6f" path="res://Assets/Prefabs/vendmat3.tres" id="5_mqr1l"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1kif7"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_kv8lh"]
 size = Vector3(1.2, 1.8, 0.700001)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fqide"]
-albedo_color = Color(0.8, 0.8, 0.8, 1)
-albedo_texture = ExtResource("3_fqide")
+[sub_resource type="ArrayMesh" id="ArrayMesh_aq4sf"]
+_surfaces = [{
+"aabb": AABB(-0.052904, 0, -0.596125, 1.2, 1.8, 0.700001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAACAAEAAwAFAAAAAQAAAAUABAABAAYABQAGAAEAAgAEAAcABwADAAIABgAHAAQAAwAHAAUABgAFAAcA"),
+"name": "Vending_machine_02",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP//AAD//wAAAAAAAAAAAAD+/wAA////////AAAAAAAAAAAAAP////8AAAAAAAD//wAAAAAAAP///v8AAA==")
+}]
+blend_shape_mode = 0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_nuulu"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_nuulu"]
+lightmap_size_hint = Vector2i(74, 78)
+_surfaces = [{
+"aabb": AABB(-0.052904, 0, -0.596125, 1.2, 1.8, 0.700001),
+"attribute_data": PackedByteArray("hQUFP7eAtju0brA+5lt+P4UFBT/kuGM+tG6wPmmQRj/8SXw/t4C2O8ln3TuuW34//El8P+S4Yz7JZ907aZBGP/xJfD/kuGM+rRsMP8u3PD+FBQU/5LhjPjeYYj/Ltzw//El8P7eAtjutGww/h+wEP4UFBT+3gLY7N5hiP0/sBD+7kjo//pV9P28wxT4hDdI7iBAIP/6VfT/CFDk/IQ3SO7uSOj/+MH4+bzDFPmIn9j6IEAg//jB+PsIUOT9iJ/Y+/k1+P/5Wfj/QugE/y7c8P8KLQT/+Vn4/0LoBP0/sBD/+TX4/9/x2Psln3TvLtzw/wotBP/f8dj7JZ907T+wEP4K1AT/+yX0/yWfdOyEN0juWgBU8/sl9P7RusD4hDdI7grUBP8MAwzvJZ907Yif2PpaAFTzDAMM7tG6wPmIn9j7Ci0E//lZ+P591Qz9iJ/Y+/k1+P/5Wfj8wRX4/Yif2PsKLQT/3/HY+n3VDPyEN0jv+TX4/9/x2PjBFfj8hDdI7"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwACAAEABAAFAAYABwAGAAUACAAJAAoACwAKAAkADAANAA4ADwAOAA0AEAARABIAEwASABEAFAAVABYAFwAWABUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("C9SSPwAAAADwvNQ9C9SSPwAAAACmmxi/3bFYvQAAAABYt9Q93bFYvQAAAACmmxi/3bFYvWZm5j+mmxi/C9SSP2Zm5j+mmxi/3bFYvWZm5j9Yt9Q9C9SSP2Zm5j/wvNQ93bFYvQAAAACmmxi/C9SSPwAAAACmmxi/3bFYvWZm5j+mmxi/C9SSP2Zm5j+mmxi/3bFYvQAAAABYt9Q93bFYvQAAAACmmxi/3bFYvWZm5j9Yt9Q93bFYvWZm5j+mmxi/C9SSPwAAAADwvNQ93bFYvQAAAABYt9Q9C9SSP2Zm5j/wvNQ93bFYvWZm5j9Yt9Q9C9SSPwAAAACmmxi/C9SSPwAAAADwvNQ9C9SSP2Zm5j+mmxi/C9SSP2Zm5j/wvNQ9+n8BAAEA/j/6fwEAAQD+P/p/AQABAP4/+n8BAAEA/j/+f/7/AAD+v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+/AQD/fwCA/78BAP9/AID/vwEA/38AgP+/AQD/fwCA/7/9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/7//n//fwBA/v/+f/9/AED+//5//38AQP7//n//fwBA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_aq4sf")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_24878"]
 size = Vector3(1.2, 1.8, 0.700001)
 
 [node name="Vending Machine" type="Node3D" unique_id=1452118021]
@@ -25,19 +53,26 @@ is_interactable = false
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2014627612]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=729517197]
-shape = SubResource("BoxShape3D_1kif7")
+shape = SubResource("BoxShape3D_kv8lh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=971269604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.547096, -0.9, 0.2461245)
+mesh = SubResource("ArrayMesh_nuulu")
+surface_material_override/0 = ExtResource("5_mqr1l")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=21900597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.547096, -0.9, 0.2461245)
-mesh = ExtResource("2_1kif7")
-surface_material_override/0 = SubResource("StandardMaterial3D_fqide")
+visible = false
+gi_mode = 0
+mesh = ExtResource("4_nuulu")
+surface_material_override/0 = ExtResource("5_mqr1l")
 
 [node name="TriggerZone" type="Area3D" parent="." unique_id=17846116]
 monitoring = false
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerZone" unique_id=1219094317]
-shape = SubResource("BoxShape3D_nuulu")
+shape = SubResource("BoxShape3D_24878")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1641905465]
 light_color = Color(0.96862745, 0.90588236, 0.40784314, 1)

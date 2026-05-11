@@ -161,6 +161,7 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite3D" parent="." index="0" unique_id=357323051]
 layers = 32
+gi_mode = 2
 sprite_frames = SubResource("SpriteFrames_cdurs")
 animation = &"Back"
 frame_progress = 0.9990915
@@ -168,6 +169,7 @@ metadata/_edit_group_ = true
 
 [node name="Sprite3D" type="Sprite3D" parent="AnimatedSprite3D" index="0" unique_id=1155363674]
 material_override = SubResource("StandardMaterial3D_bqwxa")
+gi_mode = 0
 texture = SubResource("ViewportTexture_e5khw")
 
 [node name="SubViewport" type="SubViewport" parent="AnimatedSprite3D/Sprite3D" index="0" unique_id=1318511241]

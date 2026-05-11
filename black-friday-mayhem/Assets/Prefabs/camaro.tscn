@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://jfn5xlts2mih"]
 
-[ext_resource type="PackedScene" uid="uid://bdy4k3fjwpl27" path="res://Assets/Prefabs/negativecamaro.tscn" id="2_5gn5g"]
+[ext_resource type="PackedScene" uid="uid://dx1pon2m4wymj" path="res://Assets/Prefabs/negativecamero.scn" id="1_5gn5g"]
 [ext_resource type="Texture2D" uid="uid://cjqw4ees1m6go" path="res://Assets/Textures/car_sign.png" id="2_mxqxp"]
 [ext_resource type="PackedScene" uid="uid://cw7k0fd1xs3bg" path="res://Assets/Prefabs/camarolayer.tscn" id="3_5gn5g"]
 [ext_resource type="Material" uid="uid://de82a3g327nry" path="res://Assets/Textures/negative.tres" id="3_mxqxp"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_0ckjh"]
-size = Vector3(1.951416, 1, 4.8081055)
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_5gn5g"]
+lightmap_size_hint = Vector2i(17, 19)
+add_uv2 = true
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xhn4x"]
 material = ExtResource("3_mxqxp")
@@ -17,27 +16,18 @@ material = ExtResource("3_mxqxp")
 albedo_texture = ExtResource("2_mxqxp")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bhlfx"]
+lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_xhn4x")
+add_uv2 = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_5gn5g"]
 material = ExtResource("3_mxqxp")
 
 [node name="Win_a_car" type="Node3D" unique_id=1379428736]
 
-[node name="Sketchfab_Scene3" parent="." unique_id=1705195733 instance=ExtResource("2_5gn5g")]
-
-[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="Sketchfab_Scene3" unique_id=1062685426]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6380005, 0.011193037)
-aabb = AABB(-1, -0.720085, -2.4212275, 2, 1.44017, 4.842455)
+[node name="Sketchfab_Scene" parent="." unique_id=2094165035 instance=ExtResource("1_5gn5g")]
 
 [node name="Sketchfab_Scene2" parent="." unique_id=1258242354 instance=ExtResource("3_5gn5g")]
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene2" unique_id=1900767375]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.58584595, 1.5340593)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene2/StaticBody3D" unique_id=1525779795]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5524902)
-shape = SubResource("BoxShape3D_0ckjh")
 
 [node name="sign" type="Node3D" parent="." unique_id=1765926936]
 transform = Transform3D(0.44164273, 0, -0.66704696, 0, 0.8, 0, 0.66704696, 0, 0.44164273, 2.6467142, 0.5667882, 0)
@@ -49,6 +39,7 @@ mesh = SubResource("CylinderMesh_5gn5g")
 
 [node name="mask" type="MeshInstance3D" parent="sign" unique_id=1798983520]
 transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0)
+gi_mode = 0
 mesh = SubResource("CylinderMesh_xhn4x")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="sign" unique_id=1753014835]
@@ -58,6 +49,7 @@ mesh = SubResource("PlaneMesh_bhlfx")
 
 [node name="Mask" type="MeshInstance3D" parent="sign" unique_id=1695599577]
 transform = Transform3D(-0.0122169675, 0.9999255, -3.8213714e-15, -4.3708127e-08, -5.340245e-10, -1.0000001, -0.9999254, -0.012216969, 4.3711392e-08, 0.06688976, 1.0128689, 0)
+gi_mode = 0
 mesh = SubResource("PlaneMesh_5gn5g")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="sign" unique_id=137960720]

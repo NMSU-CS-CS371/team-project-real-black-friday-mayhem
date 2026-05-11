@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bonf7d7cfrpoa" path="res://Assets/Textures/Restroom.png" id="1_3y3hn"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xphsp"]
+lightmap_size_hint = Vector2i(6, 17)
+add_uv2 = true
 top_radius = 0.1
 bottom_radius = 0.1
 height = 2.5
@@ -11,7 +13,9 @@ height = 2.5
 albedo_texture = ExtResource("1_3y3hn")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rnyyx"]
+lightmap_size_hint = Vector2i(12, 14)
 material = SubResource("StandardMaterial3D_1hj83")
+add_uv2 = true
 size = Vector2(2, 2.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3y3hn"]

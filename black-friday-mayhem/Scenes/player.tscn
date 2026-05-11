@@ -9,16 +9,10 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_ohetr"]
 size = Vector3(0.5283203, 0.71777344, 0.23144531)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_id4ae"]
-uv1_scale = Vector3(15, 15, 15)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_sfoqk"]
-material = SubResource("StandardMaterial3D_id4ae")
+[sub_resource type="BoxMesh" id="BoxMesh_0pueg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4liu"]
 albedo_color = Color(0.99842995, 0.015917297, 3.85046e-07, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_0pueg"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_0pueg"]
 
@@ -274,20 +268,16 @@ inventory = ExtResource("2_vgqql")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39990234, -0.12606364)
 shape = SubResource("BoxShape3D_ohetr")
 
-[node name="Shape" type="MeshInstance3D" parent="." unique_id=1925180569]
-transform = Transform3D(-0.25, 2.627629e-06, 1.650059e-15, 0, -7.606656e-07, 0.25, 3.774895e-08, 17.402, 1.0927847e-08, 0, 0.5186405, 0)
-visible = false
-mesh = SubResource("PlaneMesh_sfoqk")
-surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
-
 [node name="Shape2" type="MeshInstance3D" parent="." unique_id=1201281537]
 transform = Transform3D(-4.431301e-09, 0, 1.2858835, 0, 0.090685286, 0, -0.10137636, 0, -5.6207757e-08, 0, 1.3604538, 0)
+gi_mode = 2
 mesh = SubResource("BoxMesh_0pueg")
 surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
 script = ExtResource("2_6t5aa")
 
 [node name="Shape3" type="MeshInstance3D" parent="Shape2" unique_id=1259540901]
 transform = Transform3D(-1.2003204, -0.009444233, -0.4535403, 0.34145403, 0.0030935733, -1.5939986, 0.047184598, -0.26263693, -0.0024665669, 3.686163e-07, 0, -0.6648368)
+gi_mode = 2
 mesh = SubResource("PrismMesh_0pueg")
 surface_material_override/0 = SubResource("StandardMaterial3D_k4liu")
 

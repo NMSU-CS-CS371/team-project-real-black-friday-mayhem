@@ -2,7 +2,7 @@ extends Node
 
 class_name World
 var config = ConfigFile.new()
-@export var player : Node3D
+@export var player : Node3D # THE CORRECT WAY OF FINDING THIS: get_tree().get_root().get_child(2).player
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 
 func _ready() -> void:

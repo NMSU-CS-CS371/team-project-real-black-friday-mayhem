@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://jwhftasq60pi"
 path.s3tc="res://.godot/imported/kung_chow_board.png-725bf750d95dcf07bcbc3910dd0b93e4.s3tc.ctex"
+path.etc2="res://.godot/imported/kung_chow_board.png-725bf750d95dcf07bcbc3910dd0b93e4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Textures/kung_chow_board.png"
-dest_files=["res://.godot/imported/kung_chow_board.png-725bf750d95dcf07bcbc3910dd0b93e4.s3tc.ctex"]
+dest_files=["res://.godot/imported/kung_chow_board.png-725bf750d95dcf07bcbc3910dd0b93e4.s3tc.ctex", "res://.godot/imported/kung_chow_board.png-725bf750d95dcf07bcbc3910dd0b93e4.etc2.ctex"]
 
 [params]
 

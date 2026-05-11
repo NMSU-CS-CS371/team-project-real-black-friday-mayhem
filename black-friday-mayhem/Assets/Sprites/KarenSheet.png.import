@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjpf2n2mch4mp"
 path.s3tc="res://.godot/imported/KarenSheet.png-655dae2ff84e806276f0278bde1bd436.s3tc.ctex"
+path.etc2="res://.godot/imported/KarenSheet.png-655dae2ff84e806276f0278bde1bd436.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Sprites/KarenSheet.png"
-dest_files=["res://.godot/imported/KarenSheet.png-655dae2ff84e806276f0278bde1bd436.s3tc.ctex"]
+dest_files=["res://.godot/imported/KarenSheet.png-655dae2ff84e806276f0278bde1bd436.s3tc.ctex", "res://.godot/imported/KarenSheet.png-655dae2ff84e806276f0278bde1bd436.etc2.ctex"]
 
 [params]
 

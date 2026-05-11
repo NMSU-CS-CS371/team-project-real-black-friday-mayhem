@@ -13,7 +13,9 @@ size = Vector3(4.25, 0.15, 0.413)
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_iegmo"]
+lightmap_size_hint = Vector2i(6, 17)
 material = SubResource("StandardMaterial3D_k11m6")
+add_uv2 = true
 top_radius = 0.125
 bottom_radius = 0.125
 height = 2.5

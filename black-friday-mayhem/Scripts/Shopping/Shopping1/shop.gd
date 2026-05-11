@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var player = get_parent().get_parent().player
+@onready var player = get_tree().get_root().get_child(2).player
 @onready var checkpoint = get_parent()
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
 @onready var walletLabel = $WalletLabel

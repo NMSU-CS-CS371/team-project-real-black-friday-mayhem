@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0r7w1tuky4xv"]
 
 [ext_resource type="PackedScene" uid="uid://deduoysww6qei" path="res://Assets/Prefabs/table_1.tscn" id="1_ib31d"]
-[ext_resource type="PackedScene" uid="uid://bkefcj4aqvtr4" path="res://Assets/Prefabs/chair_1.tscn" id="2_boyx3"]
+[ext_resource type="PackedScene" uid="uid://opnvrmymfqg1" path="res://Assets/Prefabs/chair.scn" id="2_ib31d"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_xjpnb"]
 height = 1.2
@@ -11,17 +11,17 @@ radius = 1.0
 
 [node name="Table" parent="." unique_id=1651096817 instance=ExtResource("1_ib31d")]
 
-[node name="Chair" parent="." unique_id=201268420 instance=ExtResource("2_boyx3")]
-transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, -0.6)
+[node name="Chair" parent="." unique_id=201268420 instance=ExtResource("2_ib31d")]
+transform = Transform3D(1.5625, 0, 0, 0, 1.5625, 0, 0, 0, 1.5625, 0, 0, -0.6)
 
-[node name="Chair2" parent="." unique_id=743300167 instance=ExtResource("2_boyx3")]
-transform = Transform3D(-1.25, 0, -1.09278474e-07, 0, 1.25, 0, 1.09278474e-07, 0, -1.25, 0, 0, 0.6)
+[node name="Chair2" parent="." unique_id=130127871 instance=ExtResource("2_ib31d")]
+transform = Transform3D(-1.5625, 0, -1.3659809e-07, 0, 1.5625, 0, 1.3659809e-07, 0, -1.5625, 0, 0, 0.6)
 
-[node name="Chair3" parent="." unique_id=14863829 instance=ExtResource("2_boyx3")]
-transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -0.6, 0, 0)
+[node name="Chair3" parent="." unique_id=77677478 instance=ExtResource("2_ib31d")]
+transform = Transform3D(-6.8299045e-08, 0, 1.5625, 0, 1.5625, 0, -1.5625, 0, -6.8299045e-08, -0.6, 0, 0)
 
-[node name="Chair4" parent="." unique_id=690248891 instance=ExtResource("2_boyx3")]
-transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 0.6, 0, 0)
+[node name="Chair4" parent="." unique_id=1949685644 instance=ExtResource("2_ib31d")]
+transform = Transform3D(-6.8299045e-08, 0, -1.5625, 0, 1.5625, 0, 1.5625, 0, -6.8299045e-08, 0.6, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1010380929]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)

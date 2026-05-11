@@ -28,6 +28,7 @@ disabled = true
 debug_color = Color(0.9453508, 2.5990605e-06, 0.57035685, 0.41960785)
 
 [node name="MeshInstance3D" parent="." index="1" unique_id=21900597]
+gi_mode = 0
 mesh = SubResource("QuadMesh_3rdwr")
 surface_material_override/0 = SubResource("StandardMaterial3D_y17uj")
 

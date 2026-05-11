@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://boofb6uhbeuyu"
 path.s3tc="res://.godot/imported/NPC2.png-8c4ed1913416c3e9d4ceb470f913e8c6.s3tc.ctex"
+path.etc2="res://.godot/imported/NPC2.png-8c4ed1913416c3e9d4ceb470f913e8c6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Sprites/NPC2.png"
-dest_files=["res://.godot/imported/NPC2.png-8c4ed1913416c3e9d4ceb470f913e8c6.s3tc.ctex"]
+dest_files=["res://.godot/imported/NPC2.png-8c4ed1913416c3e9d4ceb470f913e8c6.s3tc.ctex", "res://.godot/imported/NPC2.png-8c4ed1913416c3e9d4ceb470f913e8c6.etc2.ctex"]
 
 [params]
 

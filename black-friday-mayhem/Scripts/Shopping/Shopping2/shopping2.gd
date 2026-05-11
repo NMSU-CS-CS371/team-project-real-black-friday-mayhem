@@ -4,7 +4,7 @@ extends Node2D #Hand Mini Game
 #
 
 @onready var SceneTransition = $SceneTransition/AnimationPlayer
-@onready var player = get_tree().get_first_node_in_group("Player")
+@onready var player = get_tree().get_root().get_child(2).player
 @onready var checkpoint = get_parent()
 
 var playing = false
