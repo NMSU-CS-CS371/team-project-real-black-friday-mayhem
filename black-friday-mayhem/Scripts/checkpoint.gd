@@ -18,9 +18,14 @@ func _ready() -> void:
 	# Apply initial size and color when the scene loads
 	_apply_size()
 	_apply_color()
+	
 	# Connect the TriggerZone's body_entered signal to our handler (runtime only)
 	if not Engine.is_editor_hint():
 		$TriggerZone.body_entered.connect(_on_trigger_zone_body_entered)
+	
+	var player = get_tree().get_root().get_child(2).player
+	entered_shop.connect(Callable(player, "_on_shop_entered"))
+	exited_shop.connect(Callable(player, "_on_shop_exited"))
 
 # Fires the player_entered signal when a body enters the trigger zone
 # Only responds to nodes in the "player" group to avoid false triggers

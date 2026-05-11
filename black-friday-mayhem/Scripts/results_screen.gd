@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var playerInventory = get_parent().get_parent().player.inventory
+@onready var playerInventory = get_tree().get_root().get_child(2).player.inventory
 @onready var sceneTransition = $SceneTransition/AnimationPlayer
 @onready var anim = $AnimationPlayer
 @onready var highlight = $ResultsHighlight
