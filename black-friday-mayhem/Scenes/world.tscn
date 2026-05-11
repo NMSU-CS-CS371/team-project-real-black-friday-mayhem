@@ -83,6 +83,7 @@ shadow_blur = 10.0
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=1625220837]
 layers = 97
+interior = true
 light_data = ExtResource("3_pyn1s")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1639120086]
