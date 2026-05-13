@@ -172,7 +172,6 @@ transform = Transform3D(250, 0, 0, 0, 2, 0, 0, 0, 250, 0, 0, 0)
 shape = SubResource("BoxShape3D_gv5m4")
 
 [node name="floor_mesh" type="MeshInstance3D" parent="Floor/StaticBody3D" unique_id=1721786962]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002619159, -0.14218462, 0.0021389409)
 gi_mode = 2
 gi_lightmap_texel_scale = 0.01
 mesh = SubResource("BoxMesh_f3sb7")
