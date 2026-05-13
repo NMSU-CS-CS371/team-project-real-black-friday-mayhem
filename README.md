@@ -1,28 +1,32 @@
 # Black Friday Mayhem
+[![Black Friday Mayhem](https://github.com/user-attachments/assets/15fc75fc-ace1-41da-ae9e-b77617be9b27)](https://rambows8.itch.io/black-friday-mayhem)
 
-<img width="700" height="350" alt="Black-Friday-Mayhem" src="https://github.com/user-attachments/assets/15fc75fc-ace1-41da-ae9e-b77617be9b27" />
+---
 
-## Team Members:
+**Play the Game**: https://rambows8.itch.io/black-friday-mayhem
+
+## Team Members
 - Jaiden Covarrubias
 - Jaiden Hernandez
 - Jolena Stolp
 - Logan Flowers
 - Samiel Thai
 
-## What it's about:
-Black Friday Mario Kart Christmas mish mash sale buy buy buy simulator.
-
-# Files
-### Assets
-- Sound effects / voicelines
-- Sprites
-- Textures
-- Objects
-- Inventory for Player
-### Scenes
-- Godot scenes for all mini games, transitions, and main world scene
-### Scripts
-- Godot scripting for scenes, menus, NPC's, and player
+## Project Structure
+| Directory | Contents |
+|-----------|----------|
+| `Assets/` | Sound effects, voicelines, sprites, textures, objects, inventory items |
+| `Scenes/` | Godot scenes for mini-games, transitions, and main world |
+| `Scripts/` | GDScript for scenes, menus, NPCs, player, and game logic |
 
 ## Requirements
-Godot 4.6.1 or later to run from project.godot
+- Godot 4.6.1 or later
+
+## Documentation
+- [Problem Statement](Problem-Statement)
+- [User Stories](User-Stories)
+- [Domain Model](Domain-Model)
+- [Sprints](Sprints)
+- [Non-functional Requirements](Non-functional-Requirements)
+- [Software Design](Software-Design)
+- [Verification and Validation](Verification-and-Validation)
