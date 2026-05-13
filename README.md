@@ -23,10 +23,10 @@
 - Godot 4.6.1 or later
 
 ## Documentation
-- [Problem Statement](Problem-Statement)
-- [User Stories](User-Stories)
-- [Domain Model](Domain-Model)
-- [Sprints](Sprints)
-- [Non-functional Requirements](Non-functional-Requirements)
-- [Software Design](Software-Design)
-- [Verification and Validation](Verification-and-Validation)
+- [Problem Statement](https://github.com/NMSU-CS-CS371/team-project-real-black-friday-mayhem/wiki/Problem-Statement)
+- [User Stories](https://github.com/NMSU-CS-CS371/team-project-real-black-friday-mayhem/wiki/User-Stories)
+- [Domain Model](https://github.com/NMSU-CS-CS371/team-project-real-black-friday-mayhem/wiki/Domain-Model)
+- [Sprints](https://github.com/NMSU-CS-CS371/team-project-real-black-friday-mayhem/wiki/Sprints)
+- [Non-functional Requirements](https://github.com/NMSU-CS-CS371/team-project-real-black-friday-mayhem/wiki/Non%E2%80%90Functional-Requirements)
+- [Software Design](https://github.com/NMSU-CS-CS371/team-project-real-black-friday-mayhem/wiki/Software-Design)
+- [Verification and Validation](https://github.com/NMSU-CS-CS371/team-project-real-black-friday-mayhem/wiki/Verification-and-Validation)
