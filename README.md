@@ -1,5 +1,7 @@
 # Black Friday Mayhem
 
+<img width="700" height="350" alt="Black-Friday-Mayhem" src="https://github.com/user-attachments/assets/15fc75fc-ace1-41da-ae9e-b77617be9b27" />
+
 ## Team Members:
 - Jaiden Covarrubias
 - Jaiden Hernandez
